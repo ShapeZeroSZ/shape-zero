@@ -1,0 +1,71 @@
+==============================================================================
+KAPPA ACROSS BEAM WIDTHS -- is the mechanism general?
+==============================================================================
+  backend: PyTorch float64 on Tesla T4
+  prediction, stated before running: F AGREES across widths in each group
+
+Runs (T = 300):
+    plane wave plane  side  8       35 s   drift 5.4e-09
+    localised  w=2    side  8       34 s   drift 1.2e-09
+    localised  w=1.5  side 12       34 s   drift 3.5e-10
+    localised  w=3    side 12       34 s   drift 1.0e-09
+    localised  w=2    side 16       34 s   drift 2.9e-10
+    localised  w=4    side 16       34 s   drift 1.0e-09
+    localised  w=1.5  side 24       34 s   drift 8.8e-11
+    localised  w=2    side 24       34 s   drift 1.3e-10
+    localised  w=3    side 24       34 s   drift 2.6e-10
+    localised  w=2    side 32       34 s   drift 7.3e-11
+    localised  w=4    side 32       34 s   drift 2.5e-10
+    localised  w=3    side 36       40 s   drift 1.1e-10
+    localised  w=3    side 48      129 s   drift 6.4e-11
+    localised  w=4    side 48      129 s   drift 1.1e-10
+    localised  w=4    side 64      317 s   drift 6.1e-11
+
+==============================================================================
+VALIDATION
+==============================================================================
+  plane wave       kappa -0.01869  (ref -0.01869)   PASS
+  w = 2, L =  8    kappa -0.00447  (ref -0.00447)   PASS
+  w = 2, L = 16    kappa -0.00204  (ref -0.00204)   PASS
+  w = 2, L = 24    kappa -0.00115  (ref -0.00115)   PASS
+  w = 2, L = 32    kappa -0.00047  (ref -0.00047)   PASS
+  energy drift     worst 5.4e-09   PASS
+  all validation checks pass
+
+==============================================================================
+THE TABLE -- F = kappa / (kappa_pw * fill), with its error bar
+==============================================================================
+   w/L    w     L     fill      s       kappa               F            2 - s
+   1/4    2.0    8   0.19387  0.648   -0.00447±0.00011    1.23 ± 0.03   1.35
+   1/4    3.0   12   0.19422  0.654   -0.00478±0.00013    1.32 ± 0.04   1.35
+   1/4    4.0   16   0.19435  0.656   -0.00482±0.00024    1.33 ± 0.07   1.34
+
+   1/8    2.0   16   0.04909  0.196   -0.00204±0.00021    2.22 ± 0.23   1.80
+   1/8    3.0   24   0.04909  0.196   -0.00218±0.00059    2.38 ± 0.65   1.80
+   1/8    4.0   32   0.04909  0.196   -0.00147±0.00049    1.61 ± 0.53   1.80
+   1/8    1.5   12   0.04909  0.196   -0.00184±0.00011    2.01 ± 0.12   1.80
+
+   1/12   2.0   24   0.02182  0.087   -0.00115±0.00036    2.81 ± 0.89   1.91
+   1/12   3.0   36   0.02182  0.087   -0.00081±0.00034    1.99 ± 0.83   1.91
+   1/12   4.0   48   0.02182  0.087   -0.00113±0.00068    2.78 ± 1.66   1.91
+
+   1/16   2.0   32   0.01227  0.049   -0.00047±0.00015    2.03 ± 0.63   1.95
+   1/16   3.0   48   0.01227  0.049   -0.00060±0.00043    2.60 ± 1.85   1.95
+   1/16   4.0   64   0.01227  0.049   -0.00111±0.00071    4.82 ± 3.09   1.95
+   1/16   1.5   24   0.01227  0.049   -0.00066±0.00020    2.86 ± 0.86   1.95
+
+==============================================================================
+FACTS -- summaries of the table above; the table is the result
+==============================================================================
+  Within each group (same w/L), the largest difference in F between two
+  widths, in units of their combined error bar:
+    w/L = 1/4 : largest difference  1.8 combined error bars (w = 2 vs 3)   within 2
+    w/L = 1/8 : largest difference  1.1 combined error bars (w = 2 vs 4)   within 2
+    w/L = 1/12: largest difference  0.7 combined error bars (w = 2 vs 3)   within 2
+    w/L = 1/16: largest difference  0.9 combined error bars (w = 2 vs 4)   within 2
+
+  Points with F above the model 2 - s: 10 of 14
+
+  The prediction (F agrees across widths in every group) HELD.
+
+  Paste the whole output back for the record.

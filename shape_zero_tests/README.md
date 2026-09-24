@@ -198,6 +198,17 @@ annotated reading in `*_colab_output.txt`. Re-checked on
 CPU with `kappa_extended_gpu.py` at L = 20–32: identical. Result: κ(w = 2, side)
 CLOSED (PROVENANCE §6o).
 
+### 12. κ across beam widths (w = 1–6) at matched w/L
+`kappa_widthscan_gpu.py` (Colab, Tesla T4) → `kappa_widthscan_gpu_colab_raw.txt`
+(raw), `kappa_widthscan_gpu_colab_output.txt` (annotated reading);
+`kappa_resolution_test.py` (NumPy on CPU, ~5 min) → `kappa_resolution_test_raw.txt`.
+
+Physics, seed, readout and error bar as section 11. Width scan: four groups of
+matched w/L (1/4, 1/8, 1/12, 1/16), widths 1.5–4. Resolution test: w/L = 1/4,
+w = 1–6; reproduces the Colab w = 2, 3, 4 values exactly. Result: the box-size
+mechanism is general across widths; the L = 8 gap is a narrow-beam lattice
+effect; w = 3 CLOSED (PROVENANCE §6o).
+
 ## Helpers
 
 - `j_compat_test.py` — shared machinery: `KLattice` (stiffness K as a parameter),

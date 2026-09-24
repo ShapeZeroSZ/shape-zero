@@ -224,7 +224,7 @@ found while looking at the target rather than at the model.
 | claim | status |
 |---|---|
 | pinned asymmetry at q = 3 | **survives** — 0.100001 vs theory 0.100000 |
-| **κ at q = 3** | **does NOT survive** — 0.0799 → 0.0168 (w=2), 0.0311 (w=3), and depends on transverse width [all measured with swapped seeding: 0.0799 RETRACTED. κ(w = 2, side) re-measured: −0.00447 → −0.00047 over side 8–32, then **CLOSED** — κ → 0 with box size, no box-independent localised κ; w = 3 and the geometry table UNVERIFIED — §6o] |
+| **κ at q = 3** | **does NOT survive** — 0.0799 → 0.0168 (w=2), 0.0311 (w=3), and depends on transverse width [all measured with swapped seeding: 0.0799 RETRACTED. κ(w = 2, side) re-measured: −0.00447 → −0.00047 over side 8–32, then **CLOSED** — κ → 0 with box size, no box-independent localised κ; w = 3 and the geometry table UNVERIFIED, since SUPERSEDED by the width scan (w = 3 CLOSED: −0.00478 at L = 12 … −0.00060 at L = 48) — §6o] |
 | gates 5–8 in `model.py` | measured at **q = 1**; 7–8 not yet re-run at q = 3 |
 
 **A vacuous test was caught and is now documented.** The first q = 3 run gave
@@ -614,7 +614,8 @@ that bias as well as the estimator bias. [Since fixed the same day — see
 **Unverified pending re-measurement:** the κ(w, side) investigation (§5, §6e),
 measured with the swapped seeding; no script for it is in this repository.
 [Since re-measured for w = 2 — see "κ(w = 2, side) re-measured" below; now
-**CLOSED**. Other widths remain unverified.]
+**CLOSED**. Other widths remain unverified.] [w = 3 since re-measured by the
+width scan and CLOSED; the old w = 3 value and geometry table superseded.]
 
 **κ versus stiffness re-measured (same day).** `shape_zero_tests/joint3_kappa_stiffness.py`,
 seeding each direction at its own root, gives κ = −0.0214, −0.0187, −0.0165 at
@@ -700,7 +701,8 @@ still leaves 1.8–2.2%, the swap 4.0%). Outputs: `kappa_readout_test_output.txt
 
 Status: κ(w = 2, side) was **measured and open**; it is now **CLOSED** — below. The other transverse widths
 (w = 3, the geometry table) were measured with `pinned_asymmetry_reference.py`'s
-single-carrier seed and remain **unverified**.
+single-carrier seed and remain **unverified**. [Since SUPERSEDED by the width
+scan — "κ across beam widths" below.]
 
 **κ(w = 2, side) — CLOSED (2026-09-24).** Three GPU scans (Google Colab, Tesla
 T4, PyTorch float64, fixed-step RK4 dt = 0.01; physics, Fourier-space seed and
@@ -764,16 +766,60 @@ in its box-wide transverse component.)
    box-averaged κ has no box-independent value. **A localised-beam κ quoted
    without a box size is not a property of the beam.** The w = 3 value and the
    geometry table remain **unverified**; by this result, even re-measured they
-   would describe a beam in a particular box.
+   would describe a beam in a particular box. [Both since SUPERSEDED by the width
+   scan below; the w = 3 item is CLOSED.]
 
 *Provenance of the outputs:* the three `_colab_output.txt` files are annotated
-transcripts, not raw output. Each opens with a note; the verdicts printed by the
+transcripts, not raw output; the raw outputs are in the matching
+`*_colab_raw.txt` files. Each opens with a note; the verdicts printed by the
 first versions of `kappa_side_gpu.py` ("DYNAMIC") and `kappa_boxscan_gpu.py`
 (Q1 "NO BUMP", Q2 "DOES NOT SETTLE") were wrong and were corrected afterwards,
 and the scripts saved here carry the corrected reading code — re-running them
 prints different verdict text over the same tables. The extended output's
 validation and Q2 lines are condensed from the per-size lines the script
 prints. The tables are the result.
+
+**κ across beam widths — w = 3 CLOSED (2026-09-24).** `kappa_widthscan_gpu.py`
+(Colab, Tesla T4; raw `kappa_widthscan_gpu_colab_raw.txt`, reading
+`kappa_widthscan_gpu_colab_output.txt`) measures F in four groups of matched
+proportions w/L, since a Gaussian beam's fill and s depend on w/L alone.
+`kappa_resolution_test.py` (NumPy on CPU; `kappa_resolution_test_raw.txt`) holds
+w/L = 1/4 and varies w from 1 to 6; it reproduced the Colab values for w = 2, 3
+and 4 exactly. Physics, seed, readout and error bar as `kappa_extended_gpu.py`.
+
+| w/L | w = 1 | w = 1.5 | w = 2 | w = 3 | w = 4 | w = 5 | w = 6 | 2 − s |
+|---|---|---|---|---|---|---|---|---|
+| 1/4 | 1.15 ± 0.01 | — | 1.23 ± 0.03 | 1.32 ± 0.04 | 1.33 ± 0.07 | 1.29 ± 0.10 | 1.34 ± 0.16 | 1.34–1.38 |
+| 1/8 | — | 2.01 ± 0.12 | 2.22 ± 0.23 | 2.38 ± 0.65 | 1.61 ± 0.53 | — | — | 1.80 |
+| 1/12 | — | — | 2.81 ± 0.89 | 1.99 ± 0.83 | 2.78 ± 1.66 | — | — | 1.91 |
+| 1/16 | — | 2.86 ± 0.86 | 2.03 ± 0.63 | 2.60 ± 1.85 | 4.82 ± 3.09 | — | — | 1.95 |
+
+(F = κ/(κ_pw·fill). The w = 1, 5, 6 entries are from the resolution test.)
+
+1. **The box-size mechanism is general, not tuned to w = 2.** At matched w/L, F
+   agrees across beam widths 1.5 to 4 within two combined error bars in every
+   group (largest differences 1.8, 1.1, 0.7, 0.9). The test is sharp only at
+   w/L = 1/4 (error bars ±0.03–0.07), partly sharp at 1/8, and **not a real test
+   at 1/12 and 1/16**, where error bars reach ±3 — agreement there means only
+   "not resolved".
+2. **The 9% gap between F and 2 − s at w = 2, L = 8 is a narrow-beam lattice
+   effect, established at w/L = 1/4:** the gap is −16.5% at w = 1 (18.6 of its
+   error bars) and −8.8% at w = 2 (4.0), and within error for w = 3 to 6 (−2.2%,
+   −1.4%, −3.7%, −0.1%). Holding w/L fixed holds the beam's geometry fixed, so the
+   gap tracks the beam's width itself. The reading: a narrow beam carries sideways
+   ripples on the scale of single lattice sites, where lattice waves differ from
+   smooth space, and the model assumes smooth. It is **not** coarse sampling of
+   the beam's shape — fill and s are computed on the actual grid. The prediction
+   (the gap grows as the beam narrows and vanishes for wide beams) was stated
+   before running and **held**.
+3. **Unresolved:** whether F exceeds 2 − s at smaller w/L (10 of 14 width-scan
+   points lie above it). The error bars there are too large to say.
+4. **w = 3 κ, correctly seeded:** −0.00478 ± 0.00013 at L = 12, −0.00218 ± 0.00059
+   at L = 24, −0.00081 ± 0.00034 at L = 36, −0.00060 ± 0.00043 at L = 48. These
+   **supersede** the old w = 3 value (0.0311) and the old geometry table (1D 0.0799,
+   w = 2 0.0168, w = 3 0.0311; swapped seeding, single carrier), which stay
+   visible where they were quoted. By result 5 above, each is a beam in a
+   particular box. **The w = 3 item is CLOSED.**
 
 **P-1 — what was found** (annotated in `shape_zero_predictions_v1.md`):
 

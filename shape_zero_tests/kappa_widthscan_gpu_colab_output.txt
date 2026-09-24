@@ -1,0 +1,35 @@
+kappa_widthscan_gpu.py -- READING of the run of 2026-09-24 (Colab, Tesla T4).
+The unedited output is in kappa_widthscan_gpu_colab_raw.txt.
+
+WHAT THE PRINTED "HELD" DOES AND DOES NOT COVER
+The prediction was that F agrees across beam widths at the same w/L. The
+printout reports agreement within two combined error bars in all four groups.
+That is a real test in only part of the scan:
+
+  w/L = 1/4   SHARP (error bars +-0.03 to +-0.07). w = 3 and w = 4 give
+              F = 1.32 +- 0.04 and 1.33 +- 0.07 -- agreeing with each other
+              and with the model 2 - s = 1.35. w = 2 at L = 8 (1.23 +- 0.03)
+              is the only precise point that stands apart: 1.8 combined error
+              bars from w = 3, about 4 of its own error bars below the model.
+  w/L = 1/8   PARTLY SHARP. w = 1.5 (2.01 +- 0.12) and w = 2 (2.22 +- 0.23)
+              agree; w = 3 and w = 4 carry +-0.5 to +-0.65.
+  w/L = 1/12, 1/16   NOT A TEST. Error bars of +-0.6 to +-3.1 would agree with
+              almost any value. "Within 2" there means only "not resolved".
+
+CONCLUSIONS
+ 1. Where it can be measured, F depends on the beam's proportions (w/L), not
+    on the particular beam: the box-size mechanism is general across widths
+    1.5-4, not tuned to w = 2.
+ 2. The 9% gap between F and 2 - s at w = 2, L = 8 is specific to the narrowest
+    beam in the smallest box. Wider beams at the same proportions match the
+    model. Coarse lattice resolution of that beam is a plausible reading; it
+    is NOT established.
+ 3. The excess of F over 2 - s (10 of 14 points above) persists overall but is
+    not uniform: at w/L = 1/4 the wider beams sit on the model.
+ 4. w = 3 kappa, correctly seeded, at four box sizes:
+      L = 12  -0.00478 +- 0.00013
+      L = 24  -0.00218 +- 0.00059
+      L = 36  -0.00081 +- 0.00034
+      L = 48  -0.00060 +- 0.00043
+    These supersede the earlier unverified w = 3 value. This scan supersedes the
+    earlier geometry table.
