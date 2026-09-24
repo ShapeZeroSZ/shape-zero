@@ -27,7 +27,7 @@ nothing if an earlier one is broken.
     2  free propagation            energy drift < 1e-6
     3  complex structure           chirality purity ~0.98
     4  n=1 asymmetry               d_omega = -2 c beta sin k
-    5  nonlinear regime            kappa = 0.0799, beta-collapse
+    5  nonlinear regime            kappa = -0.0187 (0.0799 RETRACTED), beta-collapse
     6  n=2 ordering                59.86 deg vs 59.84 predicted
     7  n=3 ordering                65.12 deg vs 64.97 predicted
     8  Abelian control             ~0 at <=20-site segment separation
@@ -636,11 +636,12 @@ def main():
     for b in (0.02, 0.05, 0.10, 0.20):
         d, _ = ref.delta(b, 0.30)
         t = -2 * C * b * np.sin(K0)
-        ks.append(abs(abs(d) - abs(t)) / abs(t) / 0.09)
+        # SIGNED: the old abs() could not report a shrinking asymmetry.
+        ks.append((abs(d) - abs(t)) / abs(t) / 0.09)
     kap, spread = float(np.mean(ks)), float(np.std(ks))
     gate(6, "kappa and the beta-collapse", spread < 2e-3,
          f"kappa {kap:.4f} +/- {spread:.5f} across a tenfold beta range "
-         f"(spec: 0.0799)")
+         f"(corrected: -0.0187; 0.0799 retracted, seeding swap)")
 
     # ---- 7 u(2) and u(3) ordering --------------------------------------
     # ---- 7 ordering: CONTROL-SUBTRACTED criterion (MODEL_SPEC sec 4d) ----
@@ -732,7 +733,7 @@ def main():
     print("=" * 68)
     print("  THE MODEL PREDICTS")
     print("=" * 68)
-    print(f"    d_omega(k, A) = -2 c beta sin(k) * [ 1 + {kap:.4f} A^2 ]")
+    print(f"    d_omega(k, A) = -2 c beta sin(k) * [ 1 {'+' if kap >= 0 else '-'} {abs(kap):.4f} A^2 ]")
     print()
     print("    the coefficient is beta-INDEPENDENT, so the normalised drift")
     print("    collapses across coupling strengths. That collapse is the")
@@ -741,12 +742,14 @@ def main():
     print("    resolution needed: ~1e-4 for the pinning, ~1e-5 for the A^2 law")
     print("    valid amplitude:   A below ~0.9")
     print()
-    print("    ** kappa = 0.0799 is the PLANE-WAVE / 1-D value. **")
+    print("    ** kappa = 0.0799 is RETRACTED (reference seeded each direction")
+    print("    with the other's root); corrected plane-wave / 1-D value -0.0187. **")
+    print("    The kappa(w, side) figures below predate the fix: UNVERIFIED.")
     print("    For a transversely localised beam kappa is SMALLER and depends")
     print("    on the transverse domain as well as the beam width -- measured")
     print("    kappa(w=2) falls 0.0177 -> 0.0019 from side 8 to 32 and does not")
     print("    converge. Readout dilution, fill-fraction scaling and A^2")
-    print("    normalisation were each tested and ruled out. Quote 0.0799 only")
+    print("    normalisation were each tested and ruled out. Quote -0.0187 only")
     print("    for a plane-wave/1-D beam; measure per profile otherwise.")
     print("    The PINNING is width-independent at every configuration tested.")
     print("=" * 68)

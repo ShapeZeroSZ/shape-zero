@@ -53,7 +53,9 @@ error both reached a lab-facing document.
 **Done when:** every quoted figure has a script and a line number. **MET** —
 document states κ = 0.0799; `pinned_asymmetry_reference.py` emits
 **0.0798 ± 0.00089** from the β-sweep. The rebuilt `pinned_asymmetry_headline.py`
-imports the harness and carries a factor-ten guard.
+imports the harness and carries a factor-ten guard. [κ = 0.0799 RETRACTED
+2026-09-24 — the reference seeded each direction with the other's root; the fixed
+script emits −0.0184 ± 0.00033 (−0.0187 at β = 0.05, A = 0.30). PROVENANCE §6o.]
 
 *Cost of getting here:* three successive values (0.30 → 0.0305 → 0.0799), two
 external catches, and one estimator calibration. The first two were never
@@ -139,7 +141,7 @@ platform, or claimed model of the dynamics. These are different claims.
 
 ### 4.1 Reproduce what is already verified
 - [ ] D1 harmonic ratios 1, 2, 3 on the nonlinear potential
-- [ ] Pinned asymmetry with κ = 0.0799 (phase-regression estimator, β-sweep)
+- [ ] Pinned asymmetry with κ = 0.0799 (phase-regression estimator, β-sweep) [RETRACTED → −0.0184 ± 0.00033, PROVENANCE §6o]
 - [ ] The A² law and the β-collapse
 - [ ] D8 flow: one frequency parameter-free, two generic, all 14 terms
 

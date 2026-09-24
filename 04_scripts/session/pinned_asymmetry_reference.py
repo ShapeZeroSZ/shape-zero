@@ -3,13 +3,30 @@
 pinned_asymmetry_reference.py — REFERENCE IMPLEMENTATION (external)
 
 Source: independent reimplementation supplied by the author, unmodified except
-for trimming the main block to the kappa extraction. This is the script that
-produced kappa = 0.078-0.082 and the beta-collapse to four digits.
+for trimming the main block to the kappa extraction, and for the SEEDING FIX
+below. Before that fix this script produced kappa = 0.078-0.082 (adopted
+0.0799) and the beta-collapse to four digits -- RETRACTED, see below.
+
+SEEDING FIX (2026-09-24). The gyroscopic term here is beta*c*(v[n-1] - v[n+1]),
+the opposite sign to the platform scripts' c*beta*(v[n+1] - v[n-1]). In THIS
+lattice the +k wave is therefore the UPPER root, (B + d)/2, and -k the lower,
+(-B + d)/2. The old code seeded "+" with (-B + d)/2 and "-" with (B + d)/2 --
+each direction with the OTHER direction's root. The O(beta) velocity mismatch
+seeds a counter-rotating admixture that is read in the same FFT bin (bin m of a
+real field also holds the conjugate of bin N - m), and its nonlinear frequency
+pulling biased the A^2 coefficient -- the mechanism phi_gauge_delta.py Part 2
+documents for v5.2. Old: kappa = +0.0799. Seeded with each direction's own root:
+kappa = -0.0187 at beta = 0.05, A = 0.30 (the asymmetry magnitude SHRINKS with
+amplitude), agreeing with the second-order PT value -0.0175 in phi_gauge_delta.py
+(its +0.0349*beta = -kappa * 2c sin k * beta). The linear asymmetry |d_omega| =
+2 c beta sin k is unaffected.
 
 It is the reference because it (a) seeds UNIDIRECTIONAL travelling waves with
-direction-specific velocities, (b) projects onto a single Fourier mode m = +/-16
-so the two directions never mix, and (c) uses weighted complex-phase regression,
-which harness.py calibrates to 0.3% against the exact Duffing shift.
+direction-specific velocities, (b) projects onto a single Fourier mode m = +/-16,
+and (c) uses weighted complex-phase regression, which harness.py calibrates to
+0.3% against the exact Duffing shift. On (b): bin m of a REAL field also carries
+the conjugate of the counter-propagating wave, so the directions do not separate
+in the readout -- they are kept apart only by seeding each at its own root.
 
 The package's own phi_gauge_nonlinear.py uses an FFT-peak estimator that fails
 calibration (0.4985 relative error) and gives 0.0305. This file supersedes it for
@@ -122,7 +139,9 @@ def run_dir(beta,A,direction="+",T=900.0,dt=0.008,rtol=1e-9):
     if abs(beta)<1e-12: west=omega_lin0
     else:
         B=2*c*beta*np.sin(k); d=np.sqrt(B*B+4*W2)
-        west=(-B+d)/2 if direction=="+" else (B+d)/2
+        # gyro here is beta*c*(v[n-1]-v[n+1]): omega^2 - B*omega - W2 = 0 for
+        # +k, so +k is the UPPER root. (Was swapped -- see SEEDING FIX above.)
+        west=(B+d)/2 if direction=="+" else (-B+d)/2
     v0=sign*A*env*west*np.sin(k*coord)
     t_eval=np.arange(0.0,T,dt)
     sol=solve_ivp(eom,[0,T],np.concatenate([x0,v0]),t_eval=t_eval,
@@ -143,20 +162,23 @@ def delta(beta,A,**kw):
     return rp[0]-rn[0], max(rp[1],rn[1])
 
 if __name__=="__main__":
+    # kappa is defined on the MAGNITUDE: |d_omega| = 2 c beta sin k * [1 + kappa A^2].
+    # (In this lattice d_omega = +2 c beta sin k; the old block hard-coded
+    # d0 = -0.1 and so could not reproduce its own quoted value.)
     print(f"  exact sqrt(W^2) = {omega_lin0:.10f}")
     print("\n  AMPLITUDE SWEEP beta=0.05")
     print(f"  {'A':>6} {'d_omega':>12} {'resid':>11} {'kappa':>9} {'q':>6}")
-    d0=-0.1; ks=[]
+    d0=2*c*0.05*np.sin(k); ks=[]
     for A in (0.10,0.20,0.30,0.40):
         d,q=delta(0.05,A)
         if d is None: continue
-        r=d-d0; kap=r/(d0*A*A); ks.append(kap)
+        r=abs(d)-d0; kap=r/(d0*A*A); ks.append(kap)
         print(f"  {A:6.2f} {d:12.7f} {r:11.7f} {kap:9.5f} {q:6.3f}")
     print(f"\n  kappa mean = {np.mean(ks):.5f} +/- {np.std(ks):.5f}")
     print("\n  BETA SWEEP A=0.30 (collapse)")
-    print(f"  {'beta':>6} {'d_omega':>12} {'kappa':>9} {'d/d0':>10}")
+    print(f"  {'beta':>6} {'d_omega':>12} {'kappa':>9} {'|d/d0|':>10}")
     for b in (0.02,0.05,0.10,0.20):
         d,q=delta(b,0.30)
         if d is None: continue
-        th=-2*c*b*np.sin(k)
-        print(f"  {b:6.2f} {d:12.7f} {(d-th)/(th*0.09):9.5f} {d/th:10.6f}")
+        th=2*c*b*np.sin(k)
+        print(f"  {b:6.2f} {d:12.7f} {(abs(d)-th)/(th*0.09):9.5f} {abs(d)/th:10.6f}")

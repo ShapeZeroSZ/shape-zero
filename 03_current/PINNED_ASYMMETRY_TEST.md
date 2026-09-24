@@ -97,7 +97,30 @@ coefficient is a **pure number** fixed by c and k alone.
 
 **Δω(k, A) = −2 c β sin(k) · [1 + κ A²]**   (k = π/2, c = 1)
 
-**⚠ κ IS GEOMETRY-DEPENDENT. The value 0.0799 is for a 1D CHAIN.**
+> **⚠ κ = 0.0799 IS RETRACTED (2026-09-24). Nothing below is deleted; read it
+> through this note.** `pinned_asymmetry_reference.py` seeded each direction with
+> the *other* direction's root (its gyro term has the opposite sign to the platform
+> scripts, so +k is the upper root there; "+" was seeded with the lower). The O(β)
+> velocity mismatch biased the A² coefficient. With each direction seeded at its
+> own root, the same integrator and estimator give **κ = −0.0187** (β = 0.05,
+> A = 0.30) and **−0.0184 ± 0.00033** over the β-sweep — |Δ/Δ₀| = 0.998339,
+> 0.998316, 0.998390, 0.998316 at β = 0.02, 0.05, 0.10, 0.20. The asymmetry
+> magnitude **shrinks** with amplitude, as second-order PT predicts (−0.0175,
+> `phi_gauge_delta.py`); confirmed with separate code. **Scripts:**
+> `pinned_asymmetry_reference.py` (fixed), `model.py` gate 6.
+>
+> **Unaffected:** the linear pinned asymmetry Δω = −2cβ sin k — the claim this
+> document is built on — and the Lean missions (Prove2Me 2, 3, 4a, 4b), which are
+> linear-order. The β-collapse also survives (β-independent to 3×10⁻⁴).
+> **Unverified pending re-measurement:** the geometry table and κ(w, side) values,
+> and κ versus stiffness (0.0959 / 0.0799 / 0.0677), all measured with the swapped
+> seeding. The earlier §3b table (−0.003046 at β = 0.05, from
+> `phi_gauge_nonlinear.py`) seeds both directions at the β = 0 frequency — a
+> different, uncorrected mismatch. Trail: `PROVENANCE.md` §6o.
+
+**⚠ κ IS GEOMETRY-DEPENDENT. The value 0.0799 is for a 1D CHAIN.** [κ values in
+this table and the next paragraph: 0.0799 RETRACTED, the rest UNVERIFIED — see
+note above.]
 
 | geometry | Δω (theory 0.100000) | κ |
 |---|---|---|
@@ -117,7 +140,8 @@ transverse geometry **and** with base stiffness — measured κ = 0.0959, 0.0799
 remains protected against both** (null to 1.2×10⁻⁵ under stiffness), and that is
 the invariance the experiment rests on.
 
-**For an experimentalist:** on a 1D array at unit stiffness, κ = 0.0799. On anything with
+**For an experimentalist:** on a 1D array at unit stiffness, κ = 0.0799 [RETRACTED —
+use −0.0187; see note above]. On anything with
 transverse extent, κ is smaller and must be measured for that profile. The
 **collapse protocol is unaffected** — the β-independence of the normalised drift
 is what makes it a test, and that holds regardless.
@@ -138,7 +162,8 @@ rtol 10⁻⁹, T = 900, weighted phase regression) gives |Δ/Δ₀| = 1.007227, 
 by A² = 0.09 gives **κ = 0.0799 at every β** — β-independent to four digits.
 
 The amplitude sweep alone gives a range 0.078–0.082; the β-sweep is tighter
-because the collapse is exact. **0.0799 is the value to quote.**
+because the collapse is exact. **0.0799 is the value to quote.** [RETRACTED —
+swapped seeding; corrected β-sweep value −0.0184 ± 0.00033, see note above.]
 
 **SECOND CORRECTION — the coefficient is 0.082, not 0.0305.** An independent
 reimplementation (DOP853, rtol 10⁻⁹, T = 900, weighted complex-phase regression)
@@ -175,6 +200,7 @@ and carries a guard against decimal slips.
 | reference, amplitude sweep | 0.078–0.082 | phase regression, T = 900 |
 | reference, **β-sweep** | **0.0799** (four digits) | phase regression, T = 900 |
 | **adopted** | **0.0799** | β-sweep, calibrated to 0.4% on Duffing |
+| **RETRACTED → corrected** | **−0.0184 ± 0.00033** (−0.0187 at β = 0.05) | same reference, each direction seeded at its own root |
 
 *The package sweeps are internally consistent because they share one biased
 estimator. Internal consistency is not accuracy — both routes used the same

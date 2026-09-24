@@ -554,7 +554,7 @@ arithmetic test.**
 | geometric matching of node to continuum scale | **blocked** — needs the UV/IR ratio; HIERARCHIES §5 shows the only mechanism generates separations *without* fixing size |
 | **topological integer from incidence data** | **blocked** — **137 is prime.** The model's integers factor over {2,3,7}, so **zero** products of up to three reach it. Sums reach it in several arbitrary ways (9+128, 2+7+128, 9+64+64) and therefore select nothing |
 | infrared fixed point, C_r drops out | **blocked** — needs RG flow; the ladder is classical, no loops (HIERARCHIES §2) |
-| an independent intermediate scale | **blocked** — ω, ℓ, μ, ℓ_f are all *inputs*; every derived quantity (κ = 0.0799, 3/8, 2, 6, 42) is dimensionless. No derived scale exists |
+| an independent intermediate scale | **blocked** — ω, ℓ, μ, ℓ_f are all *inputs*; every derived quantity (κ = 0.0799 [retracted; corrected −0.0187, §5], 3/8, 2, 6, 42) is dimensionless. No derived scale exists |
 | **withdraw the numerical claim** | **adopted** |
 
 **The primality is a real obstruction, not a failed search.** A topological or
@@ -1114,9 +1114,29 @@ Every number below is emitted by a script in this archive.
 
 **Dispersion asymmetry** (n = 1 sector):
 
-    Δω(k, A) = −2 c β sin(k) · [1 + κ A²]        κ = 0.0799  (PLANE WAVE / 1-D)
+    Δω(k, A) = −2 c β sin(k) · [1 + κ A²]        κ = 0.0799  (PLANE WAVE / 1-D)  ← RETRACTED
 
-**⚠ κ = 0.0799 IS THE PLANE-WAVE / 1-D VALUE ONLY.** For a transversely
+**⚠ κ = 0.0799 IS RETRACTED (2026-09-24).** The reference script seeded each
+direction with the *other* direction's root: its gyro term has the opposite sign
+to the platform scripts, so +k is the upper root there, and "+" was seeded with
+the lower. The O(β) velocity mismatch biased the A² coefficient (the same
+mechanism `phi_gauge_delta.py` Part 2 documents for v5.2). Seeded with each
+direction's own root, the same integrator and estimator give
+
+    κ = −0.0187  (β = 0.05, A = 0.30)      κ = −0.0184 ± 0.00033  (β-sweep, A = 0.30)
+
+— the asymmetry **magnitude shrinks** with amplitude, |Δ/Δ₀| = 0.998339,
+0.998316, 0.998390, 0.998316 at β = 0.02, 0.05, 0.10, 0.20. This agrees with
+second-order PT (−0.0175, from the +0.0349 βA² term in `phi_gauge_delta.py`) and
+was confirmed with separate code. **Scripts:** `pinned_asymmetry_reference.py`
+(fixed), `model.py` gate 6 (now signed). **Unaffected:** the linear pinned
+asymmetry Δω = −2cβ sin k (reproduced to 10⁻⁵ before and after the fix) and the
+Lean missions (Prove2Me 2, 3, 4a, 4b), which are linear-order and contain no κ.
+Trail: `PROVENANCE.md` §6o. The original text follows, kept as the record.
+
+**⚠ κ = 0.0799 IS THE PLANE-WAVE / 1-D VALUE ONLY.** [RETRACTED value — see
+above; the κ(w, side) figures in this paragraph were measured with the swapped
+seeding and are **UNVERIFIED pending re-measurement**.] For a transversely
 localised beam κ is smaller and depends on the transverse **domain** as well as
 the beam width — measured κ(w=2) falls 0.0177 → 0.0019 from side 8 to 32 and
 does **not** converge. Readout dilution, fill-fraction scaling and A²
@@ -1130,6 +1150,8 @@ invariance the experiment rests on, and it is unaffected.
 - leading term from **linear spectroscopy alone** — c, β, k
 - correction **proportional to β**, so the *normalised* drift is β-independent:
   |Δ/Δ₀| = 1.007227, 1.007190, 1.007262, 1.007051 across a tenfold β range
+  [RETRACTED values, swapped seeding; corrected 0.998339, 0.998316, 0.998390,
+  0.998316 — the collapse itself survives the fix]
 - **the collapse is the experiment**: sweep amplitude at two or three couplings,
   the normalised curves must fall on one
 - valid A ≲ 0.9; resolution required is ~10⁻⁴ for the pinning, **~10⁻⁵ for the
@@ -1219,12 +1241,23 @@ exactly as the algebra requires.
 **κ is not.** Converting: **κ = 0.0959, 0.0799, 0.0677** at stiffness 0.90, 1.00,
 1.10 — a **35% swing**, monotone, far outside noise.
 
+> **⚠ JOINT #3 (κ vs stiffness) — UNVERIFIED pending re-measurement (2026-09-24).**
+> The A = 0.30 row and the three κ values above were measured with the reference
+> script's swapped seeding (§5; κ = 0.0799 is retracted, corrected −0.0187 at unit
+> stiffness). Whether κ still varies with stiffness, and by how much, is not known
+> until the scan is rerun with the fixed `pinned_asymmetry_reference.py`; no script
+> for the scan is in this repository. Joint #2, the linear pin null at A = 0.02, is
+> linear-order and unaffected.
+
 ### 5b.3 The pin/κ split is structural, not merely geometric
 
 | quantity | vs transverse geometry | vs base stiffness |
 |---|---|---|
 | **pinning** Δω = −2cβ sin k | **protected** | **protected** |
-| **κ**, the A² coefficient | varies | **varies, ~35% over ±10%** |
+| **κ**, the A² coefficient | varies — *unverified* | **varies, ~35% over ±10%** — *unverified* |
+
+*κ rows: both measured with the swapped seeding retracted in §5; unverified
+pending re-measurement. The pinning rows are unaffected.*
 
 Two independent knobs, same split. **The pinning carries the falsifiable content
 of the U(1) sector; κ is a contingent coefficient** that must always be quoted
@@ -1437,7 +1470,7 @@ three scripts with three node types. Run it:
 | 3 complex structure selected | chirality purity **0.9834** |
 | 4 passivity ⟹ u(n), dim n² | **1, 4, 9, 16, 25** |
 | 5 n=1 asymmetry, measured | **0.100003** vs −2cβ sin k = 0.100000 |
-| 6 κ and the β-collapse | **κ = 0.0798 ± 0.00089** across a tenfold β range |
+| 6 κ and the β-collapse | **κ = 0.0798 ± 0.00089** across a tenfold β range — RETRACTED (swapped seeding, §5); corrected −0.0184 ± 0.00033 |
 | 7 u(2) ordering | sim-vs-pred **0.285°, 0.165°**; splitting 101.12 measured, 100.80 predicted |
 | 7 u(3) ordering | sim-vs-pred **0.615°, 0.566°**; splitting **65.1166** measured, **64.9712** predicted |
 | 8 Abelian control | **0.0169°** where theory says 0 |
@@ -1464,7 +1497,7 @@ That is now a concrete edit rather than an open design question.
 | 2 | ring of N nodes, φ-well, elastic coupling | free packet propagates, drift < 10⁻⁶ |
 | 3 | gyroscopic κ𝕁 | complex structure selected; chirality purity ~0.98 |
 | 4 | n = 1 velocity coupling | Δω = −2cβ sin k reproduced |
-| 5 | nonlinear regime | κ = 0.0799 reproduced, β-collapse holds |
+| 5 | nonlinear regime | κ = 0.0799 reproduced, β-collapse holds — κ RETRACTED (§5); gate now reports −0.0184, collapse still holds |
 | 6 | n = 2 nodes, Pauli W | ordering 59.86° vs 59.84° |
 | 7 | n = 3 nodes, Gell-Mann W | ordering 65.12° vs 64.97°, control ~0 |
 | 8 | segments at ≤ 20-site separation | Abelian control 0.0137° |
@@ -1582,4 +1615,6 @@ second route) · the q = 3 gate port · the spatial arrival model (optional,
 **Retracted this session:** ℏ = (μℓ_f²/T)/4 (generator normalisation is not a
 metric scale) · the 1-D Bloch map failing at q = 3 (tube clipping) · G being
 dimensionally impossible (hand arithmetic) · κ(w) as a publishable formula
-(depends on the transverse domain, not just the beam)
+(depends on the transverse domain, not just the beam) [the κ(w, side)
+investigation used the swapped seeding retracted in §5 — UNVERIFIED pending
+re-measurement]

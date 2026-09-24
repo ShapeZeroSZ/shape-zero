@@ -19,7 +19,8 @@ lab-facing document twice while wrong.
 |---|---|---|---|
 | first | **0.30** | hand-arithmetic in prose: divided by −0.2 instead of the leading term −2 | external referee |
 | second | **0.0305** | FFT-peak frequency estimator, biased 1.8–2.0× at short records | independent reimplementation |
-| **current** | **0.0799** | — | β-sweep, four values agreeing to four digits |
+| third | **0.0799** | RETRACTED 2026-09-24: reference seeded each direction with the other's root | P-1 investigation; confirmed with separate code (§6o) |
+| **current** | **−0.0187** (β = 0.05, A = 0.30); **−0.0184 ± 0.00033** β-sweep | — | own-root seeding; agrees with second-order PT −0.0175 |
 
 **Diagnostic that settled it:** `estimator_calibration.py` against the exact
 Duffing shift 3ε/(8ω₀²) = 0.044263. Phase regression recovers it to **0.4%**;
@@ -223,7 +224,7 @@ found while looking at the target rather than at the model.
 | claim | status |
 |---|---|
 | pinned asymmetry at q = 3 | **survives** — 0.100001 vs theory 0.100000 |
-| **κ at q = 3** | **does NOT survive** — 0.0799 → 0.0168 (w=2), 0.0311 (w=3), and depends on transverse width |
+| **κ at q = 3** | **does NOT survive** — 0.0799 → 0.0168 (w=2), 0.0311 (w=3), and depends on transverse width [all measured with swapped seeding: 0.0799 RETRACTED, κ(w, side) UNVERIFIED — §6o] |
 | gates 5–8 in `model.py` | measured at **q = 1**; 7–8 not yet re-run at q = 3 |
 
 **A vacuous test was caught and is now documented.** The first q = 3 run gave
@@ -310,6 +311,8 @@ angle. **Linear pin NULL to 1.2×10⁻⁵** across a 20% stiffness range, exactl
 the algebra requires (stiffness enters both branches identically and cancels in
 the difference). **Liveness check passes** — branch frequencies move by +0.109,
 so the null is not vacuous. **κ SIGNAL: 0.0959 → 0.0799 → 0.0677**, a 35% swing.
+[κ-vs-stiffness UNVERIFIED pending re-measurement — swapped seeding, §6o. The
+linear pin null is unaffected.]
 
 **Joint #4 WITHDRAWN as a law** (numbering: #1 holonomy, #2 pin null, #3 κ, #4 gradient). A stiffness gradient appeared to couple as
 Δ ∝ (∇s)², C = −1337 at 2% scatter — but only for a linear ramp. For Gaussian
@@ -539,6 +542,70 @@ the backward side and accepted a 240-site lattice that a direct run showed
 failing (a stray wave re-entered the second segment at t ≈ 350). Fixed in commit
 `e410714`. Another instance of the day's pattern — a guard is only trustworthy
 once tested against a case known to be bad.
+
+## 6o. κ = 0.0799 retracted; P-1 decay window not supported (2026-09-24)
+
+**How it was found.** Investigating why `phi_gauge_decaymap.py` predicts the P-1
+window moving down while its measured map moves up, the sign of the amplitude
+term was checked against MODEL_SPEC §5. The script's second-order PT gives the
+asymmetry correction as +0.0349 βA², i.e. κ = −0.0175; §5 quoted +0.0799.
+
+**κ — what was wrong.** `pinned_asymmetry_reference.py` has gyro term
+βc(v[n−1] − v[n+1]), opposite in sign to the platform scripts. In its lattice +k
+is the **upper** root (B + d)/2; the code seeded "+" with (−B + d)/2 and "−" with
+(B + d)/2 — each direction with the other's root. Its measured Δω is therefore
++0.1007 at β = 0.05, A = 0.30, and its own main block (d0 = −0.1 hard-coded) could
+not have printed 0.0799; the quoted value is (|Δ/Δ₀| − 1)/A². The O(β) velocity
+mismatch seeds a counter-rotating admixture read in the same FFT bin, whose
+frequency pulling biased κ — the mechanism `phi_gauge_delta.py` Part 2 records
+for v5.2. Signature in hindsight: the phase residual grew in proportion to β
+(0.009 → 0.076 over the β-sweep); after the fix it is flat at 0.0054–0.0057.
+
+| run, `pinned_asymmetry_reference.py` | old (swapped) | new (own root) |
+|---|---|---|
+| amplitude sweep, β = 0.05, A = 0.10 / 0.20 / 0.30 / 0.40 | +0.0773 / +0.0783 / +0.0799 / +0.0821 | −0.0176 / −0.0179 / −0.0187 / −0.0200 |
+| β-sweep, A = 0.30, β = 0.02 / 0.05 / 0.10 / 0.20: \|Δ/Δ₀\| | 1.007227 / 1.007190 / 1.007262 / 1.007051 | 0.998339 / 0.998316 / 0.998390 / 0.998316 |
+| β-sweep κ | +0.0798 ± 0.00089 | **−0.0184 ± 0.00033** |
+| linear, A = 0.02, β = 0.05: \|Δω\| − 2cβ sin k | +3.1×10⁻⁶ | −7×10⁻⁷ |
+
+Corrected κ = −0.0187 at β = 0.05, A = 0.30 was confirmed independently with
+separate code. `model.py` gate 6 also took abs() of the drift, so it could not
+report a negative κ; it is now signed. A search for the same swap (a direction
+seeded with the other direction's root) found no other instance:
+`phi_gauge_delta.py`, `phi_gauge_decaymap.py` and `s2_universality.py` use the
+platform sign and seed with w_lin(direction·K), which is correct.
+`phi_gauge_nonlinear.py` (and so `pinned_asymmetry_headline.py`,
+`phi_gauge_closure.py`) seeds both directions at the β = 0 frequency — an O(β)
+mismatch but not a swap; not changed here, and its superseded 0.0305 carries
+that bias as well as the estimator bias. The two frozen `model.py` snapshots in
+`shape_zero_tests/model_versions/` are left as recorded.
+
+**Unaffected:** the linear pinned asymmetry Δω = −2cβ sin k and the Lean missions
+(Prove2Me 2, 3, 4a, 4b), all linear-order. The β-collapse survives the fix.
+**Unverified pending re-measurement:** κ versus stiffness (MODEL_SPEC §5b.2,
+Joint #3) and the κ(w, side) investigation (§5, §6e) — both measured with the
+swapped seeding, and neither scan has a script in this repository.
+
+**P-1 — what was found** (annotated in `shape_zero_predictions_v1.md`):
+
+1. `beta_res()` in `phi_gauge_decaymap.py` holds w(0) + w(π) at the linear value
+   and lets only the pump soften, giving −0.0991 A² exactly — an incomplete
+   resonance condition. A Hill/Floquet analysis of the exact travelling wave puts
+   the (0, π) band midpoint at ≈ 0.063 + 0.08 A², moving up.
+2. The measured map is an artifact of the plain-cosine start (it seeds the q = 0
+   and q = π product modes at O(A²); retention is independent of the noise to
+   four digits and is 0.9998 from the exact wave) and of the fixed T = 400
+   readout (the dip moves from β = 0.075 to 0.0675 with readout time) —
+   MODEL_SPEC §4d.1 trap 6.
+3. A clean start shows broad instability across β = 0.05–0.10 at A = 0.3–0.4
+   (other pair channels grow as fast or faster), not a window.
+4. The reverse-direction (−k) protection holds on every channel checked.
+
+**Catch:** a sign comparison between a prediction script and the spec, made
+while chasing a different discrepancy. Failure mode: #2 below in a new form —
+the instrument was calibrated, the *preparation* was not. Also a case of
+recurring mode #1's cousin: a quoted value that the script's own main block
+could not have printed.
 
 ## 7. Recurring failure modes
 

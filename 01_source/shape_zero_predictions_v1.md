@@ -54,6 +54,50 @@ the predictions apply to any faithful realization.
 > derivation of κ and the control-lattice numbers (centre 0.0754, retention
 > 0.528 at β = 0.074, reverse 1.002) have no script in this repository.
 
+> **Investigation (2026-09-24) — P-1 as stated is NOT supported. Nothing above
+> is deleted; read it through this note.** Full trail: `PROVENANCE.md` §6o.
+>
+> 1. **The prediction script's resonance condition is incomplete.**
+>    `beta_res()` in `phi_gauge_decaymap.py` holds w(0) + w(π) fixed at the
+>    linear value 3.99256 (`W_SUM` is a constant) and lets only the pump soften
+>    (−0.096 A²). Its curve is exactly −(pump self-shift)/(dω/dβ) = −0.0991 A²,
+>    hence the downward drift. The products' own shifts in the pump field are
+>    omitted. A linear (Hill/Floquet) stability analysis of the exact
+>    harmonic-balance travelling wave — which reproduces the script's −0.0974 A²
+>    self-shift and +0.035 βA² asymmetry term — puts the (0, π) unstable band at
+>    β ∈ [0.0630, 0.0643] at A = 0.10 and [0.0653, 0.0868] at A = 0.40: the lower
+>    edge stays near the linear 0.063, the upper edge moves out, midpoint
+>    ≈ 0.063 + 0.08 A². The model's own window does move up; the script
+>    computes something else.
+> 2. **The measured map is an artifact of the plain-cosine start and the
+>    fixed-time readout.** Retention at T = 400 is identical to four digits with
+>    the noise switched off, reseeded, or 1000× larger (0.6117 / 0.8855 at
+>    A = 0.4, β = 0.07 / 0.08): the dips are not noise-seeded instability, which
+>    reaches only ~3.5 e-folds by T = 400. The bare cosine is not the nonlinear
+>    wave; it launches free q = 0 and q = π oscillations of ≈ 0.027 and 0.017 —
+>    exactly the product pair. Starting from the exact travelling wave, retention
+>    is 0.9998 at the same cell. On a 0.0025 β grid the dip moves with readout
+>    time (argmin β = 0.075 at T = 200–300, 0.0725 at T = 400, 0.0675 at
+>    T ≥ 500), and one cell swings 0.81 → 0.27 → 0.78 between T = 400 and 800 —
+>    MODEL_SPEC §4d.1 trap 6 (readout without a clearing criterion). All cells
+>    with A ≤ 0.25 read 1.000 ± 0.005, so the fitted 0.062 + 0.064 A² rests on
+>    essentially the β = 0.07 column; "deepest retention 0.61" is a T = 400
+>    snapshot (min over time 0.26).
+> 3. **A clean start shows broad instability, not a window.** From the exact
+>    wave at A = 0.3–0.4, other pair channels (q, 2k₀ − q), q ≠ 0, grow as fast
+>    as or faster than (0, π) at every β from 0.05 to 0.10 (Hill), and long runs
+>    (T = 2500) lose pump energy across the whole range. The localised window
+>    exists only because the plain-cosine start seeds (0, π) at O(A²).
+> 4. **The reverse-direction protection holds.** The −k pump is linearly stable
+>    on every channel checked (A = 0.3, 0.4; β = 0.05, 0.07, 0.08), and the
+>    script's −k spot checks read 1.000.
+>
+> The P-1 falsifier ("the window drifts downward") is therefore not met by the
+> model, but the window claim itself fails under a clean start; the directional
+> protection is the part that stands. The investigation scripts (Hill analysis,
+> batched clean-start runs) were scratch code and are not yet in this
+> repository.
+
 **Falsified if:** the window drifts downward with amplitude; or the reverse
 direction decays inside the window; or the centre misses the zero-fit
 prediction by more than the derived window width. Device reading: a passive
