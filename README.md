@@ -82,6 +82,10 @@ mechanisms for the three-dimensional non-convergence; a local gradient law.
 | `02_synthesis/C1_ERRATA.md` | the earlier errata list for C1 |
 | `04_scripts/session/model.py` | the assembled model; `python3 model.py` runs its gates |
 
+**Do not move or rename** `01_source/proofs/ShapeZero_C1_Formal_Proofs.pdf` or
+`01_source/proofs/ERRATUM_Theorem_6.1.md`: both are cited by link from the
+Prove2Me mission source fields.
+
 The C1 Formal Proofs contain errors that were found by formalizing its results:
 most importantly, Theorem 6.1 states that passivity forces **skew**-symmetric
 couplings where the correct condition is **symmetric**. Read the erratum

@@ -1479,7 +1479,7 @@
 - L49 [RETRACTED] `Measured (simulation, with the checks th` — κ = 0.0799, are **RETRACTED**:
 - L51 [-] `Measured (simulation, with the checks th` — κ = −0.0187 at unit stiffness (β = 0.05, A = 0.30; −0.0184 ± 0.00033 over the
 - L55 [-] `Measured (simulation, with the checks th` — model's operating amplitude to 3×10⁻⁴.
-- L107 [-] `License` — the source. Copyright © 2026 Shape Zero LLC.
+- L111 [-] `License` — the source. Copyright © 2026 Shape Zero LLC.
 
 ### `./shape_zero_tests/README.md` (63 claims)
 
