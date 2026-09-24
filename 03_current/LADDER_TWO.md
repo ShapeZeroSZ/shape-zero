@@ -1,5 +1,15 @@
 # Ladder Two — The Quasi-Periodic Branch
 
+> **Note on what is backed.** Only the §6 spectra (both tables, the k(k+14)
+> control, stability from degree 3 to 4) are reproduced by a script in this
+> repository, `d16_spectrum_v2.py`; §5's metric coefficients and invariants
+> are the formulas that script uses. **No script in this repository produces
+> the numbers in §1, §2, §3, §4 and §6a**, nor §5's error figures, drift,
+> determinant polynomial, domain checks and centre-point values, nor the
+> superseded finite-difference build's 1785% drift in §6.
+> **§4 mismatch:** the text gives |det L_a| as 0.0004–0.858 at D16;
+> `d16_spectrum_v2.py` prints 0.0000–0.9344 over its 12,000 samples.
+
 Standalone. **Not an addendum to C1/C1S/C1S2.** Those document Ladder One: what
 follows from demanding closed orbits. This documents a different construction
 that begins where that demand is relaxed, and it stands or falls on its own

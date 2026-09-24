@@ -5,7 +5,8 @@ different route from the first two, and to state honestly what is derived,
 what is a consistency check with known results, and what is assumed.*
 
 **Scripts:** `z1_d8_dynamics.py` (dim Der(𝕆) = 14), `phi_gauge_chiral.py`
-(passivity forces the Hermitian u(2) class).
+(tests the u(2) class under passivity plus J-compatibility; passivity alone
+forces only symmetric couplings — see `01_source/proofs/ERRATUM_Theorem_6.1.md`).
 
 ---
 

@@ -47,6 +47,13 @@ the predictions apply to any faithful realization.
 α = 0.7): predicted centre 0.0754 at A = 0.4, deepest measured retention
 0.528 at β = 0.074; reverse direction 1.000 / 1.002 respectively.
 
+> **Note on what is backed.** β_res = 0.062 + 0.064A² is a fit to the
+> measured retention map from `phi_gauge_decaymap.py`, not a model
+> prediction: that script's own predicted window moves the other way
+> (0.0619 at A = 0.10 to 0.0470 at A = 0.40). The cross-softening
+> derivation of κ and the control-lattice numbers (centre 0.0754, retention
+> 0.528 at β = 0.074, reverse 1.002) have no script in this repository.
+
 **Falsified if:** the window drifts downward with amplitude; or the reverse
 direction decays inside the window; or the centre misses the zero-fit
 prediction by more than the derived window width. Device reading: a passive

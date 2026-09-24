@@ -44,6 +44,9 @@ import sys
 
 ROOT = "."
 SKIP_DIRS = {".git", "__pycache__"}
+# This script's own output, and the audit written from it. Scanning them made
+# every run index the previous run, so the output never settled.
+SKIP_DOCS = {"CLAIM_INDEX.md", "AUDIT.md"}
 
 # a "claim number" is a figure with enough precision to be a measurement
 NUM = re.compile(
@@ -80,6 +83,8 @@ def walk_files(ext):
 def scan_documents():
     out = []
     for p in walk_files(".md"):
+        if os.path.basename(p) in SKIP_DOCS:
+            continue
         try:
             lines = open(p, encoding="utf-8", errors="replace").read().splitlines()
         except Exception:
