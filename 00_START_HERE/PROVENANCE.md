@@ -478,6 +478,14 @@ Fano"). Drafting
 this mission is also where the two §3 corrections were found (Theorem 3.3,
 condition (a), and Theorem 3.6): `01_source/proofs/ERRATUM_Theorem_6.1.md`.
 
+**Mission sources made public (2026-09-24).** The source fields of all 36 items
+in missions 1, 2, 3, 4a, 4b and 5 were updated to cite the public C1 Formal Proofs
+(`01_source/proofs/ShapeZero_C1_Formal_Proofs.pdf`) and its erratum
+(`01_source/proofs/ERRATUM_Theorem_6.1.md`) at the exact section. Mission 5's
+items also cite the public references from its description, as the moderator
+suggested. Both files are linked from those fields and must not be moved or
+renamed (top-level README).
+
 **Priority, recorded as it happened.** All five mission-5 theorems were first
 solved by another solver within minutes of publication, before our proofs were
 submitted. Ours were accepted as later solves. The result is machine-verified
