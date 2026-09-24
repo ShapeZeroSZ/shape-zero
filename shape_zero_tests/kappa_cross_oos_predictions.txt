@@ -1,0 +1,24 @@
+OUT-OF-SAMPLE TEST OF THE DERIVED F -- PREDICTIONS, RECORDED BEFORE ANY RUN
+(written by kappa_cross_pt.py functions F_diag (P3a) and F_triads (P3b), A -> 0;
+measurement at A = 0.10 by kappa_cross_oos.py, which had not been run when this
+file was committed)
+
+Selection: configurations never measured, small transverse boxes (tight error
+bars), where P3a and P3b differ by several expected error bars. C1 is chosen
+because P3b falls BELOW P3a there (the reverse of every measured point), so a
+model that is merely biased high cannot pass it.
+
+Box: the derivation depends only on the transverse grid; x must be a multiple of
+4 to hold K = pi/2. C1 and C2 use an 8 x L x L box; C3 is cubic. Validation in
+the same run: an 8 x 4 x 4 box must reproduce the cubic L = 4 value at A = 0.10.
+
+Expected error bars (from the measured errors at similar box sizes, A = 0.10 and
+0.30): C1 ~0.02-0.03, C2 ~0.05, C3 ~0.08-0.12.
+
+PASS for a prediction: within 2 error bars of the measured F. The test
+discriminates if P3a and P3b are > 4 error bars apart.
+
+   config   w     Lx x L x L     fill      s      2 - s     P3a      P3b    P3b - P3a
+   C1     0.75    8 x  6 x  6   0.04985  0.193   1.807    1.536    1.425    -0.111
+   C2     1.25    8 x 10 x 10   0.04909  0.196   1.804    1.676    1.994    +0.319
+   C3     1.00   12 x 12 x 12   0.02182  0.087   1.913    1.732    2.131    +0.398
