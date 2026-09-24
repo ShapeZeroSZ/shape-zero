@@ -935,7 +935,12 @@ P3b lands on all three, including the one where it predicts **below** P3a. The
 discrimination is weaker than planned: the error bars at A = 0.10 came out
 0.11–0.18, not the 0.02–0.12 expected, so no configuration separates the two
 predictions by the four error bars set in advance; P3a is excluded at 2.6σ and
-2.3σ, and the first beam does not discriminate (1.0σ).
+2.3σ, and the first beam does not discriminate (1.0σ). The formal four-error-bar
+criterion was **not met**. But P3b's three predictions land within **0.006** of
+the measured F while the error bars are 0.11–0.18 — agreement that close would be
+very unlikely by chance if those error bars reflected the true uncertainty. So at
+A = 0.10 the error-bar estimator (the disagreement between weighted and unweighted
+fits) is likely **conservative**.
 
 *Caveat on order of work:* the measured F values were seen before the theory was
 written. Nothing in the theory is adjustable, and neither prediction was changed

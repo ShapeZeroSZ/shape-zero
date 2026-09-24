@@ -128,6 +128,10 @@ over A = 0.05–0.20 and six β, emits δ = +0.0357·β (retracted: −0.0598·�
 > `phi_gauge_delta.py`); confirmed with separate code. **Scripts:**
 > `pinned_asymmetry_reference.py` (fixed), `model.py` gate 6.
 >
+> *κ = −0.0187 is the value **at A = 0.3**. The small-amplitude coefficient is **−0.0175** —
+> derived by perturbation theory (−0.01748) and measured (−0.0176 at A = 0.10) — and
+> a fourth-order term adds about 7% by A = 0.3.*
+>
 > **Unaffected:** the linear pinned asymmetry Δω = −2cβ sin k — the claim this
 > document is built on — and the Lean missions (Prove2Me 2, 3, 4a, 4b), which are
 > linear-order. The β-collapse also survives (β-independent to 3×10⁻⁴).
@@ -397,7 +401,12 @@ P3b lands on all three, including the one where it predicts **below** P3a. The
 discrimination is weaker than planned: the error bars at A = 0.10 came out
 0.11–0.18, not the 0.02–0.12 expected, so no configuration separates the two
 predictions by the four error bars set in advance; P3a is excluded at 2.6σ and
-2.3σ, and the first beam does not discriminate (1.0σ).
+2.3σ, and the first beam does not discriminate (1.0σ). The formal four-error-bar
+criterion was **not met**. But P3b's three predictions land within **0.006** of
+the measured F while the error bars are 0.11–0.18 — agreement that close would be
+very unlikely by chance if those error bars reflected the true uncertainty. So at
+A = 0.10 the error-bar estimator (the disagreement between weighted and unweighted
+fits) is likely **conservative**.
 
 *Caveat on order of work:* the measured F values were seen before the theory was
 written. Nothing in the theory is adjustable, and neither prediction was changed

@@ -52,7 +52,10 @@ that, so together they machine-verify C1 Theorem 3.6 ("Roles Force Fano").
   the reference script seeded each direction with the other's root. Corrected
   κ = −0.0187 at unit stiffness (β = 0.05, A = 0.30; −0.0184 ± 0.00033 over the
   β-sweep), from `pinned_asymmetry_reference.py` and `model.py` gate 6. The
-  linear pinning and the Lean missions are unaffected. See `PROVENANCE.md` §6o.]
+  linear pinning and the Lean missions are unaffected. See `PROVENANCE.md` §6o.
+  −0.0187 is the value at A = 0.3; the small-amplitude coefficient is −0.0175 —
+  derived by perturbation theory (−0.01748) and measured (−0.0176 at A = 0.10) —
+  and a fourth-order term adds about 7% by A = 0.3.]
 - **The node's internal cone structure** (centrifugal barrier) holds at the
   model's operating amplitude to 3×10⁻⁴.
 

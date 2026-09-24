@@ -1143,6 +1143,11 @@ independent confirmation — by the plane-wave control of `kappa_readout_test.py
 (fixed), `model.py` gate 6 (now signed). **Unaffected:** the linear pinned
 asymmetry Δω = −2cβ sin k (reproduced to 10⁻⁵ before and after the fix) and the
 Lean missions (Prove2Me 2, 3, 4a, 4b), which are linear-order and contain no κ.
+
+*Headline κ = −0.0187 is the value **at A = 0.3**. The small-amplitude coefficient is **−0.0175** —
+derived by perturbation theory (−0.01748) and measured (−0.0176 at A = 0.10) — and
+a fourth-order term adds about 7% by A = 0.3.*
+
 Trail: `PROVENANCE.md` §6o. The original text follows, kept as the record.
 
 **⚠ κ = 0.0799 IS THE PLANE-WAVE / 1-D VALUE ONLY.** [RETRACTED values — the
@@ -1392,7 +1397,12 @@ P3b lands on all three, including the one where it predicts **below** P3a. The
 discrimination is weaker than planned: the error bars at A = 0.10 came out
 0.11–0.18, not the 0.02–0.12 expected, so no configuration separates the two
 predictions by the four error bars set in advance; P3a is excluded at 2.6σ and
-2.3σ, and the first beam does not discriminate (1.0σ).
+2.3σ, and the first beam does not discriminate (1.0σ). The formal four-error-bar
+criterion was **not met**. But P3b's three predictions land within **0.006** of
+the measured F while the error bars are 0.11–0.18 — agreement that close would be
+very unlikely by chance if those error bars reflected the true uncertainty. So at
+A = 0.10 the error-bar estimator (the disagreement between weighted and unweighted
+fits) is likely **conservative**.
 
 *Caveat on order of work:* the measured F values were seen before the theory was
 written. Nothing in the theory is adjustable, and neither prediction was changed
