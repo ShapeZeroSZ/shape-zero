@@ -207,7 +207,27 @@ Physics, seed, readout and error bar as section 11. Width scan: four groups of
 matched w/L (1/4, 1/8, 1/12, 1/16), widths 1.5–4. Resolution test: w/L = 1/4,
 w = 1–6; reproduces the Colab w = 2, 3, 4 values exactly. Result: the box-size
 mechanism is general across widths; the L = 8 gap is a narrow-beam lattice
-effect; w = 3 CLOSED (PROVENANCE §6o).
+effect [corrected: at A = 0.30 it is partly the derived lattice kernel and partly
+fourth order in amplitude — section 13]; w = 3 CLOSED (PROVENANCE §6o).
+
+### 13. The cross-modulation factor F, derived (A → 0) and tested
+`kappa_cross_pt.py` → `kappa_cross_pt_output.txt`: second-order PT for the cross
+kernel R(q⊥) on the lattice and two predictions for F (P3a diagonal, P3b all
+triads), recorded before comparison. Pure NumPy, about a minute.
+`kappa_cross_kernel.py` → `kappa_cross_kernel_output.txt`: R(q⊥) measured from
+two-wave runs (probe + one sideways pump), about 3 minutes.
+`kappa_cross_compare.py` → `kappa_cross_compare_output.txt`: derived F against
+every measured F. `kappa_cross_amplitude.py` → `kappa_cross_amplitude_output.txt`:
+the two narrow-beam points at A = 0.30, 0.20, 0.10.
+`kappa_cross_oos_predictions.txt` (recorded before the run) and
+`kappa_cross_oos.py` → `kappa_cross_oos_output.txt`: out-of-sample test at
+A = 0.10. Physics, seed and readout as section 12 (`kappa_resolution_test.py` is
+imported). Result: P3b matches 7 of 9 sharp points and all three out-of-sample
+beams; the two misses are fourth order in amplitude (MODEL_SPEC §5).
+
+### P-1 investigation
+`p1/` — the decay-window investigation behind the P-1 annotation; its README maps
+each file to its finding.
 
 ## Helpers
 

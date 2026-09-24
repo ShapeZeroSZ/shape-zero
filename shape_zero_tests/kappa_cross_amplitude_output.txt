@@ -1,0 +1,22 @@
+==========================================================================
+NARROW-BEAM F AGAINST AMPLITUDE
+==========================================================================
+    plane wave plane  side  8       14 s   drift 5.4e-09
+    localised  w=1    side  4       11 s   drift 2.6e-09
+    localised  w=2    side  8       14 s   drift 1.2e-09
+    plane wave plane  side  8       14 s   drift 2.2e-09
+    localised  w=1    side  4       10 s   drift 1.1e-09
+    localised  w=2    side  8       14 s   drift 5.3e-10
+    plane wave plane  side  8       14 s   drift 5.3e-10
+    localised  w=1    side  4       11 s   drift 2.8e-10
+    localised  w=2    side  8       14 s   drift 1.3e-10
+
+     A     w    L    kappa_pw     kappa_box      F
+   0.30  1.0    4   -0.01869    -0.004147    1.154 +- 0.016
+   0.30  2.0    8   -0.01869    -0.004470    1.234 +- 0.032
+   0.20  1.0    4   -0.01792    -0.004129    1.198 +- 0.017
+   0.20  2.0    8   -0.01792    -0.004464    1.285 +- 0.031
+   0.10  1.0    4   -0.01755    -0.004121    1.221 +- 0.018
+   0.10  2.0    8   -0.01755    -0.004466    1.312 +- 0.031
+
+   PT (A -> 0): w = 1: P3a 1.226, P3b 1.225;  w = 2: P3a 1.299, P3b 1.318

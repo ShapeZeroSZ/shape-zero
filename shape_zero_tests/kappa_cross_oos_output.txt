@@ -1,0 +1,22 @@
+==============================================================================
+OUT-OF-SAMPLE TEST -- derived F, P3a vs P3b, A = 0.10
+==============================================================================
+Runs (T = 300):
+    plane wave             box  8 x  8 x  8      14 s   drift 5.3e-10
+    w = 1 cubic            box  4 x  4 x  4      11 s   drift 2.8e-10
+    w = 1, x = 8           box  8 x  4 x  4      11 s   drift 2.8e-10
+    C1 w = 0.75            box  8 x  6 x  6      12 s   drift 1.1e-10
+    C2 w = 1.25            box  8 x 10 x 10      16 s   drift 4.7e-11
+    C3 w = 1.0             box 12 x 12 x 12      23 s   drift 2.8e-11
+
+VALIDATION
+  plane wave        kappa -0.01755 (ref -0.01755)   PASS
+  w = 1 cubic L = 4 kappa -0.004121 (ref -0.004121)  PASS
+  8 x 4 x 4 box     kappa -0.004121 vs cubic -0.004121   PASS   (x length does not matter)
+  energy drift      worst 5.3e-10   PASS
+
+RESULT  (predictions: kappa_cross_oos_predictions.txt, recorded before this run)
+  config   w      box        measured F        P3a    pull     P3b    pull    P3a-P3b in err bars
+   C1    0.75   8x 6x 6    1.421 +- 0.111     1.536   +1.0    1.425   +0.0       1.0
+   C2    1.25   8x10x10    1.988 +- 0.123     1.676   -2.6    1.994   +0.1       2.6
+   C3    1.00  12x12x12    2.127 +- 0.175     1.732   -2.3    2.131   +0.0       2.3
