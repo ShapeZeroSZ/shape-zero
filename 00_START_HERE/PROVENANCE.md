@@ -486,6 +486,19 @@ items also cite the public references from its description, as the moderator
 suggested. Both files are linked from those fields and must not be moved or
 renamed (top-level README).
 
+The 36 items are definitions as well as theorems, which reconciles the count
+with the 28-theorem running total:
+
+| mission | definitions | theorems | items |
+|---|---|---|---|
+| 1 | 2 | 5 | 7 |
+| 2 | 1 | 4 | 5 |
+| 3 | 1 | 4 | 5 |
+| 4a | 1 | 5 | 6 |
+| 4b | 1 | 5 | 6 |
+| 5 | 2 | 5 | 7 |
+| **total** | **8** | **28** | **36** |
+
 **Priority, recorded as it happened.** All five mission-5 theorems were first
 solved by another solver within minutes of publication, before our proofs were
 submitted. Ours were accepted as later solves. The result is machine-verified
