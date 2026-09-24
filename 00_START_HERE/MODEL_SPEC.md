@@ -1243,7 +1243,8 @@ in its box-wide transverse component.)
    weight 2; nothing fitted) is consistent within error — within two error bars,
    largest 1.8σ at L = 16 — at every L ≥ 12, though all eleven of those points
    lie above it. It is **9% high at L = 8** (1.35 against 1.23 ± 0.03). Deriving
-   the exact cross factor for this lattice is the one refinement left.
+   the exact cross factor for this lattice is the one refinement left. [Done:
+   derived below — "The cross-modulation factor F, derived".]
    **What failed earlier still stands as failed:** dilution alone (F = 1, κ ∝
    fill — the measured F is 1.2–2.8) and dilution by transverse spreading during
    the run (the origin is static; and, as `kappa_side_gpu.py` notes, spreading
@@ -1307,15 +1308,99 @@ and 4 exactly. Physics, seed, readout and error bar as `kappa_extended_gpu.py`.
    smooth space, and the model assumes smooth. It is **not** coarse sampling of
    the beam's shape — fill and s are computed on the actual grid. The prediction
    (the gap grows as the beam narrows and vanishes for wide beams) was stated
-   before running and **held**.
+   before running and **held**. [**CORRECTED 2026-09-24:** at A = 0.30 the gap
+   is **not a pure lattice effect**. It is partly the derived lattice kernel and
+   partly fourth order in amplitude: from A = 0.10 to 0.30 the plane-wave κ grows
+   6.5% while the narrow beam's barely changes, and at A = 0.10 the derived kernel
+   accounts for the whole gap (w = 1: 1.221 ± 0.018 against 1.225; w = 2: 1.312 ±
+   0.031 against 1.318). The prediction's result stands; its reading is corrected —
+   see "The cross-modulation factor F, derived" below.]
 3. **Unresolved:** whether F exceeds 2 − s at smaller w/L (10 of 14 width-scan
-   points lie above it). The error bars there are too large to say.
+   points lie above it). The error bars there are too large to say. [**Since
+   resolved:** it does, and the phase-coherent off-diagonal terms are why —
+   derived below.]
 4. **w = 3 κ, correctly seeded:** −0.00478 ± 0.00013 at L = 12, −0.00218 ± 0.00059
    at L = 24, −0.00081 ± 0.00034 at L = 36, −0.00060 ± 0.00043 at L = 48. These
    **supersede** the old w = 3 value (0.0311) and the old geometry table (1D 0.0799,
    w = 2 0.0168, w = 3 0.0311; swapped seeding, single carrier), which stay
    visible where they were quoted. By result 5 above, each is a beam in a
    particular box. **The w = 3 item is CLOSED.**
+
+**The cross-modulation factor F, derived (2026-09-24).** `kappa_cross_pt.py`
+extends the second-order perturbation theory behind the closure result
+(δ = +0.0349β; the script reproduces the plane-wave κ as −0.01748 against
+−0.01745) to the **cross kernel** R(q⊥) = K(q⊥)/K(0) on the lattice: the
+direction-odd shift of the box-wide component caused by one sideways component
+q⊥, per unit of that component's amplitude², in units of the self term. It keeps
+the intermediate sum mode (2K, q⊥), the difference mode (0, −q⊥) and the DC mode,
+each at its own lattice frequency. Nothing is fitted.
+
+- **R → 2 as q⊥ → 0**, recovering the smooth model's cross-versus-self factor;
+  on the lattice it falls to 1.39 at q⊥ = (π, 0) and 1.12 at (π, π).
+- **The direction-odd part comes only from the sum mode.** The difference mode
+  (kx = 0, frequency Ω₀ − Ω_q, the same in both directions), the DC mode and the
+  frequency denominator are all even in direction; the odd part is carried by the
+  sum mode at (π, q⊥), whose detuning grows with q⊥. That is why a narrow beam's
+  sideways components cross-modulate less.
+- **Checked directly** (`kappa_cross_kernel.py`, two-wave runs: a probe at (K, 0)
+  plus one pump at (K, q⊥), 16 values of q⊥): at pump amplitude 0.10 the measured
+  R matches the derived kernel within about one error bar at 15 of 16 points
+  (1.389 ± 0.012 against 1.391 at (π, 0); 1.116 ± 0.011 against 1.118 at (π, π)),
+  2.8σ at the smallest q⊥. At 0.30 it sits 3–4% below at large q⊥ — beyond second
+  order.
+
+Two predictions for F were recorded before comparison
+(`kappa_cross_pt_output.txt`): **P3a** sums the kernel over each beam's grid
+components (the diagonal terms only); **P3b** also keeps the **phase-coherent
+off-diagonal terms** — three components such as (a, 0), (0, b) and (a, b) that
+stay in step on the lattice, because the lattice dispersion is a sum over axes —
+read out over the experiment's [0, 300] window, with linear detunings.
+`kappa_cross_compare.py`, against every measured F (sharp = error bar ≤ 0.25,
+match = within two error bars):
+
+| | sharp points matched |
+|---|---|
+| 2 − s (smooth model) | 7 of 9 |
+| P3a, diagonal kernel sum | 4 of 9 |
+| **P3b, all triads** | **7 of 9** — every point except w = 1, L = 4 (1.225 against 1.15 ± 0.01) and w = 2, L = 8 (1.318 against 1.23 ± 0.03), both at A = 0.30 |
+
+**The rise of F above 2 − s at small w/L comes from the phase-coherent
+off-diagonal terms** (item 3 above): P3a stays below 2 − s there and misses the
+sharp w/L = 1/8 and L = 12 points; P3b rises above it and lies within 1.1 error
+bars of every non-sharp point.
+
+**The two narrow-beam misses are fourth order in amplitude** (`kappa_cross_amplitude.py`).
+Re-measured at A = 0.10 they give 1.221 ± 0.018 (w = 1, L = 4; derived 1.225)
+and 1.312 ± 0.031 (w = 2, L = 8; derived 1.318). From A = 0.10 to 0.30 the
+plane-wave κ grows 6.5% (−0.01755 → −0.01869) while the narrow beam's κ barely
+changes (−0.004121 → −0.004147), so F, which divides by the plane-wave κ, falls.
+
+**Out-of-sample test** (`kappa_cross_oos.py`). Three never-measured beams, chosen
+where P3a and P3b differ most in small boxes, measured at A = 0.10; both
+predictions recorded and committed before the run
+(`kappa_cross_oos_predictions.txt`, commit `3b19bf7` on branch
+`claude/p1-resonance-window-disagreement-o3m1zm`). Validation passed, including
+an 8 × 4 × 4 box reproducing the cubic L = 4 value (x length does not matter).
+
+| beam | measured F | P3a | P3b |
+|---|---|---|---|
+| w = 0.75, 8 × 6 × 6 | 1.421 ± 0.111 | 1.536 (+1.0σ) | **1.425 (0.0σ)** |
+| w = 1.25, 8 × 10 × 10 | 1.988 ± 0.123 | 1.676 (−2.6σ) | **1.994 (+0.1σ)** |
+| w = 1.0, 12 × 12 × 12 | 2.127 ± 0.175 | 1.732 (−2.3σ) | **2.131 (0.0σ)** |
+
+P3b lands on all three, including the one where it predicts **below** P3a. The
+discrimination is weaker than planned: the error bars at A = 0.10 came out
+0.11–0.18, not the 0.02–0.12 expected, so no configuration separates the two
+predictions by the four error bars set in advance; P3a is excluded at 2.6σ and
+2.3σ, and the first beam does not discriminate (1.0σ).
+
+*Caveat on order of work:* the measured F values were seen before the theory was
+written. Nothing in the theory is adjustable, and neither prediction was changed
+after comparison.
+
+**Open:** the **fourth-order calculation** — the A⁴ terms that move the plane-wave
+κ and the narrow-beam F at A = 0.30. P3b's detunings are also linear; the O(A²)
+nonlinear shifts of the components are not in them.
 
 **The PINNING is width-independent at every configuration tested** — that is the
 invariance the experiment rests on, and it is unaffected.
@@ -1807,6 +1892,7 @@ established — see §7b.*
 |---|---|
 | **what fixes the fibre metric scale** | **the largest one — it blocks three numbers at once.** ℏ, c₈ and Λ are all functions of it (κ_ℏ ∝ 1/k, c₈ ∝ k², Λ ∝ 1/k). Nothing in the architecture supplies a length: structure constants are ±1, \|1\| = 1 is a norm, and 2, 6, 42, 3/8, 2π² are ratios. The φ-well does supply a length (√5) but it lives on the **radial** coordinate while ℂP² is the **angular** one, and the HK cone relation ties them only as k = m — which discretises the node mass without fixing its unit |
 | **what fixes C_r** | the residual coupling *form* is determined (§4b.1); its *strength* is not |
+| **fourth-order cross-modulation (κ, F at A = 0.30)** | the derived F is second order; it matches every sharp point except the two narrowest beams at A = 0.30, which it matches at A = 0.10 (§5, "The cross-modulation factor F, derived") |
 | ~~verify the 0.39° attribution~~ | **CLOSED** — readout timing; the Abelian floor is exactly 0 under clearing readout at q = 1 and q = 3 |
 | ~~wavenumber-averaged prediction at q = 3~~ | **CLOSED** — closes the gap to 0.04–0.17°; the q = 3 gauge sector is quantitatively verified |
 | ~~save the q = 3 scripts~~ | **CLOSED** — all test scripts and results are in `shape_zero_tests/` in this repository, with both `model.py` versions pinned by content hash (`c49da46f` for q = 1 work, `948b09e8` for q = 3). Runs from the repository alone; `q3_kavg.py` reproduces its saved result with difference 0.0 |
