@@ -468,14 +468,21 @@ admitting a role colouring has exactly 7 points (the point count only, not that
 the system is the Fano plane). The moderator verified the mathematics
 independently rather than relying on the description, and noted that the
 source the mission cites was not public at the time of review — so the approval
-rests on the mathematics as stated in the mission, not on that source. (Drafting
-this mission is also where the C1 §3 edge-case errors were found:
-`01_source/proofs/ERRATUM_Theorem_6.1.md`.)
+rests on the mathematics as stated in the mission, not on that source. The cited
+source is the C1 Formal Proofs, `01_source/proofs/ShapeZero_C1_Formal_Proofs.pdf`,
+§3: the mission draft cites its Definition 3.5 and Theorems 3.3 and 3.6. Drafting
+this mission is also where the two §3 corrections were found (Theorem 3.3,
+condition (a), and Theorem 3.6): `01_source/proofs/ERRATUM_Theorem_6.1.md`.
 
 **Priority, recorded as it happened.** All five mission-5 theorems were first
 solved by another solver within minutes of publication, before our proofs were
 submitted. Ours were accepted as later solves. The result is machine-verified
 either way; the first solves are not ours.
+
+Mission 5 has five theorems — the goal, milestones M1 and M2, and corollaries A
+and B — all accepted.
+
+**Running total: six missions, 28 theorems, all machine-verified.**
 
 ## 6m. J-compatibility — the one premise, classified CHOSEN
 
