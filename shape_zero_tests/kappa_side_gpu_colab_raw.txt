@@ -1,0 +1,65 @@
+==============================================================================
+KAPPA SIDE-DEPENDENCE -- static or dynamic?
+==============================================================================
+  backend: PyTorch float64 on Tesla T4
+  prediction, stated before running: DYNAMIC
+
+Runs:
+    PW : side 8, T = 600, 4 cases, 67 s, energy drift 1.1e-08
+    L8 : side 8, T = 600, 4 cases, 67 s, energy drift 2.4e-09
+    L16: side 16, T = 1200, 8 cases, 134 s, energy drift 1.2e-09
+    L32: side 32, T = 600, 4 cases, 67 s, energy drift 1.5e-10
+
+==============================================================================
+VALIDATION -- the [0, 300] window must reproduce the known numbers
+==============================================================================
+  V1 plane wave   kappa -0.01869 (ref -0.01869)  linear ratio 0.999993  resid 0.005   PASS
+  V2 localised L=8  kappa -0.00447 (ref -0.00447)  linear ratio 0.999998  resid 0.003   PASS
+  V3 localised L=16 kappa -0.00204 (ref -0.00204)  linear ratio 0.999999  resid 0.006   PASS
+  V4 localised L=32 kappa -0.00047 (ref -0.00047)  linear ratio 1.000000  resid 0.004   PASS
+  V5 energy drift  worst 1.1e-08   PASS
+  all validation checks pass -- the tests below can be trusted
+
+==============================================================================
+TEST 1 -- run length (L = 16): kappa read over [0, T]
+==============================================================================
+   T =   150   kappa -0.00204   resid 0.007
+   T =   300   kappa -0.00204   resid 0.006
+   T =   600   kappa -0.00191   resid 0.007
+   T =  1200   kappa -0.00184   resid 0.008
+   spread across run length: 10%
+
+==============================================================================
+TEST 2 -- amplitude (L = 16, [0, 300]): a true A^2 coefficient is flat
+==============================================================================
+   A = 0.10   kappa -0.00201   resid 0.001
+   A = 0.20   kappa -0.00202   resid 0.003
+   A = 0.30   kappa -0.00204   resid 0.006
+   spread across amplitude: 1%   (the plane wave rises ~14% from A = 0.1 to 0.4)
+
+==============================================================================
+TEST 3 -- early vs late: kappa over [0, 300] vs [300, 600]
+==============================================================================
+   plane wave (control)   early -0.01869   late -0.01874   change    -0%   resid 0.005
+   localised L = 8        early -0.00447   late -0.00398   change   +11%   resid 0.003
+   localised L = 16       early -0.00204   late -0.00181   change   +11%   resid 0.006
+   localised L = 32       early -0.00047   late -0.00069   change   -49%   resid 0.013
+
+==============================================================================
+AMPLITUDE -- does the measured wave keep its size? (A = 0.30)
+  (a change in EITHER direction means energy is moving between modes)
+==============================================================================
+   plane wave (control)   at T = 300: 1.0045   at T = 600: 0.9993
+   localised L = 8        at T = 300: 1.0259   at T = 600: 1.0212
+   localised L = 16       at T = 300: 1.0420   at T = 1200: 1.1142
+   localised L = 32       at T = 300: 1.0173   at T = 600: 1.0397
+
+==============================================================================
+VERDICT
+==============================================================================
+  DYNAMIC. kappa changes during the run and/or the wave loses
+  amplitude: the box-size dependence develops in time. A localised
+  beam's 'kappa' is then not a fixed coefficient at all.
+  The prediction (DYNAMIC) HELD.
+
+  Paste the whole output back for the record.

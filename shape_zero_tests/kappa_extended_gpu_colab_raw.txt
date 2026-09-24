@@ -1,0 +1,76 @@
+==============================================================================
+KAPPA TO LARGE BOXES -- where is zero, and is the wobble real?
+==============================================================================
+  backend: PyTorch float64 on Tesla T4
+
+Runs (T = 300):
+    plane wave side  8       35 s   drift 5.4e-09
+    localised  side  8       35 s   drift 1.2e-09
+    localised  side 12       35 s   drift 5.3e-10
+    localised  side 16       35 s   drift 2.9e-10
+    localised  side 20       35 s   drift 1.9e-10
+    localised  side 24       35 s   drift 1.3e-10
+    localised  side 28       35 s   drift 9.5e-11
+    localised  side 32       35 s   drift 7.3e-11
+    localised  side 36       39 s   drift 5.8e-11
+    localised  side 40       63 s   drift 4.7e-11
+    localised  side 48      129 s   drift 3.2e-11
+    localised  side 64      317 s   drift 1.8e-11
+    localised  side 80      615 s   drift 1.2e-11
+
+==============================================================================
+VALIDATION -- [0,300] must reproduce the known values
+==============================================================================
+  plane wave  kappa -0.01869  (ref -0.01869)   PASS
+  L =  8      kappa -0.00447  (ref -0.00447)   PASS
+  L = 12      kappa -0.00289  (ref -0.00289)   PASS
+  L = 16      kappa -0.00204  (ref -0.00204)   PASS
+  L = 20      kappa -0.00147  (ref -0.00147)   PASS
+  L = 24      kappa -0.00115  (ref -0.00115)   PASS
+  L = 28      kappa -0.00075  (ref -0.00075)   PASS
+  L = 32      kappa -0.00047  (ref -0.00047)   PASS
+  L = 36      kappa -0.00040  (ref -0.00040)   PASS
+  L = 40      kappa -0.00033  (ref -0.00033)   PASS
+  L = 48      kappa -0.00025  (ref -0.00025)   PASS
+  energy drift worst 5.4e-09   PASS
+  all validation checks pass
+
+==============================================================================
+THE TABLE -- ratio = kappa / (kappa_pw * fill); err is its error bar
+==============================================================================
+   L      fill      kappa[0,300]      ratio[0,300]     ratio[0,150]   resid
+    8   0.19387   -0.00447±0.00011    1.23 ± 0.03      1.28 ± 0.05   0.003
+   12   0.08726   -0.00289±0.00014    1.77 ± 0.08      1.78 ± 0.23   0.004
+   16   0.04909   -0.00204±0.00021    2.22 ± 0.23      2.22 ± 0.71   0.006
+   20   0.03142   -0.00147±0.00030    2.50 ± 0.52      2.06 ± 1.10   0.009
+   24   0.02182   -0.00115±0.00036    2.81 ± 0.89      1.89 ± 1.04   0.011
+   28   0.01603   -0.00075±0.00034    2.49 ± 1.13      2.13 ± 1.62   0.010
+   32   0.01227   -0.00047±0.00015    2.03 ± 0.63      2.35 ± 2.36   0.004
+   36   0.00970   -0.00040±0.00016    2.22 ± 0.86      2.72 ± 3.17   0.005
+   40   0.00785   -0.00033±0.00017    2.26 ± 1.16      3.21 ± 4.05   0.005
+   48   0.00545   -0.00025±0.00019    2.43 ± 1.83      4.45 ± 6.00   0.006
+   64   0.00307   -0.00018±0.00021    3.22 ± 3.64      7.84 ± 10.74   0.006  new
+   80   0.00196   -0.00017±0.00022    4.59 ± 5.91     12.26 ± 16.77   0.007  new
+
+==============================================================================
+FACTS -- summaries of the table above; the table is the result
+==============================================================================
+  Q1  where is zero:
+      L = 64: ratio 3.22 ± 3.64; NOT clear of zero by 3 error bars
+      L = 80: ratio 4.59 ± 5.91; NOT clear of zero by 3 error bars
+  Q2  size of each point's departure from its neighbours, vs its error bar:
+      L = 12: departure    +3%   error bar    5%   within error
+      L = 16: departure    +4%   error bar   10%   within error
+      L = 20: departure    -1%   error bar   21%   within error
+      L = 24: departure   +13%   error bar   32%   within error
+      L = 28: departure    +3%   error bar   45%   within error
+      L = 32: departure   -14%   error bar   31%   within error
+      L = 36: departure    +4%   error bar   39%   within error
+      L = 40: departure    -3%   error bar   51%   within error
+      L = 48: departure   -11%   error bar   75%   within error
+      L = 64: departure    -8%   error bar  113%   within error
+  Q3  departures that are RESOLVED (over 10% and over 2 error bars):
+      [0,150]: peaks at none, troughs at none
+      [0,300]: peaks at none, troughs at none
+
+  Paste the whole output back for the record.

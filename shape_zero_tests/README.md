@@ -193,10 +193,8 @@ RETRACTED values). Each run ~32 min wall on 4 cores. Reported: plane-wave
 `kappa_extended_gpu.py` → `kappa_extended_gpu_colab_output.txt` (L = 8–80, error bars).
 
 Self-contained; PyTorch on a GPU if present, otherwise NumPy (slow). Physics,
-seed and readout as section 10; RK4 dt = 0.01. The output files are annotated
-transcripts (a note at the top of each): two printed verdicts were corrected
-after the runs and the saved scripts carry the corrected reading code, so
-re-running prints different verdict text over the same tables. Re-checked on
+seed and readout as section 10; RK4 dt = 0.01. Raw output in `*_colab_raw.txt`,
+annotated reading in `*_colab_output.txt`. Re-checked on
 CPU with `kappa_extended_gpu.py` at L = 20–32: identical. Result: κ(w = 2, side)
 CLOSED (PROVENANCE §6o).
 

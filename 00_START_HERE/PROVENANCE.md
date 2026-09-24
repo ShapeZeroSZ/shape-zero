@@ -569,6 +569,8 @@ failing (a stray wave re-entered the second segment at t ≈ 350). Fixed in comm
 `e410714`. Another instance of the day's pattern — a guard is only trustworthy
 once tested against a case known to be bad.
 
+Commit fcbca27's message cites PROVENANCE §6f; the record of the e410714 fix is here, in §6n.
+
 ## 6o. κ = 0.0799 retracted; P-1 decay window not supported (2026-09-24)
 
 **How it was found.** Investigating why `phi_gauge_decaymap.py` predicts the P-1

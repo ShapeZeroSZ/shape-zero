@@ -554,96 +554,96 @@
 - L564 [VERIFIED] `6n. q = 3 readout check — a guard that w` — **Made permanent.** `q3_gate.py` (commit `ed32937`) passes at 0.10–0.18° with the
 - L567 [-] `6n. q = 3 readout check — a guard that w` — the backward side and accepted a 240-site lattice that a direct run showed
 - L568 [FAILED] `6n. q = 3 readout check — a guard that w` — failing (a stray wave re-entered the second segment at t ≈ 350). Fixed in commit
-- L572 [RETRACTED] `6o. κ = 0.0799 retracted; P-1 decay wind` — ## 6o. κ = 0.0799 retracted; P-1 decay window not supported (2026-09-24)
-- L577 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — asymmetry correction as +0.0349 βA², i.e. κ = −0.0175; §5 quoted +0.0799.
-- L583 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — +0.1007 at β = 0.05, A = 0.30, and its own main block (d0 = −0.1 hard-coded) could
-- L584 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — not have printed 0.0799; the quoted value is (|Δ/Δ₀| − 1)/A². The O(β) velocity
-- L588 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — (0.009 → 0.076 over the β-sweep); after the fix it is flat at 0.0054–0.0057.
-- L592 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — | amplitude sweep, β = 0.05, A = 0.10 / 0.20 / 0.30 / 0.40 | +0.0773 / +0.0783 / +0.0799 / +0.0821 | −0.0176 / −0.0179 / −0.0187 / −0.0200 |
-- L593 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — | β-sweep, A = 0.30, β = 0.02 / 0.05 / 0.10 / 0.20: \|Δ/Δ₀\| | 1.007227 / 1.007190 / 1.007262 / 1.007051 | 0.998339 / 0.998316 / 0.998390 / 0.998316 |
-- L594 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — | β-sweep κ | +0.0798 ± 0.00089 | **−0.0184 ± 0.00033** |
-- L595 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — | linear, A = 0.02, β = 0.05: \|Δω\| − 2cβ sin k | +3.1×10⁻⁶ | −7×10⁻⁷ |
-- L597 [VERIFIED] `6o. κ = 0.0799 retracted; P-1 decay wind` — Corrected κ = −0.0187 at β = 0.05, A = 0.30 was confirmed independently with
-- L605 [SUPERSEDED,VERIFIED] `6o. κ = 0.0799 retracted; P-1 decay wind` — mismatch but not a swap; not changed here, and its superseded 0.0305 carries
-- L618 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — seeding each direction at its own root, gives κ = −0.0214, −0.0187, −0.0165 at
-- L619 [RETRACTED] `6o. κ = 0.0799 retracted; P-1 decay wind` — stiffness 0.90, 1.00, 1.10 (26% spread; retracted: 0.0959, 0.0799, 0.0677, 35%)
-- L620 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — with the linear ratio 0.999992 / 0.999993 / 0.999994. Its unit-stiffness A = 0.30
-- L621 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — ratio, 0.998316, equals the fixed reference β-sweep value. MODEL_SPEC §5b.2
-- L629 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — table). Counter-propagating admixture at A = 0.001, β = 0.05: 1.25×10⁻² with the
-- L630 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — β = 0 seed, 1.5×10⁻³ with the own root (the finite-record floor), 2.4×10⁻² with
-- L631 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — the other direction's root. Hypothesis beforehand: linear results move < 10⁻⁵,
-- L636 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — | `phi_gauge_nonlinear.py`, β = 0 rows and β = 0.05, A = 0.001 row | 2.00878 / 2.10878 / −0.10000 | unchanged to 5 decimals |
-- L637 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — | same, β = 0.05, Δω at A = 0.1 / 0.2 / 0.3 / 0.4 | −0.10003 / −0.10012 / −0.10028 / −0.10050 | −0.09998 / −0.09993 / −0.09983 / −0.09968 |
-- L638 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — | same, ω(+k) / ω(−k) at A = 0.4 | 1.99237 / 2.09287 | 1.99278 / 2.09246 (centre 2.04262 unchanged) |
-- L639 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — | residual/A², β = 0.05, A = 0.1–0.4 (PINNED_ASYMMETRY_TEST §3b) | −0.002978 … −0.003109 | +0.001757 … +0.001996 |
-- L640 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — | coeff/β at β = 0.02 / 0.05 / 0.10 / 0.20 (§3b) | −0.06146 / −0.06091 / −0.06302 / −0.05891 | +0.03670 / +0.03707 / +0.03510 / +0.03721 |
-- L641 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — | `phi_gauge_closure.py` fit | δ = −0.0598·β, max residual 1.28×10⁻⁴ (1.4%) | **δ = +0.0357·β**, 8.35×10⁻⁵ (1.5%) |
-- L642 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — | closure δ(0.05) (its docstring) | −0.0031 (printed −0.00303) | +0.00179 |
-- L643 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — | closure parity sum | −3.7×10⁻¹⁴ | −2.0×10⁻¹⁴ |
-- L644 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — | `pinned_asymmetry_headline.py` drift/A², A = 0.1 / 0.2 / 0.3 / 0.4 | 0.0662 / 0.0471 / 0.0307 / 0.0311 | +0.0180 / −0.0029 / −0.0203 / −0.0205 |
-- L645 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — | headline coefficient | 0.044 ± 0.015 (mean over all A) | **−0.0205** (fit over A ≥ 0.3) |
-- L647 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — The closure fit now agrees with second-order PT (+0.0349·β) to 2%, and
-- L648 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — κ = −δ/(2c β sin k) = −0.0179 agrees with the reference β-sweep (−0.0184 ± 0.00033).
-- L651 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — `pinned_asymmetry_headline.py` also changed how it fits. Its T = 300 readout does
-- L654 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — −0.006 ± 0.016 even after the re-seed. It now fits only A ≥ 0.3, where the drift
-- L655 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — exceeds twice the record-length check. It had been printing 0.044, not the 0.0305
-- L660 [OPEN] `6o. κ = 0.0799 retracted; P-1 decay wind` — **κ(w = 2, side) re-measured (same day) — measured and open [now CLOSED, below].** `shape_zero_tests/kappa_readout_test.py` (β = 0.05, A = 0.30, q = 3
-- L661 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — width w = 2, periodic BC, T = 300, uniform transverse readout). Its gyro term is
-- L665 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — frequency (counter-propagating content 10⁻¹⁶; one carrier at the right root
-- L669 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — | side | 8 | 12 | 16 | 24 | 32 |
-- L671 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — | transverse fill fraction | 0.194 | 0.087 | 0.049 | 0.022 | 0.012 |
-- L672 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — | **κ, own-branch seed** | **−0.00447** | **−0.00289** | **−0.00204** | **−0.00115** | **−0.00047** |
-- L673 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — | κ / κ(plane wave, −0.01869) | 0.239 | 0.155 | 0.109 | 0.062 | 0.025 |
-- L674 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — | that ratio / fill fraction | 1.23 | 1.77 | 2.22 | 2.82 | 2.05 |
-- L675 [RETRACTED] `6o. κ = 0.0799 retracted; P-1 decay wind` — | κ, swapped seed, re-run — RETRACTED | +0.01772 | +0.01128 | +0.00801 | +0.00457 | +0.00185 |
-- L676 [RETRACTED] `6o. κ = 0.0799 retracted; P-1 decay wind` — | κ, swapped seed, as quoted in the script's docstring — RETRACTED | 0.0175 | 0.0113 | 0.0082 | **0.0027** (does not reproduce) | 0.0018 |
-- L678 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — - **Plane-wave control: κ = −0.01869** (linear ratio 0.999993) at every side and
-- L681 [RETRACTED] `6o. κ = 0.0799 retracted; P-1 decay wind` — `joint3_kappa_stiffness.py`. (Swapped seed: +0.07994, the retracted value.) It
-- L684 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — - **Linear pinning holds** at 0.999997–1.000000 for every side and readout.
-- L685 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — - **κ still has no side-independent limit.** It falls tenfold from side 8 to 32
-- L686 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — and steepens at the end (≈ side⁻³ from 24 to 32) [within error — below]. **No κ(w) is published.**
-- L687 [OPEN] `6o. κ = 0.0799 retracted; P-1 decay wind` — - **Mechanism unresolved** [since CLOSED — a fixed dilution with factor F = 2 − s, below]. It is **not seeding**: new/old is −0.25 at every side
-- L689 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — is **not readout**: the uniform readout is clean (phase residual 0.003–0.011);
-- L693 [FAILED] `6o. κ = 0.0799 retracted; P-1 decay wind` — amplitude driving the shift) and **failed**: |κ|/(|κ_pw|·fill) runs 1.23 →
-- L694 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — 2.82, not constant.
-- L695 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — - **The original docstring's 0.0027 at side 24 does not reproduce**: the
-- L703 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — **κ(w = 2, side) — CLOSED (2026-09-24).** Three GPU scans (Google Colab, Tesla
-- L704 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — T4, PyTorch float64, fixed-step RK4 dt = 0.01; physics, Fourier-space seed and
-- L710 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — `kappa_extended_gpu.py` (NumPy backend) at L = 20, 24, 28, 32: every κ, error bar,
-- L711 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — [0, 150] value and energy drift identical to the Colab output.
-- L715 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — | 8 | 0.19387 | −0.00447 ± 0.00011 | 1.23 ± 0.03 | 1.35 |
-- L716 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — | 12 | 0.08726 | −0.00289 ± 0.00014 | 1.77 ± 0.08 | 1.66 |
-- L717 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — | 16 | 0.04909 | −0.00204 ± 0.00021 | 2.22 ± 0.23 | 1.80 |
-- L718 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — | 20 | 0.03142 | −0.00147 ± 0.00030 | 2.50 ± 0.52 | 1.87 |
-- L719 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — | 24 | 0.02182 | −0.00115 ± 0.00036 | 2.81 ± 0.89 | 1.91 |
-- L720 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — | 28 | 0.01603 | −0.00075 ± 0.00034 | 2.49 ± 1.13 | 1.94 |
-- L721 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — | 32 | 0.01227 | −0.00047 ± 0.00015 | 2.03 ± 0.63 | 1.95 |
-- L722 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — | 36 | 0.00970 | −0.00040 ± 0.00016 | 2.22 ± 0.86 | 1.96 |
-- L723 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — | 40 | 0.00785 | −0.00033 ± 0.00017 | 2.26 ± 1.16 | 1.97 |
-- L724 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — | 48 | 0.00545 | −0.00025 ± 0.00019 | 2.43 ± 1.83 | 1.98 |
-- L725 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — | 64 | 0.00307 | −0.00018 ± 0.00021 | 3.22 ± 3.64 | 1.99 |
-- L726 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — | 80 | 0.00196 | −0.00017 ± 0.00022 | 4.59 ± 5.91 | 1.99 |
-- L728 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — (κ over [0, 300]; the error bar is the larger of the weighted-vs-unweighted
-- L733 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — κ(L = 16) over [0, 150] and over [0, 300] are both −0.00204 — and it is a clean
-- L734 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — A² coefficient (−0.00201 / −0.00202 / −0.00204 at A = 0.10 / 0.20 / 0.30, flat
-- L737 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — cause: its amplitude grows up to 11% (L = 16, T = 1200) and κ drifts ~10% over
-- L738 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — long runs (−0.00204 at T = 300 → −0.00184 at T = 1200), while the plane-wave
-- L739 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — control stays put (−0.01869 early, −0.01874 late). `kappa_side_gpu.py`.
-- L740 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — 2. **κ_box = κ_pw × fill × F**, with F rising from 1.23 ± 0.03 at L = 8 toward
-- L744 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — largest 1.8σ at L = 16 — at every L ≥ 12, though all eleven of those points
-- L745 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — lie above it. It is **9% high at L = 8** (1.35 against 1.23 ± 0.03). Deriving
-- L753 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — negative. From L = 64 it cannot be distinguished from zero by this method
-- L754 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — (−0.00018 ± 0.00021 at 64, −0.00017 ± 0.00022 at 80); nothing suggests a sign
-- L757 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — within its error bar — e.g. +13% ± 32% at L = 24, −14% ± 31% at L = 32. The
-- L760 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — from 24 to 32), which is inside the error bars.
-- L761 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — 5. **Only the plane-wave κ = −0.0187 is a real coefficient.** A localised beam's
-- L779 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — and lets only the pump soften, giving −0.0991 A² exactly — an incomplete
-- L781 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — the (0, π) band midpoint at ≈ 0.063 + 0.08 A², moving up.
-- L784 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — four digits and is 0.9998 from the exact wave) and of the fixed T = 400
-- L785 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — readout (the dip moves from β = 0.075 to 0.0675 with readout time) —
-- L787 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — 3. A clean start shows broad instability across β = 0.05–0.10 at A = 0.3–0.4
-- L805 [FAILED] `7. Recurring failure modes` — 2. **An uncalibrated instrument.** → κ = 0.0305; four estimator failures in one
-- L812 [-] `7. Recurring failure modes` — 5. **A relative-only rank threshold.** → rank 67 against a true 22; spurious
+- L574 [RETRACTED] `6o. κ = 0.0799 retracted; P-1 decay wind` — ## 6o. κ = 0.0799 retracted; P-1 decay window not supported (2026-09-24)
+- L579 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — asymmetry correction as +0.0349 βA², i.e. κ = −0.0175; §5 quoted +0.0799.
+- L585 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — +0.1007 at β = 0.05, A = 0.30, and its own main block (d0 = −0.1 hard-coded) could
+- L586 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — not have printed 0.0799; the quoted value is (|Δ/Δ₀| − 1)/A². The O(β) velocity
+- L590 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — (0.009 → 0.076 over the β-sweep); after the fix it is flat at 0.0054–0.0057.
+- L594 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — | amplitude sweep, β = 0.05, A = 0.10 / 0.20 / 0.30 / 0.40 | +0.0773 / +0.0783 / +0.0799 / +0.0821 | −0.0176 / −0.0179 / −0.0187 / −0.0200 |
+- L595 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — | β-sweep, A = 0.30, β = 0.02 / 0.05 / 0.10 / 0.20: \|Δ/Δ₀\| | 1.007227 / 1.007190 / 1.007262 / 1.007051 | 0.998339 / 0.998316 / 0.998390 / 0.998316 |
+- L596 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — | β-sweep κ | +0.0798 ± 0.00089 | **−0.0184 ± 0.00033** |
+- L597 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — | linear, A = 0.02, β = 0.05: \|Δω\| − 2cβ sin k | +3.1×10⁻⁶ | −7×10⁻⁷ |
+- L599 [VERIFIED] `6o. κ = 0.0799 retracted; P-1 decay wind` — Corrected κ = −0.0187 at β = 0.05, A = 0.30 was confirmed independently with
+- L607 [SUPERSEDED,VERIFIED] `6o. κ = 0.0799 retracted; P-1 decay wind` — mismatch but not a swap; not changed here, and its superseded 0.0305 carries
+- L620 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — seeding each direction at its own root, gives κ = −0.0214, −0.0187, −0.0165 at
+- L621 [RETRACTED] `6o. κ = 0.0799 retracted; P-1 decay wind` — stiffness 0.90, 1.00, 1.10 (26% spread; retracted: 0.0959, 0.0799, 0.0677, 35%)
+- L622 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — with the linear ratio 0.999992 / 0.999993 / 0.999994. Its unit-stiffness A = 0.30
+- L623 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — ratio, 0.998316, equals the fixed reference β-sweep value. MODEL_SPEC §5b.2
+- L631 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — table). Counter-propagating admixture at A = 0.001, β = 0.05: 1.25×10⁻² with the
+- L632 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — β = 0 seed, 1.5×10⁻³ with the own root (the finite-record floor), 2.4×10⁻² with
+- L633 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — the other direction's root. Hypothesis beforehand: linear results move < 10⁻⁵,
+- L638 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — | `phi_gauge_nonlinear.py`, β = 0 rows and β = 0.05, A = 0.001 row | 2.00878 / 2.10878 / −0.10000 | unchanged to 5 decimals |
+- L639 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — | same, β = 0.05, Δω at A = 0.1 / 0.2 / 0.3 / 0.4 | −0.10003 / −0.10012 / −0.10028 / −0.10050 | −0.09998 / −0.09993 / −0.09983 / −0.09968 |
+- L640 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — | same, ω(+k) / ω(−k) at A = 0.4 | 1.99237 / 2.09287 | 1.99278 / 2.09246 (centre 2.04262 unchanged) |
+- L641 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — | residual/A², β = 0.05, A = 0.1–0.4 (PINNED_ASYMMETRY_TEST §3b) | −0.002978 … −0.003109 | +0.001757 … +0.001996 |
+- L642 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — | coeff/β at β = 0.02 / 0.05 / 0.10 / 0.20 (§3b) | −0.06146 / −0.06091 / −0.06302 / −0.05891 | +0.03670 / +0.03707 / +0.03510 / +0.03721 |
+- L643 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — | `phi_gauge_closure.py` fit | δ = −0.0598·β, max residual 1.28×10⁻⁴ (1.4%) | **δ = +0.0357·β**, 8.35×10⁻⁵ (1.5%) |
+- L644 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — | closure δ(0.05) (its docstring) | −0.0031 (printed −0.00303) | +0.00179 |
+- L645 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — | closure parity sum | −3.7×10⁻¹⁴ | −2.0×10⁻¹⁴ |
+- L646 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — | `pinned_asymmetry_headline.py` drift/A², A = 0.1 / 0.2 / 0.3 / 0.4 | 0.0662 / 0.0471 / 0.0307 / 0.0311 | +0.0180 / −0.0029 / −0.0203 / −0.0205 |
+- L647 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — | headline coefficient | 0.044 ± 0.015 (mean over all A) | **−0.0205** (fit over A ≥ 0.3) |
+- L649 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — The closure fit now agrees with second-order PT (+0.0349·β) to 2%, and
+- L650 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — κ = −δ/(2c β sin k) = −0.0179 agrees with the reference β-sweep (−0.0184 ± 0.00033).
+- L653 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — `pinned_asymmetry_headline.py` also changed how it fits. Its T = 300 readout does
+- L656 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — −0.006 ± 0.016 even after the re-seed. It now fits only A ≥ 0.3, where the drift
+- L657 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — exceeds twice the record-length check. It had been printing 0.044, not the 0.0305
+- L662 [OPEN] `6o. κ = 0.0799 retracted; P-1 decay wind` — **κ(w = 2, side) re-measured (same day) — measured and open [now CLOSED, below].** `shape_zero_tests/kappa_readout_test.py` (β = 0.05, A = 0.30, q = 3
+- L663 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — width w = 2, periodic BC, T = 300, uniform transverse readout). Its gyro term is
+- L667 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — frequency (counter-propagating content 10⁻¹⁶; one carrier at the right root
+- L671 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — | side | 8 | 12 | 16 | 24 | 32 |
+- L673 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — | transverse fill fraction | 0.194 | 0.087 | 0.049 | 0.022 | 0.012 |
+- L674 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — | **κ, own-branch seed** | **−0.00447** | **−0.00289** | **−0.00204** | **−0.00115** | **−0.00047** |
+- L675 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — | κ / κ(plane wave, −0.01869) | 0.239 | 0.155 | 0.109 | 0.062 | 0.025 |
+- L676 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — | that ratio / fill fraction | 1.23 | 1.77 | 2.22 | 2.82 | 2.05 |
+- L677 [RETRACTED] `6o. κ = 0.0799 retracted; P-1 decay wind` — | κ, swapped seed, re-run — RETRACTED | +0.01772 | +0.01128 | +0.00801 | +0.00457 | +0.00185 |
+- L678 [RETRACTED] `6o. κ = 0.0799 retracted; P-1 decay wind` — | κ, swapped seed, as quoted in the script's docstring — RETRACTED | 0.0175 | 0.0113 | 0.0082 | **0.0027** (does not reproduce) | 0.0018 |
+- L680 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — - **Plane-wave control: κ = −0.01869** (linear ratio 0.999993) at every side and
+- L683 [RETRACTED] `6o. κ = 0.0799 retracted; P-1 decay wind` — `joint3_kappa_stiffness.py`. (Swapped seed: +0.07994, the retracted value.) It
+- L686 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — - **Linear pinning holds** at 0.999997–1.000000 for every side and readout.
+- L687 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — - **κ still has no side-independent limit.** It falls tenfold from side 8 to 32
+- L688 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — and steepens at the end (≈ side⁻³ from 24 to 32) [within error — below]. **No κ(w) is published.**
+- L689 [OPEN] `6o. κ = 0.0799 retracted; P-1 decay wind` — - **Mechanism unresolved** [since CLOSED — a fixed dilution with factor F = 2 − s, below]. It is **not seeding**: new/old is −0.25 at every side
+- L691 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — is **not readout**: the uniform readout is clean (phase residual 0.003–0.011);
+- L695 [FAILED] `6o. κ = 0.0799 retracted; P-1 decay wind` — amplitude driving the shift) and **failed**: |κ|/(|κ_pw|·fill) runs 1.23 →
+- L696 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — 2.82, not constant.
+- L697 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — - **The original docstring's 0.0027 at side 24 does not reproduce**: the
+- L705 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — **κ(w = 2, side) — CLOSED (2026-09-24).** Three GPU scans (Google Colab, Tesla
+- L706 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — T4, PyTorch float64, fixed-step RK4 dt = 0.01; physics, Fourier-space seed and
+- L712 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — `kappa_extended_gpu.py` (NumPy backend) at L = 20, 24, 28, 32: every κ, error bar,
+- L713 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — [0, 150] value and energy drift identical to the Colab output.
+- L717 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — | 8 | 0.19387 | −0.00447 ± 0.00011 | 1.23 ± 0.03 | 1.35 |
+- L718 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — | 12 | 0.08726 | −0.00289 ± 0.00014 | 1.77 ± 0.08 | 1.66 |
+- L719 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — | 16 | 0.04909 | −0.00204 ± 0.00021 | 2.22 ± 0.23 | 1.80 |
+- L720 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — | 20 | 0.03142 | −0.00147 ± 0.00030 | 2.50 ± 0.52 | 1.87 |
+- L721 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — | 24 | 0.02182 | −0.00115 ± 0.00036 | 2.81 ± 0.89 | 1.91 |
+- L722 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — | 28 | 0.01603 | −0.00075 ± 0.00034 | 2.49 ± 1.13 | 1.94 |
+- L723 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — | 32 | 0.01227 | −0.00047 ± 0.00015 | 2.03 ± 0.63 | 1.95 |
+- L724 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — | 36 | 0.00970 | −0.00040 ± 0.00016 | 2.22 ± 0.86 | 1.96 |
+- L725 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — | 40 | 0.00785 | −0.00033 ± 0.00017 | 2.26 ± 1.16 | 1.97 |
+- L726 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — | 48 | 0.00545 | −0.00025 ± 0.00019 | 2.43 ± 1.83 | 1.98 |
+- L727 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — | 64 | 0.00307 | −0.00018 ± 0.00021 | 3.22 ± 3.64 | 1.99 |
+- L728 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — | 80 | 0.00196 | −0.00017 ± 0.00022 | 4.59 ± 5.91 | 1.99 |
+- L730 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — (κ over [0, 300]; the error bar is the larger of the weighted-vs-unweighted
+- L735 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — κ(L = 16) over [0, 150] and over [0, 300] are both −0.00204 — and it is a clean
+- L736 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — A² coefficient (−0.00201 / −0.00202 / −0.00204 at A = 0.10 / 0.20 / 0.30, flat
+- L739 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — cause: its amplitude grows up to 11% (L = 16, T = 1200) and κ drifts ~10% over
+- L740 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — long runs (−0.00204 at T = 300 → −0.00184 at T = 1200), while the plane-wave
+- L741 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — control stays put (−0.01869 early, −0.01874 late). `kappa_side_gpu.py`.
+- L742 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — 2. **κ_box = κ_pw × fill × F**, with F rising from 1.23 ± 0.03 at L = 8 toward
+- L746 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — largest 1.8σ at L = 16 — at every L ≥ 12, though all eleven of those points
+- L747 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — lie above it. It is **9% high at L = 8** (1.35 against 1.23 ± 0.03). Deriving
+- L755 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — negative. From L = 64 it cannot be distinguished from zero by this method
+- L756 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — (−0.00018 ± 0.00021 at 64, −0.00017 ± 0.00022 at 80); nothing suggests a sign
+- L759 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — within its error bar — e.g. +13% ± 32% at L = 24, −14% ± 31% at L = 32. The
+- L762 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — from 24 to 32), which is inside the error bars.
+- L763 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — 5. **Only the plane-wave κ = −0.0187 is a real coefficient.** A localised beam's
+- L781 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — and lets only the pump soften, giving −0.0991 A² exactly — an incomplete
+- L783 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — the (0, π) band midpoint at ≈ 0.063 + 0.08 A², moving up.
+- L786 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — four digits and is 0.9998 from the exact wave) and of the fixed T = 400
+- L787 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — readout (the dip moves from β = 0.075 to 0.0675 with readout time) —
+- L789 [-] `6o. κ = 0.0799 retracted; P-1 decay wind` — 3. A clean start shows broad instability across β = 0.05–0.10 at A = 0.3–0.4
+- L807 [FAILED] `7. Recurring failure modes` — 2. **An uncalibrated instrument.** → κ = 0.0305; four estimator failures in one
+- L814 [-] `7. Recurring failure modes` — 5. **A relative-only rank threshold.** → rank 67 against a true 22; spurious
 
 ### `./00_START_HERE/README.md` (23 claims)
 
@@ -1501,8 +1501,8 @@
 - L188 [-] `10. κ(w = 2, side) at q = 3 (self-contai` — 8–32, no side-independent limit (PROVENANCE §6o).
 - L192 [-] `11. κ(w = 2) against box size, GPU (Cola` — `kappa_boxscan_gpu.py` → `kappa_boxscan_gpu_colab_output.txt` (L = 8–48);
 - L193 [-] `11. κ(w = 2) against box size, GPU (Cola` — `kappa_extended_gpu.py` → `kappa_extended_gpu_colab_output.txt` (L = 8–80, error bars).
-- L196 [-] `11. κ(w = 2) against box size, GPU (Cola` — seed and readout as section 10; RK4 dt = 0.01. The output files are annotated
-- L200 [-] `11. κ(w = 2) against box size, GPU (Cola` — CPU with `kappa_extended_gpu.py` at L = 20–32: identical. Result: κ(w = 2, side)
+- L196 [-] `11. κ(w = 2) against box size, GPU (Cola` — seed and readout as section 10; RK4 dt = 0.01. Raw output in `*_colab_raw.txt`,
+- L198 [-] `11. κ(w = 2) against box size, GPU (Cola` — CPU with `kappa_extended_gpu.py` at L = 20–32: identical. Result: κ(w = 2, side)
 
 ### `./shape_zero_tests/p1/README.md` (13 claims)
 
