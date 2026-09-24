@@ -1084,6 +1084,9 @@ differences from unequal group velocities is **not supported**: it was the
 packet read mid-exit.
 
 **On gate 6:** κ is a property of the beam profile, not a universal constant.
+[Superseded by the κ(w = 2, side) closure, §5: only the plane-wave κ = −0.0187 is
+a real coefficient; a localised beam's box-averaged κ depends on the box and goes
+to zero as it grows, so it is not a property of the beam alone.]
 The *pinning* survives every geometry; only the A² coefficient moves. See
 `PINNED_ASYMMETRY_TEST.md`.
 
@@ -1403,16 +1406,19 @@ stiffness, κ is not.** Script: `shape_zero_tests/joint3_kappa_stiffness.py`
 | quantity | vs transverse geometry | vs base stiffness |
 |---|---|---|
 | **pinning** Δω = −2cβ sin k | **protected** | **protected** |
-| **κ**, the A² coefficient | varies — *unverified* | **varies, 26% over ±10%** (−0.0214 / −0.0187 / −0.0165) — ~~~35%, 0.0959 / 0.0799 / 0.0677~~ retracted |
+| **κ**, the A² coefficient | varies — w = 2: box-dependent, → 0 as the box grows (**CLOSED**, §5); w = 3 and the geometry table *unverified* | **varies, 26% over ±10%** (−0.0214 / −0.0187 / −0.0165) — ~~~35%, 0.0959 / 0.0799 / 0.0677~~ retracted |
 
 *κ vs stiffness re-measured with correct seeding (`joint3_kappa_stiffness.py`);
-the qualitative split stands. κ vs transverse geometry was measured with the
-swapped seeding retracted in §5 and remains unverified pending re-measurement.
+the qualitative split stands. κ vs transverse geometry: w = 2 re-measured with
+own-branch seeding and **CLOSED** (§5) — static fixed dilution, F = 2 − s, κ → 0 as
+the box grows, no box-independent localised κ; the w = 3 value and the geometry
+table were measured with the swapped seeding and remain unverified.
 The pinning rows are unaffected.*
 
 Two independent knobs, same split. **The pinning carries the falsifiable content
 of the U(1) sector; κ is a contingent coefficient** that must always be quoted
-with its profile *and* its stiffness.
+with its profile *and* its stiffness. [And, for a localised beam, its box: only the
+plane-wave κ is a real coefficient — §5, κ(w = 2, side) CLOSED.]
 
 ### 5b.4 Joint #4 — WITHDRAWN as a law, retained as an observation
 
@@ -1574,7 +1580,7 @@ residual.**
 | perturbation | pin | κ | holonomy |
 |---|---|---|---|
 | transverse geometry | **protected** | varies | — |
-| **uniform** base stiffness | **protected**, null 1.2×10⁻⁵, derived | **varies ~35%** | **moves, sign predicted** |
+| **uniform** base stiffness | **protected**, null 1.2×10⁻⁵, derived | **varies 26%** (~~~35%~~ retracted, §5b.2) | **moves, sign predicted** |
 | **non-uniform** base stiffness | perturbed by **non-adiabatic** mode physics; adiabatic shift proved zero | — | — |
 
 **Joints #1, #2 and #3 carry.** #4 is an observation without a law.

@@ -284,7 +284,10 @@ the invariance the experiment rests on.
 
 **For an experimentalist:** on a 1D array at unit stiffness, κ = 0.0799 [RETRACTED —
 use −0.0187; see note above]. On anything with
-transverse extent, κ is smaller and must be measured for that profile. The
+transverse extent, κ is smaller and must be measured for that profile [superseded
+by the κ(w = 2, side) closure above: a localised beam's box-averaged κ depends on
+the box and goes to zero as it grows — quote the plane-wave κ, or a localised κ
+only with its box size]. The
 **collapse protocol is unaffected** — the β-independence of the normalised drift
 is what makes it a test, and that holds regardless.
 
