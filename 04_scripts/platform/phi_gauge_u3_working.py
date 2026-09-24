@@ -194,7 +194,7 @@ if a>5.0:
     print("  SINGLE-SEGMENT FAILED. Ordering experiment is premature.")
     print("  The defect is already in the mapping of ONE segment.")
 else:
-    print("  SINGLE-SEGMENT PASSED. Defect is in composition or timing.")
+    print("  SINGLE-SEGMENT PASSED. The two-segment residual (~0.5 deg) is not explained by readout timing: in gate 7 a similar residual survives a clearing readout. Its likely source is the single-wavenumber prediction, which accounts for the q = 3 gap (MODEL_SPEC 4d); untested for this script.")
 # extra: free case with the pure component, as a floor
 snaps0,d0=run([],[T1]); c0,p0=readout(*snaps0[T1])
 c0p=gm(psi0)

@@ -36,6 +36,7 @@ Python 3 stdlib only.
 """
 
 import os
+import ast
 import re
 import json
 import subprocess
@@ -98,6 +99,22 @@ def scan_documents():
     return out
 
 
+def raises_not_implemented(src):
+    """True only for an actual `raise NotImplementedError` statement -- not a
+    mention of the name in a docstring, comment or string (build_index.py and
+    check_consistency.py themselves name it, and were reported as blocked)."""
+    try:
+        tree = ast.parse(src)
+    except SyntaxError:
+        return bool(re.search(r"^\s*raise\s+NotImplementedError\b", src, re.M))
+    for node in ast.walk(tree):
+        if isinstance(node, ast.Raise) and node.exc is not None:
+            exc = node.exc.func if isinstance(node.exc, ast.Call) else node.exc
+            if isinstance(exc, ast.Name) and exc.id == "NotImplementedError":
+                return True
+    return False
+
+
 def scan_scripts(run=False, timeout=90):
     out = []
     for p in walk_files(".py"):
@@ -110,7 +127,7 @@ def scan_scripts(run=False, timeout=90):
             "file": p,
             "lines": len(src.splitlines()),
             "banner": "STATUS:" in head,
-            "blocked": "NotImplementedError" in src,
+            "blocked": raises_not_implemented(src),
             "fixes": sorted(set(re.findall(r"FIX-\d", src))),
             "predictions": len(re.findall(r"^\s*[A-Z]\d+\s", src, re.M)),
             "docstring": (src.split('"""')[1][:200].replace("\n", " ")

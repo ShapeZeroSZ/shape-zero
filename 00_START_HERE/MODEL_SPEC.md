@@ -1086,7 +1086,7 @@ packet read mid-exit.
 The *pinning* survives every geometry; only the A² coefficient moves. See
 `PINNED_ASYMMETRY_TEST.md`.
 
-### 4d.1 Five measurement traps, all encountered in this port
+### 4d.1 Six measurement traps, all encountered in this port
 
 Recorded because each produced a plausible wrong number before being caught.
 
@@ -1097,11 +1097,14 @@ Recorded because each produced a plausible wrong number before being caught.
 | **transverse-uniform seed** | q = 3 results **bit-identical** to q = 1 — zero transverse Laplacian, so 3D reduces exactly to 1D | a vacuous "verification" of κ |
 | **overlapping segments** | segments 3 apart with RAMP length 12 overlap by 9 sites | a spurious 63° Abelian splitting |
 | **wrap-around** | modular position **cannot** detect it — needs **cumulative displacement** | double traversal read as a single pass |
+| readout before full clearing | a centroid past a segment does not mean the packet has left it: run_until_exit fires with 98% of the weight still in the segment windows at q = 3, and 16–18% remains at gate 7's fixed T = 180 at q = 1 | Abelian floors of ~1° (q = 3) and ~0.016° (q = 1) that are exactly 0 under a clearing readout; gate 8's 0.39° attributed to group velocity |
 
-**The pattern across all five: identical or exactly-zero numbers from
+**The pattern across the first five: identical or exactly-zero numbers from
 configurations that should differ.** Equal strengths in an ordering test make the
 two specs the *same array*; that control cannot fail and returned 0.000° three
 times before being caught.
+
+Trap 6 is a different pattern: a certificate that reports success without checking the thing it certifies. At q = 1, clearing leaves the gate-7 split unchanged to 0.01° and moves per-order residuals ≤ 0.09°, but takes the Abelian floor to exactly 0 — which made gate 7's old criterion, split > 10 × floor, impossible to fail. Gate 7 now tests the split against the independent prediction.
 
 ---
 
@@ -1564,7 +1567,7 @@ established — see §7b.*
 | **what fixes C_r** | the residual coupling *form* is determined (§4b.1); its *strength* is not |
 | ~~verify the 0.39° attribution~~ | **CLOSED** — readout timing; the Abelian floor is exactly 0 under clearing readout at q = 1 and q = 3 |
 | ~~wavenumber-averaged prediction at q = 3~~ | **CLOSED** — closes the gap to 0.04–0.17°; the q = 3 gauge sector is quantitatively verified |
-| ~~save the q = 3 scripts~~ | **CLOSED** — all test scripts and results committed to the public repository (`prove2me_workspace`, branch `claude/prove2me-setup-rbfean`, commit `0badafb`, folder `shape_zero_tests/`), with both `model.py` versions pinned by content hash (`c49da46f` for q = 1 work, `948b09e8` for q = 3). Runs from the repository alone; `q3_kavg.py` reproduces its saved result with difference 0.0 |
+| ~~save the q = 3 scripts~~ | **CLOSED** — all test scripts and results are in `shape_zero_tests/` in this repository, with both `model.py` versions pinned by content hash (`c49da46f` for q = 1 work, `948b09e8` for q = 3). Runs from the repository alone; `q3_kavg.py` reproduces its saved result with difference 0.0 |
 | ~~permanent q = 3 gate~~ | **CLOSED** — `shape_zero_tests/q3_gate.py` (commit `ed32937`). u(2) and u(3), AB/BA plus Abelian floors, clearing readout, spectrum-averaged prediction; PASS needs every error < 1° and floors < 0.5°. On 260×8×8: **PASS at 0.10–0.18°**; the same runs scored with the single-wavenumber prediction **FAIL** (2.4–5.1°) — proof it can fail. Refuses a verdict if any window fails to clear or the lattice can wrap. 11.6 min wall on 4 workers. Slab kept at 8×8 to stay clear of the transverse-uniform trap |
 | free-evolution operator between segments | would remove the ≤20-site gap constraint in §7 step 8. Note the profile-map test showed the q = 1 product residual is already sub-degree, so this matters at q = 3 or not at all |
 

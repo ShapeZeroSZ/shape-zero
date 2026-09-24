@@ -175,6 +175,11 @@ def c7_positive_in_retraction():
     return n
 
 
+# A machine-verified result cited by its Prove2Me mission ("Prove2Me mission 2",
+# "Prove2Me, mission 4a") is attribution just as a script name is.
+PROVE2ME = re.compile(r"Prove2Me\W{0,3}missions?\s+\d+[a-z]?", re.I)
+
+
 def c6_unattributed(idx):
     print("\nC6  DOCUMENTS WITH NO SCRIPT ATTRIBUTION")
     n = 0
@@ -182,7 +187,7 @@ def c6_unattributed(idx):
         if "/04_scripts/" in p:
             continue
         txt = open(p, encoding="utf-8", errors="replace").read()
-        if ".py" not in txt and len(txt) > 1500:
+        if ".py" not in txt and not PROVE2ME.search(txt) and len(txt) > 1500:
             print(f"    ** {p}")
             n += 1
     if not n:
