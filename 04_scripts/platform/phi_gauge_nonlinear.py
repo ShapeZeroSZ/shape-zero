@@ -33,6 +33,18 @@ K = 2 * np.pi * M / N
 OMEGA0 = np.sqrt(np.sqrt(5) + 2 * C * (1 - np.cos(K)))   # linear band at k, beta=0
 
 
+def w_lin(kk, beta):
+    """Linear root of  w^2 + 2c*beta*sin(kk)*w - W^2 = 0  (w > 0) for THIS lattice.
+
+    The gyro term here is c*beta*(v[n+1] - v[n-1]), so +k is the LOWER root and
+    -k the UPPER -- the reverse of pinned_asymmetry_reference.py, whose gyro sign
+    is opposite. Each direction is seeded at its own root (PROVENANCE §6o); the
+    earlier seed used OMEGA0 (beta = 0) for both, an O(beta) velocity mismatch.
+    """
+    b = C * beta * np.sin(kk)
+    return -b + np.sqrt(b * b + np.sqrt(5) + 2 * C * (1 - np.cos(kk)))
+
+
 def force(x, v, beta):
     xp, xm = np.roll(x, -1), np.roll(x, 1)
     vp, vm = np.roll(v, -1), np.roll(v, 1)
@@ -43,7 +55,7 @@ def run_wave(amp, beta, direction):
     """Evolve a single traveling wave; return u_n(t). direction=+1 right, -1 left."""
     n = np.arange(N)
     x = PHI + amp * np.cos(K * n)
-    v = direction * amp * OMEGA0 * np.sin(K * n)
+    v = direction * amp * w_lin(direction * K, beta) * np.sin(K * n)
     steps = int(T / DT)
     rec = np.empty((steps, N))
     for s in range(steps):

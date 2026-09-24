@@ -47,51 +47,70 @@ separates evidence from fitting.
 ## 3. Numerical verification
 
 `phi_gauge_nonlinear.py`, N = 64, c = 1.0, k = π/2, γ = 0, over a 400-fold
-amplitude range:
+amplitude range, each direction seeded at its own linear root (re-run
+2026-09-24, `PROVENANCE.md` §6o):
 
 | β | A | ω(+k) | ω(−k) | centre | **Δω** |
 |---|---|---|---|---|---|
 | 0.00 | 0.001 | 2.05817 | 2.05817 | 2.05817 | **0.00000** |
 | 0.00 | 0.400 | 2.04199 | 2.04199 | 2.04199 | **0.00000** |
 | 0.05 | 0.001 | 2.00878 | 2.10878 | 2.05878 | **−0.10000** |
-| 0.05 | 0.100 | 2.00779 | 2.10782 | 2.05780 | **−0.10003** |
-| 0.05 | 0.200 | 2.00479 | 2.10491 | 2.05485 | **−0.10012** |
-| 0.05 | 0.400 | 1.99237 | 2.09287 | 2.04262 | **−0.10050** |
+| 0.05 | 0.100 | 2.00781 | 2.10779 | 2.05780 | **−0.09998** |
+| 0.05 | 0.200 | 2.00489 | 2.10482 | 2.05485 | **−0.09993** |
+| 0.05 | 0.400 | 1.99278 | 2.09246 | 2.04262 | **−0.09968** |
 
 Theory: −2cβ sin(π/2) = **−0.1000**.
 
 - **Centre softens 0.8%** across the amplitude range — the nonlinearity is real
   and visible.
-- **Asymmetry drifts 0.5%**, from −0.10000 to −0.10050.
+- **Asymmetry drifts 0.3%**, from −0.10000 to −0.09968 — its magnitude
+  **shrinks** with amplitude.
 - **β = 0 gives exactly 0.00000** at every amplitude — the control fires.
+
+> **RETRACTED rows (β = 0.05), seeded with both directions at the β = 0
+> frequency:** A = 0.100: 2.00779 / 2.10782 / −0.10003; A = 0.200: 2.00479 /
+> 2.10491 / −0.10012; A = 0.400: 1.99237 / 2.09287 / −0.10050 — "asymmetry drifts
+> 0.5%, from −0.10000 to −0.10050". The O(β) velocity mismatch left a
+> counter-propagating admixture of 1.25×10⁻² (own root: 1.5×10⁻³, the finite-record
+> projection floor) whose frequency pulling reversed the sign of the drift. The
+> β = 0 rows, the A = 0.001 row and the centre column are unchanged.
 
 ## 3b. The correction is measured: β·A², with a pure-number coefficient
 
 The script was written to look for a β·A² correction. It is there, and it has
-been measured.
+been measured. Values below are from `phi_gauge_nonlinear.py`'s `run_wave` and
+`mode_freq` with each direction at its own root (re-run 2026-09-24, `PROVENANCE.md`
+§6o); the retracted values, from the β = 0 seed, are kept alongside.
 
-**Scaling in amplitude.** Residual divided by A², over the valid domain:
+**Scaling in amplitude.** Residual (Δω + 2cβ sin k) divided by A², β = 0.05:
 
-| A | residual / A² |
-|---|---|
-| 0.1 | −0.002978 |
-| 0.2 | −0.003035 |
-| 0.3 | −0.003061 |
-| 0.4 | −0.003109 |
-
-Constant to **4%** — the correction is A², confirmed.
-
-**Scaling in β.** The coefficient divided by β, over a tenfold range:
-
-| β | coefficient | coeff/β |
+| A | residual / A² | retracted (β = 0 seed) |
 |---|---|---|
-| 0.02 | −0.001229 | −0.06146 |
-| 0.05 | −0.003046 | −0.06091 |
-| 0.10 | −0.006302 | −0.06302 |
-| 0.20 | −0.011783 | −0.05891 |
+| 0.1 | +0.001757 | −0.002978 |
+| 0.2 | +0.001793 | −0.003035 |
+| 0.3 | +0.001869 | −0.003061 |
+| 0.4 | +0.001996 | −0.003109 |
 
-Constant to **3%**. So the correction is **proportional to β**, and the
-coefficient is a **pure number** fixed by c and k alone.
+Constant to **14%**, rising with A (retracted: 4%). The correction is A² at
+leading order; the rise is a higher-order term and appears in the reference too
+(κ = −0.0176 → −0.0200 over A = 0.1–0.4, `pinned_asymmetry_reference.py`).
+
+**Scaling in β.** The coefficient (mean residual/A² over A = 0.1–0.4) divided by
+β, over a tenfold range:
+
+| β | coefficient | coeff/β | retracted coefficient | retracted coeff/β |
+|---|---|---|---|---|
+| 0.02 | +0.000734 | +0.03670 | −0.001229 | −0.06146 |
+| 0.05 | +0.001853 | +0.03707 | −0.003046 | −0.06091 |
+| 0.10 | +0.003510 | +0.03510 | −0.006302 | −0.06302 |
+| 0.20 | +0.007442 | +0.03721 | −0.011783 | −0.05891 |
+
+Constant to **6%** (retracted: 7%). So the correction is **proportional to β**,
+and the coefficient is a **pure number** fixed by c and k alone. Its sign is
+opposite to the retracted table: coeff/β ≈ +0.036 agrees with second-order PT
+(+0.0349, `phi_gauge_delta.py`), and κ = −(coeff/β)/(2c sin k) ≈ −0.018 agrees
+with the reference β-sweep (−0.0184 ± 0.00033). `phi_gauge_closure.py`, fitting
+over A = 0.05–0.20 and six β, emits δ = +0.0357·β (retracted: −0.0598·β).
 
 **The full prediction:**
 
@@ -117,8 +136,9 @@ coefficient is a **pure number** fixed by c and k alone.
 > retracted 0.0959 / 0.0799 / 0.0677 become **−0.0214 / −0.0187 / −0.0165** at
 > stiffness 0.90 / 1.00 / 1.10 (`shape_zero_tests/joint3_kappa_stiffness.py`), with
 > the linear ratio at 0.99999 throughout — the pin is protected, κ is not. The earlier §3b table (−0.003046 at β = 0.05, from
-> `phi_gauge_nonlinear.py`) seeds both directions at the β = 0 frequency — a
-> different, uncorrected mismatch. Trail: `PROVENANCE.md` §6o.
+> `phi_gauge_nonlinear.py`) seeded both directions at the β = 0 frequency — a
+> different mismatch, since corrected: §3 and §3b now carry own-root values
+> (+0.001853 at β = 0.05). Trail: `PROVENANCE.md` §6o.
 
 **⚠ κ IS GEOMETRY-DEPENDENT. The value 0.0799 is for a 1D CHAIN.** [κ values in
 this table and the next paragraph: 0.0799 RETRACTED, the rest UNVERIFIED — see
@@ -192,6 +212,9 @@ The disputed factor of 2.6 lies within that measured bias. **The package's 0.030
 is an artifact of FFT-peak estimation on a short record.**
 
 **This line is emitted by `pinned_asymmetry_headline.py`, not written by hand.**
+[That script now prints −0.0205 (fitted from A ≥ 0.3, own-root seeding; its T = 300
+record does not resolve the drift below that). The reference, not it, carries
+the quoted coefficient. `PROVENANCE.md` §6o.]
 That script recomputes every headline number from the lattice via the package's
 own `phi_gauge_nonlinear.py`, confirms the coefficient by two independent routes,
 and carries a guard against decimal slips.

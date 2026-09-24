@@ -34,7 +34,7 @@ list, and the scope statement. Everything else is downstream of it.
 | **d16_spectrum_v2.py** | **sound as an instrument**; its Ω-weighted output carries no information (see LADDER_TWO §6a) |
 | **base_signature_test.py** | sound; P3 flagged MISS on a threshold artefact, noted in-file |
 | **base_lorentzian_forced.py** | sound |
-| **pinned_asymmetry_headline.py** | **SUPERSEDED NUMBER** — emits 0.0305 via a biased estimator; correct value 0.082 |
+| **pinned_asymmetry_headline.py** | **REBUILT** — ~~emits 0.0305 via a biased estimator; correct value 0.082~~ [CORRECTED 2026-09-24: once rebuilt on `freq_phase` it did not emit 0.0305; it printed 0.044 ± 0.015 (β = 0 seed, mean over unresolved amplitudes). It now emits −0.0205, fitted from A ≥ 0.3 with own-root seeding. The quoted κ comes from `pinned_asymmetry_reference.py` (−0.0184 ± 0.00033). PROVENANCE §6o] |
 | **residual_selection_rule.py** | **UNSOUND SOURCE, VALID RESULT** — its own lattice returned zeros; result obtained elsewhere |
 | **nekhoroshev_form.py** | **INCONCLUSIVE BY CONSTRUCTION** — superseded by the Greene route |
 
@@ -48,6 +48,9 @@ All three problem scripts carry a banner at the top of the file.
 computed 0.0305 while `PINNED_ASYMMETRY_TEST.md` states 0.082. The script is now
 banner-marked. **The script itself should be rebuilt on the phase-regression
 estimator** — that is the first Phase 0 item in the checklist.
+[Update 2026-09-24: the rebuild was done, and the rebuilt script never emitted
+0.0305. It printed 0.044 until `phi_gauge_nonlinear.py` was re-seeded, and now
+prints −0.0205 (A ≥ 0.3). Both 0.082 and 0.0799 are retracted, PROVENANCE §6o.]
 
 **Two errata recorded in-document**, both in the lab-facing file:
 

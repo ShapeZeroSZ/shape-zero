@@ -3,7 +3,13 @@
 phi_gauge_closure.py — closes the U(1) story (Shape Zero v5.1 §5.2.7)
 
 Open item from the amplitude sweep: the gauge asymmetry deviates from exact
-pinning by  delta(beta) * A^2  with delta(0.05) = -0.0031. Hypothesis: the
+pinning by  delta(beta) * A^2  with delta(0.05) = +0.00179 (fit below).
+[RETRACTED: delta(0.05) = -0.0031 and the fit delta = -0.0598 * beta, measured
+when phi_gauge_nonlinear.py seeded both directions at the beta = 0 frequency.
+With each direction at its own root (PROVENANCE §6o) this script emits
+delta = +0.0357 * beta, max residual 1.5%, parity sum ~1e-14 -- the sign flips,
+and it now agrees with the second-order PT value +0.0349 * beta
+(phi_gauge_delta.py). kappa = -delta / (2 c beta sin k) = -0.0179.] Hypothesis: the
 correction exists only because beta splits the two movers' frequencies, so
 their (direction-blind) softenings no longer cancel. That mechanism predicts:
 

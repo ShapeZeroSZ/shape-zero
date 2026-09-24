@@ -577,7 +577,8 @@ platform sign and seed with w_lin(direction·K), which is correct.
 `phi_gauge_nonlinear.py` (and so `pinned_asymmetry_headline.py`,
 `phi_gauge_closure.py`) seeds both directions at the β = 0 frequency — an O(β)
 mismatch but not a swap; not changed here, and its superseded 0.0305 carries
-that bias as well as the estimator bias. The two frozen `model.py` snapshots in
+that bias as well as the estimator bias. [Since fixed the same day — see
+"`phi_gauge_nonlinear.py` re-seeded" below.] The two frozen `model.py` snapshots in
 `shape_zero_tests/model_versions/` are left as recorded.
 
 **Unaffected:** the linear pinned asymmetry Δω = −2cβ sin k and the Lean missions
@@ -592,6 +593,41 @@ with the linear ratio 0.999992 / 0.999993 / 0.999994. Its unit-stiffness A = 0.3
 ratio, 0.998316, equals the fixed reference β-sweep value. MODEL_SPEC §5b.2
 Joint #3 and §5b.3 carry the corrected values; the qualitative result — the linear
 pin is protected against stiffness, κ is not — stands.
+
+**`phi_gauge_nonlinear.py` re-seeded (same day).** Each direction now starts at
+its own linear root, `w_lin(direction·K, β)`. That script uses the platform gyro
+sign, so +k is the **lower** root there — the reverse of the reference; a fixed
+"+k upper" rule would have re-created the swap (MODEL_SPEC §5, sign-convention
+table). Counter-propagating admixture at A = 0.001, β = 0.05: 1.25×10⁻² with the
+β = 0 seed, 1.5×10⁻³ with the own root (the finite-record floor), 2.4×10⁻² with
+the other direction's root. Hypothesis beforehand: linear results move < 10⁻⁵,
+nonlinear ones may move. Both held.
+
+| output | old (β = 0 seed) — RETRACTED | new (own root) |
+|---|---|---|
+| `phi_gauge_nonlinear.py`, β = 0 rows and β = 0.05, A = 0.001 row | 2.00878 / 2.10878 / −0.10000 | unchanged to 5 decimals |
+| same, β = 0.05, Δω at A = 0.1 / 0.2 / 0.3 / 0.4 | −0.10003 / −0.10012 / −0.10028 / −0.10050 | −0.09998 / −0.09993 / −0.09983 / −0.09968 |
+| same, ω(+k) / ω(−k) at A = 0.4 | 1.99237 / 2.09287 | 1.99278 / 2.09246 (centre 2.04262 unchanged) |
+| residual/A², β = 0.05, A = 0.1–0.4 (PINNED_ASYMMETRY_TEST §3b) | −0.002978 … −0.003109 | +0.001757 … +0.001996 |
+| coeff/β at β = 0.02 / 0.05 / 0.10 / 0.20 (§3b) | −0.06146 / −0.06091 / −0.06302 / −0.05891 | +0.03670 / +0.03707 / +0.03510 / +0.03721 |
+| `phi_gauge_closure.py` fit | δ = −0.0598·β, max residual 1.28×10⁻⁴ (1.4%) | **δ = +0.0357·β**, 8.35×10⁻⁵ (1.5%) |
+| closure δ(0.05) (its docstring) | −0.0031 (printed −0.00303) | +0.00179 |
+| closure parity sum | −3.7×10⁻¹⁴ | −2.0×10⁻¹⁴ |
+| `pinned_asymmetry_headline.py` drift/A², A = 0.1 / 0.2 / 0.3 / 0.4 | 0.0662 / 0.0471 / 0.0307 / 0.0311 | +0.0180 / −0.0029 / −0.0203 / −0.0205 |
+| headline coefficient | 0.044 ± 0.015 (mean over all A) | **−0.0205** (fit over A ≥ 0.3) |
+
+The closure fit now agrees with second-order PT (+0.0349·β) to 2%, and
+κ = −δ/(2c β sin k) = −0.0179 agrees with the reference β-sweep (−0.0184 ± 0.00033).
+The sign of the platform-script correction was an artifact of the seed.
+
+`pinned_asymmetry_headline.py` also changed how it fits. Its T = 300 readout does
+not resolve the drift at A ≤ 0.2: halving the record moves the reading by as much
+as the drift (it prints this check per amplitude), and averaging those points gave
+−0.006 ± 0.016 even after the re-seed. It now fits only A ≥ 0.3, where the drift
+exceeds twice the record-length check. It had been printing 0.044, not the 0.0305
+AUDIT.md attributed to it; that claim is corrected. `phi_gauge_decaymap.py` saves
+its map next to itself instead of to `/home/claude`, and reproduces
+`shape_zero_tests/p1/t0.txt`.
 
 **P-1 — what was found** (annotated in `shape_zero_predictions_v1.md`):
 

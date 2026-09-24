@@ -1162,6 +1162,27 @@ splitting matching independent Bloch-branch theory; commuting axes give zero.
 
 **Script:** `pinned_asymmetry_reference.py`, `phi_gauge_u3_working.py`.
 
+**Gyroscopic sign conventions — seed from each script's own dispersion
+(2026-09-24).** The scalar gyro term appears with both signs in this archive:
+
+| convention | gyro term | dispersion | +k root | scripts |
+|---|---|---|---|---|
+| platform | +cβ(v[n+1] − v[n−1]) | ω² + 2cβ sin k·ω − W² = 0 | **lower** | `phi_gauge_test.py`, `phi_gauge_delta.py`, `phi_gauge_nonlinear.py` (and via it `phi_gauge_closure.py`, `pinned_asymmetry_headline.py`), `phi_gauge_decaymap.py` (via `phi_gauge_delta.py`), `s2_universality.py`, `shape_zero_tests/p1/sim.py` |
+| reference | +βc(v[n−1] − v[n+1]) | ω² − 2cβ sin k·ω − W² = 0 | **upper** | `pinned_asymmetry_reference.py`, `shape_zero_tests/joint3_kappa_stiffness.py`, `model.py` (scalar sector), `residual_selection_rule.py` |
+
+The two are the same physics with k → −k, so |Δω| = 2cβ sin k either way. A
+travelling-wave seed must take each direction's velocity from the dispersion
+relation of **that script's** convention — e.g. `w_lin(direction·K, β)` in the
+platform scripts — **never from a fixed "+k upper / −k lower" rule**, which is
+right for one convention and is the §6o swap in the other. Both seeding errors
+behind §6o were of this kind: `pinned_asymmetry_reference.py` swapped the roots;
+`phi_gauge_nonlinear.py` used the β = 0 frequency for both. Check: the
+counter-propagating admixture in the seeded mode should sit at the finite-record
+floor (1.5×10⁻³ at A = 0.001, β = 0.05, T = 300 in `phi_gauge_nonlinear.py`);
+the β = 0 seed leaves 1.25×10⁻² and the other direction's root 2.4×10⁻². The matrix-gauge scripts
+(`phi_gauge_chiral.py`, `phi_gauge_u3*.py`) use the link matrices W and are not
+covered by this table.
+
 ---
 
 ## 5b. JOINT observables — EM-like sector × base sector

@@ -12,6 +12,7 @@ Directional protection is spot-checked at -k, where the detuning
 Delta(-k) = Delta0 + 2*beta cannot reach resonance in this amplitude range.
 """
 
+import os
 import numpy as np
 import phi_gauge_delta as D
 
@@ -57,7 +58,7 @@ if __name__ == '__main__':
         for j, b in enumerate(BETAS):
             R[i, j], _ = run_retention(A, b, +1)
         print(f'A={A:.2f} ' + ' '.join(f'{r:5.3f}' for r in R[i]))
-    np.save('/home/claude/decaymap_R.npy', R)
+    np.save(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'decaymap_R.npy'), R)
 
     print('\npredicted resonance curve beta_res(A) from the A2-derived dispersion:')
     for A in AMPS:
