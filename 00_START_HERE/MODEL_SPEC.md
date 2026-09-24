@@ -1230,7 +1230,14 @@ their difference does not.
 | A | stiffness 0.90 / 1.00 / 1.10 | Δ from baseline |
 |---|---|---|
 | **0.02** (linear) | 1.000038 / 1.000033 / 1.000026 | **−1.2×10⁻⁵ — NULL** |
-| **0.30** (nonlinear) | 1.008633 / 1.007192 / 1.006090 | **−2.5×10⁻³ — SIGNAL** |
+| **0.30** (nonlinear) | ~~1.008633 / 1.007192 / 1.006090~~ RETRACTED (swapped seeding) | ~~−2.5×10⁻³~~ |
+| **0.02** (linear), corrected seeding | 0.999992 / 0.999993 / 0.999994 | **+2×10⁻⁶ — NULL** |
+| **0.30** (nonlinear), corrected seeding | 0.998072 / 0.998316 / 0.998513 | **+4.4×10⁻⁴ — SIGNAL** |
+
+*Corrected rows: `shape_zero_tests/joint3_kappa_stiffness.py` (stiffness factor f
+multiplies the linear on-site stiffness √5; each direction seeded at its own root;
+DOP853, weighted phase regression). At f = 1.00 its A = 0.30 ratio equals the fixed
+`pinned_asymmetry_reference.py` β-sweep value to six digits.*
 
 **Liveness check passes:** the branch frequencies move by **+0.109** across the
 range, so the knob is connected and the null is not vacuous.
@@ -1239,25 +1246,28 @@ range, so the knob is connected and the null is not vacuous.
 exactly as the algebra requires.
 
 **κ is not.** Converting: **κ = 0.0959, 0.0799, 0.0677** at stiffness 0.90, 1.00,
-1.10 — a **35% swing**, monotone, far outside noise.
+1.10 — a **35% swing**, monotone, far outside noise. [**RETRACTED** — swapped
+seeding, §5.]
 
-> **⚠ JOINT #3 (κ vs stiffness) — UNVERIFIED pending re-measurement (2026-09-24).**
-> The A = 0.30 row and the three κ values above were measured with the reference
-> script's swapped seeding (§5; κ = 0.0799 is retracted, corrected −0.0187 at unit
-> stiffness). Whether κ still varies with stiffness, and by how much, is not known
-> until the scan is rerun with the fixed `pinned_asymmetry_reference.py`; no script
-> for the scan is in this repository. Joint #2, the linear pin null at A = 0.02, is
-> linear-order and unaffected.
+**Joint #3, re-measured with correct seeding (2026-09-24):** **κ = −0.0214,
+−0.0187, −0.0165** at stiffness 0.90, 1.00, 1.10 — a **26% spread**, monotone
+(|κ| falls as stiffness rises, as the retracted values did), with the linear
+ratio at 0.99999 throughout. Every value and the sign differ from the retracted
+ones; **the qualitative result stands: the linear pin is protected against
+stiffness, κ is not.** Script: `shape_zero_tests/joint3_kappa_stiffness.py`
+(about a minute).
 
 ### 5b.3 The pin/κ split is structural, not merely geometric
 
 | quantity | vs transverse geometry | vs base stiffness |
 |---|---|---|
 | **pinning** Δω = −2cβ sin k | **protected** | **protected** |
-| **κ**, the A² coefficient | varies — *unverified* | **varies, ~35% over ±10%** — *unverified* |
+| **κ**, the A² coefficient | varies — *unverified* | **varies, 26% over ±10%** (−0.0214 / −0.0187 / −0.0165) — ~~~35%, 0.0959 / 0.0799 / 0.0677~~ retracted |
 
-*κ rows: both measured with the swapped seeding retracted in §5; unverified
-pending re-measurement. The pinning rows are unaffected.*
+*κ vs stiffness re-measured with correct seeding (`joint3_kappa_stiffness.py`);
+the qualitative split stands. κ vs transverse geometry was measured with the
+swapped seeding retracted in §5 and remains unverified pending re-measurement.
+The pinning rows are unaffected.*
 
 Two independent knobs, same split. **The pinning carries the falsifiable content
 of the U(1) sector; κ is a contingent coefficient** that must always be quoted

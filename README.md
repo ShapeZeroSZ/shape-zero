@@ -43,8 +43,10 @@ proves the point count, not that the system is the Fano plane.
   and not suppressed above that. Predicted from the dispersion relation before
   the confirming runs.
 - **The pinned asymmetry** is protected against uniform stiffness to 10⁻⁵; its
-  nonlinear coefficient κ is not. [**κ-vs-stiffness claim UNVERIFIED pending
-  re-measurement**, and the value it was built on, κ = 0.0799, is **RETRACTED**:
+  nonlinear coefficient κ is not. [Re-measured with correct seeding: κ = −0.0214,
+  −0.0187, −0.0165 at stiffness 0.90, 1.00, 1.10, linear ratio 0.99999 throughout
+  (`joint3_kappa_stiffness.py`) — the claim stands. The earlier values, built on
+  κ = 0.0799, are **RETRACTED**:
   the reference script seeded each direction with the other's root. Corrected
   κ = −0.0187 at unit stiffness (β = 0.05, A = 0.30; −0.0184 ± 0.00033 over the
   β-sweep), from `pinned_asymmetry_reference.py` and `model.py` gate 6. The

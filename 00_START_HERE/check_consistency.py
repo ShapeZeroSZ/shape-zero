@@ -92,7 +92,7 @@ TESTS_DIR = "shape_zero_tests"
 REPO_HOSTED = {
     "q3_gate.py", "q3_kavg.py", "q3_readout.py", "q3_combine.py",
     "gate7_readout.py", "openrows.py", "resid.py", "kscan.py",
-    "j_compat_test.py", "grid.py", "checks.py",
+    "j_compat_test.py", "grid.py", "checks.py", "joint3_kappa_stiffness.py",
 }
 
 

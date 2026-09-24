@@ -113,8 +113,10 @@ coefficient is a **pure number** fixed by c and k alone.
 > document is built on — and the Lean missions (Prove2Me 2, 3, 4a, 4b), which are
 > linear-order. The β-collapse also survives (β-independent to 3×10⁻⁴).
 > **Unverified pending re-measurement:** the geometry table and κ(w, side) values,
-> and κ versus stiffness (0.0959 / 0.0799 / 0.0677), all measured with the swapped
-> seeding. The earlier §3b table (−0.003046 at β = 0.05, from
+> measured with the swapped seeding. **κ versus stiffness is re-measured:** the
+> retracted 0.0959 / 0.0799 / 0.0677 become **−0.0214 / −0.0187 / −0.0165** at
+> stiffness 0.90 / 1.00 / 1.10 (`shape_zero_tests/joint3_kappa_stiffness.py`), with
+> the linear ratio at 0.99999 throughout — the pin is protected, κ is not. The earlier §3b table (−0.003046 at β = 0.05, from
 > `phi_gauge_nonlinear.py`) seeds both directions at the β = 0 frequency — a
 > different, uncorrected mismatch. Trail: `PROVENANCE.md` §6o.
 
@@ -136,7 +138,8 @@ transversely-spreading packet dilutes the amplitude driving it.
 
 **κ = 0.0799 is the plane-wave value AT UNIT ON-SITE STIFFNESS.** It changes with
 transverse geometry **and** with base stiffness — measured κ = 0.0959, 0.0799,
-0.0677 at stiffness 0.90, 1.00, 1.10, a ~35% swing over ±10%. **The pinning
+0.0677 at stiffness 0.90, 1.00, 1.10, a ~35% swing over ±10% [RETRACTED; corrected
+−0.0214, −0.0187, −0.0165, a 26% spread — see note above]. **The pinning
 remains protected against both** (null to 1.2×10⁻⁵ under stiffness), and that is
 the invariance the experiment rests on.
 

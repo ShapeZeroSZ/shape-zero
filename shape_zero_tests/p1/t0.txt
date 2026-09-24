@@ -1,0 +1,28 @@
+retention map (+k pump), rows A, cols beta:
+         0.03  0.04  0.05  0.06  0.07  0.08  0.09  0.10
+A=0.10 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000
+A=0.15 1.000 1.000 1.000 1.000 1.000 1.000 1.000 0.999
+A=0.20 1.001 1.001 1.000 1.001 1.001 1.002 1.001 1.000
+A=0.25 1.003 1.003 1.002 1.002 1.000 1.003 1.002 1.001
+A=0.30 1.000 0.999 0.999 1.001 0.957 0.997 0.995 0.998
+A=0.35 1.003 1.003 1.003 1.001 0.806 1.001 1.003 1.005
+A=0.40 0.999 1.002 1.003 1.004 0.612 0.885 0.985 0.999
+
+predicted resonance curve beta_res(A) from the A2-derived dispersion:
+  A=0.10: beta_res = 0.0619
+  A=0.15: beta_res = 0.0606
+  A=0.20: beta_res = 0.0589
+  A=0.25: beta_res = 0.0567
+  A=0.30: beta_res = 0.0539
+  A=0.35: beta_res = 0.0507
+  A=0.40: beta_res = 0.0470
+
+directional protection spot checks (-k pump):
+  A=0.30, beta=0.05: retention = 1.0000
+  A=0.40, beta=0.05: retention = 1.0001
+  A=0.30, beta=0.08: retention = 1.0003
+  A=0.40, beta=0.08: retention = 0.9997
+
+real	3m32.270s
+user	3m30.749s
+sys	0m0.045s

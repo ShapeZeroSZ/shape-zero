@@ -95,8 +95,8 @@ the predictions apply to any faithful realization.
 > The P-1 falsifier ("the window drifts downward") is therefore not met by the
 > model, but the window claim itself fails under a clean start; the directional
 > protection is the part that stands. The investigation scripts (Hill analysis,
-> batched clean-start runs) were scratch code and are not yet in this
-> repository.
+> batched clean-start runs) and their outputs are in `shape_zero_tests/p1/`; its
+> README maps each file to the finding above.
 
 **Falsified if:** the window drifts downward with amplitude; or the reverse
 direction decays inside the window; or the centre misses the zero-fit

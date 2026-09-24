@@ -311,8 +311,8 @@ angle. **Linear pin NULL to 1.2×10⁻⁵** across a 20% stiffness range, exactl
 the algebra requires (stiffness enters both branches identically and cancels in
 the difference). **Liveness check passes** — branch frequencies move by +0.109,
 so the null is not vacuous. **κ SIGNAL: 0.0959 → 0.0799 → 0.0677**, a 35% swing.
-[κ-vs-stiffness UNVERIFIED pending re-measurement — swapped seeding, §6o. The
-linear pin null is unaffected.]
+[κ values RETRACTED — swapped seeding, §6o. Re-measured: −0.0214, −0.0187,
+−0.0165, a 26% spread; the linear pin null holds (0.99999). The result stands.]
 
 **Joint #4 WITHDRAWN as a law** (numbering: #1 holonomy, #2 pin null, #3 κ, #4 gradient). A stiffness gradient appeared to couple as
 Δ ∝ (∇s)², C = −1337 at 2% scatter — but only for a linear ramp. For Gaussian
@@ -582,9 +582,16 @@ that bias as well as the estimator bias. The two frozen `model.py` snapshots in
 
 **Unaffected:** the linear pinned asymmetry Δω = −2cβ sin k and the Lean missions
 (Prove2Me 2, 3, 4a, 4b), all linear-order. The β-collapse survives the fix.
-**Unverified pending re-measurement:** κ versus stiffness (MODEL_SPEC §5b.2,
-Joint #3) and the κ(w, side) investigation (§5, §6e) — both measured with the
-swapped seeding, and neither scan has a script in this repository.
+**Unverified pending re-measurement:** the κ(w, side) investigation (§5, §6e),
+measured with the swapped seeding; no script for it is in this repository.
+
+**κ versus stiffness re-measured (same day).** `shape_zero_tests/joint3_kappa_stiffness.py`,
+seeding each direction at its own root, gives κ = −0.0214, −0.0187, −0.0165 at
+stiffness 0.90, 1.00, 1.10 (26% spread; retracted: 0.0959, 0.0799, 0.0677, 35%)
+with the linear ratio 0.999992 / 0.999993 / 0.999994. Its unit-stiffness A = 0.30
+ratio, 0.998316, equals the fixed reference β-sweep value. MODEL_SPEC §5b.2
+Joint #3 and §5b.3 carry the corrected values; the qualitative result — the linear
+pin is protected against stiffness, κ is not — stands.
 
 **P-1 — what was found** (annotated in `shape_zero_predictions_v1.md`):
 
@@ -600,6 +607,9 @@ swapped seeding, and neither scan has a script in this repository.
 3. A clean start shows broad instability across β = 0.05–0.10 at A = 0.3–0.4
    (other pair channels grow as fast or faster), not a window.
 4. The reverse-direction (−k) protection holds on every channel checked.
+
+The investigation scripts and outputs are in `shape_zero_tests/p1/`, with a README
+mapping each file to the finding it produced.
 
 **Catch:** a sign comparison between a prediction script and the spec, made
 while chasing a different discrepancy. Failure mode: #2 below in a new form —
