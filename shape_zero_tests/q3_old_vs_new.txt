@@ -1,0 +1,6 @@
+u(2) fixed    t=180/180/180/180  max window 3.9e-03 | split 105.95 pred 100.80 err  5.15 | Abelian floor 0.002 | sim-vs-product 3.06/3.61 | drift 3.4e-07
+u(2) centroid t=116/116/116/116  max window 9.8e-01 | split 103.21 pred 100.80 err  2.41 | Abelian floor 0.977 | sim-vs-product 4.59/3.50 | drift 2.2e-07
+u(2) clear    t=345/346/346/346  max window 9.9e-07 | split 105.89 pred 100.80 err  5.09 | Abelian floor 0.000 | sim-vs-product 3.01/3.62 | drift 6.6e-07
+u(3) fixed    t=180/180/180/180  max window 3.7e-03 | split  60.52 pred  64.97 err  4.45 | Abelian floor 0.001 | sim-vs-product 5.22/5.22 | drift 3.4e-07
+u(3) centroid t=114/116/116/116  max window 9.8e-01 | split  64.91 pred  64.97 err  0.06 | Abelian floor 1.049 | sim-vs-product 2.86/1.87 | drift 2.2e-07
+u(3) clear    t=335/337/341/341  max window 9.9e-07 | split  60.54 pred  64.97 err  4.43 | Abelian floor 0.000 | sim-vs-product 5.21/5.23 | drift 6.5e-07

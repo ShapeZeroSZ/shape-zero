@@ -1,0 +1,9 @@
+2 single
+2 AB
+2 BA
+2 fAB
+2 fBA
+3 AB
+3 BA
+3 fAB
+3 fBA
