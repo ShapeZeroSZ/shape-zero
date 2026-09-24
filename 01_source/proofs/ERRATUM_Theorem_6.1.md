@@ -156,3 +156,10 @@ components"; the Fano incidence graph is the Heawood graph, which is not a union
 of K₃,₃ components. König's theorem, also cited, is the correct justification: a
 3-regular bipartite graph has a proper 3-edge-colouring, which is exactly a role
 colouring. The count of **48** role colourings (§5) is confirmed by enumeration.
+
+**Note — not a correction.** The proof of Theorem 3.3 ends "Uniqueness of STS(7)
+is classical." — asserted without reference or argument. The claim is true, and
+is now machine-verified: Prove2Me mission 6 (2026-09-24, in review) proves that
+every seven-point Steiner triple system is the Fano plane. With mission 5, which
+proves that the role postulates force 7 points, Theorem 3.6 ("Roles Force Fano")
+is machine-verified in full.

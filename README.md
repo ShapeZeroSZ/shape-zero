@@ -26,10 +26,12 @@ claim is marked where it appears and traced in `00_START_HERE/PROVENANCE.md`.
 | 4a | Result 2 on a periodic lattice with **any number of axes** | proved, in review |
 | 4b | Result 3 in any dimension, also independent of **transverse** wavenumbers | proved, in review |
 | 5 | A Steiner triple system with at least one point admitting a **role colouring has exactly 7 points** | **proved, approved and published** (first solved by another solver; ours accepted as later solves) |
+| 6 | **Every seven-point Steiner triple system is the Fano plane** — so the role postulates force the Fano plane | proved, in review (all seven theorems first solves) |
 
 Each mission states what it does **not** prove. In particular: why couplings
 commute with J is not derived by passivity (see "Measured" below), and mission 5
-proves the point count, not that the system is the Fano plane.
+proves the point count, not that the system is the Fano plane — mission 6 proves
+that, so together they machine-verify C1 Theorem 3.6 ("Roles Force Fano").
 
 ### Measured (simulation, with the checks that could have failed them)
 

@@ -497,7 +497,12 @@ with the 28-theorem running total:
 | 4a | 1 | 5 | 6 |
 | 4b | 1 | 5 | 6 |
 | 5 | 2 | 5 | 7 |
-| **total** | **8** | **28** | **36** |
+| *missions 1–5 (the 36 above)* | *8* | *28* | *36* |
+| 6 | 1 | 7 | 8 |
+| **total** | **9** | **35** | **44** |
+
+Mission 6 (below) adds one definition (IsFano) and seven theorems; it imports
+mission 5's STS and fano as references, which are not counted again.
 
 **Priority, recorded as it happened.** All five mission-5 theorems were first
 solved by another solver within minutes of publication, before our proofs were
@@ -508,6 +513,19 @@ Mission 5 has five theorems — the goal, milestones M1 and M2, and corollaries 
 and B — all accepted.
 
 **Running total: six missions, 28 theorems, all machine-verified.**
+
+**Mission 6 (launched 2026-09-24, in review): "Every seven-point Steiner triple
+system is the Fano plane — so the role postulates force the Fano plane."** All
+seven theorems — three milestones, the goal, two corollaries and the capstone —
+were proved and accepted as **first solves**, submitted within two minutes of
+launch. It adds 7 theorems and 1 definition (IsFano), and imports mission 5's
+STS and fano as references. **Together with mission 5, C1 Theorem 3.6 ("Roles
+Force Fano") is now fully machine-verified:** mission 5 proves the role
+postulates force 7 points, and mission 6 that every STS(7) is the Fano plane.
+The uniqueness of STS(7), which C1 §3 asserts without reference or argument, is
+among what mission 6 proves (erratum, Section 3).
+
+**Running total: seven missions, 35 theorems, all machine-verified.**
 
 ## 6m. J-compatibility — the one premise, classified CHOSEN
 
