@@ -84,11 +84,11 @@ def c1_disagreeing_values():
     return hits
 
 
-# Scripts that live in the public GitHub repository rather than in this archive.
-# Listed explicitly so the check still flags a script that is genuinely missing:
-# a name absent from BOTH the archive and this list is reported.
-# Repository: prove2me_workspace, branch claude/prove2me-setup-rbfean,
-# folder shape_zero_tests/.
+# Scripts that live in shape_zero_tests/ in this repository rather than in
+# 04_scripts/, so CLAIM_INDEX.json does not list them. c3 also scans
+# shape_zero_tests/ on disk; this list names the scripts expected there, so a
+# name absent from BOTH the index and the folder is still reported.
+TESTS_DIR = "shape_zero_tests"
 REPO_HOSTED = {
     "q3_gate.py", "q3_kavg.py", "q3_readout.py", "q3_combine.py",
     "gate7_readout.py", "openrows.py", "resid.py", "kscan.py",
@@ -99,22 +99,29 @@ REPO_HOSTED = {
 def c3_missing_scripts(idx):
     print("\nC3  SCRIPTS REFERENCED BUT ABSENT")
     have = {os.path.basename(s["file"]) for s in idx["scripts"]}
+    tests = set()
+    for r, d, f in os.walk(TESTS_DIR):
+        d[:] = [x for x in d if x != "__pycache__"]
+        tests |= {x for x in f if x.endswith(".py")}
     refd = set()
     for p in md_files():
         txt = open(p, encoding="utf-8", errors="replace").read()
         refd |= set(re.findall(r"`([a-z0-9_]+\.py)`", txt))
         refd |= set(re.findall(r"\b([a-z0-9_]+\.py)\b", txt))
-    missing = sorted(x for x in refd - have - REPO_HOSTED
+    missing = sorted(x for x in refd - have - tests
                      if not x.startswith("z1_d8_att"))
-    remote = sorted((refd - have) & REPO_HOSTED)
+    remote = sorted((refd - have) & tests)
+    absent = sorted(REPO_HOSTED - tests - set(missing))
     if missing:
         for m in missing:
             print(f"    ** {m}")
     else:
         print("    all referenced scripts present")
     if remote:
-        print(f"    (in the GitHub repository, shape_zero_tests/: {', '.join(remote)})")
-    return len(missing)
+        print(f"    (in {TESTS_DIR}/: {', '.join(remote)})")
+    for a in absent:
+        print(f"    ** {a} expected in {TESTS_DIR}/ but not found")
+    return len(missing) + len(absent)
 
 
 def c4_retracted_dependencies():
