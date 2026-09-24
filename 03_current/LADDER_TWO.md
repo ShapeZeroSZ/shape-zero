@@ -10,6 +10,8 @@ whole content, and getting it wrong — repeatedly, in the session that produced
 this — is what made the material look like a failed appendix rather than a
 separate object.
 
+**Scripts:** `d16_spectrum_v2.py` (§5 metric and invariants, §6 spectra).
+
 ---
 
 ## 1. The two ladders are one principle at two strengths

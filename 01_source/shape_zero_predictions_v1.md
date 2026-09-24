@@ -16,6 +16,9 @@ electrical transmission lines with gyrator elements, magnetoacoustic and
 coupled-pendulum arrays. The coupling realization is the engineering step;
 the predictions apply to any faithful realization.
 
+**Scripts:** P-1 `phi_gauge_test.py`, `phi_gauge_delta.py`, `phi_gauge_decaymap.py`,
+`s2_universality.py`; P-2 `phi_gauge_chiral.py`; P-3 `phi_gauge_precession.py`.
+
 ---
 
 ## P-1. The nonreciprocal decay window, located without fitting
