@@ -462,6 +462,21 @@ dispersion relation, M2 showing the radicand is even, and — explicitly — tha
 description "states plainly that only the linear asymmetry on a uniform lattice is
 covered." The scope limits written into the description were read as intended.
 
+**Second publication (2026-09-24): mission 5 approved by Prove2Me moderator
+Shuze Chen.** Mission 5: a Steiner triple system with at least one point
+admitting a role colouring has exactly 7 points (the point count only, not that
+the system is the Fano plane). The moderator verified the mathematics
+independently rather than relying on the description, and noted that the
+source the mission cites was not public at the time of review — so the approval
+rests on the mathematics as stated in the mission, not on that source. (Drafting
+this mission is also where the C1 §3 edge-case errors were found:
+`01_source/proofs/ERRATUM_Theorem_6.1.md`.)
+
+**Priority, recorded as it happened.** All five mission-5 theorems were first
+solved by another solver within minutes of publication, before our proofs were
+submitted. Ours were accepted as later solves. The result is machine-verified
+either way; the first solves are not ours.
+
 ## 6m. J-compatibility — the one premise, classified CHOSEN
 
 Hypothesis tested (Claude, this session): J-compatibility follows from requiring

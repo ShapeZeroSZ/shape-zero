@@ -241,6 +241,7 @@ for every size, relying only on Lean's three standard axioms:
 | 3 | on a uniform ring, ω(q) − ω(−q) = **2βc·sin q** for the branch frequency ω, so the propagation asymmetry is **independent of the on-site stiffness K**; ω is shown to be a root of the dispersion relation | **proved, APPROVED — published** |
 | 4a | on a periodic lattice with **any number of axes q** and **L ≥ 3** sites per axis, the per-link coupling (one matrix per site per axis) does no net work for all motions **iff every link matrix is symmetric**; the L = 2 counterexample is also proved | proved, in review |
 | 4b | on a uniform lattice with **any number of axes**, reversing the wave along the propagation axis changes its frequency by exactly **2βc·sin k₀** — **independent of the stiffness and of every transverse wavenumber**; the formula is checked against the eigenvalues of a real q = 3 lattice to 1.8×10⁻¹⁴ | proved, in review |
+| 5 | a Steiner triple system with at least one point admitting a **role colouring has exactly 7 points** (the count, not that it is the Fano plane) | **APPROVED — published** 2026-09-24; first solved by another solver, ours accepted as later solves (`PROVENANCE.md` §6l) |
 
 Missions 4a and 4b reduce exactly to missions 2 and 3 at q = 1, so **the passivity
 and asymmetry results hold on the three-dimensional base itself.**
