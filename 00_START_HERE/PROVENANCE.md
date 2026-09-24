@@ -224,7 +224,7 @@ found while looking at the target rather than at the model.
 | claim | status |
 |---|---|
 | pinned asymmetry at q = 3 | **survives** — 0.100001 vs theory 0.100000 |
-| **κ at q = 3** | **does NOT survive** — 0.0799 → 0.0168 (w=2), 0.0311 (w=3), and depends on transverse width [all measured with swapped seeding: 0.0799 RETRACTED. κ(w = 2, side) re-measured: −0.00447 → −0.00047 over side 8–32, **measured and open**; w = 3 and the geometry table UNVERIFIED — §6o] |
+| **κ at q = 3** | **does NOT survive** — 0.0799 → 0.0168 (w=2), 0.0311 (w=3), and depends on transverse width [all measured with swapped seeding: 0.0799 RETRACTED. κ(w = 2, side) re-measured: −0.00447 → −0.00047 over side 8–32, then **CLOSED** — κ → 0 with box size, no box-independent localised κ; w = 3 and the geometry table UNVERIFIED — §6o] |
 | gates 5–8 in `model.py` | measured at **q = 1**; 7–8 not yet re-run at q = 3 |
 
 **A vacuous test was caught and is now documented.** The first q = 3 run gave
@@ -608,7 +608,7 @@ that bias as well as the estimator bias. [Since fixed the same day — see
 **Unverified pending re-measurement:** the κ(w, side) investigation (§5, §6e),
 measured with the swapped seeding; no script for it is in this repository.
 [Since re-measured for w = 2 — see "κ(w = 2, side) re-measured" below; now
-**measured and open**. Other widths remain unverified.]
+**CLOSED**. Other widths remain unverified.]
 
 **κ versus stiffness re-measured (same day).** `shape_zero_tests/joint3_kappa_stiffness.py`,
 seeding each direction at its own root, gives κ = −0.0214, −0.0187, −0.0165 at
@@ -653,7 +653,7 @@ AUDIT.md attributed to it; that claim is corrected. `phi_gauge_decaymap.py` save
 its map next to itself instead of to `/home/claude`, and reproduces
 `shape_zero_tests/p1/t0.txt`.
 
-**κ(w = 2, side) re-measured (same day) — measured and open.** `shape_zero_tests/kappa_readout_test.py` (β = 0.05, A = 0.30, q = 3, transverse
+**κ(w = 2, side) re-measured (same day) — measured and open [now CLOSED, below].** `shape_zero_tests/kappa_readout_test.py` (β = 0.05, A = 0.30, q = 3, transverse
 width w = 2, periodic BC, T = 300, uniform transverse readout). Its gyro term is
 the reference convention, but it had seeded +k with the lower root — the §6o
 swap — and one carrier frequency for every transverse component. It now builds
@@ -679,8 +679,8 @@ still leaves 1.8–2.2%, the swap 4.0%). Outputs: `kappa_readout_test_output.txt
   side.
 - **Linear pinning holds** at 0.999997–1.000000 for every side and readout.
 - **κ still has no side-independent limit.** It falls tenfold from side 8 to 32
-  and steepens at the end (≈ side⁻³ from 24 to 32). **No κ(w) is published.**
-- **Mechanism unresolved.** It is **not seeding**: new/old is −0.25 at every side
+  and steepens at the end (≈ side⁻³ from 24 to 32) [within error — below]. **No κ(w) is published.**
+- **Mechanism unresolved** [since CLOSED — a fixed dilution with factor F = 2 − s, below]. It is **not seeding**: new/old is −0.25 at every side
   to 1%, so the fix changed κ's sign and scale but not its side-dependence. It
   is **not readout**: the uniform readout is clean (phase residual 0.003–0.011);
   the weighted and centre readouts are invalid as frequency readouts (residual
@@ -692,9 +692,82 @@ still leaves 1.8–2.2%, the swap 4.0%). Outputs: `kappa_readout_test_output.txt
   original script, re-run as supplied, gives +0.00457. The other four sides
   agree with it to ~2%.
 
-Status: κ(w = 2, side) is **measured and open**. The other transverse widths
+Status: κ(w = 2, side) was **measured and open**; it is now **CLOSED** — below. The other transverse widths
 (w = 3, the geometry table) were measured with `pinned_asymmetry_reference.py`'s
 single-carrier seed and remain **unverified**.
+
+**κ(w = 2, side) — CLOSED (2026-09-24).** Three GPU scans (Google Colab, Tesla
+T4, PyTorch float64, fixed-step RK4 dt = 0.01; physics, Fourier-space seed and
+uniform readout identical to `kappa_readout_test.py`), each with its output in
+`shape_zero_tests/`: `kappa_side_gpu.py`, `kappa_boxscan_gpu.py`,
+`kappa_extended_gpu.py` (`*_colab_output.txt`). All passed every validation
+check; `kappa_extended_gpu.py` reproduces the table above exactly at every side
+and extends it to L = 80. Re-measured here on CPU with the saved
+`kappa_extended_gpu.py` (NumPy backend) at L = 20, 24, 28, 32: every κ, error bar,
+[0, 150] value and energy drift identical to the Colab output.
+
+| L | fill | κ ± err | F = κ/(κ_pw·fill) ± err | model 2 − s |
+|---|---|---|---|---|
+| 8 | 0.19387 | −0.00447 ± 0.00011 | 1.23 ± 0.03 | 1.35 |
+| 12 | 0.08726 | −0.00289 ± 0.00014 | 1.77 ± 0.08 | 1.66 |
+| 16 | 0.04909 | −0.00204 ± 0.00021 | 2.22 ± 0.23 | 1.80 |
+| 20 | 0.03142 | −0.00147 ± 0.00030 | 2.50 ± 0.52 | 1.87 |
+| 24 | 0.02182 | −0.00115 ± 0.00036 | 2.81 ± 0.89 | 1.91 |
+| 28 | 0.01603 | −0.00075 ± 0.00034 | 2.49 ± 1.13 | 1.94 |
+| 32 | 0.01227 | −0.00047 ± 0.00015 | 2.03 ± 0.63 | 1.95 |
+| 36 | 0.00970 | −0.00040 ± 0.00016 | 2.22 ± 0.86 | 1.96 |
+| 40 | 0.00785 | −0.00033 ± 0.00017 | 2.26 ± 1.16 | 1.97 |
+| 48 | 0.00545 | −0.00025 ± 0.00019 | 2.43 ± 1.83 | 1.98 |
+| 64 | 0.00307 | −0.00018 ± 0.00021 | 3.22 ± 3.64 | 1.99 |
+| 80 | 0.00196 | −0.00017 ± 0.00022 | 4.59 ± 5.91 | 1.99 |
+
+(κ over [0, 300]; the error bar is the larger of the weighted-vs-unweighted
+phase-fit difference and the fit's standard error. s = share of the beam's power
+in its box-wide transverse component.)
+
+1. **The box-size dependence is static in origin.** It is present from t = 0 —
+   κ(L = 16) over [0, 150] and over [0, 300] are both −0.00204 — and it is a clean
+   A² coefficient (−0.00201 / −0.00202 / −0.00204 at A = 0.10 / 0.20 / 0.30, flat
+   to 1%). **The prediction of a dynamic origin failed.** A slow secondary energy
+   transfer into the measured wave is also present, riding on top and not the
+   cause: its amplitude grows up to 11% (L = 16, T = 1200) and κ drifts ~10% over
+   long runs (−0.00204 at T = 300 → −0.00184 at T = 1200), while the plane-wave
+   control stays put (−0.01869 early, −0.01874 late). `kappa_side_gpu.py`.
+2. **κ_box = κ_pw × fill × F**, with F rising from 1.23 ± 0.03 at L = 8 toward
+   about 2. The cross-versus-self model **F = 2 − s** (the box-wide component is
+   shifted by itself with weight 1 and by the beam's sideways components with
+   weight 2; nothing fitted) is consistent within error — within two error bars,
+   largest 1.8σ at L = 16 — at every L ≥ 12, though all eleven of those points
+   lie above it. It is **9% high at L = 8** (1.35 against 1.23 ± 0.03). Deriving
+   the exact cross factor for this lattice is the one refinement left.
+   **What failed earlier still stands as failed:** dilution alone (F = 1, κ ∝
+   fill — the measured F is 1.2–2.8) and dilution by transverse spreading during
+   the run (the origin is static; and, as `kappa_side_gpu.py` notes, spreading
+   alone cannot change the box average, since total energy is conserved). **What fits is a fixed dilution with factor
+   F = 2 − s.**
+3. **κ goes to zero as the box grows, keeping its sign.** Every measured value is
+   negative. From L = 64 it cannot be distinguished from zero by this method
+   (−0.00018 ± 0.00021 at 64, −0.00017 ± 0.00022 at 80); nothing suggests a sign
+   change.
+4. **No oscillation in F is resolved.** Every departure from its neighbours is
+   within its error bar — e.g. +13% ± 32% at L = 24, −14% ± 31% at L = 32. The
+   "oscillation" and "does not settle" readings of `kappa_boxscan_gpu.py`, which
+   has no error bars, are withdrawn; so is the steepening noted above (≈ side⁻³
+   from 24 to 32), which is inside the error bars.
+5. **Only the plane-wave κ = −0.0187 is a real coefficient.** A localised beam's
+   box-averaged κ has no box-independent value. **A localised-beam κ quoted
+   without a box size is not a property of the beam.** The w = 3 value and the
+   geometry table remain **unverified**; by this result, even re-measured they
+   would describe a beam in a particular box.
+
+*Provenance of the outputs:* the three `_colab_output.txt` files are annotated
+transcripts, not raw output. Each opens with a note; the verdicts printed by the
+first versions of `kappa_side_gpu.py` ("DYNAMIC") and `kappa_boxscan_gpu.py`
+(Q1 "NO BUMP", Q2 "DOES NOT SETTLE") were wrong and were corrected afterwards,
+and the scripts saved here carry the corrected reading code — re-running them
+prints different verdict text over the same tables. The extended output's
+validation and Q2 lines are condensed from the per-size lines the script
+prints. The tables are the result.
 
 **P-1 — what was found** (annotated in `shape_zero_predictions_v1.md`):
 

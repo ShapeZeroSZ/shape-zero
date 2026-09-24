@@ -1,0 +1,61 @@
+kappa_extended_gpu.py -- run 2026-09-24, Google Colab, Tesla T4, PyTorch float64
+
+This run CLOSES the kappa(w, side) item. Summary (the table below is the result):
+ - Every departure of kappa/(kappa_pw*fill) from its neighbours is WITHIN ITS
+   ERROR BAR (e.g. +13% +- 32% at L = 24, -14% +- 31% at L = 32). The
+   "oscillation" read from kappa_boxscan_gpu.py -- which had no error bars --
+   is withdrawn.
+ - From L = 64, kappa cannot be distinguished from zero by this method
+   (-0.00018 +- 0.00021, -0.00017 +- 0.00022). Every measured value is negative;
+   nothing suggests a sign change. kappa -> 0 as the box grows: an isolated
+   beam's box-averaged kappa is zero.
+ - The cross-versus-self model F = 2 - s (nothing fitted) matches within about
+   two error bars at every L >= 12; at L = 8 the measurement (1.23 +- 0.03) is
+   9% below the model (1.35). Deriving the exact cross factor for this lattice
+   is the one refinement left.
+
+==============================================================================
+KAPPA TO LARGE BOXES -- where is zero, and is the wobble real?
+==============================================================================
+  backend: PyTorch float64 on Tesla T4
+
+Runs (T = 300):
+    plane wave side  8       35 s   drift 5.4e-09
+    localised  side  8       35 s   drift 1.2e-09
+    localised  side 12       35 s   drift 5.3e-10
+    localised  side 16       35 s   drift 2.9e-10
+    localised  side 20       35 s   drift 1.9e-10
+    localised  side 24       35 s   drift 1.3e-10
+    localised  side 28       35 s   drift 9.5e-11
+    localised  side 32       35 s   drift 7.3e-11
+    localised  side 36       39 s   drift 5.8e-11
+    localised  side 40       63 s   drift 4.7e-11
+    localised  side 48      129 s   drift 3.2e-11
+    localised  side 64      317 s   drift 1.8e-11
+    localised  side 80      615 s   drift 1.2e-11
+
+VALIDATION -- [0,300] must reproduce the known values
+  plane wave  kappa -0.01869  (ref -0.01869)   PASS
+  L =  8 .. 48: all ten known values reproduced exactly   PASS
+  energy drift worst 5.4e-09   PASS
+
+THE TABLE -- ratio = kappa / (kappa_pw * fill); err is its error bar
+   L      fill      kappa[0,300]      ratio[0,300]     ratio[0,150]   resid
+    8   0.19387   -0.00447+-0.00011    1.23 +- 0.03      1.28 +- 0.05   0.003
+   12   0.08726   -0.00289+-0.00014    1.77 +- 0.08      1.78 +- 0.23   0.004
+   16   0.04909   -0.00204+-0.00021    2.22 +- 0.23      2.22 +- 0.71   0.006
+   20   0.03142   -0.00147+-0.00030    2.50 +- 0.52      2.06 +- 1.10   0.009
+   24   0.02182   -0.00115+-0.00036    2.81 +- 0.89      1.89 +- 1.04   0.011
+   28   0.01603   -0.00075+-0.00034    2.49 +- 1.13      2.13 +- 1.62   0.010
+   32   0.01227   -0.00047+-0.00015    2.03 +- 0.63      2.35 +- 2.36   0.004
+   36   0.00970   -0.00040+-0.00016    2.22 +- 0.86      2.72 +- 3.17   0.005
+   40   0.00785   -0.00033+-0.00017    2.26 +- 1.16      3.21 +- 4.05   0.005
+   48   0.00545   -0.00025+-0.00019    2.43 +- 1.83      4.45 +- 6.00   0.006
+   64   0.00307   -0.00018+-0.00021    3.22 +- 3.64      7.84 +- 10.74  0.006  new
+   80   0.00196   -0.00017+-0.00022    4.59 +- 5.91     12.26 +- 16.77  0.007  new
+
+FACTS (as printed)
+  Q1  L = 64: ratio 3.22 +- 3.64; NOT clear of zero by 3 error bars
+      L = 80: ratio 4.59 +- 5.91; NOT clear of zero by 3 error bars
+  Q2  every departure within error (largest: L = 24 +13% vs 32%, L = 32 -14% vs 31%)
+  Q3  resolved peaks/troughs: none in [0,150], none in [0,300]

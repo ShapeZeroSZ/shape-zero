@@ -1,0 +1,61 @@
+kappa_boxscan_gpu.py -- first run, 2026-09-24, Google Colab, Tesla T4, PyTorch float64
+
+NOTE ON THE PRINTED READING -- TWICE CORRECTED. This run's Q1 tested only side
+24 against a fixed 15% threshold and printed "NO BUMP". A later revision read
+the ratio column as an OSCILLATION (peak at L = 24, trough at L = 32) and
+reported "NOT SMOOTH". THAT WAS ALSO WRONG: neither version had error bars.
+kappa_extended_gpu.py measured them -- the +13% at 24 carries +-32%, the -14%
+at 32 carries +-31% -- and every departure at every size is WITHIN ERROR. There
+is no resolved oscillation. Q2 ("does not settle") is likewise unresolved at
+large L, where the error bars grow past 30%.
+
+What is settled: kappa for the box-averaged readout of a localised beam heads to
+zero as the box grows, keeping its sign; kappa/(kappa_pw*fill) rises from 1.23
+at L = 8 toward about 2 -- consistent within error with the cross-versus-self
+model 2 - s at every L >= 12. See kappa_extended_gpu_colab_output.txt.
+
+==============================================================================
+KAPPA vs BOX SIZE -- the shape of the curve
+==============================================================================
+  backend: PyTorch float64 on Tesla T4
+  prediction, stated before running: kappa/(kappa_pw*fill) SETTLES at large L
+
+Runs (T = 300):
+    plane wave side  8      36 s   kappa -0.01869   lin ratio 0.999993   resid 0.005   drift 5.4e-09
+    localised  side  8      36 s   kappa -0.00447   lin ratio 0.999998   resid 0.003   drift 1.2e-09
+    localised  side 12      36 s   kappa -0.00289   lin ratio 0.999999   resid 0.004   drift 5.3e-10
+    localised  side 16      36 s   kappa -0.00204   lin ratio 0.999999   resid 0.006   drift 2.9e-10
+    localised  side 20      36 s   kappa -0.00147   lin ratio 0.999999   resid 0.009   drift 1.9e-10
+    localised  side 24      36 s   kappa -0.00115   lin ratio 1.000000   resid 0.011   drift 1.3e-10
+    localised  side 28      37 s   kappa -0.00075   lin ratio 1.000000   resid 0.010   drift 9.5e-11
+    localised  side 32      36 s   kappa -0.00047   lin ratio 1.000000   resid 0.004   drift 7.3e-11
+    localised  side 36      39 s   kappa -0.00040   lin ratio 1.000000   resid 0.005   drift 5.8e-11
+    localised  side 40      63 s   kappa -0.00033   lin ratio 1.000000   resid 0.005   drift 4.7e-11
+    localised  side 48     129 s   kappa -0.00025   lin ratio 1.000000   resid 0.006   drift 3.2e-11
+
+VALIDATION
+  plane wave     kappa -0.01869  (ref -0.01869)   PASS
+  L =  8         kappa -0.00447  (ref -0.00447)   PASS
+  L = 12         kappa -0.00289  (ref -0.00289)   PASS
+  L = 16         kappa -0.00204  (ref -0.00204)   PASS
+  L = 24         kappa -0.00115  (ref -0.00115)   PASS  <- first independent re-measurement
+  L = 32         kappa -0.00047  (ref -0.00047)   PASS
+  energy drift   worst 5.4e-09   PASS
+
+THE CURVE
+   L    fill     s     measured    model      meas/model   meas/(kpw*fill)
+    8  0.1939  0.648   -0.00447   -0.00490      0.91         1.23
+   12  0.0873  0.345   -0.00289   -0.00270      1.07         1.77
+   16  0.0491  0.196   -0.00204   -0.00165      1.23         2.22
+   20  0.0314  0.126   -0.00147   -0.00110      1.33         2.50  new
+   24  0.0218  0.087   -0.00115   -0.00078      1.47         2.81
+   28  0.0160  0.064   -0.00075   -0.00058      1.29         2.50  new
+   32  0.0123  0.049   -0.00047   -0.00045      1.04         2.03
+   36  0.0097  0.039   -0.00040   -0.00036      1.13         2.22  new
+   40  0.0079  0.031   -0.00033   -0.00029      1.15         2.26  new
+   48  0.0055  0.022   -0.00025   -0.00020      1.23         2.43  new
+
+READING (as printed by the first version -- see the note at the top)
+  Q1  side 24 vs its neighbours: 2.81 against 2.50 (+13%) -> NO BUMP
+  Q2  kappa/(kappa_pw*fill) at L = 36, 40, 48: 2.22, 2.26, 2.43 (spread 9%)
+      -> DOES NOT SETTLE. Prediction FAILED.

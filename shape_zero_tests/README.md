@@ -178,6 +178,19 @@ RETRACTED values). Each run ~32 min wall on 4 cores. Reported: plane-wave
 κ = −0.01869 (swapped: +0.07994); localised κ −0.00447 → −0.00047 over side
 8–32, no side-independent limit (PROVENANCE §6o).
 
+### 11. κ(w = 2) against box size, GPU (Colab, Tesla T4, PyTorch float64)
+`kappa_side_gpu.py` → `kappa_side_gpu_colab_output.txt` (static vs dynamic origin);
+`kappa_boxscan_gpu.py` → `kappa_boxscan_gpu_colab_output.txt` (L = 8–48);
+`kappa_extended_gpu.py` → `kappa_extended_gpu_colab_output.txt` (L = 8–80, error bars).
+
+Self-contained; PyTorch on a GPU if present, otherwise NumPy (slow). Physics,
+seed and readout as section 10; RK4 dt = 0.01. The output files are annotated
+transcripts (a note at the top of each): two printed verdicts were corrected
+after the runs and the saved scripts carry the corrected reading code, so
+re-running prints different verdict text over the same tables. Re-checked on
+CPU with `kappa_extended_gpu.py` at L = 20–32: identical. Result: κ(w = 2, side)
+CLOSED (PROVENANCE §6o).
+
 ## Helpers
 
 - `j_compat_test.py` — shared machinery: `KLattice` (stiffness K as a parameter),
