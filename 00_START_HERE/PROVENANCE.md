@@ -470,7 +470,11 @@ independently rather than relying on the description, and noted that the
 source the mission cites was not public at the time of review — so the approval
 rests on the mathematics as stated in the mission, not on that source. The cited
 source is the C1 Formal Proofs, `01_source/proofs/ShapeZero_C1_Formal_Proofs.pdf`,
-§3: the mission draft cites its Definition 3.5 and Theorems 3.3 and 3.6. Drafting
+§3: the mission draft cites its Definition 3.5 and Theorems 3.3 and 3.6. All
+three were verified against the PDF by text extraction (2026-09-24): Definition
+3.5 ("A role colouring of an STS(n) is an assignment, to each line, of a
+bijection…"), Theorem 3.3 ("Reduction to Fano") and Theorem 3.6 ("Roles Force
+Fano"). Drafting
 this mission is also where the two §3 corrections were found (Theorem 3.3,
 condition (a), and Theorem 3.6): `01_source/proofs/ERRATUM_Theorem_6.1.md`.
 
