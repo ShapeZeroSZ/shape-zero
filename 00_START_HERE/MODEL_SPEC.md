@@ -1128,21 +1128,66 @@ direction's own root, the same integrator and estimator give
 — the asymmetry **magnitude shrinks** with amplitude, |Δ/Δ₀| = 0.998339,
 0.998316, 0.998390, 0.998316 at β = 0.02, 0.05, 0.10, 0.20. This agrees with
 second-order PT (−0.0175, from the +0.0349 βA² term in `phi_gauge_delta.py`) and
-was confirmed with separate code. **Scripts:** `pinned_asymmetry_reference.py`
+was confirmed with separate code, by `joint3_kappa_stiffness.py`, and — a fourth
+independent confirmation — by the plane-wave control of `kappa_readout_test.py`
+(−0.01869; see κ(w = 2, side) below). **Scripts:** `pinned_asymmetry_reference.py`
 (fixed), `model.py` gate 6 (now signed). **Unaffected:** the linear pinned
 asymmetry Δω = −2cβ sin k (reproduced to 10⁻⁵ before and after the fix) and the
 Lean missions (Prove2Me 2, 3, 4a, 4b), which are linear-order and contain no κ.
 Trail: `PROVENANCE.md` §6o. The original text follows, kept as the record.
 
-**⚠ κ = 0.0799 IS THE PLANE-WAVE / 1-D VALUE ONLY.** [RETRACTED value — see
-above; the κ(w, side) figures in this paragraph were measured with the swapped
-seeding and are **UNVERIFIED pending re-measurement**.] For a transversely
+**⚠ κ = 0.0799 IS THE PLANE-WAVE / 1-D VALUE ONLY.** [RETRACTED values — the
+κ(w, side) figures in this paragraph were measured with the swapped seeding;
+κ(w = 2, side) is re-measured below and is **measured and open**.] For a transversely
 localised beam κ is smaller and depends on the transverse **domain** as well as
 the beam width — measured κ(w=2) falls 0.0177 → 0.0019 from side 8 to 32 and
 does **not** converge. Readout dilution, fill-fraction scaling and A²
 normalisation were each tested and ruled out; the mechanism is unresolved.
 **There is no publishable κ(w).** Quote 0.0799 for a plane-wave or 1-D beam;
 measure per profile otherwise.
+
+**κ(w = 2, side) re-measured (2026-09-24) — measured and open.** `shape_zero_tests/kappa_readout_test.py` (β = 0.05, A = 0.30, q = 3, transverse
+width w = 2, periodic BC, T = 300, uniform transverse readout). Its gyro term is
+the reference convention, but it had seeded +k with the lower root — the §6o
+swap — and one carrier frequency for every transverse component. It now builds
+the initial velocity in Fourier space, each wavevector at its own branch
+frequency (counter-propagating content 10⁻¹⁶; one carrier at the right root
+still leaves 1.8–2.2%, the swap 4.0%). Outputs: `kappa_readout_test_output.txt`
+(fixed) and `kappa_readout_test_swapped.txt` (`--swapped-seed`, the original run).
+
+| side | 8 | 12 | 16 | 24 | 32 |
+|---|---|---|---|---|---|
+| transverse fill fraction | 0.194 | 0.087 | 0.049 | 0.022 | 0.012 |
+| **κ, own-branch seed** | **−0.00447** | **−0.00289** | **−0.00204** | **−0.00115** | **−0.00047** |
+| κ / κ(plane wave, −0.01869) | 0.239 | 0.155 | 0.109 | 0.062 | 0.025 |
+| that ratio / fill fraction | 1.23 | 1.77 | 2.22 | 2.82 | 2.05 |
+| κ, swapped seed, re-run — RETRACTED | +0.01772 | +0.01128 | +0.00801 | +0.00457 | +0.00185 |
+| κ, swapped seed, as quoted in the script's docstring — RETRACTED | 0.0175 | 0.0113 | 0.0082 | **0.0027** (does not reproduce) | 0.0018 |
+
+- **Plane-wave control: κ = −0.01869** (linear ratio 0.999993) at every side and
+  readout — the **fourth independent confirmation** of the corrected value, after
+  the fixed `pinned_asymmetry_reference.py`, the separate-code check, and
+  `joint3_kappa_stiffness.py`. (Swapped seed: +0.07994, the retracted value.) It
+  cannot test the readouts: a transverse-uniform wave is the 1D problem at every
+  side.
+- **Linear pinning holds** at 0.999997–1.000000 for every side and readout.
+- **κ still has no side-independent limit.** It falls tenfold from side 8 to 32
+  and steepens at the end (≈ side⁻³ from 24 to 32). **No κ(w) is published.**
+- **Mechanism unresolved.** It is **not seeding**: new/old is −0.25 at every side
+  to 1%, so the fix changed κ's sign and scale but not its side-dependence. It
+  is **not readout**: the uniform readout is clean (phase residual 0.003–0.011);
+  the weighted and centre readouts are invalid as frequency readouts (residual
+  0.5–3.5 rad) and show the same trend. It is **not proportional to fill
+  fraction** — predicted before the run (transverse spreading dilutes the
+  amplitude driving the shift) and **failed**: |κ|/(|κ_pw|·fill) runs 1.23 →
+  2.82, not constant.
+- **The original docstring's 0.0027 at side 24 does not reproduce**: the
+  original script, re-run as supplied, gives +0.00457. The other four sides
+  agree with it to ~2%.
+
+Status: κ(w = 2, side) is **measured and open**. The other transverse widths
+(w = 3, the geometry table) were measured with `pinned_asymmetry_reference.py`'s
+single-carrier seed and remain **unverified**.
 
 **The PINNING is width-independent at every configuration tested** — that is the
 invariance the experiment rests on, and it is unaffected.
@@ -1646,6 +1691,6 @@ second route) · the q = 3 gate port · the spatial arrival model (optional,
 **Retracted this session:** ℏ = (μℓ_f²/T)/4 (generator normalisation is not a
 metric scale) · the 1-D Bloch map failing at q = 3 (tube clipping) · G being
 dimensionally impossible (hand arithmetic) · κ(w) as a publishable formula
-(depends on the transverse domain, not just the beam) [the κ(w, side)
-investigation used the swapped seeding retracted in §5 — UNVERIFIED pending
-re-measurement]
+(depends on the transverse domain, not just the beam) [κ(w = 2, side) re-measured
+with own-branch seeding: still no side-independent limit, mechanism unresolved —
+measured and open, §5]

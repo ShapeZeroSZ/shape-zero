@@ -166,6 +166,18 @@ rejected at −6 sites and failed to clear in a direct run). The slab is kept at
 with transverse term Qt = 0.074 (12 × 12: 0.102); at 6 × 6 the contrast falls to
 7×, approaching the transverse-uniform trap in which q = 3 reduces to q = 1.
 
+### 10. κ(w = 2, side) at q = 3 (self-contained; does not import `model.py`)
+`kappa_readout_test.py` → `kappa_readout_test_output.txt`;
+`kappa_readout_test.py --swapped-seed` → `kappa_readout_test_swapped.txt`
+
+β = 0.05, A = 0.30 (linear check A = 0.02), transverse width 2, periodic BC,
+T = 300, DOP853 rtol 10⁻⁹, sides 8–32, three readouts, plane-wave control.
+Default seed: Fourier space, each wavevector at its own branch frequency.
+`--swapped-seed` reproduces the original run (+k at the lower root, one carrier;
+RETRACTED values). Each run ~32 min wall on 4 cores. Reported: plane-wave
+κ = −0.01869 (swapped: +0.07994); localised κ −0.00447 → −0.00047 over side
+8–32, no side-independent limit (PROVENANCE §6o).
+
 ## Helpers
 
 - `j_compat_test.py` — shared machinery: `KLattice` (stiffness K as a parameter),

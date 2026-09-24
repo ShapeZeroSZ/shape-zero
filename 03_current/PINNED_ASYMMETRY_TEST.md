@@ -132,7 +132,8 @@ over A = 0.05–0.20 and six β, emits δ = +0.0357·β (retracted: −0.0598·�
 > document is built on — and the Lean missions (Prove2Me 2, 3, 4a, 4b), which are
 > linear-order. The β-collapse also survives (β-independent to 3×10⁻⁴).
 > **Unverified pending re-measurement:** the geometry table and κ(w, side) values,
-> measured with the swapped seeding. **κ versus stiffness is re-measured:** the
+> measured with the swapped seeding. [κ(w = 2, side) since re-measured — **measured
+> and open**, table below the geometry table; the geometry table stays unverified.] **κ versus stiffness is re-measured:** the
 > retracted 0.0959 / 0.0799 / 0.0677 become **−0.0214 / −0.0187 / −0.0165** at
 > stiffness 0.90 / 1.00 / 1.10 (`shape_zero_tests/joint3_kappa_stiffness.py`), with
 > the linear ratio at 0.99999 throughout — the pin is protected, κ is not. The earlier §3b table (−0.003046 at β = 0.05, from
@@ -154,7 +155,51 @@ note above.]
 all cases, and *that* is the invariance the experiment tests. **The A² correction
 does not**: κ falls with transverse extent and depends on the beam profile,
 because the correction comes from the packet's self-interaction and a
-transversely-spreading packet dilutes the amplitude driving it.
+transversely-spreading packet dilutes the amplitude driving it. [That mechanism
+was tested and failed: κ is not proportional to fill fraction — see below.]
+
+**κ(w = 2, side) re-measured (2026-09-24) — measured and open.** `shape_zero_tests/kappa_readout_test.py` (β = 0.05, A = 0.30, q = 3, transverse
+width w = 2, periodic BC, T = 300, uniform transverse readout). Its gyro term is
+the reference convention, but it had seeded +k with the lower root — the §6o
+swap — and one carrier frequency for every transverse component. It now builds
+the initial velocity in Fourier space, each wavevector at its own branch
+frequency (counter-propagating content 10⁻¹⁶; one carrier at the right root
+still leaves 1.8–2.2%, the swap 4.0%). Outputs: `kappa_readout_test_output.txt`
+(fixed) and `kappa_readout_test_swapped.txt` (`--swapped-seed`, the original run).
+
+| side | 8 | 12 | 16 | 24 | 32 |
+|---|---|---|---|---|---|
+| transverse fill fraction | 0.194 | 0.087 | 0.049 | 0.022 | 0.012 |
+| **κ, own-branch seed** | **−0.00447** | **−0.00289** | **−0.00204** | **−0.00115** | **−0.00047** |
+| κ / κ(plane wave, −0.01869) | 0.239 | 0.155 | 0.109 | 0.062 | 0.025 |
+| that ratio / fill fraction | 1.23 | 1.77 | 2.22 | 2.82 | 2.05 |
+| κ, swapped seed, re-run — RETRACTED | +0.01772 | +0.01128 | +0.00801 | +0.00457 | +0.00185 |
+| κ, swapped seed, as quoted in the script's docstring — RETRACTED | 0.0175 | 0.0113 | 0.0082 | **0.0027** (does not reproduce) | 0.0018 |
+
+- **Plane-wave control: κ = −0.01869** (linear ratio 0.999993) at every side and
+  readout — the **fourth independent confirmation** of the corrected value, after
+  the fixed `pinned_asymmetry_reference.py`, the separate-code check, and
+  `joint3_kappa_stiffness.py`. (Swapped seed: +0.07994, the retracted value.) It
+  cannot test the readouts: a transverse-uniform wave is the 1D problem at every
+  side.
+- **Linear pinning holds** at 0.999997–1.000000 for every side and readout.
+- **κ still has no side-independent limit.** It falls tenfold from side 8 to 32
+  and steepens at the end (≈ side⁻³ from 24 to 32). **No κ(w) is published.**
+- **Mechanism unresolved.** It is **not seeding**: new/old is −0.25 at every side
+  to 1%, so the fix changed κ's sign and scale but not its side-dependence. It
+  is **not readout**: the uniform readout is clean (phase residual 0.003–0.011);
+  the weighted and centre readouts are invalid as frequency readouts (residual
+  0.5–3.5 rad) and show the same trend. It is **not proportional to fill
+  fraction** — predicted before the run (transverse spreading dilutes the
+  amplitude driving the shift) and **failed**: |κ|/(|κ_pw|·fill) runs 1.23 →
+  2.82, not constant.
+- **The original docstring's 0.0027 at side 24 does not reproduce**: the
+  original script, re-run as supplied, gives +0.00457. The other four sides
+  agree with it to ~2%.
+
+Status: κ(w = 2, side) is **measured and open**. The other transverse widths
+(w = 3, the geometry table) were measured with `pinned_asymmetry_reference.py`'s
+single-carrier seed and remain **unverified**.
 
 **κ = 0.0799 is the plane-wave value AT UNIT ON-SITE STIFFNESS.** It changes with
 transverse geometry **and** with base stiffness — measured κ = 0.0959, 0.0799,

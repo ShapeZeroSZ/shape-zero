@@ -1,0 +1,78 @@
+==============================================================================
+KAPPA READOUT TEST — is the side-dependence an artifact?
+==============================================================================
+  theory linear asymmetry |d| = 0.100000
+  transverse width w = 2.0, periodic BC, T = 300.0
+  seed: ORIGINAL, swapped roots, one carrier -- RETRACTED numbers
+
+T1  TRANSVERSE FILL FRACTION (what H1 says drives the damage)
+     side   fill fraction   (packet power / uniform power)
+        8   0.19387
+       12   0.08726
+       16   0.04909
+       24   0.02182
+       32   0.01227
+
+==============================================================================
+LOCALISED PACKET
+==============================================================================
+     side   readout     |d|/|th| (A=0.02)   kappa (A=0.30)   resid
+        8   uniform     1.000009          +0.01772      0.019
+        8   weighted    1.000026          +0.01791      0.577
+        8   centre      0.999996          +0.02599      1.456
+
+       12   uniform     1.000007          +0.01128      0.019
+       12   weighted    1.000012          +0.01422      0.555
+       12   centre      0.999811          +0.01918      1.824
+
+       16   uniform     1.000006          +0.00801      0.019
+       16   weighted    1.000004          +0.01034      1.321
+       16   centre      0.999987          +0.01009      2.372
+
+       24   uniform     1.000004          +0.00457      0.021
+       24   weighted    1.000024          +0.00672      3.528
+       24   centre      1.000072          +0.00765      3.521
+
+       32   uniform     1.000003          +0.00185      0.019
+       32   weighted    1.000023          +0.00265      0.963
+       32   centre      1.000047          +0.00311      1.030
+
+
+==============================================================================
+PLANE-WAVE CONTROL
+==============================================================================
+     side   readout     |d|/|th| (A=0.02)   kappa (A=0.30)   resid
+        8   uniform     1.000033          +0.07994      0.019
+        8   weighted    1.000033          +0.07994      0.019
+        8   centre      1.000033          +0.07994      0.019
+
+       12   uniform     1.000033          +0.07994      0.019
+       12   weighted    1.000033          +0.07994      0.019
+       12   centre      1.000033          +0.07994      0.019
+
+       16   uniform     1.000033          +0.07994      0.019
+       16   weighted    1.000033          +0.07994      0.019
+       16   centre      1.000033          +0.07994      0.019
+
+       24   uniform     1.000033          +0.07994      0.019
+       24   weighted    1.000033          +0.07994      0.019
+       24   centre      1.000033          +0.07994      0.019
+
+       32   uniform     1.000033          +0.07994      0.019
+       32   weighted    1.000033          +0.07994      0.019
+       32   centre      1.000033          +0.07994      0.019
+
+
+==============================================================================
+HOW TO READ IT
+==============================================================================
+  * plane-wave kappa must be ~-0.018 for a readout to be valid
+    (pinned_asymmetry_reference.py: -0.0184 +/- 0.00033).
+    a readout that breaks the plane wave is wrong; ignore its rows.
+  * if 'weighted' and 'centre' are FLAT across side while 'uniform'
+    falls  ->  H1 CONFIRMED, readout artifact. Fix the readout and
+    re-measure kappa(w). The kappa(w) formula must not be published.
+  * if all three fall together  ->  H2, the side-dependence is
+    physical; the question becomes what sets the isolated-beam limit.
+  * pinning |d|/|th| must be 1.000 +- 0.001 everywhere. If it breaks,
+    something more basic is wrong and kappa is moot.
