@@ -3,7 +3,8 @@
 q3_gate.py — q = 3 ordering gate: u(2) and u(3), clearing readout,
 spectrum-averaged prediction.
 
-Runs on the working model.py in this folder. Eight evolutions (u(2) and u(3):
+Runs on the working model.py, 04_scripts/session/model.py (found relative to
+this file, so it runs from any directory). Eight evolutions (u(2) and u(3):
 AB, BA, and the two Abelian-floor orders) on an L0 x S x S slab with a full
 transverse gauge slab (MODEL_SPEC 4d), a width-3 isotropic packet at x0 = 30,
 k0 = pi/2, and segments at 50 and 70. Each run is read out only when every
@@ -36,7 +37,9 @@ import numpy as np
 from multiprocessing import Pool
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-sys.path.insert(0, HERE)                     # the WORKING model.py in this folder
+# the WORKING model.py -- the single copy, in 04_scripts/session/
+MODEL = os.path.join(HERE, "..", "04_scripts", "session")
+sys.path.insert(0, MODEL)
 import model as M
 
 WIDTH, X0, SEGS = 3.0, 30, (50, 70)

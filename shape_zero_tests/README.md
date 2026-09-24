@@ -6,8 +6,12 @@ produced by the script named next to it, with the settings listed.
 
 ## Running
 
-Everything runs from this folder alone. Run scripts from inside
-`shape_zero_tests/` (several read their results files by relative path):
+Everything runs from this repository. Run scripts from inside
+`shape_zero_tests/` (several read their results files by relative path). The
+pinned scripts use the hash-pinned copies in `model_versions/` below;
+`q3_gate.py` uses the single working `model.py`, `04_scripts/session/model.py`,
+which it finds relative to its own location. There is no `model.py` in this
+folder.
 
     cd shape_zero_tests
     python3 <script> [args]
@@ -139,9 +143,14 @@ Reported: errors 2.70° → 0.11° (single), 5.09° → 0.04° (u(2) split),
 `q3_gate.py` → `q3_gate_runs_<L0>x<S>.json` (runs) and
 `q3_gate_result_<L0>x<S>_<predictor>.json` (verdict)
 
-Runs on the **working** `model.py` in this folder (archive 948b09e8 plus a note
-in `run_until_exit` that at q = 3 its certificate fires with ~98% of the packet
-still in the windows; the pinned copies are untouched). Eight evolutions
+Runs on the **working** `model.py`, `04_scripts/session/model.py` — the single
+working copy, loaded by a path relative to `q3_gate.py` (`../04_scripts/session/`),
+so the script runs from any directory. (It formerly ran on a duplicate kept in
+this folder — archive 948b09e8 plus a note in `run_until_exit` that at q = 3 its
+certificate fires with ~98% of the packet still in the windows; that note now
+lives in the working copy, and the duplicate is removed. The pinned copies are
+untouched.) Re-scoring the saved runs on the working copy reproduces both result
+files exactly, for both lattices and both predictors. Eight evolutions
 (u(2), u(3): AB, BA, two Abelian-floor orders), same packet, segments and
 strengths as section 7, clearing readout, spectrum-averaged prediction.
 

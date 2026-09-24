@@ -505,6 +505,16 @@ def run_until_exit(lat, u, v, seg_start, W, Wm, T_max=200.0, dT=2.0):
     resulting ~1 deg Abelian floor is exactly 0 under a clearing readout. The correct certificate is the WEIGHT
     remaining in the segment window falling below ~1e-6. Use `cleared` here as a
     necessary condition only, and check segment-window weight before reading out.
+
+    AT q = 3 IT FIRES FAR TOO EARLY (measured, shape_zero_tests/q3_readout.py,
+    320 x 12 x 12 slab, width-3 packet, segments at 50 and 70): the centroid
+    passes seg_end + 2 at t ~ 116 with ~98% of the packet weight still inside
+    the segment windows [start - 10, start + len(RAMP) + 10); the 1e-6 weight
+    certificate is not met until t ~ 340. Read out at this point, the Abelian
+    floor is ~1 deg (0.000 deg once cleared), and the split's apparent agreement
+    with the single-wavenumber product (2.4 / 0.06 deg) is a coincidence of the
+    mid-exit readout. The q = 3 ordering gate (shape_zero_tests/q3_gate.py)
+    reads out on the window-weight certificate instead.
     """
     side = lat.shape[0] if lat.q > 1 else lat.N
     seg_end = seg_start + len(RAMP)
@@ -637,6 +647,8 @@ def main():
 
     # ---- 7 u(2) and u(3) ordering --------------------------------------
     # ---- 7 ordering: CONTROL-SUBTRACTED criterion (MODEL_SPEC sec 4d) ----
+    # q = 3 counterpart: shape_zero_tests/q3_gate.py (too slow for main();
+    # clearing readout, spectrum-averaged prediction).
     # The unitary product is NOT the pass object. Applying U2 to the MEASURED
     # mid-state gives 3.7/5.9 deg, WORSE than the plain product's 3.1/3.2 --
     # global composition of internal unitaries is the wrong object once the

@@ -972,7 +972,7 @@
   },
   {
    "file": "./shape_zero_tests/README.md",
-   "line": 36,
+   "line": 40,
    "section": "Pinned model versions",
    "text": "`kscan.py check` reproduces its instrument-check values (\u03c0/2 ratio 0.0883). Common model settings throughout: c = 1, \u03ba = 0.5, DT = 0.02,",
    "numbers": [
@@ -983,7 +983,7 @@
   },
   {
    "file": "./shape_zero_tests/README.md",
-   "line": 37,
+   "line": 41,
    "section": "Pinned model versions",
    "text": "packet amplitude 10\u207b\u00b3, colour-0 packet, RK4 integrator from `model.py`.",
    "numbers": [
@@ -993,7 +993,7 @@
   },
   {
    "file": "./shape_zero_tests/README.md",
-   "line": 43,
+   "line": 47,
    "section": "Two readouts",
    "text": "the packet is still inside the segment at q = 1 (98% at q = 3 under the",
    "numbers": [
@@ -1003,7 +1003,7 @@
   },
   {
    "file": "./shape_zero_tests/README.md",
-   "line": 46,
+   "line": 50,
    "section": "Two readouts",
    "text": "read out only once every segment window `[start \u2212 10, start + ramp + 10)` holds",
    "numbers": [
@@ -1014,7 +1014,7 @@
   },
   {
    "file": "./shape_zero_tests/README.md",
-   "line": 47,
+   "line": 51,
    "section": "Two readouts",
    "text": "less than 10\u207b\u2076 of the packet weight. Results in sections 4\u20138 use it.",
    "numbers": [
@@ -1024,7 +1024,7 @@
   },
   {
    "file": "./shape_zero_tests/README.md",
-   "line": 64,
+   "line": 68,
    "section": "1. J-compatibility vs stiffness, k\u2080 = \u03c0/2 (old readout)",
    "text": "n = 2, q = 1, N = 200, packet n0 = 20, width 8, one ramped segment starting at",
    "numbers": [
@@ -1035,7 +1035,7 @@
   },
   {
    "file": "./shape_zero_tests/README.md",
-   "line": 65,
+   "line": 69,
    "section": "1. J-compatibility vs stiffness, k\u2080 = \u03c0/2 (old readout)",
    "text": "site 60 (`RAMP`, length 12), seed 1.",
    "numbers": [
@@ -1046,7 +1046,7 @@
   },
   {
    "file": "./shape_zero_tests/README.md",
-   "line": 66,
+   "line": 70,
    "section": "1. J-compatibility vs stiffness, k\u2080 = \u03c0/2 (old readout)",
    "text": "K \u2208 {\u221a5/4, \u221a5, 4\u221a5, 16\u221a5}, g \u2208 {0.0025, 0.005, 0.01, 0.02, 0.04}.",
    "numbers": [
@@ -1062,7 +1062,7 @@
   },
   {
    "file": "./shape_zero_tests/README.md",
-   "line": 67,
+   "line": 71,
    "section": "1. J-compatibility vs stiffness, k\u2080 = \u03c0/2 (old readout)",
    "text": "Reported: ratio table; model row (K = \u221a5) levels at ~0.076; stiff rows \u221d g.",
    "numbers": [
@@ -1072,7 +1072,7 @@
   },
   {
    "file": "./shape_zero_tests/README.md",
-   "line": 72,
+   "line": 76,
    "section": "2. Robustness and threshold checks (old readout)",
    "text": "Same settings as section 1. Seeds 2 and 3 at K \u2208 {\u221a5, 4\u221a5}, g \u2208 {0.0025, 0.01};",
    "numbers": [
@@ -1083,7 +1083,7 @@
   },
   {
    "file": "./shape_zero_tests/README.md",
-   "line": 78,
+   "line": 82,
    "section": "3. J-compatibility vs wavenumber (old readout)",
    "text": "K = \u221a5, k\u2080 \u2208 {\u03c0/4, 3\u03c0/4}, g \u2208 {0.0025 \u2026 0.04}, seeds 1 (all g) and 2, 3",
    "numbers": [
@@ -1094,7 +1094,7 @@
   },
   {
    "file": "./shape_zero_tests/README.md",
-   "line": 79,
+   "line": 83,
    "section": "3. J-compatibility vs wavenumber (old readout)",
    "text": "(g = 0.0025, 0.01). Geometry as section 1. Check mode reproduces the \u03c0/2,",
    "numbers": [
@@ -1105,7 +1105,7 @@
   },
   {
    "file": "./shape_zero_tests/README.md",
-   "line": 80,
+   "line": 84,
    "section": "3. J-compatibility vs wavenumber (old readout)",
    "text": "g = 0.01 ratio (0.0883) and the Wc rotation at g = 0.03, 0.06.",
    "numbers": [
@@ -1117,7 +1117,7 @@
   },
   {
    "file": "./shape_zero_tests/README.md",
-   "line": 81,
+   "line": 85,
    "section": "3. J-compatibility vs wavenumber (old readout)",
    "text": "Channel threshold k_c \u2248 1.4536 rad (0.4627\u03c0) was computed inline from",
    "numbers": [
@@ -1127,7 +1127,7 @@
   },
   {
    "file": "./shape_zero_tests/README.md",
-   "line": 87,
+   "line": 91,
    "section": "4. \u03c0/4 residual: packet width and ramp length (clearing readout)",
    "text": "k\u2080 = \u03c0/4, K = \u221a5, g \u2208 {0.0025, 0.005}, seed 1. N = 1200, packet n0 = 160,",
    "numbers": [
@@ -1140,7 +1140,7 @@
   },
   {
    "file": "./shape_zero_tests/README.md",
-   "line": 89,
+   "line": 93,
    "section": "4. \u03c0/4 residual: packet width and ramp length (clearing readout)",
    "text": "(L = 12 reproduces `RAMP`). Width scan W \u2208 {8, 16, 32} at L = 12; ramp scan",
    "numbers": [
@@ -1153,7 +1153,7 @@
   },
   {
    "file": "./shape_zero_tests/README.md",
-   "line": 90,
+   "line": 94,
    "section": "4. \u03c0/4 residual: packet width and ramp length (clearing readout)",
    "text": "L \u2208 {12, 24, 48} at W = 8. Clearing threshold 10\u207b\u2076 with a 10% time margin.",
    "numbers": [
@@ -1167,7 +1167,7 @@
   },
   {
    "file": "./shape_zero_tests/README.md",
-   "line": 91,
+   "line": 95,
    "section": "4. \u03c0/4 residual: packet width and ramp length (clearing readout)",
    "text": "Reported: residual \u2248 1\u00d710\u207b\u2075 in every configuration.",
    "numbers": [
@@ -1177,7 +1177,7 @@
   },
   {
    "file": "./shape_zero_tests/README.md",
-   "line": 92,
+   "line": 96,
    "section": "4. \u03c0/4 residual: packet width and ramp length (clearing readout)",
    "text": "`checknew` compares old vs clearing readout at W = 8, L = 12 (residual 0.0105 \u2192 0).",
    "numbers": [
@@ -1188,7 +1188,7 @@
   },
   {
    "file": "./shape_zero_tests/README.md",
-   "line": 93,
+   "line": 97,
    "section": "4. \u03c0/4 residual: packet width and ramp length (clearing readout)",
    "text": "Note: an earlier 720-site check used a previous version of this file; the",
    "numbers": [
@@ -1198,7 +1198,7 @@
   },
   {
    "file": "./shape_zero_tests/README.md",
-   "line": 94,
+   "line": 98,
    "section": "4. \u03c0/4 residual: packet width and ramp length (clearing readout)",
    "text": "current file is the 1200-site version that produced the reported numbers.",
    "numbers": [
@@ -1208,7 +1208,7 @@
   },
   {
    "file": "./shape_zero_tests/README.md",
-   "line": 99,
+   "line": 103,
    "section": "5. Open-channel rows re-measured (clearing readout)",
    "text": "Uses `resid.py`'s geometry and clearing readout: K = \u221a5, W = 8, L = 12,",
    "numbers": [
@@ -1218,7 +1218,7 @@
   },
   {
    "file": "./shape_zero_tests/README.md",
-   "line": 100,
+   "line": 104,
    "section": "5. Open-channel rows re-measured (clearing readout)",
    "text": "g \u2208 {0.0025 \u2026 0.04} seed 1, seeds 2, 3 at g \u2208 {0.0025, 0.01}.",
    "numbers": [
@@ -1231,7 +1231,7 @@
   },
   {
    "file": "./shape_zero_tests/README.md",
-   "line": 101,
+   "line": 105,
    "section": "5. Open-channel rows re-measured (clearing readout)",
    "text": "Reported: ratios unchanged from the old readout (\u03c0/2 \u2248 0.076, 3\u03c0/4 \u2248 0.070 at",
    "numbers": [
@@ -1242,7 +1242,7 @@
   },
   {
    "file": "./shape_zero_tests/README.md",
-   "line": 102,
+   "line": 106,
    "section": "5. Open-channel rows re-measured (clearing readout)",
    "text": "g = 0.0025).",
    "numbers": [
@@ -1252,7 +1252,7 @@
   },
   {
    "file": "./shape_zero_tests/README.md",
-   "line": 107,
+   "line": 111,
    "section": "6. Gate 7 at q = 1 (model.py's ordering test)",
    "text": "q = 1, packet n0 = 20, width 8, segments at 60 and 80, u(2) g = 0.12/0.08,",
    "numbers": [
@@ -1266,7 +1266,7 @@
   },
   {
    "file": "./shape_zero_tests/README.md",
-   "line": 108,
+   "line": 112,
    "section": "6. Gate 7 at q = 1 (model.py's ordering test)",
    "text": "u(3) g = 0.15/0.10. Readouts: model.py as shipped (N = 200, T = 180);",
    "numbers": [
@@ -1278,7 +1278,7 @@
   },
   {
    "file": "./shape_zero_tests/README.md",
-   "line": 109,
+   "line": 113,
    "section": "6. Gate 7 at q = 1 (model.py's ordering test)",
    "text": "N = 1200 at T = 180; N = 1200 clearing.",
    "numbers": [
@@ -1290,7 +1290,7 @@
   },
   {
    "file": "./shape_zero_tests/README.md",
-   "line": 110,
+   "line": 114,
    "section": "6. Gate 7 at q = 1 (model.py's ordering test)",
    "text": "Reported: 16\u201318% of weight in the second segment window at T = 180; split and",
    "numbers": [
@@ -1302,7 +1302,7 @@
   },
   {
    "file": "./shape_zero_tests/README.md",
-   "line": 111,
+   "line": 115,
    "section": "6. Gate 7 at q = 1 (model.py's ordering test)",
    "text": "sim-vs-product unchanged (\u2264 0.1\u00b0); Abelian floor 0.016\u00b0 \u2192 0.000\u00b0.",
    "numbers": [
@@ -1313,7 +1313,7 @@
   },
   {
    "file": "./shape_zero_tests/README.md",
-   "line": 119,
+   "line": 123,
    "section": "7. Gates 7 and 8 at q = 3 (three readouts)",
    "text": "Lattice 320 \u00d7 12 \u00d7 12 (long axis = propagation), full transverse slab, isotropic",
    "numbers": [
@@ -1325,7 +1325,7 @@
   },
   {
    "file": "./shape_zero_tests/README.md",
-   "line": 120,
+   "line": 124,
    "section": "7. Gates 7 and 8 at q = 3 (three readouts)",
    "text": "3-D Gaussian packet width 3 centred at x = 30, k\u2080 = \u03c0/2. Segments at 50 and 70.",
    "numbers": [
@@ -1336,7 +1336,7 @@
   },
   {
    "file": "./shape_zero_tests/README.md",
-   "line": 121,
+   "line": 125,
    "section": "7. Gates 7 and 8 at q = 3 (three readouts)",
    "text": "u(2): g = 0.12/0.08; u(3): g = 0.15/0.15; Abelian floors use unequal strengths",
    "numbers": [
@@ -1349,7 +1349,7 @@
   },
   {
    "file": "./shape_zero_tests/README.md",
-   "line": 122,
+   "line": 126,
    "section": "7. Gates 7 and 8 at q = 3 (three readouts)",
    "text": "(u(2) 0.12/0.08, u(3) 0.15/0.10). Instrument check: `2 single`, one segment,",
    "numbers": [
@@ -1362,7 +1362,7 @@
   },
   {
    "file": "./shape_zero_tests/README.md",
-   "line": 123,
+   "line": 127,
    "section": "7. Gates 7 and 8 at q = 3 (three readouts)",
    "text": "axis 0, g = 0.12. Readouts per run: fixed T = 180; centroid 2 sites past the last",
    "numbers": [
@@ -1372,7 +1372,7 @@
   },
   {
    "file": "./shape_zero_tests/README.md",
-   "line": 124,
+   "line": 128,
    "section": "7. Gates 7 and 8 at q = 3 (three readouts)",
    "text": "segment (MODEL_SPEC \u00a74d / `run_until_exit`); clearing (< 10\u207b\u2076).",
    "numbers": [
@@ -1382,7 +1382,7 @@
   },
   {
    "file": "./shape_zero_tests/README.md",
-   "line": 125,
+   "line": 129,
    "section": "7. Gates 7 and 8 at q = 3 (three readouts)",
    "text": "Run with `OMP_NUM_THREADS=1`, four jobs in parallel (~20\u201360 min each).",
    "numbers": [
@@ -1393,7 +1393,7 @@
   },
   {
    "file": "./shape_zero_tests/README.md",
-   "line": 126,
+   "line": 130,
    "section": "7. Gates 7 and 8 at q = 3 (three readouts)",
    "text": "Reported: Abelian floor ~1\u00b0 \u2192 0.000\u00b0 (u(2), u(3)); split error 5.09\u00b0 (u(2)) and",
    "numbers": [
@@ -1404,7 +1404,7 @@
   },
   {
    "file": "./shape_zero_tests/README.md",
-   "line": 127,
+   "line": 131,
    "section": "7. Gates 7 and 8 at q = 3 (three readouts)",
    "text": "4.43\u00b0 (u(3)) under clearing; single segment 2.70\u00b0.",
    "numbers": [
@@ -1415,7 +1415,7 @@
   },
   {
    "file": "./shape_zero_tests/README.md",
-   "line": 132,
+   "line": 136,
    "section": "8. Spectrum-averaged prediction at q = 3 (no new dynamics)",
    "text": "Regenerates the section-7 packet, Fourier-transforms it on the 320 \u00d7 12 \u00d7 12",
    "numbers": [
@@ -1427,7 +1427,7 @@
   },
   {
    "file": "./shape_zero_tests/README.md",
-   "line": 133,
+   "line": 137,
    "section": "8. Spectrum-averaged prediction at q = 3 (no new dynamics)",
    "text": "lattice (17,112 components kept, all but 5\u00d710\u207b\u00b9\u00b9 of the weight), and propagates",
    "numbers": [
@@ -1439,7 +1439,7 @@
   },
   {
    "file": "./shape_zero_tests/README.md",
-   "line": 135,
+   "line": 139,
    "section": "8. Spectrum-averaged prediction at q = 3 (no new dynamics)",
    "text": "Reported: errors 2.70\u00b0 \u2192 0.11\u00b0 (single), 5.09\u00b0 \u2192 0.04\u00b0 (u(2) split),",
    "numbers": [
@@ -1452,7 +1452,7 @@
   },
   {
    "file": "./shape_zero_tests/README.md",
-   "line": 136,
+   "line": 140,
    "section": "8. Spectrum-averaged prediction at q = 3 (no new dynamics)",
    "text": "4.43\u00b0 \u2192 0.17\u00b0 (u(3) split).",
    "numbers": [
@@ -1463,9 +1463,9 @@
   },
   {
    "file": "./shape_zero_tests/README.md",
-   "line": 143,
+   "line": 150,
    "section": "9. q = 3 ordering gate (permanent check)",
-   "text": "in `run_until_exit` that at q = 3 its certificate fires with ~98% of the packet",
+   "text": "certificate fires with ~98% of the packet still in the windows; that note now",
    "numbers": [
     "98"
    ],
@@ -1473,7 +1473,7 @@
   },
   {
    "file": "./shape_zero_tests/README.md",
-   "line": 150,
+   "line": 159,
    "section": "9. q = 3 ordering gate (permanent check)",
    "text": "clear to 10\u207b\u2076 or if the lattice is too short to rule out a wave re-entering a",
    "numbers": [
@@ -1483,7 +1483,7 @@
   },
   {
    "file": "./shape_zero_tests/README.md",
-   "line": 152,
+   "line": 161,
    "section": "9. q = 3 ordering gate (permanent check)",
    "text": "maximum group velocity, 0.497).",
    "numbers": [
@@ -1493,7 +1493,7 @@
   },
   {
    "file": "./shape_zero_tests/README.md",
-   "line": 154,
+   "line": 163,
    "section": "9. q = 3 ordering gate (permanent check)",
    "text": "python3 q3_gate.py                                  # 260 x 8 x 8, averaged",
    "numbers": [
@@ -1503,7 +1503,7 @@
   },
   {
    "file": "./shape_zero_tests/README.md",
-   "line": 159,
+   "line": 168,
    "section": "9. q = 3 ordering gate (permanent check)",
    "text": "| 320 \u00d7 12 \u00d7 12 (section 7 runs) | yes, t = 335\u2013346 | **PASS** \u2014 0.04\u20130.17\u00b0 | **FAIL** \u2014 3.0\u20135.2\u00b0 | not timed precisely (roughly 2\u20133 h wall for the section-7 jobs) |",
    "numbers": [
@@ -1522,7 +1522,7 @@
   },
   {
    "file": "./shape_zero_tests/README.md",
-   "line": 160,
+   "line": 169,
    "section": "9. q = 3 ordering gate (permanent check)",
    "text": "| **260 \u00d7 8 \u00d7 8 (default)** | yes, t = 335\u2013346 | **PASS** \u2014 0.10\u20130.18\u00b0 | **FAIL** \u2014 2.4\u20135.1\u00b0 | **11.6 min wall, 46 min CPU** |",
    "numbers": [
@@ -1540,7 +1540,7 @@
   },
   {
    "file": "./shape_zero_tests/README.md",
-   "line": 161,
+   "line": 170,
    "section": "9. q = 3 ordering gate (permanent check)",
    "text": "| 240 \u00d7 8 \u00d7 8 | **no** \u2014 backward stray re-enters window 2 at t \u2248 350 (bottomed at 1.7\u00d710\u207b\u2076) | \u2014 | \u2014 | \u2014 |",
    "numbers": [
@@ -1552,7 +1552,7 @@
   },
   {
    "file": "./shape_zero_tests/README.md",
-   "line": 163,
+   "line": 172,
    "section": "9. q = 3 ordering gate (permanent check)",
    "text": "Smallest lattice: 260 is the shortest length the no-wrap check accepts (240 is",
    "numbers": [
@@ -1563,7 +1563,7 @@
   },
   {
    "file": "./shape_zero_tests/README.md",
-   "line": 165,
+   "line": 174,
    "section": "9. q = 3 ordering gate (permanent check)",
    "text": "8 \u00d7 8: its transverse profile still varies 35\u00d7 across the slab (12 \u00d7 12: ~3000\u00d7)",
    "numbers": [
@@ -1576,7 +1576,7 @@
   },
   {
    "file": "./shape_zero_tests/README.md",
-   "line": 166,
+   "line": 175,
    "section": "9. q = 3 ordering gate (permanent check)",
    "text": "with transverse term Qt = 0.074 (12 \u00d7 12: 0.102); at 6 \u00d7 6 the contrast falls to",
    "numbers": [
@@ -1589,7 +1589,7 @@
   },
   {
    "file": "./shape_zero_tests/README.md",
-   "line": 173,
+   "line": 182,
    "section": "10. \u03ba(w = 2, side) at q = 3 (self-contained; does not import `model.py`)",
    "text": "\u03b2 = 0.05, A = 0.30 (linear check A = 0.02), transverse width 2, periodic BC,",
    "numbers": [
@@ -1601,7 +1601,7 @@
   },
   {
    "file": "./shape_zero_tests/README.md",
-   "line": 174,
+   "line": 183,
    "section": "10. \u03ba(w = 2, side) at q = 3 (self-contained; does not import `model.py`)",
    "text": "T = 300, DOP853 rtol 10\u207b\u2079, sides 8\u201332, three readouts, plane-wave control.",
    "numbers": [
@@ -1613,7 +1613,7 @@
   },
   {
    "file": "./shape_zero_tests/README.md",
-   "line": 177,
+   "line": 186,
    "section": "10. \u03ba(w = 2, side) at q = 3 (self-contained; does not import `model.py`)",
    "text": "RETRACTED values). Each run ~32 min wall on 4 cores. Reported: plane-wave",
    "numbers": [
@@ -1625,7 +1625,7 @@
   },
   {
    "file": "./shape_zero_tests/README.md",
-   "line": 178,
+   "line": 187,
    "section": "10. \u03ba(w = 2, side) at q = 3 (self-contained; does not import `model.py`)",
    "text": "\u03ba = \u22120.01869 (swapped: +0.07994); localised \u03ba \u22120.00447 \u2192 \u22120.00047 over side",
    "numbers": [
@@ -1638,7 +1638,7 @@
   },
   {
    "file": "./shape_zero_tests/README.md",
-   "line": 179,
+   "line": 188,
    "section": "10. \u03ba(w = 2, side) at q = 3 (self-contained; does not import `model.py`)",
    "text": "8\u201332, no side-independent limit (PROVENANCE \u00a76o).",
    "numbers": [
@@ -1648,7 +1648,7 @@
   },
   {
    "file": "./shape_zero_tests/README.md",
-   "line": 183,
+   "line": 192,
    "section": "11. \u03ba(w = 2) against box size, GPU (Colab, Tesla T4, PyTorch float64)",
    "text": "`kappa_boxscan_gpu.py` \u2192 `kappa_boxscan_gpu_colab_output.txt` (L = 8\u201348);",
    "numbers": [
@@ -1658,7 +1658,7 @@
   },
   {
    "file": "./shape_zero_tests/README.md",
-   "line": 184,
+   "line": 193,
    "section": "11. \u03ba(w = 2) against box size, GPU (Colab, Tesla T4, PyTorch float64)",
    "text": "`kappa_extended_gpu.py` \u2192 `kappa_extended_gpu_colab_output.txt` (L = 8\u201380, error bars).",
    "numbers": [
@@ -1668,7 +1668,7 @@
   },
   {
    "file": "./shape_zero_tests/README.md",
-   "line": 187,
+   "line": 196,
    "section": "11. \u03ba(w = 2) against box size, GPU (Colab, Tesla T4, PyTorch float64)",
    "text": "seed and readout as section 10; RK4 dt = 0.01. The output files are annotated",
    "numbers": [
@@ -1678,7 +1678,7 @@
   },
   {
    "file": "./shape_zero_tests/README.md",
-   "line": 191,
+   "line": 200,
    "section": "11. \u03ba(w = 2) against box size, GPU (Colab, Tesla T4, PyTorch float64)",
    "text": "CPU with `kappa_extended_gpu.py` at L = 20\u201332: identical. Result: \u03ba(w = 2, side)",
    "numbers": [
@@ -16771,7 +16771,7 @@
   },
   {
    "file": "./04_scripts/session/model.py",
-   "lines": 749,
+   "lines": 761,
    "banner": false,
    "blocked": false,
    "fixes": [],
@@ -17157,15 +17157,6 @@
    "docstring": ""
   },
   {
-   "file": "./shape_zero_tests/model.py",
-   "lines": 759,
-   "banner": false,
-   "blocked": false,
-   "fixes": [],
-   "predictions": 4,
-   "docstring": " model.py \u2014 the assembled Shape Zero model  ONE force law, parameterised by node size n, reproducing every verified result that currently lives across three separate scripts with three node types.    "
-  },
-  {
    "file": "./shape_zero_tests/openrows.py",
    "lines": 11,
    "banner": false,
@@ -17185,12 +17176,12 @@
   },
   {
    "file": "./shape_zero_tests/q3_gate.py",
-   "lines": 271,
+   "lines": 274,
    "banner": false,
    "blocked": false,
    "fixes": [],
    "predictions": 1,
-   "docstring": " q3_gate.py \u2014 q = 3 ordering gate: u(2) and u(3), clearing readout, spectrum-averaged prediction.  Runs on the working model.py in this folder. Eight evolutions (u(2) and u(3): AB, BA, and the two Abe"
+   "docstring": " q3_gate.py \u2014 q = 3 ordering gate: u(2) and u(3), clearing readout, spectrum-averaged prediction.  Runs on the working model.py, 04_scripts/session/model.py (found relative to this file, so it runs fr"
   },
   {
    "file": "./shape_zero_tests/q3_kavg.py",
@@ -17375,6 +17366,6 @@
  ],
  "counts": {
   "doc_claims": 1408,
-  "scripts": 127
+  "scripts": 126
  }
 }
