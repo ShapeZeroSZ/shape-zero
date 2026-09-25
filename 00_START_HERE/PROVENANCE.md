@@ -187,7 +187,7 @@ three arguments needed correction.**
 
 | proposal | conclusion | correction required |
 |---|---|---|
-| **ℏ, three lemmas** | ℏ = (μℓ_f²/T)/4 — **holds** | Lemma A used Fubini–Study (area π), Lemma C the round convention (4π); **the 1/4 was π/4π, a convention mismatch.** The model's own su(3) normalisation tr(λ_aλ_b) = 2δ_ab gives n = 4 directly |
+| **ℏ, three lemmas** | ℏ = (μℓ_f²/T)/4 — **holds** [**SUPERSEDED 2026-09-25:** the conclusion does not hold — retracted in §6d and `MODEL_SPEC.md` §4c.2a-R: tr(λ_aλ_b) = 2δ_ab is a generator normalisation, not a metric scale, and integrality leaves n ∈ {1, 2, 4, 8, …} unselected] | Lemma A used Fubini–Study (area π), Lemma C the round convention (4π); **the 1/4 was π/4π, a convention mismatch.** The model's own su(3) normalisation tr(λ_aλ_b) = 2δ_ab gives n = 4 directly |
 | **Lemma B, nodal mass** | ℓ never enters — **holds, and is the important part** | the chain multiplied by T to "convert to an action"; **a U(1) moment map already *is* an action**, μωℓ_f² = μℓ_f²/T = M·L. The extra T over-counts by one length |
 | **D = 8 by holonomy** | D = 8 — **holds, by arithmetic** | neither dim 7 nor 8 preserves both a complex structure and a 3-form. **SU(3) in dim 6 does** — which is the trimer node, giving a *second route to n = 3* rather than to D |
 

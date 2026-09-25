@@ -7,6 +7,21 @@ the layered documents. This is what you type.
 **Sorting rule used:** a piece is here if it **changes the code you write**.
 Everything else is in the research record.
 
+**Notation — overloaded symbols (added 2026-09-25; nothing renamed).** Three
+letters carry two meanings each in this document. Read each section with the
+meaning listed for it (`03_current/SCALE_SCOPING.md` §1b).
+
+| symbol | meaning | sections using it |
+|---|---|---|
+| **κ** | intra-node **gyroscopic ratio**, F = κ𝕁v (`INPUT_LEDGER.md` §2d #3; `model.py` KAPPA) | §2, §3, §4b.1, §7 (build step 3) |
+| **κ** | the **A² coefficient** of the pinned asymmetry, \|Δω\| = 2cβ sin k·[1 + κA²] | §4c.0, §4c.4b, §4d (gate notes), §4d.1, §5, §5b–§5b.7, §6b (gate 6), §7 (build step 5), §9 |
+| κ_ℏ | the ℏ-scale constant in the §9 fibre-scale row | §9 only |
+| **c** | inter-node **elastic coupling**, F = c(x₊ + x₋ − 2x), c = 1 in every script (`INPUT_LEDGER.md` §2d #6) | §1–§3, §4b, §5, §5b, §6b, §7 — every force law and dispersion relation |
+| **c** | the **speed of light**, set to 1 for dimensional arithmetic | §4c (table, α = e²/ℏc), §4c.0, §4c.3, §4c.4 |
+| **β** | **cone deficit** of the D2 arena (`INPUT_LEDGER.md` §2d #2) | §0 |
+| **β** | **lattice gyroscopic coupling**, βc(v₊ − v₋) — the synthetic U(1); β = 0.05 in the κ scripts | §3, §4b.1, §4b.2, §5, §5b, §6b, §7 |
+| **β** | **ambiguous**: §4c.4 calls the lattice coupling's "charge" β and cites the ledger's §2d, whose β is the cone deficit | §4c.4 |
+
 ---
 
 ## 0. State

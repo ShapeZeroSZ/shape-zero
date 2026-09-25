@@ -214,6 +214,13 @@ listed in §2d as remaining free.
 | 3 | **κ**, gyroscopic ratio | D4 coupling strength | D4 | **measurable in a lab now** |
 | 4 | **a–b angle** | D8 flow frequency ratio | D8 | measurable in the same setting |
 | 5 | **C_r** | residual coupling strength | the residual sector (MODEL_SPEC §4b.1) | dimensionless; nothing yet fixes it |
+| 6 | **c**, elastic coupling | inter-node elastic coupling, F = c(x₊ + x₋ − 2x) | the lattice (MODEL_SPEC §3) | **CHOSEN** — c = 1 in every script; added 2026-09-25 (`03_current/SCALE_SCOPING.md` §1b). Not the speed of light — see MODEL_SPEC "Notation" |
+
+**Premise, not a parameter: the φ-well force law.** The on-site force
+F = −(x² − x − 1), with fixed points at the golden-ratio roots and linear stiffness
+√5, is **stated** in MODEL_SPEC §1 and **not derived** there or in this ledger. It
+is a premise of the lattice model. (Recorded 2026-09-25, from
+`03_current/SCALE_SCOPING.md` §1b.)
 
 **ℏ is NOT derived — retracted.** See MODEL_SPEC §4c.2a-R. The step converting
 tr(λ_aλ_b) = 2δ_ab into a geometric radius was a category error: a generator
@@ -253,7 +260,8 @@ node's internal fibre, so the lattice spacing never enters the moment map
 
 **Still owed:** the pure numbers in G (c₈) and Λ.
 
-Five, of which one is a unit and two are ratios measurable on a bench.
+Five, of which one is a unit and two are ratios measurable on a bench. [Six since
+2026-09-25: the elastic coupling c, row 6, is chosen rather than measured.]
 
 *On C_r:* the residual coupling **form** is determined — f = C_r·mul(g,x) with g
 octonionic and imaginary — and every constraint the selection rule imposes is
