@@ -322,7 +322,11 @@ and the operating point κ = κ\*.**
   travelling wavenumber. J-compatibility is then derived from the dynamics, not
   imposed on W. Scope of that derivation: first order in g, n = 2, amplitude 10⁻³,
   q = 1 and full slabs at q = 3; the second-order leftover in a closed channel is
-  still open (above).
+  still open (above). [**CORRECTED 2026-09-25:** κ ≥ κ\* closes the **linear**
+  coupling channel at every wavelength. The model's own on-site nonlinearity −u∘u is
+  itself J-breaking, and at κ\* it converts a-waves near k = 0.49 and 1.25 into the
+  opposite chirality by second-harmonic resonance — so **at κ\*, J-compatibility holds
+  at linear order only**. See "CORRECTION — the scope of J-compatibility at κ\*" below.]
 - **Derived consequence: κ ≥ κ\* = 2c/√(K + 2c) = 0.971737** at c = 1, K = √5
   (derivation in the candidate block). κ\* = 2φ^(−3/2) is a **consequence of K = √5**
   (2 + √5 = φ³), **not a selection**. At κ = κ\* every travelling wavenumber is strictly
@@ -437,6 +441,82 @@ and the operating point κ = κ\*.**
   59.86° / 59.84° and u(3) 65.12° / 64.97° orderings, `INPUT_LEDGER.md` §3), and
   `grid.py`, `checks.py`, `resid.py` (§4, §5 of `shape_zero_tests/README.md`). They
   stand as κ = 0.5 records.
+
+**CORRECTION (2026-09-25) — the scope of J-compatibility at κ\*.** κ ≥ κ\* closes the
+*linear* coupling channel (a J-breaking W converting a packet into the opposite
+chirality at the same frequency) at every wavelength. It does not close the
+*nonlinear* one. `model.py`'s on-site term −(√5u + u∘u) squares each real component
+separately; per dimer, with ψ = u₀ + iu₁, the square is
+−(1−i)/4·ψ² − (1+i)/2·|ψ|² − (1−i)/4·ψ\*², which contains all three phase combinations —
+it is J-breaking. With the two branches ω_a (the gates' chirality, ω² + κω = Q) and
+ω_b = ω_a + κ (the opposite chirality), the ψ\*² term drives the b-branch at 2k from an
+a-wave at k, resonantly where **2ω_a(k) = ω_b(2k)**. At κ\*, c = 1, q = 1 that holds at
+**k = 0.492 and k = 1.255** (`shape_zero_tests/persist_resonance.py`). **Confirmed by
+direct simulation** (`shape_zero_tests/persist_sim.py`, predictions committed first,
+a213069): run R1 (N = 656, k = 2π·131/656, A = 0.01) grows the b-mode linearly with
+slope **0.991 × rA²**, r = √2/(4(2ω_b(2k) − κ)); the detuned controls R2 (κ\*, π/2),
+R3 (κ = 0.5), R4 (κ = 3.0) stay at their predicted bounded levels. **So at κ\*,
+J-compatibility holds at linear order only.** The earlier text of this section, which
+states the derivation without that qualification, is kept above.
+
+**FINDING (2026-09-25) — persistence at every wavelength: what the model permits.**
+*Recorded as a finding about the model, not as an adopted principle.* Question: does
+requiring persistence at every wavelength — no resonant decay channel open for any
+wave — constrain the parameters, as J-compatibility at every wavelength gave κ ≥ κ\*?
+(`shape_zero_tests/persist_resonance.py`, `persist_q3_scan.py`, `persist_sim.py`,
+`persist_sim3d.py`; predictions committed before each simulation, a213069 and 7215165.)
+
+- **Channels.** Because ω_b = ω_a + κ exactly, every branch combination reduces to a
+  function of ω_a: three-wave G(K, k₁) = ω_a(K) − ω_a(k₁) − ω_a(K − k₁) = mκ; a pump's own
+  four-wave pair D(k, p) = 2ω_a(k) − ω_a(k+p) − ω_a(k−p) = mκ; and 1→3. There is no
+  selection rule inside a dimer (the square has all phase combinations); dimers do not
+  couple on a free lattice, so every node size reduces to one dimer. Four three-wave
+  combinations can never resonate, for any parameters; what remains is a→aa and
+  **a+a↔b** (second harmonic into the opposite chirality).
+- **The strict form is unsatisfiable, for all parameters.** Same-branch four-wave
+  quartets (a+a → a+a) are always open: in 1-D for pumps between the band's inflection
+  point and π/2, in 3-D at every saddle of ω(k). Run R5 (a pump with an open quartet)
+  grew its sidebands ×16 at p = 1.398 against the predicted 1.341.
+- **The strongest form the model admits** — *identified after the strict form failed*,
+  as the strongest one the model can satisfy: **no decay** (1 → 2, 1 → 3) **and no change
+  of branch** (a ↔ b, three- or four-wave), with same-branch scattering allowed. Under
+  that form, with κ ≥ κ\* also required, κ is confined to:
+
+  | | c/√5 = 0.045 | 0.22 | **0.45 (c = 1)** | 0.89 | 1.34 |
+  |---|---|---|---|---|---|
+  | q = 1 | [0.26, 1.02] ∪ [1.24, 1.68] ∪ [1.92, ∞) | [2.52, ∞) | [3.15, ∞) | [4.10, ∞) | [4.90, 7.50] |
+  | q = 3 | [0.8, 0.9] ∪ [1.6] ∪ [2.3, ∞) | [3.7, ∞) | **[4.9, 7.5]** | **none** | — |
+
+  (q = 3 columns at c = 0.1, 0.5, 1, 2; "∞" means to the scan's end, κ = 8 at q = 1 and
+  12 at q = 3.) **At q = 3, c = 1: κ ∈ [4.9, 7.5].** The lower side is 1→3 b→aaa
+  closing; the **upper side** is three-wave a→aa opening along (1,1,1) — the a-branch's
+  own second harmonic, 2ω_a(k) = ω_a(2k) — **confirmed by S1** (κ = 9.28, exactly
+  resonant: slope 0.9986 × rA²; S2 at κ = 6 bounded as predicted). The window
+  **vanishes for c/√5 between 0.45 and 0.89** (q = 3). **Inside the window the nonlinear
+  chirality conversion is closed** (a+a↔b is one of the channels the form excludes).
+  **κ\* = 0.972 lies outside every window at c = 1**; at q = 1 it sits inside the band
+  0.90 ≲ κ ≲ 2.42 where a+a↔b is open.
+- **Relations to J-compatibility.** The four-wave a+a → b+b threshold equals κ\* to four
+  digits in 1-D (the b-branch's bottom touching the a-branch's top); at q = 3 the
+  nonlinearity lets the two waves exchange transverse momentum and that threshold is
+  the general bound 2qc/√(K + 2qc) = 2.091.
+- **β and c.** In the scalar β sector three-wave stays closed for β up to 0.5 and
+  same-branch four-wave is open at every β; the (0, π) channel of the −π/2 pump excludes
+  the single point β = 0.06285 (linear dispersion). No bound on β. The rough check
+  2ω_min > ω_max (c < 3√5/4 in 1-D, √5/4 in 3-D) is necessary, not sufficient:
+  momentum conservation closes most channels (at κ = 0, c = 1, 1-D three-wave is closed
+  with margin 1.29). The bound on c/√5 is the window's disappearance above.
+- **Caveats.** The q = 3 ranges come from a multistart numerical optimiser, not proved
+  extrema. κ resolution: 0.02–0.05 at q = 1, 0.1 at q = 3. Channels are counted by linear
+  resonance; the four-wave coupling strengths are not derived (the three-wave ones are
+  confirmed by R1 and S1). Run R6 (a pump with every linear channel closed) passed its
+  committed criterion (×1.18 among sidebands with |D| > 0.05) but showed finite-amplitude
+  **modulational growth** (×10.7 at p = 0.0096), phase-matched by the nonlinear shift — a
+  linearly closed pump is not persistent at finite amplitude. The committed b-branch
+  criterion ("no b-mode grows more than 10× above its initial noise") was **ill-posed**
+  (the launch seeded only the a-branch, so the initial b level was rounding) and was
+  replaced **post hoc**, labelled, by absolute levels (`persist_sim_posthoc.py`: R6's
+  b-branch flat at 4.5×10⁻⁷ A).
 
 | n | dim admissible W | group | measured |
 |---|---|---|---|
@@ -2348,6 +2428,8 @@ established — see §7b.*
 | ~~which J-compatibility bound applies at q = 3~~ **RESOLVED 2026-09-25** (§3, "ADOPTED"): 0.972 — the model's slab segments conserve transverse momentum (code and `jcompat_q3.py`); a finite-width segment would need 2.091. The original entry: | κ ≥ 0.972 if the coupling segments conserve transverse momentum, κ ≥ 2.091 if not — decides the candidate floor on κ at the model's own dimension |
 | ~~the q = 3 Abelian floor at κ\*~~ **RESOLVED 2026-09-25** (§3, "ADOPTED"; §4d; §4d.1): a readout-timing artefact — a carrier launch leaves off-branch content that makes the readout oscillate, and the two runs were read at unequal times; κ = 0.5's zero was equal-time reading by coincidence. With a per-mode launch and one readout time per pair the floor is 0.000° at both κ, and "exactly 0 at q = 3" is restored. The original entry: | `q3_gate.py` at the operating point κ\* reads 0.066° (u(2)) and 0.030° (u(3)) under clearing readout, not 0.000° as at κ = 0.5 — inside tolerance, cause not investigated; blocks the claim "exactly 0 at q = 3" at the current operating point (§3, "ADOPTED"; §4d) |
 | ~~§6b's gate-7 u(3) entry~~ **RESOLVED 2026-09-25**: it is the platform benchmark `phi_gauge_u3_working.py` (reproduced exactly), mislabelled as `model.py`'s gate 7; label corrected in §6b. The original entry: | 65.1166 / 64.9712 is not reproduced by the current `model.py` at κ = 0.5 (117.92 / 118.29); pre-existing, found in the κ\* re-run — which configuration produced it is unrecorded |
+| **the operating point against persistence** | the strongest persistence the model admits (no decay, no change of branch) confines κ to [4.9, 7.5] at q = 3, c = 1 and excludes the operating point κ\*, where the u∘u nonlinearity converts a-waves into the opposite chirality (§3, "FINDING", "CORRECTION"); whether to adopt that form, and so move the operating point, is undecided |
+| **four-wave coupling strengths** | the four-wave channels are counted by linear resonance only; their effective couplings are not derived (§3, "FINDING", caveats) |
 | **the exact value of κ** | only the floor κ ≥ κ\* is derived; the value is a genuine parameter, fixed by the Larmor measurement (`INPUT_LEDGER.md` §3.1); `model.py`'s κ = κ\* is a chosen operating point |
 | **the beam's fourth-order cross kernel** | derive it — every fourth-order cross term between a beam's transverse components, on the lattice — with the measured r values as the target: 0.351/0.350 (w = 1.5), 0.547/0.549 (w = 2), 0.750/0.758 (w = 3) at L = 4, A = 0.30/0.40, which lie 0.33, 0.50, 0.68 of the way from the self-only limit S2 to the all-terms limit S1 (§5, measured with the third-harmonic launch, `kappa4_orbit3_launch.py`) |
 | ~~verify the 0.39° attribution~~ | **CLOSED** — readout timing; the Abelian floor is exactly 0 under clearing readout at q = 1 and q = 3 |

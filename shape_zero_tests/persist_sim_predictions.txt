@@ -1,0 +1,23 @@
+==========================================================================================
+PREDICTIONS (committed before any run)
+==========================================================================================
+  N = 656, c = 1, kappa* = 0.971737
+
+  PART 1 -- a + a -> b (second harmonic into the b-branch), A = 0.01, T = 300
+     run  kappa     k        2k       delta = 2w_a(k) - w_b(2k)   r        |B|/A at T (pred.)    law
+     R1   0.9717   1.25472  2.50944   +8.065e-07                    0.07166  2.150e-01             linear growth, slope r A^2
+     R2   0.9717   1.57080  3.14159   +2.278e-01                    0.06949  2.270e-03             bounded, max 6.10e-03 A
+     R3   0.5000   1.25472  2.50944   +6.536e-01                    0.07270  1.339e-03             bounded, max 2.22e-03 A
+     R4   3.0000   1.25472  2.50944   -2.503e+00                    0.06211  4.963e-04             bounded, max 4.96e-04 A
+     Criterion: R1's |B|(t) linear with slope within 10% of r A^2 (pump depletion is second order,
+     |B|/A reaches 0.24 by T); R2-R4 stay below their predicted maximum x 1.2.
+
+  PART 2 -- the pump's own four-wave pair, A = 0.2, noise 1e-7 per mode, T = 2500
+     R5 open: m = 149, k = 1.4271; D(k, p) range over p != 0 [-0.2709, +0.0179]; resonant p* = 1.3409; SHG detuning +0.1064; aa->ab closed
+     R6 closed: m = 183, k = 1.7528; D(k, p) range over p != 0 [+0.0000, +0.3489]; resonant p* = none; SHG detuning +0.4216; aa->ab closed
+     R5: the a-branch sidebands at k +- p* (within the nonlinear-shift width) grow above the
+     noise floor -- the largest-growing a-mode outside the pump's harmonics lies within
+     |p - p*| < 0.15. R6: no a-mode with |D(k, p)| > 0.05 and no b-mode grows more than
+     10x above its initial noise. CAVEAT: 'closed' is a linear-resonance statement; at
+     finite amplitude, sidebands with |D| of order the nonlinear shift (small p) may still
+     grow modulationally -- that is not excluded by R6's prediction.

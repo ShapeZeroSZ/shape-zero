@@ -1,0 +1,21 @@
+POST HOC (written after the runs)
+
+  R5: pump k = 1.4271
+     largest a-growth among modes with |D| > 0.05: x1.13 at q = -2.0401 (p = -3.4672, D = -0.2543)
+     largest a-growth among modes with |D| <= 0.05: x16.41 at p = +1.3984 (D = -5.22e-03)
+     b-branch, absolute: max |b| outside the pump's harmonic set, by snapshot:
+        T = 500: max |b|/A = 5.52e-07 at b-wavevector +1.6187
+        T = 1000: max |b|/A = 1.33e-06 at b-wavevector +1.4654
+        T = 1500: max |b|/A = 2.10e-06 at b-wavevector +1.4559
+        T = 2000: max |b|/A = 5.03e-06 at b-wavevector +1.4559
+        T = 2500: max |b|/A = 6.36e-06 at b-wavevector +1.4559
+
+  R6: pump k = 1.7528
+     largest a-growth among modes with |D| > 0.05: x1.18 at q = -0.1149 (p = -1.8677, D = +0.3214)   [R6 criterion: < 10x -> PASS]
+     largest a-growth among modes with |D| <= 0.05: x10.65 at p = +0.0096 (D = +1.59e-05)
+     b-branch, absolute: max |b| outside the pump's harmonic set, by snapshot:
+        T = 500: max |b|/A = 4.45e-07 at b-wavevector +2.3945
+        T = 1000: max |b|/A = 4.76e-07 at b-wavevector +2.2796
+        T = 1500: max |b|/A = 4.30e-07 at b-wavevector +2.0880
+        T = 2000: max |b|/A = 4.51e-07 at b-wavevector +2.0593
+        T = 2500: max |b|/A = 4.89e-07 at b-wavevector +2.2700

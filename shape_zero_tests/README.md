@@ -268,6 +268,19 @@ committed first) → `jcompat_q3_output.txt`, read in `jcompat_q3_reading.txt`.
 `q3_gate.py` gained `--tag` (output-file suffix) so the κ = 0.5 results are not
 overwritten; `jcompat_gates.py` now replaces whatever `KAPPA = ...` line model.py has.
 
+### 16. Persistence at every wavelength — what the model permits (finding, not adopted)
+`persist_resonance.py` → `persist_resonance_output.txt`: the model's branches
+(ω_b = ω_a + κ), the u∘u nonlinearity per dimer, every three-wave, four-wave and 1→3
+channel at q = 1 and q = 3, the (κ, c) scan at q = 1 and the β sector.
+`persist_q3_scan.py` → `persist_q3_scan_output.txt`: the scan at q = 3 (numerical optima).
+`persist_sim.py` (predictions `persist_sim_predictions.txt`, committed first) →
+`persist_sim_runs.json`, `persist_sim_report.txt`: second harmonic into the b-branch at κ\*
+(R1–R4) and four-wave pump pairs (R5, R6); `persist_sim_posthoc.py` →
+`persist_sim_posthoc.txt`, labelled post hoc. `persist_sim3d.py` (predictions
+`persist_sim3d_predictions.txt`, committed first) → `persist_sim3d_runs.json`,
+`persist_sim3d_report.txt`: the q = 3 upper side (S1, S2). MODEL_SPEC §3, "CORRECTION" and
+"FINDING".
+
 ### P-1 investigation
 `p1/` — the decay-window investigation behind the P-1 annotation; its README maps
 each file to its finding.

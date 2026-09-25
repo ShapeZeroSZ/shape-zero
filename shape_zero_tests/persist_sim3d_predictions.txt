@@ -1,0 +1,8 @@
+========================================================================================
+PREDICTIONS (committed before any run) -- q = 3, c = 1, second harmonic within the a-branch
+========================================================================================
+  L = 11, k = 2 pi 2/11 = 1.14240 along (1,1,1); 2k = 2.28479; A = 0.01, T = 300.0
+  S1: kappa = 9.281845  delta = +0.000e+00  r = 0.03045  |B|/A at T = 9.135e-02  (linear growth, slope r A^2)
+  S2: kappa = 6.000000  delta = +7.890e-02  r = 0.03842  |B|/A at T = 6.500e-03  (bounded, max 9.740e-03 A)
+  S1's kappa (9.282) lies above the predicted q = 3 threshold 7.5; S2 inside the window.
+  Criterion: S1 slope within 10% of r A^2; S2 max below 1.2 x its bound.

@@ -4228,7 +4228,32 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 326,
+   "line": 325,
+   "section": "3. Inter-node coupling, and the gauge class",
+   "text": "still open (above). [**CORRECTED 2026-09-25:** \u03ba \u2265 \u03ba\\* closes the **linear**",
+   "numbers": [
+    "2026",
+    "09",
+    "25"
+   ],
+   "status": [
+    "OPEN"
+   ]
+  },
+  {
+   "file": "./00_START_HERE/MODEL_SPEC.md",
+   "line": 327,
+   "section": "3. Inter-node coupling, and the gauge class",
+   "text": "itself J-breaking, and at \u03ba\\* it converts a-waves near k = 0.49 and 1.25 into the",
+   "numbers": [
+    "0.49",
+    "1.25"
+   ],
+   "status": []
+  },
+  {
+   "file": "./00_START_HERE/MODEL_SPEC.md",
+   "line": 330,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "- **Derived consequence: \u03ba \u2265 \u03ba\\* = 2c/\u221a(K + 2c) = 0.971737** at c = 1, K = \u221a5",
    "numbers": [
@@ -4238,7 +4263,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 327,
+   "line": 331,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "(derivation in the candidate block). \u03ba\\* = 2\u03c6^(\u22123/2) is a **consequence of K = \u221a5**",
    "numbers": [
@@ -4248,7 +4273,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 339,
+   "line": 343,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "- **q = 3: the 0.972 floor applies**, because the model's segments conserve transverse",
    "numbers": [
@@ -4258,7 +4283,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 346,
+   "line": 350,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "2.091, by the slab (ratio \u00d70.249 for g 0.04 \u2192 0.01, leaked weight 3.5\u00d710\u207b\u2077), while a",
    "numbers": [
@@ -4272,7 +4297,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 347,
+   "line": 351,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "(\u22121)^(y+z)-staggered control, which does not conserve k\u22a5, opens it (leak 8.1\u00d710\u207b\u00b2);",
    "numbers": [
@@ -4282,7 +4307,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 348,
+   "line": 352,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "the weight leaving k\u22a5 = (\u03c0, \u03c0) is 3\u00d710\u207b\u2078, the no-segment reference's own floor.",
    "numbers": [
@@ -4292,7 +4317,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 352,
+   "line": 356,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "\"open\"); (b) the prediction \"stagger open at \u03ba = 0.25\" was wrong \u2014 it omitted the",
    "numbers": [
@@ -4304,7 +4329,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 356,
+   "line": 360,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "general bound 2qc/\u221a(K + 2qc) = **2.091** at q = 3.",
    "numbers": [
@@ -4314,7 +4339,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 361,
+   "line": 365,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "| result | \u03ba = 0.5 (superseded) | \u03ba\\* = 0.971737 |",
    "numbers": [
@@ -4326,7 +4351,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 363,
+   "line": 367,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "| `model.py` gates | 11/11 PASS | **11/11 PASS** |",
    "numbers": [
@@ -4339,7 +4364,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 364,
+   "line": 368,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "| gate 3 chirality purity | 0.9834 | **0.9818** |",
    "numbers": [
@@ -4350,7 +4375,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 365,
+   "line": 369,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "| gate 7 u(2): split meas / pred; per-order | 101.12 / 100.80; 0.29 / 0.17\u00b0 | **98.74 / 98.26; 0.27 / 0.23\u00b0** |",
    "numbers": [
@@ -4367,7 +4392,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 366,
+   "line": 370,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "| gate 7 u(3): split meas / pred; per-order | 117.92 / 118.29; 0.44 / 0.29\u00b0 | **106.86 / 107.15; 0.43 / 0.33\u00b0** |",
    "numbers": [
@@ -4384,7 +4409,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 367,
+   "line": 371,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "| gate 7\u20138 Abelian floor (old readout) | 0.016\u00b0 (u(2)), 0.014\u00b0 (u(3)) | **0.049\u00b0, 0.043\u00b0** |",
    "numbers": [
@@ -4397,7 +4422,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 368,
+   "line": 372,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "| gate 9 angular kinetic term | 2.36\u00d710\u207b\u00b3 | **1.88\u00d710\u207b\u00b3** |",
    "numbers": [
@@ -4410,7 +4435,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 369,
+   "line": 373,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "| gate 10 drifts q = 1, 2, 3 | 3.3, 3.4, 4.2\u00d710\u207b\u2078 | **1.7, 1.8, 2.3\u00d710\u207b\u2078** |",
    "numbers": [
@@ -4422,7 +4447,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 370,
+   "line": 374,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "| gates 1, 2, 4, 5, 6, 11 | \u2014 | identical (gate 6's amplitude \u03ba has no \ud835\udd41 term) |",
    "numbers": [
@@ -4432,7 +4457,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 371,
+   "line": 375,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "| `gate7_readout.py` clearing, u(2): split / pred / floor | 101.12 / 100.80 / 0.00008\u00b0 | **98.57 / 98.26 / 0.00004\u00b0** |",
    "numbers": [
@@ -4447,7 +4472,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 372,
+   "line": 376,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "| `gate7_readout.py` clearing, u(3): split / pred / floor | 117.93 / 118.29 / 0.00003\u00b0 | **107.03 / 107.15 / 0.00003\u00b0** |",
    "numbers": [
@@ -4462,7 +4487,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 373,
+   "line": 377,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "| `q3_gate.py` (260\u00d78\u00d78, averaged) | PASS | **PASS** |",
    "numbers": [
@@ -4474,7 +4499,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 374,
+   "line": 378,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "| \u2026 u(2): split meas / pred; per-order; floor | 105.48 / 105.35; 0.14 / 0.14\u00b0; 0.000\u00b0 | **99.88 / 99.98; 0.31 / 0.22\u00b0; 0.066\u00b0** |",
    "numbers": [
@@ -4493,7 +4518,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 375,
+   "line": 379,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "| \u2026 u(3): split meas / pred; per-order; floor | 62.31 / 62.48; 0.10 / 0.11\u00b0; 0.000\u00b0 | **94.76 / 95.00; 0.20 / 0.24\u00b0; 0.030\u00b0** |",
    "numbers": [
@@ -4512,7 +4537,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 376,
+   "line": 380,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "| `q3_gate.py` carrier predictor (built to fail) | FAIL (split errors 4.68\u00b0, 2.66\u00b0) | **FAIL (1.62\u00b0, 7.76\u00b0)** |",
    "numbers": [
@@ -4527,7 +4552,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 377,
+   "line": 381,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "| J-compat \u03c0/4 (old readout), g 0.0025 \u2192 0.04 | closed, 0.0033 \u2192 0.0427 | **closed, 0.0018 \u2192 0.0221** |",
    "numbers": [
@@ -4542,7 +4567,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 378,
+   "line": 382,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "| J-compat \u03c0/2 (clearing) | open, 0.0762 \u2192 0.1278 | **closed, 0.0020 \u2192 0.0327**; leak \u2264 8\u00d710\u207b\u00b9\u2070 |",
    "numbers": [
@@ -4558,7 +4583,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 379,
+   "line": 383,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "| J-compat 3\u03c0/4 (old readout) | open, 0.0702 \u2192 0.1167 | **closed, 0.0027 \u2192 0.0252** |",
    "numbers": [
@@ -4573,7 +4598,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 380,
+   "line": 384,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "| J-compat 3\u03c0/4 (clearing) | open, 0.0699 \u2192 0.1165 | **closed, 0.0015 \u2192 0.0251**; leak \u2264 10\u207b\u00b9\u00b9 |",
    "numbers": [
@@ -4589,7 +4614,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 381,
+   "line": 385,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "| channel threshold k_c | 1.4536 rad | **whole zone** (k\u2080 = \u03c0 marginal) |",
    "numbers": [
@@ -4599,7 +4624,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 382,
+   "line": 386,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "| stiffness threshold at \u03c0/2: closed iff K > x\u00b2/\u03ba\u00b2 \u2212 x, x = c(1 \u2212 cos k\u2080) = 1 (computed, not re-measured) | K > 3 (measured: closed for K \u2273 3) | **K > 0.059** |",
    "numbers": [
@@ -4609,7 +4634,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 383,
+   "line": 387,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "| README instrument check, \u03c0/2 ratio at g = 0.01 | 0.0883 | **0.0082** |",
    "numbers": [
@@ -4621,7 +4646,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 384,
+   "line": 388,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "| P-3 spinor precession C, predicted / measured | \u22120.0896 / \u22120.0899 | **\u22120.0491 / \u22120.0495** (max residual 0.4%) |",
    "numbers": [
@@ -4634,7 +4659,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 387,
+   "line": 391,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "exactly 0 at \u03ba\\***: 0.066\u00b0 (u(2)) and 0.030\u00b0 (u(3)) under clearing readout, inside the",
    "numbers": [
@@ -4645,7 +4670,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 388,
+   "line": 392,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "0.5\u00b0 tolerance but unlike the 0.000\u00b0 at \u03ba = 0.5; the cause is not investigated.",
    "numbers": [
@@ -4655,7 +4680,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 389,
+   "line": 393,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "[**RESOLVED 2026-09-25 \u2014 a readout-timing artefact, not physics:** a carrier launch (every Fourier mode at the carrier \u03c9) leaves off-branch content that makes the carrier-\u03c9 readout oscillate in time \u2014 up to 0.066\u00b0 (u(2))",
    "numbers": [
@@ -4673,7 +4698,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 390,
+   "line": 394,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "equal times the floor was 0.00001\u00b0 at both \u03ba (`shape_zero_tests/q3_floor_probe.py`,",
    "numbers": [
@@ -4683,7 +4708,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 392,
+   "line": 396,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "the same time **by coincidence** (346 / 346, 341 / 341). Fixed in `q3_gate.py` (per-mode",
    "numbers": [
@@ -4696,7 +4721,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 396,
+   "line": 400,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "(65.1166 measured, 64.9712 predicted) is not what the current `model.py` printed",
    "numbers": [
@@ -4707,7 +4732,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 397,
+   "line": 401,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "at \u03ba = 0.5 (117.92 / 118.29, `shape_zero_tests/jcompat_gates_k0.5.txt`); not resolved",
    "numbers": [
@@ -4718,7 +4743,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 398,
+   "line": 402,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "here. [**Resolved 2026-09-25:** the entry is the platform benchmark",
    "numbers": [
@@ -4730,7 +4755,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 400,
+   "line": 404,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "- **After the readout fixes (2026-09-25)** \u2014 `q3_gate.py` launches every Fourier mode at",
    "numbers": [
@@ -4742,7 +4767,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 403,
+   "line": 407,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "default stays the carrier launch, which gates 2, 9\u201311 need because it is purely angular",
    "numbers": [
@@ -4752,7 +4777,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 409,
+   "line": 413,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "| `q3_gate` u(2) Abelian floor | 0.000\u00b0 \u2192 **0.000\u00b0** | 0.066\u00b0 \u2192 **0.000\u00b0** |",
    "numbers": [
@@ -4765,7 +4790,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 410,
+   "line": 414,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "| `q3_gate` u(3) Abelian floor | 0.000\u00b0 \u2192 **0.000\u00b0** | 0.030\u00b0 \u2192 **0.000\u00b0** |",
    "numbers": [
@@ -4778,7 +4803,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 411,
+   "line": 415,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "| `q3_gate` u(2) split meas / pred (error) | 105.48 / 105.35 (0.125\u00b0) \u2192 **106.33 / 106.33 (0.003\u00b0)** | 99.88 / 99.98 (0.101\u00b0) \u2192 **99.58 / 99.58 (0.001\u00b0)** |",
    "numbers": [
@@ -4799,7 +4824,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 412,
+   "line": 416,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "| `q3_gate` u(3) split meas / pred (error) | 62.31 / 62.48 (0.175\u00b0) \u2192 **60.89 / 60.89 (0.001\u00b0)** | 94.76 / 95.00 (0.242\u00b0) \u2192 **94.09 / 94.10 (0.003\u00b0)** |",
    "numbers": [
@@ -4820,7 +4845,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 413,
+   "line": 417,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "| `q3_gate` u(2) per-order AB / BA | 0.143 / 0.140\u00b0 \u2192 **0.001 / 0.001\u00b0** | 0.311 / 0.222\u00b0 \u2192 **0.001 / 0.001\u00b0** |",
    "numbers": [
@@ -4837,7 +4862,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 414,
+   "line": 418,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "| `q3_gate` u(3) per-order AB / BA | 0.104 / 0.107\u00b0 \u2192 **0.005 / 0.005\u00b0** | 0.202 / 0.240\u00b0 \u2192 **0.004 / 0.004\u00b0** |",
    "numbers": [
@@ -4854,7 +4879,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 415,
+   "line": 419,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "| `q3_gate` purity, carrier readout | 0.951\u20130.953 \u2192 **0.96555** | 0.945\u20130.949 \u2192 **0.96216** |",
    "numbers": [
@@ -4869,7 +4894,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 416,
+   "line": 420,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "| `q3_gate` purity, per-mode readout (new) | \u2014 \u2192 **0.99990** | \u2014 \u2192 **0.9987\u20130.9989** |",
    "numbers": [
@@ -4881,7 +4906,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 417,
+   "line": 421,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "| `q3_gate` carrier predictor (built to fail) | FAIL \u2192 **FAIL** (split errors 5.53\u00b0, 4.09\u00b0) | FAIL \u2192 **FAIL** (1.32\u00b0, 8.42\u00b0) |",
    "numbers": [
@@ -4896,7 +4921,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 418,
+   "line": 422,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "| gate 3 chirality purity (carrier readout) | 0.9834 \u2192 **0.9883** | 0.9818 \u2192 **0.9871** |",
    "numbers": [
@@ -4909,7 +4934,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 419,
+   "line": 423,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "| gate 7 u(2) split / pred; per-order; floor | 101.12 / 100.80; 0.29 / 0.17\u00b0; 0.016\u00b0 \u2192 **101.20 / 100.80; 0.26 / 0.16\u00b0; 0.017\u00b0** | 98.74 / 98.26; 0.27 / 0.23\u00b0; 0.049\u00b0 \u2192 **98.69 / 98.26; 0.25 / 0.20\u00b0; 0.050\u00b0** |",
    "numbers": [
@@ -4938,7 +4963,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 420,
+   "line": 424,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "| gate 7 u(3) split / pred; per-order; floor | 117.92 / 118.29; 0.44 / 0.29\u00b0; 0.014\u00b0 \u2192 **117.86 / 118.29; 0.42 / 0.26\u00b0; 0.014\u00b0** | 106.86 / 107.15; 0.43 / 0.33\u00b0; 0.043\u00b0 \u2192 **106.98 / 107.15; 0.43 / 0.28\u00b0; 0.044\u00b0** |",
    "numbers": [
@@ -4967,7 +4992,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 421,
+   "line": 425,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "| gate 8 Abelian control | 0.0164\u00b0 \u2192 **0.0169\u00b0** | 0.0487\u00b0 \u2192 **0.0498\u00b0** |",
    "numbers": [
@@ -4980,7 +5005,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 423,
+   "line": 427,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "All gates pass at both \u03ba; `q3_gate` now matches its prediction to 0.001\u20130.005\u00b0 (was",
    "numbers": [
@@ -4993,7 +5018,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 424,
+   "line": 428,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "0.10\u20130.31\u00b0). Gates 1, 2, 4\u20136, 9\u201311 are unchanged. `model.py`'s q = 1 gate-7 floor",
    "numbers": [
@@ -5005,7 +5030,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 425,
+   "line": 429,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "(~0.05\u00b0 at \u03ba\\*) is trap 6, not the launch: it reads at a fixed T = 180 with the tail in",
    "numbers": [
@@ -5016,7 +5041,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 426,
+   "line": 430,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "the window, and is 0.00004\u00b0 under clearing (`gate7_readout.py`).",
    "numbers": [
@@ -5026,7 +5051,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 430,
+   "line": 434,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "setup (`shape_zero_tests/gate3_purity_modes.py`): the carrier launch reads 1.00000 at",
    "numbers": [
@@ -5036,7 +5061,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 431,
+   "line": 435,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "t = 0 and 0.98342 / 0.98179 (\u03ba = 0.5 / \u03ba\\*) at t = 60 on the carrier readout, but a",
    "numbers": [
@@ -5048,7 +5073,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 432,
+   "line": 436,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "constant **0.9897 / 0.9901 per mode** \u2014 its true off-branch content; the per-mode launch",
    "numbers": [
@@ -5059,7 +5084,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 433,
+   "line": 437,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "reads **1.00000 per mode** at t = 0 and 0.99982 / 0.99958 at t = 60 (in free",
    "numbers": [
@@ -5072,7 +5097,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 435,
+   "line": 439,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "and 0.98829 / 0.98715 on the carrier readout, constant in time.",
    "numbers": [
@@ -5083,7 +5108,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 437,
+   "line": 441,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "59.86\u00b0 / 59.84\u00b0 and u(3) 65.12\u00b0 / 64.97\u00b0 orderings, `INPUT_LEDGER.md` \u00a73), and",
    "numbers": [
@@ -5096,7 +5121,261 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 446,
+   "line": 445,
+   "section": "3. Inter-node coupling, and the gauge class",
+   "text": "**CORRECTION (2026-09-25) \u2014 the scope of J-compatibility at \u03ba\\*.** \u03ba \u2265 \u03ba\\* closes the",
+   "numbers": [
+    "2026",
+    "09",
+    "25"
+   ],
+   "status": []
+  },
+  {
+   "file": "./00_START_HERE/MODEL_SPEC.md",
+   "line": 454,
+   "section": "3. Inter-node coupling, and the gauge class",
+   "text": "**k = 0.492 and k = 1.255** (`shape_zero_tests/persist_resonance.py`). **Confirmed by",
+   "numbers": [
+    "0.492",
+    "1.255"
+   ],
+   "status": [
+    "VERIFIED"
+   ]
+  },
+  {
+   "file": "./00_START_HERE/MODEL_SPEC.md",
+   "line": 456,
+   "section": "3. Inter-node coupling, and the gauge class",
+   "text": "a213069): run R1 (N = 656, k = 2\u03c0\u00b7131/656, A = 0.01) grows the b-mode linearly with",
+   "numbers": [
+    "656",
+    "131/656",
+    "0.01"
+   ],
+   "status": []
+  },
+  {
+   "file": "./00_START_HERE/MODEL_SPEC.md",
+   "line": 457,
+   "section": "3. Inter-node coupling, and the gauge class",
+   "text": "slope **0.991 \u00d7 rA\u00b2**, r = \u221a2/(4(2\u03c9_b(2k) \u2212 \u03ba)); the detuned controls R2 (\u03ba\\*, \u03c0/2),",
+   "numbers": [
+    "0.991"
+   ],
+   "status": []
+  },
+  {
+   "file": "./00_START_HERE/MODEL_SPEC.md",
+   "line": 462,
+   "section": "3. Inter-node coupling, and the gauge class",
+   "text": "**FINDING (2026-09-25) \u2014 persistence at every wavelength: what the model permits.**",
+   "numbers": [
+    "2026",
+    "09",
+    "25"
+   ],
+   "status": []
+  },
+  {
+   "file": "./00_START_HERE/MODEL_SPEC.md",
+   "line": 479,
+   "section": "3. Inter-node coupling, and the gauge class",
+   "text": "grew its sidebands \u00d716 at p = 1.398 against the predicted 1.341.",
+   "numbers": [
+    "16",
+    "1.398"
+   ],
+   "status": []
+  },
+  {
+   "file": "./00_START_HERE/MODEL_SPEC.md",
+   "line": 485,
+   "section": "3. Inter-node coupling, and the gauge class",
+   "text": "| | c/\u221a5 = 0.045 | 0.22 | **0.45 (c = 1)** | 0.89 | 1.34 |",
+   "numbers": [
+    "0.045",
+    "0.22",
+    "0.45",
+    "0.89",
+    "1.34"
+   ],
+   "status": []
+  },
+  {
+   "file": "./00_START_HERE/MODEL_SPEC.md",
+   "line": 487,
+   "section": "3. Inter-node coupling, and the gauge class",
+   "text": "| q = 1 | [0.26, 1.02] \u222a [1.24, 1.68] \u222a [1.92, \u221e) | [2.52, \u221e) | [3.15, \u221e) | [4.10, \u221e) | [4.90, 7.50] |",
+   "numbers": [
+    "0.26",
+    "1.02",
+    "1.24",
+    "1.68",
+    "1.92",
+    "2.52",
+    "3.15",
+    "4.10",
+    "4.90",
+    "7.50"
+   ],
+   "status": []
+  },
+  {
+   "file": "./00_START_HERE/MODEL_SPEC.md",
+   "line": 491,
+   "section": "3. Inter-node coupling, and the gauge class",
+   "text": "12 at q = 3.) **At q = 3, c = 1: \u03ba \u2208 [4.9, 7.5].** The lower side is 1\u21923 b\u2192aaa",
+   "numbers": [
+    "12"
+   ],
+   "status": []
+  },
+  {
+   "file": "./00_START_HERE/MODEL_SPEC.md",
+   "line": 493,
+   "section": "3. Inter-node coupling, and the gauge class",
+   "text": "own second harmonic, 2\u03c9_a(k) = \u03c9_a(2k) \u2014 **confirmed by S1** (\u03ba = 9.28, exactly",
+   "numbers": [
+    "9.28"
+   ],
+   "status": [
+    "VERIFIED"
+   ]
+  },
+  {
+   "file": "./00_START_HERE/MODEL_SPEC.md",
+   "line": 494,
+   "section": "3. Inter-node coupling, and the gauge class",
+   "text": "resonant: slope 0.9986 \u00d7 rA\u00b2; S2 at \u03ba = 6 bounded as predicted). The window",
+   "numbers": [
+    "0.9986"
+   ],
+   "status": []
+  },
+  {
+   "file": "./00_START_HERE/MODEL_SPEC.md",
+   "line": 495,
+   "section": "3. Inter-node coupling, and the gauge class",
+   "text": "**vanishes for c/\u221a5 between 0.45 and 0.89** (q = 3). **Inside the window the nonlinear",
+   "numbers": [
+    "0.45",
+    "0.89"
+   ],
+   "status": []
+  },
+  {
+   "file": "./00_START_HERE/MODEL_SPEC.md",
+   "line": 497,
+   "section": "3. Inter-node coupling, and the gauge class",
+   "text": "**\u03ba\\* = 0.972 lies outside every window at c = 1**; at q = 1 it sits inside the band",
+   "numbers": [
+    "0.972"
+   ],
+   "status": []
+  },
+  {
+   "file": "./00_START_HERE/MODEL_SPEC.md",
+   "line": 498,
+   "section": "3. Inter-node coupling, and the gauge class",
+   "text": "0.90 \u2272 \u03ba \u2272 2.42 where a+a\u2194b is open.",
+   "numbers": [
+    "0.90",
+    "2.42"
+   ],
+   "status": [
+    "OPEN"
+   ]
+  },
+  {
+   "file": "./00_START_HERE/MODEL_SPEC.md",
+   "line": 505,
+   "section": "3. Inter-node coupling, and the gauge class",
+   "text": "the single point \u03b2 = 0.06285 (linear dispersion). No bound on \u03b2. The rough check",
+   "numbers": [
+    "0.06285"
+   ],
+   "status": []
+  },
+  {
+   "file": "./00_START_HERE/MODEL_SPEC.md",
+   "line": 506,
+   "section": "3. Inter-node coupling, and the gauge class",
+   "text": "2\u03c9_min > \u03c9_max (c < 3\u221a5/4 in 1-D, \u221a5/4 in 3-D) is necessary, not sufficient:",
+   "numbers": [
+    "5/4",
+    "5/4"
+   ],
+   "status": []
+  },
+  {
+   "file": "./00_START_HERE/MODEL_SPEC.md",
+   "line": 508,
+   "section": "3. Inter-node coupling, and the gauge class",
+   "text": "with margin 1.29). The bound on c/\u221a5 is the window's disappearance above.",
+   "numbers": [
+    "1.29"
+   ],
+   "status": []
+  },
+  {
+   "file": "./00_START_HERE/MODEL_SPEC.md",
+   "line": 510,
+   "section": "3. Inter-node coupling, and the gauge class",
+   "text": "extrema. \u03ba resolution: 0.02\u20130.05 at q = 1, 0.1 at q = 3. Channels are counted by linear",
+   "numbers": [
+    "0.02",
+    "0.05"
+   ],
+   "status": []
+  },
+  {
+   "file": "./00_START_HERE/MODEL_SPEC.md",
+   "line": 513,
+   "section": "3. Inter-node coupling, and the gauge class",
+   "text": "committed criterion (\u00d71.18 among sidebands with |D| > 0.05) but showed finite-amplitude",
+   "numbers": [
+    "1.18",
+    "0.05"
+   ],
+   "status": []
+  },
+  {
+   "file": "./00_START_HERE/MODEL_SPEC.md",
+   "line": 514,
+   "section": "3. Inter-node coupling, and the gauge class",
+   "text": "**modulational growth** (\u00d710.7 at p = 0.0096), phase-matched by the nonlinear shift \u2014 a",
+   "numbers": [
+    "0.0096"
+   ],
+   "status": [
+    "VERIFIED"
+   ]
+  },
+  {
+   "file": "./00_START_HERE/MODEL_SPEC.md",
+   "line": 516,
+   "section": "3. Inter-node coupling, and the gauge class",
+   "text": "criterion (\"no b-mode grows more than 10\u00d7 above its initial noise\") was **ill-posed**",
+   "numbers": [
+    "10"
+   ],
+   "status": []
+  },
+  {
+   "file": "./00_START_HERE/MODEL_SPEC.md",
+   "line": 519,
+   "section": "3. Inter-node coupling, and the gauge class",
+   "text": "b-branch flat at 4.5\u00d710\u207b\u2077 A).",
+   "numbers": [
+    "10"
+   ],
+   "status": []
+  },
+  {
+   "file": "./00_START_HERE/MODEL_SPEC.md",
+   "line": 526,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "| 4 | 16 | u(4) | \u2014 |",
    "numbers": [
@@ -5106,7 +5385,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 447,
+   "line": 527,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "| 5 | 25 | u(5) | \u2014 |",
    "numbers": [
@@ -5116,7 +5395,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 449,
+   "line": 529,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "**MACHINE-VERIFIED (Lean 4, Prove2Me, 2026-09-23).** Two results are now proved",
    "numbers": [
@@ -5131,7 +5410,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 458,
+   "line": 538,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "| 4b | on a uniform lattice with **any number of axes**, reversing the wave along the propagation axis changes its frequency by exactly **2\u03b2c\u00b7sin k\u2080** \u2014 **independent of the stiffness and of every transverse wavenumber**",
    "numbers": [
@@ -5143,7 +5422,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 459,
+   "line": 539,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "| 5 | a Steiner triple system with at least one point admitting a **role colouring has exactly 7 points** (the count, not that it is the Fano plane) | **APPROVED \u2014 published** 2026-09-24; first solved by another solver, ",
    "numbers": [
@@ -5155,7 +5434,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 460,
+   "line": 540,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "| 6 | **every seven-point Steiner triple system is the Fano plane** \u2014 so the role postulates force the Fano plane; defines IsFano and imports mission 5's STS and fano | **APPROVED \u2014 published** 2026-09-24 (moderator Shuz",
    "numbers": [
@@ -5167,7 +5446,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 471,
+   "line": 551,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "J.** [2026-09-25: now answered by a principle \u2014 J-compatibility required at every",
    "numbers": [
@@ -5179,7 +5458,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 488,
+   "line": 568,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "**associator 1.1\u00d710\u207b\u00b9\u2076**: nothing is carried. On the full algebra the associator",
    "numbers": [
@@ -5189,7 +5468,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 489,
+   "line": 569,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "is **0.81**. *The associator is the observation term.*",
    "numbers": [
@@ -5199,7 +5478,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 493,
+   "line": 573,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "matrices, dimension 36, not 16); selecting a unit splits \ud835\udd46 = \u2102 \u2295 \u2102\u00b3 and the class drops to",
    "numbers": [
@@ -5210,7 +5489,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 494,
+   "line": 574,
    "section": "3. Inter-node coupling, and the gauge class",
    "text": "**u(1) \u2295 u(3)**, dimension 10 = 1 + 9, with the \u2102\u00b3 block exactly **9**.",
    "numbers": [
@@ -5220,7 +5499,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 533,
+   "line": 613,
    "section": "4b. The residual \u2014 what the projection leaves behind",
    "text": "projects every level \u2265 16 onto \ud835\udd46. The **residual** is what does not survive the",
    "numbers": [
@@ -5230,7 +5509,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 546,
+   "line": 626,
    "section": "4b. The residual \u2014 what the projection leaves behind",
    "text": "| **exact potential** | V = \u22122 log(1 \u2212 4B) | matches \u2212log\\|det L\\| to **8.9\u00d710\u207b\u00b9\u2075** |",
    "numbers": [
@@ -5242,7 +5521,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 547,
+   "line": 627,
    "section": "4b. The residual \u2014 what the projection leaves behind",
    "text": "| range | B \u2208 [0, \u00bc] | measured 0.0026\u20130.2491 over S\u00b9\u2075 |",
    "numbers": [
@@ -5253,7 +5532,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 554,
+   "line": 634,
    "section": "4b. The residual \u2014 what the projection leaves behind",
    "text": "(0, 0.80, 1.00, 1.20); in the interior: (0.85, 0.91, 1.03, 1.09).",
    "numbers": [
@@ -5269,7 +5548,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 567,
+   "line": 647,
    "section": "4b. The residual \u2014 what the projection leaves behind",
    "text": "| **even** | shift ~10\u207b\u2077 at \u03b5 = 0.001, sign-changing \u2014 integrator noise | **unconstrained at any magnitude** |",
    "numbers": [
@@ -5280,7 +5559,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 569,
+   "line": 649,
    "section": "4b. The residual \u2014 what the projection leaves behind",
    "text": "The odd prohibition is **stable under a 40\u00d7 even background** (shift changes by",
    "numbers": [
@@ -5290,7 +5569,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 576,
+   "line": 656,
    "section": "4b.2 A-2 CLOSED \u2014 the torsion class is identified",
    "text": "`residual_selection_rule.py` returned 0.000000 for every case *including the",
    "numbers": [
@@ -5300,7 +5579,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 577,
+   "line": 657,
    "section": "4b.2 A-2 CLOSED \u2014 the torsion class is identified",
    "text": "baseline*, which should have read \u22120.100 \u2014 a dead instrument, not a null result).",
    "numbers": [
@@ -5310,7 +5589,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 581,
+   "line": 661,
    "section": "4b.2 A-2 CLOSED \u2014 the torsion class is identified",
    "text": "| **baseline \u0394\u03c9** | **0.100020**, ratio 1.0002 \u2014 instrument confirmed live |",
    "numbers": [
@@ -5323,7 +5602,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 582,
+   "line": 662,
    "section": "4b.2 A-2 CLOSED \u2014 the torsion class is identified",
    "text": "| **even** residual, f = \u03b5\u00b7x\u00b3 | shift 10\u207b\u2076\u201310\u207b\u2075 \u2014 **\u0394\u03c9 stays pinned** |",
    "numbers": [
@@ -5334,7 +5613,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 583,
+   "line": 663,
    "section": "4b.2 A-2 CLOSED \u2014 the torsion class is identified",
    "text": "| **odd** residual, f = \u03b5\u00b7(x\u208a \u2212 x\u208b)\u00b7x\u00b2 | shift **+0.61** at \u03b5 = 0.005 \u2014 **breaks the pin** |",
    "numbers": [
@@ -5345,7 +5624,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 602,
+   "line": 682,
    "section": "4b.1 The coupling form \u2014 determined, not chosen",
    "text": "one level up.** The node carries a level-\u226516 element; its octonionic part is the",
    "numbers": [
@@ -5355,7 +5634,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 614,
+   "line": 694,
    "section": "4b.1 The coupling form \u2014 determined, not chosen",
    "text": "| **does no net work** (conservativity) | built from **velocity** with a skew generator, exactly as the D4 gyroscopic \u03ba\ud835\udd41v term | F\u00b7v = **2.2\u00d710\u207b\u00b9\u2075** |",
    "numbers": [
@@ -5365,7 +5644,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 615,
+   "line": 695,
    "section": "4b.1 The coupling form \u2014 determined, not chosen",
    "text": "| **norm-preserving** | composition returns when one factor is octonionic | **3.3\u00d710\u207b\u00b9\u2076**, and exactly **0.00e+00** at D64, D256, D1024 |",
    "numbers": [
@@ -5376,7 +5655,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 616,
+   "line": 696,
    "section": "4b.1 The coupling form \u2014 determined, not chosen",
    "text": "| **acts non-trivially on B** | the action moves the residual | changed in **200/200**, mean 0.046, max 0.144 |",
    "numbers": [
@@ -5388,7 +5667,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 627,
+   "line": 707,
    "section": "4b.1 The coupling form \u2014 determined, not chosen",
    "text": "**velocity**, F\u00b7v = 2.2\u00d710\u207b\u00b9\u2075, which is the same mechanism as the D4 gyroscopic",
    "numbers": [
@@ -5398,7 +5677,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 634,
+   "line": 714,
    "section": "4b.1 The coupling form \u2014 determined, not chosen",
    "text": "| 0.00 | 1.4\u00d710\u207b\u2077 | inert to **4.5\u00d710\u207b\u00b9\u2079** \u2014 reduces to the residual-free model |",
    "numbers": [
@@ -5410,7 +5689,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 635,
+   "line": 715,
    "section": "4b.1 The coupling form \u2014 determined, not chosen",
    "text": "| 0.05 | 1.4\u00d710\u207b\u2077 | 0 \u2192 0.0204 |",
    "numbers": [
@@ -5422,7 +5701,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 636,
+   "line": 716,
    "section": "4b.1 The coupling form \u2014 determined, not chosen",
    "text": "| 0.20 | 1.6\u00d710\u207b\u2077 | 0 \u2192 0.0200 |",
    "numbers": [
@@ -5434,7 +5713,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 638,
+   "line": 718,
    "section": "4b.1 The coupling form \u2014 determined, not chosen",
    "text": "**OPEN ANOMALY, recorded not buried:** B lands near 0.020 at both C_r = 0.05 and",
    "numbers": [
@@ -5447,7 +5726,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 639,
+   "line": 719,
    "section": "4b.1 The coupling form \u2014 determined, not chosen",
    "text": "C_r = 0.20 \u2014 a fourfold change in coupling producing nearly the same result. That",
    "numbers": [
@@ -5457,7 +5736,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 685,
+   "line": 765,
    "section": "4c.1 \u210f \u2014 the flux quantum is forced",
    "text": "2. that forces **tr(J\u1d40J) = 4** \u2014 measured across 400 sampled J, **zero spread**",
    "numbers": [
@@ -5469,7 +5748,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 691,
+   "line": 771,
    "section": "4c.1 \u210f \u2014 the flux quantum is forced",
    "text": "|J\u00b2 + I| = 0.75, 3.0, 48.0 \u2014 it **breaks** J\u00b2 = \u2212I. You cannot rescale to a",
    "numbers": [
@@ -5479,7 +5758,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 697,
+   "line": 777,
    "section": "4c.1 \u210f \u2014 the flux quantum is forced",
    "text": "to **5.3\u00d710\u207b\u00b9\u2076**, so there is exactly one invariant antisymmetric form and one",
    "numbers": [
@@ -5489,7 +5768,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 711,
+   "line": 791,
    "section": "4c.4 \u03b1 \u2014 searched hard, not derivable, and the reason is structural",
    "text": "| group-theoretic normalisation | **OWNED** \u2014 sin\u00b2\u03b8_W = 3/8 exact (Tr T\u2083\u00b2 = 2, Tr Q\u00b2 = 16/3), so \u03b1 = \u03b1_GUT \u00d7 5/8 at unification |",
    "numbers": [
@@ -5501,7 +5780,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 722,
+   "line": 802,
    "section": "4c.4 \u03b1 \u2014 searched hard, not derivable, and the reason is structural",
    "text": "and already an **input** (\u00a72d of the ledger). Even the B-2 candidate \u03b2 = 1/4",
    "numbers": [
@@ -5511,7 +5790,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 723,
+   "line": 803,
    "section": "4c.4 \u03b1 \u2014 searched hard, not derivable, and the reason is structural",
    "text": "is off from \u03b1 = 1/137.036 by a factor of 34, and nothing identifies a lattice",
    "numbers": [
@@ -5522,7 +5801,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 724,
+   "line": 804,
    "section": "4c.4 \u03b1 \u2014 searched hard, not derivable, and the reason is structural",
    "text": "gyroscopic ratio with a quantum field theory coupling. [**CORRECTED 2026-09-25:**",
    "numbers": [
@@ -5534,7 +5813,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 730,
+   "line": 810,
    "section": "4c.4 \u03b1 \u2014 searched hard, not derivable, and the reason is structural",
    "text": "\u00a72d #7 (chosen, 0.05, no derivation). The comparison of **1/4 with \u03b1 concerns \u03b6**,",
    "numbers": [
@@ -5545,7 +5824,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 737,
+   "line": 817,
    "section": "4c.4 \u03b1 \u2014 searched hard, not derivable, and the reason is structural",
    "text": "| rarity / inverse-probability | 1/p = 8 from 16-of-128; reaching 10\u00b9\u2077 needs ~19 compounding events, and nothing selects 19 |",
    "numbers": [
@@ -5558,7 +5837,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 738,
+   "line": 818,
    "section": "4c.4 \u03b1 \u2014 searched hard, not derivable, and the reason is structural",
    "text": "| thermodynamic penalty | exp(42) = 1.74\u00d710\u00b9\u2078 against a 10\u00b9\u2077 target \u2014 **see the warning below** |",
    "numbers": [
@@ -5569,7 +5848,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 741,
+   "line": 821,
    "section": "4c.4 \u03b1 \u2014 searched hard, not derivable, and the reason is structural",
    "text": "**\u26a0 THE exp(42) NEAR-MISS \u2014 recorded because it looked good.** 42 is \u2016c\u2016\u00b2, a",
    "numbers": [
@@ -5582,7 +5861,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 742,
+   "line": 822,
    "section": "4c.4 \u03b1 \u2014 searched hard, not derivable, and the reason is structural",
    "text": "real quantity in the model, and exp(42) lands within a factor of 17 of the",
    "numbers": [
@@ -5593,7 +5872,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 755,
+   "line": 835,
    "section": "4c.4a The modular decomposition \u2014 computed, and still open",
    "text": "**F_role \u2014 enumerated from the incidence data.** Base set: 3/8, 1, 2, 3, 4, 7, 8,",
    "numbers": [
@@ -5603,7 +5882,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 756,
+   "line": 836,
    "section": "4c.4a The modular decomposition \u2014 computed, and still open",
    "text": "9, 14, 16, 21, 27, 28, 42, 49, 56, 128. All pairwise products and quotients plus",
    "numbers": [
@@ -5620,7 +5899,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 757,
+   "line": 837,
    "section": "4c.4a The modular decomposition \u2014 computed, and still open",
    "text": "a sample of triples, filtered to (0.5, 2000). A large discrete set results, and",
    "numbers": [
@@ -5630,7 +5909,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 758,
+   "line": 838,
    "section": "4c.4a The modular decomposition \u2014 computed, and still open",
    "text": "several land near 137 \u2014 **128, 147, 168, 189**. **None is singled out by any rule",
    "numbers": [
@@ -5644,7 +5923,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 762,
+   "line": 842,
    "section": "4c.4a The modular decomposition \u2014 computed, and still open",
    "text": "**\u26a0 128 is in the model** \u2014 it is the orientation count, of which 16 are valid \u2014",
    "numbers": [
@@ -5655,7 +5934,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 763,
+   "line": 843,
    "section": "4c.4a The modular decomposition \u2014 computed, and still open",
    "text": "and it sits 7% from 137.036. Like exp(42), it is *available* and *close*, and",
    "numbers": [
@@ -5665,7 +5944,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 784,
+   "line": 864,
    "section": "4c.4b CLOSED \u2014 \u03b1 is an input, not a prediction",
    "text": "| **topological integer from incidence data** | **blocked** \u2014 **137 is prime.** The model's integers factor over {2,3,7}, so **zero** products of up to three reach it. Sums reach it in several arbitrary ways (9+128, 2+7+",
    "numbers": [
@@ -5679,7 +5958,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 786,
+   "line": 866,
    "section": "4c.4b CLOSED \u2014 \u03b1 is an input, not a prediction",
    "text": "| an independent intermediate scale | **blocked** \u2014 \u03c9, \u2113, \u03bc, \u2113_f are all *inputs*; every derived quantity (\u03ba = 0.0799 [retracted; corrected \u22120.0187, \u00a75], 3/8, 2, 6, 42) is dimensionless. No derived scale exists |",
    "numbers": [
@@ -5694,7 +5973,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 791,
+   "line": 871,
    "section": "4c.4b CLOSED \u2014 \u03b1 is an input, not a prediction",
    "text": "points, 3 per line, 16 of 128, 42 constants \u2014 and every one factors over small",
    "numbers": [
@@ -5706,7 +5985,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 792,
+   "line": 872,
    "section": "4c.4b CLOSED \u2014 \u03b1 is an input, not a prediction",
    "text": "primes. **137 cannot be built from them multiplicatively.**",
    "numbers": [
@@ -5716,7 +5995,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 895,
+   "line": 975,
    "section": "4c.3 G \u2014 dimensionally sound, one number owed",
    "text": "imaginary products destroys composition (1.4\u00d710\u207b\u00b9 at 1% against 3.6\u00d710\u207b\u00b9\u2075 at",
    "numbers": [
@@ -5727,7 +6006,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 896,
+   "line": 976,
    "section": "4c.3 G \u2014 dimensionally sound, one number owed",
    "text": "exact), and the 16 valid structures are discrete. That forbids the size",
    "numbers": [
@@ -5737,7 +6016,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1041,
+   "line": 1121,
    "section": "4c.3 G \u2014 dimensionally sound, one number owed",
    "text": "imaginary products destroys composition (1.4\u00d710\u207b\u00b9 at 1% against 3.6\u00d710\u207b\u00b9\u2075 at",
    "numbers": [
@@ -5748,7 +6027,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1042,
+   "line": 1122,
    "section": "4c.3 G \u2014 dimensionally sound, one number owed",
    "text": "exact), and the 16 valid structures are discrete. That forbids the size",
    "numbers": [
@@ -5758,7 +6037,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1113,
+   "line": 1193,
    "section": "RESOLVED \u2014 the 1-D Bloch map DOES hold at q = 3",
    "text": "**Retraction.** An earlier version of this section reported a stable ~10\u201312\u00d7",
    "numbers": [
@@ -5771,7 +6050,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1123,
+   "line": 1203,
    "section": "RESOLVED \u2014 the 1-D Bloch map DOES hold at q = 3",
    "text": "| **full slab** | yes | **+0.885** | **+0.884** | **1.7\u00b0** |",
    "numbers": [
@@ -5782,7 +6061,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1124,
+   "line": 1204,
    "section": "RESOLVED \u2014 the 1-D Bloch map DOES hold at q = 3",
    "text": "| tube r = 4 | yes | +0.582 | +0.884 | 21.5\u00b0 |",
    "numbers": [
@@ -5793,7 +6072,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1125,
+   "line": 1205,
    "section": "RESOLVED \u2014 the 1-D Bloch map DOES hold at q = 3",
    "text": "| tube r = 2.5 | yes | +0.270 | +0.884 | 45.1\u00b0 |",
    "numbers": [
@@ -5804,7 +6083,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1133,
+   "line": 1213,
    "section": "RESOLVED \u2014 the 1-D Bloch map DOES hold at q = 3",
    "text": "tube radius \u2014 0.885 (slab) \u2192 0.582 (r=4) \u2192 0.270 (r=2.5) \u2014 which is exactly",
    "numbers": [
@@ -5816,7 +6095,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1146,
+   "line": 1226,
    "section": "Gate 7 at q = 3 \u2014 provisional pass",
    "text": "| u(2), g = 0.12/0.08 | **3.1\u00b0 / 3.2\u00b0** | 30.2\u00b0 | 24.2\u00b0 | 6.0\u00b0 |",
    "numbers": [
@@ -5827,7 +6106,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1147,
+   "line": 1227,
    "section": "Gate 7 at q = 3 \u2014 provisional pass",
    "text": "| u(3), g = 0.15/0.15 | **3.4\u00b0 / 3.0\u00b0** | 61.4\u00b0 | 55.7\u00b0 | 5.7\u00b0 |",
    "numbers": [
@@ -5838,7 +6117,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1150,
+   "line": 1230,
    "section": "Gate 7 at q = 3 \u2014 provisional pass",
    "text": "same quality as the single-segment test \u2014 with drift ~10\u207b\u2079 and",
    "numbers": [
@@ -5848,7 +6127,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1151,
+   "line": 1231,
    "section": "Gate 7 at q = 3 \u2014 provisional pass",
    "text": "**non-commutativity clearly present** (splits of 30\u00b0 and 61\u00b0, not zero).",
    "numbers": [
@@ -5859,7 +6138,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1164,
+   "line": 1244,
    "section": "Gate 7 at q = 3 \u2014 provisional pass",
    "text": "(`run_until_exit`), which fires with **98% of the packet still inside the",
    "numbers": [
@@ -5869,7 +6148,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1166,
+   "line": 1246,
    "section": "Gate 7 at q = 3 \u2014 provisional pass",
    "text": "extends 10 further. Rerun on a 320\u00d712\u00d712 full slab, reading out only once every",
    "numbers": [
@@ -5882,7 +6161,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1167,
+   "line": 1247,
    "section": "Gate 7 at q = 3 \u2014 provisional pass",
    "text": "window holds < 10\u207b\u2076 of the weight:",
    "numbers": [
@@ -5892,7 +6171,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1171,
+   "line": 1251,
    "section": "Gate 7 at q = 3 \u2014 provisional pass",
    "text": "| u(2) | centroid | 98% | 103.21\u00b0 | 100.80\u00b0 | 2.41\u00b0 | 0.977\u00b0 | 4.59\u00b0 / 3.50\u00b0 |",
    "numbers": [
@@ -5908,7 +6187,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1172,
+   "line": 1252,
    "section": "Gate 7 at q = 3 \u2014 provisional pass",
    "text": "| u(2) | **clearing** | < 10\u207b\u2076 | 105.89\u00b0 | 100.80\u00b0 | **5.09\u00b0** | **0.000\u00b0** | **3.01\u00b0 / 3.62\u00b0** |",
    "numbers": [
@@ -5924,7 +6203,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1173,
+   "line": 1253,
    "section": "Gate 7 at q = 3 \u2014 provisional pass",
    "text": "| u(3) | centroid | 98% | 64.91\u00b0 | 64.97\u00b0 | 0.06\u00b0 | 1.049\u00b0 | 2.86\u00b0 / 1.87\u00b0 |",
    "numbers": [
@@ -5940,7 +6219,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1174,
+   "line": 1254,
    "section": "Gate 7 at q = 3 \u2014 provisional pass",
    "text": "| u(3) | **clearing** | < 10\u207b\u2076 | 60.54\u00b0 | 64.97\u00b0 | **4.43\u00b0** | **0.000\u00b0** | **5.21\u00b0 / 5.23\u00b0** |",
    "numbers": [
@@ -5956,7 +6235,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1177,
+   "line": 1257,
    "section": "Gate 7 at q = 3 \u2014 provisional pass",
    "text": "the operating point \u03ba\\* `q3_gate.py` reads 0.066\u00b0 / 0.030\u00b0 \u2014 open, \u00a79] [**RESTORED",
    "numbers": [
@@ -5969,7 +6248,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1178,
+   "line": 1258,
    "section": "Gate 7 at q = 3 \u2014 provisional pass",
    "text": "2026-09-25: exactly 0 at q = 3, at \u03ba\\* as at \u03ba = 0.5** \u2014 `q3_gate.py` reads 0.000\u00b0 for u(2)",
    "numbers": [
@@ -5982,7 +6261,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1179,
+   "line": 1259,
    "section": "Gate 7 at q = 3 \u2014 provisional pass",
    "text": "and u(3) at both. The 0.066\u00b0 / 0.030\u00b0 was a readout-timing artefact: a carrier launch (every Fourier mode at the carrier \u03c9) leaves off-branch content that makes the carrier-\u03c9 readout oscillate in time \u2014 up to 0.066\u00b0 (u(2",
    "numbers": [
@@ -5999,7 +6278,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1184,
+   "line": 1264,
    "section": "Gate 7 at q = 3 \u2014 provisional pass",
    "text": "final internal state. **The centroid readout's good agreement (u(3): 0.06\u00b0) was a",
    "numbers": [
@@ -6009,7 +6288,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1186,
+   "line": 1266,
    "section": "Gate 7 at q = 3 \u2014 provisional pass",
    "text": "**2.70\u00b0** after clearing. **The ~4\u20135\u00b0 split error is real and intrinsic** to the",
    "numbers": [
@@ -6019,7 +6298,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1191,
+   "line": 1271,
    "section": "Gate 7 at q = 3 \u2014 provisional pass",
    "text": "never saved, so the numbers below and the ~30\u00b0 u(2) split quoted elsewhere",
    "numbers": [
@@ -6029,7 +6308,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1193,
+   "line": 1273,
    "section": "Gate 7 at q = 3 \u2014 provisional pass",
    "text": "requirements; its u(2) split is ~106\u00b0, not ~30\u00b0, so it is **not** a",
    "numbers": [
@@ -6040,7 +6319,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1197,
+   "line": 1277,
    "section": "Gate 7 at q = 3 \u2014 provisional pass",
    "text": "segment rotation over the packet's actual wavenumber content (17,112 Fourier",
    "numbers": [
@@ -6051,7 +6330,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1204,
+   "line": 1284,
    "section": "Gate 7 at q = 3 \u2014 provisional pass",
    "text": "| single segment, u(2) | \u2014 | 2.70\u00b0 | **0.11\u00b0** |",
    "numbers": [
@@ -6062,7 +6341,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1205,
+   "line": 1285,
    "section": "Gate 7 at q = 3 \u2014 provisional pass",
    "text": "| u(2) per-order AB / BA | \u2014 | 3.01\u00b0 / 3.62\u00b0 | **0.08\u00b0 / 0.14\u00b0** |",
    "numbers": [
@@ -6075,7 +6354,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1206,
+   "line": 1286,
    "section": "Gate 7 at q = 3 \u2014 provisional pass",
    "text": "| **u(2) split** | 105.89\u00b0 | 5.09\u00b0 (pred 100.80\u00b0) | **0.04\u00b0** (pred 105.85\u00b0) |",
    "numbers": [
@@ -6089,7 +6368,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1207,
+   "line": 1287,
    "section": "Gate 7 at q = 3 \u2014 provisional pass",
    "text": "| u(3) per-order AB / BA | \u2014 | 5.21\u00b0 / 5.23\u00b0 | **0.10\u00b0 / 0.10\u00b0** |",
    "numbers": [
@@ -6102,7 +6381,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1208,
+   "line": 1288,
    "section": "Gate 7 at q = 3 \u2014 provisional pass",
    "text": "| **u(3) split** | 60.54\u00b0 | 4.43\u00b0 (pred 64.97\u00b0) | **0.17\u00b0** (pred 60.71\u00b0) |",
    "numbers": [
@@ -6116,7 +6395,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1210,
+   "line": 1290,
    "section": "Gate 7 at q = 3 \u2014 provisional pass",
    "text": "[The tables in this subsection are at \u03ba = 0.5 \u2014 superseded by the change of operating point (2026-09-25), not retracted. `q3_gate.py` at \u03ba\\*:",
    "numbers": [
@@ -6131,7 +6410,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1211,
+   "line": 1291,
    "section": "Gate 7 at q = 3 \u2014 provisional pass",
    "text": "u(2) 99.88 / 99.98\u00b0, u(3) 94.76 / 95.00\u00b0 \u2014 \u00a73, \"ADOPTED\".] [After the readout fix",
    "numbers": [
@@ -6144,7 +6423,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1212,
+   "line": 1292,
    "section": "Gate 7 at q = 3 \u2014 provisional pass",
    "text": "(per-mode launch, one readout time per pair): u(2) 99.58 / 99.58\u00b0, u(3) 94.09 / 94.10\u00b0 at",
    "numbers": [
@@ -6157,7 +6436,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1213,
+   "line": 1293,
    "section": "Gate 7 at q = 3 \u2014 provisional pass",
    "text": "\u03ba\\*; 106.33 / 106.33\u00b0 and 60.89 / 60.89\u00b0 at \u03ba = 0.5; per-order \u2264 0.005\u00b0, floors 0.000\u00b0 \u2014",
    "numbers": [
@@ -6172,7 +6451,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1214,
+   "line": 1294,
    "section": "Gate 7 at q = 3 \u2014 provisional pass",
    "text": "the spectrum-averaged prediction now agrees to 0.001\u20130.005\u00b0, not 0.04\u20130.17\u00b0.]",
    "numbers": [
@@ -6185,7 +6464,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1216,
+   "line": 1296,
    "section": "Gate 7 at q = 3 \u2014 provisional pass",
    "text": "Retained weight: all but 5\u00d710\u207b\u00b9\u00b9. **The product U_B\u00b7U_A works when taken mode by",
    "numbers": [
@@ -6195,7 +6474,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1220,
+   "line": 1300,
    "section": "Gate 7 at q = 3 \u2014 provisional pass",
    "text": "modes, which is why the carrier approximation suffices there (0.2\u20130.45\u00b0).",
    "numbers": [
@@ -6205,7 +6484,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1226,
+   "line": 1306,
    "section": "Gate 7 at q = 3 \u2014 provisional pass",
    "text": "0.39\u00b0 were readout timing (exactly 0 under clearing); the split error was the",
    "numbers": [
@@ -6215,7 +6494,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1227,
+   "line": 1307,
    "section": "Gate 7 at q = 3 \u2014 provisional pass",
    "text": "carrier approximation (0.04\u20130.17\u00b0 when averaged). **The gauge sector is",
    "numbers": [
@@ -6226,7 +6505,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1253,
+   "line": 1333,
    "section": "Gate 7 reformulated \u2014 control-subtracted, and it passes",
    "text": "| non-commuting split | ~30\u00b0 | ~60\u00b0 |",
    "numbers": [
@@ -6237,7 +6516,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1255,
+   "line": 1335,
    "section": "Gate 7 reformulated \u2014 control-subtracted, and it passes",
    "text": "| **non-commutative excess** | **~29\u00b0** | **~59\u00b0** |",
    "numbers": [
@@ -6248,7 +6527,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1262,
+   "line": 1342,
    "section": "Gate 7 reformulated \u2014 control-subtracted, and it passes",
    "text": "**Both conditions met, with a 20\u00d7 separation.** Gate 7 measures dynamical",
    "numbers": [
@@ -6258,7 +6537,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1268,
+   "line": 1348,
    "section": "Gate 7 reformulated \u2014 control-subtracted, and it passes",
    "text": "mixture either way). So 29\u00b0/59\u00b0 is a **detection** of non-commutativity, not a",
    "numbers": [
@@ -6269,7 +6548,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1272,
+   "line": 1352,
    "section": "Gate 7 reformulated \u2014 control-subtracted, and it passes",
    "text": "**The profile-weighted map was built and tested at q = 1** (segments 60/80):",
    "numbers": [
@@ -6279,7 +6558,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1276,
+   "line": 1356,
    "section": "Gate 7 reformulated \u2014 control-subtracted, and it passes",
    "text": "| **measured** | **101.123\u00b0** | \u2014 |",
    "numbers": [
@@ -6289,7 +6568,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1277,
+   "line": 1357,
    "section": "Gate 7 reformulated \u2014 control-subtracted, and it passes",
    "text": "| plain product U_B\u00b7U_A | 100.799\u00b0 | **0.323\u00b0** |",
    "numbers": [
@@ -6300,7 +6579,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1278,
+   "line": 1358,
    "section": "Gate 7 reformulated \u2014 control-subtracted, and it passes",
    "text": "| **profile-weighted U\u2082** | 100.880\u00b0 | **0.242\u00b0** |",
    "numbers": [
@@ -6311,7 +6590,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1279,
+   "line": 1359,
    "section": "Gate 7 reformulated \u2014 control-subtracted, and it passes",
    "text": "| global U\u2082 on the mid-state | 122.615\u00b0 | **21.5\u00b0** |",
    "numbers": [
@@ -6321,7 +6600,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1281,
+   "line": 1361,
    "section": "Gate 7 reformulated \u2014 control-subtracted, and it passes",
    "text": "[\u03ba = 0.5 \u2014 superseded by the change of operating point (2026-09-25), not retracted. At \u03ba\\* the q = 1 split is 98.74\u00b0 measured, 98.26\u00b0",
    "numbers": [
@@ -6338,7 +6617,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1289,
+   "line": 1369,
    "section": "Gate 7 reformulated \u2014 control-subtracted, and it passes",
    "text": "2. **Profile weighting is a marginal gain** \u2014 0.24\u00b0 against 0.32\u00b0. Directionally",
    "numbers": [
@@ -6349,7 +6628,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1290,
+   "line": 1370,
    "section": "Gate 7 reformulated \u2014 control-subtracted, and it passes",
    "text": "right, 0.08\u00b0 of improvement, **not worth building** on the chain.",
    "numbers": [
@@ -6359,7 +6638,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1297,
+   "line": 1377,
    "section": "Gate 7 reformulated \u2014 control-subtracted, and it passes",
    "text": "*product agreement*, not the control-subtracted gate, which passes at ~6000\u00d7",
    "numbers": [
@@ -6371,7 +6650,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1303,
+   "line": 1383,
    "section": "Gate 7 reformulated \u2014 control-subtracted, and it passes",
    "text": "the \u226420-site gap requirement at q = 1 (\u00a77 step 8), now quantified rather than",
    "numbers": [
@@ -6381,7 +6660,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1323,
+   "line": 1403,
    "section": "Gate 7 reformulated \u2014 control-subtracted, and it passes",
    "text": "**On gate 8's 0.39\u00b0 \u2014 RESOLVED: readout timing, not group velocity.** Gate 8's",
    "numbers": [
@@ -6391,7 +6670,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1324,
+   "line": 1404,
    "section": "Gate 7 reformulated \u2014 control-subtracted, and it passes",
    "text": "quantity is the u(2) Abelian floor, which is **exactly 0.000\u00b0** under clearing",
    "numbers": [
@@ -6401,7 +6680,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1330,
+   "line": 1410,
    "section": "Gate 7 reformulated \u2014 control-subtracted, and it passes",
    "text": "[Superseded by the \u03ba(w = 2, side) closure, \u00a75: only the plane-wave \u03ba = \u22120.0187 is",
    "numbers": [
@@ -6413,7 +6692,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1332,
+   "line": 1412,
    "section": "Gate 7 reformulated \u2014 control-subtracted, and it passes",
    "text": "\u22120.01775 \u2014 \u00a75, \"\u03ba to fourth order\"); a localised beam's box-averaged \u03ba depends on the box and goes",
    "numbers": [
@@ -6423,7 +6702,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1339,
+   "line": 1419,
    "section": "4d.1 Seven measurement traps, all encountered in this port",
    "text": "*(Six as first recorded; the seventh added 2026-09-25.)*",
    "numbers": [
@@ -6434,7 +6713,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1345,
+   "line": 1425,
    "section": "4d.1 Seven measurement traps, all encountered in this port",
    "text": "| **flat indexing** | `np.roll(x, s, axis=0)` on a flat (N,D) array addresses the **last** spatial axis, not the first | gauge terms coupled along the wrong axis; drift 0.019 |",
    "numbers": [
@@ -6444,7 +6723,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1348,
+   "line": 1428,
    "section": "4d.1 Seven measurement traps, all encountered in this port",
    "text": "| **overlapping segments** | segments 3 apart with RAMP length 12 overlap by 9 sites | a spurious 63\u00b0 Abelian splitting |",
    "numbers": [
@@ -6455,7 +6734,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1350,
+   "line": 1430,
    "section": "4d.1 Seven measurement traps, all encountered in this port",
    "text": "| readout before full clearing | a centroid past a segment does not mean the packet has left it: run_until_exit fires with 98% of the weight still in the segment windows at q = 3, and 16\u201318% remains at gate 7's fixed T =",
    "numbers": [
@@ -6470,7 +6749,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1351,
+   "line": 1431,
    "section": "4d.1 Seven measurement traps, all encountered in this port",
    "text": "| **launching off the orbit** | a linearly seeded wave (plain cosine, velocity at the linear frequency, no static shift or harmonics) is **not the nonlinear wave**; the launch leaves free oscillations behind, and at four",
    "numbers": [
@@ -6482,7 +6761,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1355,
+   "line": 1435,
    "section": "4d.1 Seven measurement traps, all encountered in this port",
    "text": "two specs the *same array*; that control cannot fail and returned 0.000\u00b0 three",
    "numbers": [
@@ -6494,7 +6773,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1358,
+   "line": 1438,
    "section": "4d.1 Seven measurement traps, all encountered in this port",
    "text": "Trap 6 is a different pattern: a certificate that reports success without checking the thing it certifies. At q = 1, clearing leaves the gate-7 split unchanged to 0.01\u00b0 and moves per-order residuals \u2264 0.09\u00b0, but takes th",
    "numbers": [
@@ -6508,7 +6787,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1366,
+   "line": 1446,
    "section": "4d.1 Seven measurement traps, all encountered in this port",
    "text": "**Traps 6 and 7 combined (2026-09-25): the q = 3 Abelian floor at \u03ba\\*.** A carrier launch",
    "numbers": [
@@ -6520,7 +6799,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1369,
+   "line": 1449,
    "section": "4d.1 Seven measurement traps, all encountered in this port",
    "text": "0.07\u20130.08\u00b0; the clearing certificate (trap 6's kind of check) then reads each run at",
    "numbers": [
@@ -6531,7 +6810,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1371,
+   "line": 1451,
    "section": "4d.1 Seven measurement traps, all encountered in this port",
    "text": "times (357 / 363) and differed by 0.066\u00b0. Either fix alone removes it: read both runs",
    "numbers": [
@@ -6543,7 +6822,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1372,
+   "line": 1452,
    "section": "4d.1 Seven measurement traps, all encountered in this port",
    "text": "at one time (floor 0.00001\u00b0), or launch each mode at its own \u03c9(k) (readout constant,",
    "numbers": [
@@ -6553,7 +6832,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1373,
+   "line": 1453,
    "section": "4d.1 Seven measurement traps, all encountered in this port",
    "text": "floor ~0 at any times). \u03ba = 0.5's 0.000\u00b0 was the same instrument read at equal times",
    "numbers": [
@@ -6563,7 +6842,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1386,
+   "line": 1466,
    "section": "5. What the assembled model predicts",
    "text": "\u0394\u03c9(k, A) = \u22122 c \u03b2 sin(k) \u00b7 [1 + \u03ba A\u00b2]        \u03ba = 0.0799  (PLANE WAVE / 1-D)  \u2190 RETRACTED",
    "numbers": [
@@ -6575,7 +6854,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1388,
+   "line": 1468,
    "section": "5. What the assembled model predicts",
    "text": "**\u26a0 \u03ba = 0.0799 IS RETRACTED (2026-09-24).** The reference script seeded each",
    "numbers": [
@@ -6590,7 +6869,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1395,
+   "line": 1475,
    "section": "5. What the assembled model predicts",
    "text": "\u03ba = \u22120.0187  (\u03b2 = 0.05, A = 0.30)      \u03ba = \u22120.0184 \u00b1 0.00033  (\u03b2-sweep, A = 0.30)",
    "numbers": [
@@ -6605,7 +6884,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1397,
+   "line": 1477,
    "section": "5. What the assembled model predicts",
    "text": "\u2014 the asymmetry **magnitude shrinks** with amplitude, |\u0394/\u0394\u2080| = 0.998339,",
    "numbers": [
@@ -6615,7 +6894,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1398,
+   "line": 1478,
    "section": "5. What the assembled model predicts",
    "text": "0.998316, 0.998390, 0.998316 at \u03b2 = 0.02, 0.05, 0.10, 0.20. This agrees with",
    "numbers": [
@@ -6630,7 +6909,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1399,
+   "line": 1479,
    "section": "5. What the assembled model predicts",
    "text": "second-order PT (\u22120.0175, from the +0.0349 \u03b2A\u00b2 term in `phi_gauge_delta.py`) and",
    "numbers": [
@@ -6641,7 +6920,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1402,
+   "line": 1482,
    "section": "5. What the assembled model predicts",
    "text": "(\u22120.01869; see \u03ba(w = 2, side) below). **Scripts:** `pinned_asymmetry_reference.py`",
    "numbers": [
@@ -6651,7 +6930,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1404,
+   "line": 1484,
    "section": "5. What the assembled model predicts",
    "text": "asymmetry \u0394\u03c9 = \u22122c\u03b2 sin k (reproduced to 10\u207b\u2075 before and after the fix) and the",
    "numbers": [
@@ -6661,7 +6940,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1407,
+   "line": 1487,
    "section": "5. What the assembled model predicts",
    "text": "*Headline \u03ba = \u22120.0187 is the value **at A = 0.3**. The small-amplitude coefficient is **\u22120.0175** \u2014",
    "numbers": [
@@ -6672,7 +6951,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1408,
+   "line": 1488,
    "section": "5. What the assembled model predicts",
    "text": "derived by perturbation theory (\u22120.01748) and measured (\u22120.0176 at A = 0.10) \u2014 and",
    "numbers": [
@@ -6684,7 +6963,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1409,
+   "line": 1489,
    "section": "5. What the assembled model predicts",
    "text": "a fourth-order term adds about 7% by A = 0.3.* [**CORRECTED 2026-09-25:** the",
    "numbers": [
@@ -6696,7 +6975,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1410,
+   "line": 1490,
    "section": "5. What the assembled model predicts",
    "text": "true fourth-order term adds about **1.5%** at A = 0.3. \u22120.0187 is the",
    "numbers": [
@@ -6706,7 +6985,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1412,
+   "line": 1492,
    "section": "5. What the assembled model predicts",
    "text": "**\u22120.01775** there. About 80% of the growth over \u22120.0175 is a launch effect \u2014",
    "numbers": [
@@ -6718,7 +6997,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1417,
+   "line": 1497,
    "section": "5. What the assembled model predicts",
    "text": "**\u26a0 \u03ba = 0.0799 IS THE PLANE-WAVE / 1-D VALUE ONLY.** [RETRACTED values \u2014 the",
    "numbers": [
@@ -6730,7 +7009,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1422,
+   "line": 1502,
    "section": "5. What the assembled model predicts",
    "text": "the beam width \u2014 measured \u03ba(w=2) falls 0.0177 \u2192 0.0019 from side 8 to 32 and",
    "numbers": [
@@ -6742,7 +7021,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1425,
+   "line": 1505,
    "section": "5. What the assembled model predicts",
    "text": "**There is no publishable \u03ba(w).** Quote 0.0799 for a plane-wave or 1-D beam;",
    "numbers": [
@@ -6752,7 +7031,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1428,
+   "line": 1508,
    "section": "5. What the assembled model predicts",
    "text": "**\u03ba(w = 2, side) re-measured (2026-09-24) \u2014 measured and open [now CLOSED, below].** `shape_zero_tests/kappa_readout_test.py` (\u03b2 = 0.05, A = 0.30, q = 3, transverse",
    "numbers": [
@@ -6768,7 +7047,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1429,
+   "line": 1509,
    "section": "5. What the assembled model predicts",
    "text": "width w = 2, periodic BC, T = 300, uniform transverse readout). Its gyro term is",
    "numbers": [
@@ -6778,7 +7057,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1433,
+   "line": 1513,
    "section": "5. What the assembled model predicts",
    "text": "frequency (counter-propagating content 10\u207b\u00b9\u2076; one carrier at the right root",
    "numbers": [
@@ -6788,7 +7067,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1437,
+   "line": 1517,
    "section": "5. What the assembled model predicts",
    "text": "| side | 8 | 12 | 16 | 24 | 32 |",
    "numbers": [
@@ -6801,7 +7080,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1439,
+   "line": 1519,
    "section": "5. What the assembled model predicts",
    "text": "| transverse fill fraction | 0.194 | 0.087 | 0.049 | 0.022 | 0.012 |",
    "numbers": [
@@ -6815,7 +7094,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1440,
+   "line": 1520,
    "section": "5. What the assembled model predicts",
    "text": "| **\u03ba, own-branch seed** | **\u22120.00447** | **\u22120.00289** | **\u22120.00204** | **\u22120.00115** | **\u22120.00047** |",
    "numbers": [
@@ -6829,7 +7108,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1441,
+   "line": 1521,
    "section": "5. What the assembled model predicts",
    "text": "| \u03ba / \u03ba(plane wave, \u22120.01869) | 0.239 | 0.155 | 0.109 | 0.062 | 0.025 |",
    "numbers": [
@@ -6844,7 +7123,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1442,
+   "line": 1522,
    "section": "5. What the assembled model predicts",
    "text": "| that ratio / fill fraction | 1.23 | 1.77 | 2.22 | 2.82 | 2.05 |",
    "numbers": [
@@ -6858,7 +7137,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1443,
+   "line": 1523,
    "section": "5. What the assembled model predicts",
    "text": "| \u03ba, swapped seed, re-run \u2014 RETRACTED | +0.01772 | +0.01128 | +0.00801 | +0.00457 | +0.00185 |",
    "numbers": [
@@ -6874,7 +7153,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1444,
+   "line": 1524,
    "section": "5. What the assembled model predicts",
    "text": "| \u03ba, swapped seed, as quoted in the script's docstring \u2014 RETRACTED | 0.0175 | 0.0113 | 0.0082 | **0.0027** (does not reproduce) | 0.0018 |",
    "numbers": [
@@ -6890,7 +7169,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1446,
+   "line": 1526,
    "section": "5. What the assembled model predicts",
    "text": "- **Plane-wave control: \u03ba = \u22120.01869** (linear ratio 0.999993) at every side and",
    "numbers": [
@@ -6901,7 +7180,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1449,
+   "line": 1529,
    "section": "5. What the assembled model predicts",
    "text": "`joint3_kappa_stiffness.py`. (Swapped seed: +0.07994, the retracted value.) It",
    "numbers": [
@@ -6913,7 +7192,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1452,
+   "line": 1532,
    "section": "5. What the assembled model predicts",
    "text": "- **Linear pinning holds** at 0.999997\u20131.000000 for every side and readout.",
    "numbers": [
@@ -6924,7 +7203,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1453,
+   "line": 1533,
    "section": "5. What the assembled model predicts",
    "text": "- **\u03ba still has no side-independent limit.** It falls tenfold from side 8 to 32",
    "numbers": [
@@ -6934,7 +7213,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1454,
+   "line": 1534,
    "section": "5. What the assembled model predicts",
    "text": "and steepens at the end (\u2248 side\u207b\u00b3 from 24 to 32) [within error \u2014 below]. **No \u03ba(w) is published.**",
    "numbers": [
@@ -6945,7 +7224,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1455,
+   "line": 1535,
    "section": "5. What the assembled model predicts",
    "text": "- **Mechanism unresolved** [since CLOSED \u2014 a fixed dilution with factor F = 2 \u2212 s, below]. It is **not seeding**: new/old is \u22120.25 at every side",
    "numbers": [
@@ -6957,7 +7236,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1457,
+   "line": 1537,
    "section": "5. What the assembled model predicts",
    "text": "is **not readout**: the uniform readout is clean (phase residual 0.003\u20130.011);",
    "numbers": [
@@ -6968,7 +7247,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1461,
+   "line": 1541,
    "section": "5. What the assembled model predicts",
    "text": "amplitude driving the shift) and **failed**: |\u03ba|/(|\u03ba_pw|\u00b7fill) runs 1.23 \u2192",
    "numbers": [
@@ -6980,7 +7259,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1462,
+   "line": 1542,
    "section": "5. What the assembled model predicts",
    "text": "2.82, not constant.",
    "numbers": [
@@ -6990,7 +7269,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1463,
+   "line": 1543,
    "section": "5. What the assembled model predicts",
    "text": "- **The original docstring's 0.0027 at side 24 does not reproduce**: the",
    "numbers": [
@@ -7001,7 +7280,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1472,
+   "line": 1552,
    "section": "5. What the assembled model predicts",
    "text": "**\u03ba(w = 2, side) \u2014 CLOSED (2026-09-24).** Three GPU scans (Google Colab, Tesla",
    "numbers": [
@@ -7013,7 +7292,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1473,
+   "line": 1553,
    "section": "5. What the assembled model predicts",
    "text": "T4, PyTorch float64, fixed-step RK4 dt = 0.01; physics, Fourier-space seed and",
    "numbers": [
@@ -7023,7 +7302,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1479,
+   "line": 1559,
    "section": "5. What the assembled model predicts",
    "text": "`kappa_extended_gpu.py` (NumPy backend) at L = 20, 24, 28, 32: every \u03ba, error bar,",
    "numbers": [
@@ -7036,7 +7315,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1480,
+   "line": 1560,
    "section": "5. What the assembled model predicts",
    "text": "[0, 150] value and energy drift identical to the Colab output.",
    "numbers": [
@@ -7046,7 +7325,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1484,
+   "line": 1564,
    "section": "5. What the assembled model predicts",
    "text": "| 8 | 0.19387 | \u22120.00447 \u00b1 0.00011 | 1.23 \u00b1 0.03 | 1.35 |",
    "numbers": [
@@ -7061,7 +7340,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1485,
+   "line": 1565,
    "section": "5. What the assembled model predicts",
    "text": "| 12 | 0.08726 | \u22120.00289 \u00b1 0.00014 | 1.77 \u00b1 0.08 | 1.66 |",
    "numbers": [
@@ -7077,7 +7356,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1486,
+   "line": 1566,
    "section": "5. What the assembled model predicts",
    "text": "| 16 | 0.04909 | \u22120.00204 \u00b1 0.00021 | 2.22 \u00b1 0.23 | 1.80 |",
    "numbers": [
@@ -7093,7 +7372,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1487,
+   "line": 1567,
    "section": "5. What the assembled model predicts",
    "text": "| 20 | 0.03142 | \u22120.00147 \u00b1 0.00030 | 2.50 \u00b1 0.52 | 1.87 |",
    "numbers": [
@@ -7109,7 +7388,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1488,
+   "line": 1568,
    "section": "5. What the assembled model predicts",
    "text": "| 24 | 0.02182 | \u22120.00115 \u00b1 0.00036 | 2.81 \u00b1 0.89 | 1.91 |",
    "numbers": [
@@ -7125,7 +7404,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1489,
+   "line": 1569,
    "section": "5. What the assembled model predicts",
    "text": "| 28 | 0.01603 | \u22120.00075 \u00b1 0.00034 | 2.49 \u00b1 1.13 | 1.94 |",
    "numbers": [
@@ -7141,7 +7420,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1490,
+   "line": 1570,
    "section": "5. What the assembled model predicts",
    "text": "| 32 | 0.01227 | \u22120.00047 \u00b1 0.00015 | 2.03 \u00b1 0.63 | 1.95 |",
    "numbers": [
@@ -7157,7 +7436,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1491,
+   "line": 1571,
    "section": "5. What the assembled model predicts",
    "text": "| 36 | 0.00970 | \u22120.00040 \u00b1 0.00016 | 2.22 \u00b1 0.86 | 1.96 |",
    "numbers": [
@@ -7173,7 +7452,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1492,
+   "line": 1572,
    "section": "5. What the assembled model predicts",
    "text": "| 40 | 0.00785 | \u22120.00033 \u00b1 0.00017 | 2.26 \u00b1 1.16 | 1.97 |",
    "numbers": [
@@ -7189,7 +7468,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1493,
+   "line": 1573,
    "section": "5. What the assembled model predicts",
    "text": "| 48 | 0.00545 | \u22120.00025 \u00b1 0.00019 | 2.43 \u00b1 1.83 | 1.98 |",
    "numbers": [
@@ -7205,7 +7484,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1494,
+   "line": 1574,
    "section": "5. What the assembled model predicts",
    "text": "| 64 | 0.00307 | \u22120.00018 \u00b1 0.00021 | 3.22 \u00b1 3.64 | 1.99 |",
    "numbers": [
@@ -7221,7 +7500,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1495,
+   "line": 1575,
    "section": "5. What the assembled model predicts",
    "text": "| 80 | 0.00196 | \u22120.00017 \u00b1 0.00022 | 4.59 \u00b1 5.91 | 1.99 |",
    "numbers": [
@@ -7237,7 +7516,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1497,
+   "line": 1577,
    "section": "5. What the assembled model predicts",
    "text": "(\u03ba over [0, 300]; the error bar is the larger of the weighted-vs-unweighted",
    "numbers": [
@@ -7247,7 +7526,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1502,
+   "line": 1582,
    "section": "5. What the assembled model predicts",
    "text": "\u03ba(L = 16) over [0, 150] and over [0, 300] are both \u22120.00204 \u2014 and it is a clean",
    "numbers": [
@@ -7260,7 +7539,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1503,
+   "line": 1583,
    "section": "5. What the assembled model predicts",
    "text": "A\u00b2 coefficient (\u22120.00201 / \u22120.00202 / \u22120.00204 at A = 0.10 / 0.20 / 0.30, flat",
    "numbers": [
@@ -7275,7 +7554,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1506,
+   "line": 1586,
    "section": "5. What the assembled model predicts",
    "text": "cause: its amplitude grows up to 11% (L = 16, T = 1200) and \u03ba drifts ~10% over",
    "numbers": [
@@ -7288,7 +7567,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1507,
+   "line": 1587,
    "section": "5. What the assembled model predicts",
    "text": "long runs (\u22120.00204 at T = 300 \u2192 \u22120.00184 at T = 1200), while the plane-wave",
    "numbers": [
@@ -7301,7 +7580,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1508,
+   "line": 1588,
    "section": "5. What the assembled model predicts",
    "text": "control stays put (\u22120.01869 early, \u22120.01874 late). `kappa_side_gpu.py`.",
    "numbers": [
@@ -7312,7 +7591,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1509,
+   "line": 1589,
    "section": "5. What the assembled model predicts",
    "text": "2. **\u03ba_box = \u03ba_pw \u00d7 fill \u00d7 F**, with F rising from 1.23 \u00b1 0.03 at L = 8 toward",
    "numbers": [
@@ -7323,7 +7602,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1513,
+   "line": 1593,
    "section": "5. What the assembled model predicts",
    "text": "largest 1.8\u03c3 at L = 16 \u2014 at every L \u2265 12, though all eleven of those points",
    "numbers": [
@@ -7334,7 +7613,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1514,
+   "line": 1594,
    "section": "5. What the assembled model predicts",
    "text": "lie above it. It is **9% high at L = 8** (1.35 against 1.23 \u00b1 0.03). Deriving",
    "numbers": [
@@ -7346,7 +7625,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1523,
+   "line": 1603,
    "section": "5. What the assembled model predicts",
    "text": "negative. From L = 64 it cannot be distinguished from zero by this method",
    "numbers": [
@@ -7356,7 +7635,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1524,
+   "line": 1604,
    "section": "5. What the assembled model predicts",
    "text": "(\u22120.00018 \u00b1 0.00021 at 64, \u22120.00017 \u00b1 0.00022 at 80); nothing suggests a sign",
    "numbers": [
@@ -7371,7 +7650,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1527,
+   "line": 1607,
    "section": "5. What the assembled model predicts",
    "text": "within its error bar \u2014 e.g. +13% \u00b1 32% at L = 24, \u221214% \u00b1 31% at L = 32. The",
    "numbers": [
@@ -7385,7 +7664,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1530,
+   "line": 1610,
    "section": "5. What the assembled model predicts",
    "text": "from 24 to 32), which is inside the error bars.",
    "numbers": [
@@ -7396,7 +7675,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1531,
+   "line": 1611,
    "section": "5. What the assembled model predicts",
    "text": "5. **Only the plane-wave \u03ba = \u22120.0187 is a real coefficient.** [\u22120.0187 is the",
    "numbers": [
@@ -7407,7 +7686,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1532,
+   "line": 1612,
    "section": "5. What the assembled model predicts",
    "text": "plain-cosine-launch value at A = 0.3; the exact travelling wave gives \u22120.01775",
    "numbers": [
@@ -7417,7 +7696,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1533,
+   "line": 1613,
    "section": "5. What the assembled model predicts",
    "text": "there, and \u22120.017480 at small amplitude \u2014 \"\u03ba to fourth order\", below.] A localised beam's",
    "numbers": [
@@ -7427,7 +7706,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1550,
+   "line": 1630,
    "section": "5. What the assembled model predicts",
    "text": "**\u03ba across beam widths \u2014 w = 3 CLOSED (2026-09-24).** `kappa_widthscan_gpu.py`",
    "numbers": [
@@ -7439,7 +7718,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1555,
+   "line": 1635,
    "section": "5. What the assembled model predicts",
    "text": "w/L = 1/4 and varies w from 1 to 6; it reproduced the Colab values for w = 2, 3",
    "numbers": [
@@ -7449,7 +7728,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1560,
+   "line": 1640,
    "section": "5. What the assembled model predicts",
    "text": "| 1/4 | 1.15 \u00b1 0.01 | \u2014 | 1.23 \u00b1 0.03 | 1.32 \u00b1 0.04 | 1.33 \u00b1 0.07 | 1.29 \u00b1 0.10 | 1.34 \u00b1 0.16 | 1.34\u20131.38 |",
    "numbers": [
@@ -7473,7 +7752,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1561,
+   "line": 1641,
    "section": "5. What the assembled model predicts",
    "text": "| 1/8 | \u2014 | 2.01 \u00b1 0.12 | 2.22 \u00b1 0.23 | 2.38 \u00b1 0.65 | 1.61 \u00b1 0.53 | \u2014 | \u2014 | 1.80 |",
    "numbers": [
@@ -7492,7 +7771,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1562,
+   "line": 1642,
    "section": "5. What the assembled model predicts",
    "text": "| 1/12 | \u2014 | \u2014 | 2.81 \u00b1 0.89 | 1.99 \u00b1 0.83 | 2.78 \u00b1 1.66 | \u2014 | \u2014 | 1.91 |",
    "numbers": [
@@ -7509,7 +7788,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1563,
+   "line": 1643,
    "section": "5. What the assembled model predicts",
    "text": "| 1/16 | \u2014 | 2.86 \u00b1 0.86 | 2.03 \u00b1 0.63 | 2.60 \u00b1 1.85 | 4.82 \u00b1 3.09 | \u2014 | \u2014 | 1.95 |",
    "numbers": [
@@ -7528,7 +7807,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1570,
+   "line": 1650,
    "section": "5. What the assembled model predicts",
    "text": "w/L = 1/4 (error bars \u00b10.03\u20130.07), partly sharp at 1/8, and **not a real test",
    "numbers": [
@@ -7541,7 +7820,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1571,
+   "line": 1651,
    "section": "5. What the assembled model predicts",
    "text": "at 1/12 and 1/16**, where error bars reach \u00b13 \u2014 agreement there means only",
    "numbers": [
@@ -7552,7 +7831,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1574,
+   "line": 1654,
    "section": "5. What the assembled model predicts",
    "text": "effect, established at w/L = 1/4:** the gap is \u221216.5% at w = 1 (18.6 of its",
    "numbers": [
@@ -7562,7 +7841,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1582,
+   "line": 1662,
    "section": "5. What the assembled model predicts",
    "text": "before running and **held**. [**CORRECTED 2026-09-24:** at A = 0.30 the gap",
    "numbers": [
@@ -7575,7 +7854,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1584,
+   "line": 1664,
    "section": "5. What the assembled model predicts",
    "text": "partly fourth order in amplitude: from A = 0.10 to 0.30 the plane-wave \u03ba grows",
    "numbers": [
@@ -7586,7 +7865,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1585,
+   "line": 1665,
    "section": "5. What the assembled model predicts",
    "text": "6.5% while the narrow beam's barely changes, and at A = 0.10 the derived kernel",
    "numbers": [
@@ -7596,7 +7875,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1586,
+   "line": 1666,
    "section": "5. What the assembled model predicts",
    "text": "accounts for the whole gap (w = 1: 1.221 \u00b1 0.018 against 1.225; w = 2: 1.312 \u00b1",
    "numbers": [
@@ -7609,7 +7888,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1587,
+   "line": 1667,
    "section": "5. What the assembled model predicts",
    "text": "0.031 against 1.318). The prediction's result stands; its reading is corrected \u2014",
    "numbers": [
@@ -7620,7 +7899,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1588,
+   "line": 1668,
    "section": "5. What the assembled model predicts",
    "text": "see \"The cross-modulation factor F, derived\" below.] [**CORRECTED 2026-09-25:** the",
    "numbers": [
@@ -7632,7 +7911,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1589,
+   "line": 1669,
    "section": "5. What the assembled model predicts",
    "text": "plane-wave growth that lowers F at A = 0.30 is **mostly a launch effect**, not",
    "numbers": [
@@ -7642,7 +7921,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1591,
+   "line": 1671,
    "section": "5. What the assembled model predicts",
    "text": "orbit-consistent (second-order) launches F at A = 0.30 is 1.201 (w = 1) and",
    "numbers": [
@@ -7653,7 +7932,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1592,
+   "line": 1672,
    "section": "5. What the assembled model predicts",
    "text": "1.281 (w = 2), against 1.154 and 1.234 from plain cosines and 1.225 and 1.318",
    "numbers": [
@@ -7667,7 +7946,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1593,
+   "line": 1673,
    "section": "5. What the assembled model predicts",
    "text": "derived at second order: the launch accounts for 66% and 56% of the gap, and the",
    "numbers": [
@@ -7678,7 +7957,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1596,
+   "line": 1676,
    "section": "5. What the assembled model predicts",
    "text": "3. **Unresolved:** whether F exceeds 2 \u2212 s at smaller w/L (10 of 14 width-scan",
    "numbers": [
@@ -7691,7 +7970,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1600,
+   "line": 1680,
    "section": "5. What the assembled model predicts",
    "text": "4. **w = 3 \u03ba, correctly seeded:** \u22120.00478 \u00b1 0.00013 at L = 12, \u22120.00218 \u00b1 0.00059",
    "numbers": [
@@ -7705,7 +7984,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1601,
+   "line": 1681,
    "section": "5. What the assembled model predicts",
    "text": "at L = 24, \u22120.00081 \u00b1 0.00034 at L = 36, \u22120.00060 \u00b1 0.00043 at L = 48. These",
    "numbers": [
@@ -7720,7 +7999,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1602,
+   "line": 1682,
    "section": "5. What the assembled model predicts",
    "text": "**supersede** the old w = 3 value (0.0311) and the old geometry table (1D 0.0799,",
    "numbers": [
@@ -7733,7 +8012,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1603,
+   "line": 1683,
    "section": "5. What the assembled model predicts",
    "text": "w = 2 0.0168, w = 3 0.0311; swapped seeding, single carrier), which stay",
    "numbers": [
@@ -7744,7 +8023,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1607,
+   "line": 1687,
    "section": "5. What the assembled model predicts",
    "text": "**The cross-modulation factor F, derived (2026-09-24).** `kappa_cross_pt.py`",
    "numbers": [
@@ -7756,7 +8035,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1609,
+   "line": 1689,
    "section": "5. What the assembled model predicts",
    "text": "(\u03b4 = +0.0349\u03b2; the script reproduces the plane-wave \u03ba as \u22120.01748 against",
    "numbers": [
@@ -7766,7 +8045,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1610,
+   "line": 1690,
    "section": "5. What the assembled model predicts",
    "text": "\u22120.01745) to the **cross kernel** R(q\u22a5) = K(q\u22a5)/K(0) on the lattice: the",
    "numbers": [
@@ -7776,7 +8055,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1617,
+   "line": 1697,
    "section": "5. What the assembled model predicts",
    "text": "on the lattice it falls to 1.39 at q\u22a5 = (\u03c0, 0) and 1.12 at (\u03c0, \u03c0).",
    "numbers": [
@@ -7787,7 +8066,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1624,
+   "line": 1704,
    "section": "5. What the assembled model predicts",
    "text": "plus one pump at (K, q\u22a5), 16 values of q\u22a5): at pump amplitude 0.10 the measured",
    "numbers": [
@@ -7798,7 +8077,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1625,
+   "line": 1705,
    "section": "5. What the assembled model predicts",
    "text": "R matches the derived kernel within about one error bar at 15 of 16 points",
    "numbers": [
@@ -7811,7 +8090,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1626,
+   "line": 1706,
    "section": "5. What the assembled model predicts",
    "text": "(1.389 \u00b1 0.012 against 1.391 at (\u03c0, 0); 1.116 \u00b1 0.011 against 1.118 at (\u03c0, \u03c0)),",
    "numbers": [
@@ -7826,7 +8105,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1627,
+   "line": 1707,
    "section": "5. What the assembled model predicts",
    "text": "2.8\u03c3 at the smallest q\u22a5. At 0.30 it sits 3\u20134% below at large q\u22a5 \u2014 beyond second",
    "numbers": [
@@ -7836,7 +8115,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1635,
+   "line": 1715,
    "section": "5. What the assembled model predicts",
    "text": "read out over the experiment's [0, 300] window, with linear detunings.",
    "numbers": [
@@ -7846,7 +8125,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1636,
+   "line": 1716,
    "section": "5. What the assembled model predicts",
    "text": "`kappa_cross_compare.py`, against every measured F (sharp = error bar \u2264 0.25,",
    "numbers": [
@@ -7856,7 +8135,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1643,
+   "line": 1723,
    "section": "5. What the assembled model predicts",
    "text": "| **P3b, all triads** | **7 of 9** \u2014 every point except w = 1, L = 4 (1.225 against 1.15 \u00b1 0.01) and w = 2, L = 8 (1.318 against 1.23 \u00b1 0.03), both at A = 0.30 |",
    "numbers": [
@@ -7872,7 +8151,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1647,
+   "line": 1727,
    "section": "5. What the assembled model predicts",
    "text": "sharp w/L = 1/8 and L = 12 points; P3b rises above it and lies within 1.1 error",
    "numbers": [
@@ -7883,7 +8162,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1651,
+   "line": 1731,
    "section": "5. What the assembled model predicts",
    "text": "Re-measured at A = 0.10 they give 1.221 \u00b1 0.018 (w = 1, L = 4; derived 1.225)",
    "numbers": [
@@ -7896,7 +8175,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1652,
+   "line": 1732,
    "section": "5. What the assembled model predicts",
    "text": "and 1.312 \u00b1 0.031 (w = 2, L = 8; derived 1.318). From A = 0.10 to 0.30 the",
    "numbers": [
@@ -7910,7 +8189,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1653,
+   "line": 1733,
    "section": "5. What the assembled model predicts",
    "text": "plane-wave \u03ba grows 6.5% (\u22120.01755 \u2192 \u22120.01869) while the narrow beam's \u03ba barely",
    "numbers": [
@@ -7921,7 +8200,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1654,
+   "line": 1734,
    "section": "5. What the assembled model predicts",
    "text": "changes (\u22120.004121 \u2192 \u22120.004147), so F, which divides by the plane-wave \u03ba, falls.",
    "numbers": [
@@ -7932,7 +8211,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1655,
+   "line": 1735,
    "section": "5. What the assembled model predicts",
    "text": "[**CORRECTED 2026-09-25:** that plane-wave growth is mostly the plain-cosine launch,",
    "numbers": [
@@ -7944,7 +8223,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1656,
+   "line": 1736,
    "section": "5. What the assembled model predicts",
    "text": "not fourth-order physics \u2014 the exact travelling wave grows 1.5% from A \u2192 0 to 0.30,",
    "numbers": [
@@ -7954,7 +8233,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1660,
+   "line": 1740,
    "section": "5. What the assembled model predicts",
    "text": "where P3a and P3b differ most in small boxes, measured at A = 0.10; both",
    "numbers": [
@@ -7964,7 +8243,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1668,
+   "line": 1748,
    "section": "5. What the assembled model predicts",
    "text": "| w = 0.75, 8 \u00d7 6 \u00d7 6 | 1.421 \u00b1 0.111 | 1.536 (+1.0\u03c3) | **1.425 (0.0\u03c3)** |",
    "numbers": [
@@ -7978,7 +8257,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1669,
+   "line": 1749,
    "section": "5. What the assembled model predicts",
    "text": "| w = 1.25, 8 \u00d7 10 \u00d7 10 | 1.988 \u00b1 0.123 | 1.676 (\u22122.6\u03c3) | **1.994 (+0.1\u03c3)** |",
    "numbers": [
@@ -7994,7 +8273,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1670,
+   "line": 1750,
    "section": "5. What the assembled model predicts",
    "text": "| w = 1.0, 12 \u00d7 12 \u00d7 12 | 2.127 \u00b1 0.175 | 1.732 (\u22122.3\u03c3) | **2.131 (0.0\u03c3)** |",
    "numbers": [
@@ -8010,7 +8289,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1673,
+   "line": 1753,
    "section": "5. What the assembled model predicts",
    "text": "discrimination is weaker than planned: the error bars at A = 0.10 came out",
    "numbers": [
@@ -8020,7 +8299,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1674,
+   "line": 1754,
    "section": "5. What the assembled model predicts",
    "text": "0.11\u20130.18, not the 0.02\u20130.12 expected, so no configuration separates the two",
    "numbers": [
@@ -8033,7 +8312,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1677,
+   "line": 1757,
    "section": "5. What the assembled model predicts",
    "text": "criterion was **not met**. But P3b's three predictions land within **0.006** of",
    "numbers": [
@@ -8043,7 +8322,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1678,
+   "line": 1758,
    "section": "5. What the assembled model predicts",
    "text": "the measured F while the error bars are 0.11\u20130.18 \u2014 agreement that close would be",
    "numbers": [
@@ -8054,7 +8333,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1680,
+   "line": 1760,
    "section": "5. What the assembled model predicts",
    "text": "A = 0.10 the error-bar estimator (the disagreement between weighted and unweighted",
    "numbers": [
@@ -8064,7 +8343,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1689,
+   "line": 1769,
    "section": "5. What the assembled model predicts",
    "text": "nonlinear shifts of the components are not in them. [**Done for the plane wave, 2026-09-25** \u2014 below;",
    "numbers": [
@@ -8076,7 +8355,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1692,
+   "line": 1772,
    "section": "5. What the assembled model predicts",
    "text": "**\u03ba to fourth order, and the launch (2026-09-25).** `shape_zero_tests/kappa_pw4_pt.py`",
    "numbers": [
@@ -8088,7 +8367,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1696,
+   "line": 1776,
    "section": "5. What the assembled model predicts",
    "text": "\u03ba(A) = \u22120.017480 \u2212 0.002947\u00b7A\u00b2",
    "numbers": [
@@ -8099,7 +8378,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1698,
+   "line": 1778,
    "section": "5. What the assembled model predicts",
    "text": "It is confirmed by an exact 24-harmonic solution (the same \u03ba\u2084 to every printed",
    "numbers": [
@@ -8111,7 +8390,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1701,
+   "line": 1781,
    "section": "5. What the assembled model predicts",
    "text": "error bar. The physical value is **\u22120.01751 at A = 0.1**, **\u22120.01775 at A = 0.3**",
    "numbers": [
@@ -8122,7 +8401,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1702,
+   "line": 1782,
    "section": "5. What the assembled model predicts",
    "text": "and **\u22120.01797 at A = 0.4** (exact solution; the A\u00b2 truncation gives \u22120.01795 at",
    "numbers": [
@@ -8133,7 +8412,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1705,
+   "line": 1785,
    "section": "5. What the assembled model predicts",
    "text": "**The measured amplitude sweep is mostly a launch effect.** The sweep \u22120.0176,",
    "numbers": [
@@ -8143,7 +8422,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1706,
+   "line": 1786,
    "section": "5. What the assembled model predicts",
    "text": "\u22120.0179, \u22120.0187, \u22120.0200 at A = 0.1\u20130.4 (`pinned_asymmetry_reference.py`; the same",
    "numbers": [
@@ -8155,7 +8434,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1707,
+   "line": 1787,
    "section": "5. What the assembled model predicts",
    "text": "on the side-8 cube and on a 1-D ring: \u22120.01755, \u22120.01792, \u22120.01869, \u22120.01996)",
    "numbers": [
@@ -8168,7 +8447,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1709,
+   "line": 1789,
    "section": "5. What the assembled model predicts",
    "text": "harmonic and sets the velocity at the linear frequency. That adds **\u22120.00094 at",
    "numbers": [
@@ -8178,7 +8457,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1710,
+   "line": 1790,
    "section": "5. What the assembled model predicts",
    "text": "A = 0.3**, about **80%** of the apparent growth over \u22120.01748. Attribution at",
    "numbers": [
@@ -8188,7 +8467,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1712,
+   "line": 1792,
    "section": "5. What the assembled model predicts",
    "text": "T = 300 and T = 900, so a frequency shift, not a transient):",
    "numbers": [
@@ -8199,7 +8478,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1716,
+   "line": 1796,
    "section": "5. What the assembled model predicts",
    "text": "| velocity at the linear frequency | \u22120.00016 | **derived** (forward/backward split of the fundamental; matches) |",
    "numbers": [
@@ -8211,7 +8490,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1717,
+   "line": 1797,
    "section": "5. What the assembled model predicts",
    "text": "| static shift | \u22120.00029 | **measured, not derived** |",
    "numbers": [
@@ -8221,7 +8500,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1718,
+   "line": 1798,
    "section": "5. What the assembled model predicts",
    "text": "| second harmonic | \u22120.00031 | **measured, not derived** |",
    "numbers": [
@@ -8231,7 +8510,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1719,
+   "line": 1799,
    "section": "5. What the assembled model predicts",
    "text": "| interaction of the two | about \u22120.00024 | **measured, not derived** |",
    "numbers": [
@@ -8241,7 +8520,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1720,
+   "line": 1800,
    "section": "5. What the assembled model predicts",
    "text": "| total, plain-cosine launch | \u22120.00094 | \u22120.01869 against the wave's \u22120.01775 |",
    "numbers": [
@@ -8253,7 +8532,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1723,
+   "line": 1803,
    "section": "5. What the assembled model predicts",
    "text": "derived, 2026-09-25** \u2014 \"The launch pieces derived\", below; the table's status column",
    "numbers": [
@@ -8265,7 +8544,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1728,
+   "line": 1808,
    "section": "5. What the assembled model predicts",
    "text": "third of the measured shift (\u22122.5\u00d710\u207b\u2076 against \u22121.55\u00d710\u207b\u2075 and \u22129.9\u00d710\u207b\u2076 against",
    "numbers": [
@@ -8278,7 +8557,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1729,
+   "line": 1809,
    "section": "5. What the assembled model predicts",
    "text": "\u22123.6\u00d710\u207b\u2075 per direction), which grows roughly linearly with that mode's amplitude",
    "numbers": [
@@ -8288,7 +8567,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1731,
+   "line": 1811,
    "section": "5. What the assembled model predicts",
    "text": "to the launch** (`kappa_seed2_test.py`) gives **\u22120.01787 \u00b1 0.00006** at A = 0.3,",
    "numbers": [
@@ -8299,7 +8578,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1741,
+   "line": 1821,
    "section": "5. What the assembled model predicts",
    "text": "own term, r = fill\u00b7s\u00b2/F\u2082. At the nine sharp points (A = 0.30): H0 9/9, S1 8/9",
    "numbers": [
@@ -8311,7 +8590,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1742,
+   "line": 1822,
    "section": "5. What the assembled model predicts",
    "text": "(w = 1, L = 4 at +2.1\u03c3), S2 9/9; the second-order F\u2082 alone 7/9. Two never-measured",
    "numbers": [
@@ -8321,7 +8600,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1743,
+   "line": 1823,
    "section": "5. What the assembled model predicts",
    "text": "large-fill beams at A = 0.10 and 0.30: the second-order F\u2082 holds there (1.0063 \u00b1",
    "numbers": [
@@ -8333,7 +8612,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1744,
+   "line": 1824,
    "section": "5. What the assembled model predicts",
    "text": "0.014 against 1.0076; 1.0316 \u00b1 0.014 against 1.0338), and **H0 is excluded at",
    "numbers": [
@@ -8347,7 +8626,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1745,
+   "line": 1825,
    "section": "5. What the assembled model predicts",
    "text": "large fill** \u2014 w = 3, L = 4: F(0.30)/F(0.10) at \u22122.2\u03c3, F(0.30) at \u22123.4\u03c3; w = 2,",
    "numbers": [
@@ -8359,7 +8638,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1746,
+   "line": 1826,
    "section": "5. What the assembled model predicts",
    "text": "L = 4: F(0.30) at \u22122.4\u03c3; the box \u03ba grows 4.4% and 3.0%. S1 and S2 both pass",
    "numbers": [
@@ -8371,7 +8650,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1750,
+   "line": 1830,
    "section": "5. What the assembled model predicts",
    "text": "with orbit-consistent launches is open (\u00a79). [**Done 2026-09-25** \u2014 below.]",
    "numbers": [
@@ -8385,7 +8664,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1752,
+   "line": 1832,
    "section": "5. What the assembled model predicts",
    "text": "**The launch pieces derived (2026-09-25)** (`kappa_launch_pt.py`; measured by",
    "numbers": [
@@ -8397,7 +8676,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1754,
+   "line": 1834,
    "section": "5. What the assembled model predicts",
    "text": "T = 900).",
    "numbers": [
@@ -8407,7 +8686,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1765,
+   "line": 1845,
    "section": "5. What the assembled model predicts",
    "text": "missing second harmonic:            \u03b4W = \u221232 W W\u2082 c\u2082\u00b2 A\u2074 / \u221a(b\u00b2 + Q)",
    "numbers": [
@@ -8417,7 +8696,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1769,
+   "line": 1849,
    "section": "5. What the assembled model predicts",
    "text": "the exact projection at small A (velocity \u22120.000037 against \u22120.000038, second",
    "numbers": [
@@ -8428,7 +8707,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1770,
+   "line": 1850,
    "section": "5. What the assembled model predicts",
    "text": "harmonic \u22120.000092 against \u22120.000093 at A = 0.15).",
    "numbers": [
@@ -8440,7 +8719,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1781,
+   "line": 1861,
    "section": "5. What the assembled model predicts",
    "text": "| 0.15 | \u22120.000029 / \u22120.000030 | \u22120.000072 / \u22120.000071 | \u22120.000112 / \u22120.000108 | \u22120.000150 / \u22120.000146 |",
    "numbers": [
@@ -8458,7 +8737,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1782,
+   "line": 1862,
    "section": "5. What the assembled model predicts",
    "text": "| 0.20 | \u22120.000079 / \u22120.000080 | \u22120.000131 / \u22120.000131 | \u22120.000254 / \u22120.000252 | \u22120.000323 / \u22120.000321 |",
    "numbers": [
@@ -8476,7 +8755,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1783,
+   "line": 1863,
    "section": "5. What the assembled model predicts",
    "text": "| 0.30 | \u22120.000278 / \u22120.000278 | \u22120.000311 / \u22120.000313 | \u22120.000794 / \u22120.000786 | \u22120.000959 / \u22120.000954 |",
    "numbers": [
@@ -8494,7 +8773,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1784,
+   "line": 1864,
    "section": "5. What the assembled model predicts",
    "text": "| 0.40 | \u22120.000583 / \u22120.000574 | \u22120.000581 / \u22120.000582 | \u22120.001698 / \u22120.001681 | \u22120.002022 / \u22120.002014 |",
    "numbers": [
@@ -8512,7 +8791,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1787,
+   "line": 1867,
    "section": "5. What the assembled model predicts",
    "text": "from A = 0.15 to 0.4.** Directly, the exact wave plus an explicit free uniform",
    "numbers": [
@@ -8522,7 +8801,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1788,
+   "line": 1868,
    "section": "5. What the assembled model predicts",
    "text": "mode gives per-direction shifts within 0.04% (A = 0.3, amplitude 0.02).",
    "numbers": [
@@ -8533,7 +8812,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1793,
+   "line": 1873,
    "section": "5. What the assembled model predicts",
    "text": "was found\": the pump's four-wave decay k\u2080 + k\u2080 \u2192 0 + \u03c0). The detuning is **0.04",
    "numbers": [
@@ -8543,7 +8822,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1794,
+   "line": 1874,
    "section": "5. What the assembled model predicts",
    "text": "for \u2212k against 0.24 for +k** at A = 0.3, so a free uniform mode drives a staggered",
    "numbers": [
@@ -8553,7 +8832,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1799,
+   "line": 1879,
    "section": "5. What the assembled model predicts",
    "text": "**Beam fourth-order tests, redone with orbit-consistent launches (2026-09-25)**",
    "numbers": [
@@ -8565,7 +8844,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1803,
+   "line": 1883,
    "section": "5. What the assembled model predicts",
    "text": "it removes **96%** of the launch effect, the error bars are **25 times smaller**,",
    "numbers": [
@@ -8576,7 +8855,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1804,
+   "line": 1884,
    "section": "5. What the assembled model predicts",
    "text": "and the residual, **+0.000039 at A = 0.3**, is the missing third harmonic. The test",
    "numbers": [
@@ -8586,7 +8865,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1805,
+   "line": 1885,
    "section": "5. What the assembled model predicts",
    "text": "compares \u03ba_box(A)/\u03ba_box(0.10) at A = 0.30 and 0.40 against (1 + r g(A))/(1 + r g(0.10)),",
    "numbers": [
@@ -8599,7 +8878,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1808,
+   "line": 1888,
    "section": "5. What the assembled model predicts",
    "text": "- **H0 and S1 are excluded.** H0 fails every L = 4 beam with fill \u2265 0.38 (\u221214\u03c3 to",
    "numbers": [
@@ -8611,7 +8890,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1809,
+   "line": 1889,
    "section": "5. What the assembled model predicts",
    "text": "\u2212142\u03c3); S1 fails every L = 4 beam (+3\u03c3 to +31\u03c3 at T = 900).",
    "numbers": [
@@ -8623,7 +8902,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1812,
+   "line": 1892,
    "section": "5. What the assembled model predicts",
    "text": "T = 900; +10.7\u03c3 at 0.3). It is consistent there only under a band that allows the",
    "numbers": [
@@ -8633,7 +8912,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1815,
+   "line": 1895,
    "section": "5. What the assembled model predicts",
    "text": "points and S1 none. [**CORRECTED 2026-09-25:** with the third harmonic added to the",
    "numbers": [
@@ -8645,7 +8924,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1816,
+   "line": 1896,
    "section": "5. What the assembled model predicts",
    "text": "launch (plane-wave residual down from +0.000039 to \u22120.000006 at A = 0.3;",
    "numbers": [
@@ -8656,7 +8935,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1819,
+   "line": 1899,
    "section": "5. What the assembled model predicts",
    "text": "A = 0.30, 0.40; T = 900), w = 2 (\u221211.7\u03c3, \u221221.9\u03c3) and w = 3 (\u22129.9\u03c3, \u221221.3\u03c3) grow",
    "numbers": [
@@ -8668,7 +8947,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1822,
+   "line": 1902,
    "section": "5. What the assembled model predicts",
    "text": "at w = 1.5 and w = 2 are **robust**; w = 3 is **marginal** \u2014 a 0.05% miss, within",
    "numbers": [
@@ -8680,7 +8959,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1825,
+   "line": 1905,
    "section": "5. What the assembled model predicts",
    "text": "not discriminate** (\u00b10.0017).]",
    "numbers": [
@@ -8690,7 +8969,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1828,
+   "line": 1908,
    "section": "5. What the assembled model predicts",
    "text": "A = 0.30 and 0.40 (0.351/0.350 at w = 1.5, 0.547/0.549 at w = 2, 0.750/0.758 at",
    "numbers": [
@@ -8707,7 +8986,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1829,
+   "line": 1909,
    "section": "5. What the assembled model predicts",
    "text": "w = 3) \u2014 and it lies **0.33, 0.50 and 0.68 of the way from S2 to S1** at fills",
    "numbers": [
@@ -8719,7 +8998,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1830,
+   "line": 1910,
    "section": "5. What the assembled model predicts",
    "text": "0.38, 0.53 and 0.74. **The fourth-order cross terms are partly present, not",
    "numbers": [
@@ -8730,7 +9009,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1831,
+   "line": 1911,
    "section": "5. What the assembled model predicts",
    "text": "zero.** Also post hoc: each fraction is close to 0.9 \u00d7 the fill (0.34, 0.48, 0.66).",
    "numbers": [
@@ -8742,7 +9021,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1832,
+   "line": 1912,
    "section": "5. What the assembled model predicts",
    "text": "- **w = 2, L = 8 was excluded:** its \u03ba changes 2.5% with record length at A = 0.10",
    "numbers": [
@@ -8752,7 +9031,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1833,
+   "line": 1913,
    "section": "5. What the assembled model predicts",
    "text": "(\u22120.004463 at T = 300, \u22120.004350 at T = 900), from the slow secondary energy",
    "numbers": [
@@ -8765,7 +9044,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1835,
+   "line": 1915,
    "section": "5. What the assembled model predicts",
    "text": "T = 300 and 900.",
    "numbers": [
@@ -8775,7 +9054,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1838,
+   "line": 1918,
    "section": "5. What the assembled model predicts",
    "text": "and derive why the fourth-order cross terms cancel.~~ [**Superseded 2026-09-25:** the",
    "numbers": [
@@ -8789,7 +9068,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1848,
+   "line": 1928,
    "section": "5. What the assembled model predicts",
    "text": "|\u0394/\u0394\u2080| = 1.007227, 1.007190, 1.007262, 1.007051 across a tenfold \u03b2 range",
    "numbers": [
@@ -8802,7 +9081,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1849,
+   "line": 1929,
    "section": "5. What the assembled model predicts",
    "text": "[RETRACTED values, swapped seeding; corrected 0.998339, 0.998316, 0.998390,",
    "numbers": [
@@ -8816,7 +9095,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1850,
+   "line": 1930,
    "section": "5. What the assembled model predicts",
    "text": "0.998316 \u2014 the collapse itself survives the fix]",
    "numbers": [
@@ -8826,7 +9105,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1853,
+   "line": 1933,
    "section": "5. What the assembled model predicts",
    "text": "- valid A \u2272 0.9; resolution required is ~10\u207b\u2074 for the pinning, **~10\u207b\u2075 for the",
    "numbers": [
@@ -8837,7 +9116,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1862,
+   "line": 1942,
    "section": "5. What the assembled model predicts",
    "text": "(2026-09-24).** The scalar gyro term appears with both signs in this archive:",
    "numbers": [
@@ -8849,7 +9128,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1877,
+   "line": 1957,
    "section": "5. What the assembled model predicts",
    "text": "floor (1.5\u00d710\u207b\u00b3 at A = 0.001, \u03b2 = 0.05, T = 300 in `phi_gauge_nonlinear.py`);",
    "numbers": [
@@ -8862,7 +9141,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1878,
+   "line": 1958,
    "section": "5. What the assembled model predicts",
    "text": "the \u03b2 = 0 seed leaves 1.25\u00d710\u207b\u00b2 and the other direction's root 2.4\u00d710\u207b\u00b2. The matrix-gauge scripts",
    "numbers": [
@@ -8874,7 +9153,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1903,
+   "line": 1983,
    "section": "5b.1 Joint #1 \u2014 gauge clock \u00d7 base potential",
    "text": "**Inputs fixed openly:** stiffness scale, g = 0.12, segment geometry, packet.",
    "numbers": [
@@ -8884,7 +9163,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1907,
+   "line": 1987,
    "section": "5b.1 Joint #1 \u2014 gauge clock \u00d7 base potential",
    "text": "| | baseline | stiffness +10% | \u0394 |",
    "numbers": [
@@ -8894,7 +9173,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1909,
+   "line": 1989,
    "section": "5b.1 Joint #1 \u2014 gauge clock \u00d7 base potential",
    "text": "| **measured** | 148.71\u00b0 | 140.74\u00b0 | **\u22127.96\u00b0** |",
    "numbers": [
@@ -8906,7 +9185,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1910,
+   "line": 1990,
    "section": "5b.1 Joint #1 \u2014 gauge clock \u00d7 base potential",
    "text": "| **predicted** (`U_segment`) | 137.13\u00b0 | 130.79\u00b0 | **\u22126.34\u00b0** |",
    "numbers": [
@@ -8918,7 +9197,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1913,
+   "line": 1993,
    "section": "5b.1 Joint #1 \u2014 gauge clock \u00d7 base potential",
    "text": "**The differential is the claim: \u22126.34\u00b0 predicted against \u22127.96\u00b0 measured**,",
    "numbers": [
@@ -8929,7 +9208,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1914,
+   "line": 1994,
    "section": "5b.1 Joint #1 \u2014 gauge clock \u00d7 base potential",
    "text": "sign correct and ~20% residual on the shift. The **absolute** ~10\u00b0 offset is the",
    "numbers": [
@@ -8940,7 +9219,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1918,
+   "line": 1998,
    "section": "5b.1 Joint #1 \u2014 gauge clock \u00d7 base potential",
    "text": "(24.88 \u2192 25.52 sites/v_g), so the naive reading predicts *more* rotation.",
    "numbers": [
@@ -8951,7 +9230,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1934,
+   "line": 2014,
    "section": "5b.2 Joint #2 \u2014 the pin null, and Joint #3 \u2014 \u03ba",
    "text": "*Same stiffness scan at two amplitudes: A = 0.02 isolates the pin (#2), A = 0.30",
    "numbers": [
@@ -8962,7 +9241,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1947,
+   "line": 2027,
    "section": "5b.2 Joint #2 \u2014 the pin null, and Joint #3 \u2014 \u03ba",
    "text": "| A | stiffness 0.90 / 1.00 / 1.10 | \u0394 from baseline |",
    "numbers": [
@@ -8974,7 +9253,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1949,
+   "line": 2029,
    "section": "5b.2 Joint #2 \u2014 the pin null, and Joint #3 \u2014 \u03ba",
    "text": "| **0.02** (linear) | 1.000038 / 1.000033 / 1.000026 | **\u22121.2\u00d710\u207b\u2075 \u2014 NULL** |",
    "numbers": [
@@ -8988,7 +9267,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1950,
+   "line": 2030,
    "section": "5b.2 Joint #2 \u2014 the pin null, and Joint #3 \u2014 \u03ba",
    "text": "| **0.30** (nonlinear) | ~~1.008633 / 1.007192 / 1.006090~~ RETRACTED (swapped seeding) | ~~\u22122.5\u00d710\u207b\u00b3~~ |",
    "numbers": [
@@ -9004,7 +9283,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1951,
+   "line": 2031,
    "section": "5b.2 Joint #2 \u2014 the pin null, and Joint #3 \u2014 \u03ba",
    "text": "| **0.02** (linear), corrected seeding | 0.999992 / 0.999993 / 0.999994 | **+2\u00d710\u207b\u2076 \u2014 NULL** |",
    "numbers": [
@@ -9018,7 +9297,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1952,
+   "line": 2032,
    "section": "5b.2 Joint #2 \u2014 the pin null, and Joint #3 \u2014 \u03ba",
    "text": "| **0.30** (nonlinear), corrected seeding | 0.998072 / 0.998316 / 0.998513 | **+4.4\u00d710\u207b\u2074 \u2014 SIGNAL** |",
    "numbers": [
@@ -9032,7 +9311,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1956,
+   "line": 2036,
    "section": "5b.2 Joint #2 \u2014 the pin null, and Joint #3 \u2014 \u03ba",
    "text": "DOP853, weighted phase regression). At f = 1.00 its A = 0.30 ratio equals the fixed",
    "numbers": [
@@ -9043,7 +9322,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1959,
+   "line": 2039,
    "section": "5b.2 Joint #2 \u2014 the pin null, and Joint #3 \u2014 \u03ba",
    "text": "**Liveness check passes:** the branch frequencies move by **+0.109** across the",
    "numbers": [
@@ -9055,7 +9334,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1962,
+   "line": 2042,
    "section": "5b.2 Joint #2 \u2014 the pin null, and Joint #3 \u2014 \u03ba",
    "text": "**The linear pin is protected** to 1.2\u00d710\u207b\u2075 across a 20% stiffness range \u2014",
    "numbers": [
@@ -9066,7 +9345,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1965,
+   "line": 2045,
    "section": "5b.2 Joint #2 \u2014 the pin null, and Joint #3 \u2014 \u03ba",
    "text": "**\u03ba is not.** Converting: **\u03ba = 0.0959, 0.0799, 0.0677** at stiffness 0.90, 1.00,",
    "numbers": [
@@ -9080,7 +9359,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1966,
+   "line": 2046,
    "section": "5b.2 Joint #2 \u2014 the pin null, and Joint #3 \u2014 \u03ba",
    "text": "1.10 \u2014 a **35% swing**, monotone, far outside noise. [**RETRACTED** \u2014 swapped",
    "numbers": [
@@ -9093,7 +9372,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1969,
+   "line": 2049,
    "section": "5b.2 Joint #2 \u2014 the pin null, and Joint #3 \u2014 \u03ba",
    "text": "**Joint #3, re-measured with correct seeding (2026-09-24):** **\u03ba = \u22120.0214,",
    "numbers": [
@@ -9106,7 +9385,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1970,
+   "line": 2050,
    "section": "5b.2 Joint #2 \u2014 the pin null, and Joint #3 \u2014 \u03ba",
    "text": "\u22120.0187, \u22120.0165** at stiffness 0.90, 1.00, 1.10 \u2014 a **26% spread**, monotone",
    "numbers": [
@@ -9121,7 +9400,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1972,
+   "line": 2052,
    "section": "5b.2 Joint #2 \u2014 the pin null, and Joint #3 \u2014 \u03ba",
    "text": "ratio at 0.99999 throughout. Every value and the sign differ from the retracted",
    "numbers": [
@@ -9133,7 +9412,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 1982,
+   "line": 2062,
    "section": "5b.3 The pin/\u03ba split is structural, not merely geometric",
    "text": "| **\u03ba**, the A\u00b2 coefficient | varies \u2014 w = 2: box-dependent, \u2192 0 as the box grows (**CLOSED**, \u00a75); w = 3 re-measured and **CLOSED** (width scan, \u00a75) \u2014 the old w = 3 value and geometry table *superseded* | **varies, 26% ",
    "numbers": [
@@ -9154,7 +9433,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2001,
+   "line": 2081,
    "section": "5b.4 Joint #4 \u2014 WITHDRAWN as a law, retained as an observation",
    "text": "C = \u22121337 at 2% scatter over a linear ramp. **That law does not generalise and",
    "numbers": [
@@ -9164,7 +9443,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2012,
+   "line": 2092,
    "section": "5b.4 Joint #4 \u2014 WITHDRAWN as a law, retained as an observation",
    "text": "(1.4\u00d710\u207b\u00b2 \u2192 9.5\u00d710\u207b\u2074) while the shift RISES** (\u22124.6\u00d710\u207b\u2075 \u2192 \u22123.6\u00d710\u207b\u2074), peaking",
    "numbers": [
@@ -9177,7 +9456,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2013,
+   "line": 2093,
    "section": "5b.4 Joint #4 \u2014 WITHDRAWN as a law, retained as an observation",
    "text": "near \u03c3 \u2248 16 on N = 128 and falling by \u03c3 = 32. A law quadratic in the gradient",
    "numbers": [
@@ -9188,7 +9467,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2017,
+   "line": 2097,
    "section": "5b.4 Joint #4 \u2014 WITHDRAWN as a law, retained as an observation",
    "text": "\u27e8\\|g\\|\u27e9\u00b2 were each tested against four source rows; spreads 57%, 57%, 28%, none",
    "numbers": [
@@ -9200,7 +9479,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2034,
+   "line": 2114,
    "section": "5b.6 Joint #5 \u2014 a DERIVED law, source strength in, pin shift out",
    "text": "survives, see \u00a75b.4): C = \u22120.2507\u00b7\u03b2\u00b7s\u00b2, constant to **0.3%** across a 2\u00d7 range in",
    "numbers": [
@@ -9210,7 +9489,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2035,
+   "line": 2115,
    "section": "5b.6 Joint #5 \u2014 a DERIVED law, source strength in, pin shift out",
    "text": "\u03b2 and a 16\u00d7 range in s\u00b2. Quadratic in S to 0.1% for S \u2264 0.02, with a resolvable",
    "numbers": [
@@ -9221,7 +9500,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2039,
+   "line": 2119,
    "section": "5b.6 Joint #5 \u2014 a DERIVED law, source strength in, pin shift out",
    "text": "ratio 1.0006 across the same parameter range. The fold over a unit-rms localised",
    "numbers": [
@@ -9231,7 +9510,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2055,
+   "line": 2135,
    "section": "5b.6 Joint #5 \u2014 a DERIVED law, source strength in, pin shift out",
    "text": "| Gaussian \u03c3 = 8 | \u22120.06268 |",
    "numbers": [
@@ -9241,7 +9520,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2056,
+   "line": 2136,
    "section": "5b.6 Joint #5 \u2014 a DERIVED law, source strength in, pin shift out",
    "text": "| Gaussian \u03c3 = 16 | \u22120.06256 |",
    "numbers": [
@@ -9252,7 +9531,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2057,
+   "line": 2137,
    "section": "5b.6 Joint #5 \u2014 a DERIVED law, source strength in, pin shift out",
    "text": "| sech\u00b2 w = 8 | \u22120.06277 |",
    "numbers": [
@@ -9262,7 +9541,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2058,
+   "line": 2138,
    "section": "5b.6 Joint #5 \u2014 a DERIVED law, source strength in, pin shift out",
    "text": "| **two separated bumps** | \u22120.06284 |",
    "numbers": [
@@ -9272,7 +9551,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2059,
+   "line": 2139,
    "section": "5b.6 Joint #5 \u2014 a DERIVED law, source strength in, pin shift out",
    "text": "| *linear ramp (different class)* | *\u22120.02807* |",
    "numbers": [
@@ -9282,7 +9561,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2067,
+   "line": 2147,
    "section": "5b.6 Joint #5 \u2014 a DERIVED law, source strength in, pin shift out",
    "text": "The 8\u201311\u00d7 miss and its tracking of spatial extent were class mismatch, not a",
    "numbers": [
@@ -9295,7 +9574,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2070,
+   "line": 2150,
    "section": "5b.6 Joint #5 \u2014 a DERIVED law, source strength in, pin shift out",
    "text": "**\u26a0 \u22121/16 was a coincidence.** C = \u22120.0627 sits 0.3% from \u22121/16, and a parameter",
    "numbers": [
@@ -9307,7 +9586,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2072,
+   "line": 2152,
    "section": "5b.6 Joint #5 \u2014 a DERIVED law, source strength in, pin shift out",
    "text": "an artifact of the default values. **\u2212\u00bc survives the test \u22121/16 failed.**",
    "numbers": [
@@ -9319,7 +9598,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2083,
+   "line": 2163,
    "section": "5b.6a Joint #5 is q = 1 ONLY \u2014 and the observable, not the geometry, is why",
    "text": "| **1** | 48, 64 | \u22120.06343, \u22120.06303 | **0.6%** |",
    "numbers": [
@@ -9332,7 +9611,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2084,
+   "line": 2164,
    "section": "5b.6a Joint #5 is q = 1 ONLY \u2014 and the observable, not the geometry, is why",
    "text": "| 2 | 10, 12 | \u22120.29050, +2.93361 | **244%** |",
    "numbers": [
@@ -9346,7 +9625,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2085,
+   "line": 2165,
    "section": "5b.6a Joint #5 is q = 1 ONLY \u2014 and the observable, not the geometry, is why",
    "text": "| 3 | 6, 8 | +1.92846, \u22120.18799 | **243%** |",
    "numbers": [
@@ -9358,7 +9637,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2093,
+   "line": 2173,
    "section": "5b.6a Joint #5 is q = 1 ONLY \u2014 and the observable, not the geometry, is why",
    "text": "S-extrapolated at matched box fraction: C\u2083 = **\u22120.188, +1.458, \u22121.429** at sides",
    "numbers": [
@@ -9372,7 +9651,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2094,
+   "line": 2174,
    "section": "5b.6a Joint #5 is q = 1 ONLY \u2014 and the observable, not the geometry, is why",
    "text": "8, 12, 16. Each is well-defined *per box* \u2014 S-convergence is tight \u2014 and the",
    "numbers": [
@@ -9382,7 +9661,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2098,
+   "line": 2178,
    "section": "5b.6a Joint #5 is q = 1 ONLY \u2014 and the observable, not the geometry, is why",
    "text": "\\|p\\| \u2264 2\u03c0/8 (the side-8 shell, rule fixed before looking): C_IR = **\u22120.0253**",
    "numbers": [
@@ -9392,7 +9671,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2099,
+   "line": 2179,
    "section": "5b.6a Joint #5 is q = 1 ONLY \u2014 and the observable, not the geometry, is why",
    "text": "at side 12 and **\u22120.0365** at side 16 \u2014 a 44% move, neither near the side-8",
    "numbers": [
@@ -9405,7 +9684,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2112,
+   "line": 2192,
    "section": "5b.6a Joint #5 is q = 1 ONLY \u2014 and the observable, not the geometry, is why",
    "text": "values (5.8\u00d710\u207b\u2074, 1.2\u00d710\u207b\u2074) came from `eigs` near a shift returning near-duplicates.",
    "numbers": [
@@ -9416,7 +9695,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2113,
+   "line": 2193,
    "section": "5b.6a Joint #5 is q = 1 ONLY \u2014 and the observable, not the geometry, is why",
    "text": "**Dense spectra give O(10\u207b\u00b2) at q = 3, not falling**, and comparable to q = 1:",
    "numbers": [
@@ -9426,7 +9705,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2117,
+   "line": 2197,
    "section": "5b.6a Joint #5 is q = 1 ONLY \u2014 and the observable, not the geometry, is why",
    "text": "| 1 | 8.2\u00d710\u207b\u00b2, 6.4\u00d710\u207b\u00b3, 6.4\u00d710\u207b\u00b3 |",
    "numbers": [
@@ -9438,7 +9717,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2118,
+   "line": 2198,
    "section": "5b.6a Joint #5 is q = 1 ONLY \u2014 and the observable, not the geometry, is why",
    "text": "| 2 | 3.8\u00d710\u207b\u00b2, 6.9\u00d710\u207b\u00b3, 5.3\u00d710\u207b\u00b3 |",
    "numbers": [
@@ -9450,7 +9729,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2119,
+   "line": 2199,
    "section": "5b.6a Joint #5 is q = 1 ONLY \u2014 and the observable, not the geometry, is why",
    "text": "| 3 | 1.4\u00d710\u207b\u00b9, 3.8\u00d710\u207b\u00b2, 5.9\u00d710\u207b\u00b2 |",
    "numbers": [
@@ -9462,7 +9741,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2140,
+   "line": 2220,
    "section": "5b.7 Residual sector \u2014 base-stable on q = 3",
    "text": "| B \u221d C_r\u00b2 | **pass** \u2014 ratios 3.88, 3.83, 3.85 for 2\u00d7 C_r |",
    "numbers": [
@@ -9476,7 +9755,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2141,
+   "line": 2221,
    "section": "5b.7 Residual sector \u2014 base-stable on q = 3",
    "text": "| drift | **pass** \u2014 ~10\u207b\u2077 throughout |",
    "numbers": [
@@ -9488,7 +9767,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2142,
+   "line": 2222,
    "section": "5b.7 Residual sector \u2014 base-stable on q = 3",
    "text": "| **working range** | **C_r \u2272 0.05** |",
    "numbers": [
@@ -9498,7 +9777,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2143,
+   "line": 2223,
    "section": "5b.7 Residual sector \u2014 base-stable on q = 3",
    "text": "| side dependence | ~20% on \\|B\\| \u2014 flagged |",
    "numbers": [
@@ -9508,7 +9787,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2149,
+   "line": 2229,
    "section": "5b.7 Residual sector \u2014 base-stable on q = 3",
    "text": "**Do not quote a universal \\|B\\|** \u2014 the ~20% box dependence is the same class of",
    "numbers": [
@@ -9518,7 +9797,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2158,
+   "line": 2238,
    "section": "5b.5 Standing summary \u2014 EM-like \u00d7 base",
    "text": "| **uniform** base stiffness | **protected**, null 1.2\u00d710\u207b\u2075, derived | **varies 26%** (~~~35%~~ retracted, \u00a75b.2) | **moves, sign predicted** |",
    "numbers": [
@@ -9532,7 +9811,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2163,
+   "line": 2243,
    "section": "5b.5 Standing summary \u2014 EM-like \u00d7 base",
    "text": "**Open:** the ~20% shift residual on joint #1 (readout timing, Qt, ramp",
    "numbers": [
@@ -9544,7 +9823,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2168,
+   "line": 2248,
    "section": "5b.5 Standing summary \u2014 EM-like \u00d7 base",
    "text": "must peak at **\u03c3\\* = 2\u03bb = 4\u03c0/k** \u2014 verified \u03c3\\* = 8 at both N = 64 and N = 128",
    "numbers": [
@@ -9557,7 +9836,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2169,
+   "line": 2249,
    "section": "5b.5 Standing summary \u2014 EM-like \u00d7 base",
    "text": "(so not finite-size), doubling to 16 when k halves, with \u03c3\\*\u00b7k = 4\u03c0 in all three",
    "numbers": [
@@ -9567,7 +9846,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2170,
+   "line": 2250,
    "section": "5b.5 Standing summary \u2014 EM-like \u00d7 base",
    "text": "runs. It must also reproduce the **sign change**: at k = \u03c0/4 the shifts are ~30\u00d7",
    "numbers": [
@@ -9577,7 +9856,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2179,
+   "line": 2259,
    "section": "6. Harness \u2014 mandatory",
    "text": "**locks `freq_fft`** at 0.4985 relative error against the exact Duffing shift,",
    "numbers": [
@@ -9587,7 +9866,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2201,
+   "line": 2281,
    "section": "6b. The assembled model \u2014 `04_scripts/session/model.py`",
    "text": "| 2 free propagation | energy drift **2.0\u00d710\u207b\u2077** |",
    "numbers": [
@@ -9597,7 +9876,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2202,
+   "line": 2282,
    "section": "6b. The assembled model \u2014 `04_scripts/session/model.py`",
    "text": "| 3 complex structure selected | chirality purity **0.9834** |",
    "numbers": [
@@ -9607,7 +9886,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2203,
+   "line": 2283,
    "section": "6b. The assembled model \u2014 `04_scripts/session/model.py`",
    "text": "| 4 passivity \u27f9 u(n), dim n\u00b2 | **1, 4, 9, 16, 25** |",
    "numbers": [
@@ -9620,7 +9899,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2204,
+   "line": 2284,
    "section": "6b. The assembled model \u2014 `04_scripts/session/model.py`",
    "text": "| 5 n=1 asymmetry, measured | **0.100003** vs \u22122c\u03b2 sin k = 0.100000 |",
    "numbers": [
@@ -9631,7 +9910,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2205,
+   "line": 2285,
    "section": "6b. The assembled model \u2014 `04_scripts/session/model.py`",
    "text": "| 6 \u03ba and the \u03b2-collapse | **\u03ba = 0.0798 \u00b1 0.00089** across a tenfold \u03b2 range \u2014 RETRACTED (swapped seeding, \u00a75); corrected \u22120.0184 \u00b1 0.00033 |",
    "numbers": [
@@ -9646,7 +9925,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2206,
+   "line": 2286,
    "section": "6b. The assembled model \u2014 `04_scripts/session/model.py`",
    "text": "| 7 u(2) ordering | sim-vs-pred **0.285\u00b0, 0.165\u00b0**; splitting 101.12 measured, 100.80 predicted |",
    "numbers": [
@@ -9659,7 +9938,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2207,
+   "line": 2287,
    "section": "6b. The assembled model \u2014 `04_scripts/session/model.py`",
    "text": "| 7 u(3) ordering | sim-vs-pred **0.615\u00b0, 0.566\u00b0**; splitting **65.1166** measured, **64.9712** predicted [**LABEL CORRECTED 2026-09-25:** these numbers are the **platform benchmark** `04_scripts/platform/phi_gauge_u3_wo",
    "numbers": [
@@ -9686,7 +9965,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2208,
+   "line": 2288,
    "section": "6b. The assembled model \u2014 `04_scripts/session/model.py`",
    "text": "| 8 Abelian control | **0.0169\u00b0** where theory says 0 [**LABEL CORRECTED 2026-09-25:** 0.0169\u00b0 is the **platform script's** Abelian control (`04_scripts/platform/phi_gauge_u3_working.py`, \"run-vs-run splitting\", u(3), \u03ba ",
    "numbers": [
@@ -9703,7 +9982,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2209,
+   "line": 2289,
    "section": "6b. The assembled model \u2014 `04_scripts/session/model.py`",
    "text": "| residual sector | present, C_r = 0 by default, inert to 4.5\u00d710\u207b\u00b9\u2079 |",
    "numbers": [
@@ -9713,7 +9992,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2211,
+   "line": 2291,
    "section": "6b. The assembled model \u2014 `04_scripts/session/model.py`",
    "text": "[The gate values above are at \u03ba = 0.5 \u2014 superseded by the change of operating point (2026-09-25), not retracted. At \u03ba\\* (`model.py`",
    "numbers": [
@@ -9728,7 +10007,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2212,
+   "line": 2292,
    "section": "6b. The assembled model \u2014 `04_scripts/session/model.py`",
    "text": "KAPPA since 2026-09-25) all eleven gates pass: purity 0.9818; gate 7 u(2) 98.74 / 98.26,",
    "numbers": [
@@ -9745,7 +10024,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2213,
+   "line": 2293,
    "section": "6b. The assembled model \u2014 `04_scripts/session/model.py`",
    "text": "u(3) 106.86 / 107.15; gate 8 0.0487\u00b0 (`shape_zero_tests/model_gates_kstar.txt`; full",
    "numbers": [
@@ -9757,7 +10036,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2214,
+   "line": 2294,
    "section": "6b. The assembled model \u2014 `04_scripts/session/model.py`",
    "text": "table in \u00a73, \"ADOPTED\"). The u(3) row's 65.1166 / 64.9712 does not match the current",
    "numbers": [
@@ -9770,7 +10049,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2215,
+   "line": 2295,
    "section": "6b. The assembled model \u2014 `04_scripts/session/model.py`",
    "text": "`model.py` even at \u03ba = 0.5 (117.92 / 118.29) \u2014 a pre-existing mismatch, \u00a79.]",
    "numbers": [
@@ -9783,7 +10062,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2216,
+   "line": 2296,
    "section": "6b. The assembled model \u2014 `04_scripts/session/model.py`",
    "text": "[Resolved 2026-09-25: the u(3) row is the platform benchmark, mislabelled \u2014 see the",
    "numbers": [
@@ -9795,7 +10074,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2217,
+   "line": 2297,
    "section": "6b. The assembled model \u2014 `04_scripts/session/model.py`",
    "text": "row.] [After the per-mode launch (2026-09-25), `model.py` at \u03ba\\*: purity 0.9871; gate 7",
    "numbers": [
@@ -9808,7 +10087,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2218,
+   "line": 2298,
    "section": "6b. The assembled model \u2014 `04_scripts/session/model.py`",
    "text": "u(2) 98.69 / 98.26, u(3) 106.98 / 107.15; gate 8 0.0498\u00b0 (`shape_zero_tests/",
    "numbers": [
@@ -9822,7 +10101,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2239,
+   "line": 2319,
    "section": "7. Build order",
    "text": "| 2 | ring of N nodes, \u03c6-well, elastic coupling | free packet propagates, drift < 10\u207b\u2076 |",
    "numbers": [
@@ -9832,7 +10111,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2240,
+   "line": 2320,
    "section": "7. Build order",
    "text": "| 3 | gyroscopic \u03ba\ud835\udd41 | complex structure selected; chirality purity ~0.98 |",
    "numbers": [
@@ -9842,7 +10121,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2242,
+   "line": 2322,
    "section": "7. Build order",
    "text": "| 5 | nonlinear regime | \u03ba = 0.0799 reproduced, \u03b2-collapse holds \u2014 \u03ba RETRACTED (\u00a75); gate now reports \u22120.0184, collapse still holds |",
    "numbers": [
@@ -9855,7 +10134,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2243,
+   "line": 2323,
    "section": "7. Build order",
    "text": "| 6 | n = 2 nodes, Pauli W | ordering 59.86\u00b0 vs 59.84\u00b0 |",
    "numbers": [
@@ -9866,7 +10145,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2244,
+   "line": 2324,
    "section": "7. Build order",
    "text": "| 7 | n = 3 nodes, Gell-Mann W | ordering 65.12\u00b0 vs 64.97\u00b0, control ~0 |",
    "numbers": [
@@ -9877,7 +10156,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2245,
+   "line": 2325,
    "section": "7. Build order",
    "text": "| 8 | segments at \u2264 20-site separation | Abelian control 0.0137\u00b0 |",
    "numbers": [
@@ -9888,7 +10167,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2247,
+   "line": 2327,
    "section": "7. Build order",
    "text": "[Rows 3, 6\u20138 were done at \u03ba = 0.5 \u2014 superseded by the change of operating point (2026-09-25), not retracted; values at \u03ba\\* in \u00a73, \"ADOPTED\".]",
    "numbers": [
@@ -9903,7 +10182,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2250,
+   "line": 2330,
    "section": "7. Build order",
    "text": "segments; at a 60-site gap the Abelian control reads 62\u00b0 where theory says 0.",
    "numbers": [
@@ -9914,7 +10193,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2263,
+   "line": 2343,
    "section": "7b. Why the model stops at D8 \u2014 the tower says so",
    "text": "| \ud835\udd4a (16) | both halves generic | 3.075 |",
    "numbers": [
@@ -9925,7 +10204,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2264,
+   "line": 2344,
    "section": "7b. Why the model stops at D8 \u2014 the tower says so",
    "text": "| \ud835\udd4a (16) | one half zero \u2014 **octonionic** | **8.9\u00d710\u207b\u00b9\u2076** |",
    "numbers": [
@@ -9936,7 +10215,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2265,
+   "line": 2345,
    "section": "7b. Why the model stops at D8 \u2014 the tower says so",
    "text": "| A\u2085 (32) | both halves generic | 9.918 |",
    "numbers": [
@@ -9947,7 +10226,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2266,
+   "line": 2346,
    "section": "7b. Why the model stops at D8 \u2014 the tower says so",
    "text": "| A\u2085 (32) | Q = 0, P a generic **sedenion** | 3.638 |",
    "numbers": [
@@ -9958,7 +10237,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2267,
+   "line": 2347,
    "section": "7b. Why the model stops at D8 \u2014 the tower says so",
    "text": "| A\u2085 (32) | supported on the first 8 \u2014 **octonionic** | **3.6\u00d710\u207b\u00b9\u2075** |",
    "numbers": [
@@ -9969,7 +10248,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2269,
+   "line": 2349,
    "section": "7b. Why the model stops at D8 \u2014 the tower says so",
    "text": "**The composition locus of every level \u2265 16 is the octonions.** Not the",
    "numbers": [
@@ -9979,7 +10258,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2286,
+   "line": 2366,
    "section": "7b. Why the model stops at D8 \u2014 the tower says so",
    "text": "single su(3) orbit, connected by finite elements at ~10\u207b\u00b9\u00b2, so the discrete 3 is",
    "numbers": [
@@ -9989,7 +10268,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2300,
+   "line": 2380,
    "section": "7b. Why the model stops at D8 \u2014 the tower says so",
    "text": "**The tower also saturates.** dim Der = 14 at dimensions 8, 16 and 32 alike",
    "numbers": [
@@ -10001,7 +10280,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2301,
+   "line": 2381,
    "section": "7b. Why the model stops at D8 \u2014 the tower says so",
    "text": "(Schafer 1954). Eigenvalue multiplicities of L\u1d40L are multiples of 4 at every",
    "numbers": [
@@ -10011,7 +10290,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2302,
+   "line": 2382,
    "section": "7b. Why the model stops at D8 \u2014 the tower says so",
    "text": "level \u2014 [4,8,4] at D16, all 4s at D32 (Biss\u2013Christensen\u2013Dugger\u2013Isaksen 2009).",
    "numbers": [
@@ -10021,7 +10300,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2306,
+   "line": 2386,
    "section": "7b. Why the model stops at D8 \u2014 the tower says so",
    "text": "**Verified at D16, and standing:** non-homogeneous with orbits of dimension 11 in",
    "numbers": [
@@ -10033,7 +10312,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2307,
+   "line": 2387,
    "section": "7b. Why the model stops at D8 \u2014 the tower says so",
    "text": "S\u00b9\u2075 (codimension 4); four invariants Re(a), Re(q), |p|\u00b2, p\u00b7q constant to 10\u207b\u00b9\u2076;",
    "numbers": [
@@ -10043,7 +10322,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2309,
+   "line": 2389,
    "section": "7b. Why the model stops at D8 \u2014 the tower says so",
    "text": "G\u2082/SU(2), stabiliser 3, bracket-closed at 1.4\u00d710\u207b\u00b9\u2075; the exact reduced metric,",
    "numbers": [
@@ -10053,7 +10332,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2311,
+   "line": 2391,
    "section": "7b. Why the model stops at D8 \u2014 the tower says so",
    "text": "non-round structure \u2014 \u03c3_min 0.102\u20130.853 at D16 against 1.0000 exactly at D8.",
    "numbers": [
@@ -10065,7 +10344,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2328,
+   "line": 2408,
    "section": "8. Not in the build, and why",
    "text": "| **generation structure (three-fold)** | **CLOSED NEGATIVELY \u2014 do not re-run.** The tower **doubles**: copies of the D8 content go 1, 2, 4, 8, 16 = 2^(k\u22123), every level a power of two. Three is unreachable at any height",
    "numbers": [
@@ -10078,7 +10357,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2331,
+   "line": 2411,
    "section": "8. Not in the build, and why",
    "text": "| G\u2082-stabiliser su(3) | imported (G\u00fcnaydin\u2013G\u00fcrsey 1973); the trimer route is the programme's own |",
    "numbers": [
@@ -10088,7 +10367,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2343,
+   "line": 2423,
    "section": "9. Open, and what each blocks",
    "text": "| **what fixes the fibre metric scale** | **the largest one \u2014 it blocks three numbers at once.** \u210f, c\u2088 and \u039b are all functions of it (\u03ba_\u210f \u221d 1/k, c\u2088 \u221d k\u00b2, \u039b \u221d 1/k). Nothing in the architecture supplies a length: structure",
    "numbers": [
@@ -10099,7 +10378,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2345,
+   "line": 2425,
    "section": "9. Open, and what each blocks",
    "text": "| ~~fourth-order cross-modulation (\u03ba, F at A = 0.30)~~ **DONE for the plane wave, 2026-09-25** (\u00a75, \"\u03ba to fourth order\"); the original entry: | the derived F is second order; it matches every sharp point except the two n",
    "numbers": [
@@ -10116,7 +10395,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2346,
+   "line": 2426,
    "section": "9. Open, and what each blocks",
    "text": "| ~~beam fourth order with orbit-consistent launches~~ **DONE 2026-09-25** (\u00a75): launch pieces derived, H0 and S1 excluded; the original entry: | the beam fourth-order tests (H0 excluded at large fill; S1 against S2 unre",
    "numbers": [
@@ -10130,7 +10409,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2347,
+   "line": 2427,
    "section": "9. Open, and what each blocks",
    "text": "| ~~S2 at w = 3, L = 4, and why the cross terms cancel~~ **SUPERSEDED 2026-09-25** (\u00a75): with the third harmonic in the launch S2 fails three of four L = 4 beams, and the cross terms are partly present; the original entr",
    "numbers": [
@@ -10145,7 +10424,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2348,
+   "line": 2428,
    "section": "9. Open, and what each blocks",
    "text": "| ~~which J-compatibility bound applies at q = 3~~ **RESOLVED 2026-09-25** (\u00a73, \"ADOPTED\"): 0.972 \u2014 the model's slab segments conserve transverse momentum (code and `jcompat_q3.py`); a finite-width segment would need 2.0",
    "numbers": [
@@ -10160,7 +10439,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2349,
+   "line": 2429,
    "section": "9. Open, and what each blocks",
    "text": "| ~~the q = 3 Abelian floor at \u03ba\\*~~ **RESOLVED 2026-09-25** (\u00a73, \"ADOPTED\"; \u00a74d; \u00a74d.1): a readout-timing artefact \u2014 a carrier launch leaves off-branch content that makes the readout oscillate, and the two runs were rea",
    "numbers": [
@@ -10176,7 +10455,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2350,
+   "line": 2430,
    "section": "9. Open, and what each blocks",
    "text": "| ~~\u00a76b's gate-7 u(3) entry~~ **RESOLVED 2026-09-25**: it is the platform benchmark `phi_gauge_u3_working.py` (reproduced exactly), mislabelled as `model.py`'s gate 7; label corrected in \u00a76b. The original entry: | 65.116",
    "numbers": [
@@ -10192,7 +10471,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2352,
+   "line": 2434,
    "section": "9. Open, and what each blocks",
    "text": "| **the beam's fourth-order cross kernel** | derive it \u2014 every fourth-order cross term between a beam's transverse components, on the lattice \u2014 with the measured r values as the target: 0.351/0.350 (w = 1.5), 0.547/0.549",
    "numbers": [
@@ -10212,7 +10491,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2353,
+   "line": 2435,
    "section": "9. Open, and what each blocks",
    "text": "| ~~verify the 0.39\u00b0 attribution~~ | **CLOSED** \u2014 readout timing; the Abelian floor is exactly 0 under clearing readout at q = 1 and q = 3 |",
    "numbers": [
@@ -10222,7 +10501,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2354,
+   "line": 2436,
    "section": "9. Open, and what each blocks",
    "text": "| ~~wavenumber-averaged prediction at q = 3~~ | **CLOSED** \u2014 closes the gap to 0.04\u20130.17\u00b0; the q = 3 gauge sector is quantitatively verified |",
    "numbers": [
@@ -10235,7 +10514,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2356,
+   "line": 2438,
    "section": "9. Open, and what each blocks",
    "text": "| ~~permanent q = 3 gate~~ | **CLOSED** \u2014 `shape_zero_tests/q3_gate.py` (commit `ed32937`). u(2) and u(3), AB/BA plus Abelian floors, clearing readout, spectrum-averaged prediction; PASS needs every error < 1\u00b0 and floors",
    "numbers": [
@@ -10251,7 +10530,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2357,
+   "line": 2439,
    "section": "9. Open, and what each blocks",
    "text": "| free-evolution operator between segments | would remove the \u226420-site gap constraint in \u00a77 step 8. Note the profile-map test showed the q = 1 product residual is already sub-degree, so this matters at q = 3 or not at al",
    "numbers": [
@@ -10261,7 +10540,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2365,
+   "line": 2447,
    "section": "Closed this session",
    "text": "0.08\u00b0 gain) \u00b7 the C_r saturation anomaly (oscillation, f_res \u221d C_r)",
    "numbers": [
@@ -16412,7 +16691,12 @@
     "09",
     "25",
     "0.971737",
-    "2.091"
+    "2.091",
+    "2026",
+    "09",
+    "25",
+    "0.49",
+    "1.25"
    ],
    "status": [
     "RETRACTED",
@@ -16530,7 +16814,64 @@
   },
   {
    "file": "./03_current/INPUT_LEDGER.md",
-   "line": 273,
+   "line": 243,
+   "section": "2d. The remaining free parameters",
+   "text": "the repository supplies an upper side. [**CORRECTED 2026-09-25:** \u03ba \u2265 \u03ba\\* closes the",
+   "numbers": [
+    "2026",
+    "09",
+    "25"
+   ],
+   "status": []
+  },
+  {
+   "file": "./03_current/INPUT_LEDGER.md",
+   "line": 245,
+   "section": "2d. The remaining free parameters",
+   "text": "J-breaking and at \u03ba\\* converts a-waves near k = 0.49 and 1.25 into the opposite",
+   "numbers": [
+    "0.49",
+    "1.25"
+   ],
+   "status": []
+  },
+  {
+   "file": "./03_current/INPUT_LEDGER.md",
+   "line": 246,
+   "section": "2d. The remaining free parameters",
+   "text": "chirality by second-harmonic resonance (confirmed by simulation, slope 0.991 \u00d7 rA\u00b2),",
+   "numbers": [
+    "0.991"
+   ],
+   "status": [
+    "VERIFIED"
+   ]
+  },
+  {
+   "file": "./03_current/INPUT_LEDGER.md",
+   "line": 249,
+   "section": "2d. The remaining free parameters",
+   "text": "**Finding, not a principle: persistence at every wavelength (2026-09-25).** Strict",
+   "numbers": [
+    "2026",
+    "09",
+    "25"
+   ],
+   "status": []
+  },
+  {
+   "file": "./03_current/INPUT_LEDGER.md",
+   "line": 254,
+   "section": "2d. The remaining free parameters",
+   "text": "window vanishes for c/\u221a5 between 0.45 and 0.89. Not adopted (MODEL_SPEC \u00a73, \"FINDING\",",
+   "numbers": [
+    "0.45"
+   ],
+   "status": []
+  },
+  {
+   "file": "./03_current/INPUT_LEDGER.md",
+   "line": 285,
    "section": "2d. The remaining free parameters",
    "text": "fails on 137 being **prime** \u2014 the model's integers factor over {2,3,7} and no",
    "numbers": [
@@ -16542,7 +16883,7 @@
   },
   {
    "file": "./03_current/INPUT_LEDGER.md",
-   "line": 284,
+   "line": 296,
    "section": "2d. The remaining free parameters",
    "text": "2026-09-25: the elastic coupling c, row 6, is chosen rather than measured.] [Seven",
    "numbers": [
@@ -16554,7 +16895,7 @@
   },
   {
    "file": "./03_current/INPUT_LEDGER.md",
-   "line": 290,
+   "line": 302,
    "section": "2d. The remaining free parameters",
    "text": "(no velocity dependence), no net work (skew generator, 2.7\u00d710\u207b\u00b9\u2075), norm-preserving",
    "numbers": [
@@ -16564,7 +16905,7 @@
   },
   {
    "file": "./03_current/INPUT_LEDGER.md",
-   "line": 291,
+   "line": 303,
    "section": "2d. The remaining free parameters",
    "text": "(3.3\u00d710\u207b\u00b9\u2076), and reducing to the existing D8 structure at B = 0. Only the",
    "numbers": [
@@ -16574,7 +16915,7 @@
   },
   {
    "file": "./03_current/INPUT_LEDGER.md",
-   "line": 316,
+   "line": 328,
    "section": "3.1 \u03ba \u2014 the live one",
    "text": "equal \u03ba exactly (0.0524, 0.1518, 0.3979, 1.0001 against \u03ba = 0.05, 0.15, 0.40,",
    "numbers": [
@@ -16590,7 +16931,7 @@
   },
   {
    "file": "./03_current/INPUT_LEDGER.md",
-   "line": 317,
+   "line": 329,
    "section": "3.1 \u03ba \u2014 the live one",
    "text": "1.00). Then Section 9's closed-form nonlinear predictions carry **zero free",
    "numbers": [
@@ -16600,7 +16941,7 @@
   },
   {
    "file": "./03_current/INPUT_LEDGER.md",
-   "line": 328,
+   "line": 340,
    "section": "3.2 The a\u2013b angle",
    "text": "frequency ratio: parameter-free flows give exactly **one** frequency (6/6",
    "numbers": [
@@ -16610,7 +16951,7 @@
   },
   {
    "file": "./03_current/INPUT_LEDGER.md",
-   "line": 329,
+   "line": 341,
    "section": "3.2 The a\u2013b angle",
    "text": "trials), the generic flow gives **two** (6/6 at adequate resolution), and the",
    "numbers": [
@@ -16620,7 +16961,7 @@
   },
   {
    "file": "./03_current/INPUT_LEDGER.md",
-   "line": 330,
+   "line": 342,
    "section": "3.2 The a\u2013b angle",
    "text": "ratio sweeps monotonically over [1.04, 23.9] as the angle runs 5\u00b0 to 150\u00b0.",
    "numbers": [
@@ -16631,7 +16972,7 @@
   },
   {
    "file": "./03_current/INPUT_LEDGER.md",
-   "line": 335,
+   "line": 347,
    "section": "3.2 The a\u2013b angle",
    "text": "**Note:** the golden ratio is attainable near 76\u00b0, and **so is every other value",
    "numbers": [
@@ -16641,7 +16982,7 @@
   },
   {
    "file": "./03_current/INPUT_LEDGER.md",
-   "line": 341,
+   "line": 353,
    "section": "3.3 \u03b6 \u2014 testable but the target is unclear",
    "text": "(cone deficit renamed \u03b2 \u2192 \u03b6 on 2026-09-25; \u03b2 now denotes only the lattice gyroscopic coupling)",
    "numbers": [
@@ -16653,7 +16994,7 @@
   },
   {
    "file": "./03_current/INPUT_LEDGER.md",
-   "line": 344,
+   "line": 356,
    "section": "3.3 \u03b6 \u2014 testable but the target is unclear",
    "text": "parameter to 7.6\u00d710\u207b\u00b9\u2075 across two decades, against a point mass varying 100\u00d7",
    "numbers": [
@@ -16664,7 +17005,7 @@
   },
   {
    "file": "./03_current/INPUT_LEDGER.md",
-   "line": 353,
+   "line": 365,
    "section": "3.3 \u03b6 \u2014 testable but the target is unclear",
    "text": "With it: the CMB-lensing bound G\u03bc \u2264 4.3\u00d710\u207b\u2075 gives 1 \u2212 \u03b6 \u2272 1.7\u00d710\u207b\u2074.",
    "numbers": [
@@ -16675,7 +17016,7 @@
   },
   {
    "file": "./03_current/INPUT_LEDGER.md",
-   "line": 358,
+   "line": 370,
    "section": "3.3 \u03b6 \u2014 testable but the target is unclear",
    "text": "embedding to the unit sphere verified to 6.7\u00d710\u207b\u00b9\u2076, disjoint supports",
    "numbers": [
@@ -16687,7 +17028,7 @@
   },
   {
    "file": "./03_current/INPUT_LEDGER.md",
-   "line": 359,
+   "line": 371,
    "section": "3.3 \u03b6 \u2014 testable but the target is unclear",
    "text": "orthogonal. Candidate \u03b6 = (\u03c0/2)/(2\u03c0) = **1/4**. *Closing condition:* shape space",
    "numbers": [
@@ -16697,7 +17038,7 @@
   },
   {
    "file": "./03_current/INPUT_LEDGER.md",
-   "line": 362,
+   "line": 374,
    "section": "3.3 \u03b6 \u2014 testable but the target is unclear",
    "text": "**OPEN INCONSISTENCY, recorded not resolved (2026-09-25).** `02_synthesis/C1S_SYNTHESIS.md`",
    "numbers": [
@@ -16711,7 +17052,7 @@
   },
   {
    "file": "./03_current/INPUT_LEDGER.md",
-   "line": 363,
+   "line": 375,
    "section": "3.3 \u03b6 \u2014 testable but the target is unclear",
    "text": "\u00a712 states that plurality forbids the rational values of 2\u03b6; no derivation of that",
    "numbers": [
@@ -16721,7 +17062,7 @@
   },
   {
    "file": "./03_current/INPUT_LEDGER.md",
-   "line": 367,
+   "line": 379,
    "section": "3.3 \u03b6 \u2014 testable but the target is unclear",
    "text": "rational, so the rule would exclude it. The candidate \u03b6 = 1/4 (2\u03b6 = 1/2) would be",
    "numbers": [
@@ -16732,7 +17073,7 @@
   },
   {
    "file": "./03_current/INPUT_LEDGER.md",
-   "line": 406,
+   "line": 418,
    "section": "5. What is already tested, and failed",
    "text": "The one apparent match \u2014 S\u00b2 giving 1, 3, 6, 10, matching molecular rotation \u2014",
    "numbers": [
@@ -16744,7 +17085,7 @@
   },
   {
    "file": "./03_current/INPUT_LEDGER.md",
-   "line": 414,
+   "line": 426,
    "section": "5. What is already tested, and failed",
    "text": "(4.4\u00d710\u207b\u00b9\u2076), so the algebra's own metric reduces to the round one on the",
    "numbers": [
@@ -16754,7 +17095,7 @@
   },
   {
    "file": "./03_current/INPUT_LEDGER.md",
-   "line": 421,
+   "line": 433,
    "section": "6. What the construction is",
    "text": "A ladder of **what can be tracked**, not of what can be. The 112 discarded",
    "numbers": [
@@ -16764,7 +17105,7 @@
   },
   {
    "file": "./03_current/INPUT_LEDGER.md",
-   "line": 424,
+   "line": 436,
    "section": "6. What the construction is",
    "text": "**measurability**, not structure: in the 16, measuring the parts tells you the",
    "numbers": [
@@ -16774,7 +17115,7 @@
   },
   {
    "file": "./03_current/INPUT_LEDGER.md",
-   "line": 425,
+   "line": 437,
    "section": "6. What the construction is",
    "text": "whole; in the 112 it does not.",
    "numbers": [
@@ -20777,8 +21118,11 @@
    "file": "./03_current/PREMISE_LEDGER.md",
    "line": 40,
    "section": "1a. Principles and postulates",
-   "text": "| P3 | **Persistence** | What endures is what exists to be studied | D1 periodicity; q \u2264 3 (C5); Euclidean signature (C6) | **principle** \u2014 used at D1 only in the formal proofs | `shape_zero_zero_ladder.md`, \"The questio",
+   "text": "| P3 | **Persistence** | What endures is what exists to be studied | D1 periodicity; q \u2264 3 (C5); Euclidean signature (C6) | **principle** \u2014 used at D1 only in the formal proofs [Finding 2026-09-25, not adopted: *persiste",
    "numbers": [
+    "2026",
+    "09",
+    "25",
     "14"
    ],
    "status": []
@@ -20809,6 +21153,9 @@
    "section": "1a. Principles and postulates",
    "text": "| P8 | **J-compatibility, required at every wavelength** | The part of any coupling that does not respect each node's complex structure J must be suppressed by the dynamics at every wavelength \u2014 the opposite-chirality ch",
    "numbers": [
+    "2026",
+    "09",
+    "25",
     "2026",
     "09",
     "25"
@@ -20972,9 +21319,14 @@
    "numbers": [
     "0.971737",
     "3/2",
-    "2.091"
+    "2.091",
+    "2026",
+    "09",
+    "25"
    ],
-   "status": []
+   "status": [
+    "OPEN"
+   ]
   },
   {
    "file": "./03_current/PREMISE_LEDGER.md",
@@ -21029,7 +21381,12 @@
    "section": "2c. Measured (simulation, with checks that could have failed)",
    "text": "| C13 | **J-compatibility emerges from the dynamics**: the J-breaking part of a coupling is suppressed completely at first order in g when the opposite-chirality channel is closed (cos k\u2032 = cos k\u2080 + \u03ba\u03c9/c > 1), and not wh",
    "numbers": [
-    "10"
+    "10",
+    "2026",
+    "09",
+    "25",
+    "0.49",
+    "1.25"
    ],
    "status": [
     "OPEN"
@@ -21116,7 +21473,52 @@
   },
   {
    "file": "./03_current/PREMISE_LEDGER.md",
-   "line": 142,
+   "line": 134,
+   "section": "2c. Measured (simulation, with checks that could have failed)",
+   "text": "| C31 | **At \u03ba\\* the model's nonlinearity converts a-waves into the opposite chirality**: \u2212u\u2218u per dimer is \u2212(1\u2212i)/4\u03c8\u00b2 \u2212 (1+i)/2\\|\u03c8\\|\u00b2 \u2212 (1\u2212i)/4\u03c8\\*\u00b2, J-breaking; the \u03c8\\*\u00b2 term drives the b-branch at 2k where 2\u03c9_a(k) = \u03c9_",
+   "numbers": [
+    "0.492",
+    "1.255",
+    "0.991"
+   ],
+   "status": []
+  },
+  {
+   "file": "./03_current/PREMISE_LEDGER.md",
+   "line": 135,
+   "section": "2c. Measured (simulation, with checks that could have failed)",
+   "text": "| C32 | **Strict persistence at every wavelength is unsatisfiable, for all parameters**: same-branch four-wave quartets (a+a \u2192 a+a) are always open \u2014 in 1-D for pumps between the inflection point and \u03c0/2, in 3-D at every",
+   "numbers": [
+    "16",
+    "1.398",
+    "1.341"
+   ],
+   "status": [
+    "OPEN"
+   ]
+  },
+  {
+   "file": "./03_current/PREMISE_LEDGER.md",
+   "line": 136,
+   "section": "2c. Measured (simulation, with checks that could have failed)",
+   "text": "| C33 | **The strongest persistence the model admits** \u2014 no decay, no change of branch, same-branch scattering allowed; *identified after the strict form failed* \u2014 confines \u03ba to windows; **q = 3, c = 1: \u03ba \u2208 [4.9, 7.5]** ",
+   "numbers": [
+    "0.9986",
+    "0.45",
+    "0.89",
+    "0.06285",
+    "0.02",
+    "0.05",
+    "7215165"
+   ],
+   "status": [
+    "VERIFIED",
+    "FAILED"
+   ]
+  },
+  {
+   "file": "./03_current/PREMISE_LEDGER.md",
+   "line": 145,
    "section": "3. Hoped for, not established",
    "text": "| **\u03b1** | closed as an input; the model constrains the form of its contributions, not its value; the 128 and exp(42) proximities are recorded as numerology | MODEL_SPEC \u00a74c.4, \u00a74c.4a, \u00a74c.4b |",
    "numbers": [
@@ -21127,7 +21529,7 @@
   },
   {
    "file": "./03_current/PREMISE_LEDGER.md",
-   "line": 143,
+   "line": 146,
    "section": "3. Hoped for, not established",
    "text": "| **sin\u00b2\u03b8_W as measured** | 3/8 is the tree-level unification value; matching 0.23122 at M_Z needs RG running the model does not have | INPUT_LEDGER \u00a72; SCALE_SCOPING \u00a73a |",
    "numbers": [
@@ -21140,7 +21542,7 @@
   },
   {
    "file": "./03_current/PREMISE_LEDGER.md",
-   "line": 148,
+   "line": 151,
    "section": "3. Hoped for, not established",
    "text": "| **Lorentzian spacetime, gravity, lensing** | the arenas are Euclidean (C6); the field equations and Maxwell are \"forced conditionally, on a base existing\"; \u03b6's lensing reading needs an embedding the ladder does not sup",
    "numbers": [
@@ -21151,7 +21553,7 @@
   },
   {
    "file": "./03_current/PREMISE_LEDGER.md",
-   "line": 149,
+   "line": 152,
    "section": "3. Hoped for, not established",
    "text": "| **The golden ratio as physics** | the source spec reports \u221a5 \"decorative in the dynamics layer\" on its universality control; at D8 \u03c6 is attainable as a frequency ratio, and so is every value in [1.04, 23.9] \u2014 \"attainab",
    "numbers": [
@@ -21161,7 +21563,24 @@
   },
   {
    "file": "./03_current/PREMISE_LEDGER.md",
-   "line": 155,
+   "line": 154,
+   "section": "3. Hoped for, not established",
+   "text": "| **J-compatibility beyond first order** | the second-order leftover in a closed channel: open [2026-09-25: at \u03ba\\* J-compatibility already fails at nonlinear order \u2014 the u\u2218u term converts a-waves near k = 0.49, 1.25 into",
+   "numbers": [
+    "2026",
+    "09",
+    "25",
+    "0.49",
+    "1.25"
+   ],
+   "status": [
+    "OPEN",
+    "FAILED"
+   ]
+  },
+  {
+   "file": "./03_current/PREMISE_LEDGER.md",
+   "line": 159,
    "section": "3. Hoped for, not established",
    "text": "| **The classical/quantum interface term** | \"Conceptually motivated, derivation incomplete\" | `shape_zero_v5-3.txt`, line 198 |",
    "numbers": [
@@ -21171,7 +21590,7 @@
   },
   {
    "file": "./03_current/PREMISE_LEDGER.md",
-   "line": 167,
+   "line": 171,
    "section": "4. Where sources state philosophical motivations",
    "text": "| the ranks 0\u20133, the void, the golden ratio (P7, P9) | `01_source/spec/shape_zero_v5-3.txt`, \u00a71 \"Core Ontology\" (lines 16\u201319) |",
    "numbers": [
@@ -21182,7 +21601,7 @@
   },
   {
    "file": "./03_current/PREMISE_LEDGER.md",
-   "line": 168,
+   "line": 172,
    "section": "4. Where sources state philosophical motivations",
    "text": "| the golden ratio in the force law (P9) | `01_source/spec/shape_zero_v5-3.txt`, \"Universality control and the status of the golden ratio (v5.3)\", paragraph beginning \"Where the golden ratio actually lives\" (line 157) |",
    "numbers": [
@@ -21192,7 +21611,7 @@
   },
   {
    "file": "./03_current/PREMISE_LEDGER.md",
-   "line": 169,
+   "line": 173,
    "section": "4. Where sources state philosophical motivations",
    "text": "| the arena as a whole | `01_source/shape_zero_zero_ladder.md`, \"The question and the method\" (lines 10\u201313); D2 (lines 51\u201352) |",
    "numbers": [
@@ -21205,7 +21624,7 @@
   },
   {
    "file": "./03_current/PREMISE_LEDGER.md",
-   "line": 170,
+   "line": 174,
    "section": "4. Where sources state philosophical motivations",
    "text": "| the three roles (P7) | `03_current/INPUT_LEDGER.md` \u00a72b2, \"Why n = 3\" and \"The algebra corroborates independently\" (lines 160\u2013173); `01_source/shape_zero_zero_ladder.md`, \"Postscript\" (line 164); `01_source/cover_notes",
    "numbers": [
@@ -21217,7 +21636,7 @@
   },
   {
    "file": "./03_current/PREMISE_LEDGER.md",
-   "line": 171,
+   "line": 175,
    "section": "4. Where sources state philosophical motivations",
    "text": "| the given (P1) | `03_current/INPUT_LEDGER.md` \u00a71 (lines 22\u201327) |",
    "numbers": [
@@ -21264,6 +21683,9 @@
     "09",
     "25",
     "0.971737",
+    "2026",
+    "09",
+    "25",
     "2026",
     "09",
     "25"
@@ -21317,7 +21739,12 @@
    "numbers": [
     "2026",
     "09",
-    "25"
+    "25",
+    "2026",
+    "09",
+    "25",
+    "0.49",
+    "1.25"
    ],
    "status": [
     "SUPERSEDED"
@@ -21457,7 +21884,30 @@
   },
   {
    "file": "./03_current/SCALE_SCOPING.md",
+   "line": 246,
+   "section": "6. The genuine parameters \u2014 what a complete derivation must fix",
+   "text": "(`shape_zero_tests/param_classify_output.txt`). [Finding 2026-09-25, not adopted:",
+   "numbers": [
+    "2026",
+    "09",
+    "25"
+   ],
+   "status": []
+  },
+  {
+   "file": "./03_current/SCALE_SCOPING.md",
    "line": 248,
+   "section": "6. The genuine parameters \u2014 what a complete derivation must fix",
+   "text": "for c/\u221a5 between 0.45 and 0.89 \u2014 a bound on c/\u221a5 if that form were adopted",
+   "numbers": [
+    "0.45",
+    "0.89"
+   ],
+   "status": []
+  },
+  {
+   "file": "./03_current/SCALE_SCOPING.md",
+   "line": 251,
    "section": "6. The genuine parameters \u2014 what a complete derivation must fix",
    "text": "[2026-09-25: **genuine parameter with a derived floor**, \u03ba \u2265 2c/\u221a(K + 2c) = 0.971737,",
    "numbers": [
@@ -21465,6 +21915,18 @@
     "09",
     "25",
     "0.971737"
+   ],
+   "status": []
+  },
+  {
+   "file": "./03_current/SCALE_SCOPING.md",
+   "line": 255,
+   "section": "6. The genuine parameters \u2014 what a complete derivation must fix",
+   "text": "[Finding 2026-09-25, not adopted: the strongest persistence the model admits \u2014 no",
+   "numbers": [
+    "2026",
+    "09",
+    "25"
    ],
    "status": []
   },
@@ -25250,6 +25712,51 @@
    "docstring": " param_classify.py -- evidence for classifying the lattice parameters c and beta (INPUT_LEDGER.md \u00a72d, \"kind\" column).  THE RESCALING ARGUMENT (for c). The lattice equation, in model units, is     u''"
   },
   {
+   "file": "./shape_zero_tests/persist_q3_scan.py",
+   "lines": 74,
+   "banner": false,
+   "blocked": false,
+   "fixes": [],
+   "predictions": 0,
+   "docstring": " persist_q3_scan.py -- the (kappa, c) scan of persist_resonance.py at q = 3.  Same channel functions and open/closed rule (a channel is open iff m kappa lies in the range of its function), with 3-D ra"
+  },
+  {
+   "file": "./shape_zero_tests/persist_resonance.py",
+   "lines": 235,
+   "banner": false,
+   "blocked": false,
+   "fixes": [],
+   "predictions": 3,
+   "docstring": " persist_resonance.py -- what does \"persistence at every wavelength\" (no resonant decay channel open for any wave) demand of the model's parameters?  THE MODEL (04_scripts/session/model.py, force): pe"
+  },
+  {
+   "file": "./shape_zero_tests/persist_sim.py",
+   "lines": 241,
+   "banner": false,
+   "blocked": false,
+   "fixes": [],
+   "predictions": 6,
+   "docstring": " persist_sim.py -- direct simulations of the resonant channels found by persist_resonance.py, with every prediction printed (and committed) before any run.  Model: 04_scripts/session/model.py's Lattic"
+  },
+  {
+   "file": "./shape_zero_tests/persist_sim3d.py",
+   "lines": 135,
+   "banner": false,
+   "blocked": false,
+   "fixes": [],
+   "predictions": 2,
+   "docstring": " persist_sim3d.py -- the q = 3 upper bound on kappa, by direct simulation.  persist_q3_scan.py finds that at c = 1, q = 3 the three-wave channel a -> aa opens above kappa ~ 7.5, and persist_resonance'"
+  },
+  {
+   "file": "./shape_zero_tests/persist_sim_posthoc.py",
+   "lines": 59,
+   "banner": false,
+   "blocked": false,
+   "fixes": [],
+   "predictions": 0,
+   "docstring": " persist_sim_posthoc.py -- POST-HOC reading of persist_sim_runs.json (written after the runs; the committed predictions are in persist_sim_predictions.txt).  1. R6's committed criterion evaluated as s"
+  },
+  {
    "file": "./shape_zero_tests/q3_combine.py",
    "lines": 25,
    "banner": false,
@@ -25467,7 +25974,7 @@
   }
  ],
  "counts": {
-  "doc_claims": 2038,
-  "scripts": 155
+  "doc_claims": 2074,
+  "scripts": 160
  }
 }

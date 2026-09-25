@@ -1,0 +1,27 @@
+==========================================================================================
+MEASURED
+==========================================================================================
+
+  PART 1   run   |B|/A at T (pred / meas)      fitted slope / (r A^2)    max |B|/A (pred bound x1.2)
+            R1    2.150e-01 / 2.070e-01          0.9912                    2.070e-01   PASS
+            R2    2.270e-03 / 2.130e-03          -0.0016                    6.097e-03 (7.319e-03)   PASS
+            R3    1.339e-03 / 1.338e-03          0.0000                    2.225e-03 (2.670e-03)   PASS
+            R4    4.963e-04 / 4.963e-04          -0.0003                    4.963e-04 (5.957e-04)   PASS
+
+  PART 2   growth factor = |mode| at T / initial noise, a-branch (b-branch)
+   R5 (pump k = 1.4271, predicted p* = [1.3409236936053994]), drift 1.5e-06:
+      largest a-branch growth, excluding the pump's harmonics: q = +2.8255 (p = +1.3984) x1.6e+01, q = +0.0287 (p = -1.3984) x1.5e+01, q = +0.1245 (p = -1.3026) x8.8e+00, q = +0.1149 (p = -1.3122) x8.4e+00, q = +0.1532 (p = -1.2739) x8.3e+00, q = +2.7010 (p = +1.2739) x8.1e+00
+      largest b-branch growth: x1.1e+13 at q = -1.4654
+      T = 500: max a-growth outside harmonics x2.34e+00
+      T = 1000: max a-growth outside harmonics x2.79e+00
+      T = 1500: max a-growth outside harmonics x4.61e+00
+      T = 2000: max a-growth outside harmonics x9.54e+00
+      T = 2500: max a-growth outside harmonics x1.64e+01
+   R6 (pump k = 1.7528, predicted p* = []), drift 6.8e-07:
+      largest a-branch growth, excluding the pump's harmonics: q = +1.7624 (p = +0.0096) x1.1e+01, q = +1.7432 (p = -0.0096) x1.1e+01, q = +1.7719 (p = +0.0192) x7.7e+00, q = +1.7336 (p = -0.0192) x7.6e+00, q = +1.7240 (p = -0.0287) x6.5e+00, q = +1.7815 (p = +0.0287) x6.5e+00
+      largest b-branch growth: x1.9e+12 at q = -2.5478
+      T = 500: max a-growth outside harmonics x2.95e+00
+      T = 1000: max a-growth outside harmonics x4.87e+00
+      T = 1500: max a-growth outside harmonics x6.89e+00
+      T = 2000: max a-growth outside harmonics x8.85e+00
+      T = 2500: max a-growth outside harmonics x1.06e+01
