@@ -1,0 +1,27 @@
+==============================================================================
+1. ATTRIBUTION, A = 0.30: the exact orbit with pieces removed
+==============================================================================
+   T =  300   orbit             kappa -0.01775 +- 0.00000
+   T =  300   no c0             kappa -0.01804 +- 0.00019
+   T =  300   no c2             kappa -0.01806 +- 0.00002
+   T =  300   no c3 and up      kappa -0.01770 +- 0.00001
+   T =  300   fundamental only  kappa -0.01852 +- 0.00018
+   T =  900   orbit             kappa -0.01775 +- 0.00000
+   T =  900   no c0             kappa -0.01803 +- 0.00004
+   T =  900   no c2             kappa -0.01806 +- 0.00000
+   T =  900   no c3 and up      kappa -0.01770 +- 0.00000
+   T =  900   fundamental only  kappa -0.01854 +- 0.00004
+
+==============================================================================
+2. ORBIT + EXPLICIT FREE MODE (A = 0.30): measured shift vs leading formula
+==============================================================================
+  direction +1: orbit frequency measured 2.09984803, harmonic balance 2.09984803
+     k=0   beta 0.020: measured shift -5.802e-05   leading formula -5.674e-05
+     k=0   beta 0.040: measured shift -2.335e-04   leading formula -2.270e-04
+     k=pi  beta 0.004: measured shift -1.553e-05   leading formula -2.468e-06
+     k=pi  beta 0.008: measured shift -3.605e-05   leading formula -9.873e-06
+  direction -1: orbit frequency measured 2.00000778, harmonic balance 2.00000778
+     k=0   beta 0.020: measured shift -5.549e-05   leading formula -5.674e-05
+     k=0   beta 0.040: measured shift -2.233e-04   leading formula -2.270e-04
+     k=pi  beta 0.004: measured shift -1.653e-05   leading formula -2.485e-06
+     k=pi  beta 0.008: measured shift -3.775e-05   leading formula -9.939e-06

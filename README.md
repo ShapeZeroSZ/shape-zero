@@ -55,7 +55,10 @@ that, so together they machine-verify C1 Theorem 3.6 ("Roles Force Fano").
   linear pinning and the Lean missions are unaffected. See `PROVENANCE.md` §6o.
   −0.0187 is the value at A = 0.3; the small-amplitude coefficient is −0.0175 —
   derived by perturbation theory (−0.01748) and measured (−0.0176 at A = 0.10) —
-  and a fourth-order term adds about 7% by A = 0.3.]
+  and a fourth-order term adds about 7% by A = 0.3.] [CORRECTED 2026-09-25: the
+  true fourth-order term adds about 1.5% at A = 0.3; −0.0187 is the plain-cosine-
+  launch value there, and the exact travelling wave gives −0.01775. See
+  `MODEL_SPEC.md` §5, "κ to fourth order, and the launch".]
 - **The node's internal cone structure** (centrifugal barrier) holds at the
   model's operating amplitude to 3×10⁻⁴.
 

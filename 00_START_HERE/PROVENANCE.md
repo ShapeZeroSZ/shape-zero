@@ -646,7 +646,8 @@ for v5.2. Signature in hindsight: the phase residual grew in proportion to β
 | linear, A = 0.02, β = 0.05: \|Δω\| − 2cβ sin k | +3.1×10⁻⁶ | −7×10⁻⁷ |
 
 Corrected κ = −0.0187 at β = 0.05, A = 0.30 was confirmed independently with
-separate code. `model.py` gate 6 also took abs() of the drift, so it could not
+separate code. [That is the plain-cosine-launch value; the exact travelling wave
+gives −0.01775 at A = 0.30 — "κ to fourth order, and the launch", below.] `model.py` gate 6 also took abs() of the drift, so it could not
 report a negative κ; it is now signed. A search for the same swap (a direction
 seeded with the other direction's root) found no other instance:
 `phi_gauge_delta.py`, `phi_gauge_decaymap.py` and `s2_universality.py` use the
@@ -812,7 +813,9 @@ in its box-wide transverse component.)
    "oscillation" and "does not settle" readings of `kappa_boxscan_gpu.py`, which
    has no error bars, are withdrawn; so is the steepening noted above (≈ side⁻³
    from 24 to 32), which is inside the error bars.
-5. **Only the plane-wave κ = −0.0187 is a real coefficient.** A localised beam's
+5. **Only the plane-wave κ = −0.0187 is a real coefficient.** [−0.0187 is the
+   plain-cosine-launch value at A = 0.3; the exact travelling wave gives −0.01775
+   there, and −0.017480 at small amplitude — "κ to fourth order", below.] A localised beam's
    box-averaged κ has no box-independent value. **A localised-beam κ quoted
    without a box size is not a property of the beam.** The w = 3 value and the
    geometry table remain **unverified**; by this result, even re-measured they
@@ -867,7 +870,14 @@ and 4 exactly. Physics, seed, readout and error bar as `kappa_extended_gpu.py`.
    6.5% while the narrow beam's barely changes, and at A = 0.10 the derived kernel
    accounts for the whole gap (w = 1: 1.221 ± 0.018 against 1.225; w = 2: 1.312 ±
    0.031 against 1.318). The prediction's result stands; its reading is corrected —
-   see "The cross-modulation factor F, derived" below.]
+   see "The cross-modulation factor F, derived" below.] [**CORRECTED 2026-09-25:** the
+   plane-wave growth that lowers F at A = 0.30 is **mostly a launch effect**, not
+   fourth-order physics, acting through the plane-wave normalisation. With
+   orbit-consistent (second-order) launches F at A = 0.30 is 1.201 (w = 1) and
+   1.281 (w = 2), against 1.154 and 1.234 from plain cosines and 1.225 and 1.318
+   derived at second order: the launch accounts for 66% and 56% of the gap, and the
+   rest matches the plane wave's true fourth-order and velocity terms — "κ to fourth
+   order, and the launch", below.]
 3. **Unresolved:** whether F exceeds 2 − s at smaller w/L (10 of 14 width-scan
    points lie above it). The error bars there are too large to say. [**Since
    resolved:** it does, and the phase-coherent off-diagonal terms are why —
@@ -927,6 +937,9 @@ Re-measured at A = 0.10 they give 1.221 ± 0.018 (w = 1, L = 4; derived 1.225)
 and 1.312 ± 0.031 (w = 2, L = 8; derived 1.318). From A = 0.10 to 0.30 the
 plane-wave κ grows 6.5% (−0.01755 → −0.01869) while the narrow beam's κ barely
 changes (−0.004121 → −0.004147), so F, which divides by the plane-wave κ, falls.
+[**CORRECTED 2026-09-25:** that plane-wave growth is mostly the plain-cosine launch,
+not fourth-order physics — the exact travelling wave grows 1.5% from A → 0 to 0.30,
+not 6.9% — see "κ to fourth order, and the launch", below.]
 
 **Out-of-sample test** (`kappa_cross_oos.py`). Three never-measured beams, chosen
 where P3a and P3b differ most in small boxes, measured at A = 0.10; both
@@ -958,7 +971,66 @@ after comparison.
 
 **Open:** the **fourth-order calculation** — the A⁴ terms that move the plane-wave
 κ and the narrow-beam F at A = 0.30. P3b's detunings are also linear; the O(A²)
-nonlinear shifts of the components are not in them.
+nonlinear shifts of the components are not in them. [**Done for the plane wave, 2026-09-25** — below;
+the beam's fourth order remains open.]
+
+**κ to fourth order, and the launch (2026-09-25).** `shape_zero_tests/kappa_pw4_pt.py`
+derives the plane wave's A⁴ term by harmonic balance on the lattice (reference
+convention; static shift and second harmonic to O(A⁴), third harmonic to O(A³)):
+
+    κ(A) = −0.017480 − 0.002947·A²
+
+It is confirmed by an exact 24-harmonic solution (the same κ₄ to every printed
+digit) and by simulation launched on the exact travelling wave
+(`kappa_pw4_seed.py`), which reproduces it to every printed digit with a zero
+error bar. The physical value is **−0.01751 at A = 0.1**, **−0.01775 at A = 0.3**
+and **−0.01797 at A = 0.4** (exact solution; the A² truncation gives −0.01795 at
+0.4). The true fourth-order term adds about **1.5%** at A = 0.3.
+
+**The measured amplitude sweep is mostly a launch effect.** The sweep −0.0176,
+−0.0179, −0.0187, −0.0200 at A = 0.1–0.4 (`pinned_asymmetry_reference.py`; the same
+on the side-8 cube and on a 1-D ring: −0.01755, −0.01792, −0.01869, −0.01996)
+starts from a plain cosine, which omits the wave's static shift and second
+harmonic and sets the velocity at the linear frequency. That adds **−0.00094 at
+A = 0.3**, about **80%** of the apparent growth over −0.01748. Attribution at
+A = 0.3 (`kappa_pw4_attrib.py`: the exact wave with pieces removed; identical at
+T = 300 and T = 900, so a frequency shift, not a transient):
+
+| omitted from the launch | κ increment | status |
+|---|---|---|
+| velocity at the linear frequency | −0.00016 | **derived** (forward/backward split of the fundamental; matches) |
+| static shift | −0.00029 | **measured, not derived** |
+| second harmonic | −0.00031 | **measured, not derived** |
+| interaction of the two | about −0.00024 | **measured, not derived** |
+| total, plain-cosine launch | −0.00094 | −0.01869 against the wave's −0.01775 |
+
+**The static-shift and second-harmonic pieces are measured, not derived.** The
+leading cross-modulation formula for the free oscillations the launch leaves
+behind does not capture them: for the uniform mode its direction-odd part
+vanishes identically, and for the staggered (k = π) mode it gives a sixth to a
+third of the measured shift (−2.5×10⁻⁶ against −1.55×10⁻⁵ and −9.9×10⁻⁶ against
+−3.6×10⁻⁵ per direction), which grows roughly linearly with that mode's amplitude
+while the formula grows quadratically (`kappa_pw4_attrib.py`, part 2). **Adding the second-order field
+to the launch** (`kappa_seed2_test.py`) gives **−0.01787 ± 0.00006** at A = 0.3,
+against the derived exact wave plus velocity term, −0.01791.
+
+**Beam fourth-order tests** (`kappa4_predict.py`, predictions committed before
+any comparison in commit `0e7f269`; `kappa4_compare.py`; `kappa4_measure.py`).
+Every fourth-order term is quartic in the component amplitudes, so relative to
+the second-order term it carries one more factor of the fill; the kernel is not
+derived. Three hypotheses for the beam's own growth, as a fraction r of the
+plane wave's: **H0** none; **S1** all quartic terms survive (incoherent local
+sextic), r = fill·(6 − 3P₂ − 6s + 4s²)/F₂; **S2** only the box-wide component's
+own term, r = fill·s²/F₂. At the nine sharp points (A = 0.30): H0 9/9, S1 8/9
+(w = 1, L = 4 at +2.1σ), S2 9/9; the second-order F₂ alone 7/9. Two never-measured
+large-fill beams at A = 0.10 and 0.30: the second-order F₂ holds there (1.0063 ±
+0.014 against 1.0076; 1.0316 ± 0.014 against 1.0338), and **H0 is excluded at
+large fill** — w = 3, L = 4: F(0.30)/F(0.10) at −2.2σ, F(0.30) at −3.4σ; w = 2,
+L = 4: F(0.30) at −2.4σ; the box κ grows 4.4% and 3.0%. S1 and S2 both pass
+(within 0.8σ), so **S1 against S2 is unresolved**; the narrow-beam evidence that
+favours S2 was seen before the predictions were written. **These tests used
+plain-cosine launches, so they mix physics with launch effects.** Redoing them
+with orbit-consistent launches is open (MODEL_SPEC §9).
 
 **P-1 — what was found** (annotated in `shape_zero_predictions_v1.md`):
 

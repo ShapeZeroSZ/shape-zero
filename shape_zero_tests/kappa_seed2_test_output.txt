@@ -1,0 +1,25 @@
+==============================================================================
+LINEAR SEED vs SECOND-ORDER SEED -- plane wave and the two narrow beams
+==============================================================================
+  plane-wave check: static -0.44721/2 -> c0 = -0.22361 (analytic -0.22361); 2nd harmonic 2c2 = +0.04328 (analytic +0.04328)
+    plane wave plane  side  8       15 s   drift 5.3e-10
+    localised  w=1    side  4       11 s   drift 2.8e-10
+    localised  w=2    side  8       15 s   drift 1.3e-10
+    plane wave plane  side  8       16 s   drift 5.3e-10
+    localised  w=1    side  4       11 s   drift 2.8e-10
+    localised  w=2    side  8       14 s   drift 1.3e-10
+    plane wave plane  side  8       15 s   drift 5.4e-09
+    localised  w=1    side  4       10 s   drift 2.6e-09
+    localised  w=2    side  8       14 s   drift 1.2e-09
+    plane wave plane  side  8       15 s   drift 5.4e-09
+    localised  w=1    side  4       10 s   drift 2.6e-09
+    localised  w=2    side  8       14 s   drift 1.2e-09
+
+     A    seed         kappa_pw             kappa_box w=1 L=4      kappa_box w=2 L=8        F(w=1)   F(w=2)
+   0.10  linear      -0.01755+-0.00018   -0.004121+-0.000043   -0.004466+-0.000096    1.221    1.312
+   0.10  2nd-order   -0.01752+-0.00006   -0.004119+-0.000029   -0.004464+-0.000089    1.223    1.314
+   0.30  linear      -0.01869+-0.00017   -0.004147+-0.000044   -0.004470+-0.000107    1.154    1.234
+   0.30  2nd-order   -0.01787+-0.00006   -0.004125+-0.000030   -0.004438+-0.000102    1.201    1.281
+
+  orbit theory (kappa_pw4_pt.py): kappa_pw 0.10 -0.01751, 0.30 -0.01775
+  second-order F (kappa_cross_pt.py, P3b): w=1 L=4 1.225, w=2 L=8 1.318

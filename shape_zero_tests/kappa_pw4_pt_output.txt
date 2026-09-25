@@ -1,0 +1,32 @@
+==========================================================================
+PLANE-WAVE KAPPA TO FOURTH ORDER -- harmonic balance on the lattice
+==========================================================================
+  linear asymmetry W(+K) - W(-K) = 0.1000000000   (2 c beta sin K = 0.1000000000)
+  kappa2 (analytic, A -> 0)      = -0.017480   (kappa_cross_pt.py: -0.01748)
+  kappa4 (analytic, A^2 coeff.)  = -0.002947
+    direction +1: W0 2.10877827  W2 -0.09809944  W4 -0.01226529   c0 -0.22361A^2 c2 +0.02164A^2 c3 +0.000594A^3
+    direction -1: W0 2.00877827  W2 -0.09635143  W4 -0.01197054   c0 -0.22361A^2 c2 +0.02524A^2 c3 +0.000802A^3
+
+  NUMERICALLY EXACT harmonic balance (24 harmonics), orbit frequency:
+      A      kappa_exact    k2 + k4 A^2    difference
+     0.02   -0.017481      -0.017481      -7.82e-11
+     0.05   -0.017487      -0.017487      -3.60e-09
+     0.10   -0.017510      -0.017510      -5.77e-08
+     0.15   -0.017547      -0.017546      -2.93e-07
+     0.20   -0.017599      -0.017598      -9.28e-07
+     0.30   -0.017750      -0.017745      -4.74e-06
+     0.40   -0.017967      -0.017952      -1.52e-05
+
+  exact HB fitted at A = 0.02-0.06: kappa2 -0.017480  kappa4 -0.002947  kappa6 -0.0006
+  analytic:                          kappa2 -0.017480  kappa4 -0.002947
+
+  THE SEED -- what the linear-seed protocol measures (plane wave):
+    free-mode cross-modulation, as a kappa4 term: DC sector +0.000000, pi sector +0.000096  (x A^2)
+      A    orbit      +velocity   +leading free-mode XPM
+    0.10  -0.01751   -0.01753    -0.01753
+    0.20  -0.01760   -0.01767    -0.01766
+    0.30  -0.01775   -0.01791    -0.01790
+    0.40  -0.01797   -0.01826    -0.01823
+    (the free-mode cross-modulation above is the LEADING formula only; the
+     seed's static-shift and harmonic effects are measured, not derived, in
+     kappa_pw4_seed.py / kappa_pw4_attrib.py / kappa_seed2_test.py)

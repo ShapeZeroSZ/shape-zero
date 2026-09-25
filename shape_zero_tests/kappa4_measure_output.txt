@@ -1,0 +1,24 @@
+====================================================================================
+OUT-OF-SAMPLE: large-fill beams at A = 0.10 and 0.30
+====================================================================================
+    plane wave plane  side  8       14 s   drift 5.3e-10
+  VALIDATION A = 0.10: plane wave -0.01755 (ref -0.01755)   PASS
+    localised  w=3    side  4       10 s   drift 4.1e-10
+    localised  w=2    side  4       11 s   drift 3.5e-10
+    plane wave plane  side  8       14 s   drift 5.4e-09
+  VALIDATION A = 0.30: plane wave -0.01869 (ref -0.01869)   PASS
+    localised  w=3    side  4       11 s   drift 4.1e-09
+    localised  w=2    side  4       11 s   drift 3.4e-09
+
+     w     L     A     kappa_box              lin ratio   F
+    3.0    4  0.10   -0.012994 +- 0.000130   0.999995   1.0063 +- 0.0142
+    2.0    4  0.10   -0.009685 +- 0.000094   0.999996   1.0316 +- 0.0144
+    3.0    4  0.30   -0.013571 +- 0.000128   0.999995   0.9872 +- 0.0131
+    2.0    4  0.30   -0.009977 +- 0.000094   0.999996   0.9982 +- 0.0132
+
+  AGAINST THE COMMITTED PREDICTIONS
+     w     L    measured F(0.30)   H0      S1      S2     |  measured ratio      H0      S1      S2
+    3.0    4   0.9872 +- 0.0131  0.9424  0.9924  0.9888  |  0.9810 +- 0.0190  0.9390  0.9859  0.9825
+        ratio pulls: H0 -2.2 FAIL   S1 +0.3 PASS   S2 +0.1 PASS    (F2 = 1.0076; measured F(0.10) = 1.0063 +- 0.0142)
+    2.0    4   0.9982 +- 0.0132  0.9669  1.0094  0.9977  |  0.9676 +- 0.0186  0.9390  0.9778  0.9672
+        ratio pulls: H0 -1.5 PASS   S1 +0.5 PASS   S2 -0.0 PASS    (F2 = 1.0338; measured F(0.10) = 1.0316 +- 0.0144)

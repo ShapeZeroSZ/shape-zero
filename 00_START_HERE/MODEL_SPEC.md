@@ -1090,12 +1090,15 @@ packet read mid-exit.
 
 **On gate 6:** κ is a property of the beam profile, not a universal constant.
 [Superseded by the κ(w = 2, side) closure, §5: only the plane-wave κ = −0.0187 is
-a real coefficient; a localised beam's box-averaged κ depends on the box and goes
+a real coefficient (the plain-cosine-launch value at A = 0.3; the exact wave gives
+−0.01775 — §5, "κ to fourth order"); a localised beam's box-averaged κ depends on the box and goes
 to zero as it grows, so it is not a property of the beam alone.]
 The *pinning* survives every geometry; only the A² coefficient moves. See
 `PINNED_ASYMMETRY_TEST.md`.
 
-### 4d.1 Six measurement traps, all encountered in this port
+### 4d.1 Seven measurement traps, all encountered in this port
+
+*(Six as first recorded; the seventh added 2026-09-25.)*
 
 Recorded because each produced a plausible wrong number before being caught.
 
@@ -1107,6 +1110,7 @@ Recorded because each produced a plausible wrong number before being caught.
 | **overlapping segments** | segments 3 apart with RAMP length 12 overlap by 9 sites | a spurious 63° Abelian splitting |
 | **wrap-around** | modular position **cannot** detect it — needs **cumulative displacement** | double traversal read as a single pass |
 | readout before full clearing | a centroid past a segment does not mean the packet has left it: run_until_exit fires with 98% of the weight still in the segment windows at q = 3, and 16–18% remains at gate 7's fixed T = 180 at q = 1 | Abelian floors of ~1° (q = 3) and ~0.016° (q = 1) that are exactly 0 under a clearing readout; gate 8's 0.39° attributed to group velocity |
+| **launching off the orbit** | a linearly seeded wave (plain cosine, velocity at the linear frequency, no static shift or harmonics) is **not the nonlinear wave**; the launch leaves free oscillations behind, and at fourth order the measured frequency depends on the launch | the plane-wave κ at A = 0.3 read as −0.01869 against the travelling wave's −0.01775 — about 80% of the apparent amplitude growth (§5, "κ to fourth order") |
 
 **The pattern across the first five: identical or exactly-zero numbers from
 configurations that should differ.** Equal strengths in an ordering test make the
@@ -1114,6 +1118,12 @@ two specs the *same array*; that control cannot fail and returned 0.000° three
 times before being caught.
 
 Trap 6 is a different pattern: a certificate that reports success without checking the thing it certifies. At q = 1, clearing leaves the gate-7 split unchanged to 0.01° and moves per-order residuals ≤ 0.09°, but takes the Abelian floor to exactly 0 — which made gate 7's old criterion, split > 10 × floor, impossible to fail. Gate 7 now tests the split against the independent prediction.
+
+Trap 7 is a preparation error: the instrument was calibrated, the initial state was
+not. It is invisible at second order — the linear launch gives the right A → 0
+coefficient — and appears only when the amplitude dependence is read. A run launched
+on the exact wave (`kappa_pw4_seed.py`) has a zero error bar; a launch-dependent one
+shows the free oscillations as a weighted-versus-unweighted fit disagreement.
 
 ---
 
@@ -1146,7 +1156,11 @@ Lean missions (Prove2Me 2, 3, 4a, 4b), which are linear-order and contain no κ.
 
 *Headline κ = −0.0187 is the value **at A = 0.3**. The small-amplitude coefficient is **−0.0175** —
 derived by perturbation theory (−0.01748) and measured (−0.0176 at A = 0.10) — and
-a fourth-order term adds about 7% by A = 0.3.*
+a fourth-order term adds about 7% by A = 0.3.* [**CORRECTED 2026-09-25:** the
+true fourth-order term adds about **1.5%** at A = 0.3. −0.0187 is the
+**plain-cosine-launch** value at A = 0.3; the exact travelling wave gives
+**−0.01775** there. About 80% of the growth over −0.0175 is a launch effect —
+"κ to fourth order, and the launch", below.]
 
 Trail: `PROVENANCE.md` §6o. The original text follows, kept as the record.
 
@@ -1264,7 +1278,9 @@ in its box-wide transverse component.)
    "oscillation" and "does not settle" readings of `kappa_boxscan_gpu.py`, which
    has no error bars, are withdrawn; so is the steepening noted above (≈ side⁻³
    from 24 to 32), which is inside the error bars.
-5. **Only the plane-wave κ = −0.0187 is a real coefficient.** A localised beam's
+5. **Only the plane-wave κ = −0.0187 is a real coefficient.** [−0.0187 is the
+   plain-cosine-launch value at A = 0.3; the exact travelling wave gives −0.01775
+   there, and −0.017480 at small amplitude — "κ to fourth order", below.] A localised beam's
    box-averaged κ has no box-independent value. **A localised-beam κ quoted
    without a box size is not a property of the beam.** The w = 3 value and the
    geometry table remain **unverified**; by this result, even re-measured they
@@ -1319,7 +1335,14 @@ and 4 exactly. Physics, seed, readout and error bar as `kappa_extended_gpu.py`.
    6.5% while the narrow beam's barely changes, and at A = 0.10 the derived kernel
    accounts for the whole gap (w = 1: 1.221 ± 0.018 against 1.225; w = 2: 1.312 ±
    0.031 against 1.318). The prediction's result stands; its reading is corrected —
-   see "The cross-modulation factor F, derived" below.]
+   see "The cross-modulation factor F, derived" below.] [**CORRECTED 2026-09-25:** the
+   plane-wave growth that lowers F at A = 0.30 is **mostly a launch effect**, not
+   fourth-order physics, acting through the plane-wave normalisation. With
+   orbit-consistent (second-order) launches F at A = 0.30 is 1.201 (w = 1) and
+   1.281 (w = 2), against 1.154 and 1.234 from plain cosines and 1.225 and 1.318
+   derived at second order: the launch accounts for 66% and 56% of the gap, and the
+   rest matches the plane wave's true fourth-order and velocity terms — "κ to fourth
+   order, and the launch", below.]
 3. **Unresolved:** whether F exceeds 2 − s at smaller w/L (10 of 14 width-scan
    points lie above it). The error bars there are too large to say. [**Since
    resolved:** it does, and the phase-coherent off-diagonal terms are why —
@@ -1379,6 +1402,9 @@ Re-measured at A = 0.10 they give 1.221 ± 0.018 (w = 1, L = 4; derived 1.225)
 and 1.312 ± 0.031 (w = 2, L = 8; derived 1.318). From A = 0.10 to 0.30 the
 plane-wave κ grows 6.5% (−0.01755 → −0.01869) while the narrow beam's κ barely
 changes (−0.004121 → −0.004147), so F, which divides by the plane-wave κ, falls.
+[**CORRECTED 2026-09-25:** that plane-wave growth is mostly the plain-cosine launch,
+not fourth-order physics — the exact travelling wave grows 1.5% from A → 0 to 0.30,
+not 6.9% — see "κ to fourth order, and the launch", below.]
 
 **Out-of-sample test** (`kappa_cross_oos.py`). Three never-measured beams, chosen
 where P3a and P3b differ most in small boxes, measured at A = 0.10; both
@@ -1410,7 +1436,66 @@ after comparison.
 
 **Open:** the **fourth-order calculation** — the A⁴ terms that move the plane-wave
 κ and the narrow-beam F at A = 0.30. P3b's detunings are also linear; the O(A²)
-nonlinear shifts of the components are not in them.
+nonlinear shifts of the components are not in them. [**Done for the plane wave, 2026-09-25** — below;
+the beam's fourth order remains open.]
+
+**κ to fourth order, and the launch (2026-09-25).** `shape_zero_tests/kappa_pw4_pt.py`
+derives the plane wave's A⁴ term by harmonic balance on the lattice (reference
+convention; static shift and second harmonic to O(A⁴), third harmonic to O(A³)):
+
+    κ(A) = −0.017480 − 0.002947·A²
+
+It is confirmed by an exact 24-harmonic solution (the same κ₄ to every printed
+digit) and by simulation launched on the exact travelling wave
+(`kappa_pw4_seed.py`), which reproduces it to every printed digit with a zero
+error bar. The physical value is **−0.01751 at A = 0.1**, **−0.01775 at A = 0.3**
+and **−0.01797 at A = 0.4** (exact solution; the A² truncation gives −0.01795 at
+0.4). The true fourth-order term adds about **1.5%** at A = 0.3.
+
+**The measured amplitude sweep is mostly a launch effect.** The sweep −0.0176,
+−0.0179, −0.0187, −0.0200 at A = 0.1–0.4 (`pinned_asymmetry_reference.py`; the same
+on the side-8 cube and on a 1-D ring: −0.01755, −0.01792, −0.01869, −0.01996)
+starts from a plain cosine, which omits the wave's static shift and second
+harmonic and sets the velocity at the linear frequency. That adds **−0.00094 at
+A = 0.3**, about **80%** of the apparent growth over −0.01748. Attribution at
+A = 0.3 (`kappa_pw4_attrib.py`: the exact wave with pieces removed; identical at
+T = 300 and T = 900, so a frequency shift, not a transient):
+
+| omitted from the launch | κ increment | status |
+|---|---|---|
+| velocity at the linear frequency | −0.00016 | **derived** (forward/backward split of the fundamental; matches) |
+| static shift | −0.00029 | **measured, not derived** |
+| second harmonic | −0.00031 | **measured, not derived** |
+| interaction of the two | about −0.00024 | **measured, not derived** |
+| total, plain-cosine launch | −0.00094 | −0.01869 against the wave's −0.01775 |
+
+**The static-shift and second-harmonic pieces are measured, not derived.** The
+leading cross-modulation formula for the free oscillations the launch leaves
+behind does not capture them: for the uniform mode its direction-odd part
+vanishes identically, and for the staggered (k = π) mode it gives a sixth to a
+third of the measured shift (−2.5×10⁻⁶ against −1.55×10⁻⁵ and −9.9×10⁻⁶ against
+−3.6×10⁻⁵ per direction), which grows roughly linearly with that mode's amplitude
+while the formula grows quadratically (`kappa_pw4_attrib.py`, part 2). **Adding the second-order field
+to the launch** (`kappa_seed2_test.py`) gives **−0.01787 ± 0.00006** at A = 0.3,
+against the derived exact wave plus velocity term, −0.01791.
+
+**Beam fourth-order tests** (`kappa4_predict.py`, predictions committed before
+any comparison in commit `0e7f269`; `kappa4_compare.py`; `kappa4_measure.py`).
+Every fourth-order term is quartic in the component amplitudes, so relative to
+the second-order term it carries one more factor of the fill; the kernel is not
+derived. Three hypotheses for the beam's own growth, as a fraction r of the
+plane wave's: **H0** none; **S1** all quartic terms survive (incoherent local
+sextic), r = fill·(6 − 3P₂ − 6s + 4s²)/F₂; **S2** only the box-wide component's
+own term, r = fill·s²/F₂. At the nine sharp points (A = 0.30): H0 9/9, S1 8/9
+(w = 1, L = 4 at +2.1σ), S2 9/9; the second-order F₂ alone 7/9. Two never-measured
+large-fill beams at A = 0.10 and 0.30: the second-order F₂ holds there (1.0063 ±
+0.014 against 1.0076; 1.0316 ± 0.014 against 1.0338), and **H0 is excluded at
+large fill** — w = 3, L = 4: F(0.30)/F(0.10) at −2.2σ, F(0.30) at −3.4σ; w = 2,
+L = 4: F(0.30) at −2.4σ; the box κ grows 4.4% and 3.0%. S1 and S2 both pass
+(within 0.8σ), so **S1 against S2 is unresolved**; the narrow-beam evidence that
+favours S2 was seen before the predictions were written. **These tests used
+plain-cosine launches, so they mix physics with launch effects.** Redoing them
+with orbit-consistent launches is open (§9).
 
 **The PINNING is width-independent at every configuration tested** — that is the
 invariance the experiment rests on, and it is unaffected.
@@ -1902,7 +1987,8 @@ established — see §7b.*
 |---|---|
 | **what fixes the fibre metric scale** | **the largest one — it blocks three numbers at once.** ℏ, c₈ and Λ are all functions of it (κ_ℏ ∝ 1/k, c₈ ∝ k², Λ ∝ 1/k). Nothing in the architecture supplies a length: structure constants are ±1, \|1\| = 1 is a norm, and 2, 6, 42, 3/8, 2π² are ratios. The φ-well does supply a length (√5) but it lives on the **radial** coordinate while ℂP² is the **angular** one, and the HK cone relation ties them only as k = m — which discretises the node mass without fixing its unit |
 | **what fixes C_r** | the residual coupling *form* is determined (§4b.1); its *strength* is not |
-| **fourth-order cross-modulation (κ, F at A = 0.30)** | the derived F is second order; it matches every sharp point except the two narrowest beams at A = 0.30, which it matches at A = 0.10 (§5, "The cross-modulation factor F, derived") |
+| ~~fourth-order cross-modulation (κ, F at A = 0.30)~~ **DONE for the plane wave, 2026-09-25** (§5, "κ to fourth order"); the original entry: | the derived F is second order; it matches every sharp point except the two narrowest beams at A = 0.30, which it matches at A = 0.10 (§5, "The cross-modulation factor F, derived") |
+| **beam fourth order with orbit-consistent launches** | the beam fourth-order tests (H0 excluded at large fill; S1 against S2 unresolved) used plain-cosine launches, so they mix physics with launch effects. Redo them with orbit-consistent (second-order) launches (`kappa_seed2_test.py`), derive the beam's fourth-order kernel, and derive the launch's static-shift and second-harmonic pieces, which are measured, not derived (§5) |
 | ~~verify the 0.39° attribution~~ | **CLOSED** — readout timing; the Abelian floor is exactly 0 under clearing readout at q = 1 and q = 3 |
 | ~~wavenumber-averaged prediction at q = 3~~ | **CLOSED** — closes the gap to 0.04–0.17°; the q = 3 gauge sector is quantitatively verified |
 | ~~save the q = 3 scripts~~ | **CLOSED** — all test scripts and results are in `shape_zero_tests/` in this repository, with both `model.py` versions pinned by content hash (`c49da46f` for q = 1 work, `948b09e8` for q = 3). Runs from the repository alone; `q3_kavg.py` reproduces its saved result with difference 0.0 |
