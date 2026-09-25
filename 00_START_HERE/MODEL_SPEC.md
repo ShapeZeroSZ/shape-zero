@@ -389,7 +389,8 @@ and the operating point κ = κ\*.**
   (2) A **pre-existing mismatch**, found while re-running: §6b's gate-7 u(3) entry
   (65.1166 measured, 64.9712 predicted) is not what the current `model.py` printed
   at κ = 0.5 (117.92 / 118.29, `shape_zero_tests/jcompat_gates_k0.5.txt`); not resolved
-  here.
+  here. [**Resolved 2026-09-25:** the entry is the platform benchmark
+  `phi_gauge_u3_working.py`, mislabelled as gate 7; the label is corrected in §6b.]
 - **Not re-run:** the platform benchmarks at κ = 0.5 (`04_scripts/platform/`: the u(2)
   59.86° / 59.84° and u(3) 65.12° / 64.97° orderings, `INPUT_LEDGER.md` §3), and
   `grid.py`, `checks.py`, `resid.py` (§4, §5 of `shape_zero_tests/README.md`). They
@@ -2141,7 +2142,7 @@ three scripts with three node types. Run it:
 | 5 n=1 asymmetry, measured | **0.100003** vs −2cβ sin k = 0.100000 |
 | 6 κ and the β-collapse | **κ = 0.0798 ± 0.00089** across a tenfold β range — RETRACTED (swapped seeding, §5); corrected −0.0184 ± 0.00033 |
 | 7 u(2) ordering | sim-vs-pred **0.285°, 0.165°**; splitting 101.12 measured, 100.80 predicted |
-| 7 u(3) ordering | sim-vs-pred **0.615°, 0.566°**; splitting **65.1166** measured, **64.9712** predicted |
+| 7 u(3) ordering | sim-vs-pred **0.615°, 0.566°**; splitting **65.1166** measured, **64.9712** predicted [**LABEL CORRECTED 2026-09-25:** these numbers are the **platform benchmark** `04_scripts/platform/phi_gauge_u3_working.py` (κ = 0.5, N = 200, segments 60/80, equal strengths 0.15), which reproduces them exactly (`shape_zero_tests/phi_gauge_u3_working_output.txt`: 0.6147°, 0.5658°, 65.1166°, 64.9712°) — **not `model.py`'s gate 7**, whose u(3) line at κ = 0.5 was split 117.92° measured, 118.29° predicted, per-order 0.44° / 0.29° (`shape_zero_tests/jcompat_gates_k0.5.txt`)] |
 | 8 Abelian control | **0.0169°** where theory says 0 |
 | residual sector | present, C_r = 0 by default, inert to 4.5×10⁻¹⁹ |
 
@@ -2150,6 +2151,8 @@ KAPPA since 2026-09-25) all eleven gates pass: purity 0.9818; gate 7 u(2) 98.74 
 u(3) 106.86 / 107.15; gate 8 0.0487° (`shape_zero_tests/model_gates_kstar.txt`; full
 table in §3, "ADOPTED"). The u(3) row's 65.1166 / 64.9712 does not match the current
 `model.py` even at κ = 0.5 (117.92 / 118.29) — a pre-existing mismatch, §9.]
+[Resolved 2026-09-25: the u(3) row is the platform benchmark, mislabelled — see the
+row.]
 
 **One script now reproduces every verified result the programme has** — u(1),
 u(2), u(3), the pinned asymmetry, κ, the β-collapse, both ordering splittings and
@@ -2280,7 +2283,7 @@ established — see §7b.*
 | ~~S2 at w = 3, L = 4, and why the cross terms cancel~~ **SUPERSEDED 2026-09-25** (§5): with the third harmonic in the launch S2 fails three of four L = 4 beams, and the cross terms are partly present; the original entry: | two things: (1) test S2 at w = 3, L = 4 with the third harmonic added to the launch — S2 failed that beam by +18σ under the committed criterion and fits it only under a post-hoc third-harmonic band; (2) derive why the fourth-order cross terms cancel, leaving only the box-wide component's own term (S2 is a surviving hypothesis, not a derivation) |
 | ~~which J-compatibility bound applies at q = 3~~ **RESOLVED 2026-09-25** (§3, "ADOPTED"): 0.972 — the model's slab segments conserve transverse momentum (code and `jcompat_q3.py`); a finite-width segment would need 2.091. The original entry: | κ ≥ 0.972 if the coupling segments conserve transverse momentum, κ ≥ 2.091 if not — decides the candidate floor on κ at the model's own dimension |
 | **the q = 3 Abelian floor at κ\*** | `q3_gate.py` at the operating point κ\* reads 0.066° (u(2)) and 0.030° (u(3)) under clearing readout, not 0.000° as at κ = 0.5 — inside tolerance, cause not investigated; blocks the claim "exactly 0 at q = 3" at the current operating point (§3, "ADOPTED"; §4d) |
-| **§6b's gate-7 u(3) entry** | 65.1166 / 64.9712 is not reproduced by the current `model.py` at κ = 0.5 (117.92 / 118.29); pre-existing, found in the κ\* re-run — which configuration produced it is unrecorded |
+| ~~§6b's gate-7 u(3) entry~~ **RESOLVED 2026-09-25**: it is the platform benchmark `phi_gauge_u3_working.py` (reproduced exactly), mislabelled as `model.py`'s gate 7; label corrected in §6b. The original entry: | 65.1166 / 64.9712 is not reproduced by the current `model.py` at κ = 0.5 (117.92 / 118.29); pre-existing, found in the κ\* re-run — which configuration produced it is unrecorded |
 | **the exact value of κ** | only the floor κ ≥ κ\* is derived; the value is a genuine parameter, fixed by the Larmor measurement (`INPUT_LEDGER.md` §3.1); `model.py`'s κ = κ\* is a chosen operating point |
 | **the beam's fourth-order cross kernel** | derive it — every fourth-order cross term between a beam's transverse components, on the lattice — with the measured r values as the target: 0.351/0.350 (w = 1.5), 0.547/0.549 (w = 2), 0.750/0.758 (w = 3) at L = 4, A = 0.30/0.40, which lie 0.33, 0.50, 0.68 of the way from the self-only limit S2 to the all-terms limit S1 (§5, measured with the third-harmonic launch, `kappa4_orbit3_launch.py`) |
 | ~~verify the 0.39° attribution~~ | **CLOSED** — readout timing; the Abelian floor is exactly 0 under clearing readout at q = 1 and q = 3 |

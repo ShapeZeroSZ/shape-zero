@@ -1,0 +1,38 @@
+  CORRECTED CONTROL: same axis, DIFFERENT strengths, both orders
+      control angle     0.0137 deg   drift 2.99e-07  purity 0.9840
+
+  NON-COMMUTING: different axes, same strengths, both orders
+      ordering split   65.1166 deg   drift 2.99e-07  purity 0.9845
+      predicted        64.9712 deg
+
+==================================================================
+SIM vs INDEPENDENT PREDICTION
+==================================================================
+
+ABELIAN CONTROL (lam1 at two strengths, both orders)
+      energy drift          2.99e-07
+      sim vs pred (order 1)   0.3104 deg
+      sim vs pred (order 2)   0.3246 deg
+      run-vs-run splitting    0.0169 deg
+      PREDICTED splitting     0.0000 deg   <- theory says ~0 (commuting)
+      chirality purity      0.9841
+
+NON-COMMUTING (lam1 <-> lam2, equal strength)
+      energy drift          2.99e-07
+      sim vs pred (order 1)   0.6147 deg
+      sim vs pred (order 2)   0.5658 deg
+      measured splitting     65.1166 deg
+      predicted splitting    64.9712 deg
+      chirality purity      0.9845
+
+==================================================================
+SINGLE-SEGMENT FIDELITY  (the isolation test)
+==================================================================
+      energy drift          1.50e-07
+      sim vs pred (1 seg)   0.4945 deg
+      chirality purity      0.9834
+
+  SINGLE-SEGMENT PASSED. The two-segment residual (~0.5 deg) is not explained by readout timing: in gate 7 a similar residual survives a clearing readout. Its likely source is the single-wavenumber prediction, which accounts for the q = 3 gap (MODEL_SPEC 4d); untested for this script.
+
+  FLOOR: free case (no segment) sim vs initial state: 0.0000 deg
+         drift 1.50e-07  purity 0.9834

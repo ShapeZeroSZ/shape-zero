@@ -1175,6 +1175,9 @@ correct at κ = 0.5.
 **Found while re-running:** the q = 3 Abelian floor reads 0.066° / 0.030° at κ\*,
 not 0; and MODEL_SPEC §6b's u(3) gate-7 entry (65.1166 / 64.9712) is not what the
 current `model.py` prints at κ = 0.5 (117.92 / 118.29). Both open (MODEL_SPEC §9).
+[The second is resolved: the entry is the platform benchmark `phi_gauge_u3_working.py`,
+which reproduces 65.1166 / 64.9712 exactly; §6b had labelled it as `model.py`'s gate 7.
+Label corrected 2026-09-25.]
 Also: `model.py` must be run from `04_scripts/session/` — run from elsewhere, gate 11
 cannot find `d16_spectrum_v2.py` and FAILs (seen once in this re-run; re-run from
 the right directory, it passes).
