@@ -5,8 +5,10 @@ question. It changes no result and no other document. Every claim cites a file
 and section; where the cited documents disagree or are silent, that is said.
 
 **Sources.** The request named `PREMISE_LEDGER.md`; **no such file exists in this
-repository.** Its role is filled by `03_current/INPUT_LEDGER.md` (the input
-ledger and validation protocol), used here with `00_START_HERE/MODEL_SPEC.md`
+repository.** [**Updated 2026-09-25:** it now exists — `03_current/PREMISE_LEDGER.md`,
+written after this document, lists every premise with its status. This document was
+written from the sources below and is not revised against it.] Its role is filled by
+`03_current/INPUT_LEDGER.md` (the input ledger and validation protocol), used here with `00_START_HERE/MODEL_SPEC.md`
 (§0b, §1–§3, §4b.1, §4c, §9) and `00_START_HERE/PROVENANCE.md` (§6c, §6d).
 
 ---

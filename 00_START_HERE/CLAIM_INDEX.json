@@ -21240,7 +21240,19 @@
   },
   {
    "file": "./03_current/SCALE_SCOPING.md",
-   "line": 41,
+   "line": 8,
+   "section": "Scale scoping \u2014 what the model can and cannot fix, before any derivation",
+   "text": "repository.** [**Updated 2026-09-25:** it now exists \u2014 `03_current/PREMISE_LEDGER.md`,",
+   "numbers": [
+    "2026",
+    "09",
+    "25"
+   ],
+   "status": []
+  },
+  {
+   "file": "./03_current/SCALE_SCOPING.md",
+   "line": 43,
    "section": "1b. Dimensionless couplings and ratios",
    "text": "| \u03ba (gyroscopic ratio) | intra-node gyroscopic coupling, F = \u03ba\ud835\udd41v; D4 coupling strength | **OPEN, measurable** \u2014 fixed by one bench measurement (the Larmor splitting equals \u03ba). [Candidate floor, not adopted, 2026-09-25: \u03ba",
    "numbers": [
@@ -21262,7 +21274,7 @@
   },
   {
    "file": "./03_current/SCALE_SCOPING.md",
-   "line": 42,
+   "line": 44,
    "section": "1b. Dimensionless couplings and ratios",
    "text": "| \u03b2 (lattice) | inter-node antisymmetric velocity coupling, \u03b2c(v\u208a \u2212 v\u208b) \u2014 the synthetic U(1) | **CHOSEN** \u2014 \u03b2 = 0.05 in the \u03ba scripts; `MODEL_SPEC.md` \u00a74c.4 calls it the U(1) \"charge\" and \"already an input (\u00a72d of the le",
    "numbers": [
@@ -21272,7 +21284,7 @@
   },
   {
    "file": "./03_current/SCALE_SCOPING.md",
-   "line": 43,
+   "line": 45,
    "section": "1b. Dimensionless couplings and ratios",
    "text": "| \u03b6 (cone deficit; \u03b2 before 2026-09-25) | the D2 arena's cone deficit | **OPEN** \u2014 contingent on an unresolved embedding; B-2 candidate \u03b6 = 1/4 has an unmet closing condition | `INPUT_LEDGER.md` \u00a72d #2, \u00a73.3 |",
    "numbers": [
@@ -21287,7 +21299,7 @@
   },
   {
    "file": "./03_current/SCALE_SCOPING.md",
-   "line": 44,
+   "line": 46,
    "section": "1b. Dimensionless couplings and ratios",
    "text": "| a\u2013b angle | D8 flow frequency ratio (second generator's direction) | **OPEN, measurable** \u2014 plurality forces a second generator, not which; every ratio in [1.04, 23.9] is attainable | `INPUT_LEDGER.md` \u00a72d #4, \u00a73.2 |",
    "numbers": [
@@ -21299,7 +21311,7 @@
   },
   {
    "file": "./03_current/SCALE_SCOPING.md",
-   "line": 46,
+   "line": 48,
    "section": "1b. Dimensionless couplings and ratios",
    "text": "| J-compatibility ([W, \ud835\udd41] = 0) | a condition on the coupling, not a number | **CHOSEN** at short wavelength, **derived at long** (emergent below k_c) [**SUPERSEDED 2026-09-25:** now a **PRINCIPLE \u2014 required at every wave",
    "numbers": [
@@ -21313,7 +21325,7 @@
   },
   {
    "file": "./03_current/SCALE_SCOPING.md",
-   "line": 52,
+   "line": 54,
    "section": "1b. Dimensionless couplings and ratios",
    "text": "**Symbol collisions, flagged and not resolved here.** [(i) **resolved 2026-09-25:**",
    "numbers": [
@@ -21325,7 +21337,7 @@
   },
   {
    "file": "./03_current/SCALE_SCOPING.md",
-   "line": 113,
+   "line": 115,
    "section": "3. Units are conventions; only pure numbers are derivable",
    "text": "\u210f = 1.054571817\u00d710\u207b\u00b3\u2074 J\u00b7s encodes the choice of the joule and the second as much",
    "numbers": [
@@ -21336,7 +21348,7 @@
   },
   {
    "file": "./03_current/SCALE_SCOPING.md",
-   "line": 132,
+   "line": 134,
    "section": "3a. Dimensionless quantities the model could in principle fix",
    "text": "| **sin\u00b2\u03b8_W = 3/8** | **yes** \u2014 group-theoretic, from the representations (Tr T\u2083\u00b2 = 2, Tr Q\u00b2 = 16/3); tracked by `00_START_HERE/check_consistency.py` (TRACKED, \"sin2 theta_W\"). It is the **tree-level unification value**:",
    "numbers": [
@@ -21350,7 +21362,7 @@
   },
   {
    "file": "./03_current/SCALE_SCOPING.md",
-   "line": 133,
+   "line": 135,
    "section": "3a. Dimensionless quantities the model could in principle fix",
    "text": "| orbit constants 2, 6; \u2016c\u2016\u00b2 = 42; dim Der = 14; Casimirs 0, 1/3, 4/3, 5/6; 16 of 128; multiplicities 1, 3, 3\u0304 | **yes** | `MODEL_SPEC.md` \u00a70b; `INPUT_LEDGER.md` \u00a72 |",
    "numbers": [
@@ -21366,7 +21378,7 @@
   },
   {
    "file": "./03_current/SCALE_SCOPING.md",
-   "line": 141,
+   "line": 143,
    "section": "3a. Dimensionless quantities the model could in principle fix",
    "text": "| \u03b1_GUT and \u03b1 | **no, and closed** \u2014 the model owns the 5/8 group factor, not the magnitude | `MODEL_SPEC.md` \u00a74c.4, \u00a74c.4b |",
    "numbers": [
@@ -21376,7 +21388,7 @@
   },
   {
    "file": "./03_current/SCALE_SCOPING.md",
-   "line": 152,
+   "line": 154,
    "section": "4a. The fibre metric scale",
    "text": "and 2, 6, 42, 3/8, 2\u03c0\u00b2 are ratios. The \u03c6-well does supply a scale, \u221a5",
    "numbers": [
@@ -21387,7 +21399,7 @@
   },
   {
    "file": "./03_current/SCALE_SCOPING.md",
-   "line": 188,
+   "line": 190,
    "section": "4b. The residual coupling strength C_r",
    "text": "computable at present\"). The earlier saturation anomaly (B \u2248 0.020 at both",
    "numbers": [
@@ -21397,7 +21409,7 @@
   },
   {
    "file": "./03_current/SCALE_SCOPING.md",
-   "line": 189,
+   "line": 191,
    "section": "4b. The residual coupling strength C_r",
    "text": "C_r = 0.05 and 0.20, `MODEL_SPEC.md` \u00a74b.1) is closed as an oscillation with",
    "numbers": [
@@ -21408,7 +21420,7 @@
   },
   {
    "file": "./03_current/SCALE_SCOPING.md",
-   "line": 225,
+   "line": 227,
    "section": "5. Rule for any claimed match to a constant of nature",
    "text": "(`PROVENANCE.md` \u00a76d: exp(42), 128 against 137.036, and the retracted \u210f;",
    "numbers": [
@@ -21422,7 +21434,7 @@
   },
   {
    "file": "./03_current/SCALE_SCOPING.md",
-   "line": 237,
+   "line": 239,
    "section": "6. The genuine parameters \u2014 what a complete derivation must fix",
    "text": "From the kind column of `INPUT_LEDGER.md` \u00a72d (added 2026-09-25). These are the",
    "numbers": [
@@ -21434,7 +21446,7 @@
   },
   {
    "file": "./03_current/SCALE_SCOPING.md",
-   "line": 243,
+   "line": 245,
    "section": "6. The genuine parameters \u2014 what a complete derivation must fix",
    "text": "derived \u03ba\u2082 moves from \u22120.026389 to \u22120.009316 between c = 0.5 and 2",
    "numbers": [
@@ -21445,7 +21457,7 @@
   },
   {
    "file": "./03_current/SCALE_SCOPING.md",
-   "line": 246,
+   "line": 248,
    "section": "6. The genuine parameters \u2014 what a complete derivation must fix",
    "text": "[2026-09-25: **genuine parameter with a derived floor**, \u03ba \u2265 2c/\u221a(K + 2c) = 0.971737,",
    "numbers": [
@@ -25455,7 +25467,7 @@
   }
  ],
  "counts": {
-  "doc_claims": 2037,
+  "doc_claims": 2038,
   "scripts": 155
  }
 }
