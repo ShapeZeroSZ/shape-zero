@@ -1,0 +1,53 @@
+=== model.py gates with KAPPA = 0.5 (one line changed) ===
+====================================================================
+SHAPE ZERO — ASSEMBLED MODEL
+====================================================================
+
+  [PASS] 1. harness calibrated
+         freq_phase:pass, freq_fft:LOCKED, rank_abs:pass
+  [PASS] 2. free propagation
+         energy drift 2.04e-07  (need < 1e-6)
+  [PASS] 3. complex structure selected
+         chirality purity 0.9834  drift 9.90e-08
+  [PASS] 4. passivity gives u(n), dim n^2
+         n=1:1  n=2:4  n=3:9  n=4:16  n=5:25
+  [PASS] 5. n=1 asymmetry, MEASURED
+         |d_omega| 0.099999   -2 c beta sin k = 0.100000   resid 0.000
+  [PASS] 6. kappa and the beta-collapse
+         kappa -0.0184 +/- 0.00033 across a tenfold beta range (corrected: -0.0187; 0.0799 retracted, seeding swap)
+  [PASS] 7. u(2) ordering vs independent prediction
+         split 101.12 deg vs predicted 100.80 deg | per-order 0.29 / 0.17 deg | Abelian floor 0.016 deg (algebra: 0) | drift 3.0e-07
+  [PASS] 7. u(3) ordering vs independent prediction
+         split 117.92 deg vs predicted 118.29 deg | per-order 0.44 / 0.29 deg | Abelian floor 0.014 deg (algebra: 0) | drift 3.0e-07
+  [PASS] 8. Abelian control (commuting axes, unequal strengths)
+         0.0164 deg   (theory 0; equal strengths would be vacuous)
+  [PASS] 9. cone state: radial/angular split
+         |sigma|-1 max 0.0e+00, energy split residual 0.0e+00, radial K 2.02e-66 vs angular 2.36e-03
+  [PASS] 10. base runs at q = 1, 2, 3 with so(q) angular momentum
+         q=1:512 sites drift 3.3e-08 so(1)=0  q=2:484 sites drift 3.4e-08 so(2)=1  q=3:1000 sites drift 4.2e-08 so(3)=3
+  [PASS] 11. residual: inert at C_r=0, active otherwise, at q=1 and q=3
+         q=1 C_r=0.0: B=2.30e-18  q=1 C_r=0.05: B=3.25e-03  q=3 C_r=0.0: B=-7.81e-18  q=3 C_r=0.05: B=1.29e-02
+
+====================================================================
+  THE MODEL PREDICTS
+====================================================================
+    d_omega(k, A) = -2 c beta sin(k) * [ 1 - 0.0184 A^2 ]
+
+    the coefficient is beta-INDEPENDENT, so the normalised drift
+    collapses across coupling strengths. That collapse is the
+    experiment: one knob, two observables, no fitted parameter.
+
+    resolution needed: ~1e-4 for the pinning, ~1e-5 for the A^2 law
+    valid amplitude:   A below ~0.9
+
+    ** kappa = 0.0799 is RETRACTED (reference seeded each direction
+    with the other's root); corrected plane-wave / 1-D value -0.0187. **
+    The plane-wave kappa = -0.0187 is the ONLY real coefficient.
+    A localised beam's box-averaged kappa depends on the box size
+    and goes to zero as the box grows. kappa(w = 2, side) is CLOSED:
+    a static fixed dilution, kappa_box = kappa_pw * fill * F, with
+    F = 2 - s holding within error for L >= 12 (MODEL_SPEC sec 5).
+    Quote a localised kappa only with its box size. The w = 3 value
+    and the geometry table remain UNVERIFIED.
+    The PINNING is width-independent at every configuration tested.
+====================================================================

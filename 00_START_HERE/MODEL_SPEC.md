@@ -220,7 +220,8 @@ confirmed before/after:
 Also varying stiffness at fixed k₀ = π/2: closed for K ≳ 3, open below; the
 controlling variable is the channel, **not** g/ω (ratios at 4√5 and 16√5 agree
 to 3% though ω differs by 2×). κ needed to close the channel at K = √5 runs from
-0.02 (k = 0.25) to 0.97 (k → π); κ ≳ 1 would close it everywhere.
+0.02 (k = 0.25) to 0.97 (k → π); κ ≳ 1 would close it everywhere. [**Made exact
+2026-09-25:** κ ≥ κ* = 0.971737 — see "CANDIDATE, NOT ADOPTED" below.]
 
 **Status: DERIVED at long wavelength, CHOSEN at short.** Phase conservation is an
 emergent low-energy symmetry of the model.
@@ -237,6 +238,65 @@ readout**: at π/2 ratios 0.0762 → 0.1278 (g = 0.0025 → 0.04), at 3π/4
 0.0699 → 0.1165, other W's unchanged — the ~3–12% first-order effect is real.
 Open: whether the second-order leftover in the closed channel commutes with J.
 Scope: n = 2, q = 1, amplitude 10⁻³, three random W.
+
+**CANDIDATE, NOT ADOPTED (2026-09-25) — J-compatibility derived at every
+wavelength, and what it requires of κ.** `model.py` keeps KAPPA = 0.5; nothing
+below is adopted. If the channel is required closed at every wavenumber instead of
+chosen at short wavelength:
+
+- **Derivation.** The packet branch is ω² + κω = Q(k₀), Q(k) = K + 2c(1 − cos k);
+  the channel is closed iff κω(k₀; κ) > c(1 − cos k₀). With x = c(1 − cos k₀) the
+  boundary κω = x and ω² + κω = K + 2x give **κ_req(k₀) = x/√(K + x)**. It rises
+  monotonically with x (d/dx = (K + x/2)/(K + x)^{3/2} > 0), so the band edge binds:
+  **κ ≥ κ\* = 2c/√(K + 2c) = 0.971737** at c = 1, K = √5. At κ = κ\* every travelling
+  wavenumber is strictly closed; only the standing mode k₀ = π is marginal (k′ = 0,
+  v_g = 0). Values: κ_req(0.25) = 0.021, κ_req(π/2) = 0.556; at κ = 0.5 the channel is
+  closed for k₀ < 1.4536 (the k_c above).
+- **κ\* = 2φ^(−3/2)**, because 2 + √5 = φ³. This is a **consequence of K = √5**, not a
+  selection: the bound is 2c/√(K + 2c) for any K and c.
+- **Lower bound only.** No principle in the repository supplies an upper side:
+  plurality excludes only κ = 0 (`C1S_SYNTHESIS.md` §12), and minimality ("no
+  unforced parameters") admits κ by its exemption clause without choosing a value.
+  **Adopting this fixes a floor, not a value.** κ stays fixed by the bench Larmor
+  measurement (`INPUT_LEDGER.md` §3.1), which it would turn into a falsifiable
+  inequality: the measured split must be ≥ 2c/√(K + 2c), with K and c from the
+  same platform's linear spectroscopy. The floor scales with c (∝ √(2c) for c ≫ K).
+- **Numerical confirmation** (`shape_zero_tests/jcompat_kappa.py`, `j_compat_test.py`
+  machinery, width-16 packet, 400 sites). At κ = 1.15 κ_req the ratio falls ∝ g —
+  0.255 (π/2), 0.247 (0.75π), 0.241 (0.9π) for g 0.04 → 0.01 — with leaked weight
+  10⁻⁶–10⁻⁷. At κ = 0.85 κ_req the channel is open: at π/2 the ratio levels off (0.75)
+  with leak 10⁻²; at 0.75π and 0.9π it stops falling at 0.0175 and 0.0216 by
+  g = 0.0025. A κ sweep at g = 0.04 drops the leaked weight 3–4 orders at
+  κ/κ_req = 1 (0.9π: 8.0×10⁻³ at 0.98 → 8.6×10⁻⁶ at 1.02; 0.75π edge smeared over
+  1.02–1.05 by the packet's ~0.06 rad spread).
+- **All eleven `model.py` gates pass at κ = 0.5, κ\* (0.9727) and 1.0**
+  (`shape_zero_tests/jcompat_gates.py`). Gates 1, 2, 4, 5, 6, 10, 11 are identical at all
+  three (gate 6's amplitude κ = −0.0184 is a different quantity — n = 1, no 𝕁 term).
+  Values that move:
+
+  | gate value | κ = 0.5 | κ\* | κ = 1.0 |
+  |---|---|---|---|
+  | 3 chirality purity | 0.9834 | 0.9818 | 0.9817 |
+  | 7 u(2) split, measured / predicted | 101.12 / 100.80 | 98.76 / 98.28 | 99.61 / 99.12 |
+  | 7 u(3) split, measured / predicted | 117.92 / 118.29 | 106.80 / 107.10 | 105.28 / 105.55 |
+  | 8 Abelian floor | 0.016° | 0.049° | 0.052° |
+
+- **Recorded κ = 0.5 results that would change on adoption:** this section's k_c ≈ 1.45
+  (becomes the whole zone), its π/2 and 3π/4 "open" rows and the clearing-readout
+  open-channel values (0.0762 → 0.1278, 0.0699 → 0.1165) — all would be closed-channel,
+  ∝ g; the status line "CHOSEN at short" (becomes derived); `shape_zero_tests/README.md`'s
+  kscan instrument check (π/2 ratio 0.0883); the gate tables' chirality purity 0.9834
+  and ordering splittings (101.12/100.80, 59.86/59.84, 65.12/64.97, and the
+  `INPUT_LEDGER.md` benchmark rows); the `gate7_readout.py` clearing values (105.89°, …)
+  and `q3_gate.py` values (κ enters through ω and v_g; not re-run); the P-3
+  simulation instance **C = −0.0896 → −0.0491** at κ\* (same formula,
+  `shape_zero_tests/jcompat_effects.py`). Unaffected: the amplitude-κ results (β-collapse,
+  fourth order), which have no gyroscopic term.
+- **OPEN — which bound at q = 3.** κ\* = 0.972 holds if the coupling conserves
+  transverse momentum (the opposite-chirality wave keeps k₀'s transverse part). If it
+  does not, k′ can lie anywhere in the zone, the channel is closed iff
+  2κω > Q(k₀) − K, and the zone corner binds: κ\*_q = 2qc/√(K + 2qc) = 1.602 (q = 2),
+  **2.091 (q = 3)**.
 
 | n | dim admissible W | group | measured |
 |---|---|---|---|
@@ -2105,6 +2165,7 @@ established — see §7b.*
 | ~~fourth-order cross-modulation (κ, F at A = 0.30)~~ **DONE for the plane wave, 2026-09-25** (§5, "κ to fourth order"); the original entry: | the derived F is second order; it matches every sharp point except the two narrowest beams at A = 0.30, which it matches at A = 0.10 (§5, "The cross-modulation factor F, derived") |
 | ~~beam fourth order with orbit-consistent launches~~ **DONE 2026-09-25** (§5): launch pieces derived, H0 and S1 excluded; the original entry: | the beam fourth-order tests (H0 excluded at large fill; S1 against S2 unresolved) used plain-cosine launches, so they mix physics with launch effects. Redo them with orbit-consistent (second-order) launches (`kappa_seed2_test.py`), derive the beam's fourth-order kernel, and derive the launch's static-shift and second-harmonic pieces, which are measured, not derived (§5) |
 | ~~S2 at w = 3, L = 4, and why the cross terms cancel~~ **SUPERSEDED 2026-09-25** (§5): with the third harmonic in the launch S2 fails three of four L = 4 beams, and the cross terms are partly present; the original entry: | two things: (1) test S2 at w = 3, L = 4 with the third harmonic added to the launch — S2 failed that beam by +18σ under the committed criterion and fits it only under a post-hoc third-harmonic band; (2) derive why the fourth-order cross terms cancel, leaving only the box-wide component's own term (S2 is a surviving hypothesis, not a derivation) |
+| **which J-compatibility bound applies at q = 3** (candidate, not adopted; §3) | κ ≥ 0.972 if the coupling segments conserve transverse momentum, κ ≥ 2.091 if not — decides the candidate floor on κ at the model's own dimension |
 | **the beam's fourth-order cross kernel** | derive it — every fourth-order cross term between a beam's transverse components, on the lattice — with the measured r values as the target: 0.351/0.350 (w = 1.5), 0.547/0.549 (w = 2), 0.750/0.758 (w = 3) at L = 4, A = 0.30/0.40, which lie 0.33, 0.50, 0.68 of the way from the self-only limit S2 to the all-terms limit S1 (§5, measured with the third-harmonic launch, `kappa4_orbit3_launch.py`) |
 | ~~verify the 0.39° attribution~~ | **CLOSED** — readout timing; the Abelian floor is exactly 0 under clearing readout at q = 1 and q = 3 |
 | ~~wavenumber-averaged prediction at q = 3~~ | **CLOSED** — closes the gap to 0.04–0.17°; the q = 3 gauge sector is quantitatively verified |
