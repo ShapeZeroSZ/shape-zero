@@ -799,7 +799,7 @@
 - L105 [PROVED] `Theorem 2.10 — also affected` — Theorem 2.10 states that the zero-power couplings, closed under the bracket, are
 - L107 [-] `Theorem 2.10 — also affected` — matrices (dimension n(2n+1); 10 at n = 2), and symmetric matrices are not closed
 - L158 [VERIFIED] `Section 3 — two edge-case errors` — colouring. The count of **48** role colourings (§5) is confirmed by enumeration.
-- L162 [VERIFIED] `Section 3 — two edge-case errors` — is now machine-verified: Prove2Me mission 6 (2026-09-24, in review) proves that
+- L162 [VERIFIED] `Section 3 — two edge-case errors` — is now machine-verified: Prove2Me mission 6 (approved and published 2026-09-24, moderator Shuze Chen) proves that
 
 ### `./01_source/shape_zero_open_threads.md` (5 claims)
 
