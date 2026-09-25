@@ -1,0 +1,23 @@
+q = 3 ORDERING GATE   lattice 260 x 8 x 8   predictor: averaged   kappa 0.500000
+  u(2) AB   read at t = 352   windows 5.7e-08 / 9.6e-07   purity 0.96555 (carrier readout), 0.999905 (per-mode)
+  u(2) BA   read at t = 352   windows 1.3e-07 / 9.9e-07   purity 0.96555 (carrier readout), 0.999905 (per-mode)
+  u(2) fAB  read at t = 352   windows 5.7e-08 / 9.8e-07   purity 0.96555 (carrier readout), 0.999902 (per-mode)
+  u(2) fBA  read at t = 352   windows 1.3e-07 / 9.9e-07   purity 0.96555 (carrier readout), 0.999902 (per-mode)
+  u(3) AB   read at t = 342   windows 2.4e-07 / 9.5e-07   purity 0.96555 (carrier readout), 0.999907 (per-mode)
+  u(3) BA   read at t = 342   windows 2.4e-07 / 9.9e-07   purity 0.96555 (carrier readout), 0.999907 (per-mode)
+  u(3) fAB  read at t = 347   windows 8.2e-08 / 9.7e-07   purity 0.96555 (carrier readout), 0.999907 (per-mode)
+  u(3) fBA  read at t = 347   windows 2.4e-07 / 9.9e-07   purity 0.96555 (carrier readout), 0.999907 (per-mode)
+  clearing: all windows < 1e-06; readout t = 342-352; max drift 6.9e-07
+  no-wrap: v_max 0.497, travel 175 sites, margins fwd 83 / bwd 11
+  [PASS] u(2) AB order             0.001 deg   (need < 1.0)
+  [PASS] u(2) BA order             0.001 deg   (need < 1.0)
+  [PASS] u(2) split                0.003 deg   (need < 1.0)
+  [PASS] u(2) Abelian floor        0.000 deg   (need < 0.5)
+         u(2) split measured / predicted    106.33 / 106.33 deg
+  [PASS] u(3) AB order             0.005 deg   (need < 1.0)
+  [PASS] u(3) BA order             0.005 deg   (need < 1.0)
+  [PASS] u(3) split                0.001 deg   (need < 1.0)
+  [PASS] u(3) Abelian floor        0.000 deg   (need < 0.5)
+         u(3) split measured / predicted    60.89 / 60.89 deg
+  GATE: PASS
+  runtime: simulation 16.2 min wall (52.2 min CPU over 8 runs); evaluation 3 s

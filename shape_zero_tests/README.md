@@ -173,6 +173,18 @@ maximum group velocity, 0.497).
 | **260 × 8 × 8 (default)** | yes, t = 335–346 | **PASS** — 0.10–0.18° | **FAIL** — 2.4–5.1° | **11.6 min wall, 46 min CPU** |
 | 240 × 8 × 8 | **no** — backward stray re-enters window 2 at t ≈ 350 (bottomed at 1.7×10⁻⁶) | — | — | — |
 
+**Changed 2026-09-25** (the table above is the earlier version, at κ = 0.5): the packet
+is launched with every Fourier mode at its own frequency, and the two runs of each
+pair (AB/BA, fAB/fBA) are evolved in lockstep and read at one common time; each run
+also reports the per-mode purity; `--kappa` sets the gyroscopic ratio and `--tag` the
+output-file suffix. 260 × 8 × 8 at κ\* (`--tag kstar_v2`): **PASS — 0.001–0.004°**,
+floors 0.000°, 18.7 min wall; at κ = 0.5 (`--kappa 0.5 --tag k0.5_v2`): **PASS —
+0.001–0.005°**, floors 0.000°, 16.2 min wall. The carrier predictor still fails.
+Why: `q3_floor_probe.py` → `q3_floor_probe_runs.json`, `q3_floor_probe_report.txt`
+(hypotheses committed before the run); before/after: `q3_floor_fix_summary.py` →
+`q3_floor_fix_summary.txt`; gate 3's purity under both launches and readouts:
+`gate3_purity_modes.py` → `gate3_purity_modes.txt`.
+
 Smallest lattice: 260 is the shortest length the no-wrap check accepts (240 is
 rejected at −6 sites and failed to clear in a direct run). The slab is kept at
 8 × 8: its transverse profile still varies 35× across the slab (12 × 12: ~3000×)

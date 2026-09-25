@@ -12,6 +12,16 @@ segment window [start - 10, start + len(RAMP) + 10) holds < 1e-6 of the packet
 weight. The run refuses to report if the lattice is too short for that to be
 trustworthy (see no_wrap_check).
 
+CHANGED 2026-09-25 (the q = 3 Abelian floor at kappa*, shape_zero_tests/
+q3_floor_probe.py): (1) the packet is launched with every Fourier mode at its own
+chi-branch frequency, not the carrier omega -- the carrier launch left off-branch
+content that made the readout oscillate in time (up to 0.07-0.08 deg); (2) the two
+runs of each pair (AB/BA, fAB/fBA) are evolved in lockstep and read out at ONE
+common time, the first time both have cleared, as gate7_readout.py does -- the
+floor at kappa* had compared runs read at 357 and 363. Each run also reports the
+per-mode chirality purity (model.Lattice.readout_modes). --kappa runs at another
+gyroscopic ratio (default: model.py's KAPPA).
+
 Prediction (default 'averaged'): the packet's exact wavenumber spectrum on this
 lattice; each component crosses the segments with its own omega(k) and
 transverse term, and the readout is the power-weighted sum of the rotated states.
@@ -47,14 +57,18 @@ THR, CHECK, TMAX = 1e-6, 1.0, 3000.0
 G = {2: (0.12, 0.08), 3: (0.15, 0.15)}          # MODEL_SPEC 4d gate-7 strengths
 GFLOOR = {2: (0.12, 0.08), 3: (0.15, 0.10)}     # floors need UNEQUAL strengths
 TOL_ORDER, TOL_SPLIT, TOL_FLOOR = 1.0, 1.0, 0.5
-JOBS = [(n, j) for n in (2, 3) for j in ("AB", "BA", "fAB", "fBA")]
+KAPPA_RUN = [None]                               # set in main (or from a saved file)
+PAIRS = [(n, p) for n in (2, 3) for p in (("AB", "BA"), ("fAB", "fBA"))]
 
 
 # --------------------------------------------------------------- lattice
 class Slab(M.Lattice):
-    def __init__(self, n, L0, S):
+    def __init__(self, n, L0, S, kappa=None):
         super().__init__(n=n, N=S ** 3, q=3, shape=S)
         self.shape = (L0, S, S); self.N = L0 * S * S
+        if kappa is not None:
+            self.kappa = kappa
+            self.omega = 0.5 * (-kappa + np.sqrt(kappa ** 2 + 4 * (M.SQ5 + 2 * M.C * (1 - np.cos(M.K0)))))
 
     def packet3(self, amp=1e-3):
         c = np.indices(self.shape).astype(float)
@@ -67,7 +81,10 @@ class Slab(M.Lattice):
         ph = (M.K0 * (c[0] - X0)).reshape(-1)
         u = np.zeros((self.N, self.D)); v = np.zeros((self.N, self.D))
         u[:, 0], u[:, 1] = amp * env * np.cos(ph), amp * env * np.sin(ph)
-        v[:, 0], v[:, 1] = self.omega * u[:, 1], -self.omega * u[:, 0]
+        # every Fourier mode at its own chi-branch frequency (was: carrier omega)
+        psi = (u[:, 0] + 1j * u[:, 1]).reshape(self.shape)
+        dpsi = np.fft.ifftn(-1j * self.branch_omega() * np.fft.fftn(psi)).reshape(-1)
+        v[:, 0], v[:, 1] = dpsi.real, dpsi.imag
         return u, v
 
 
@@ -107,32 +124,43 @@ def no_wrap_check(L0, t, kappa):
 
 
 # --------------------------------------------------------------- one run
-def run_one(args):
-    n, job, L0, S = args
+def run_pair(args):
+    """Both runs of a pair in lockstep; read both at the first time BOTH have cleared."""
+    n, jobs, L0, S, kappa = args
     t0 = time.time()
-    lat = Slab(n, L0, S)
-    spec = spec_for(n, job)
-    W, Wm = M.make_links(lat, spec)
-    u, v = lat.packet3()
-    E0 = lat.energy(u, v)
-    t, seen = 0.0, False
+    st = []
+    for job in jobs:
+        lat = Slab(n, L0, S, kappa)
+        W, Wm = M.make_links(lat, spec_for(n, job))
+        u, v = lat.packet3()
+        st.append(dict(job=job, lat=lat, W=W, Wm=Wm, u=u, v=v, E0=lat.energy(u, v), seen=False))
+    t = 0.0
     while t < TMAX:
-        u, v, _ = lat.run(u, v, CHECK, W, Wm); t += CHECK
-        wins = windows(lat, u, v)
-        seen = seen or max(wins) > 1e-3
-        if seen and max(wins) < THR:
-            co, pur = lat.readout(u, v)
-            return dict(n=n, job=job, t=t, windows=wins, co=co.tolist(), pur=pur,
-                        Qt=M.transverse_Q(lat, u, v),
-                        drift=abs(lat.energy(u, v) - E0) / abs(E0),
-                        wall=time.time() - t0)
-    return dict(n=n, job=job, t=t, windows=windows(lat, u, v), error="never cleared",
-                wall=time.time() - t0)
+        t += CHECK
+        done = True
+        for r in st:
+            r["u"], r["v"], _ = r["lat"].run(r["u"], r["v"], CHECK, r["W"], r["Wm"])
+            r["wins"] = windows(r["lat"], r["u"], r["v"])
+            r["seen"] = r["seen"] or max(r["wins"]) > 1e-3
+            done &= r["seen"] and max(r["wins"]) < THR
+        if done:
+            out = []
+            for r in st:
+                lat, u, v = r["lat"], r["u"], r["v"]
+                co, pur = lat.readout(u, v)
+                _, pur_mode = lat.readout_modes(u, v)
+                out.append(dict(n=n, job=r["job"], t=t, windows=r["wins"], co=co.tolist(),
+                                pur=pur, pur_mode=pur_mode, Qt=M.transverse_Q(lat, u, v),
+                                drift=abs(lat.energy(u, v) - r["E0"]) / abs(r["E0"]),
+                                wall=(time.time() - t0) / len(st)))
+            return out
+    return [dict(n=n, job=r["job"], t=t, windows=r["wins"], error="never cleared",
+                 wall=(time.time() - t0) / len(st)) for r in st]
 
 
 # --------------------------------------------------------------- predictions
-def spectrum(n, L0, S):
-    lat = Slab(n, L0, S)
+def spectrum(n, L0, S, kappa=None):
+    lat = Slab(n, L0, S, kappa)
     u, v = lat.packet3()
     psi = (u[:, 0] + 1j * u[:, 1]).reshape(lat.shape)
     dps = (v[:, 0] + 1j * v[:, 1]).reshape(lat.shape)
@@ -174,7 +202,7 @@ def predict_averaged(spec_cache, n, segs, cut=1e-12):
 
 
 def predict_carrier(n, segs, Qt):
-    lat = M.Lattice(n=n, N=200)
+    lat = M.Lattice(n=n, N=200, kappa=KAPPA_RUN[0])
     psi0 = np.zeros(n, complex); psi0[0] = 1
     U = np.eye(n, dtype=complex)
     for axis, g in segs:
@@ -184,7 +212,7 @@ def predict_carrier(n, segs, Qt):
 
 def evaluate(runs, predictor, L0, S):
     by = {(r["n"], r["job"]): r for r in runs}
-    cache = {n: spectrum(n, L0, S) for n in (2, 3)} if predictor == "averaged" else None
+    cache = {n: spectrum(n, L0, S, KAPPA_RUN[0]) for n in (2, 3)} if predictor == "averaged" else None
     rows, ok = [], True
     for n in (2, 3):
         gA, gB = G[n]
@@ -219,21 +247,27 @@ def main():
     ap.add_argument("--predictor", choices=("averaged", "carrier"), default="averaged")
     ap.add_argument("--from-saved", default=None)
     ap.add_argument("--tag", default="", help="suffix for the output files (e.g. kstar)")
+    ap.add_argument("--kappa", type=float, default=None,
+                    help="gyroscopic ratio (default: model.py's KAPPA)")
     a = ap.parse_args()
 
     t0 = time.time()
     if a.from_saved:
         saved = json.load(open(os.path.join(HERE, a.from_saved)))
         runs, L0, S, sim_wall = saved["runs"], saved["L0"], saved["S"], saved["sim_wall"]
+        KAPPA_RUN[0] = saved.get("kappa", float(M.KAPPA))
     else:
         L0, S = a.L0, a.S
+        KAPPA_RUN[0] = float(M.KAPPA) if a.kappa is None else a.kappa
         with Pool(a.workers) as pool:
-            runs = pool.map(run_one, [(n, j, L0, S) for n, j in JOBS])
+            runs = [r for pr in pool.map(run_pair, [(n, p, L0, S, KAPPA_RUN[0]) for n, p in PAIRS])
+                    for r in pr]
         sim_wall = time.time() - t0
-        json.dump(dict(L0=L0, S=S, sim_wall=sim_wall, workers=a.workers, runs=runs),
+        json.dump(dict(L0=L0, S=S, kappa=KAPPA_RUN[0], sim_wall=sim_wall, workers=a.workers, runs=runs),
                   open(os.path.join(HERE, f"q3_gate_runs_{L0}x{S}{'_' + a.tag if a.tag else ''}.json"), "w"), indent=1)
 
-    print(f"q = 3 ORDERING GATE   lattice {L0} x {S} x {S}   predictor: {a.predictor}")
+    print(f"q = 3 ORDERING GATE   lattice {L0} x {S} x {S}   predictor: {a.predictor}   "
+          f"kappa {KAPPA_RUN[0]:.6f}")
     errs = [r for r in runs if "error" in r]
     if errs:
         for r in errs:
@@ -242,7 +276,11 @@ def main():
         print("  GATE: ERROR — readout not certified, no verdict")
         sys.exit(2)
     t_read = max(r["t"] for r in runs)
-    wrap_ok, wrap = no_wrap_check(L0, t_read, M.Lattice(n=2).kappa)
+    wrap_ok, wrap = no_wrap_check(L0, t_read, KAPPA_RUN[0])
+    for r in runs:
+        print(f"  u({r['n']}) {r['job']:<4} read at t = {r['t']:.0f}   windows "
+              f"{r['windows'][0]:.1e} / {r['windows'][1]:.1e}   purity {r['pur']:.5f} (carrier readout)"
+              + (f", {r['pur_mode']:.6f} (per-mode)" if 'pur_mode' in r else ""))
     print(f"  clearing: all windows < {THR:.0e}; readout t = "
           f"{min(r['t'] for r in runs):.0f}-{t_read:.0f}; max drift "
           f"{max(r['drift'] for r in runs):.1e}")

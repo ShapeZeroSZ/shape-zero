@@ -295,8 +295,19 @@ class Lattice:
         return (u + DT / 6 * (k1u + 2 * k2u + 2 * k3u + k4u),
                 v + DT / 6 * (k1v + 2 * k2v + 2 * k3v + k4v))
 
-    def packet(self, amp=1e-3, n0=20, width=8.0, colour=0):
-        """Localised positive-frequency packet on a q-dimensional base."""
+    def packet(self, amp=1e-3, n0=20, width=8.0, colour=0, per_mode=False):
+        """Localised positive-frequency packet on a q-dimensional base.
+
+        per_mode=True (used by gate 3 and ordering_test -- gates 7 and 8 -- since
+        2026-09-25): every Fourier mode is launched at its own chi-branch frequency,
+        w^2 + kappa w = Q(k), Q(k) = sqrt5 + 2c sum(1 - cos k), so the packet carries
+        no opposite-branch content. per_mode=False (the default, kept for the gates
+        that test node-level structure: the carrier launch is purely angular at
+        every site, a per-mode launch is not) is the CARRIER launch (every mode at
+        self.omega): it leaves off-branch content that makes the carrier-omega readout oscillate in time, and two runs
+        read at unequal times then differ although their dynamics commute (MODEL_SPEC
+        sec 4d.1, traps 6 and 7). The scalar-beta sector keeps the carrier launch
+        (its branch is not w^2 + kappa w = Q)."""
         if self.q == 1:
             x = np.arange(self.N)
             env = np.exp(-0.5 * ((x - n0) / width) ** 2)
@@ -318,9 +329,47 @@ class Lattice:
         ur, ui = amp * env * np.cos(ph), amp * env * np.sin(ph)
         u[:, 2 * colour] = ur
         u[:, 2 * colour + 1] = ui
-        v[:, 2 * colour] = self.omega * ui
-        v[:, 2 * colour + 1] = -self.omega * ur
+        if per_mode and not self.beta:
+            psi = (ur + 1j * ui).reshape(self.shape)
+            om = self.branch_omega()
+            dpsi = np.fft.ifftn(-1j * om * np.fft.fftn(psi)).reshape(-1)
+            v[:, 2 * colour] = dpsi.real
+            v[:, 2 * colour + 1] = dpsi.imag
+        else:
+            v[:, 2 * colour] = self.omega * ui
+            v[:, 2 * colour + 1] = -self.omega * ur
         return u, v
+
+    def branch_omega(self):
+        """chi-branch frequency of every Fourier mode of self.shape:
+        w^2 + kappa w = sqrt5 + 2c sum_a (1 - cos k_a)."""
+        k = np.meshgrid(*[2 * np.pi * np.fft.fftfreq(m) for m in self.shape],
+                        indexing="ij")
+        Qk = SQ5 + 2 * C * sum(1 - np.cos(ka) for ka in k)
+        return 0.5 * (-self.kappa + np.sqrt(self.kappa ** 2 + 4 * Qk))
+
+    def readout_modes(self, u, v):
+        """Per-mode chirality split -- a diagnostic, not used by the gates.
+
+        readout() splits chiralities with the single carrier frequency
+        (chi = psi + i dpsi / omega). Per Fourier mode the field is
+        a e^{-i w_a t} + b e^{+i w_b t}, w_a^2 + kappa w_a = Q, w_b = w_a + kappa, so
+            a = (w_b psi + i dpsi) / (w_a + w_b),  b = (w_a psi - i dpsi) / (w_a + w_b).
+        Returns (coords, purity) in readout()'s form, from sum_k a_k a_k^+ and
+        purity = 1 - |b| / |a|; both are constant in free evolution."""
+        wa = self.branch_omega()
+        wb = wa + self.kappa
+        ax = tuple(range(len(self.shape)))
+        psi = (u[:, 0::2] + 1j * u[:, 1::2]).reshape(self.shape + (self.n,))
+        dps = (v[:, 0::2] + 1j * v[:, 1::2]).reshape(self.shape + (self.n,))
+        P, D = np.fft.fftn(psi, axes=ax), np.fft.fftn(dps, axes=ax)
+        a = ((wb[..., None] * P + 1j * D) / (wa + wb)[..., None]).reshape(-1, self.n)
+        b = ((wa[..., None] * P - 1j * D) / (wa + wb)[..., None]).reshape(-1, self.n)
+        rs = a.T @ a.conj()
+        tr = np.real(np.trace(rs)) + 1e-30
+        co = np.array([np.real(np.trace(S @ rs)) / tr for S in self.G])
+        pur = float(np.clip(1 - np.linalg.norm(b) / (np.linalg.norm(a) + 1e-30), 0, 1))
+        return co, pur
 
     def readout(self, u, v):
         """Density matrix over the whole lattice; coords + chirality purity."""
@@ -475,7 +524,7 @@ def ordering_test(n, gA, gB, seg=(60, 80), T=180.0, q=1, side=None,
             ("AB", [(seg[0], a0, gA), (seg[1], a1, gB)], (1, 0)),
             ("BA", [(seg[0], a1, gB), (seg[1], a0, gA)], (0, 1))):
         W, Wm = make_links(lat, spec)
-        u, v = lat.packet(width=width, n0=n0)
+        u, v = lat.packet(width=width, n0=n0, per_mode=True)
         u, v, drift = lat.run(u, v, T, W, Wm)
         co, pur = lat.readout(u, v)
         Qt = transverse_Q(lat, u, v)
@@ -612,7 +661,7 @@ def main():
 
     # ---- 3 complex structure -------------------------------------------
     lat = Lattice(n=2)
-    u, v = lat.packet()
+    u, v = lat.packet(per_mode=True)
     u, v, drift = lat.run(u, v, T=60.0)
     _, pur = lat.readout(u, v)
     if not gate(3, "complex structure selected", pur > 0.95,

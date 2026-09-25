@@ -1,0 +1,91 @@
+============================================================================================
+q = 3 ABELIAN FLOOR PROBE -- q3_gate geometry 260 x 8 x 8
+============================================================================================
+
+  u(2)  launch carrier  kappa 0.9717
+     fAB: co(t) spread about its mean: max 0.0658 deg, rms 0.0264; purity 0.94317-0.95090
+     fBA: co(t) spread about its mean: max 0.0658 deg, rms 0.0264; purity 0.94317-0.95090
+     floor at EQUAL times, whole lattice: max 0.00001  median 0.00001 deg
+     floor at EQUAL times, forward region: max 0.00002  median 0.00002 deg
+     floor at UNEQUAL times (all pairs): median 0.0276  max 0.1260 deg
+        t   windows fAB            windows fBA            w_back fAB/fBA       floor(t,t)  fwd-only
+       340   3.0e-07 1.6e-06   2.3e-07 1.7e-06   1.9e-07 4.0e-07   0.00001    0.00002
+       345   3.0e-07 1.4e-06   2.2e-07 1.5e-06   1.8e-07 3.8e-07   0.00001    0.00002
+       350   2.9e-07 1.2e-06   2.2e-07 1.3e-06   1.7e-07 3.5e-07   0.00001    0.00001
+       355   2.8e-07 1.1e-06   2.0e-07 1.2e-06   1.7e-07 3.5e-07   0.00001    0.00002
+       357   2.9e-07 9.7e-07   2.0e-07 1.1e-06   1.6e-07 3.3e-07   0.00001    0.00001
+       360   2.7e-07 9.5e-07   1.9e-07 1.1e-06   1.6e-07 3.3e-07   0.00001    0.00002
+       363   2.8e-07 8.3e-07   1.8e-07 9.6e-07   1.5e-07 3.1e-07   0.00001    0.00002
+       366   2.7e-07 8.0e-07   1.8e-07 9.4e-07   1.4e-07 3.1e-07   0.00001    0.00002
+       370   2.7e-07 7.4e-07   1.7e-07 8.4e-07   1.4e-07 3.0e-07   0.00001    0.00002
+     q3_gate's readout pair (fAB t = 357, fBA t = 363): 0.0659 deg (gate reported 0.066)
+
+  u(3)  launch carrier  kappa 0.9717
+     fAB: co(t) spread about its mean: max 0.0822 deg, rms 0.0344; purity 0.94489-0.94939
+     fBA: co(t) spread about its mean: max 0.0822 deg, rms 0.0344; purity 0.94489-0.94939
+     floor at EQUAL times, whole lattice: max 0.00001  median 0.00000 deg
+     floor at EQUAL times, forward region: max 0.00004  median 0.00002 deg
+     floor at UNEQUAL times (all pairs): median 0.0360  max 0.1530 deg
+        t   windows fAB            windows fBA            w_back fAB/fBA       floor(t,t)  fwd-only
+       340   4.2e-07 1.5e-06   4.0e-07 1.6e-06   3.8e-07 7.9e-07   0.00000    0.00002
+       345   4.2e-07 1.3e-06   3.9e-07 1.4e-06   3.6e-07 7.3e-07   0.00000    0.00002
+       350   4.2e-07 1.1e-06   3.7e-07 1.2e-06   3.5e-07 6.6e-07   0.00000    0.00002
+       355   4.2e-07 1.0e-06   3.5e-07 1.1e-06   3.4e-07 6.4e-07   0.00000    0.00001
+       357   3.8e-07 1.0e-06   3.3e-07 1.1e-06   3.3e-07 6.2e-07   0.00000    0.00002
+       360   4.1e-07 9.4e-07   3.2e-07 1.0e-06   3.1e-07 6.0e-07   0.00000    0.00002
+       363   4.0e-07 9.0e-07   3.1e-07 9.7e-07   3.0e-07 5.8e-07   0.00000    0.00001
+       366   3.9e-07 8.2e-07   3.0e-07 8.8e-07   2.9e-07 5.6e-07   0.00001    0.00001
+       370   4.0e-07 7.5e-07   3.0e-07 8.3e-07   2.7e-07 5.3e-07   0.00001    0.00001
+     q3_gate's readout pair (fAB t = 359, fBA t = 361): 0.0301 deg (gate reported 0.03)
+
+  u(2)  launch pure  kappa 0.9717
+     fAB: co(t) spread about its mean: max 0.0000 deg, rms 0.0000; purity 0.96216-0.96216
+     fBA: co(t) spread about its mean: max 0.0000 deg, rms 0.0000; purity 0.96216-0.96216
+     floor at EQUAL times, whole lattice: max 0.00001  median 0.00001 deg
+     floor at EQUAL times, forward region: max 0.00002  median 0.00002 deg
+     floor at UNEQUAL times (all pairs): median 0.0000  max 0.0001 deg
+        t   windows fAB            windows fBA            w_back fAB/fBA       floor(t,t)  fwd-only
+       340   2.9e-07 1.9e-06   2.5e-07 2.0e-06   2.2e-07 4.7e-07   0.00001    0.00002
+       345   2.8e-07 1.6e-06   2.4e-07 1.7e-06   2.1e-07 4.4e-07   0.00001    0.00002
+       350   2.7e-07 1.4e-06   2.3e-07 1.5e-06   2.0e-07 4.1e-07   0.00001    0.00001
+       355   2.7e-07 1.2e-06   2.1e-07 1.3e-06   1.9e-07 4.0e-07   0.00001    0.00002
+       357   2.8e-07 1.1e-06   2.1e-07 1.3e-06   1.9e-07 3.9e-07   0.00001    0.00001
+       360   2.6e-07 1.1e-06   2.0e-07 1.2e-06   1.8e-07 3.8e-07   0.00001    0.00002
+       363   2.7e-07 9.5e-07   1.9e-07 1.1e-06   1.7e-07 3.7e-07   0.00001    0.00002
+       366   2.6e-07 9.2e-07   1.9e-07 1.0e-06   1.7e-07 3.6e-07   0.00001    0.00002
+       370   2.6e-07 8.5e-07   1.7e-07 9.3e-07   1.6e-07 3.4e-07   0.00001    0.00002
+
+  u(3)  launch pure  kappa 0.9717
+     fAB: co(t) spread about its mean: max 0.0000 deg, rms 0.0000; purity 0.96215-0.96216
+     fBA: co(t) spread about its mean: max 0.0000 deg, rms 0.0000; purity 0.96215-0.96216
+     floor at EQUAL times, whole lattice: max 0.00001  median 0.00000 deg
+     floor at EQUAL times, forward region: max 0.00004  median 0.00002 deg
+     floor at UNEQUAL times (all pairs): median 0.0000  max 0.0000 deg
+        t   windows fAB            windows fBA            w_back fAB/fBA       floor(t,t)  fwd-only
+       340   4.1e-07 1.7e-06   4.2e-07 1.8e-06   4.4e-07 9.3e-07   0.00000    0.00003
+       345   4.0e-07 1.5e-06   4.1e-07 1.6e-06   4.2e-07 8.5e-07   0.00000    0.00002
+       350   4.0e-07 1.3e-06   3.9e-07 1.4e-06   4.0e-07 7.8e-07   0.00000    0.00002
+       355   4.0e-07 1.2e-06   3.6e-07 1.2e-06   3.9e-07 7.5e-07   0.00000    0.00002
+       357   3.6e-07 1.1e-06   3.4e-07 1.2e-06   3.8e-07 7.3e-07   0.00000    0.00002
+       360   3.9e-07 1.0e-06   3.3e-07 1.1e-06   3.6e-07 7.0e-07   0.00000    0.00002
+       363   3.7e-07 1.0e-06   3.2e-07 1.1e-06   3.5e-07 6.8e-07   0.00000    0.00002
+       366   3.6e-07 9.1e-07   3.1e-07 9.7e-07   3.4e-07 6.6e-07   0.00001    0.00001
+       370   3.8e-07 8.3e-07   3.0e-07 9.0e-07   3.1e-07 6.2e-07   0.00001    0.00001
+
+  u(2)  launch carrier  kappa 0.5
+     fAB: co(t) spread about its mean: max 0.0197 deg, rms 0.0108; purity 0.95024-0.95324
+     fBA: co(t) spread about its mean: max 0.0197 deg, rms 0.0108; purity 0.95024-0.95324
+     floor at EQUAL times, whole lattice: max 0.00003  median 0.00003 deg
+     floor at EQUAL times, forward region: max 0.00003  median 0.00003 deg
+     floor at UNEQUAL times (all pairs): median 0.0129  max 0.0359 deg
+        t   windows fAB            windows fBA            w_back fAB/fBA       floor(t,t)  fwd-only
+       340   6.2e-08 1.2e-06   1.4e-07 1.2e-06   2.1e-07 4.6e-07   0.00003    0.00003
+       345   5.6e-08 1.0e-06   1.3e-07 1.0e-06   2.0e-07 4.2e-07   0.00003    0.00003
+       350   5.1e-08 8.8e-07   1.2e-07 8.9e-07   1.9e-07 4.1e-07   0.00003    0.00003
+       355   4.7e-08 7.6e-07   1.1e-07 7.7e-07   1.8e-07 3.9e-07   0.00003    0.00003
+       357   4.5e-08 7.2e-07   1.0e-07 7.2e-07   1.7e-07 3.8e-07   0.00003    0.00003
+       360   4.2e-08 6.7e-07   9.5e-08 6.7e-07   1.6e-07 3.7e-07   0.00003    0.00003
+       363   4.0e-08 6.2e-07   9.2e-08 6.2e-07   1.5e-07 3.5e-07   0.00003    0.00003
+       366   3.7e-08 5.9e-07   8.6e-08 5.9e-07   1.5e-07 3.4e-07   0.00003    0.00003
+       370   3.5e-08 6.0e-07   8.0e-08 6.1e-07   1.4e-07 3.3e-07   0.00003    0.00003
+     kappa = 0.5 at the gate's equal-time pair (346, 346): 0.00003; at (346, 352): 0.0297 deg

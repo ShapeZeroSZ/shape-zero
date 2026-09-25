@@ -1178,6 +1178,9 @@ current `model.py` prints at κ = 0.5 (117.92 / 118.29). Both open (MODEL_SPEC �
 [The second is resolved: the entry is the platform benchmark `phi_gauge_u3_working.py`,
 which reproduces 65.1166 / 64.9712 exactly; §6b had labelled it as `model.py`'s gate 7.
 Label corrected 2026-09-25.]
+[The first is resolved too: a readout-timing artefact (carrier launch + unequal
+readout times), found by `q3_floor_probe.py` with hypotheses committed first; fixed in
+`q3_gate.py` and `model.py` gates 3, 7, 8; floor 0.000° at both κ (MODEL_SPEC §4d.1).]
 Also: `model.py` must be run from `04_scripts/session/` — run from elsewhere, gate 11
 cannot find `d16_spectrum_v2.py` and FAILs (seen once in this re-run; re-run from
 the right directory, it passes).

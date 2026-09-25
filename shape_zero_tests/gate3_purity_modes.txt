@@ -1,0 +1,10 @@
+gate 3 setup: n = 2, q = 1, N = 200, width 8; purity 1 - |bar|/|chi|
+   kappa      launch     t     carrier readout   per-mode readout
+   0.500000   carrier      0     1.00000           0.98967
+   0.500000   carrier     60     0.98342           0.98966
+   0.500000   per-mode     0     0.98829           1.00000
+   0.500000   per-mode    60     0.98829           0.99982
+   0.971737   carrier      0     1.00000           0.99007
+   0.971737   carrier     60     0.98179           0.99006
+   0.971737   per-mode     0     0.98715           1.00000
+   0.971737   per-mode    60     0.98714           0.99958

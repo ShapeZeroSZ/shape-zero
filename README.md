@@ -37,6 +37,8 @@ that, so together they machine-verify C1 Theorem 3.6 ("Roles Force Fano").
 
 - **Non-commuting gauge ordering** matches its independent prediction to
   0.2–0.45° on a one-dimensional base and 0.10–0.18° on a three-dimensional base
+  [0.001–0.005° since 2026-09-25, with each Fourier mode launched at its own
+  frequency and each pair of runs read at one time; MODEL_SPEC §3, §4d.1]
   (the latter a standing gate, `q3_gate.py`, shown to fail against a wrong
   prediction). Commuting segments give exactly zero, as the algebra requires.
 - **J-compatibility is enforced by the dynamics for long wavelengths.** A

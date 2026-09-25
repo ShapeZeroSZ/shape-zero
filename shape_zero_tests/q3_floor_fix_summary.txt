@@ -1,0 +1,47 @@
+============================================================================================
+q3_gate.py (260 x 8 x 8, spectrum-averaged predictor)
+============================================================================================
+
+  kappa = 0.5
+   u(2) readout times   before {'AB': 345.0, 'BA': 346.0, 'fAB': 346.0, 'fBA': 346.0}
+                       after  {'AB': 352.0, 'BA': 352.0, 'fAB': 352.0, 'fBA': 352.0}
+   u(2) Abelian floor   0.0000 -> 0.0000 deg
+   u(2) split meas/pred 105.48 / 105.35 -> 106.33 / 106.33   (error 0.125 -> 0.003 deg)
+   u(2) per-order AB/BA 0.143 / 0.140 -> 0.001 / 0.001 deg
+   u(2) purity (carrier readout) 0.95100-0.95322 -> 0.96555-0.96555;  per-mode readout after: 0.999902-0.999905
+   u(3) readout times   before {'AB': 335.0, 'BA': 337.0, 'fAB': 341.0, 'fBA': 341.0}
+                       after  {'AB': 342.0, 'BA': 342.0, 'fAB': 347.0, 'fBA': 347.0}
+   u(3) Abelian floor   0.0000 -> 0.0000 deg
+   u(3) split meas/pred 62.31 / 62.48 -> 60.89 / 60.89   (error 0.175 -> 0.001 deg)
+   u(3) per-order AB/BA 0.104 / 0.107 -> 0.005 / 0.005 deg
+   u(3) purity (carrier readout) 0.95130-0.95181 -> 0.96555-0.96555;  per-mode readout after: 0.999907-0.999907
+
+  kappa = kappa*
+   u(2) readout times   before {'AB': 358.0, 'BA': 358.0, 'fAB': 357.0, 'fBA': 363.0}
+                       after  {'AB': 365.0, 'BA': 365.0, 'fAB': 368.0, 'fBA': 368.0}
+   u(2) Abelian floor   0.0659 -> 0.0000 deg
+   u(2) split meas/pred 99.88 / 99.98 -> 99.58 / 99.58   (error 0.101 -> 0.001 deg)
+   u(2) per-order AB/BA 0.311 / 0.222 -> 0.001 / 0.001 deg
+   u(2) purity (carrier readout) 0.94507-0.94922 -> 0.96216-0.96216;  per-mode readout after: 0.998832-0.998893
+   u(3) readout times   before {'AB': 350.0, 'BA': 351.0, 'fAB': 359.0, 'fBA': 361.0}
+                       after  {'AB': 356.0, 'BA': 356.0, 'fAB': 365.0, 'fBA': 365.0}
+   u(3) Abelian floor   0.0301 -> 0.0000 deg
+   u(3) split meas/pred 94.76 / 95.00 -> 94.09 / 94.10   (error 0.242 -> 0.003 deg)
+   u(3) per-order AB/BA 0.202 / 0.240 -> 0.004 / 0.004 deg
+   u(3) purity (carrier readout) 0.94592-0.94811 -> 0.96215-0.96217;  per-mode readout after: 0.998721-0.998914
+
+============================================================================================
+model.py gates 3, 7, 8 (carrier launch -> per-mode launch)
+============================================================================================
+
+  kappa = 0.5
+   gate 3 chirality purity   0.9834 -> 0.9883
+   gate 7 u(2) split / pred / per-order / floor   101.12 / 100.80 / 0.29, 0.17 / 0.016  ->  101.20 / 100.80 / 0.26, 0.16 / 0.017
+   gate 7 u(3) split / pred / per-order / floor   117.92 / 118.29 / 0.44, 0.29 / 0.014  ->  117.86 / 118.29 / 0.42, 0.26 / 0.014
+   gate 8 Abelian control    0.0164 -> 0.0169 deg
+
+  kappa = kappa*
+   gate 3 chirality purity   0.9818 -> 0.9871
+   gate 7 u(2) split / pred / per-order / floor   98.74 / 98.26 / 0.27, 0.23 / 0.049  ->  98.69 / 98.26 / 0.25, 0.20 / 0.050
+   gate 7 u(3) split / pred / per-order / floor   106.86 / 107.15 / 0.43, 0.33 / 0.043  ->  106.98 / 107.15 / 0.43, 0.28 / 0.044
+   gate 8 Abelian control    0.0487 -> 0.0498 deg

@@ -386,11 +386,53 @@ and the operating point κ = κ\*.**
 - **Two findings from the re-run, open (§9).** (1) The **q = 3 Abelian floor is not
   exactly 0 at κ\***: 0.066° (u(2)) and 0.030° (u(3)) under clearing readout, inside the
   0.5° tolerance but unlike the 0.000° at κ = 0.5; the cause is not investigated.
+  [**RESOLVED 2026-09-25 — a readout-timing artefact, not physics:** a carrier launch (every Fourier mode at the carrier ω) leaves off-branch content that makes the carrier-ω readout oscillate in time — up to 0.066° (u(2)) and 0.082° (u(3)) within one run at κ\* — and the two floor runs were read at unequal clearing times (357 / 363 and 359 / 361). Read at
+  equal times the floor was 0.00001° at both κ (`shape_zero_tests/q3_floor_probe.py`,
+  hypotheses committed first). κ = 0.5's exact zero came from reading both floor runs at
+  the same time **by coincidence** (346 / 346, 341 / 341). Fixed in `q3_gate.py` (per-mode
+  launch; each pair read at one common time) and in `model.py` gates 3, 7, 8 (per-mode
+  launch); values below.]
   (2) A **pre-existing mismatch**, found while re-running: §6b's gate-7 u(3) entry
   (65.1166 measured, 64.9712 predicted) is not what the current `model.py` printed
   at κ = 0.5 (117.92 / 118.29, `shape_zero_tests/jcompat_gates_k0.5.txt`); not resolved
   here. [**Resolved 2026-09-25:** the entry is the platform benchmark
   `phi_gauge_u3_working.py`, mislabelled as gate 7; the label is corrected in §6b.]
+- **After the readout fixes (2026-09-25)** — `q3_gate.py` launches every Fourier mode at
+  its own ω(k) and reads both runs of a pair at one common time; `model.py`'s gate 3 and
+  `ordering_test` (gates 7, 8) use the per-mode launch (`packet(per_mode=True)`; the
+  default stays the carrier launch, which gates 2, 9–11 need because it is purely angular
+  at every site). The κ\* column above for these rows is **superseded by the readout fix**
+  (`shape_zero_tests/q3_floor_fix_summary.py` → `q3_floor_fix_summary.txt`):
+
+  | result | κ = 0.5, before → after | κ\*, before → after |
+  |---|---|---|
+  | `q3_gate` u(2) Abelian floor | 0.000° → **0.000°** | 0.066° → **0.000°** |
+  | `q3_gate` u(3) Abelian floor | 0.000° → **0.000°** | 0.030° → **0.000°** |
+  | `q3_gate` u(2) split meas / pred (error) | 105.48 / 105.35 (0.125°) → **106.33 / 106.33 (0.003°)** | 99.88 / 99.98 (0.101°) → **99.58 / 99.58 (0.001°)** |
+  | `q3_gate` u(3) split meas / pred (error) | 62.31 / 62.48 (0.175°) → **60.89 / 60.89 (0.001°)** | 94.76 / 95.00 (0.242°) → **94.09 / 94.10 (0.003°)** |
+  | `q3_gate` u(2) per-order AB / BA | 0.143 / 0.140° → **0.001 / 0.001°** | 0.311 / 0.222° → **0.001 / 0.001°** |
+  | `q3_gate` u(3) per-order AB / BA | 0.104 / 0.107° → **0.005 / 0.005°** | 0.202 / 0.240° → **0.004 / 0.004°** |
+  | `q3_gate` purity, carrier readout | 0.951–0.953 → **0.96555** | 0.945–0.949 → **0.96216** |
+  | `q3_gate` purity, per-mode readout (new) | — → **0.99990** | — → **0.9987–0.9989** |
+  | `q3_gate` carrier predictor (built to fail) | FAIL → **FAIL** (split errors 5.53°, 4.09°) | FAIL → **FAIL** (1.32°, 8.42°) |
+  | gate 3 chirality purity (carrier readout) | 0.9834 → **0.9883** | 0.9818 → **0.9871** |
+  | gate 7 u(2) split / pred; per-order; floor | 101.12 / 100.80; 0.29 / 0.17°; 0.016° → **101.20 / 100.80; 0.26 / 0.16°; 0.017°** | 98.74 / 98.26; 0.27 / 0.23°; 0.049° → **98.69 / 98.26; 0.25 / 0.20°; 0.050°** |
+  | gate 7 u(3) split / pred; per-order; floor | 117.92 / 118.29; 0.44 / 0.29°; 0.014° → **117.86 / 118.29; 0.42 / 0.26°; 0.014°** | 106.86 / 107.15; 0.43 / 0.33°; 0.043° → **106.98 / 107.15; 0.43 / 0.28°; 0.044°** |
+  | gate 8 Abelian control | 0.0164° → **0.0169°** | 0.0487° → **0.0498°** |
+
+  All gates pass at both κ; `q3_gate` now matches its prediction to 0.001–0.005° (was
+  0.10–0.31°). Gates 1, 2, 4–6, 9–11 are unchanged. `model.py`'s q = 1 gate-7 floor
+  (~0.05° at κ\*) is trap 6, not the launch: it reads at a fixed T = 180 with the tail in
+  the window, and is 0.00004° under clearing (`gate7_readout.py`).
+  **Purity:** `readout()` splits chiralities with the carrier ω, so part of every
+  "purity" it reports is the readout's own. Per mode the field is a e^{−iω_a t} +
+  b e^{+iω_b t} (ω_b = ω_a + κ); `Lattice.readout_modes` splits it exactly. In gate 3's
+  setup (`shape_zero_tests/gate3_purity_modes.py`): the carrier launch reads 1.00000 at
+  t = 0 and 0.98342 / 0.98179 (κ = 0.5 / κ\*) at t = 60 on the carrier readout, but a
+  constant **0.9897 / 0.9901 per mode** — its true off-branch content; the per-mode launch
+  reads **1.00000 per mode** at t = 0 and 0.99982 / 0.99958 at t = 60 (in free
+  evolution too, so not from the segments — plausibly the u² term, not investigated),
+  and 0.98829 / 0.98715 on the carrier readout, constant in time.
 - **Not re-run:** the platform benchmarks at κ = 0.5 (`04_scripts/platform/`: the u(2)
   59.86° / 59.84° and u(3) 65.12° / 64.97° orderings, `INPUT_LEDGER.md` §3), and
   `grid.py`, `checks.py`, `resid.py` (§4, §5 of `shape_zero_tests/README.md`). They
@@ -1132,7 +1174,12 @@ window holds < 10⁻⁶ of the weight:
 | u(3) | **clearing** | < 10⁻⁶ | 60.54° | 64.97° | **4.43°** | **0.000°** | **5.21° / 5.23°** |
 
 **The Abelian floor is exactly 0 at q = 3**, as the algebra requires [at κ = 0.5; at
-the operating point κ\* `q3_gate.py` reads 0.066° / 0.030° — open, §9]; ~1° was the
+the operating point κ\* `q3_gate.py` reads 0.066° / 0.030° — open, §9] [**RESTORED
+2026-09-25: exactly 0 at q = 3, at κ\* as at κ = 0.5** — `q3_gate.py` reads 0.000° for u(2)
+and u(3) at both. The 0.066° / 0.030° was a readout-timing artefact: a carrier launch (every Fourier mode at the carrier ω) leaves off-branch content that makes the carrier-ω readout oscillate in time — up to 0.066° (u(2)) and 0.082° (u(3)) within one run at κ\* — and the two floor runs were read at unequal clearing times (357 / 363 and 359 / 361).
+κ = 0.5's exact zero came from reading both floor runs at the same time by
+coincidence. `q3_gate.py` now launches per mode and reads each pair at one time; §3,
+"ADOPTED", and §4d.1]; ~1° was the
 packet read mid-exit. Unequal strengths change *when* a packet arrives, not its
 final internal state. **The centroid readout's good agreement (u(3): 0.06°) was a
 coincidence of mid-exit timing.** A single segment misses its prediction by
@@ -1161,7 +1208,10 @@ simulations rerun; the single-wavenumber column reproduces the old errors exactl
 | **u(3) split** | 60.54° | 4.43° (pred 64.97°) | **0.17°** (pred 60.71°) |
 
 [The tables in this subsection are at κ = 0.5 — superseded by the change of operating point (2026-09-25), not retracted. `q3_gate.py` at κ\*:
-u(2) 99.88 / 99.98°, u(3) 94.76 / 95.00° — §3, "ADOPTED".]
+u(2) 99.88 / 99.98°, u(3) 94.76 / 95.00° — §3, "ADOPTED".] [After the readout fix
+(per-mode launch, one readout time per pair): u(2) 99.58 / 99.58°, u(3) 94.09 / 94.10° at
+κ\*; 106.33 / 106.33° and 60.89 / 60.89° at κ = 0.5; per-order ≤ 0.005°, floors 0.000° —
+the spectrum-averaged prediction now agrees to 0.001–0.005°, not 0.04–0.17°.]
 
 Retained weight: all but 5×10⁻¹¹. **The product U_B·U_A works when taken mode by
 mode.** It fails as a single-carrier product because a 3-D packet this localised
@@ -1312,6 +1362,18 @@ not. It is invisible at second order — the linear launch gives the right A →
 coefficient — and appears only when the amplitude dependence is read. A run launched
 on the exact wave (`kappa_pw4_seed.py`) has a zero error bar; a launch-dependent one
 shows the free oscillations as a weighted-versus-unweighted fit disagreement.
+
+**Traps 6 and 7 combined (2026-09-25): the q = 3 Abelian floor at κ\*.** A carrier launch
+(every Fourier mode given the carrier frequency — trap 7's kind of preparation error)
+leaves off-branch content, which makes the carrier-ω readout oscillate in time by up to
+0.07–0.08°; the clearing certificate (trap 6's kind of check) then reads each run at
+its *own* clearing time, so two runs whose dynamics commute were compared at unequal
+times (357 / 363) and differed by 0.066°. Either fix alone removes it: read both runs
+at one time (floor 0.00001°), or launch each mode at its own ω(k) (readout constant,
+floor ~0 at any times). κ = 0.5's 0.000° was the same instrument read at equal times
+by coincidence — the pattern of the first five traps, an exactly-zero number from
+configurations that should not have been trusted to give one. `q3_gate.py` now does
+both.
 
 ---
 
@@ -2143,7 +2205,7 @@ three scripts with three node types. Run it:
 | 6 κ and the β-collapse | **κ = 0.0798 ± 0.00089** across a tenfold β range — RETRACTED (swapped seeding, §5); corrected −0.0184 ± 0.00033 |
 | 7 u(2) ordering | sim-vs-pred **0.285°, 0.165°**; splitting 101.12 measured, 100.80 predicted |
 | 7 u(3) ordering | sim-vs-pred **0.615°, 0.566°**; splitting **65.1166** measured, **64.9712** predicted [**LABEL CORRECTED 2026-09-25:** these numbers are the **platform benchmark** `04_scripts/platform/phi_gauge_u3_working.py` (κ = 0.5, N = 200, segments 60/80, equal strengths 0.15), which reproduces them exactly (`shape_zero_tests/phi_gauge_u3_working_output.txt`: 0.6147°, 0.5658°, 65.1166°, 64.9712°) — **not `model.py`'s gate 7**, whose u(3) line at κ = 0.5 was split 117.92° measured, 118.29° predicted, per-order 0.44° / 0.29° (`shape_zero_tests/jcompat_gates_k0.5.txt`)] |
-| 8 Abelian control | **0.0169°** where theory says 0 |
+| 8 Abelian control | **0.0169°** where theory says 0 [**LABEL CORRECTED 2026-09-25:** 0.0169° is the **platform script's** Abelian control (`04_scripts/platform/phi_gauge_u3_working.py`, "run-vs-run splitting", u(3), κ = 0.5), not `model.py`'s gate 8, which read **0.0164°** at κ = 0.5 with the carrier launch (`shape_zero_tests/jcompat_gates_k0.5.txt`). With the per-mode launch now in gate 8, `model.py` reads 0.0169° at κ = 0.5 — equal to the platform's by coincidence — and 0.0498° at κ\*] |
 | residual sector | present, C_r = 0 by default, inert to 4.5×10⁻¹⁹ |
 
 [The gate values above are at κ = 0.5 — superseded by the change of operating point (2026-09-25), not retracted. At κ\* (`model.py`
@@ -2152,7 +2214,9 @@ u(3) 106.86 / 107.15; gate 8 0.0487° (`shape_zero_tests/model_gates_kstar.txt`;
 table in §3, "ADOPTED"). The u(3) row's 65.1166 / 64.9712 does not match the current
 `model.py` even at κ = 0.5 (117.92 / 118.29) — a pre-existing mismatch, §9.]
 [Resolved 2026-09-25: the u(3) row is the platform benchmark, mislabelled — see the
-row.]
+row.] [After the per-mode launch (2026-09-25), `model.py` at κ\*: purity 0.9871; gate 7
+u(2) 98.69 / 98.26, u(3) 106.98 / 107.15; gate 8 0.0498° (`shape_zero_tests/
+model_gates_kstar_v2.txt`). The gate 8 row is also the platform's value — see the row.]
 
 **One script now reproduces every verified result the programme has** — u(1),
 u(2), u(3), the pinned asymmetry, κ, the β-collapse, both ordering splittings and
@@ -2282,7 +2346,7 @@ established — see §7b.*
 | ~~beam fourth order with orbit-consistent launches~~ **DONE 2026-09-25** (§5): launch pieces derived, H0 and S1 excluded; the original entry: | the beam fourth-order tests (H0 excluded at large fill; S1 against S2 unresolved) used plain-cosine launches, so they mix physics with launch effects. Redo them with orbit-consistent (second-order) launches (`kappa_seed2_test.py`), derive the beam's fourth-order kernel, and derive the launch's static-shift and second-harmonic pieces, which are measured, not derived (§5) |
 | ~~S2 at w = 3, L = 4, and why the cross terms cancel~~ **SUPERSEDED 2026-09-25** (§5): with the third harmonic in the launch S2 fails three of four L = 4 beams, and the cross terms are partly present; the original entry: | two things: (1) test S2 at w = 3, L = 4 with the third harmonic added to the launch — S2 failed that beam by +18σ under the committed criterion and fits it only under a post-hoc third-harmonic band; (2) derive why the fourth-order cross terms cancel, leaving only the box-wide component's own term (S2 is a surviving hypothesis, not a derivation) |
 | ~~which J-compatibility bound applies at q = 3~~ **RESOLVED 2026-09-25** (§3, "ADOPTED"): 0.972 — the model's slab segments conserve transverse momentum (code and `jcompat_q3.py`); a finite-width segment would need 2.091. The original entry: | κ ≥ 0.972 if the coupling segments conserve transverse momentum, κ ≥ 2.091 if not — decides the candidate floor on κ at the model's own dimension |
-| **the q = 3 Abelian floor at κ\*** | `q3_gate.py` at the operating point κ\* reads 0.066° (u(2)) and 0.030° (u(3)) under clearing readout, not 0.000° as at κ = 0.5 — inside tolerance, cause not investigated; blocks the claim "exactly 0 at q = 3" at the current operating point (§3, "ADOPTED"; §4d) |
+| ~~the q = 3 Abelian floor at κ\*~~ **RESOLVED 2026-09-25** (§3, "ADOPTED"; §4d; §4d.1): a readout-timing artefact — a carrier launch leaves off-branch content that makes the readout oscillate, and the two runs were read at unequal times; κ = 0.5's zero was equal-time reading by coincidence. With a per-mode launch and one readout time per pair the floor is 0.000° at both κ, and "exactly 0 at q = 3" is restored. The original entry: | `q3_gate.py` at the operating point κ\* reads 0.066° (u(2)) and 0.030° (u(3)) under clearing readout, not 0.000° as at κ = 0.5 — inside tolerance, cause not investigated; blocks the claim "exactly 0 at q = 3" at the current operating point (§3, "ADOPTED"; §4d) |
 | ~~§6b's gate-7 u(3) entry~~ **RESOLVED 2026-09-25**: it is the platform benchmark `phi_gauge_u3_working.py` (reproduced exactly), mislabelled as `model.py`'s gate 7; label corrected in §6b. The original entry: | 65.1166 / 64.9712 is not reproduced by the current `model.py` at κ = 0.5 (117.92 / 118.29); pre-existing, found in the κ\* re-run — which configuration produced it is unrecorded |
 | **the exact value of κ** | only the floor κ ≥ κ\* is derived; the value is a genuine parameter, fixed by the Larmor measurement (`INPUT_LEDGER.md` §3.1); `model.py`'s κ = κ\* is a chosen operating point |
 | **the beam's fourth-order cross kernel** | derive it — every fourth-order cross term between a beam's transverse components, on the lattice — with the measured r values as the target: 0.351/0.350 (w = 1.5), 0.547/0.549 (w = 2), 0.750/0.758 (w = 3) at L = 4, A = 0.30/0.40, which lie 0.33, 0.50, 0.68 of the way from the self-only limit S2 to the all-terms limit S1 (§5, measured with the third-harmonic launch, `kappa4_orbit3_launch.py`) |
