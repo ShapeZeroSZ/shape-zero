@@ -1,0 +1,21 @@
+==============================================================================
+PARAMETER CLASSIFICATION -- derived plane-wave kappa, k = pi/2
+==============================================================================
+
+  kappa against the elastic coupling c (beta = 0.05):
+     c      c/sqrt5    W(+K)       kappa2       kappa4
+    0.5    0.224    1.82408    -0.026389    -0.005215
+    1.0    0.447    2.10878    -0.017480    -0.002947
+    2.0    0.894    2.59921    -0.009316    -0.001214
+
+  kappa against the lattice gyroscopic coupling beta (c = 1):
+     beta     kappa2       relative to beta = 0.05
+     0.05    -0.017480    +0.00%
+     0.02    -0.017448    -0.18%
+     0.10    -0.017595    +0.66%
+     0.20    -0.018071    +3.38%
+
+  reading: kappa depends on c (c/sqrt5 is a physical ratio); kappa is
+  beta-independent at leading order only -- an O(beta^2) drift of a few
+  percent over beta = 0.02-0.20, inside the measured beta-sweep's spread
+  (|D/D0| = 0.998339, 0.998316, 0.998390, 0.998316; MODEL_SPEC §5).

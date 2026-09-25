@@ -229,3 +229,33 @@ This extends the rule `PROVENANCE.md` §6d already states — "compute the facto
 from a stated rule *before* comparing to the target" — from a principle to a
 procedure, the same one used for the κ and F predictions in `MODEL_SPEC.md` §5
 (predictions committed before comparison, with their commit hashes).
+
+---
+
+## 6. The genuine parameters — what a complete derivation must fix
+
+From the kind column of `INPUT_LEDGER.md` §2d (added 2026-09-25). These are the
+numbers the physics depends on and no principle fixes; a complete derivation must
+fix each of them, or record it as an input.
+
+**Kind 3 — genuine:**
+1. **c/√5** — the elastic coupling relative to the well stiffness (§2d #6); the
+   derived κ₂ moves from −0.026389 to −0.009316 between c = 0.5 and 2
+   (`shape_zero_tests/param_classify_output.txt`).
+2. **κ**, the gyroscopic ratio (§2d #3) — measurable by the Larmor splitting.
+3. **the a–b angle** (§2d #4) — measurable as the D8 frequency ratio.
+4. **C_r**, the residual coupling strength (§2d #5).
+
+**Unclassified — may join the list:**
+- **β**, the lattice gyroscopic coupling (§2d #7): a test value for the pinning,
+  and for κ at leading order, but not shown β-independent for F, κ_box, the
+  launch pieces or the (0, π) window; the absolute asymmetry scales with it.
+- **ζ**, the cone deficit (§2d #2): observable only through an unearned
+  embedding, and subject to the open 2ζ inconsistency (`INPUT_LEDGER.md` §3.3).
+
+**Kind 1 — conventions, not on the list:** ω, and the base units ℓ and μ
+(`MODEL_SPEC.md` §4c). They are dimensionful, so no model can derive them (§3).
+
+**Not in the §2d table but open** (§1a, §4a): the fibre metric scale k — equivalently
+the integer n in ℏ — and the ratio ℓ_f/ℓ. c₈ and Λ's number are outputs of k, not
+further parameters (`MODEL_SPEC.md` §9).

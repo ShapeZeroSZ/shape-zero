@@ -207,15 +207,23 @@ listed in §2d as remaining free.
 
 ## 2d. The remaining free parameters
 
-| # | parameter | fixes | enters at | status |
-|---|---|---|---|---|
-| 1 | **ω** | the unit of time | D1, the clock | it *is* the unit, not a prediction |
-| 2 | **ζ**, cone deficit (formerly β) | the D2 arena | D2 | contingent on an unresolved embedding |
-| 3 | **κ**, gyroscopic ratio | D4 coupling strength | D4 | **measurable in a lab now** |
-| 4 | **a–b angle** | D8 flow frequency ratio | D8 | measurable in the same setting |
-| 5 | **C_r** | residual coupling strength | the residual sector (MODEL_SPEC §4b.1) | dimensionless; nothing yet fixes it |
-| 6 | **c**, elastic coupling | inter-node elastic coupling, F = c(x₊ + x₋ − 2x) | the lattice (MODEL_SPEC §3) | **CHOSEN** — c = 1 in every script; added 2026-09-25 (`03_current/SCALE_SCOPING.md` §1b). Not the speed of light — see MODEL_SPEC "Notation" |
-| 7 | **β**, lattice gyroscopic coupling | the synthetic U(1), βc(ẋ₊ − ẋ₋) | the lattice (MODEL_SPEC §3, §5) | **CHOSEN** — **β = 0.05 has no derivation**: it was one point of the original sweep {0, 0.02, 0.05, 0.10} in `04_scripts/platform/phi_gauge_test.py`, and lies just below the (0, π) decay window near 0.06 (PROVENANCE §6o, P-1). Carries the dimension of time; dimensionless only in simulation units. Added 2026-09-25 |
+| # | parameter | fixes | enters at | status | kind (2026-09-25) |
+|---|---|---|---|---|---|
+| 1 | **ω** | the unit of time | D1, the clock | it *is* the unit, not a prediction | **1 — unit convention.** Model time is measured in the unit the φ-well fixes; ω converts it to physical time, t_phys = t_model/ω. Every dimensionless prediction is a ratio computed in model units — Δω/W, κ, F, frequency ratios — and is unchanged under ω → λω, which multiplies every physical frequency by λ |
+| 2 | **ζ**, cone deficit (formerly β) | the D2 arena | D2 | contingent on an unresolved embedding | **Unclassified.** Without the Lorentzian embedding ζ has no observable consequence (§3.3), so nothing depends on it; with it, the deflection π(1/ζ − 1) does, and it would be kind 3 unless B-2 closes. Settled by supplying or refuting the embedding (`02_synthesis/C1S_SYNTHESIS.md` §14) and by resolving the 2ζ inconsistency (§3.3) |
+| 3 | **κ**, gyroscopic ratio | D4 coupling strength | D4 | **measurable in a lab now** | **3 — genuine.** The physics depends on it: the Larmor splitting equals κ exactly (§3.1), and closing the J-breaking channel needs κ from 0.02 to 0.97 with k (MODEL_SPEC §3). No principle fixes its value; plurality excludes only κ = 0 (`C1S_SYNTHESIS.md` §12). model.py's 0.5 is not shown to be irrelevant to any result |
+| 4 | **a–b angle** | D8 flow frequency ratio | D8 | measurable in the same setting | **3 — genuine.** The D8 frequency ratio sweeps monotonically over [1.04, 23.9] as the angle runs 5°–150° (§3.2); plurality forbids only b = ±a |
+| 5 | **C_r** | residual coupling strength | the residual sector (MODEL_SPEC §4b.1) | dimensionless; nothing yet fixes it | **3 — genuine.** The residual oscillates at f_res ∝ C_r (MODEL_SPEC §9, closed items; §5b.7), so the physics depends on it; the form is fixed, the strength by nothing (MODEL_SPEC §4b.1) |
+| 6 | **c**, elastic coupling | inter-node elastic coupling, F = c(x₊ + x₋ − 2x) | the lattice (MODEL_SPEC §3) | **CHOSEN** — c = 1 in every script; added 2026-09-25 (`03_current/SCALE_SCOPING.md` §1b). Not the speed of light — see MODEL_SPEC "Notation" | **3 — genuine, as the ratio c/√5.** *Marked CHOSEN.* It cannot be scaled away: the well's fixed coefficients (√5 and 1) fix both the time and the amplitude unit, and a lattice spacing of one site cannot be rescaled, so no rescaling absorbs c (`shape_zero_tests/param_classify.py`, docstring). The physics depends on it: derived κ₂ = −0.026389, −0.017480, −0.009316 at c = 0.5, 1, 2 (`param_classify_output.txt`). Only in the long-wavelength continuum limit would c become a length-unit convention |
+| 7 | **β**, lattice gyroscopic coupling | the synthetic U(1), βc(ẋ₊ − ẋ₋) | the lattice (MODEL_SPEC §3, §5) | **CHOSEN** — **β = 0.05 has no derivation**: it was one point of the original sweep {0, 0.02, 0.05, 0.10} in `04_scripts/platform/phi_gauge_test.py`, and lies just below the (0, π) decay window near 0.06 (PROVENANCE §6o, P-1). Carries the dimension of time; dimensionless only in simulation units. Added 2026-09-25 | **2 for the pinning; 2 at leading order for κ; unclassified otherwise.** *Marked CHOSEN.* The normalised asymmetry Δω/(2cβ sin k) = 1 holds for every β (Prove2Me missions 3, 4b; MODEL_SPEC §3) — kind 2. κ: the reference β-sweep gives \|Δ/Δ₀\| = 0.998339, 0.998316, 0.998390, 0.998316 at β = 0.02, 0.05, 0.10, 0.20 (`PINNED_ASYMMETRY_TEST.md`, κ note; −0.0184 ± 0.00033), but the derived κ₂ drifts at O(β²) — −0.017448, −0.017480, −0.017595, −0.018071, +3.4% from 0.05 to 0.20 (`param_classify_output.txt`) — inside that sweep's spread, so κ is β-independent at leading order only. **Not shown β-independent:** every F and κ_box measurement, the launch pieces and the beam fourth-order tests (all at β = 0.05 only), and the (0, π) decay window, which is located at β ≈ 0.06 and so depends on β. Settled by β sweeps of F and of the launch pieces. The absolute asymmetry 2cβ sin k scales with β, so an experiment fixes β by one measurement of Δω, as it fixes κ by the Larmor splitting |
+
+
+*Kinds (added 2026-09-25):* **1** unit convention — scaled away without changing any
+dimensionless prediction; **2** test value — every result using it shown not to depend
+on it; **3** genuine parameter — the physics depends on it and no principle fixes it.
+Only rows 6 and 7 are marked CHOSEN; the others are classified too because the kind-3
+set (`03_current/SCALE_SCOPING.md` §6) needs every row. Where the evidence is
+incomplete the entry says unclassified and what would settle it.
 
 **Premise, not a parameter: the φ-well force law.** The on-site force
 F = −(x² − x − 1), with fixed points at the golden-ratio roots and linear stiffness
