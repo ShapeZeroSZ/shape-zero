@@ -49,6 +49,9 @@ PREDICTIONS STATED BEFORE RUNNING
     form.
 
 Python 3 + NumPy only.
+
+(Cone deficit renamed beta -> zeta on 2026-09-25, to free beta for the lattice
+gyroscopic coupling; the code variable keeps the name beta/BETA.)
 """
 
 import numpy as np

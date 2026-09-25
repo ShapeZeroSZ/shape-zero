@@ -69,9 +69,9 @@ of an order-3 automorphism, which requires dim m even; dim m = 7. Parity
 alone closes it. Neither usual reason to expect a Lax pair applies.
 
 **The deficit angle decouples.** Harmonic maps in 2D are conformally
-invariant and a cone is flat away from its apex, so β cannot enter the local
+invariant and a cone is flat away from its apex, so ζ cannot enter the local
 field equations. It could only enter through topological selection, and
-π₁(S⁷) = 0 leaves nothing to select among.
+π₁(S⁷) = 0 leaves nothing to select among. (cone deficit renamed β → ζ on 2026-09-25; β now denotes only the lattice gyroscopic coupling)
 
 ## The open question, stated precisely
 
@@ -84,7 +84,7 @@ is not algebra:
    CHOSEN decides which of two quite different theories the program is
    describing.
 
-2. **Does the cone couple at all?** On present structure it does not — β drops
+2. **Does the cone couple at all?** On present structure it does not — ζ drops
    out both locally (conformal invariance) and topologically (π₁ = 0). Either
    the coupling enters through something not yet in the model, or the D2 and
    D8 rungs are less connected than the ladder's continuity suggests.

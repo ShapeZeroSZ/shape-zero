@@ -37,6 +37,9 @@ PREDICTIONS STATED BEFORE RUNNING
     stabilise the w -> 0 collapse regardless of its size.
 
 Python 3 + NumPy only. Companion to cone_derrick.py.
+
+(Cone deficit renamed beta -> zeta on 2026-09-25, to free beta for the lattice
+gyroscopic coupling; the code variable keeps the name beta/BETA.)
 """
 
 import numpy as np

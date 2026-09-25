@@ -54,6 +54,9 @@ PREDICTIONS STATED BEFORE RUNNING
     and with the achieved sup R it is 2 sqrt(mu c4) / R*.
 
 Python 3 + NumPy only.
+
+(Cone deficit renamed beta -> zeta on 2026-09-25, to free beta for the lattice
+gyroscopic coupling; the code variable keeps the name beta/BETA.)
 """
 
 import numpy as np

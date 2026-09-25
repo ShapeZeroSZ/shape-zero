@@ -3,7 +3,7 @@
 cone_coupling_d2.py — the second-derivative sector
 
 cone_coupling_search.py checked terms polynomial in FIRST derivatives up to
-quartic: beta can enter there, but only through generic metric terms, with the
+quartic: zeta can enter there, but only through generic metric terms, with the
 octonionic candidate collapsing via the composition identity. This checks the
 sector that search explicitly left open.
 
@@ -22,12 +22,12 @@ Two candidates that were not covered:
       derivative and the composition identity does not obviously apply.
 
 REGULARISED CONE.  ds^2 = dr^2 + f(r)^2 dtheta^2  with
-      f(r) = beta*r + (1-beta)*eps*tanh(r/eps)
-so f(0) = 0, f'(0) = 1 (smooth at the origin), f' -> beta asymptotically.
+      f(r) = zeta*r + (1-zeta)*eps*tanh(r/eps)
+so f(0) = 0, f'(0) = 1 (smooth at the origin), f' -> zeta asymptotically.
 Gaussian curvature K = -f''/f, R = 2K, and the area element is f dr dtheta.
 
 PREDICTIONS STATED BEFORE RUNNING
- D1 integral of R sqrt(g) = 4*pi*(1-beta) EXACTLY, independent of the
+ D1 integral of R sqrt(g) = 4*pi*(1-zeta) EXACTLY, independent of the
     smoothing scale eps. (Analytically -4pi[f']_0^inf; verified by quadrature.)
  D2 the curvature support localises: the radius containing 95% of the total
     |R| sqrt(g) scales linearly with eps, so as eps -> 0 the coupling becomes
@@ -45,6 +45,9 @@ PREDICTIONS STATED BEFORE RUNNING
  variational calculation, not a pointwise rank.
 
 Python 3 + NumPy only.
+
+(Cone deficit renamed beta -> zeta on 2026-09-25, to free beta for the lattice
+gyroscopic coupling; the code variable keeps the name beta/BETA.)
 """
 
 import numpy as np
@@ -122,9 +125,9 @@ def main():
     print("=" * 70)
 
     # ---- D1 total curvature ----------------------------------------
-    print("\nD1  integral R sqrt(g)  vs  4 pi (1 - beta)")
+    print("\nD1  integral R sqrt(g)  vs  4 pi (1 - zeta)")
     print("-" * 70)
-    print("    beta     eps        computed        predicted       rel dev")
+    print("    zeta     eps        computed        predicted       rel dev")
     okD1 = True
     for beta in (0.95, 0.70, 0.40):
         for eps in (1.0, 0.1, 0.01):
@@ -195,10 +198,10 @@ def main():
     print("READING")
     print("=" * 70)
     print("  The cone does couple, but only where it is not flat. R sqrt(g)")
-    print("  integrates to exactly the deficit 4pi(1-beta) regardless of how")
+    print("  integrates to exactly the deficit 4pi(1-zeta) regardless of how")
     print("  the tip is smoothed, and its support shrinks with the smoothing.")
     print("  So the interaction between the D2 rung and the D8 field is a")
-    print("  POINT interaction at the apex, with beta-dependence forced by")
+    print("  POINT interaction at the apex, with zeta-dependence forced by")
     print("  geometry -- only the overall xi is a new constant.")
     print()
     print("  And unlike the quartic sector, this order does admit an")

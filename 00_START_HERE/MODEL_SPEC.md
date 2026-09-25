@@ -18,9 +18,9 @@ meaning listed for it (`03_current/SCALE_SCOPING.md` §1b).
 | κ_ℏ | the ℏ-scale constant in the §9 fibre-scale row | §9 only |
 | **c** | inter-node **elastic coupling**, F = c(x₊ + x₋ − 2x), c = 1 in every script (`INPUT_LEDGER.md` §2d #6) | §1–§3, §4b, §5, §5b, §6b, §7 — every force law and dispersion relation |
 | **c** | the **speed of light**, set to 1 for dimensional arithmetic | §4c (table, α = e²/ℏc), §4c.0, §4c.3, §4c.4 |
-| **β** | **cone deficit** of the D2 arena (`INPUT_LEDGER.md` §2d #2) | §0 |
-| **β** | **lattice gyroscopic coupling**, βc(v₊ − v₋) — the synthetic U(1); β = 0.05 in the κ scripts | §3, §4b.1, §4b.2, §5, §5b, §6b, §7 |
-| **β** | **ambiguous**: §4c.4 calls the lattice coupling's "charge" β and cites the ledger's §2d, whose β is the cone deficit | §4c.4 |
+| ~~**β**~~ **ζ** | **cone deficit** of the D2 arena (`INPUT_LEDGER.md` §2d #2) — **renamed β → ζ, 2026-09-25**, so this collision is resolved | §0 |
+| **β** | **lattice gyroscopic coupling**, βc(v₊ − v₋) — the synthetic U(1); β = 0.05 in the κ scripts, no derivation (`INPUT_LEDGER.md` §2d #7) | §3, §4b.1, §4b.2, §4c.4, §5, §5b, §6b, §7 |
+| ~~**β**~~ | ~~**ambiguous**: §4c.4 calls the lattice coupling's "charge" β and cites the ledger's §2d, whose β is the cone deficit~~ **corrected 2026-09-25** — §4c.4 now says the lattice β is not the cone deficit | §4c.4 |
 
 ---
 
@@ -47,8 +47,8 @@ descriptions.
 **Source:** Formal Proofs §2.3 (the cone is forced at D2 — the centrifugal
 barrier *is* the void repulsion, g = L²/2, eliminated in favour of a conserved
 quantity of the state's own motion), §8 (HK convexity, the π/2 horizon).
-`cone_vertex.py` closes the span: *"beta is the cone's deficit and O is the
-octonionic sector"* — a **D2-to-D8 observable**.
+`cone_vertex.py` closes the span: *"zeta is the cone's deficit and O is the
+octonionic sector"* — a **D2-to-D8 observable**. (cone deficit renamed β → ζ on 2026-09-25; β now denotes only the lattice gyroscopic coupling).
 
 ---
 
@@ -520,7 +520,14 @@ scale*, and running needs a hierarchy whose **size** is fixed. §5 of
 antisymmetric velocity coupling, so its "charge" is **β** — already dimensionless
 and already an **input** (§2d of the ledger). Even the B-2 candidate β = 1/4
 is off from α = 1/137.036 by a factor of 34, and nothing identifies a lattice
-gyroscopic ratio with a quantum field theory coupling.
+gyroscopic ratio with a quantum field theory coupling. [**CORRECTED 2026-09-25:**
+the lattice U(1) coupling is **β**, the coefficient of βc(ẋ₊ − ẋ₋). It **carries the
+dimension of time** — in the source spec's c_ij(x_j − x_i + β·ẋ_j)
+(`01_source/spec/shape_zero_v5-3.txt`, "Coupled network") β·ẋ must have the units of
+x — and is **dimensionless only in simulation units**. It is **not the cone deficit**:
+the ledger's §2d #2 entry is the cone deficit, now named **ζ**, and the lattice β is
+§2d #7 (chosen, 0.05, no derivation). The comparison of **1/4 with α concerns ζ**,
+the B-2 cone candidate, not the lattice coupling — and neither is a QFT coupling.]
 
 **All three untested hierarchy mechanisms were tried and none anchors a size:**
 

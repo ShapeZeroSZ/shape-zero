@@ -52,7 +52,7 @@ SETUP. Target is S^7 = unit octonions, which is Spin(7)/G2 as established in
 sigma_topology.py. Tangent vectors at phi are identified with Im(O) by left
 multiplication: u |-> conj(phi) * u, an isometry taking T_phi S^7 to Im(O)
 since |phi| = 1. Tension field for a sphere target is tau = box phi +
-|dphi|^2 phi. Cone metric ds^2 = dr^2 + beta^2 r^2 dtheta^2.
+|dphi|^2 phi. Cone metric ds^2 = dr^2 + zeta^2 r^2 dtheta^2.
 
 PREDICTIONS STATED BEFORE RUNNING
  H1 S_kin is independent of w -- 2D conformal invariance, fitted exponent
@@ -68,6 +68,9 @@ PREDICTIONS STATED BEFORE RUNNING
     |B| > C. Report the measured ratio |B|/C, which is the control parameter.
 
 Python 3 + NumPy only.
+
+(Cone deficit renamed beta -> zeta on 2026-09-25, to free beta for the lattice
+gyroscopic coupling; the code variable keeps the name beta/BETA.)
 """
 
 import numpy as np
@@ -176,7 +179,7 @@ def configuration(w, mirror=False):
     """Smooth S^7-valued configuration of width w with angular structure.
 
     REGULARITY AT THE TIP. On a cone the angular gradient enters as
-    |d_theta phi|^2 / (beta^2 r^2), so a component carrying angular mode m must
+    |d_theta phi|^2 / (zeta^2 r^2), so a component carrying angular mode m must
     vanish like r^m at the origin or the kinetic energy diverges there. The
     first version of this function used cos(theta) components that survived to
     r = 0; the resulting cutoff-dependent divergence dominated every functional
@@ -241,7 +244,7 @@ def main():
     print("=" * 70)
     print("CONE DERRICK :: STABLE SIZE AND CHIRALITY SELECTION")
     print("=" * 70)
-    print(f"  cone deficit parameter beta = {BETA}")
+    print(f"  cone deficit parameter zeta = {BETA}")
 
     ws = np.array([0.6, 0.8, 1.0, 1.3, 1.7, 2.2])
     K, O, Q = [], [], []

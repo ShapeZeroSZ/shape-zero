@@ -176,7 +176,7 @@ hand in prose, the same class of error as the factor-of-ten κ.
 challenged before commit. A negative verdict deserves the same verification as a
 positive one.
 
-**New, derived:** ℏ = (μℓ_f²/T)/**4**, with the cycle fixed by the node size — J² = −I forces
+**New, derived:** [**SUPERSEDED 2026-09-25:** retracted — §6d and `MODEL_SPEC.md` §4c.2a-R; a generator normalisation is not a metric scale, and integrality leaves n ∈ {1, 2, 4, 8, …} unselected] ℏ = (μℓ_f²/T)/**4**, with the cycle fixed by the node size — J² = −I forces
 tr(JᵀJ) = 4 at zero spread over 400 samples, rescaling breaks J² = −I, and ℝ²
 gives n = 4 as a dimension-sensitivity control.
 
@@ -205,7 +205,7 @@ are not rediscovered and written up.
 | **exp(42)** = 1.74×10¹⁸ | ‖c‖², the nonzero structure-constant count | 10¹⁷ electroweak–Planck | factor 17 | **numerology** — no mechanism puts ‖c‖² in an exponent |
 | **128** | the orientation count (16 valid of 128) | α⁻¹ = 137.036 | 7% | **refused** — no rule selects it; proximity after seeing the target |
 | 147, 168, 189 | incidence-data products | 137.036 | 7–38% | **refused**, same reason |
-| **β = 1/4** | B-2 Fisher–Rao candidate | α = 1/137 | factor 34 | not α; a lattice gyroscopic ratio is not a QFT coupling |
+| **ζ = 1/4** (formerly written β) | B-2 Fisher–Rao candidate for the cone deficit | α = 1/137 | factor 34 | not α; a cone deficit is not a QFT coupling [the row first said "a lattice gyroscopic ratio" — corrected 2026-09-25: the candidate is the cone deficit ζ, not the lattice β] |
 
 | **ℏ = (μℓ_f²/T)/4** | flux quantum on ℂP¹ ⊂ ℂP² | a derived ℏ | — | **RETRACTED** — `tr(λλ)=2` is a *generator* normalisation, not a *metric scale*. Integrality permits n ∈ {1,2,4,8,…} and selects none |
 

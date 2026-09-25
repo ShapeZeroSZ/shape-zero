@@ -60,14 +60,14 @@ supplement got wrong along the way.
   identity, not a fit. This is the nearly-parallel condition, torsion class
   W₁ alone, agreeing with an unrelated computation that found φ-as-torsion
   pure W₁ at fraction 1.0000000000.
-- **Quartic is the lowest order at which β can couple**, and two terms exist
+- **Quartic is the lowest order at which ζ (the cone deficit) can couple**, and two terms exist
   there — but both octonion-built candidates collapse into them. The
   composition identity |u×v|² = |u|²|v|² − (u·v)² cancels the Skyrme term
   exactly. The octonions contribute nothing to the only available coupling.
 - **The cone does couple — at the apex.** The non-minimal term R|dφ|² sees
-  the one point where the cone is not flat. ∫R√g = 4π(1−β) exactly,
+  the one point where the cone is not flat. ∫R√g = 4π(1−ζ) exactly,
   independent of how the tip is regularised, and the support collapses onto
-  the apex (r₉₅/ε constant to 0.002%). The β-dependence is forced; only ξ is
+  the apex (r₉₅/ε constant to 0.002%). The ζ-dependence is forced; only ξ is
   new. This order also admits an octonionic term, unlike the quartic sector.
 - **The octonionic second-derivative term survives variation.** B·□φ is not
   a total derivative — nonzero on a closed surface against a machine-zero
@@ -96,7 +96,7 @@ supplement got wrong along the way.
   couple to angular structure — which is what the deficit is.
 - **π₁(S⁷) = π₂(S⁷) = 0.** No solitons, no winding sectors. Combined with 2D
   conformal invariance and a cone being flat away from its apex, the deficit
-  angle β does not couple to the field on present structure.
+  angle ζ does not couple to the field on present structure. (cone deficit renamed β → ζ on 2026-09-25; β now denotes only the lattice gyroscopic coupling).
 
 ## Review note on the Formal Proofs document
 

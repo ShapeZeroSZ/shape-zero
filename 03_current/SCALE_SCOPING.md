@@ -40,7 +40,7 @@ letter c is the elastic inter-node coupling in the force law (§1b below).
 | c (elastic) | inter-node elastic coupling, F = c(x₊ + x₋ − 2x) | **CHOSEN** — c = 1.0 in `model.py` and in every lattice script; **not listed** among the free parameters of `INPUT_LEDGER.md` §2d, so its status is unrecorded there | `MODEL_SPEC.md` §3; `04_scripts/session/model.py` (C = 1.0) |
 | κ (gyroscopic ratio) | intra-node gyroscopic coupling, F = κ𝕁v; D4 coupling strength | **OPEN, measurable** — fixed by one bench measurement (the Larmor splitting equals κ) | `INPUT_LEDGER.md` §2d #3 and §3.1; `MODEL_SPEC.md` §2; `model.py` (KAPPA = 0.5) |
 | β (lattice) | inter-node antisymmetric velocity coupling, βc(v₊ − v₋) — the synthetic U(1) | **CHOSEN** — β = 0.05 in the κ scripts; `MODEL_SPEC.md` §4c.4 calls it the U(1) "charge" and "already an input (§2d of the ledger)" | `MODEL_SPEC.md` §4b.1, §4c.4 |
-| β (cone deficit) | the D2 arena's cone deficit | **OPEN** — contingent on an unresolved embedding; B-2 candidate β = 1/4 has an unmet closing condition | `INPUT_LEDGER.md` §2d #2, §3.3 |
+| ζ (cone deficit; β before 2026-09-25) | the D2 arena's cone deficit | **OPEN** — contingent on an unresolved embedding; B-2 candidate ζ = 1/4 has an unmet closing condition | `INPUT_LEDGER.md` §2d #2, §3.3 |
 | a–b angle | D8 flow frequency ratio (second generator's direction) | **OPEN, measurable** — plurality forces a second generator, not which; every ratio in [1.04, 23.9] is attainable | `INPUT_LEDGER.md` §2d #4, §3.2 |
 | C_r | residual coupling strength, f = C_r·mul(g, v) | **OPEN** — the *form* is determined; the *strength* is free | `MODEL_SPEC.md` §4b.1; `INPUT_LEDGER.md` §2d #5; `MODEL_SPEC.md` §9 |
 | J-compatibility ([W, 𝕁] = 0) | a condition on the coupling, not a number | **CHOSEN** at short wavelength, **derived at long** (emergent below k_c) | `MODEL_SPEC.md` §3 |
@@ -49,7 +49,9 @@ letter c is the elastic inter-node coupling in the force law (§1b below).
 | Λ's number | Λ = (number)/ℓ² | **OPEN** — "not yet extracted" | `MODEL_SPEC.md` §4c table |
 | α | e²/ℏc | **CLOSED as an input** — not derivable; five routes tested | `MODEL_SPEC.md` §4c.4b |
 
-**Symbol collisions, flagged and not resolved here.** (i) β names both the
+**Symbol collisions, flagged and not resolved here.** [(i) **resolved 2026-09-25:**
+the cone deficit is renamed ζ; β is the lattice gyroscopic coupling, `MODEL_SPEC.md`
+§4c.4 corrected.] (i) β names both the
 lattice gyroscopic coupling and the cone deficit; `MODEL_SPEC.md` §4c.4 cites the
 ledger's §2d for the lattice β, whose §2d entry is the cone deficit. Whether they
 are one parameter is not established in the cited sections. (ii) κ names both the

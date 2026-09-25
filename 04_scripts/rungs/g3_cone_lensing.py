@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
 """g3_cone_lensing.py — cone-deficit lensing (log: G3). Constant deflection
-pi(1/beta - 1) after aperture correction 2*arcsin(b/r0); Newtonian varies."""
+pi(1/zeta - 1) after aperture correction 2*arcsin(b/r0); Newtonian varies.
+
+(Cone deficit renamed beta -> zeta on 2026-09-25, to free beta for the lattice
+gyroscopic coupling; the code variable keeps the name beta/BETA.)
+"""
 import numpy as np
 DT = 2e-3
 def deflect(beta, GM, b, r0=30.0):

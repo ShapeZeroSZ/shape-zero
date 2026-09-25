@@ -32,7 +32,7 @@ quantity is expected to depend on the cutoff, and the honest observable is
 whatever survives it. That is checked here before any claim is made.
 
 FREE THEORY. S_2 = integral [ 1/2 |d psi|^2 + mu (box psi)^2 ] dmu on the cone
-ds^2 = dr^2 + beta^2 r^2 dtheta^2. Angular modes decouple, so the covariance is
+ds^2 = dr^2 + zeta^2 r^2 dtheta^2. Angular modes decouple, so the covariance is
 block diagonal in m and each block is an NR x NR radial operator that can be
 inverted exactly. Samples are drawn as Q_m^{-1/2} eta, not by relaxation, so
 there is no thermalisation error.
@@ -44,16 +44,19 @@ PREDICTIONS STATED BEFORE RUNNING
  U3 <O^2> GROWS with the grid cutoff, consistent with the log divergence
     above. Predicted to grow, not converge -- so the bare vacuum chirality is
     NOT by itself an observable.
- U4 the RATIO <O^2>(beta_1) / <O^2>(beta_2) converges as the cutoff is
+ U4 the RATIO <O^2>(zeta_1) / <O^2>(zeta_2) converges as the cutoff is
     refined, because the divergence is a short-distance effect and the cone is
     flat away from its apex. If it converges, THAT is the physical quantity
     and it is a genuine D2-to-D8 observable.
  U5 <O> flips sign under orientation reversal c -> -c at fixed configuration
     ensemble, so the chirality tracks orientation times base parity as
     established in octonionic_term_parity.py.
- NOT PREDICTED: the direction of the beta dependence.
+ NOT PREDICTED: the direction of the zeta dependence.
 
 Python 3 + NumPy only.
+
+(Cone deficit renamed beta -> zeta on 2026-09-25, to free beta for the lattice
+gyroscopic coupling; the code variable keeps the name beta/BETA.)
 """
 
 import numpy as np
@@ -225,7 +228,7 @@ def main():
     print("=" * 70)
 
     NS = 240
-    print("\nU1/U2  FREE-THEORY MOMENTS  (beta = 0.7, 64 x 32)")
+    print("\nU1/U2  FREE-THEORY MOMENTS  (zeta = 0.7, 64 x 32)")
     print("-" * 70)
     v = stats(64, 32, 0.7, c, NS, 5)
     m1, se1 = v.mean(), v.std(ddof=1) / np.sqrt(len(v))
@@ -252,7 +255,7 @@ def main():
           f"   (factor {o2[-1]/o2[0]:.2f} across the range)")
     print("    -> the BARE vacuum chirality is not by itself an observable")
 
-    print("\nU4  DOES THE beta-RATIO CONVERGE?")
+    print("\nU4  DOES THE zeta-RATIO CONVERGE?")
     print("-" * 70)
     print("      grid       <O^2> b=0.5   <O^2> b=0.9      ratio")
     ratios = []
@@ -288,9 +291,9 @@ def main():
     print("  times base parity, even though the mean field is trivial.")
     print()
     print("  But the bare quantity grows with the cutoff, as the power")
-    print("  counting said it would. What is physical is the beta-dependence")
+    print("  counting said it would. What is physical is the zeta-dependence")
     print("  at fixed cutoff -- and that is exactly a D2-to-D8 observable,")
-    print("  since beta is the cone's deficit and O is the octonionic sector.")
+    print("  since zeta is the cone's deficit and O is the octonionic sector.")
 
 
 if __name__ == "__main__":

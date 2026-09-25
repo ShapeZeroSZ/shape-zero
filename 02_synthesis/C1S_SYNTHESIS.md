@@ -325,7 +325,7 @@ free.
 | D1 | ω | the **unit** |
 | D2 | void constant g | **forced** — eliminated as L²/2 |
 | D2 | radial:angular = 2:1 | **forced** — verified independent of L and E |
-| D2 | cone deficit β | **FREE** |
+| D2 | cone deficit ζ (formerly β) | **FREE** |
 | D3 | — | no continuous parameter |
 | D4 | gauge class u(2) | **forced** — passivity |
 | D4 | structure-sphere scale | **forced** — 2 |
@@ -335,14 +335,17 @@ free.
 | D8 | orientation | **discrete** — 16, in 8 conjugate pairs |
 | D8 | a–b angle | **licensed** — plurality excludes b = ±a |
 
-**One genuinely free continuous parameter in the ladder: β.** κ and the a–b
+**One genuinely free continuous parameter in the ladder: ζ.** κ and the a–b
 angle are admitted by minimality's own exemption clause, since plurality
 excludes their degenerate values — κ = 0 gives one frequency, κ > 0 gives two
-split by exactly κ (verified, Larmor). β is not so licensed: plurality forbids
-only the rationals in 2β, a dense measure-zero set.
+split by exactly κ (verified, Larmor). ζ is not so licensed: plurality forbids
+only the rationals in 2ζ, a dense measure-zero set. [No derivation of this rule is
+in the repository, and it would exclude the flat cone ζ = 1 that the D2 rung calls
+forced — an open inconsistency, recorded in `03_current/INPUT_LEDGER.md` §3.3.]
 
 *Notation flag: β denotes two independent things in the document — the cone
-deficit at D2/G3 and the gyroscopic ratio in Section 7.*
+deficit at D2/G3 and the gyroscopic ratio in Section 7.* [**Resolved 2026-09-25:**
+the cone deficit is renamed **ζ** throughout; β is the lattice gyroscopic coupling.]
 
 ## 13. Scales are inherited, not free
 
@@ -382,15 +385,15 @@ excluded. So the arenas are Euclidean at every rung, by consequence rather than
 omission.
 
 **Consequence for G3 lensing.** The deflection law is exact and verified —
-π(1/β − 1), independent of impact parameter to 7.6e-15 across two decades of
+π(1/ζ − 1), independent of impact parameter to 7.6e-15 across two decades of
 impact, against a point mass varying by 100× over the same range. But lensing
 bends null geodesics and a Euclidean metric has none. The prediction requires
 declaring the cone the transverse slice of (cone) × ℝ^{1,1} — an embedding the
 ladder does not supply, and which needs the very signature persistence forbids.
 
-**So β's observational status is conditional on an unearned embedding.** Without
-it, β has no observable consequence and no bound applies. With it, the CMB-lensing
-bound Gμ ≤ 4.3e-5 gives 1−β ≲ 1.7e-4. (Tighter figures quoted earlier in the
+**So ζ's observational status is conditional on an unearned embedding.** Without
+it, ζ has no observable consequence and no bound applies. With it, the CMB-lensing
+bound Gμ ≤ 4.3e-5 gives 1−ζ ≲ 1.7e-4. (cone deficit renamed β → ζ on 2026-09-25; β now denotes only the lattice gyroscopic coupling). (Tighter figures quoted earlier in the
 session were model-dependent constraints on string *networks* and were misapplied.)
 
 ## 15. The Euclidean reading, and where it stops

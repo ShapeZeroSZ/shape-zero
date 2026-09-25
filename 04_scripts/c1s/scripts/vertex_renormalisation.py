@@ -33,7 +33,7 @@ SUPERFICIAL DEGREE. G(k) = 1/(k^2 + 2 mu k^4) ~ 1/(2 mu k^4) at large k, so
     measure Lambda^4  x  A^2 ~ Lambda^8  x  G^3 ~ Lambda^-12  =  Lambda^0
 i.e. LOGARITHMIC. The lattice exponent of 2.4 is therefore an artefact, and
 part 4 identifies which one: on a polar grid the angular cutoff in the
-orthonormal frame is m/(beta r), which at the innermost radius scales as
+orthonormal frame is m/(zeta r), which at the innermost radius scales as
 nth * nr, while the radial cutoff scales as nr alone. Refining "the grid"
 pushes the two cutoffs at different rates, so it never corresponds to a single
 uniform Lambda.
@@ -53,12 +53,15 @@ PREDICTIONS STATED BEFORE RUNNING
     raising nth.
  V6 the divergence being logarithmic and multiplicative means O renormalises
     with an anomalous dimension, O_R = Z^-1 O, and Z is a SHORT-DISTANCE
-    quantity. The cone is flat away from its apex, so Z cannot depend on beta,
-    and therefore the ratio <O^2>(beta_1)/<O^2>(beta_2) is FINITE even though
+    quantity. The cone is flat away from its apex, so Z cannot depend on zeta,
+    and therefore the ratio <O^2>(zeta_1)/<O^2>(zeta_2) is FINITE even though
     each factor diverges. That is the physical observable; the earlier failure
     to see it converge was the anisotropic cutoff, not the physics.
 
 Python 3 + NumPy only.
+
+(Cone deficit renamed beta -> zeta on 2026-09-25, to free beta for the lattice
+gyroscopic coupling; the code variable keeps the name beta/BETA.)
 """
 
 import numpy as np
@@ -257,7 +260,7 @@ def main():
     print("  Z carrying the log. O acquires an anomalous dimension.")
     print()
     print("  Z is a short-distance quantity and the cone is flat away from its")
-    print("  apex, so Z cannot depend on beta. The ratio of <O^2> at two")
+    print("  apex, so Z cannot depend on zeta. The ratio of <O^2> at two")
     print("  deficit angles is therefore FINITE -- the divergence cancels")
     print("  between numerator and denominator. That ratio is the physical")
     print("  observable, and it is forced rather than chosen: no subtraction")

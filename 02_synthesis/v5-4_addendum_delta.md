@@ -143,15 +143,15 @@ That list is correct and should stand. Add this refinement after it:
 > Taking the cone's angular extent to be the shape-space extent gives the
 > candidate
 >
->     β = (π/2) / (2π) = 1/4
+>     ζ = (π/2) / (2π) = 1/4          [cone deficit; written β before 2026-09-25]
 >
 > **The gap, stated as the closing condition.** This identification requires
 > the cone's angular coordinate to be a *closed circle* of circumference π/2.
 > P(Ω) is a simplex, and its Hellinger image is a spherical simplex **with
 > boundary**; a cone over a manifold-with-boundary is a wedge, not a deficit
-> cone, and the deflection law π(1/β − 1) assumes a closed angle. B-2 closes
+> cone, and the deflection law π(1/ζ − 1) assumes a closed angle. B-2 closes
 > when that identification is either justified or replaced. `g3_cone_lensing.py`
-> currently uses β = 0.95 as a display value demonstrating impact-independence,
+> currently uses ζ = 0.95 as a display value demonstrating impact-independence,
 > not as a derived quantity.
 
 ---
@@ -219,7 +219,8 @@ That list is correct and should stand. Add this refinement after it:
 
 - **Notation collision.** β denotes two independent quantities: the cone
   deficit (D2/G3) and the gyroscopic coupling ratio (Section 7 of the spec).
-  Worth separating before external circulation.
+  Worth separating before external circulation. [**Done 2026-09-25:** the cone
+  deficit is renamed ζ; β is the lattice gyroscopic coupling.]
 
 - **The platform sections are the live opportunity.** Sections 6–9 of the spec
   — passivity forcing u(2), synthetic U(1), the measurable dispersion

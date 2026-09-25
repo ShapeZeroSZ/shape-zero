@@ -210,11 +210,12 @@ listed in §2d as remaining free.
 | # | parameter | fixes | enters at | status |
 |---|---|---|---|---|
 | 1 | **ω** | the unit of time | D1, the clock | it *is* the unit, not a prediction |
-| 2 | **β**, cone deficit | the D2 arena | D2 | contingent on an unresolved embedding |
+| 2 | **ζ**, cone deficit (formerly β) | the D2 arena | D2 | contingent on an unresolved embedding |
 | 3 | **κ**, gyroscopic ratio | D4 coupling strength | D4 | **measurable in a lab now** |
 | 4 | **a–b angle** | D8 flow frequency ratio | D8 | measurable in the same setting |
 | 5 | **C_r** | residual coupling strength | the residual sector (MODEL_SPEC §4b.1) | dimensionless; nothing yet fixes it |
 | 6 | **c**, elastic coupling | inter-node elastic coupling, F = c(x₊ + x₋ − 2x) | the lattice (MODEL_SPEC §3) | **CHOSEN** — c = 1 in every script; added 2026-09-25 (`03_current/SCALE_SCOPING.md` §1b). Not the speed of light — see MODEL_SPEC "Notation" |
+| 7 | **β**, lattice gyroscopic coupling | the synthetic U(1), βc(ẋ₊ − ẋ₋) | the lattice (MODEL_SPEC §3, §5) | **CHOSEN** — **β = 0.05 has no derivation**: it was one point of the original sweep {0, 0.02, 0.05, 0.10} in `04_scripts/platform/phi_gauge_test.py`, and lies just below the (0, π) decay window near 0.06 (PROVENANCE §6o, P-1). Carries the dimension of time; dimensionless only in simulation units. Added 2026-09-25 |
 
 **Premise, not a parameter: the φ-well force law.** The on-site force
 F = −(x² − x − 1), with fixed points at the golden-ratio roots and linear stiffness
@@ -261,7 +262,8 @@ node's internal fibre, so the lattice spacing never enters the moment map
 **Still owed:** the pure numbers in G (c₈) and Λ.
 
 Five, of which one is a unit and two are ratios measurable on a bench. [Six since
-2026-09-25: the elastic coupling c, row 6, is chosen rather than measured.]
+2026-09-25: the elastic coupling c, row 6, is chosen rather than measured.] [Seven
+with the lattice β, row 7, also chosen; the cone deficit, row 2, is now ζ.]
 
 *On C_r:* the residual coupling **form** is determined — f = C_r·mul(g,x) with g
 octonionic and imaginary — and every constraint the selection rule imposes is
@@ -315,9 +317,11 @@ is the same physics one rung up.
 in the range**. Attainability is not selection. Any claim that φ is picked out
 here would be numerology.
 
-### 3.3 β — testable but the target is unclear
+### 3.3 ζ — testable but the target is unclear
 
-The deflection law π(1/β − 1) is exact and verified: independent of impact
+(cone deficit renamed β → ζ on 2026-09-25; β now denotes only the lattice gyroscopic coupling)
+
+The deflection law π(1/ζ − 1) is exact and verified: independent of impact
 parameter to 7.6×10⁻¹⁵ across two decades, against a point mass varying 100×
 over the same range.
 
@@ -326,15 +330,23 @@ radial, shape angular — not a spacetime cone. So this is geodesic deflection i
 *measure space*, and calling it lensing requires the cone to be the transverse
 slice of a Lorentzian spacetime. That embedding is not supplied by the ladder.
 
-Without the embedding: β has no observable consequence and no bound applies.
-With it: the CMB-lensing bound Gμ ≤ 4.3×10⁻⁵ gives 1 − β ≲ 1.7×10⁻⁴.
+Without the embedding: ζ has no observable consequence and no bound applies.
+With it: the CMB-lensing bound Gμ ≤ 4.3×10⁻⁵ gives 1 − ζ ≲ 1.7×10⁻⁴.
 
 **B-2 route, partially closed.** The "phase-boundary self-consistency
 condition" is the **π/2 horizon** the spec already names as the
 transport–reaction crossover, and it is the Fisher–Rao diameter — Hellinger
 embedding to the unit sphere verified to 6.7×10⁻¹⁶, disjoint supports
-orthogonal. Candidate β = (π/2)/(2π) = **1/4**. *Closing condition:* shape space
+orthogonal. Candidate ζ = (π/2)/(2π) = **1/4**. *Closing condition:* shape space
 is a simplex with boundary, and the deflection law needs a closed angle.
+
+**OPEN INCONSISTENCY, recorded not resolved (2026-09-25).** `02_synthesis/C1S_SYNTHESIS.md`
+§12 states that plurality forbids the rational values of 2ζ; no derivation of that
+rule is in this repository. The D2 rung calls the cone flat
+(`01_source/shape_zero_zero_ladder.md`, D2: "The cone itself is flat ℝ² in polar
+coordinates [FORCED given the minimal metric]"), i.e. ζ = 1 — and 2ζ = 2 is
+rational, so the rule would exclude it. The candidate ζ = 1/4 (2ζ = 1/2) would be
+excluded too. One of the two statements needs its derivation or its scope.
 
 ### 3.4 The scale — not testable, definitional
 

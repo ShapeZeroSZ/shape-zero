@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-cone_coupling_search.py — what would have to be added for beta to couple?
+cone_coupling_search.py — what would have to be added for zeta to couple?
 
 sigma_topology.py closed the easy routes: the deficit angle drops out locally
 (2D conformal invariance, cone flat away from the apex) and topologically
@@ -35,10 +35,13 @@ PREDICTIONS STATED BEFORE RUNNING
     exactly 2 -- spanned by L1 and L2, with every c-built candidate dependent.
  K4 the quadratic term is conformally invariant and the quartic terms are not,
     verified by explicit rescaling rather than by weight counting alone.
- K5 therefore quartic is the lowest order at which beta can couple, and terms
+ K5 therefore quartic is the lowest order at which zeta can couple, and terms
     do exist there -- but they carry no new structure from the octonions.
 
 Python 3 + NumPy only.
+
+(Cone deficit renamed beta -> zeta on 2026-09-25, to free beta for the lattice
+gyroscopic coupling; the code variable keeps the name beta/BETA.)
 """
 
 import numpy as np
@@ -102,7 +105,7 @@ def main():
     c = imaginary_c(oriented_lines())
     rng = np.random.default_rng(23)
     print("=" * 70)
-    print("CONE COUPLING SEARCH :: WHERE CAN beta FIRST ENTER?")
+    print("CONE COUPLING SEARCH :: WHERE CAN zeta FIRST ENTER?")
     print("=" * 70)
 
     # ---- K1 composition identity for the cross product --------------
@@ -163,7 +166,7 @@ def main():
     print("\n" + "=" * 70)
     print("READING")
     print("=" * 70)
-    print("  Quartic is the lowest order where beta can enter, and terms do")
+    print("  Quartic is the lowest order where zeta can enter, and terms do")
     print("  exist there -- two of them, L1 and L2, built from the forced")
     print("  target metric alone.")
     print()

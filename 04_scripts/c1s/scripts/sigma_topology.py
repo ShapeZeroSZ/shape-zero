@@ -10,7 +10,7 @@ Two facts about 2-dimensional sigma models decide most of what is possible
 before any dynamics is solved:
 
   (i) harmonic maps from a surface are CONFORMALLY INVARIANT, and a cone is
-      flat away from its apex. So the deficit angle beta cannot enter the
+      flat away from its apex. So the deficit angle zeta cannot enter the
       local field equations at all -- it can only enter through the global
       periodicity condition, i.e. through which windings close.
 
@@ -43,12 +43,15 @@ PREDICTIONS STATED BEFORE RUNNING
 
  CONSEQUENCES, which follow from S3 and need no further computation:
    pi_1(S^7) = 0  -> no winding sectors; the cone's deficit angle imposes NO
-                     topological selection, whatever beta is.
+                     topological selection, whatever zeta is.
    pi_2(S^7) = 0  -> no topological solitons. A 2D sigma model normally gets
                      its instantons from pi_2 of the target (CP^n has pi_2 = Z);
                      this target has none.
 
 Python 3 + NumPy only.
+
+(Cone deficit renamed beta -> zeta on 2026-09-25, to free beta for the lattice
+gyroscopic coupling; the code variable keeps the name beta/BETA.)
 """
 
 import numpy as np
@@ -170,12 +173,12 @@ def main():
     print("  pi_2 = 0  -> NO topological solitons. A 2D sigma model normally")
     print("              takes its instantons from pi_2 of the target; this")
     print("              one has none. Nothing to count, nothing to quantise.")
-    print("  pi_1 = 0  -> NO winding sectors. The cone's deficit angle beta")
+    print("  pi_1 = 0  -> NO winding sectors. The cone's deficit angle zeta")
     print("              cannot select among topological classes because there")
     print("              are none to select among.")
     print()
     print("  Combined with conformal invariance in 2D and a cone being flat")
-    print("  away from its apex, beta drops out of the local field equations")
+    print("  away from its apex, zeta drops out of the local field equations")
     print("  as well. On present structure the deficit angle does not couple")
     print("  to the octonion-structure field at all.")
 
