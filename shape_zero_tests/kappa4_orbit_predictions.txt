@@ -1,0 +1,15 @@
+======================================================================================
+PREDICTIONS -- kappa_box(A) / kappa_box(0.10) with orbit-consistent (L2) launches
+======================================================================================
+  plane-wave physical growth g(A) = kappa_wave(A)/kappa2 - 1 (kappa_pw4_pt.py): A=0.10: 0.00169, A=0.30: 0.01545, A=0.40: 0.02785
+     w     L    fill     s     F2     |  r: H0    S1     S2   |  ratio at 0.30: H0      S1       S2     |  ratio at 0.40: H0      S1       S2
+    1.0    4  0.1923  0.618  1.2250  |  0.000  0.406  0.060  |  1.00000  1.00559  1.00082   |  1.00000  1.01062  1.00157
+    2.0    8  0.1939  0.648  1.3181  |  0.000  0.362  0.062  |  1.00000  1.00497  1.00085   |  1.00000  1.00945  1.00162
+    1.5    4  0.3756  0.857  1.0859  |  0.000  0.547  0.254  |  1.00000  1.00752  1.00349   |  1.00000  1.01429  1.00664
+    2.0    4  0.5349  0.944  1.0338  |  0.000  0.635  0.461  |  1.00000  1.00872  1.00633   |  1.00000  1.01659  1.01204
+    3.0    4  0.7357  0.987  1.0076  |  0.000  0.767  0.712  |  1.00000  1.01054  1.00978   |  1.00000  1.02005  1.01859
+
+  Criterion, set in advance: a hypothesis passes a beam at an amplitude if its ratio
+  is within two error bars of the measured one (error bars of the two kappa_box
+  values combined in quadrature). The test only discriminates where hypotheses
+  differ by more than about four error bars; that is reported, not assumed.

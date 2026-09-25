@@ -1,0 +1,9 @@
+======================================================================================
+VALIDATION -- plane wave, L2 launch against the exact wave (kappa_pw4_pt.py)
+======================================================================================
+   T =  300  A = 0.10:  L2 -0.017505 +- 0.000007   exact wave -0.017510   residual +0.000004   (plain cosine at 0.30: -0.018709)
+   T =  300  A = 0.30:  L2 -0.017711 +- 0.000007   exact wave -0.017750   residual +0.000039   (plain cosine at 0.30: -0.018709)
+   T =  300  A = 0.40:  L2 -0.017905 +- 0.000007   exact wave -0.017967   residual +0.000062   (plain cosine at 0.30: -0.018709)
+   T =  900  A = 0.10:  L2 -0.017505 +- 0.000001   exact wave -0.017510   residual +0.000004   (plain cosine at 0.30: -0.018709)
+   T =  900  A = 0.30:  L2 -0.017711 +- 0.000001   exact wave -0.017750   residual +0.000039   (plain cosine at 0.30: -0.018709)
+   T =  900  A = 0.40:  L2 -0.017905 +- 0.000001   exact wave -0.017967   residual +0.000062   (plain cosine at 0.30: -0.018709)

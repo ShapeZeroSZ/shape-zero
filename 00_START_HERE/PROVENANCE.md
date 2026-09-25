@@ -1004,7 +1004,9 @@ T = 300 and T = 900, so a frequency shift, not a transient):
 | interaction of the two | about −0.00024 | **measured, not derived** |
 | total, plain-cosine launch | −0.00094 | −0.01869 against the wave's −0.01775 |
 
-**The static-shift and second-harmonic pieces are measured, not derived.** The
+**The static-shift and second-harmonic pieces are measured, not derived.** [**Since
+derived, 2026-09-25** — "The launch pieces derived", below; the table's status column
+is kept as first written.] The
 leading cross-modulation formula for the free oscillations the launch leaves
 behind does not capture them: for the uniform mode its direction-odd part
 vanishes identically, and for the staggered (k = π) mode it gives a sixth to a
@@ -1030,7 +1032,79 @@ L = 4: F(0.30) at −2.4σ; the box κ grows 4.4% and 3.0%. S1 and S2 both pass
 (within 0.8σ), so **S1 against S2 is unresolved**; the narrow-beam evidence that
 favours S2 was seen before the predictions were written. **These tests used
 plain-cosine launches, so they mix physics with launch effects.** Redoing them
-with orbit-consistent launches is open (MODEL_SPEC §9).
+with orbit-consistent launches is open (MODEL_SPEC §9). [**Done 2026-09-25** — below.]
+
+**The launch pieces derived (2026-09-25)** (`kappa_launch_pt.py`; measured by
+`kappa_launch_attrib.py`, the exact wave with pieces removed, on a 1-D ring at
+T = 900).
+
+*First order — energy projection.* The energy E is conserved, so its differential
+dE is invariant under the flow linearised about the wave: it vanishes on every
+Floquet mode with multiplier ≠ 1 and on the phase direction. A launch error δ
+therefore moves the wave's amplitude by exactly dA = dE(δ)/E′(A), and its
+frequency by W′(A)·dE(δ)/E′(A). Closed forms, with W₂ and c₂ the A² coefficients
+of the frequency and second harmonic and √(b² + Q) (b = cβ sin sK) the same in
+both directions:
+
+    velocity at the linear frequency:   δW = −W₂² A⁴ / √(b² + Q)
+    missing second harmonic:            δW = −32 W W₂ c₂² A⁴ / √(b² + Q)
+    missing static shift:               dE(δ) = 0 identically — second order
+
+(the uniform deviation has dE = −Σₙ u″ₙ = 0 on a travelling wave). These agree with
+the exact projection at small A (velocity −0.000037 against −0.000038, second
+harmonic −0.000092 against −0.000093 at A = 0.15).
+
+*Second order — a three-frequency torus.* The launch leaves free oscillations of
+the uniform (k = 0) and staggered (k = π) modes. The motion is solved as a torus
+u = Σ c_mjl exp i(mθ + jφ₀ + lφ_π) by harmonic balance (every term at its own
+lattice wavevector and frequency; Newton with an analytic Jacobian; converged in
+truncation), matched to the launch by its uniform and staggered displacements and
+its energy.
+
+| A | static shift (derived / measured) | second harmonic | fundamental only | plain cosine |
+|---|---|---|---|---|
+| 0.15 | −0.000029 / −0.000030 | −0.000072 / −0.000071 | −0.000112 / −0.000108 | −0.000150 / −0.000146 |
+| 0.20 | −0.000079 / −0.000080 | −0.000131 / −0.000131 | −0.000254 / −0.000252 | −0.000323 / −0.000321 |
+| 0.30 | −0.000278 / −0.000278 | −0.000311 / −0.000313 | −0.000794 / −0.000786 | −0.000959 / −0.000954 |
+| 0.40 | −0.000583 / −0.000574 | −0.000581 / −0.000582 | −0.001698 / −0.001681 | −0.002022 / −0.002014 |
+
+(κ increments over the exact wave.) **Derived and measured agree within about 1%
+from A = 0.15 to 0.4.** Directly, the exact wave plus an explicit free uniform
+mode gives per-direction shifts within 0.04% (A = 0.3, amplitude 0.02).
+
+*The mechanism.* The wave's second harmonic (k = π, frequency 2W) is
+**near-resonant with the sum of the two free-mode frequencies**, 2W ≈ Ω₀ + Ω_π —
+the **same (0, π) channel as the P-1 decay window** (PROVENANCE §6o, "P-1 — what
+was found": the pump's four-wave decay k₀ + k₀ → 0 + π). The detuning is **0.04
+for −k against 0.24 for +k** at A = 0.3, so a free uniform mode drives a staggered
+one about seven times more strongly for −k. That direction asymmetry is the
+static-shift piece's odd part, and it is why the two pieces interact. A torus that
+leaves the staggered mode out is 2% wrong for −k and correct for +k.
+
+**Beam fourth-order tests, redone with orbit-consistent launches (2026-09-25)**
+(`kappa4_orbit_launch.py`; predictions committed before any beam run, commit
+`9e2c4c5`). The launch is the second-order forced field plus every transverse
+component's velocity at its second-order nonlinear frequency. **Plane-wave check:**
+it removes **96%** of the launch effect, the error bars are **25 times smaller**,
+and the residual, **+0.000039 at A = 0.3**, is the missing third harmonic. The test
+compares κ_box(A)/κ_box(0.10) at A = 0.30 and 0.40 against (1 + r g(A))/(1 + r g(0.10)),
+with g the plane wave's derived physical growth and r from each hypothesis.
+
+- **H0 and S1 are excluded.** H0 fails every L = 4 beam with fill ≥ 0.38 (−14σ to
+  −142σ); S1 fails every L = 4 beam (+3σ to +31σ at T = 900).
+- **S2's status, exactly:** by the criterion committed in advance it **passed three
+  of four L = 4 beams** (w = 1, 1.5, 2) and **failed w = 3, L = 4 by +18σ** (A = 0.4,
+  T = 900; +10.7σ at 0.3). It is consistent there only under a band that allows the
+  launch's third-harmonic residual, and that band was **chosen after seeing the
+  data — post hoc** (`kappa4_orbit_compare.py`). Under it S2 fits all eight L = 4
+  points and S1 none.
+- **w = 2, L = 8 was excluded:** its κ changes 2.5% with record length at A = 0.10
+  (−0.004463 at T = 300, −0.004350 at T = 900), from the slow secondary energy
+  transfer seen in larger boxes (`kappa_side_gpu.py`); the L = 4 boxes agree between
+  T = 300 and 900.
+
+Open (MODEL_SPEC §9): test S2 at w = 3, L = 4 with the third harmonic added to the launch,
+and derive why the fourth-order cross terms cancel.
 
 **P-1 — what was found** (annotated in `shape_zero_predictions_v1.md`):
 
