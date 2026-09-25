@@ -225,6 +225,16 @@ A = 0.10. Physics, seed and readout as section 12 (`kappa_resolution_test.py` is
 imported). Result: P3b matches 7 of 9 sharp points and all three out-of-sample
 beams; the two misses are fourth order in amplitude (MODEL_SPEC §5).
 
+### 14. J-compatibility at every wavelength — the κ it requires (candidate)
+`jcompat_kappa.py` → `jcompat_kappa.txt`: κ_req(k₀) = x/√(K + x), the floor
+κ* = 2c/√(K + 2c) = 0.971737, the q-dimensional corner bound, and the channel
+check at π/2, 0.75π, 0.9π, 15% either side of κ_req. `jcompat_kappa.py scan` →
+`jcompat_kappa_scan.txt`: the open cases down to g = 0.0025 and a κ sweep through
+κ_req. `jcompat_gates.py <κ>` runs `04_scripts/session/model.py`'s gates with one
+line changed (KAPPA) → `jcompat_gates_k0.5.txt`, `_k0.9727.txt`, `_k1.0.txt`: all
+eleven pass at each. `jcompat_effects.py` → `jcompat_effects.txt`: closed-form
+quantities that move (ω, v_g, P-3's C, k_c). MODEL_SPEC §3, "CANDIDATE, NOT ADOPTED".
+
 ### P-1 investigation
 `p1/` — the decay-window investigation behind the P-1 annotation; its README maps
 each file to its finding.

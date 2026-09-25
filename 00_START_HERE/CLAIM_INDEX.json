@@ -1816,6 +1816,38 @@
    "status": []
   },
   {
+   "file": "./shape_zero_tests/README.md",
+   "line": 230,
+   "section": "14. J-compatibility at every wavelength \u2014 the \u03ba it requires (candidate)",
+   "text": "\u03ba* = 2c/\u221a(K + 2c) = 0.971737, the q-dimensional corner bound, and the channel",
+   "numbers": [
+    "0.971737"
+   ],
+   "status": []
+  },
+  {
+   "file": "./shape_zero_tests/README.md",
+   "line": 231,
+   "section": "14. J-compatibility at every wavelength \u2014 the \u03ba it requires (candidate)",
+   "text": "check at \u03c0/2, 0.75\u03c0, 0.9\u03c0, 15% either side of \u03ba_req. `jcompat_kappa.py scan` \u2192",
+   "numbers": [
+    "15"
+   ],
+   "status": []
+  },
+  {
+   "file": "./shape_zero_tests/README.md",
+   "line": 232,
+   "section": "14. J-compatibility at every wavelength \u2014 the \u03ba it requires (candidate)",
+   "text": "`jcompat_kappa_scan.txt`: the open cases down to g = 0.0025 and a \u03ba sweep through",
+   "numbers": [
+    "0.0025"
+   ],
+   "status": [
+    "OPEN"
+   ]
+  },
+  {
    "file": "./shape_zero_tests/p1/README.md",
    "line": 5,
    "section": "P-1 investigation \u2014 which file produced which finding",
@@ -23137,7 +23169,7 @@
   }
  ],
  "counts": {
-  "doc_claims": 1864,
+  "doc_claims": 1867,
   "scripts": 149
  }
 }
