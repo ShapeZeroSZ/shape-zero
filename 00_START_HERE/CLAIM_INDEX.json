@@ -20763,6 +20763,470 @@
    "status": []
   },
   {
+   "file": "./03_current/PREMISE_LEDGER.md",
+   "line": 3,
+   "section": "Shape Zero \u2014 Premise Ledger",
+   "text": "Written 2026-09-25. A new document; it changes no other. It lists every premise the",
+   "numbers": [
+    "2026",
+    "09"
+   ],
+   "status": []
+  },
+  {
+   "file": "./03_current/PREMISE_LEDGER.md",
+   "line": 40,
+   "section": "1a. Principles and postulates",
+   "text": "| P3 | **Persistence** | What endures is what exists to be studied | D1 periodicity; q \u2264 3 (C5); Euclidean signature (C6) | **principle** \u2014 used at D1 only in the formal proofs | `shape_zero_zero_ladder.md`, \"The questio",
+   "numbers": [
+    "14"
+   ],
+   "status": []
+  },
+  {
+   "file": "./03_current/PREMISE_LEDGER.md",
+   "line": 42,
+   "section": "1a. Principles and postulates",
+   "text": "| P5 | **Plurality** | There is more than one thing | spent once: at D8 it selects the generic flow; it excludes \u03ba = 0 and b = \u00b1a | **principle** \u2014 \"purchased outright and spent exactly once\" | `shape_zero_zero_ladder.md",
+   "numbers": [
+    "12"
+   ],
+   "status": []
+  },
+  {
+   "file": "./03_current/PREMISE_LEDGER.md",
+   "line": 44,
+   "section": "1a. Principles and postulates",
+   "text": "| P7 | **The three roles** \u2014 role completeness, role minimality, triadic closure | Blocks of the incidence structure are triads because there are three roles (observer, observed, observation); every point takes every rol",
+   "numbers": [
+    "162"
+   ],
+   "status": []
+  },
+  {
+   "file": "./03_current/PREMISE_LEDGER.md",
+   "line": 45,
+   "section": "1a. Principles and postulates",
+   "text": "| P8 | **J-compatibility, required at every wavelength** | The part of any coupling that does not respect each node's complex structure J must be suppressed by the dynamics at every wavelength \u2014 the opposite-chirality ch",
+   "numbers": [
+    "2026",
+    "09",
+    "25"
+   ],
+   "status": [
+    "SUPERSEDED",
+    "ERRATUM"
+   ]
+  },
+  {
+   "file": "./03_current/PREMISE_LEDGER.md",
+   "line": 47,
+   "section": "1a. Principles and postulates",
+   "text": "| P10 | **The residual as a state coordinate** | The node carries a level-\u226516 element; its octonionic part is the shape the gauge acts on, and B measures how far the state is from octonionic | the residual sector, f = C_",
+   "numbers": [
+    "16"
+   ],
+   "status": []
+  },
+  {
+   "file": "./03_current/PREMISE_LEDGER.md",
+   "line": 56,
+   "section": "1b. Structure",
+   "text": "| S4 | **The cone state** | A node's state is a mass/radial coordinate and a shape/angular coordinate, (m, \u03c3) | MODEL_SPEC \u00a70 | **derived in range** \u2014 derived at D2 and inherited by the model at the platform amplitude (h",
+   "numbers": [
+    "10",
+    "10"
+   ],
+   "status": []
+  },
+  {
+   "file": "./03_current/PREMISE_LEDGER.md",
+   "line": 58,
+   "section": "1b. Structure",
+   "text": "| S6 | **The gyroscopic term** | An intra-node velocity force F = \u03ba\ud835\udd41v | MODEL_SPEC \u00a72; `model.py` `force` | **licensed** \u2014 plurality excludes \u03ba = 0; its value is \u03ba (row K3) | `C1S_SYNTHESIS.md` \u00a712; `02_synthesis/v5-4_ad",
+   "numbers": [
+    "12"
+   ],
+   "status": []
+  },
+  {
+   "file": "./03_current/PREMISE_LEDGER.md",
+   "line": 63,
+   "section": "1c. Parameters and inputs",
+   "text": "Kinds from INPUT_LEDGER \u00a72d (added 2026-09-25) unless stated.",
+   "numbers": [
+    "2026",
+    "09",
+    "25"
+   ],
+   "status": []
+  },
+  {
+   "file": "./03_current/PREMISE_LEDGER.md",
+   "line": 69,
+   "section": "1c. Parameters and inputs",
+   "text": "| K3 | **\u03ba**, gyroscopic ratio | strength of F = \u03ba\ud835\udd41v; the Larmor splitting equals \u03ba exactly | D4; `model.py` KAPPA | **chosen, kind 3 (genuine), with a derived floor** \u03ba \u2265 \u03ba\\* = 2c/\u221a(K + 2c) = 0.971737 (C14). The floor i",
+   "numbers": [
+    "0.971737",
+    "2026",
+    "09",
+    "25"
+   ],
+   "status": []
+  },
+  {
+   "file": "./03_current/PREMISE_LEDGER.md",
+   "line": 70,
+   "section": "1c. Parameters and inputs",
+   "text": "| K4 | **the a\u2013b angle** | direction of D8's second generator | D8 | **chosen, kind 3** \u2014 the D8 frequency ratio sweeps [1.04, 23.9]; plurality forbids only b = \u00b1a | INPUT_LEDGER \u00a72d #4, \u00a73.2 |",
+   "numbers": [
+    "1.04"
+   ],
+   "status": []
+  },
+  {
+   "file": "./03_current/PREMISE_LEDGER.md",
+   "line": 73,
+   "section": "1c. Parameters and inputs",
+   "text": "| K7 | **\u03b2**, lattice gyroscopic coupling | coefficient of \u03b2c(v\u208a \u2212 v\u208b); 0.05 in the \u03ba scripts, no derivation; carries the dimension of time | the synthetic U(1) | **chosen; kind 2 for the pinning, kind 2 at leading order",
+   "numbers": [
+    "0.05"
+   ],
+   "status": []
+  },
+  {
+   "file": "./03_current/PREMISE_LEDGER.md",
+   "line": 74,
+   "section": "1c. Parameters and inputs",
+   "text": "| K8 | **\u03b6**, cone deficit | the D2 arena's deficit (named \u03b2 before 2026-09-25) | D2 | **open / unclassified** \u2014 observable only through an unsupplied Lorentzian embedding; an open 2\u03b6 inconsistency | INPUT_LEDGER \u00a72d #2,",
+   "numbers": [
+    "2026",
+    "09",
+    "25",
+    "14"
+   ],
+   "status": [
+    "OPEN"
+   ]
+  },
+  {
+   "file": "./03_current/PREMISE_LEDGER.md",
+   "line": 81,
+   "section": "1c. Parameters and inputs",
+   "text": "| K15 | **Protocol settings** | packet wavenumber k\u2080 = \u03c0/2, amplitude 10\u207b\u00b3, DT = 0.02, lattice sizes, segment strengths g, RAMP | every simulation | **chosen**; kind not classified in the sources. Known dependences: J-co",
+   "numbers": [
+    "10",
+    "0.02"
+   ],
+   "status": []
+  },
+  {
+   "file": "./03_current/PREMISE_LEDGER.md",
+   "line": 97,
+   "section": "2a. Proved (machine-verified or a cited proof)",
+   "text": "| C10 | A Steiner triple system with a role colouring has exactly 7 points, and every STS(7) is the Fano plane \u2014 Theorem 3.6, \"Roles Force Fano\", in full | Prove2Me missions 5, 6 \u2014 **approved, published** 2026-09-24 | P7",
+   "numbers": [
+    "2026",
+    "09",
+    "24"
+   ],
+   "status": [
+    "ERRATUM",
+    "PROVED"
+   ]
+  },
+  {
+   "file": "./03_current/PREMISE_LEDGER.md",
+   "line": 104,
+   "section": "2b. Derived",
+   "text": "| C3 | The Larmor splitting equals \u03ba exactly (0.0524, 0.1518, 0.3979, 1.0001 at \u03ba = 0.05, 0.15, 0.40, 1.00) | exact algebra, verified | S5, S6, K3 | INPUT_LEDGER \u00a73.1; `shape_zero_zero_ladder.md`, D4; `v5-4_addendum_delt",
+   "numbers": [
+    "0.0524",
+    "0.1518",
+    "0.3979",
+    "1.0001",
+    "0.05",
+    "0.15",
+    "0.40",
+    "1.00"
+   ],
+   "status": [
+    "VERIFIED"
+   ]
+  },
+  {
+   "file": "./03_current/PREMISE_LEDGER.md",
+   "line": 107,
+   "section": "2b. Derived",
+   "text": "| C6 | The arenas are **Euclidean** at every rung | persistence excludes the indefinite (split) branch of Hurwitz | P3 | `C1S_SYNTHESIS.md` \u00a714 |",
+   "numbers": [
+    "14"
+   ],
+   "status": []
+  },
+  {
+   "file": "./03_current/PREMISE_LEDGER.md",
+   "line": 111,
+   "section": "2b. Derived",
+   "text": "| C14 | **\u03ba \u2265 \u03ba\\* = 2c/\u221a(K + 2c) = 0.971737** at c = 1, K = \u221a5 (equal to 2\u03c6^(\u22123/2) because 2 + \u221a5 = \u03c6\u00b3 \u2014 a consequence of K = \u221a5, not a selection). A floor only: no principle supplies an upper side. At q = 3 the same flo",
+   "numbers": [
+    "0.971737",
+    "3/2",
+    "2.091"
+   ],
+   "status": []
+  },
+  {
+   "file": "./03_current/PREMISE_LEDGER.md",
+   "line": 112,
+   "section": "2b. Derived",
+   "text": "| C15 | Orbit metric scales **2 at D4, 6 at D8** | \\|1\\| = 1, forced by 1\u00b71 = 1 and the composition law | the composition law (D4, D8 algebras) | MODEL_SPEC \u00a70b; SCALE_SCOPING \u00a71c; `C1S_SYNTHESIS.md` \u00a713 |",
+   "numbers": [
+    "13"
+   ],
+   "status": []
+  },
+  {
+   "file": "./03_current/PREMISE_LEDGER.md",
+   "line": 116,
+   "section": "2b. Derived",
+   "text": "| C19 | Pure numbers: harmonic ratios 1, 2, 3; \u2016c\u2016\u00b2 = 42; 16 valid orientations of 128; dim Der = 14; Casimirs 0, 1/3, 4/3, 5/6; multiplicities 1, 3, 3\u0304; block multiplicity 4 above 8 | listed as the construction's output",
+   "numbers": [
+    "42",
+    "16",
+    "128",
+    "14",
+    "1/3",
+    "4/3",
+    "5/6"
+   ],
+   "status": []
+  },
+  {
+   "file": "./03_current/PREMISE_LEDGER.md",
+   "line": 117,
+   "section": "2b. Derived",
+   "text": "| C20 | sin\u00b2\u03b8_W = **3/8** (tree-level unification value) and the hypercharges from anomaly cancellation \u2014 **given the representations** | group theory; anomaly cancellation (conditions > parameters) | the representations",
+   "numbers": [
+    "3/8"
+   ],
+   "status": []
+  },
+  {
+   "file": "./03_current/PREMISE_LEDGER.md",
+   "line": 119,
+   "section": "2b. Derived",
+   "text": "| C22 | The first stable articulation of energetic distinction is the resonant triad \u2014 \"the count and the shape are derived\" | normal-form argument, measured to 10\u207b\u00b9\u00b3\u201310\u207b\u00b9\u2074 | P2, P3, P4 | `shape_zero_zero_ladder.md`, \"Po",
+   "numbers": [
+    "10",
+    "10"
+   ],
+   "status": []
+  },
+  {
+   "file": "./03_current/PREMISE_LEDGER.md",
+   "line": 126,
+   "section": "2c. Measured (simulation, with checks that could have failed)",
+   "text": "| C13 | **J-compatibility emerges from the dynamics**: the J-breaking part of a coupling is suppressed completely at first order in g when the opposite-chirality channel is closed (cos k\u2032 = cos k\u2080 + \u03ba\u03c9/c > 1), and not wh",
+   "numbers": [
+    "10"
+   ],
+   "status": [
+    "OPEN"
+   ]
+  },
+  {
+   "file": "./03_current/PREMISE_LEDGER.md",
+   "line": 127,
+   "section": "2c. Measured (simulation, with checks that could have failed)",
+   "text": "| C24 | **Non-commuting gauge ordering matches its independent prediction**: q = 1 gate 7 to 0.2\u20130.45\u00b0; q = 3 `q3_gate.py` to 0.001\u20130.005\u00b0 with the per-mode launch and one readout time per pair (floor 0.000\u00b0 at \u03ba\\* and \u03ba",
+   "numbers": [
+    "0.45",
+    "0.001",
+    "0.005",
+    "0.000"
+   ],
+   "status": [
+    "VERIFIED",
+    "FAILED"
+   ]
+  },
+  {
+   "file": "./03_current/PREMISE_LEDGER.md",
+   "line": 128,
+   "section": "2c. Measured (simulation, with checks that could have failed)",
+   "text": "| C25 | u(3) dynamical verification on the platform: admissible class dimension 9; ordering 65.12\u00b0 measured, 64.97\u00b0 predicted (\u03ba = 0.5; platform script) \u2014 \"synthetic \u2026 not colour SU(3)\" | `04_scripts/platform/phi_gauge_u",
+   "numbers": [
+    "65.12",
+    "64.97"
+   ],
+   "status": []
+  },
+  {
+   "file": "./03_current/PREMISE_LEDGER.md",
+   "line": 129,
+   "section": "2c. Measured (simulation, with checks that could have failed)",
+   "text": "| C26 | The **pinned asymmetry's A\u00b2 coefficient** (the second \u03ba): plane-wave \u03ba = \u22120.0175 at small amplitude, derived by perturbation theory (\u22120.01748) and measured (\u22120.0176 at A = 0.10); fourth order \u03ba(A) = \u22120.017480 \u2212 0",
+   "numbers": [
+    "0.0175",
+    "0.01748",
+    "0.0176",
+    "0.10",
+    "0.017480",
+    "0.002947"
+   ],
+   "status": []
+  },
+  {
+   "file": "./03_current/PREMISE_LEDGER.md",
+   "line": 130,
+   "section": "2c. Measured (simulation, with checks that could have failed)",
+   "text": "| C27 | **P-3, spinor self-precession**: \u03a9 = C\u00b7A\u00b2\u00b7n_z with n_z conserved; at \u03ba\\* C = \u22120.0491 predicted, \u22120.0495 measured (\u03ba = 0.5: \u22120.0896 / \u22120.0899) | closed form; `phi_gauge_precession.py`, `shape_zero_tests/p3_kstar.p",
+   "numbers": [
+    "0.0491",
+    "0.0495",
+    "0.0896",
+    "0.0899"
+   ],
+   "status": []
+  },
+  {
+   "file": "./03_current/PREMISE_LEDGER.md",
+   "line": 132,
+   "section": "2c. Measured (simulation, with checks that could have failed)",
+   "text": "| C29 | The cone state holds at the platform amplitude (L conserved to 3\u00d710\u207b\u2074 at 10\u207b\u00b3) | measured | S4, P9 | MODEL_SPEC \u00a70a |",
+   "numbers": [
+    "10",
+    "10"
+   ],
+   "status": []
+  },
+  {
+   "file": "./03_current/PREMISE_LEDGER.md",
+   "line": 133,
+   "section": "2c. Measured (simulation, with checks that could have failed)",
+   "text": "| C30 | **Negative results, established:** the forced spectra do not match measured spectra (charged-lepton m\u00b2 ratios off by four to seven orders; Regge trajectories linear, not quadratic); \u03b1 is not derivable (137 prime ",
+   "numbers": [
+    "137",
+    "15"
+   ],
+   "status": [
+    "VERIFIED"
+   ]
+  },
+  {
+   "file": "./03_current/PREMISE_LEDGER.md",
+   "line": 142,
+   "section": "3. Hoped for, not established",
+   "text": "| **\u03b1** | closed as an input; the model constrains the form of its contributions, not its value; the 128 and exp(42) proximities are recorded as numerology | MODEL_SPEC \u00a74c.4, \u00a74c.4a, \u00a74c.4b |",
+   "numbers": [
+    "128",
+    "42"
+   ],
+   "status": []
+  },
+  {
+   "file": "./03_current/PREMISE_LEDGER.md",
+   "line": 143,
+   "section": "3. Hoped for, not established",
+   "text": "| **sin\u00b2\u03b8_W as measured** | 3/8 is the tree-level unification value; matching 0.23122 at M_Z needs RG running the model does not have | INPUT_LEDGER \u00a72; SCALE_SCOPING \u00a73a |",
+   "numbers": [
+    "3/8",
+    "0.23122"
+   ],
+   "status": [
+    "VERIFIED"
+   ]
+  },
+  {
+   "file": "./03_current/PREMISE_LEDGER.md",
+   "line": 148,
+   "section": "3. Hoped for, not established",
+   "text": "| **Lorentzian spacetime, gravity, lensing** | the arenas are Euclidean (C6); the field equations and Maxwell are \"forced conditionally, on a base existing\"; \u03b6's lensing reading needs an embedding the ladder does not sup",
+   "numbers": [
+    "1/4",
+    "14"
+   ],
+   "status": []
+  },
+  {
+   "file": "./03_current/PREMISE_LEDGER.md",
+   "line": 149,
+   "section": "3. Hoped for, not established",
+   "text": "| **The golden ratio as physics** | the source spec reports \u221a5 \"decorative in the dynamics layer\" on its universality control; at D8 \u03c6 is attainable as a frequency ratio, and so is every value in [1.04, 23.9] \u2014 \"attainab",
+   "numbers": [
+    "1.04"
+   ],
+   "status": []
+  },
+  {
+   "file": "./03_current/PREMISE_LEDGER.md",
+   "line": 155,
+   "section": "3. Hoped for, not established",
+   "text": "| **The classical/quantum interface term** | \"Conceptually motivated, derivation incomplete\" | `shape_zero_v5-3.txt`, line 198 |",
+   "numbers": [
+    "198"
+   ],
+   "status": []
+  },
+  {
+   "file": "./03_current/PREMISE_LEDGER.md",
+   "line": 167,
+   "section": "4. Where sources state philosophical motivations",
+   "text": "| the ranks 0\u20133, the void, the golden ratio (P7, P9) | `01_source/spec/shape_zero_v5-3.txt`, \u00a71 \"Core Ontology\" (lines 16\u201319) |",
+   "numbers": [
+    "16",
+    "19"
+   ],
+   "status": []
+  },
+  {
+   "file": "./03_current/PREMISE_LEDGER.md",
+   "line": 168,
+   "section": "4. Where sources state philosophical motivations",
+   "text": "| the golden ratio in the force law (P9) | `01_source/spec/shape_zero_v5-3.txt`, \"Universality control and the status of the golden ratio (v5.3)\", paragraph beginning \"Where the golden ratio actually lives\" (line 157) |",
+   "numbers": [
+    "157"
+   ],
+   "status": []
+  },
+  {
+   "file": "./03_current/PREMISE_LEDGER.md",
+   "line": 169,
+   "section": "4. Where sources state philosophical motivations",
+   "text": "| the arena as a whole | `01_source/shape_zero_zero_ladder.md`, \"The question and the method\" (lines 10\u201313); D2 (lines 51\u201352) |",
+   "numbers": [
+    "10",
+    "13",
+    "51",
+    "52"
+   ],
+   "status": []
+  },
+  {
+   "file": "./03_current/PREMISE_LEDGER.md",
+   "line": 170,
+   "section": "4. Where sources state philosophical motivations",
+   "text": "| the three roles (P7) | `03_current/INPUT_LEDGER.md` \u00a72b2, \"Why n = 3\" and \"The algebra corroborates independently\" (lines 160\u2013173); `01_source/shape_zero_zero_ladder.md`, \"Postscript\" (line 164); `01_source/cover_notes",
+   "numbers": [
+    "160",
+    "173",
+    "164"
+   ],
+   "status": []
+  },
+  {
+   "file": "./03_current/PREMISE_LEDGER.md",
+   "line": 171,
+   "section": "4. Where sources state philosophical motivations",
+   "text": "| the given (P1) | `03_current/INPUT_LEDGER.md` \u00a71 (lines 22\u201327) |",
+   "numbers": [
+    "22",
+    "27"
+   ],
+   "status": []
+  },
+  {
    "file": "./03_current/SCALE_SCOPING.md",
    "line": 3,
    "section": "Scale scoping \u2014 what the model can and cannot fix, before any derivation",
@@ -24793,7 +25257,7 @@
   },
   {
    "file": "./shape_zero_tests/q3_floor_probe.py",
-   "lines": 161,
+   "lines": 168,
    "banner": false,
    "blocked": false,
    "fixes": [],
@@ -24991,7 +25455,7 @@
   }
  ],
  "counts": {
-  "doc_claims": 1998,
+  "doc_claims": 2037,
   "scripts": 155
  }
 }
