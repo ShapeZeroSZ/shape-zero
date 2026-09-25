@@ -1,0 +1,9 @@
+POST-HOC reading of kappa4_orbit3_measure_output.txt (T = 900), written after the run; the committed test is kappa4_orbit3_predictions.txt (de96bc3).
+POST-HOC: the beam's growth as r x plane-wave growth, r_meas = (ratio - 1)/(g(A) - g(0.10)) approx
+   w    L    r(S2)   r(S1)   r_meas A=0.30   r_meas A=0.40   where between S2 and S1   L2 -> L3 change at 0.30
+  1.5    4   0.254   0.547     0.351           0.350           +0.33                  +0.105%
+  2.0    4   0.461   0.635     0.547           0.549           +0.50                  +0.134%
+  3.0    4   0.712   0.767     0.750           0.758           +0.68                  +0.174%
+  1.0    4   0.060   0.406     0.043           0.050           -0.05                  +0.069%
+
+  plane wave, same launches (ratio 0.30/0.10): linear 1.0650 (-0.01869/-0.01755, T = 300), L2 1.01177, L3 1.01411, exact wave 1.01371

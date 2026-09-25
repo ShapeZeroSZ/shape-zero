@@ -1562,14 +1562,33 @@ with g the plane wave's derived physical growth and r from each hypothesis.
   T = 900; +10.7σ at 0.3). It is consistent there only under a band that allows the
   launch's third-harmonic residual, and that band was **chosen after seeing the
   data — post hoc** (`kappa4_orbit_compare.py`). Under it S2 fits all eight L = 4
-  points and S1 none.
+  points and S1 none. [**CORRECTED 2026-09-25:** with the third harmonic added to the
+  launch (plane-wave residual down from +0.000039 to −0.000006 at A = 0.3;
+  `kappa4_orbit3_launch.py`), **S2 fails three of the four L = 4 beams** by the
+  criterion committed in advance (commit `de96bc3`): w = 1.5 (−6.1σ, −11.1σ at
+  A = 0.30, 0.40; T = 900), w = 2 (−11.7σ, −21.9σ) and w = 3 (−9.9σ, −21.3σ) grow
+  **more** than S2 allows. The earlier "passed three of four" came from the old
+  launch's missing third harmonic, which under-read the beams' growth. The failures
+  at w = 1.5 and w = 2 are **robust**; w = 3 is **marginal** — a 0.05% miss, within
+  about two of the estimated remaining launch residuals (each order added to the
+  launch moves the plane wave by about a sixth of the previous step); w = 1 **does
+  not discriminate** (±0.0017).]
+- **Post hoc** (`kappa4_orbit3_reading_output.txt`, written after the run): the
+  beams' growth is a **clean A² law** — the implied r is consistent between
+  A = 0.30 and 0.40 (0.351/0.350 at w = 1.5, 0.547/0.549 at w = 2, 0.750/0.758 at
+  w = 3) — and it lies **0.33, 0.50 and 0.68 of the way from S2 to S1** at fills
+  0.38, 0.53 and 0.74. **The fourth-order cross terms are partly present, not
+  zero.** Also post hoc: each fraction is close to 0.9 × the fill (0.34, 0.48, 0.66).
 - **w = 2, L = 8 was excluded:** its κ changes 2.5% with record length at A = 0.10
   (−0.004463 at T = 300, −0.004350 at T = 900), from the slow secondary energy
   transfer seen in larger boxes (`kappa_side_gpu.py`); the L = 4 boxes agree between
   T = 300 and 900.
 
-Open (§9): test S2 at w = 3, L = 4 with the third harmonic added to the launch,
-and derive why the fourth-order cross terms cancel.
+~~Open (§9): test S2 at w = 3, L = 4 with the third harmonic added to the launch,
+and derive why the fourth-order cross terms cancel.~~ [**Superseded 2026-09-25:** the
+test was done — S2 fails three of four — and the cross terms do not cancel.] Open
+(§9): derive the beam's fourth-order cross kernel, with the measured r values as
+the target.
 
 **The PINNING is width-independent at every configuration tested** — that is the
 invariance the experiment rests on, and it is unaffected.
@@ -2063,7 +2082,8 @@ established — see §7b.*
 | **what fixes C_r** | the residual coupling *form* is determined (§4b.1); its *strength* is not |
 | ~~fourth-order cross-modulation (κ, F at A = 0.30)~~ **DONE for the plane wave, 2026-09-25** (§5, "κ to fourth order"); the original entry: | the derived F is second order; it matches every sharp point except the two narrowest beams at A = 0.30, which it matches at A = 0.10 (§5, "The cross-modulation factor F, derived") |
 | ~~beam fourth order with orbit-consistent launches~~ **DONE 2026-09-25** (§5): launch pieces derived, H0 and S1 excluded; the original entry: | the beam fourth-order tests (H0 excluded at large fill; S1 against S2 unresolved) used plain-cosine launches, so they mix physics with launch effects. Redo them with orbit-consistent (second-order) launches (`kappa_seed2_test.py`), derive the beam's fourth-order kernel, and derive the launch's static-shift and second-harmonic pieces, which are measured, not derived (§5) |
-| **S2 at w = 3, L = 4, and why the cross terms cancel** | two things: (1) test S2 at w = 3, L = 4 with the third harmonic added to the launch — S2 failed that beam by +18σ under the committed criterion and fits it only under a post-hoc third-harmonic band; (2) derive why the fourth-order cross terms cancel, leaving only the box-wide component's own term (S2 is a surviving hypothesis, not a derivation) |
+| ~~S2 at w = 3, L = 4, and why the cross terms cancel~~ **SUPERSEDED 2026-09-25** (§5): with the third harmonic in the launch S2 fails three of four L = 4 beams, and the cross terms are partly present; the original entry: | two things: (1) test S2 at w = 3, L = 4 with the third harmonic added to the launch — S2 failed that beam by +18σ under the committed criterion and fits it only under a post-hoc third-harmonic band; (2) derive why the fourth-order cross terms cancel, leaving only the box-wide component's own term (S2 is a surviving hypothesis, not a derivation) |
+| **the beam's fourth-order cross kernel** | derive it — every fourth-order cross term between a beam's transverse components, on the lattice — with the measured r values as the target: 0.351/0.350 (w = 1.5), 0.547/0.549 (w = 2), 0.750/0.758 (w = 3) at L = 4, A = 0.30/0.40, which lie 0.33, 0.50, 0.68 of the way from the self-only limit S2 to the all-terms limit S1 (§5, measured with the third-harmonic launch, `kappa4_orbit3_launch.py`) |
 | ~~verify the 0.39° attribution~~ | **CLOSED** — readout timing; the Abelian floor is exactly 0 under clearing readout at q = 1 and q = 3 |
 | ~~wavenumber-averaged prediction at q = 3~~ | **CLOSED** — closes the gap to 0.04–0.17°; the q = 3 gauge sector is quantitatively verified |
 | ~~save the q = 3 scripts~~ | **CLOSED** — all test scripts and results are in `shape_zero_tests/` in this repository, with both `model.py` versions pinned by content hash (`c49da46f` for q = 1 work, `948b09e8` for q = 3). Runs from the repository alone; `q3_kavg.py` reproduces its saved result with difference 0.0 |
