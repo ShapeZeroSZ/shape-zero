@@ -187,7 +187,10 @@ at 20-site separation:
 | **ordering splitting** | **65.12° measured, 64.97° predicted** |
 | energy drift | 10⁻⁷ throughout |
 
-Same footing as the u(2) benchmark (59.86° vs 59.84°).
+Same footing as the u(2) benchmark (59.86° vs 59.84°). [Both benchmarks are at
+κ = 0.5 (platform scripts) — superseded by the change of operating point
+(2026-09-25), not retracted, and not re-run at κ\*; `model.py`'s own gate 7 at κ\* is in
+MODEL_SPEC §3, "ADOPTED".]
 
 **Scope:** u(3) on a lattice fibre is a *synthetic* gauge structure, not colour
 SU(3) acting on quark representations. "Consistency", not QCD.
@@ -211,7 +214,7 @@ listed in §2d as remaining free.
 |---|---|---|---|---|---|
 | 1 | **ω** | the unit of time | D1, the clock | it *is* the unit, not a prediction | **1 — unit convention.** Model time is measured in the unit the φ-well fixes; ω converts it to physical time, t_phys = t_model/ω. Every dimensionless prediction is a ratio computed in model units — Δω/W, κ, F, frequency ratios — and is unchanged under ω → λω, which multiplies every physical frequency by λ |
 | 2 | **ζ**, cone deficit (formerly β) | the D2 arena | D2 | contingent on an unresolved embedding | **Unclassified.** Without the Lorentzian embedding ζ has no observable consequence (§3.3), so nothing depends on it; with it, the deflection π(1/ζ − 1) does, and it would be kind 3 unless B-2 closes. Settled by supplying or refuting the embedding (`02_synthesis/C1S_SYNTHESIS.md` §14) and by resolving the 2ζ inconsistency (§3.3) |
-| 3 | **κ**, gyroscopic ratio | D4 coupling strength | D4 | **measurable in a lab now** | **3 — genuine.** The physics depends on it: the Larmor splitting equals κ exactly (§3.1), and closing the J-breaking channel needs κ from 0.02 to 0.97 with k (MODEL_SPEC §3). No principle fixes its value; plurality excludes only κ = 0 (`C1S_SYNTHESIS.md` §12). model.py's 0.5 is not shown to be irrelevant to any result. [**Candidate, not adopted, 2026-09-25:** requiring J-compatibility at every wavelength gives the floor κ ≥ 2c/√(K + 2c) = 0.971737 (q = 1; 2.091 at q = 3 if the coupling does not conserve transverse momentum — open); a lower bound only, no upper side from any principle (MODEL_SPEC §3)] |
+| 3 | **κ**, gyroscopic ratio | D4 coupling strength | D4 | **measurable in a lab now** | **3 — genuine.** The physics depends on it: the Larmor splitting equals κ exactly (§3.1), and closing the J-breaking channel needs κ from 0.02 to 0.97 with k (MODEL_SPEC §3). No principle fixes its value; plurality excludes only κ = 0 (`C1S_SYNTHESIS.md` §12). model.py's 0.5 is not shown to be irrelevant to any result. [**Candidate, not adopted, 2026-09-25:** requiring J-compatibility at every wavelength gives the floor κ ≥ 2c/√(K + 2c) = 0.971737 (q = 1; 2.091 at q = 3 if the coupling does not conserve transverse momentum — open); a lower bound only, no upper side from any principle (MODEL_SPEC §3)] [**ADOPTED 2026-09-25 — genuine parameter with a DERIVED FLOOR.** The principle "J-compatibility required at every wavelength" gives **κ ≥ κ\* = 2c/√(K + 2c) = 0.971737**, at q = 3 as at q = 1 (the model's slab segments conserve transverse momentum; a finite-width segment would need 2.091). The floor is derived; the exact value is not — it remains for experiment (the Larmor split, §3.1), and the floor is a test the model can fail (a measured split below 2c/√(K + 2c) contradicts the principle). model.py's operating value is now **κ = κ\*, CHOSEN**; results at 0.5 are superseded by the change of operating point, not retracted (MODEL_SPEC §3, "ADOPTED")] |
 | 4 | **a–b angle** | D8 flow frequency ratio | D8 | measurable in the same setting | **3 — genuine.** The D8 frequency ratio sweeps monotonically over [1.04, 23.9] as the angle runs 5°–150° (§3.2); plurality forbids only b = ±a |
 | 5 | **C_r** | residual coupling strength | the residual sector (MODEL_SPEC §4b.1) | dimensionless; nothing yet fixes it | **3 — genuine.** The residual oscillates at f_res ∝ C_r (MODEL_SPEC §9, closed items; §5b.7), so the physics depends on it; the form is fixed, the strength by nothing (MODEL_SPEC §4b.1) |
 | 6 | **c**, elastic coupling | inter-node elastic coupling, F = c(x₊ + x₋ − 2x) | the lattice (MODEL_SPEC §3) | **CHOSEN** — c = 1 in every script; added 2026-09-25 (`03_current/SCALE_SCOPING.md` §1b). Not the speed of light — see MODEL_SPEC "Notation" | **3 — genuine, as the ratio c/√5.** *Marked CHOSEN.* It cannot be scaled away: the well's fixed coefficients (√5 and 1) fix both the time and the amplitude unit, and a lattice spacing of one site cannot be rescaled, so no rescaling absorbs c (`shape_zero_tests/param_classify.py`, docstring). The physics depends on it: derived κ₂ = −0.026389, −0.017480, −0.009316 at c = 0.5, 1, 2 (`param_classify_output.txt`). Only in the long-wavelength continuum limit would c become a length-unit convention |
@@ -230,6 +233,14 @@ F = −(x² − x − 1), with fixed points at the golden-ratio roots and linear
 √5, is **stated** in MODEL_SPEC §1 and **not derived** there or in this ledger. It
 is a premise of the lattice model. (Recorded 2026-09-25, from
 `03_current/SCALE_SCOPING.md` §1b.)
+
+**Principle, not a parameter: J-compatibility required at every wavelength.**
+(Adopted 2026-09-25; it replaces the premise "J-compatibility chosen at short
+wavelength".) The J-breaking part of any coupling must be suppressed by the
+dynamics at every wavelength — the opposite-chirality channel closed at every
+travelling wavenumber. Derived consequence: the floor κ ≥ 2c/√(K + 2c) = 0.971737
+on row 3 (MODEL_SPEC §3, "ADOPTED"). It fixes a floor, not a value: no principle in
+the repository supplies an upper side.
 
 **ℏ is NOT derived — retracted.** See MODEL_SPEC §4c.2a-R. The step converting
 tr(λ_aλ_b) = 2δ_ab into a geometric radius was a category error: a generator

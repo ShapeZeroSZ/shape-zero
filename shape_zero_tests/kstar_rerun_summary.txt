@@ -1,0 +1,103 @@
+========================================================================================
+kappa-DEPENDENT RESULTS: kappa = 0.5 (superseded)  ->  kappa* = 0.971737
+========================================================================================
+
+1. model.py gates (status line and its value line)
+  1. harness calibrated                        PASS->PASS  same
+  2. free propagation                          PASS->PASS  same
+  3. complex structure selected                PASS->PASS  CHANGED
+      0.5 : chirality purity 0.9834  drift 9.90e-08
+      k*  : chirality purity 0.9818  drift 5.05e-08
+  4. passivity gives u(n), dim n^2             PASS->PASS  same
+  5. n=1 asymmetry, MEASURED                   PASS->PASS  same
+  6. kappa and the beta-collapse               PASS->PASS  same
+  7. u(2) ordering vs independent prediction   PASS->PASS  CHANGED
+      0.5 : split 101.12 deg vs predicted 100.80 deg | per-order 0.29 / 0.17 deg | Abelian floor 0.016 deg (algebra: 0) | drift 3.0e-07
+      k*  : split 98.74 deg vs predicted 98.26 deg | per-order 0.27 / 0.23 deg | Abelian floor 0.049 deg (algebra: 0) | drift 1.5e-07
+  7. u(3) ordering vs independent prediction   PASS->PASS  CHANGED
+      0.5 : split 117.92 deg vs predicted 118.29 deg | per-order 0.44 / 0.29 deg | Abelian floor 0.014 deg (algebra: 0) | drift 3.0e-07
+      k*  : split 106.86 deg vs predicted 107.15 deg | per-order 0.43 / 0.33 deg | Abelian floor 0.043 deg (algebra: 0) | drift 1.5e-07
+  8. Abelian control (commuting axes, unequal  PASS->PASS  CHANGED
+      0.5 : 0.0164 deg   (theory 0; equal strengths would be vacuous)
+      k*  : 0.0487 deg   (theory 0; equal strengths would be vacuous)
+  9. cone state: radial/angular split          PASS->PASS  CHANGED
+      0.5 : |sigma|-1 max 0.0e+00, energy split residual 0.0e+00, radial K 2.02e-66 vs angular 2.36e-03
+      k*  : |sigma|-1 max 0.0e+00, energy split residual 0.0e+00, radial K 2.47e-66 vs angular 1.88e-03
+  10. base runs at q = 1, 2, 3 with so(q) angu PASS->PASS  CHANGED
+      0.5 : q=1:512 sites drift 3.3e-08 so(1)=0  q=2:484 sites drift 3.4e-08 so(2)=1  q=3:1000 sites drift 4.2e-08 so(3)=3
+      k*  : q=1:512 sites drift 1.7e-08 so(1)=0  q=2:484 sites drift 1.8e-08 so(2)=1  q=3:1000 sites drift 2.3e-08 so(3)=3
+  11. residual: inert at C_r=0, active otherwi PASS->PASS  same
+
+2. gate7_readout.py (q = 1; split / predicted / floor, degrees)
+  u(2) model.py split 101.12 -> 98.74   pred nan -> nan   floor 0.01639 -> 0.04870   per-order 0.29/0.17 -> 0.27/0.23
+  u(2) old      split 101.12 -> 98.74   pred 100.80 -> 98.26   floor 0.01639 -> 0.04870   per-order 0.29/0.17 -> 0.27/0.23
+  u(2) old1200  split 101.12 -> 98.74   pred 100.80 -> 98.26   floor 0.01639 -> 0.04874   per-order 0.28/0.17 -> 0.27/0.23
+  u(2) clear    split 101.12 -> 98.57   pred 100.80 -> 98.26   floor 0.00008 -> 0.00004   per-order 0.20/0.19 -> 0.10/0.24
+  u(3) model.py split 117.92 -> 106.86   pred nan -> nan   floor 0.01371 -> 0.04309   per-order 0.44/0.29 -> 0.43/0.33
+  u(3) old      split 117.92 -> 106.86   pred 118.29 -> 107.15   floor 0.01371 -> 0.04309   per-order 0.44/0.29 -> 0.43/0.33
+  u(3) old1200  split 117.93 -> 106.86   pred 118.29 -> 107.15   floor 0.01371 -> 0.04311   per-order 0.42/0.29 -> 0.45/0.32
+  u(3) clear    split 117.93 -> 107.03   pred 118.29 -> 107.15   floor 0.00003 -> 0.00003   per-order 0.45/0.23 -> 0.43/0.22
+
+3. q3_gate.py (260 x 8 x 8)
+  predictor averaged: gate PASS -> PASS
+     u(2) AB order               0.143 ->    0.311 deg (tol 1.0)
+     u(2) BA order               0.140 ->    0.222 deg (tol 1.0)
+     u(2) split                  0.125 ->    0.101 deg (tol 1.0)
+     u(2) Abelian floor          0.000 ->    0.066 deg (tol 0.5)
+     u(2) split measured / predicted    105.48/105.35 -> 99.88/99.98
+     u(3) AB order               0.104 ->    0.202 deg (tol 1.0)
+     u(3) BA order               0.107 ->    0.240 deg (tol 1.0)
+     u(3) split                  0.175 ->    0.242 deg (tol 1.0)
+     u(3) Abelian floor          0.000 ->    0.030 deg (tol 0.5)
+     u(3) split measured / predicted    62.31/62.48 -> 94.76/95.00
+  predictor carrier: gate FAIL -> FAIL
+     u(2) AB order               2.414 ->    2.284 deg (tol 1.0)
+     u(2) BA order               2.863 ->    3.116 deg (tol 1.0)
+     u(2) split                  4.677 ->    1.620 deg (tol 1.0)
+     u(2) Abelian floor          0.000 ->    0.066 deg (tol 0.5)
+     u(2) split measured / predicted    105.48/100.80 -> 99.88/98.26
+     u(3) AB order               5.104 ->    4.533 deg (tol 1.0)
+     u(3) BA order               5.107 ->    4.582 deg (tol 1.0)
+     u(3) split                  2.664 ->    7.755 deg (tol 1.0)
+     u(3) Abelian floor          0.000 ->    0.030 deg (tol 0.5)
+     u(3) split measured / predicted    62.31/64.97 -> 94.76/102.51
+
+4. J-compatibility table (seed 1; ratio = eff_x/eff_c, leak_x)
+   old readout (kscan.py; the pi/2 row is the check mode at g = 0.01):
+   pi/4  cos k' +1.431 -> +1.934
+      g 0.0025  ratio 0.0033 -> 0.0018   leak 8.8e-09 -> 3.3e-09
+      g 0.0050  ratio 0.0058 -> 0.0030   leak 4.0e-08 -> 1.5e-08
+      g 0.0100  ratio 0.0110 -> 0.0057   leak 1.7e-07 -> 6.2e-08
+      g 0.0200  ratio 0.0216 -> 0.0112   leak 6.9e-07 -> 2.5e-07
+      g 0.0400  ratio 0.0427 -> 0.0221   leak 2.8e-06 -> 1.0e-06
+   3pi/4 cos k' +0.363 -> +1.178
+      g 0.0025  ratio 0.0702 -> 0.0027   leak 2.4e-05 -> 1.9e-08
+      g 0.0050  ratio 0.0775 -> 0.0038   leak 9.2e-05 -> 7.5e-08
+      g 0.0100  ratio 0.0902 -> 0.0065   leak 3.6e-04 -> 2.9e-07
+      g 0.0200  ratio 0.1040 -> 0.0126   leak 1.4e-03 -> 1.2e-06
+      g 0.0400  ratio 0.1167 -> 0.0252   leak 4.9e-03 -> 4.6e-06
+   clearing readout (openrows.py, 1200 sites):
+   pi/2  g 0.0025  ratio 0.0762 -> 0.0020   leak 2.1e-05 -> 4.2e-12
+   pi/2  g 0.0050  ratio 0.0794 -> 0.0041   leak 8.5e-05 -> 1.6e-11
+   pi/2  g 0.0100  ratio 0.0885 -> 0.0082   leak 3.4e-04 -> 6.1e-11
+   pi/2  g 0.0200  ratio 0.1051 -> 0.0163   leak 1.3e-03 -> 2.3e-10
+   pi/2  g 0.0400  ratio 0.1278 -> 0.0327   leak 4.9e-03 -> 8.2e-10
+   pi/2  seed 2 g 0.0025  ratio 0.1166 -> 0.0030
+   pi/2  seed 2 g 0.0100  ratio 0.1224 -> 0.0122
+   pi/2  seed 3 g 0.0025  ratio 0.0295 -> 0.0003
+   pi/2  seed 3 g 0.0100  ratio 0.0826 -> 0.0012
+   3pi/4 g 0.0025  ratio 0.0699 -> 0.0015   leak 2.3e-05 -> -2.7e-13
+   3pi/4 g 0.0050  ratio 0.0772 -> 0.0030   leak 9.1e-05 -> -5.5e-13
+   3pi/4 g 0.0100  ratio 0.0900 -> 0.0061   leak 3.6e-04 -> -1.2e-12
+   3pi/4 g 0.0200  ratio 0.1039 -> 0.0124   leak 1.4e-03 -> -2.8e-12
+   3pi/4 g 0.0400  ratio 0.1165 -> 0.0251   leak 4.9e-03 -> -1.1e-11
+   3pi/4 seed 2 g 0.0025  ratio 0.1039 -> 0.0023
+   3pi/4 seed 2 g 0.0100  ratio 0.1141 -> 0.0092
+   3pi/4 seed 3 g 0.0025  ratio 0.0441 -> 0.0002
+   3pi/4 seed 3 g 0.0100  ratio 0.1030 -> 0.0009
+
+5. README instrument check (kscan.py check, pi/2, g = 0.01)
+   0.0883 -> 0.0082
+
+6. P-3 spinor self-precession coefficient C
+   predicted -0.0896 -> -0.0491;  measured -0.0899 -> -0.0495  (max residual 0.4%)

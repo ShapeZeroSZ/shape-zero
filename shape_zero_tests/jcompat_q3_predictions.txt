@@ -1,0 +1,13 @@
+====================================================================================
+PREDICTIONS -- q = 3, packet kx = pi/2, k_perp = (pi, pi); stated before any run
+====================================================================================
+  T_perp = 8.0, kappa_req: slab (conserves k_perp) 0.2983, stagger (does not) 1.8587
+  zone-wide floors: conserving 2c/sqrt(K+2c) = 0.971737; non-conserving 6c/sqrt(K+6c) = 2.090698
+     kappa    omega     slab       stagger
+     0.25    3.3752    open       open
+     1.20    2.9491    closed     open
+     2.30    2.5322    closed     closed
+  closed: eff_x/eff_c falls x0.25 for g 0.04 -> 0.01, bar-chirality leak tiny;
+  open: ratio does not fall in proportion, leak orders larger.
+  slab: weight leaving k_perp = (pi, pi) at machine zero (translation invariance);
+  stagger: that weight is where the open channel goes.

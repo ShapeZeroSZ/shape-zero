@@ -1,0 +1,15 @@
+q = 3 ORDERING GATE   lattice 260 x 8 x 8   predictor: carrier
+  clearing: all windows < 1e-06; readout t = 350-363; max drift 3.7e-07
+  no-wrap: v_max 0.486, travel 176 sites, margins fwd 82 / bwd 10
+  [FAIL] u(2) AB order             2.284 deg   (need < 1.0)
+  [FAIL] u(2) BA order             3.116 deg   (need < 1.0)
+  [FAIL] u(2) split                1.620 deg   (need < 1.0)
+  [PASS] u(2) Abelian floor        0.066 deg   (need < 0.5)
+         u(2) split measured / predicted    99.88 / 98.26 deg
+  [FAIL] u(3) AB order             4.533 deg   (need < 1.0)
+  [FAIL] u(3) BA order             4.582 deg   (need < 1.0)
+  [FAIL] u(3) split                7.755 deg   (need < 1.0)
+  [PASS] u(3) Abelian floor        0.030 deg   (need < 0.5)
+         u(3) split measured / predicted    94.76 / 102.51 deg
+  GATE: FAIL
+  runtime: simulation 24.7 min wall (97.9 min CPU over 8 runs); evaluation 0 s

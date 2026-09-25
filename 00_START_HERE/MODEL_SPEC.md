@@ -189,6 +189,9 @@ selected dynamically at D8 exactly as a complex structure is at D4.
     F_gauge    = c * (W_n v_{n+1} - W_{n-1} v_{n-1})
 
 **Passivity forces symmetry; J-compatibility is a separate, CHOSEN condition.**
+[**SUPERSEDED 2026-09-25:** J-compatibility is now a **principle — required at every
+wavelength** — and follows dynamically once κ ≥ κ\*; see "ADOPTED" below. The text
+that follows is kept as written.]
 Zero net power requires each W symmetric (machine-verified, Prove2Me mission 2,
 rings of N ≥ 3). Passivity alone allows all real symmetric 2n×2n matrices —
 dimension **n(2n+1)**. Requiring W also to commute with 𝕁 cuts this to the
@@ -203,6 +206,8 @@ u(1), losing su(2) and su(3)); the D2 isotropy is the wrong size at n ≥ 2
 (O(2n), preserving it gives dimension 1) and acts per node, while a nonzero
 coupling can only conserve a *global* phase. Status: **CHOSEN** — "the coupling
 conserves total phase charge," extending conservativity from energy to phase.
+[Superseded 2026-09-25 by the principle "J-compatibility required at every
+wavelength" — "ADOPTED" below.]
 
 **UPDATE — EMERGENT AT LONG WAVELENGTH (measured, model's own parameters).** The
 J-breaking part of a coupling is suppressed by the dynamics **exactly when the
@@ -217,6 +222,9 @@ confirmed before/after:
 | π/2 | open (0.91) — **the gates' wavenumber** | levels off ≈ 0.08 |
 | 3π/4 | open (0.36) | levels off ≈ 0.07; leaked weight grows as g² |
 
+[**This table is at κ = 0.5 — superseded by the change of operating point (2026-09-25), not retracted.** At the operating point κ = κ\* every
+row is closed and falls ∝ g; re-run values in "ADOPTED" below.]
+
 Also varying stiffness at fixed k₀ = π/2: closed for K ≳ 3, open below; the
 controlling variable is the channel, **not** g/ω (ratios at 4√5 and 16√5 agree
 to 3% though ω differs by 2×). κ needed to close the channel at K = √5 runs from
@@ -224,7 +232,9 @@ to 3% though ω differs by 2×). κ needed to close the channel at K = √5 runs
 2026-09-25:** κ ≥ κ* = 0.971737 — see "CANDIDATE, NOT ADOPTED" below.]
 
 **Status: DERIVED at long wavelength, CHOSEN at short.** Phase conservation is an
-emergent low-energy symmetry of the model.
+emergent low-energy symmetry of the model. [**SUPERSEDED 2026-09-25:** the premise
+"chosen at short wavelength" is replaced by the principle "J-compatibility required
+at every wavelength", whose derived consequence is κ ≥ κ\* — "ADOPTED" below.]
 
 **The closed-channel suppression is complete at first order.** A residual ~10⁻³
 reported at k₀ = π/4 was a **readout-timing artefact** — ~3% of the packet was
@@ -236,8 +246,12 @@ segment cannot change a wave's frequency, so its edges cannot open a channel
 closed at that frequency. **Open-channel values confirmed under clearing
 readout**: at π/2 ratios 0.0762 → 0.1278 (g = 0.0025 → 0.04), at 3π/4
 0.0699 → 0.1165, other W's unchanged — the ~3–12% first-order effect is real.
+[κ = 0.5 — superseded by the change of operating point (2026-09-25), not retracted. At κ\* both rows are closed: π/2 0.0020 → 0.0327,
+3π/4 0.0015 → 0.0251, ∝ g, leaked weight ≤ 8×10⁻¹⁰.]
 Open: whether the second-order leftover in the closed channel commutes with J.
 Scope: n = 2, q = 1, amplitude 10⁻³, three random W.
+
+[**ADOPTED 2026-09-25** — see the next block; the candidate text is kept as written.]
 
 **CANDIDATE, NOT ADOPTED (2026-09-25) — J-compatibility derived at every
 wavelength, and what it requires of κ.** `model.py` keeps KAPPA = 0.5; nothing
@@ -296,7 +310,90 @@ chosen at short wavelength:
   transverse momentum (the opposite-chirality wave keeps k₀'s transverse part). If it
   does not, k′ can lie anywhere in the zone, the channel is closed iff
   2κω > Q(k₀) − K, and the zone corner binds: κ\*_q = 2qc/√(K + 2qc) = 1.602 (q = 2),
-  **2.091 (q = 3)**.
+  **2.091 (q = 3)**. [**RESOLVED 2026-09-25:** 0.972 applies to the model's segments —
+  "ADOPTED" below.]
+
+**ADOPTED (2026-09-25) — J-compatibility REQUIRED AT EVERY WAVELENGTH (a principle),
+and the operating point κ = κ\*.**
+
+- **The principle.** It replaces the premise "J-compatibility chosen at short
+  wavelength": *the J-breaking part of any coupling must be suppressed by the
+  dynamics at every wavelength* — the opposite-chirality channel closed at every
+  travelling wavenumber. J-compatibility is then derived from the dynamics, not
+  imposed on W. Scope of that derivation: first order in g, n = 2, amplitude 10⁻³,
+  q = 1 and full slabs at q = 3; the second-order leftover in a closed channel is
+  still open (above).
+- **Derived consequence: κ ≥ κ\* = 2c/√(K + 2c) = 0.971737** at c = 1, K = √5
+  (derivation in the candidate block). κ\* = 2φ^(−3/2) is a **consequence of K = √5**
+  (2 + √5 = φ³), **not a selection**. At κ = κ\* every travelling wavenumber is strictly
+  closed; only the standing mode k₀ = π is marginal (k′ = 0, v_g = 0).
+- **A floor, not a value.** No principle in the repository supplies an upper side
+  (plurality excludes only κ = 0; minimality's exemption clause admits κ without
+  choosing a value). **The floor is derived; the exact value remains a genuine
+  parameter**, for experiment to fix — the Larmor splitting equals κ
+  (`INPUT_LEDGER.md` §3.1). **The floor is a test the model can fail:** a platform
+  realising this model whose measured Larmor splitting is below 2c/√(K + 2c), with K
+  and c from its own linear spectroscopy, contradicts the principle.
+- **Operating point: `model.py` KAPPA = κ\* — CHOSEN.** The reference value sits at the
+  floor; nothing derives it. (Was 0.5.)
+- **q = 3: the 0.972 floor applies**, because the model's segments conserve transverse
+  momentum. From the code: `model.make_links` gives every site of a segment's
+  axis-0 layer the same link (`W[start + j, :, :]`), the links act along axis 0 only,
+  and every other term (φ-well, κ𝕁v, Laplacian, scalar β, C_r) is on-site or uniform;
+  `q3_gate.py` uses the same `make_links`. Measured (`shape_zero_tests/jcompat_q3.py`,
+  **predictions committed first, 9bb9951**): a packet with k⊥ = (π, π), kₓ = π/2 —
+  the case where the two bounds differ — has its channel **closed at κ = 1.2**, below
+  2.091, by the slab (ratio ×0.249 for g 0.04 → 0.01, leaked weight 3.5×10⁻⁷), while a
+  (−1)^(y+z)-staggered control, which does not conserve k⊥, opens it (leak 8.1×10⁻²);
+  the weight leaving k⊥ = (π, π) is 3×10⁻⁸, the no-segment reference's own floor.
+  **Two post-hoc corrections**, labelled in `jcompat_q3_reading.txt`: (a) the printed
+  ratio criterion does not apply to the stagger, whose J-respecting segment is also
+  second order — its verdicts are read from eff_x and the leak (κ = 2.3 closed, not
+  "open"); (b) the prediction "stagger open at κ = 0.25" was wrong — it omitted the
+  upper edge of the k⊥ = (0, 0) target band [K, K + 4c]; measured closed, as the
+  corrected condition gives. **Scope: full slabs across a periodic transverse box.** A
+  segment of finite transverse width does not conserve k⊥ and would need the
+  general bound 2qc/√(K + 2qc) = **2.091** at q = 3.
+- **Every κ-dependent result re-run at κ\*** (`shape_zero_tests/kstar_rerun_summary.py`
+  → `kstar_rerun_summary.txt`). **All pass.** The κ = 0.5 column is **superseded by
+  the change of operating point, not retracted** — it was correct at κ = 0.5:
+
+  | result | κ = 0.5 (superseded) | κ\* = 0.971737 |
+  |---|---|---|
+  | `model.py` gates | 11/11 PASS | **11/11 PASS** |
+  | gate 3 chirality purity | 0.9834 | **0.9818** |
+  | gate 7 u(2): split meas / pred; per-order | 101.12 / 100.80; 0.29 / 0.17° | **98.74 / 98.26; 0.27 / 0.23°** |
+  | gate 7 u(3): split meas / pred; per-order | 117.92 / 118.29; 0.44 / 0.29° | **106.86 / 107.15; 0.43 / 0.33°** |
+  | gate 7–8 Abelian floor (old readout) | 0.016° (u(2)), 0.014° (u(3)) | **0.049°, 0.043°** |
+  | gate 9 angular kinetic term | 2.36×10⁻³ | **1.88×10⁻³** |
+  | gate 10 drifts q = 1, 2, 3 | 3.3, 3.4, 4.2×10⁻⁸ | **1.7, 1.8, 2.3×10⁻⁸** |
+  | gates 1, 2, 4, 5, 6, 11 | — | identical (gate 6's amplitude κ has no 𝕁 term) |
+  | `gate7_readout.py` clearing, u(2): split / pred / floor | 101.12 / 100.80 / 0.00008° | **98.57 / 98.26 / 0.00004°** |
+  | `gate7_readout.py` clearing, u(3): split / pred / floor | 117.93 / 118.29 / 0.00003° | **107.03 / 107.15 / 0.00003°** |
+  | `q3_gate.py` (260×8×8, averaged) | PASS | **PASS** |
+  | … u(2): split meas / pred; per-order; floor | 105.48 / 105.35; 0.14 / 0.14°; 0.000° | **99.88 / 99.98; 0.31 / 0.22°; 0.066°** |
+  | … u(3): split meas / pred; per-order; floor | 62.31 / 62.48; 0.10 / 0.11°; 0.000° | **94.76 / 95.00; 0.20 / 0.24°; 0.030°** |
+  | `q3_gate.py` carrier predictor (built to fail) | FAIL (split errors 4.68°, 2.66°) | **FAIL (1.62°, 7.76°)** |
+  | J-compat π/4 (old readout), g 0.0025 → 0.04 | closed, 0.0033 → 0.0427 | **closed, 0.0018 → 0.0221** |
+  | J-compat π/2 (clearing) | open, 0.0762 → 0.1278 | **closed, 0.0020 → 0.0327**; leak ≤ 8×10⁻¹⁰ |
+  | J-compat 3π/4 (old readout) | open, 0.0702 → 0.1167 | **closed, 0.0027 → 0.0252** |
+  | J-compat 3π/4 (clearing) | open, 0.0699 → 0.1165 | **closed, 0.0015 → 0.0251**; leak ≤ 10⁻¹¹ |
+  | channel threshold k_c | 1.4536 rad | **whole zone** (k₀ = π marginal) |
+  | stiffness threshold at π/2: closed iff K > x²/κ² − x, x = c(1 − cos k₀) = 1 (computed, not re-measured) | K > 3 (measured: closed for K ≳ 3) | **K > 0.059** |
+  | README instrument check, π/2 ratio at g = 0.01 | 0.0883 | **0.0082** |
+  | P-3 spinor precession C, predicted / measured | −0.0896 / −0.0899 | **−0.0491 / −0.0495** (max residual 0.4%) |
+
+- **Two findings from the re-run, open (§9).** (1) The **q = 3 Abelian floor is not
+  exactly 0 at κ\***: 0.066° (u(2)) and 0.030° (u(3)) under clearing readout, inside the
+  0.5° tolerance but unlike the 0.000° at κ = 0.5; the cause is not investigated.
+  (2) A **pre-existing mismatch**, found while re-running: §6b's gate-7 u(3) entry
+  (65.1166 measured, 64.9712 predicted) is not what the current `model.py` printed
+  at κ = 0.5 (117.92 / 118.29, `shape_zero_tests/jcompat_gates_k0.5.txt`); not resolved
+  here.
+- **Not re-run:** the platform benchmarks at κ = 0.5 (`04_scripts/platform/`: the u(2)
+  59.86° / 59.84° and u(3) 65.12° / 64.97° orderings, `INPUT_LEDGER.md` §3), and
+  `grid.py`, `checks.py`, `resid.py` (§4, §5 of `shape_zero_tests/README.md`). They
+  stand as κ = 0.5 records.
 
 | n | dim admissible W | group | measured |
 |---|---|---|---|
@@ -328,7 +425,8 @@ and asymmetry results hold on the three-dimensional base itself.**
 
 Chain now machine-checked: **passive ⟹ symmetric**, and **symmetric +
 J-compatible ⟹ dimension n²**. Still a premise: **why the coupling commutes with
-J.** And the coupling space is the **Hermitian** matrices — u(n) in dimension,
+J.** [2026-09-25: now answered by a principle — J-compatibility required at every
+wavelength, which the dynamics deliver once κ ≥ κ\* (above).] And the coupling space is the **Hermitian** matrices — u(n) in dimension,
 with the Lie algebra itself appearing after multiplying by i.
 
 N ≥ 3 is necessary, not convenient: at N = 2 two links carrying the same
@@ -1032,7 +1130,8 @@ window holds < 10⁻⁶ of the weight:
 | u(3) | centroid | 98% | 64.91° | 64.97° | 0.06° | 1.049° | 2.86° / 1.87° |
 | u(3) | **clearing** | < 10⁻⁶ | 60.54° | 64.97° | **4.43°** | **0.000°** | **5.21° / 5.23°** |
 
-**The Abelian floor is exactly 0 at q = 3**, as the algebra requires; ~1° was the
+**The Abelian floor is exactly 0 at q = 3**, as the algebra requires [at κ = 0.5; at
+the operating point κ\* `q3_gate.py` reads 0.066° / 0.030° — open, §9]; ~1° was the
 packet read mid-exit. Unequal strengths change *when* a packet arrives, not its
 final internal state. **The centroid readout's good agreement (u(3): 0.06°) was a
 coincidence of mid-exit timing.** A single segment misses its prediction by
@@ -1059,6 +1158,9 @@ simulations rerun; the single-wavenumber column reproduces the old errors exactl
 | **u(2) split** | 105.89° | 5.09° (pred 100.80°) | **0.04°** (pred 105.85°) |
 | u(3) per-order AB / BA | — | 5.21° / 5.23° | **0.10° / 0.10°** |
 | **u(3) split** | 60.54° | 4.43° (pred 64.97°) | **0.17°** (pred 60.71°) |
+
+[The tables in this subsection are at κ = 0.5 — superseded by the change of operating point (2026-09-25), not retracted. `q3_gate.py` at κ\*:
+u(2) 99.88 / 99.98°, u(3) 94.76 / 95.00° — §3, "ADOPTED".]
 
 Retained weight: all but 5×10⁻¹¹. **The product U_B·U_A works when taken mode by
 mode.** It fails as a single-carrier product because a 3-D packet this localised
@@ -1124,6 +1226,9 @@ splitting is 29.0°."
 | plain product U_B·U_A | 100.799° | **0.323°** |
 | **profile-weighted U₂** | 100.880° | **0.242°** |
 | global U₂ on the mid-state | 122.615° | **21.5°** |
+
+[κ = 0.5 — superseded by the change of operating point (2026-09-25), not retracted. At κ\* the q = 1 split is 98.74° measured, 98.26°
+predicted (§3, "ADOPTED").]
 
 **Three findings:**
 
@@ -2040,6 +2145,12 @@ three scripts with three node types. Run it:
 | 8 Abelian control | **0.0169°** where theory says 0 |
 | residual sector | present, C_r = 0 by default, inert to 4.5×10⁻¹⁹ |
 
+[The gate values above are at κ = 0.5 — superseded by the change of operating point (2026-09-25), not retracted. At κ\* (`model.py`
+KAPPA since 2026-09-25) all eleven gates pass: purity 0.9818; gate 7 u(2) 98.74 / 98.26,
+u(3) 106.86 / 107.15; gate 8 0.0487° (`shape_zero_tests/model_gates_kstar.txt`; full
+table in §3, "ADOPTED"). The u(3) row's 65.1166 / 64.9712 does not match the current
+`model.py` even at κ = 0.5 (117.92 / 118.29) — a pre-existing mismatch, §9.]
+
 **One script now reproduces every verified result the programme has** — u(1),
 u(2), u(3), the pinned asymmetry, κ, the β-collapse, both ordering splittings and
 the control. `U_segment` is generic in node size: spectral projectors, one per
@@ -2065,6 +2176,8 @@ That is now a concrete edit rather than an open design question.
 | 6 | n = 2 nodes, Pauli W | ordering 59.86° vs 59.84° |
 | 7 | n = 3 nodes, Gell-Mann W | ordering 65.12° vs 64.97°, control ~0 |
 | 8 | segments at ≤ 20-site separation | Abelian control 0.0137° |
+
+[Rows 3, 6–8 were done at κ = 0.5 — superseded by the change of operating point (2026-09-25), not retracted; values at κ\* in §3, "ADOPTED".]
 
 **Step 8 is not cosmetic.** The prediction has no free-evolution operator between
 segments; at a 60-site gap the Abelian control reads 62° where theory says 0.
@@ -2165,7 +2278,10 @@ established — see §7b.*
 | ~~fourth-order cross-modulation (κ, F at A = 0.30)~~ **DONE for the plane wave, 2026-09-25** (§5, "κ to fourth order"); the original entry: | the derived F is second order; it matches every sharp point except the two narrowest beams at A = 0.30, which it matches at A = 0.10 (§5, "The cross-modulation factor F, derived") |
 | ~~beam fourth order with orbit-consistent launches~~ **DONE 2026-09-25** (§5): launch pieces derived, H0 and S1 excluded; the original entry: | the beam fourth-order tests (H0 excluded at large fill; S1 against S2 unresolved) used plain-cosine launches, so they mix physics with launch effects. Redo them with orbit-consistent (second-order) launches (`kappa_seed2_test.py`), derive the beam's fourth-order kernel, and derive the launch's static-shift and second-harmonic pieces, which are measured, not derived (§5) |
 | ~~S2 at w = 3, L = 4, and why the cross terms cancel~~ **SUPERSEDED 2026-09-25** (§5): with the third harmonic in the launch S2 fails three of four L = 4 beams, and the cross terms are partly present; the original entry: | two things: (1) test S2 at w = 3, L = 4 with the third harmonic added to the launch — S2 failed that beam by +18σ under the committed criterion and fits it only under a post-hoc third-harmonic band; (2) derive why the fourth-order cross terms cancel, leaving only the box-wide component's own term (S2 is a surviving hypothesis, not a derivation) |
-| **which J-compatibility bound applies at q = 3** (candidate, not adopted; §3) | κ ≥ 0.972 if the coupling segments conserve transverse momentum, κ ≥ 2.091 if not — decides the candidate floor on κ at the model's own dimension |
+| ~~which J-compatibility bound applies at q = 3~~ **RESOLVED 2026-09-25** (§3, "ADOPTED"): 0.972 — the model's slab segments conserve transverse momentum (code and `jcompat_q3.py`); a finite-width segment would need 2.091. The original entry: | κ ≥ 0.972 if the coupling segments conserve transverse momentum, κ ≥ 2.091 if not — decides the candidate floor on κ at the model's own dimension |
+| **the q = 3 Abelian floor at κ\*** | `q3_gate.py` at the operating point κ\* reads 0.066° (u(2)) and 0.030° (u(3)) under clearing readout, not 0.000° as at κ = 0.5 — inside tolerance, cause not investigated; blocks the claim "exactly 0 at q = 3" at the current operating point (§3, "ADOPTED"; §4d) |
+| **§6b's gate-7 u(3) entry** | 65.1166 / 64.9712 is not reproduced by the current `model.py` at κ = 0.5 (117.92 / 118.29); pre-existing, found in the κ\* re-run — which configuration produced it is unrecorded |
+| **the exact value of κ** | only the floor κ ≥ κ\* is derived; the value is a genuine parameter, fixed by the Larmor measurement (`INPUT_LEDGER.md` §3.1); `model.py`'s κ = κ\* is a chosen operating point |
 | **the beam's fourth-order cross kernel** | derive it — every fourth-order cross term between a beam's transverse components, on the lattice — with the measured r values as the target: 0.351/0.350 (w = 1.5), 0.547/0.549 (w = 2), 0.750/0.758 (w = 3) at L = 4, A = 0.30/0.40, which lie 0.33, 0.50, 0.68 of the way from the self-only limit S2 to the all-terms limit S1 (§5, measured with the third-harmonic launch, `kappa4_orbit3_launch.py`) |
 | ~~verify the 0.39° attribution~~ | **CLOSED** — readout timing; the Abelian floor is exactly 0 under clearing readout at q = 1 and q = 3 |
 | ~~wavenumber-averaged prediction at q = 3~~ | **CLOSED** — closes the gap to 0.04–0.17°; the q = 3 gauge sector is quantitatively verified |

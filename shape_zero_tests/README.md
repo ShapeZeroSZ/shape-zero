@@ -37,7 +37,11 @@ still overrides the pinned version. Verify the pins with:
 
 Verified from this folder alone (no `MODEL_DIR`): `q3_combine.py` regenerates the
 section-7 table, `q3_kavg.py` reproduces `q3_kavg.json` exactly, and
-`kscan.py check` reproduces its instrument-check values (π/2 ratio 0.0883). Common model settings throughout: c = 1, κ = 0.5, DT = 0.02,
+`kscan.py check` reproduces its instrument-check values (π/2 ratio 0.0883). [At κ = 0.5, the
+pinned version's value; superseded by the change of operating point (2026-09-25), not
+retracted. With `MODEL_DIR=../04_scripts/session` (κ = κ\*) it gives 0.0082 —
+`kscan_check_kstar.txt`, section 15.] Common model settings throughout: c = 1, κ = 0.5
+(the pinned versions; the working `model.py` uses κ = κ\* since 2026-09-25), DT = 0.02,
 packet amplitude 10⁻³, colour-0 packet, RK4 integrator from `model.py`.
 
 ## Two readouts
@@ -234,6 +238,23 @@ check at π/2, 0.75π, 0.9π, 15% either side of κ_req. `jcompat_kappa.py scan`
 line changed (KAPPA) → `jcompat_gates_k0.5.txt`, `_k0.9727.txt`, `_k1.0.txt`: all
 eleven pass at each. `jcompat_effects.py` → `jcompat_effects.txt`: closed-form
 quantities that move (ω, v_g, P-3's C, k_c). MODEL_SPEC §3, "CANDIDATE, NOT ADOPTED".
+
+### 15. Every κ-dependent result at the operating point κ = κ* (2026-09-25)
+Run against the working `04_scripts/session/model.py` (KAPPA = κ* = 0.971737), via
+`MODEL_DIR=../04_scripts/session` where a script pins an older version:
+`model.py` (run from `04_scripts/session/`) → `model_gates_kstar.txt`;
+`gate7_readout.py` → `gate7_kstar.jsonl`; `q3_gate.py --tag kstar` →
+`q3_gate_kstar.txt`, `q3_gate_runs_260x8_kstar.json`,
+`q3_gate_result_260x8_averaged_kstar.json` (and `--predictor carrier` →
+`q3_gate_kstar_carrier.txt`, `..._carrier_kstar.json`); `kscan.py check` →
+`kscan_check_kstar.txt`; `kscan.py scan` → `kscan_kstar.jsonl`; `openrows.py pi2 | 3pi4`
+→ `open_pi2_kstar.jsonl`, `open_3pi4_kstar.jsonl`; `p3_kstar.py` → `p3_kstar.txt` (P-3,
+platform script with κ set to κ*). `kstar_rerun_summary.py` → `kstar_rerun_summary.txt`
+sets every value beside its κ = 0.5 original. The κ = 0.5 files are kept unchanged.
+The q = 3 bound question: `jcompat_q3.py` (predictions `jcompat_q3_predictions.txt`,
+committed first) → `jcompat_q3_output.txt`, read in `jcompat_q3_reading.txt`.
+`q3_gate.py` gained `--tag` (output-file suffix) so the κ = 0.5 results are not
+overwritten; `jcompat_gates.py` now replaces whatever `KAPPA = ...` line model.py has.
 
 ### P-1 investigation
 `p1/` — the decay-window investigation behind the P-1 annotation; its README maps

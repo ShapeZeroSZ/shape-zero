@@ -1,0 +1,74 @@
+{
+ "L0": 260,
+ "S": 8,
+ "predictor": "carrier",
+ "passed": false,
+ "rows": [
+  {
+   "check": "u(2) AB order",
+   "value": 2.283506680636559,
+   "tol": 1.0,
+   "passed": false
+  },
+  {
+   "check": "u(2) BA order",
+   "value": 3.11624226164035,
+   "tol": 1.0,
+   "passed": false
+  },
+  {
+   "check": "u(2) split",
+   "value": 1.6202167128676592,
+   "tol": 1.0,
+   "passed": false
+  },
+  {
+   "check": "u(2) Abelian floor",
+   "value": 0.06589721779706535,
+   "tol": 0.5,
+   "passed": true
+  },
+  {
+   "check": "u(2) split measured / predicted",
+   "value": 99.87654429796976,
+   "predicted": 98.2563275851021
+  },
+  {
+   "check": "u(3) AB order",
+   "value": 4.533270640062761,
+   "tol": 1.0,
+   "passed": false
+  },
+  {
+   "check": "u(3) BA order",
+   "value": 4.582393573277866,
+   "tol": 1.0,
+   "passed": false
+  },
+  {
+   "check": "u(3) split",
+   "value": 7.755112002204967,
+   "tol": 1.0,
+   "passed": false
+  },
+  {
+   "check": "u(3) Abelian floor",
+   "value": 0.030097085110008612,
+   "tol": 0.5,
+   "passed": true
+  },
+  {
+   "check": "u(3) split measured / predicted",
+   "value": 94.75788526664823,
+   "predicted": 102.5129972688532
+  }
+ ],
+ "t_read": 363.0,
+ "no_wrap": {
+  "v_max": 0.48586827131102983,
+  "travel": 176.37018248590383,
+  "fwd_margin": 81.62981751409617,
+  "bwd_margin": 9.629817514096175
+ },
+ "sim_wall": 1480.7216765880585
+}

@@ -1,0 +1,39 @@
+====================================================================================
+PREDICTIONS -- q = 3, packet kx = pi/2, k_perp = (pi, pi); stated before any run
+====================================================================================
+  T_perp = 8.0, kappa_req: slab (conserves k_perp) 0.2983, stagger (does not) 1.8587
+  zone-wide floors: conserving 2c/sqrt(K+2c) = 0.971737; non-conserving 6c/sqrt(K+6c) = 2.090698
+     kappa    omega     slab       stagger
+     0.25    3.3752    open       open
+     1.20    2.9491    closed     open
+     2.30    2.5322    closed     closed
+  closed: eff_x/eff_c falls x0.25 for g 0.04 -> 0.01, bar-chirality leak tiny;
+  open: ratio does not fall in proportion, leak orders larger.
+  slab: weight leaving k_perp = (pi, pi) at machine zero (translation invariance);
+  stagger: that weight is where the open channel goes.
+
+====================================================================================
+MEASURED
+====================================================================================
+   kappa  geom     g      eff_c(deg)  eff_x(deg)  ratio     leak_x      off-k_perp(x)   verdict
+   0.25   reference drift 2.3e-05, off-k_perp 2.8e-08
+   0.25   slab     0.040    57.13611    12.83176  0.22458   +3.21e-02   2.80e-08
+   0.25   slab     0.010    14.41093     2.75464  0.19115   +2.27e-03   2.84e-08
+          ratio(0.01)/ratio(0.04) = 0.851 -> open   [predicted open]
+   0.25   stagger  0.040     1.83616     1.92370  1.04768   +2.49e-07   5.49e-08
+   0.25   stagger  0.010     0.11504     0.12065  1.04876   +1.46e-08   3.01e-08
+          ratio(0.01)/ratio(0.04) = 1.001 -> open   [predicted open]
+   1.20   reference drift 1.0e-05, off-k_perp 3.4e-08
+   1.20   slab     0.040    50.04052     1.30984  0.02618   +3.46e-07   3.44e-08
+   1.20   slab     0.010    12.59310     0.08207  0.00652   +2.08e-08   3.45e-08
+          ratio(0.01)/ratio(0.04) = 0.249 -> closed   [predicted closed]
+   1.20   stagger  0.040     1.40243    20.21475  14.41414   +8.10e-02   4.58e-07
+   1.20   stagger  0.010     0.08785     7.54177  85.85086   +1.72e-02   1.15e-07
+          ratio(0.01)/ratio(0.04) = 5.956 -> open   [predicted open]
+   2.30   reference drift 4.3e-06, off-k_perp 3.7e-08
+   2.30   slab     0.040    43.04874     0.58597  0.01361   +1.13e-07   3.74e-08
+   2.30   slab     0.010    10.81401     0.03669  0.00339   +7.06e-09   3.74e-08
+          ratio(0.01)/ratio(0.04) = 0.249 -> closed   [predicted closed]
+   2.30   stagger  0.040     1.03434     1.89129  1.82849   +7.06e-07   5.76e-08
+   2.30   stagger  0.010     0.06478     0.11888  1.83508   +4.61e-08   3.87e-08
+          ratio(0.01)/ratio(0.04) = 1.004 -> open   [predicted closed]

@@ -218,6 +218,7 @@ def main():
     ap.add_argument("--workers", type=int, default=4)
     ap.add_argument("--predictor", choices=("averaged", "carrier"), default="averaged")
     ap.add_argument("--from-saved", default=None)
+    ap.add_argument("--tag", default="", help="suffix for the output files (e.g. kstar)")
     a = ap.parse_args()
 
     t0 = time.time()
@@ -230,7 +231,7 @@ def main():
             runs = pool.map(run_one, [(n, j, L0, S) for n, j in JOBS])
         sim_wall = time.time() - t0
         json.dump(dict(L0=L0, S=S, sim_wall=sim_wall, workers=a.workers, runs=runs),
-                  open(os.path.join(HERE, f"q3_gate_runs_{L0}x{S}.json"), "w"), indent=1)
+                  open(os.path.join(HERE, f"q3_gate_runs_{L0}x{S}{'_' + a.tag if a.tag else ''}.json"), "w"), indent=1)
 
     print(f"q = 3 ORDERING GATE   lattice {L0} x {S} x {S}   predictor: {a.predictor}")
     errs = [r for r in runs if "error" in r]
@@ -265,7 +266,7 @@ def main():
           f"evaluation {time.time() - t0 - (0 if a.from_saved else sim_wall):.0f} s")
     out = dict(L0=L0, S=S, predictor=a.predictor, passed=ok, rows=rows,
                t_read=t_read, no_wrap=wrap, sim_wall=sim_wall)
-    json.dump(out, open(os.path.join(HERE, f"q3_gate_result_{L0}x{S}_{a.predictor}.json"), "w"),
+    json.dump(out, open(os.path.join(HERE, f"q3_gate_result_{L0}x{S}_{a.predictor}{'_' + a.tag if a.tag else ''}.json"), "w"),
               indent=1, default=float)
     sys.exit(0 if ok else 1)
 

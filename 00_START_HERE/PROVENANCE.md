@@ -572,6 +572,7 @@ model's own parameters close it for k₀ < 1.45 and open it above; the predictio
 was stated before rerunning at π/4 and 3π/4 and **held on both sides**. The gates'
 k₀ = π/2 sits just past the threshold, which is why the first test saw no
 suppression. Status upgraded to **derived at long wavelength, chosen at short**.
+[Superseded 2026-09-25 — §6p.]
 
 ## 6n. q = 3 readout check — a guard that was the error
 
@@ -1148,6 +1149,35 @@ while chasing a different discrepancy. Failure mode: #2 below in a new form —
 the instrument was calibrated, the *preparation* was not. Also a case of
 recurring mode #1's cousin: a quoted value that the script's own main block
 could not have printed.
+
+## 6p. J-compatibility adopted as a principle; κ moved to its floor (2026-09-25)
+
+Question (user): if J-compatibility must be derived at every wavelength rather
+than chosen at short wavelength, what does that require of κ? Hypothesis stated
+first (band edge binds, κ\* = 2c/√(K + 2c) ≈ 0.972, lower bound only) — it held.
+Derivation κ_req(k₀) = x/√(K + x), x = c(1 − cos k₀); numerical confirmation at π/2,
+0.75π, 0.9π and a κ sweep through κ_req (`jcompat_kappa.py`); all eleven gates pass
+at 0.5, κ\*, 1.0 (`jcompat_gates.py`). Recorded as a candidate (280ce09, 147bbe5).
+
+q = 3: the floor is 0.972 if the segments conserve transverse momentum, 2.091 if
+not. Settled from `make_links` (full slabs) and by `jcompat_q3.py`, predictions
+committed first (9bb9951), output and reading 54cac3d; two post-hoc corrections
+labelled there (the ratio criterion misapplied to the staggered control; a wrong
+"open" prediction that omitted the upper band edge).
+
+Adopted by the user: J-compatibility **required at every wavelength** is a
+principle; κ ≥ κ\* is its derived consequence; `model.py` KAPPA = κ\* is a **chosen**
+operating point; the exact κ remains a genuine parameter. Every κ-dependent
+result listed for re-run was re-run at κ\* (`kstar_rerun_summary.py`). Old values
+are **superseded by the change of operating point, not retracted**: they were
+correct at κ = 0.5.
+
+**Found while re-running:** the q = 3 Abelian floor reads 0.066° / 0.030° at κ\*,
+not 0; and MODEL_SPEC §6b's u(3) gate-7 entry (65.1166 / 64.9712) is not what the
+current `model.py` prints at κ = 0.5 (117.92 / 118.29). Both open (MODEL_SPEC §9).
+Also: `model.py` must be run from `04_scripts/session/` — run from elsewhere, gate 11
+cannot find `d16_spectrum_v2.py` and FAILs (seen once in this re-run; re-run from
+the right directory, it passes).
 
 ## 7. Recurring failure modes
 

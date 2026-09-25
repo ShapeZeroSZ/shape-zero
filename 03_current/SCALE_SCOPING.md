@@ -38,12 +38,12 @@ letter c is the elastic inter-node coupling in the force law (§1b below).
 |---|---|---|---|
 | on-site force −(x² − x − 1), linear stiffness √5 | the φ-well; fixed points at the golden-ratio roots | **stated as the model's force law**; the sources used here state it and do not derive it | `MODEL_SPEC.md` §1 |
 | c (elastic) | inter-node elastic coupling, F = c(x₊ + x₋ − 2x) | **CHOSEN** — c = 1.0 in `model.py` and in every lattice script; **not listed** among the free parameters of `INPUT_LEDGER.md` §2d, so its status is unrecorded there | `MODEL_SPEC.md` §3; `04_scripts/session/model.py` (C = 1.0) |
-| κ (gyroscopic ratio) | intra-node gyroscopic coupling, F = κ𝕁v; D4 coupling strength | **OPEN, measurable** — fixed by one bench measurement (the Larmor splitting equals κ). [Candidate floor, not adopted, 2026-09-25: κ ≥ 0.971737 if J-compatibility is required at every wavelength — a floor, not a value; MODEL_SPEC §3] | `INPUT_LEDGER.md` §2d #3 and §3.1; `MODEL_SPEC.md` §2; `model.py` (KAPPA = 0.5) |
+| κ (gyroscopic ratio) | intra-node gyroscopic coupling, F = κ𝕁v; D4 coupling strength | **OPEN, measurable** — fixed by one bench measurement (the Larmor splitting equals κ). [Candidate floor, not adopted, 2026-09-25: κ ≥ 0.971737 if J-compatibility is required at every wavelength — a floor, not a value; MODEL_SPEC §3] [**ADOPTED 2026-09-25:** **DERIVED FLOOR** κ ≥ 2c/√(K + 2c) = 0.971737; value still OPEN, measurable; operating value κ = κ\* CHOSEN] | `INPUT_LEDGER.md` §2d #3 and §3.1; `MODEL_SPEC.md` §2, §3; `model.py` (KAPPA = 0.5 until 2026-09-25, now κ\*) |
 | β (lattice) | inter-node antisymmetric velocity coupling, βc(v₊ − v₋) — the synthetic U(1) | **CHOSEN** — β = 0.05 in the κ scripts; `MODEL_SPEC.md` §4c.4 calls it the U(1) "charge" and "already an input (§2d of the ledger)" | `MODEL_SPEC.md` §4b.1, §4c.4 |
 | ζ (cone deficit; β before 2026-09-25) | the D2 arena's cone deficit | **OPEN** — contingent on an unresolved embedding; B-2 candidate ζ = 1/4 has an unmet closing condition | `INPUT_LEDGER.md` §2d #2, §3.3 |
 | a–b angle | D8 flow frequency ratio (second generator's direction) | **OPEN, measurable** — plurality forces a second generator, not which; every ratio in [1.04, 23.9] is attainable | `INPUT_LEDGER.md` §2d #4, §3.2 |
 | C_r | residual coupling strength, f = C_r·mul(g, v) | **OPEN** — the *form* is determined; the *strength* is free | `MODEL_SPEC.md` §4b.1; `INPUT_LEDGER.md` §2d #5; `MODEL_SPEC.md` §9 |
-| J-compatibility ([W, 𝕁] = 0) | a condition on the coupling, not a number | **CHOSEN** at short wavelength, **derived at long** (emergent below k_c) | `MODEL_SPEC.md` §3 |
+| J-compatibility ([W, 𝕁] = 0) | a condition on the coupling, not a number | **CHOSEN** at short wavelength, **derived at long** (emergent below k_c) [**SUPERSEDED 2026-09-25:** now a **PRINCIPLE — required at every wavelength**; delivered by the dynamics once κ ≥ κ\*, which is its derived consequence] | `MODEL_SPEC.md` §3 |
 | n (flux integer in ℏ) | ℏ = μℓ_f²/(T·n) | **OPEN** — integrality permits the even family n ∈ {1, 2, 4, 8, …} and selects none | `MODEL_SPEC.md` §4c.2a-R |
 | c₈ | pure number in G₄ = [c₈/(2π²)]·(ℓ⁵/ℓ_f⁴)/μ | **OPEN** — "not yet extracted" | `MODEL_SPEC.md` §4c.3 |
 | Λ's number | Λ = (number)/ℓ² | **OPEN** — "not yet extracted" | `MODEL_SPEC.md` §4c table |
@@ -243,6 +243,10 @@ fix each of them, or record it as an input.
    derived κ₂ moves from −0.026389 to −0.009316 between c = 0.5 and 2
    (`shape_zero_tests/param_classify_output.txt`).
 2. **κ**, the gyroscopic ratio (§2d #3) — measurable by the Larmor splitting.
+   [2026-09-25: **genuine parameter with a derived floor**, κ ≥ 2c/√(K + 2c) = 0.971737,
+   from the principle "J-compatibility required at every wavelength". A complete
+   derivation still has to fix the value (or record it as an input); the floor is
+   a test the model can fail. `model.py` operates at κ = κ\*, a chosen point.]
 3. **the a–b angle** (§2d #4) — measurable as the D8 frequency ratio.
 4. **C_r**, the residual coupling strength (§2d #5).
 

@@ -50,7 +50,13 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 SQ5 = np.sqrt(5.0)
 PHI = (1.0 + SQ5) / 2.0
 C = 1.0
-KAPPA = 0.5
+# Gyroscopic ratio: reference operating value kappa = kappa* = 2c/sqrt(K + 2c)
+# = 0.971737, the floor derived from J-compatibility at every wavelength
+# (MODEL_SPEC sec 3). The FLOOR is derived; setting kappa AT the floor is a
+# CHOSEN operating point -- the value is a genuine parameter for experiment.
+# Was 0.5 until 2026-09-25 (results at 0.5 superseded by the change of
+# operating point, not retracted).
+KAPPA = 2 * C / np.sqrt(SQ5 + 2 * C)
 K0 = np.pi / 2
 DT = 0.02
 

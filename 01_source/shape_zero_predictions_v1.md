@@ -133,7 +133,11 @@ axis: **Ω = C·A²·n_z**, with n_z conserved, and
 C = [−1/K′ − 1/(4L₊) − 1/(4L₋)]·α²-scaled/(2ω + κ_g) computed from the
 calibrated constants (κ_g the gyroscopic strength; L± the co-/counter-
 rotating second-harmonic denominators). Simulation instance: C = −0.0896
-predicted, −0.0899 measured, n_z conserved to three decimals.
+predicted, −0.0899 measured, n_z conserved to three decimals. [That instance is at
+κ_g = 0.5 — superseded by the change of operating point (2026-09-25), not
+retracted. At the model's operating point κ = κ\* = 0.971737: C = −0.0491 predicted,
+−0.0495 measured, max residual 0.4% (`shape_zero_tests/p3_kstar.py`). The closed form
+is unchanged.]
 
 **Falsified if:** the precession axis is not the population axis, n_z is
 not conserved at leading order, or the coefficient misses the closed form

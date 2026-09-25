@@ -43,7 +43,10 @@ that, so together they machine-verify C1 Theorem 3.6 ("Roles Force Fano").
   coupling that breaks J is suppressed completely at first order when the
   opposite-chirality channel is closed (k₀ < 0.46π at the model's parameters),
   and not suppressed above that. Predicted from the dispersion relation before
-  the confirming runs.
+  the confirming runs. [2026-09-25: those parameters had κ = 0.5. J-compatibility
+  is now a **principle, required at every wavelength**; it derives the floor
+  κ ≥ 2c/√(K + 2c) = 0.971737, and at the new operating point κ = κ\* the channel is
+  closed at every travelling wavenumber (MODEL_SPEC §3, "ADOPTED").]
 - **The pinned asymmetry** is protected against uniform stiffness to 10⁻⁵; its
   nonlinear coefficient κ is not. [Re-measured with correct seeding: κ = −0.0214,
   −0.0187, −0.0165 at stiffness 0.90, 1.00, 1.10, linear ratio 0.99999 throughout
@@ -66,7 +69,10 @@ that, so together they machine-verify C1 Theorem 3.6 ("Roles Force Fano").
 
 - **No scale is derived.** The model is dimensionless; ℏ, G and Λ are not
   predicted, and a length or mass unit is an input.
-- J-compatibility for short wavelengths remains a chosen premise.
+- ~~J-compatibility for short wavelengths remains a chosen premise.~~ [Superseded
+  2026-09-25: replaced by the principle "J-compatibility required at every
+  wavelength", which fixes a floor on κ, not a value; the value of κ is open and
+  measurable.]
 - A per-mode coefficient in three dimensions does not converge with box size,
   without a named mechanism.
 - Formal proof that every seven-point Steiner triple system is the Fano plane.
