@@ -12002,6 +12002,18 @@
    "file": "./00_START_HERE/MODEL_SPEC.md",
    "line": 2725,
    "section": "9. Open, and what each blocks",
+   "text": "| **the D8 two-generator flow is not realised in the lattice** | the D8 flow \u03c8\u0307 = \u03c8a + b\u03c8 needs two octonionic generators on one node; in the lattice \ud835\udd41 is not an octonionic multiplication (neither L_x nor R_y nor L_x + R",
+   "numbers": [
+    "0.82",
+    "1.00",
+    "11"
+   ],
+   "status": []
+  },
+  {
+   "file": "./00_START_HERE/MODEL_SPEC.md",
+   "line": 2726,
+   "section": "9. Open, and what each blocks",
    "text": "| **gate 7's floor under the radial form** | the first-order self-precession correction captures the per-order errors but over-predicts the order-dependent floor ~1.8\u00d7; gate 7 fails its floor criterion. Next: the slice m",
    "numbers": [
     "2026",
@@ -12023,7 +12035,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2728,
+   "line": 2729,
    "section": "9. Open, and what each blocks",
    "text": "| **the beam's fourth-order cross kernel** | derive it \u2014 every fourth-order cross term between a beam's transverse components, on the lattice \u2014 with the measured r values as the target: 0.351/0.350 (w = 1.5), 0.547/0.549",
    "numbers": [
@@ -12043,7 +12055,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2729,
+   "line": 2730,
    "section": "9. Open, and what each blocks",
    "text": "| ~~verify the 0.39\u00b0 attribution~~ | **CLOSED** \u2014 readout timing; the Abelian floor is exactly 0 under clearing readout at q = 1 and q = 3 |",
    "numbers": [
@@ -12053,7 +12065,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2730,
+   "line": 2731,
    "section": "9. Open, and what each blocks",
    "text": "| ~~wavenumber-averaged prediction at q = 3~~ | **CLOSED** \u2014 closes the gap to 0.04\u20130.17\u00b0; the q = 3 gauge sector is quantitatively verified |",
    "numbers": [
@@ -12066,7 +12078,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2732,
+   "line": 2733,
    "section": "9. Open, and what each blocks",
    "text": "| ~~permanent q = 3 gate~~ | **CLOSED** \u2014 `shape_zero_tests/q3_gate.py` (commit `ed32937`). u(2) and u(3), AB/BA plus Abelian floors, clearing readout, spectrum-averaged prediction; PASS needs every error < 1\u00b0 and floors",
    "numbers": [
@@ -12082,7 +12094,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2733,
+   "line": 2734,
    "section": "9. Open, and what each blocks",
    "text": "| free-evolution operator between segments | would remove the \u226420-site gap constraint in \u00a77 step 8. Note the profile-map test showed the q = 1 product residual is already sub-degree, so this matters at q = 3 or not at al",
    "numbers": [
@@ -12092,7 +12104,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2741,
+   "line": 2742,
    "section": "Closed this session",
    "text": "0.08\u00b0 gain) \u00b7 the C_r saturation anomaly (oscillation, f_res \u221d C_r)",
    "numbers": [
@@ -18727,7 +18739,29 @@
   },
   {
    "file": "./03_current/INPUT_LEDGER.md",
-   "line": 379,
+   "line": 376,
+   "section": "3.2 The a\u2013b angle",
+   "text": "**What fixes \u03b8_ab? (investigated 2026-09-26; predictions committed first, 40abe6d; tests `shape_zero_tests/d8_theta.py`, `d8_theta_output.txt`, d420fa0).** **\u03b8_ab remains a chosen genuine parameter (kind 3).** (1) **Orth",
+   "numbers": [
+    "2026",
+    "09",
+    "26",
+    "180",
+    "10",
+    "180",
+    "10",
+    "180",
+    "90",
+    "0.82",
+    "1.00"
+   ],
+   "status": [
+    "VERIFIED"
+   ]
+  },
+  {
+   "file": "./03_current/INPUT_LEDGER.md",
+   "line": 381,
    "section": "3.2 The a\u2013b angle",
    "text": "**Note:** the golden ratio is attainable near 76\u00b0, and **so is every other value",
    "numbers": [
@@ -18737,7 +18771,7 @@
   },
   {
    "file": "./03_current/INPUT_LEDGER.md",
-   "line": 385,
+   "line": 387,
    "section": "3.3 \u03b6 \u2014 testable but the target is unclear",
    "text": "(cone deficit renamed \u03b2 \u2192 \u03b6 on 2026-09-25; \u03b2 now denotes only the lattice gyroscopic coupling)",
    "numbers": [
@@ -18749,7 +18783,7 @@
   },
   {
    "file": "./03_current/INPUT_LEDGER.md",
-   "line": 388,
+   "line": 390,
    "section": "3.3 \u03b6 \u2014 testable but the target is unclear",
    "text": "parameter to 7.6\u00d710\u207b\u00b9\u2075 across two decades, against a point mass varying 100\u00d7",
    "numbers": [
@@ -18760,7 +18794,7 @@
   },
   {
    "file": "./03_current/INPUT_LEDGER.md",
-   "line": 397,
+   "line": 399,
    "section": "3.3 \u03b6 \u2014 testable but the target is unclear",
    "text": "With it: the CMB-lensing bound G\u03bc \u2264 4.3\u00d710\u207b\u2075 gives 1 \u2212 \u03b6 \u2272 1.7\u00d710\u207b\u2074.",
    "numbers": [
@@ -18771,7 +18805,7 @@
   },
   {
    "file": "./03_current/INPUT_LEDGER.md",
-   "line": 402,
+   "line": 404,
    "section": "3.3 \u03b6 \u2014 testable but the target is unclear",
    "text": "embedding to the unit sphere verified to 6.7\u00d710\u207b\u00b9\u2076, disjoint supports",
    "numbers": [
@@ -18783,7 +18817,7 @@
   },
   {
    "file": "./03_current/INPUT_LEDGER.md",
-   "line": 403,
+   "line": 405,
    "section": "3.3 \u03b6 \u2014 testable but the target is unclear",
    "text": "orthogonal. Candidate \u03b6 = (\u03c0/2)/(2\u03c0) = **1/4**. *Closing condition:* shape space",
    "numbers": [
@@ -18793,7 +18827,7 @@
   },
   {
    "file": "./03_current/INPUT_LEDGER.md",
-   "line": 406,
+   "line": 408,
    "section": "3.3 \u03b6 \u2014 testable but the target is unclear",
    "text": "**OPEN INCONSISTENCY, recorded not resolved (2026-09-25).** `02_synthesis/C1S_SYNTHESIS.md`",
    "numbers": [
@@ -18807,7 +18841,7 @@
   },
   {
    "file": "./03_current/INPUT_LEDGER.md",
-   "line": 407,
+   "line": 409,
    "section": "3.3 \u03b6 \u2014 testable but the target is unclear",
    "text": "\u00a712 states that plurality forbids the rational values of 2\u03b6; no derivation of that",
    "numbers": [
@@ -18817,7 +18851,7 @@
   },
   {
    "file": "./03_current/INPUT_LEDGER.md",
-   "line": 411,
+   "line": 413,
    "section": "3.3 \u03b6 \u2014 testable but the target is unclear",
    "text": "rational, so the rule would exclude it. The candidate \u03b6 = 1/4 (2\u03b6 = 1/2) would be",
    "numbers": [
@@ -18828,7 +18862,7 @@
   },
   {
    "file": "./03_current/INPUT_LEDGER.md",
-   "line": 450,
+   "line": 452,
    "section": "5. What is already tested, and failed",
    "text": "The one apparent match \u2014 S\u00b2 giving 1, 3, 6, 10, matching molecular rotation \u2014",
    "numbers": [
@@ -18840,7 +18874,7 @@
   },
   {
    "file": "./03_current/INPUT_LEDGER.md",
-   "line": 458,
+   "line": 460,
    "section": "5. What is already tested, and failed",
    "text": "(4.4\u00d710\u207b\u00b9\u2076), so the algebra's own metric reduces to the round one on the",
    "numbers": [
@@ -18850,7 +18884,7 @@
   },
   {
    "file": "./03_current/INPUT_LEDGER.md",
-   "line": 465,
+   "line": 467,
    "section": "6. What the construction is",
    "text": "A ladder of **what can be tracked**, not of what can be. The 112 discarded",
    "numbers": [
@@ -18860,7 +18894,7 @@
   },
   {
    "file": "./03_current/INPUT_LEDGER.md",
-   "line": 468,
+   "line": 470,
    "section": "6. What the construction is",
    "text": "**measurability**, not structure: in the 16, measuring the parts tells you the",
    "numbers": [
@@ -18870,7 +18904,7 @@
   },
   {
    "file": "./03_current/INPUT_LEDGER.md",
-   "line": 469,
+   "line": 471,
    "section": "6. What the construction is",
    "text": "whole; in the 112 it does not.",
    "numbers": [
@@ -23040,7 +23074,13 @@
     "2026",
     "09",
     "26",
-    "22.93"
+    "22.93",
+    "2026",
+    "09",
+    "26",
+    "180",
+    "0.82",
+    "1.00"
    ],
    "status": []
   },
@@ -23495,6 +23535,17 @@
    "file": "./03_current/PREMISE_LEDGER.md",
    "line": 183,
    "section": "3. Hoped for, not established",
+   "text": "| **The D8 two-generator flow in the lattice** | not realised: \ud835\udd41 is not an octonionic multiplication (best-fit residual 0.82\u20131.00 by L_x, R_y, L_x + R_y), the residual term supplies one generator (L_g), and \u03ba and C_r hav",
+   "numbers": [
+    "0.82",
+    "1.00"
+   ],
+   "status": []
+  },
+  {
+   "file": "./03_current/PREMISE_LEDGER.md",
+   "line": 184,
+   "section": "3. Hoped for, not established",
    "text": "| **The classical/quantum interface term** | \"Conceptually motivated, derivation incomplete\" | `shape_zero_v5-3.txt`, line 198 |",
    "numbers": [
     "198"
@@ -23503,7 +23554,7 @@
   },
   {
    "file": "./03_current/PREMISE_LEDGER.md",
-   "line": 195,
+   "line": 196,
    "section": "4. Where sources state philosophical motivations",
    "text": "| the ranks 0\u20133, the void, the golden ratio (P7, P9) | `01_source/spec/shape_zero_v5-3.txt`, \u00a71 \"Core Ontology\" (lines 16\u201319) |",
    "numbers": [
@@ -23514,7 +23565,7 @@
   },
   {
    "file": "./03_current/PREMISE_LEDGER.md",
-   "line": 196,
+   "line": 197,
    "section": "4. Where sources state philosophical motivations",
    "text": "| the golden ratio in the force law (P9) | `01_source/spec/shape_zero_v5-3.txt`, \"Universality control and the status of the golden ratio (v5.3)\", paragraph beginning \"Where the golden ratio actually lives\" (line 157) |",
    "numbers": [
@@ -23524,7 +23575,7 @@
   },
   {
    "file": "./03_current/PREMISE_LEDGER.md",
-   "line": 197,
+   "line": 198,
    "section": "4. Where sources state philosophical motivations",
    "text": "| the arena as a whole | `01_source/shape_zero_zero_ladder.md`, \"The question and the method\" (lines 10\u201313); D2 (lines 51\u201352) |",
    "numbers": [
@@ -23537,7 +23588,7 @@
   },
   {
    "file": "./03_current/PREMISE_LEDGER.md",
-   "line": 198,
+   "line": 199,
    "section": "4. Where sources state philosophical motivations",
    "text": "| the three roles (P7) | `03_current/INPUT_LEDGER.md` \u00a72b2, \"Why n = 3\" and \"The algebra corroborates independently\" (lines 160\u2013173); `01_source/shape_zero_zero_ladder.md`, \"Postscript\" (line 164); `01_source/cover_notes",
    "numbers": [
@@ -23549,7 +23600,7 @@
   },
   {
    "file": "./03_current/PREMISE_LEDGER.md",
-   "line": 199,
+   "line": 200,
    "section": "4. Where sources state philosophical motivations",
    "text": "| the given (P1) | `03_current/INPUT_LEDGER.md` \u00a71 (lines 22\u201327) |",
    "numbers": [
@@ -23916,6 +23967,39 @@
     "2026",
     "09",
     "26"
+   ],
+   "status": []
+  },
+  {
+   "file": "./03_current/SCALE_SCOPING.md",
+   "line": 270,
+   "section": "6. The genuine parameters \u2014 what a complete derivation must fix",
+   "text": "[2026-09-26: the ratio is exactly 1/sin(\u03b8/2). Investigated what fixes \u03b8_ab: **still a chosen",
+   "numbers": [
+    "2026",
+    "09",
+    "26"
+   ],
+   "status": []
+  },
+  {
+   "file": "./03_current/SCALE_SCOPING.md",
+   "line": 271,
+   "section": "6. The genuine parameters \u2014 what a complete derivation must fix",
+   "text": "genuine parameter (kind 3)**. Orthogonality is not required (every \u03b8 in (0\u00b0, 180\u00b0) gives a",
+   "numbers": [
+    "180"
+   ],
+   "status": []
+  },
+  {
+   "file": "./03_current/SCALE_SCOPING.md",
+   "line": 275,
+   "section": "6. The genuine parameters \u2014 what a complete derivation must fix",
+   "text": "right octonionic multiplication (best-fit residual 0.82\u20131.00; that fit post hoc).",
+   "numbers": [
+    "0.82",
+    "1.00"
    ],
    "status": []
   },
@@ -27414,6 +27498,15 @@
    "docstring": " d8_closed_form.py -- the D8 flow's frequencies in closed form (2026-09-26).  The generic D8 flow (04_scripts/rungs/z1_d8_plurality.py) is psi' = psi a + b psi, linear: psi' = M psi with M = R_a + L_b"
   },
   {
+   "file": "./shape_zero_tests/d8_theta.py",
+   "lines": 151,
+   "banner": false,
+   "blocked": false,
+   "fixes": [],
+   "predictions": 5,
+   "docstring": " d8_theta.py -- tests of what could fix theta_ab (predictions: d8_theta_predictions.txt, committed first, 40abe6d).   O1  Artin: dimension of the subalgebra generated by a, b, and the associator on it"
+  },
+  {
    "file": "./shape_zero_tests/fmt.py",
    "lines": 8,
    "banner": false,
@@ -28126,7 +28219,7 @@
   }
  ],
  "counts": {
-  "doc_claims": 2232,
-  "scripts": 175
+  "doc_claims": 2238,
+  "scripts": 176
  }
 }

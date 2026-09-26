@@ -267,6 +267,13 @@ The list below is kept as written; items 1, 2 and 4 are ĉ, κ̂ and Ĉ_r.
    [2026-09-26: under the adopted radial node form the window is [κ\*, ∞) — the floor
    only (MODEL_SPEC §1a).]
 3. **the a–b angle** (§2d #4) — measurable as the D8 frequency ratio.
+   [2026-09-26: the ratio is exactly 1/sin(θ/2). Investigated what fixes θ_ab: **still a chosen
+   genuine parameter (kind 3)**. Orthogonality is not required (every θ in (0°, 180°) gives a
+   4-dimensional associative pair); the model contains **no nonlinear perturbation of the D8
+   flow**, so endurance cannot select an angle, and none was added; the golden angle stays
+   "attainable, not selected". Prediction misses: swept span 5, not 8; 𝕁 is neither a left nor a
+   right octonionic multiplication (best-fit residual 0.82–1.00; that fit post hoc).
+   `INPUT_LEDGER.md` §3.2; `shape_zero_tests/d8_theta.py`.]
 4. **C_r**, the residual coupling strength (§2d #5).
 
 **Unclassified — may join the list:**
