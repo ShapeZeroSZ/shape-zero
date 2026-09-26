@@ -900,6 +900,33 @@ invariant) and Re Ω, the ℂ³ volume form, which carries **charge 3**: c is in
 e^{θ𝕁} **only for θ a multiple of 2π/3** (1×10⁻¹⁵ at 2π/3; the Re Ω change is |e^{3iθ} − 1|
 exactly; `shape_zero_tests/octonionic_u1_check.py`).
 
+**ℤ₃ phase conservation — tested, 2026-09-26** (hypothesis: in the octonionic sector the right
+phase conservation is ℤ₃, invariance under e^{(2π/3)𝕁}, not U(1); predictions committed first,
+43874d0; `shape_zero_tests/z3_test.py`, `z3_test_output.txt`, ef449b8). Two ℤ₃'s: **ℤ₃a** =
+e^{(2π/3)𝕁} on all node components; **ℤ₃b** = the centre of the SU(3) fixing e (identity on
+span{1, e}, e^{2πi/3} on ℂ³), an automorphism of 𝕆 (6×10⁻¹⁵; ℤ₃a is not, 17.6). **For every
+linear coupling, commuting with e^{(2π/3)𝕁} is equivalent to commuting with 𝕁** (θ = 2π/3
+separates 𝕁's eigenvalues), so ℤ₃ differs from U(1) only for nonlinear terms of charge 3.
+- **The residual:** ‖[ℤ₃a, L_g]‖ = sin(2π/3)·‖[𝕁, L_g]‖ exactly (0.8660); L_g also breaks ℤ₃b
+  (1.39) unless g = e. Its violation is **charge 2, not 3** (U(1)-charge content 0.866 at 0,
+  0.353 at ±2, 0.000 at ±1, ±3, ±4), so the charge is not conserved mod 3. In the gate-11 runs the
+  commuting part alone conserves the full Noether charge (10⁻⁸); the anticommuting (charge-2) part
+  alone reproduces L_g's drift at κ = 0 (−0.36 vs −0.36; −1.69 vs −1.31). **Miss:** at κ\* it
+  overshoots L_g by 2–7× (2.7×10⁻⁴ vs 3.7×10⁻⁵ at C_r = 0.05; 9.6×10⁻³ vs 5.0×10⁻³ at 0.20),
+  where agreement within 30% was predicted.
+- **Gauge class of an octonionic node** (symmetric couplings; 36 with passivity alone): ℤ₃a gives
+  16 = u(4), the same as 𝕁; with the ℂ ⊕ ℂ³ split, 10 = u(1) ⊕ u(3), the same; **ℤ₃b gives 12** —
+  u(3) plus all symmetric couplings on the (1, e) plane, i.e. u(1) ⊕ u(3) plus 2 𝕁-breaking
+  directions on the ℂ line.
+- **The D8 two-generator structure R_a + L_b is forbidden under both** (generic 1.49 / 1.72;
+  a = e, generic b 1.24 / 1.24); it commutes only for a = b = e, which plurality excludes.
+- **Where ℤ₃ differs:** c(u, u, u) vanishes identically (1×10⁻¹⁶); the neighbour cubic
+  c(u_n, u_{n+1}, u_{n+2}) is ℤ₃b-invariant but not U(1)-invariant — multi-vector octonionic
+  terms, which the model does not contain.
+**Result: the hypothesis does not hold as a rescue.** ℤ₃ is the symmetry of c, but for every linear
+coupling in the model ℤ₃-compatibility equals (ℤ₃a) or barely loosens (ℤ₃b, two directions on the
+ℂ line) 𝕁-compatibility; the residual's violation is charge 2, which ℤ₃ also forbids.
+
 **One free parameter appears: C_r**, the coupling strength. Dimensionless, and
 recorded in `INPUT_LEDGER.md` §2d. Nothing yet fixes its value.
 
