@@ -871,6 +871,35 @@ understood.**
 
 **FINDING 2026-09-26 — the residual coupling is not J-compatible** (`shape_zero_tests/kappa_cr_gate.py`, `kappa_cr_gate_output.txt`; predictions committed first, 53ce955). C_r·L_g does not commute with 𝕁: ‖[𝕁, L_g]‖/‖L_g‖ = **0.999**. So it **violates the adopted J-compatibility principle** (§3: [coupling, 𝕁] = 0) whenever κ > 0 and C_r > 0 — the requirements table above never listed J-compatibility, and gate 11 runs at κ = 0. Consequence: the U(1) phase charge N = Σ Im(ψ̄ψ̇) − (κ/2)\|ψ\|² is not conserved. At κ = 0 it drifts **−36%** (C_r = 0.05) and **−128%** (C_r = 0.20) over T = 20 (q = 1 and q = 3 alike); at **κ\*** it drifts −3.1×10⁻⁴ and −6.3×10⁻³ (q = 1; −4.8×10⁻⁴, −6.4×10⁻³ at q = 3) — **κ\* suppresses the violation to about (C_r/κ)², without removing it** (interpretation, not tested: the non-commuting part of L_g couples the two chirality branches, which κ detunes by κ at every k). Gate 11's criteria still pass at κ\*; energy drift ≤ 1×10⁻⁷ everywhere; at C_r = 0 the charge is conserved to 1×10⁻⁸. κ also changes B: at C_r = 0.05, 2.5× (q = 1) and 6.5× (q = 3) lower at κ\*. **Misses:** the charge drift was predicted to grow ∝ C_r — at κ\* it grows ∝ C_r² (×20 for ×4); B was predicted roughly ∝ C_r² — B(0.20)/B(0.05) = 1.6–1.9 at κ = 0 and 5.0–5.8 at κ\*, against 16 (consistent with the fixed-T turnover above C_r ≈ 0.1 recorded in §6b). [**CORRECTED 2026-09-26:** the charge used above, N = Σ Im(ψ̄ψ̇) − (κ/2)\|ψ\|², omits the C_r part of the Noether charge. With the full charge Q = v·𝕁u + ½u·(G𝕁)u, G = κ𝕁 + C_r L_g, the drift at κ\* is **−3.7×10⁻⁵ (C_r = 0.05) and −5.0×10⁻³ (0.20)** (q = 1; at κ = 0 unchanged, −36% / −131%); "about (C_r/κ)²" is **withdrawn** — κ\* strongly suppresses the violation without removing it, and its scaling is not established (`shape_zero_tests/residual_j_projection.py`, `residual_j_projection_output.txt`).]
 
+### 4b.3 The octonionic field term (c1s) — not the residual, not in the model (2026-09-26)
+
+The c1s package describes an **octonionic term** — cubic, G₂-covariant, parity-odd, built from
+the octonionic 3-form c — in a sigma model on the D2/D8 arena (`04_scripts/c1s/scripts/
+octonionic_term_*.py`, `d8_cubic_term.py`; `02_synthesis/REVISION_2_BASE.md`). Neither this
+spec nor `model.py` ever incorporated it. Rechecked after Revision 2 (REVISION_2_BASE, "Needs
+recheck", RECHECKED):
+- **survive:** collinear-gradient vanishing; the (3, 3) term exists but is a **null Lagrangian**;
+- **do not survive:** the 2D-base variation, covariant and parity results (the D8 base is ℝ⁷,
+  where ε^{μν} does not exist); **uniqueness** (the 7D base has 14 non-null (3, 4) invariants).
+
+**A different object from the lattice residual, never linked to it in the sources.** The
+residual (§4b.1) is on-site, carries no base derivative, is linear in velocity and uses a fixed
+g (breaking G₂ to the SU(3) fixing g); the octonionic term is cubic in fields, carries 3–4 base
+derivatives, uses all of c and is G₂-invariant. The residual is neither its linearisation nor
+its discretisation; no source relates the two.
+
+**It cannot supply a D8 disturbance without being added.** The D8 flow is an equation for one
+ψ on S⁷ with no base, so a derivative term vanishes on it; on the lattice's bases the cubic term
+does not exist (q = 1) or is the pull-back of a closed constant 3-form, null by the same
+mechanism (q = 3; argued, not run); on the 7D base the (3, 3) term is null and the 14 (3, 4)
+candidates are not selected by anything ("existence of non-null terms is not selection").
+
+**The octonion structure reduces 𝕁's U(1) to ℤ₃.** With 𝕁 = L_e (multiplication by the chosen
+unit, 𝕆 = ℂ ⊕ ℂ³ — §2, §3), c splits into the Kähler part ω (an index along e; charge 0,
+invariant) and Re Ω, the ℂ³ volume form, which carries **charge 3**: c is invariant under
+e^{θ𝕁} **only for θ a multiple of 2π/3** (1×10⁻¹⁵ at 2π/3; the Re Ω change is |e^{3iθ} − 1|
+exactly; `shape_zero_tests/octonionic_u1_check.py`).
+
 **One free parameter appears: C_r**, the coupling strength. Dimensionless, and
 recorded in `INPUT_LEDGER.md` §2d. Nothing yet fixes its value.
 

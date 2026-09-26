@@ -406,6 +406,18 @@ have.
   under both. The sign structure should persist, but "base parity" means
   reflection in ℝ⁷ now, and the (3, 3) term needs its own check.
 
+[**RECHECKED 2026-09-26** (all five scripts re-run unchanged, every stated prediction passes as
+written — `shape_zero_tests/octonionic_term_rerun_output.txt`; parity and U(1) checks
+`shape_zero_tests/octonionic_u1_check.py`). **Survive Revision 2:** collinear-gradient vanishing
+(any antisymmetric base contraction kills collinear gradients); the (3, 3) term exists, is
+independent of the trace invariants (rank 4), and is a **null Lagrangian** (EL 3.4×10⁻¹⁴;
+`d8_cubic_term.py`). **Do not survive:** the variation, covariant and parity results are
+statements about a **2D base** (ε^{μν}, T²), which the D8 arena does not have; "blind to the
+radial sector" was about the cone; **uniqueness** fails — the 7D base has 22 (3, 4) invariants,
+**14 non-null**. The (3, 3) term's own parity: odd under full base inversion and under target
+orientation reversal, even under both; a single-axis reflection in ℝ⁷ has no definite sign.
+See MODEL_SPEC §4b.3.]
+
 ## Second failure, unrelated to the base
 
 `vertex_renormalisation.py` derived ⟨O²⟩ = 28 L⁴ Σ A′² G G G. A direct
