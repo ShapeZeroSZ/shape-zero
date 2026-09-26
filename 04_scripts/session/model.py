@@ -69,6 +69,14 @@ K0 = np.pi / 2
 # T = 180 on N = 200; SZ_GATE7_READOUT=fixed).
 J_WELL = os.environ.get("SZ_J_WELL", "radial")
 GATE7_READOUT = os.environ.get("SZ_GATE7_READOUT", "clear")
+# Residual coupling (ADOPTED 2026-09-26: C_r = 0 for the coded coupling C_r mul(g, v);
+# MODEL_SPEC sec 4b.1, "ADOPTED -- C_r = 0"). The coded coupling is block-diagonal in the
+# two octonion halves (it never couples the octonion half to the level above), breaks
+# J-compatibility inside the octonion half, and no source ties it to colour, generations
+# or a classical limit. Lattice still accepts C_r and a tower, so earlier results
+# reproduce; gate 11 tests the inert half only unless SZ_RESIDUAL=coded, which restores
+# the earlier gate ("inert at C_r = 0, active otherwise").
+RESIDUAL = os.environ.get("SZ_RESIDUAL", "off")
 DT = 0.02
 
 
@@ -971,18 +979,27 @@ def main():
         rg = np.random.default_rng(5)
         gv = np.zeros(16); gv[1:8] = rg.normal(size=7); gv /= np.linalg.norm(gv)
         out = []
+        crs = (0.0, 0.05) if RESIDUAL == "coded" else (0.0,)
         for q, N in ((1, 512), (3, 512)):
-            for Cr in (0.0, 0.05):
+            for Cr in crs:
                 lr = Lattice(n=8, N=N, q=q, kappa=0.0, C_r=Cr, tower=(E16, gv))
                 uu, vv = lr.packet(amp=1e-3)
                 uu[:, 8:] += 0.3 * uu[:, :8]
                 uu, vv, dq = lr.run(uu, vv, T=20.0)
                 out.append((q, Cr, dq, lr.residual_B(uu).mean()))
         inert = all(abs(B) < 1e-12 for q, Cr, d, B in out if Cr == 0)
-        alive = all(abs(B) > 1e-6 for q, Cr, d, B in out if Cr > 0)
-        gate(11, "residual: inert at C_r=0, active otherwise, at q=1 and q=3",
-             inert and alive,
-             "  ".join(f"q={q} C_r={c}: B={B:.2e}" for q, c, d, B in out))
+        if RESIDUAL == "coded":
+            alive = all(abs(B) > 1e-6 for q, Cr, d, B in out if Cr > 0)
+            gate(11, "residual: inert at C_r=0, active otherwise, at q=1 and q=3",
+                 inert and alive,
+                 "  ".join(f"q={q} C_r={c}: B={B:.2e}" for q, c, d, B in out))
+        else:
+            # C_r = 0 ADOPTED (2026-09-26): the residual is a coordinate of the state
+            # (B) with no coded dynamics; the n = 8 node with the tower attached must
+            # leave B inert and conserve energy.
+            gate(11, "residual (C_r = 0 adopted): inert at q=1 and q=3", inert and
+                 all(d < 1e-6 for q, Cr, d, B in out),
+                 "  ".join(f"q={q}: B={B:.2e} drift {d:.1e}" for q, c, d, B in out))
     except Exception as e:
         gate(11, "residual sector", False, f"could not run: {e}")
 

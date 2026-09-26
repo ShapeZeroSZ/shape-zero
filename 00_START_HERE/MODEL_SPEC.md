@@ -244,8 +244,10 @@ by 20% changes them by 93% (control).
 | **ĉ = c/K** | 1/√5 = 0.4472 | every lattice sector; cannot be scaled away on a lattice (a length unit only in the continuum limit) |
 | **κ̂ = κ/√K** | κ\*/√K = 0.6498 | J sector (and the scalar sector when the gyroscopic term is on) |
 | **β̂ = βc/√K** | 0.05/5^(1/4) = 0.0334 | scalar β sector |
-| **Ĉ_r = C_r/√K** | — (0.05 in gate 11: 0.0334) | residual sector |
-| **θ_ab** | chosen | D8 — a separate linear flow; a time rescaling leaves its frequency ratios unchanged. \|b\|/\|a\| is fixed at 1 (it would otherwise be a further parameter) |
+| ~~**Ĉ_r = C_r/√K**~~ | — (0.05 in gate 11: 0.0334) | residual sector [**SUPERSEDED 2026-09-26:** C_r = 0 adopted for the coded coupling (§4b.1) — no longer a parameter] |
+| **θ_ab** | chosen | D8 — a separate linear flow; a time rescaling leaves its frequency ratios unchanged. \|b\|/\|a\| is fixed at 1 (it would otherwise be a further parameter) [**2026-09-26:** acts only in the D8 derivation — the lattice realises no two-generator structure (§9)] |
+
+**The lattice's invariants (updated 2026-09-26, C_r = 0 adopted):** **ĉ = c/K**, **κ̂ = κ/√K** with its floor κ̂ ≥ κ̂\* = 2ĉ/√(1 + 2ĉ), and **β̂ = βc/√K** (scalar sector). **θ_ab** acts only in the D8 derivation. The table is kept as written.
 
 **θ_ab's observable in closed form (2026-09-26).** The generic D8 flow ψ̇ = ψa + bψ is linear, ψ̇ = Mψ with M = R_a + L_b antisymmetric. For unit imaginary a, b at angle θ its frequencies are exactly **{0, 2 sin(θ/2), 2}** (multiplicities: a 2-dimensional kernel, 2 sin(θ/2) twice, 2 once), so the frequency ratio is **1/sin(θ/2)** — 2 at 60°, √2 at 90°, φ at 76.345°, → 1 as θ → 180°. Confirmed for a fixed pair swept over θ and for random pairs, to 5×10⁻¹¹ (`shape_zero_tests/d8_closed_form.py`, `d8_closed_form_output.txt`). (INPUT_LEDGER §3.2.)
 
@@ -266,7 +268,7 @@ quadratic-force well with two real roots, so φ and √5 are coordinate choices)
 - **the radial node, form (A) — holds, more simply.** −(K + r)ψ has two coefficients, both
   removed by the scalings; its second root (r = −K) is unphysical, so the two-root
   structure is not even present.
-- **the full lattice — holds.** φ and √5 are coordinates; the physics is ĉ, κ̂, β̂, Ĉ_r, θ_ab.
+- **the full lattice — holds.** φ and √5 are coordinates; the physics is ĉ, κ̂, β̂, Ĉ_r, θ_ab. [2026-09-26: with C_r = 0 adopted, ĉ, κ̂ (with its floor) and β̂; θ_ab acts only in the D8 derivation.]
 - **The limit.** The equivalence needs the shift, available only where nothing else fixes
   the origin of x. In the ring form (B) the well acts on \|ψ\|, whose origin the U(1)
   symmetry fixes: three coefficients, two scalings, one invariant survives — the **root
@@ -825,6 +827,33 @@ breaks it.
 statement of §4b, now confirmed on a live instrument.
 
 ### 4b.1 The coupling form — determined, not chosen
+
+**ADOPTED 2026-09-26 — C_r = 0 for the coded residual coupling.** The coupling C_r·mul(g, v)
+below is switched off in the model (`model.py`: C_r = 0 by default; `SZ_RESIDUAL=coded` restores
+the earlier gate 11, and `Lattice` still accepts C_r and a tower, so every earlier result
+reproduces). Reasons:
+1. **It does not implement the residual as the tower beyond D8.** C_r·L_g is block-diagonal in the
+   two octonion halves (‖LU‖ = ‖UL‖ = 0, ‖LL‖ = ‖UU‖ = 2.83), and every other term is too: it never
+   couples the octonion half to the level above — a lower-half packet leaves the upper half at
+   exactly 0.0 (`shape_zero_tests/residual_tower_check.py`).
+2. **It breaks J-compatibility inside the octonion half**, through a second imaginary unit
+   (lower-block ‖[𝕁, L_g]‖/‖L_g‖ = 1.30; the lower half's charge drifts −36% at κ = 0, the upper
+   half's does not move). The same break already occurs in the quaternions (1.87 in ℍ; 1.78–1.93 in
+   𝕆; 1.75–1.90 in 𝕊), so it is **not caused by leaving the division algebras** (§4b.1, FINDING;
+   §4b.3; PREMISE_LEDGER C39, C41).
+3. **No source ties it to colour, generations or a classical limit:** "Colour stays on n = 3 /
+   u(3), not on the residual" (§5b.7); generations are closed negatively (§8); "The ladder is
+   classical throughout" (`HIERARCHIES.md` §2) and no source links the residual or the tower to a
+   classical limit.
+
+**Lost:** the residual's coded dynamics (B stays at its initial value); gate 11's active half; C_r
+as a parameter (Ĉ_r leaves the invariants, §1b). Several of its results had **no reproducing script**
+— the 0.0204 / 0.0200 rows above, §5b.7's ratios 3.88 / 3.83 / 3.85, and f_res ∝ C_r. **Kept:** Prove2Me
+missions 1–6; predictions P-1 to P-3; κ\*; gates 1–10; colour on u(3); and **the residual as a
+coordinate of the state** (§4b: B, V = −2 log(1 − 4B), the rank-opening result, the tower's D8 fixed
+point). Everything below in this section is kept as written and is **superseded** for the model;
+it describes the coded coupling, which is an option, not the model. Open: the residual as the
+tower acting on the D ≤ 8 structure (§9).
 
 **The residual is not a separate field. It is a coordinate of the same state,
 one level up.** The node carries a level-≥16 element; its octonionic part is the
@@ -2545,6 +2574,8 @@ requirements.
 
 ### 5b.7 Residual sector — base-stable on q = 3
 
+[**SUPERSEDED 2026-09-26** for the model: C_r = 0 is adopted (§4b.1); the table describes the coded coupling, and its ratios had no reproducing script. "Colour stays on n = 3 / u(3)" stands.]
+
 | check | status |
 |---|---|
 | C_r = 0 inert | **pass** — both q = 3 sizes and q = 1 |
@@ -2648,6 +2679,7 @@ prediction 0.294 / 0.175); gate 8 0.1603° PASS; all gates pass.]
 (`shape_zero_tests/model_gates_radialA_v3.txt`): u(2) floor **0.1603°** vs slice **0.1601°**,
 u(3) **0.0965°** vs **0.0962°** — **PASS** (split and per-order unchanged: 98.50 vs 98.28,
 0.16 / 0.36°; 107.11 vs 107.13, 0.41 / 0.29°); gate 8 0.1603° (slice 0.1601); all gates pass.]
+[**2026-09-26 — C_r = 0 adopted (§4b.1):** gate 11 now tests the inert half only, "residual (C_r = 0 adopted): inert at q=1 and q=3" (`shape_zero_tests/model_gates_residual_off.txt`); its active-half values (B = 3.25×10⁻³ and 1.29×10⁻² at C_r = 0.05) are superseded and reproduce with `SZ_RESIDUAL=coded` (`model_gates_residual_coded_repro.txt`). Gates 1–10 unchanged.]
 
 **One script now reproduces every verified result the programme has** — u(1),
 u(2), u(3), the pinned asymmetry, κ, the β-collapse, both ordering splittings and
@@ -2776,7 +2808,8 @@ established — see §7b.*
 | question | blocks |
 |---|---|
 | **what fixes the fibre metric scale** | **the largest one — it blocks three numbers at once.** ℏ, c₈ and Λ are all functions of it (κ_ℏ ∝ 1/k, c₈ ∝ k², Λ ∝ 1/k). Nothing in the architecture supplies a length: structure constants are ±1, \|1\| = 1 is a norm, and 2, 6, 42, 3/8, 2π² are ratios. The φ-well does supply a length (√5) but it lives on the **radial** coordinate while ℂP² is the **angular** one, and the HK cone relation ties them only as k = m — which discretises the node mass without fixing its unit |
-| **what fixes C_r** | the residual coupling *form* is determined (§4b.1); its *strength* is not |
+| ~~**what fixes C_r**~~ | the residual coupling *form* is determined (§4b.1); its *strength* is not [**SUPERSEDED 2026-09-26:** C_r = 0 adopted for the coded coupling (§4b.1)] |
+| **the residual as the tower acting on the D ≤ 8 structure** | **not implemented**: the coded coupling (now off) never coupled the octonion half to the level above, and **the sources supply no coupling between the octonion half and higher levels**. Proposed test, once a coupling exists: run the tower at D16, D32 and D64 (`cd(4)`–`cd(6)`, n = 8, 16, 32) with the D ≤ 8 half excited and measure the energy and U(1)-phase flow into the residual components, whether it reverses, and whether the recurrence time grows with tower level (irreversible flow with a recurrence time growing with level would be the signature of an environment). **Any such coupling must be derived, or selected under the selection rule (§1a), not added silently.** No source links the residual or the tower to a classical limit |
 | ~~fourth-order cross-modulation (κ, F at A = 0.30)~~ **DONE for the plane wave, 2026-09-25** (§5, "κ to fourth order"); the original entry: | the derived F is second order; it matches every sharp point except the two narrowest beams at A = 0.30, which it matches at A = 0.10 (§5, "The cross-modulation factor F, derived") |
 | ~~beam fourth order with orbit-consistent launches~~ **DONE 2026-09-25** (§5): launch pieces derived, H0 and S1 excluded; the original entry: | the beam fourth-order tests (H0 excluded at large fill; S1 against S2 unresolved) used plain-cosine launches, so they mix physics with launch effects. Redo them with orbit-consistent (second-order) launches (`kappa_seed2_test.py`), derive the beam's fourth-order kernel, and derive the launch's static-shift and second-harmonic pieces, which are measured, not derived (§5) |
 | ~~S2 at w = 3, L = 4, and why the cross terms cancel~~ **SUPERSEDED 2026-09-25** (§5): with the third harmonic in the launch S2 fails three of four L = 4 beams, and the cross terms are partly present; the original entry: | two things: (1) test S2 at w = 3, L = 4 with the third harmonic added to the launch — S2 failed that beam by +18σ under the committed criterion and fits it only under a post-hoc third-harmonic band; (2) derive why the fourth-order cross terms cancel, leaving only the box-wide component's own term (S2 is a surviving hypothesis, not a derivation) |

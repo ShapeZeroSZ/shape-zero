@@ -1220,6 +1220,11 @@ prediction at q = 1 only; the q = 3 and split failures are recorded in MODEL_SPE
 the barrier 1.863 is E/K³ = 1/6; "φ is in the force law itself" is a coordinate artifact
 (MODEL_SPEC §1, §1b, §3).
 
+**C_r = 0 adopted (same day):** the coded residual coupling is block-diagonal (never couples the
+octonion half to the level above) and breaks J-compatibility inside the octonion half; no source ties
+it to colour, generations or a classical limit. Gate 11 now tests the inert half; `SZ_RESIDUAL=coded`
+reproduces the earlier gate. Open: the residual as the tower acting on D ≤ 8 (MODEL_SPEC §9).
+
 **Catch:** the node form was an inherited platform choice ("per-component"), never
 derived, whose O(2) breaking the spec itself noted (v5.3, Result 4, line 143) and on which
 a prediction (P-3) was built. Failure mode #1's cousin: a modelling choice carried forward

@@ -246,7 +246,7 @@ after every rescaling of amplitude and time (length is fixed by the lattice):
 (0.0334 at β = 0.05; the unclassified entry below), **Ĉ_r = C_r/√K**, **θ_ab** (\|b\|/\|a\|
 fixed at 1). The well (K = √5 and its unit nonlinear coefficient) contributes none; the
 amplitude A/K, ĝ = gc/√K, k₀, packet width, geometry, T√K, n and q are protocol settings.
-The list below is kept as written; items 1, 2 and 4 are ĉ, κ̂ and Ĉ_r.
+The list below is kept as written; items 1, 2 and 4 are ĉ, κ̂ and Ĉ_r. [**2026-09-26:** C_r = 0 adopted for the coded coupling (`MODEL_SPEC.md` §4b.1) — the lattice's invariants are **ĉ**, **κ̂** with its floor, and **β̂**; θ_ab acts only in the D8 derivation.]
 
 **Kind 3 — genuine:**
 1. **c/√5** — the elastic coupling relative to the well stiffness (§2d #6); the
@@ -274,7 +274,7 @@ The list below is kept as written; items 1, 2 and 4 are ĉ, κ̂ and Ĉ_r.
    "attainable, not selected". Prediction misses: swept span 5, not 8; 𝕁 is neither a left nor a
    right octonionic multiplication (best-fit residual 0.82–1.00; that fit post hoc).
    `INPUT_LEDGER.md` §3.2; `shape_zero_tests/d8_theta.py`.]
-4. **C_r**, the residual coupling strength (§2d #5).
+4. ~~**C_r**, the residual coupling strength (§2d #5).~~ [**SUPERSEDED 2026-09-26:** C_r = 0 adopted for the coded coupling; no longer a parameter.]
 
 **Unclassified — may join the list:**
 - **β**, the lattice gyroscopic coupling (§2d #7): a test value for the pinning,

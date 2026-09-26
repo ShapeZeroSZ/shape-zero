@@ -328,6 +328,12 @@ T = 600 Fourier-peak readout reproduces the recorded 23.9 at 5° (23.875, bin 8)
 `d8_closed_form.py` → `d8_closed_form_output.txt`: M = R_a + L_b has frequencies {0, 2 sin(θ/2), 2}
 for unit imaginary a, b at angle θ; ratio 1/sin(θ/2) (INPUT_LEDGER §3.2).
 
+### 23. C_r = 0 adopted (2026-09-26)
+`model_gates_residual_off.txt`: model.py's gates with C_r = 0 adopted (gate 11 tests the inert half).
+`model_gates_residual_coded_repro.txt`: the same with `SZ_RESIDUAL=coded`, reproducing the earlier
+gate 11. Supporting checks: `residual_tower_check.py`, `kappa_cr_gate.py`, `residual_j_projection.py`,
+`z3_test.py` (MODEL_SPEC §4b.1, "ADOPTED — C_r = 0").
+
 ### P-1 investigation
 `p1/` — the decay-window investigation behind the P-1 annotation; its README maps
 each file to its finding.
