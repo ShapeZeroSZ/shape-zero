@@ -1,0 +1,36 @@
+checks: JL^2 = -1: 0.0e+00; JL preserves C^3: 0.0e+00; Z3b automorphism |P(xy) - P(x)P(y)|: 6.3e-15; Z3a automorphism: 17.60
+
+(1) Z1  residual L_g vs Z3
+    lattice n=8 (sedenion, present identification): ||[Z3a, L_g]|| / ||[JJ, L_g]|| = 0.8660  (sin 2pi/3 = 0.8660); ||[Z3a, L_g]||/||L_g|| = 0.865
+    octonion, JJ = L_e, generic g: ||[Z3a, L_g]|| / ||[JJ, L_g]|| = 0.8660  (sin 2pi/3 = 0.8660); ||[Z3a, L_g]||/||L_g|| = 1.615
+    Z3b vs L_g, generic g: ||[Z3b, L_g]||/||L_g|| = 1.39e+00
+    Z3b vs L_g, g = e: ||[Z3b, L_g]||/||L_g|| = 0.00e+00
+
+    Z2  charge content of L_g: Fourier modes of e^{-th JJ} L_g e^{th JJ} (lattice n=8)
+      charge q:  -4: 0.000  -3: 0.000  -2: 0.353  -1: 0.000  +0: 0.866  +1: 0.000  +2: 0.353  +3: 0.000  +4: 0.000
+
+    Z3  gate-11 runs, L_g vs its anticommuting part A vs commuting part C (full Noether charge)
+      kappa 0.000 C_r 0.05: dQ/Q  L_g -3.57e-01   A -3.60e-01   C -7.00e-08
+      kappa 0.000 C_r 0.20: dQ/Q  L_g -1.31e+00   A -1.69e+00   C -7.66e-08
+      kappa 0.972 C_r 0.05: dQ/Q  L_g -3.70e-05   A -2.72e-04   C -1.39e-08
+      kappa 0.972 C_r 0.20: dQ/Q  L_g -4.98e-03   A -9.57e-03   C -1.55e-08
+
+(2) Z4/Z5  gauge class: symmetric 8x8 couplings commuting with ...
+      nothing (passivity alone)          : 36
+      JJ = L_e (U(1))                    : 16
+      Z3a (JJ = L_e)                     : 16
+      lattice JJ, and its Z3a            : 16, 16
+      JJ = L_e and the split C + C^3     : 10
+      Z3a and the split                  : 10
+      Z3b                                : 12
+      Z3b restricted: JJ-breaking dims   : 2 beyond u(1)+u(3)
+
+(3) Z6/Z7  D8 generator M = R_a + L_b
+      generic a, b      : ||[Z3a, M]||/||M|| = 1.49e+00   ||[Z3b, M]||/||M|| = 1.72e+00
+      a = e, generic b  : ||[Z3a, M]||/||M|| = 1.24e+00   ||[Z3b, M]||/||M|| = 1.24e+00
+      a = e, b = e      : ||[Z3a, M]||/||M|| = 0.00e+00   ||[Z3b, M]||/||M|| = 0.00e+00
+
+    Z8  charge-3 terms
+      c(u, u, u) = 1.1e-16
+      c(u_n, u_n+1, u_n+2) under Z3b: -2.9773 -> -2.9773
+      c(u_n, u_n+1, u_n+2) under U(1) on C^3, theta = 0.3: -2.9773 -> -12.7299
