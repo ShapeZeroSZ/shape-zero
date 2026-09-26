@@ -1,0 +1,9 @@
+c totally antisymmetric: 0.0 0.0
+L_e maps Im(O)->Im(O) on e-perp: L e1 = [0. 0. 0. 0. 0. 0. 0.]  L^2 on e-perp = -1: 0.0
+theta 0.3000: |c(R.,R.,R.) - c| / |c| = 6.576e-01
+theta 1.0472: |c(R.,R.,R.) - c| / |c| = 1.512e+00
+theta 2.0944: |c(R.,R.,R.) - c| / |c| = 1.153e-15
+theta 1.5708: |c(R.,R.,R.) - c| / |c| = 1.069e+00
+theta 0.300: omega part invariant 0.0e+00; ReOmega part change 0.870 (charge 3 predicts |e^{3i th}-1|/sqrt2 ~ 0.615)
+theta 1.571: omega part invariant 0.0e+00; ReOmega part change 1.414 (charge 3 predicts |e^{3i th}-1|/sqrt2 ~ 1.000)
+T(J) = -39.96095147355949  T(Rb J) = 29.809645711763327  T(-J) = 39.96095147355949  T with c->-c on target only: 39.96095147355949

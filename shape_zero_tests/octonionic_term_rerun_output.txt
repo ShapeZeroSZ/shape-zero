@@ -1,0 +1,246 @@
+################ 04_scripts/c1s/scripts/octonionic_term_kernel.py (re-run 2026-09-26, unchanged)
+======================================================================
+OCTONIONIC TERM :: WHAT CAN IT SEE?
+======================================================================
+
+K1  FOURIER SUPPORT ON ONE LINE THROUGH THE ORIGIN
+----------------------------------------------------------------------
+    direction (1, 0)   : S = +0.000000e+00
+    direction (0, 1)   : S = +0.000000e+00
+    direction (1, 1)   : S = -1.391255e-13
+    direction (2, -1)  : S = -3.085998e-12
+    direction (3, 1)   : S = +6.305776e-11
+    floor = 6.306e-11   [predicted 0 -> PASS]
+
+K2  DEPENDS ON ONE BASE COORDINATE ONLY
+----------------------------------------------------------------------
+    S = +0.000e+00   [PASS]
+
+K3  PURELY RADIAL, SEVEN INDEPENDENT PROFILES
+----------------------------------------------------------------------
+    trial 0 : S = -1.686200e-15
+    trial 1 : S = -3.517231e-15
+    trial 2 : S = -3.179622e-15
+    trial 3 : S = +1.165268e-15
+    max |S| = 3.517e-15   [predicted 0 -> PASS]
+    -> the term is BLIND to the entire radial sector
+
+K4  GENUINE ANGULAR STRUCTURE
+----------------------------------------------------------------------
+    modes up to m = 2 : S = +1.714870e+01
+    modes up to m = 3 : S = +1.258669e+02
+    modes up to m = 4 : S = -3.346997e+00
+    modes up to m = 5 : S = +2.402894e+02
+    max |S| = 2.403e+02  vs radial floor 3.517e-15   [PASS]
+
+K5  SIGN TRACKS THE CROSS PRODUCT k1 x k2
+----------------------------------------------------------------------
+      angle      k1 x k2        S
+     -60 deg    -5.1962   +5.182841e+03
+     -30 deg    -3.0000   +5.311835e+03
+      -5 deg    -0.5229   +1.394256e+02
+      +0 deg    +0.0000   +0.000000e+00
+      +5 deg    +0.5229   -1.396644e+02
+     +30 deg    +3.0000   -5.311835e+03
+     +60 deg    +5.1962   -5.182841e+03
+    collinear case vanishes : PASS
+
+======================================================================
+READING
+======================================================================
+  The kernel carries a two-dimensional cross product, so the term
+  is blind to any configuration whose base gradients are everywhere
+  parallel. That includes the ENTIRE radial sector, with all seven
+  profiles free.
+
+  On the cone this is the useful half of a restriction. The deficit
+  is a purely angular defect, and angular structure is precisely
+  what the term does see. The octonionic sector cannot couple to
+  radial physics at all, and can only couple to the part of the
+  cone that carries its deficit.
+exit 0
+################ 04_scripts/c1s/scripts/octonionic_term_variation.py (re-run 2026-09-26, unchanged)
+======================================================================
+IS THE OCTONIONIC TERM A TOTAL DERIVATIVE?
+======================================================================
+
+V1  INSTRUMENT :: planar configurations (2 active components)
+----------------------------------------------------------------------
+    trial 0:  |S| = 0.000e+00
+    trial 1:  |S| = 0.000e+00
+    trial 2:  |S| = 0.000e+00
+    trial 3:  |S| = 0.000e+00
+    noise floor = 0.000e+00   [predicted ~0 -> PASS]
+
+V2  INSTRUMENT :: IBP identity  int B.box phi = - int dB.dphi
+----------------------------------------------------------------------
+    trial 0:  +3.29034526e+04  vs  +3.29034526e+04   rel 2.21e-16
+    trial 1:  -2.01712400e+03  vs  -2.01712400e+03   rel 6.76e-16
+    trial 2:  +1.00244313e+04  vs  +1.00244313e+04   rel 3.63e-16
+    PASS -- derivatives and quadrature sound
+
+V3  GENERIC CONFIGURATIONS
+----------------------------------------------------------------------
+    trial 0:  S = -8.53882907e+03
+    trial 1:  S = +3.56165486e+03
+    trial 2:  S = -2.38250844e+04
+    trial 3:  S = +8.70487786e+03
+    trial 4:  S = -7.90353634e+03
+    trial 5:  S = +2.61394381e+04
+
+    largest |S| = 2.614e+04   vs noise floor 0.000e+00
+    ratio = 2.614e+34   [predicted >> 1 -> PASS]
+
+V4  DIRECTIONAL FUNCTIONAL DERIVATIVE
+----------------------------------------------------------------------
+    direction 0:  dS/dt = +3.98919690e+04
+    direction 1:  dS/dt = +2.91879434e+04
+    direction 2:  dS/dt = +1.04503438e+04
+    PASS -- nonzero variation
+
+======================================================================
+READING
+======================================================================
+  NOT a total derivative. The integral over a closed surface is
+  nonzero and the variation does not vanish, so the term enters
+  the equations of motion. Maps T^2 -> R^7 are contractible, so
+  no topological invariant can be doing the work.
+
+  This is the FIRST place in the construction where the
+  octonions contribute something the target metric alone does
+  not. The quartic sector lost its octonionic term to the
+  composition identity; this order keeps it.
+exit 0
+################ 04_scripts/c1s/scripts/octonionic_term_covariant.py (re-run 2026-09-26, unchanged)
+======================================================================
+OCTONIONIC TERM :: COVARIANT VERSION
+======================================================================
+
+P1  dim spin(7) = 21, dim g2 = 14, dim m = 7   [21/14/7 -> PASS]
+
+P2  residual of A off spin(7) : 7.042e-12   [predicted ~0 -> PASS]
+
+P3  Maurer-Cartan residual : 1.219e-10   (scale 4.527e-02)   [PASS]
+
+P4  real component of A_m . 1 : 1.583e-17   [predicted ~0 -> PASS]
+
+P5  covariant action S = -1.45905434e-02
+    |S| vs Maurer-Cartan residual scale : 1.20e+08   [predicted nonzero -> PASS]
+
+P6  DIRECTIONAL VARIATION
+----------------------------------------------------------------------
+    direction 0:  dS/dt = +8.93739557e-03
+    direction 1:  dS/dt = +5.75132810e-01
+    direction 2:  dS/dt = -2.50551972e+00
+    PASS
+
+ P7  AMPLITUDE SCALING  (term is cubic -> S ~ AMP^3)
+----------------------------------------------------------------------
+      amp        S            S / amp^3
+     0.010   -5.826023e-04   -5.826023e+02
+     0.020   -4.495940e-03   -5.619926e+02
+     0.030   -1.459054e-02   -5.403905e+02
+     0.050   -6.177932e-02   -4.942346e+02
+    pure-cubic spread      : 16.22%   (predicted <10% -> MISS)
+    cubic+quartic fit      : A = -605.75, B = +2216.26
+    max rel dev from fit   : 2.08e-03   [PASS]
+    B/A = -3.659  -- the connection piece of tau
+
+======================================================================
+READING
+======================================================================
+  The flat result SURVIVES the covariant treatment. The term is
+  not a total derivative on the constrained target either, and
+  it enters the equations of motion of the actual sigma model.
+exit 0
+################ 04_scripts/c1s/scripts/octonionic_term_parity.py (re-run 2026-09-26, unchanged)
+======================================================================
+OCTONIONIC TERM :: PARITY AUDIT AND UNIQUENESS
+======================================================================
+
+(A) PARITY -- auditing an asserted claim
+----------------------------------------------------------------------
+      trial      S            S(reflect)     S(c->-c)      S(both)
+       0    +9.57440e+03  -9.57440e+03  -9.57440e+03  +9.57440e+03
+       1    +4.95697e+03  -4.95697e+03  -4.95697e+03  +4.95697e+03
+       2    +5.15050e+03  -5.15050e+03  -5.15050e+03  +5.15050e+03
+       3    -2.06353e+04  +2.06353e+04  +2.06353e+04  -2.06353e+04
+
+    Y1 odd under base reflection      : PASS
+    Y2 odd under orientation reversal : PASS
+    Y3 even under both                : PASS
+
+Y4  IS THE REVERSED ALGEBRA STILL AN OCTONION ALGEBRA?
+----------------------------------------------------------------------
+    valid orientations : 16
+    mask 0 (all +) valid   : True
+    mask 127 (all -) valid : True
+    every valid mask's full reversal also valid : PASS
+    -> reversal maps the 16 onto themselves; the sign-flipped
+       algebra is a genuine octonion algebra, not a broken one
+
+(B) Y5  UNIQUENESS AT THIS ORDER
+----------------------------------------------------------------------
+    c(u1,u1,tau) and c(u2,u2,tau) vanish : 7.32e-15
+    independent scalars with 3 target indices : 1   [predicted 1 -> PASS]
+
+    Reason, from A-3 rather than from this rank: the space of
+    G2-invariant rank-3 tensors is 1-dimensional and equals c.
+    Three target indices therefore force c; c antisymmetric in the
+    two v-slots forces an antisymmetric base contraction; in two
+    dimensions that is eps and nothing else.
+
+======================================================================
+READING
+======================================================================
+  The orientation claim HOLDS. The term is odd under each of
+  base reflection and orientation reversal, even under both.
+  Reversal keeps you inside the 16, so the two choices are
+  equally valid algebras giving opposite-sign contributions to
+  the field equations. Orientation is physical, paired with
+  base parity -- neither is separately meaningful.
+
+  And the term is the ONLY invariant at its order, forced by
+  A-3. Not one option among several: the whole content there.
+exit 0
+################ 04_scripts/c1s/scripts/d8_cubic_term.py (re-run 2026-09-26, unchanged)
+======================================================================
+THE (3,3) OCTONIONIC TERM :: DOES IT CONTRIBUTE?
+======================================================================
+
+P1  c contracted with a symmetric tensor
+----------------------------------------------------------------------
+    max |c_(sigma nu rho) S^(sigma nu)| = 8.882e-16   [predict 0 -> PASS]
+
+P2  EULER-LAGRANGE DERIVATIVE OF T
+----------------------------------------------------------------------
+    max |EL_d| over random field data = 3.370e-14   [predict 0 -> PASS]
+    -> T is a NULL LAGRANGIAN: a total derivative
+
+P3/P4  G2-INVARIANT CUBIC SCALARS IN J
+----------------------------------------------------------------------
+    rank of the three trace invariants : 3
+    rank including T                   : 4   [predict 4 -> PASS]
+    P4 T independent of the traces     : PASS
+
+P5  IS NULLITY SPECIAL TO T?  (control: tr(J)^3)
+----------------------------------------------------------------------
+    max |EL| for tr(J)^3 = 2.904e+02   [predict nonzero -> PASS]
+    -> nullity is a property of the octonionic contraction,
+       not of cubic terms generally
+
+======================================================================
+READING
+======================================================================
+  The (3,3) term is real, is a genuinely new invariant, and
+  contributes NOTHING to the equations of motion. Its Euler-
+  Lagrange derivative vanishes identically because the totally
+  antisymmetric structure constants meet a symmetric second
+  derivative -- the same antisymmetry that makes the term exist
+  is what makes it inert.
+
+  Pattern, now at five: no WZ term, no potential, no Skyrme term,
+  no topological sectors, and now a cubic term that exists but is
+  a total derivative. The mechanisms differ every time; the
+  outcome does not.
+exit 0
