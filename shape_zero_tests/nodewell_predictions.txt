@@ -1,0 +1,46 @@
+NODE FORM: PER-DIMER RADIAL WELL (A) vs WHOLE-NODE RADIAL WELL (A') -- HYPOTHESES AND
+PREDICTIONS (committed before any run), 2026-09-26. Tests: shape_zero_tests/nodewell_test.py,
+model.py with SZ_J_WELL=node, q3_gate.py and a q = 1 amplitude series under SZ_J_WELL=node.
+
+A : per dimer, F_j = -(sqrt5 + |psi_j|) psi_j          (adopted; invariant under U(1)^n)
+A': whole node, F = -(sqrt5 + |psi|) psi, |psi|^2 = sum_j |psi_j|^2   (invariant under O(2n),
+    so under U(n)). At n = 1 A' = A.
+
+(1) SYMMETRY
+ N1 A is NOT invariant under the rotations the gauge segments apply at n = 2, 3: rotating the
+    launched state e_0 by gate 7's segment unitaries changes V_A = sum |psi_j|^3/3 by O(1)
+    relative; V_A' is unchanged to 1e-15.
+ N2 (source reading) no source requires the on-site potential to share the gauge class's
+    symmetry: passivity and J-compatibility are stated for couplings; u(n) is the class of the
+    LINKS. The one source that bears on it is MODEL_SPEC sec 0: the node state is a cone point,
+    "a mass/radial coordinate and a shape/angular coordinate", with m = |u|^2 over the whole node
+    (model.cone_split), and "the platform's node is an unbounded displacement in a phi-well --
+    that is the radial coordinate". A' is the phi-well on that radial coordinate; A is not.
+
+(2) GATES AND DEVIATIONS (amplitude 1e-3 unless stated)
+ N3 A' removes the first-order self-precession: the local frequency shift |psi|/(2w + kappa) is
+    common to all components, so it gives no relative phase. A single plane wave of ANY internal
+    state is an exact solution with no precession at all orders -> P-3's precession rate
+    Omega = A(cos chi - sin chi)/(2w + kappa) (true under A) becomes Omega = 0 under A':
+    measured |Omega| < 1e-3 x the A-law value.
+ N4 gate 7 (q = 1, clearing readout): the Abelian floor falls from 0.160 / 0.096 deg (A) to
+    < 0.01 deg; the per-order errors return to the single-carrier values (u(2) 0.12 / 0.27,
+    u(3) 0.40 / 0.26 deg, each within 0.05 deg); the split error to the single-carrier intercept
+    (+0.265 / -0.015 deg, within 0.05 deg). Gate 8 < 0.01 deg.
+ N5 remaining deviations are O(A g) (the common frequency shift changes each link's rotation
+    angle by ~ g lambda dw) and O(A^2): every certification slope drops by >= 10x -- floors from
+    0.160 / 0.096 (q = 1) and 0.101 / 0.053 (q = 3) deg per 1e-3 to <= 0.016 / 0.010, per-order
+    from 3.9 / 2.3 (q = 1) and 0.40 / 0.16 (q = 3) to <= 0.4 / 0.02; intercepts unchanged.
+ N6 q3_gate at 1e-3: floors < 0.01 deg, per-order and split errors < 0.01 deg of their
+    small-amplitude intercepts (so all deviations from the averaged linear prediction <= 0.01 deg).
+ N7 gates that do not involve n >= 2 nonlinear dynamics are unchanged: 1, 2, 4, 5, 6 identical;
+    kappa* unchanged (linear). Gate 3, 9, 10, 11: pass; gate 11 inert (B stays < 1e-12: the
+    A' force is parallel to u at each site, so it does not rotate the node's shape).
+
+(3) THE NODE-FORM CRITERIA
+ N8 A' satisfies all four: phase conservation at all orders (U(n) contains the J rotation);
+    bounded motion (V = sqrt5 r^2/2 + r^3/3 >= 0 in the node radius); the D2 rung's isotropic,
+    origin-centred node (O(2n)-isotropic; = A at n = 1); keeps kappa* (same linear part). So the
+    four criteria do not decide between A and A'. Predicted verdict: A' is ALLOWED by the four
+    criteria and favoured by sec 0's cone reading (the well on the radial coordinate), not forced
+    by passivity or J-compatibility.
