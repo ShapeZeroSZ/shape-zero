@@ -247,6 +247,8 @@ by 20% changes them by 93% (control).
 | **Ĉ_r = C_r/√K** | — (0.05 in gate 11: 0.0334) | residual sector |
 | **θ_ab** | chosen | D8 — a separate linear flow; a time rescaling leaves its frequency ratios unchanged. \|b\|/\|a\| is fixed at 1 (it would otherwise be a further parameter) |
 
+**θ_ab's observable in closed form (2026-09-26).** The generic D8 flow ψ̇ = ψa + bψ is linear, ψ̇ = Mψ with M = R_a + L_b antisymmetric. For unit imaginary a, b at angle θ its frequencies are exactly **{0, 2 sin(θ/2), 2}** (multiplicities: a 2-dimensional kernel, 2 sin(θ/2) twice, 2 once), so the frequency ratio is **1/sin(θ/2)** — 2 at 60°, √2 at 90°, φ at 76.345°, → 1 as θ → 180°. Confirmed for a fixed pair swept over θ and for random pairs, to 5×10⁻¹¹ (`shape_zero_tests/d8_closed_form.py`, `d8_closed_form_output.txt`). (INPUT_LEDGER §3.2.)
+
 **Protocol settings, not physics:** the amplitude **A/K** (the nonlinear strength — the
 nonlinear coefficient is absorbed into it), **ĝ = gc/√K**, k₀, the packet width, the
 geometry, **T√K**, and the discrete choices **n** and **q**.

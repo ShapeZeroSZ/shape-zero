@@ -371,6 +371,8 @@ trials), the generic flow gives **two** (6/6 at adequate resolution), and the
 ratio sweeps monotonically over [1.04, 23.9] as the angle runs 5° to 150°.
 [**CORRECTED 2026-09-26:** 23.9 → **22.93**, a frequency-resolution artifact. The ratio is exactly 1/sin(θ/2) (the flow's frequencies are 0, 2 sin(θ/2), 2); the lost sweep's Fourier-peak readout at T = 600 (resolution 1/600, `z1_d8_plurality.py`) puts θ = 5°'s lower frequency 0.01388 on bin 8 (0.01333), giving 23.875; at 150° and 76.3° the bin effect is negligible (1.038, 1.619 vs exact 1.035, 1.619). Reproduced: `shape_zero_tests/d8_angle_readout.py`.]
 
+**Closed form (2026-09-26).** The generic D8 flow ψ̇ = ψa + bψ is linear, ψ̇ = Mψ with M = R_a + L_b antisymmetric. For unit imaginary a, b at angle θ its frequencies are exactly **{0, 2 sin(θ/2), 2}** (multiplicities: a 2-dimensional kernel, 2 sin(θ/2) twice, 2 once), so the frequency ratio is **1/sin(θ/2)** — 2 at 60°, √2 at 90°, φ at 76.345°, → 1 as θ → 180°. Confirmed for a fixed pair swept over θ and for random pairs, to 5×10⁻¹¹ (`shape_zero_tests/d8_closed_form.py`, `d8_closed_form_output.txt`).
+
 Measurable wherever the u(2) structure of §3.1 is realised, since the splitting
 is the same physics one rung up.
 
