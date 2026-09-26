@@ -1209,6 +1209,11 @@ intercepts zero, q = 1 floor zero and split/per-order intercepts at the single-c
 error, as predicted. Adopted as a certification test (`certify_gates.py`, run when the
 model changes); the routine gate 7 reports its floor without a pass/fail.
 
+**Slice-resolved self-precession (same day):** predictions committed (294fe46) before the
+comparison (806ea86). Disclosure: the q = 1 u(2) floor value was seen during setup (time-step
+and baseline checks); the u(3) floor was not, and matches equally. Adopted as gate 7's floor
+prediction at q = 1 only; the q = 3 and split failures are recorded in MODEL_SPEC §4d.
+
 **Catch:** the node form was an inherited platform choice ("per-component"), never
 derived, whose O(2) breaking the spec itself noted (v5.3, Result 4, line 143) and on which
 a prediction (P-3) was built. Failure mode #1's cousin: a modelling choice carried forward

@@ -309,6 +309,11 @@ certification test (MODEL_SPEC §4d) → `certify_gates_output.txt`, `certify_ga
 (the measured slopes). `model_gates_radialA_v2.txt`: model.py's gates with the routine gate 7
 reporting its floor without a pass/fail.
 
+### 19. Slice-resolved self-precession (2026-09-26)
+`slice_precession.py predict | compare` → `slice_precession_predictions.{txt,json}` (committed
+first), `slice_precession_compare.txt`. `model_gates_radialA_v3.txt`: model.py's gates with gate
+7's floor against `model.slice_prediction` at q = 1 (|Δ| < 0.01°).
+
 ### P-1 investigation
 `p1/` — the decay-window investigation behind the P-1 annotation; its README maps
 each file to its finding.

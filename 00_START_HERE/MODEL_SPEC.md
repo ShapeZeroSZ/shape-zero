@@ -1602,6 +1602,52 @@ impulsive precession correction over-predicts the floor by about 1.8×. Until th
 slice-resolved derivation exists, the routine gate reports the finite-amplitude floor
 **without a pass/fail** (per-order and split criteria unchanged, against the
 precession-corrected prediction); the linear claim rests on the certification result above.
+[**Superseded the same day at q = 1** by the slice-resolved floor prediction below; q = 3
+keeps the no-pass/fail reporting.]
+
+**Slice-resolved self-precession (2026-09-26; predictions committed before comparison).**
+`shape_zero_tests/slice_precession.py`: the packet is cut into slices, one per launched site
+(weight F(x, 0)²; unit node state s). Every slice moves at the carrier group velocity; when it
+crosses a link it takes that link's unitary (one factor of `U_segment`), so a slice inside a
+segment is partly rotated; at every step each dimer component precesses at its **local**
+amplitude, s_j ← exp(−i F_loc |s_j| dt/(2ω + κ)) s_j, F_loc the exact linear free envelope at
+the slice's position. Predictions: `slice_precession_predictions.txt` (commit 294fe46);
+comparison: `slice_precession_compare.txt` (806ea86). Slopes, degrees per 10⁻³:
+
+| quantity | q = 1 predicted / measured (ratio) | q = 3 predicted / measured (ratio) |
+|---|---|---|
+| u(2) floor | 0.16005 / 0.16013 (1.000) | 0.0902 / 0.1008 (0.90) |
+| u(3) floor | 0.09624 / 0.09642 (0.998) | 0.0405 / 0.0528 (0.77) |
+| u(2) per-order AB / BA | 4.298 / 3.908, 4.405 / 4.017 (1.10, 1.10) | 0.487 / 0.399, 0.531 / 0.449 (1.22, 1.18) |
+| u(3) per-order AB / BA | 2.505 / 2.325, 2.448 / 2.252 (1.08, 1.09) | 0.111 / 0.159, 0.110 / 0.149 (0.70, 0.73) |
+| u(2) split | +0.0261 / −0.0248 (**wrong sign**) | +0.0265 / −0.0183 (**wrong sign**) |
+| u(3) split | −0.0150 / −0.0249 (0.60) | −0.0011 / −0.0030 (0.35) |
+
+- **Disclosure.** The q = 1 **u(2) floor** value (0.16005) was **seen during setup** — in the
+  check that the precession-off run reproduces `U_segment`'s product and that the time step
+  had converged — before the predictions file was written and committed; nothing in the model
+  was changed after it. The measured slopes were known when the model was written. The q = 1
+  **u(3) floor was not seen** before the commit, and matches equally well (0.998).
+- **Matches:** the q = 1 floors (within 0.2%, where the impulsive correction was 1.8× high);
+  the q = 3 u(2) floor within 10%.
+- **Fails:** the per-order slopes are **~8–10% high at q = 1**; at **q = 3 the model is off
+  by 10–30%** (u(2) per-order +20%, u(3) per-order −30%, u(3) floor −23%); the **split slopes
+  are wrong** — sign wrong for u(2) at both q, too small (0.60×, 0.35×) for u(3). The split
+  is a difference of two per-order shifts ~150× larger, so a 10% per-order error swamps it.
+- **Likely causes (not tested):** every slice moves at the single carrier group velocity (the
+  packet's own spread of k, and so of v_g, is dropped — a larger effect for the width-3 q = 3
+  packet, whose transverse spectrum is broad); the segments' change of the group velocity and
+  local amplitude inside a segment (k shifts by ~gλω per link) is ignored; at q = 3 the links
+  use the mean transverse term Qt rather than the spectrum the linear predictor averages over.
+  Why the slice resolution fixes the floor while the impulsive centre-time treatment does not
+  is not isolated.
+
+**Adopted (2026-09-26): the slice model is gate 7's floor prediction at q = 1 only.**
+Criterion: **|floor − slice prediction| < 0.01°** at the routine amplitude 10⁻³
+(`model.slice_prediction`; the observed agreement is ≤ 0.0002°). Gate 7's split and
+per-order criteria are unchanged (< 1° against the impulsive-corrected product). At q = 3
+the floors, and the slice model's split and per-order slopes everywhere, are **reported
+without a pass/fail**.
 
 ---
 
@@ -2460,6 +2506,11 @@ linear claim is certified by `shape_zero_tests/certify_gates.py`. Now
 (`shape_zero_tests/model_gates_radialA_v2.txt`, values unchanged): gate 7 u(2) and u(3)
 **PASS** on split and per-order, floors **0.160°** and **0.096°** reported (impulsive
 prediction 0.294 / 0.175); gate 8 0.1603° PASS; all gates pass.]
+[**2026-09-26 — gate 7's floor against the slice-resolved prediction at q = 1** (§4d,
+"Slice-resolved self-precession"; criterion |floor − slice| < 0.01°). Now
+(`shape_zero_tests/model_gates_radialA_v3.txt`): u(2) floor **0.1603°** vs slice **0.1601°**,
+u(3) **0.0965°** vs **0.0962°** — **PASS** (split and per-order unchanged: 98.50 vs 98.28,
+0.16 / 0.36°; 107.11 vs 107.13, 0.41 / 0.29°); gate 8 0.1603° (slice 0.1601); all gates pass.]
 
 **One script now reproduces every verified result the programme has** — u(1),
 u(2), u(3), the pinned asymmetry, κ, the β-collapse, both ordering splittings and
@@ -2592,7 +2643,7 @@ established — see §7b.*
 | ~~the q = 3 Abelian floor at κ\*~~ **RESOLVED 2026-09-25** (§3, "ADOPTED"; §4d; §4d.1): a readout-timing artefact — a carrier launch leaves off-branch content that makes the readout oscillate, and the two runs were read at unequal times; κ = 0.5's zero was equal-time reading by coincidence. With a per-mode launch and one readout time per pair the floor is 0.000° at both κ, and "exactly 0 at q = 3" is restored. The original entry: | `q3_gate.py` at the operating point κ\* reads 0.066° (u(2)) and 0.030° (u(3)) under clearing readout, not 0.000° as at κ = 0.5 — inside tolerance, cause not investigated; blocks the claim "exactly 0 at q = 3" at the current operating point (§3, "ADOPTED"; §4d) |
 | ~~§6b's gate-7 u(3) entry~~ **RESOLVED 2026-09-25**: it is the platform benchmark `phi_gauge_u3_working.py` (reproduced exactly), mislabelled as `model.py`'s gate 7; label corrected in §6b. The original entry: | 65.1166 / 64.9712 is not reproduced by the current `model.py` at κ = 0.5 (117.92 / 118.29); pre-existing, found in the κ\* re-run — which configuration produced it is unrecorded |
 | ~~the operating point against persistence~~ **RESOLVED 2026-09-26** by the change of node form (§1a): under the radial form the window is [κ\*, ∞) and κ\* is no longer excluded. The original entry: | the strongest persistence the model admits (no decay, no change of branch) confines κ to [4.9, 7.5] at q = 3, c = 1 and excludes the operating point κ\*, where the u∘u nonlinearity converts a-waves into the opposite chirality (§3, "FINDING", "CORRECTION"); whether to adopt that form, and so move the operating point, is undecided |
-| **gate 7's floor under the radial form** | the first-order self-precession correction captures the per-order errors but over-predicts the order-dependent floor ~1.8×; gate 7 fails its floor criterion. Next: the slice model (§4d, "Gate 7 under the radial well"), predictions first [2026-09-26: the routine gate now reports the floor without a pass/fail; the small-amplitude limit is certified (§4d, "Amplitude scaling"); the measured slopes there are the target for the slice derivation] |
+| **gate 7's floor under the radial form** | the first-order self-precession correction captures the per-order errors but over-predicts the order-dependent floor ~1.8×; gate 7 fails its floor criterion. Next: the slice model (§4d, "Gate 7 under the radial well"), predictions first [2026-09-26: the routine gate now reports the floor without a pass/fail; the small-amplitude limit is certified (§4d, "Amplitude scaling"); the measured slopes there are the target for the slice derivation] [2026-09-26: the slice-resolved model matches the q = 1 floors (≤ 0.2%) and is adopted as gate 7's floor prediction at q = 1 (|Δ| < 0.01°); per-order ~10% high, q = 3 off 10–30%, split slopes wrong — open (§4d, "Slice-resolved")] |
 | **four-wave coupling strengths** | the four-wave channels are counted by linear resonance only; their effective couplings are not derived (§3, "FINDING", caveats) |
 | **the exact value of κ** | only the floor κ ≥ κ\* is derived; the value is a genuine parameter, fixed by the Larmor measurement (`INPUT_LEDGER.md` §3.1); `model.py`'s κ = κ\* is a chosen operating point |
 | **the beam's fourth-order cross kernel** | derive it — every fourth-order cross term between a beam's transverse components, on the lattice — with the measured r values as the target: 0.351/0.350 (w = 1.5), 0.547/0.549 (w = 2), 0.750/0.758 (w = 3) at L = 4, A = 0.30/0.40, which lie 0.33, 0.50, 0.68 of the way from the self-only limit S2 to the all-terms limit S1 (§5, measured with the third-harmonic launch, `kappa4_orbit3_launch.py`) |

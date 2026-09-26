@@ -45,6 +45,8 @@ that, so together they machine-verify C1 Theorem 3.6 ("Roles Force Fano").
   [Certified 2026-09-26: at small amplitude the radial model reduces to the linear gauge
   dynamics (q = 3 intercepts zero; q = 1 floor zero), all deviations linear in amplitude;
   the routine gate 7 reports its floor without a pass/fail (MODEL_SPEC §4d)]
+  [Slice-resolved self-precession, 2026-09-26: predicts the q = 1 floor to 0.2% and is gate 7's
+  floor prediction at q = 1 (|Δ| < 0.01°); per-order ~10% high, q = 3 and splits open]
   (the latter a standing gate, `q3_gate.py`, shown to fail against a wrong
   prediction). Commuting segments give exactly zero, as the algebra requires.
 - **J-compatibility is enforced by the dynamics for long wavelengths.** A

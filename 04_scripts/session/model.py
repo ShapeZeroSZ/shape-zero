@@ -574,6 +574,56 @@ def precession_prediction(lat, seq, T, width, n0, amp, psi0):
     return coords_of_state(lat, s)
 
 
+def slice_prediction(lat, seq, T, width, n0, amp, psi0, dt=0.25):
+    """SLICE-RESOLVED first-order self-precession (q = 1; shape_zero_tests/
+    slice_precession.py, MODEL_SPEC sec 4d, "Slice-resolved self-precession").
+    One slice per launched site, weight F(x, 0)^2, unit state s = psi0. Every slice
+    moves at the carrier v_g; when it crosses link site m + 1/2 it takes that link's
+    unitary sum_j exp(i k(g wgt lambda_j)) P_j (one factor of U_segment), and at every
+    step each dimer component precesses at its LOCAL amplitude,
+        s_j <- exp(-i F_loc |s_j| dt / (2w + kappa)) s_j,
+    F_loc = the exact linear free envelope |psi(x, t)| at the slice's position.
+    Readout: rho = sum F(x,0)^2 s s^+. Adopted 2026-09-26 as gate 7's FLOOR prediction
+    at q = 1 only (it reproduced the measured floor slopes to 0.2%; it is ~10% high on
+    the per-order errors and wrong on the split slopes)."""
+    x = np.arange(lat.N)
+    psi = amp * np.exp(-0.5 * ((x - n0) / width) ** 2) * np.exp(1j * K0 * (x - n0))
+    P = np.fft.fft(psi)
+    w = lat.branch_omega()
+    env = lambda t: np.abs(np.fft.ifft(P * np.exp(-1j * w * t)))
+    den = 2 * lat.omega + lat.kappa
+    vg = 2 * C * np.sin(K0) / den
+    F0 = env(0.0)
+    keep = F0 ** 2 > 1e-14 * (F0 ** 2).max()
+    x0 = x[keep].astype(float)
+    wts = F0[keep] ** 2
+    s = np.tile(psi0.astype(complex), (len(wts), 1))
+    links = []
+    for start, axis, g in seq:
+        eigs, vecs = np.linalg.eigh(lat.G[axis])
+        for j, wgt in enumerate(RAMP):
+            ks = np.array([k_branch(lat, g * wgt * e) for e in eigs])
+            links.append((start + j + 0.5, (vecs * np.exp(1j * ks)) @ vecs.conj().T))
+    links.sort(key=lambda p: p[0])
+    for i in range(int(round(T / dt))):
+        t0, t1 = i * dt, (i + 1) * dt
+        tm = 0.5 * (t0 + t1)
+        F = env(tm)
+        xm = x0 + vg * tm
+        xl = np.floor(xm).astype(int)
+        fr = xm - xl
+        Floc = (1 - fr) * F[xl % lat.N] + fr * F[(xl + 1) % lat.N]
+        s = np.exp(-1j * Floc[:, None] * np.abs(s) * dt / den) * s
+        xa, xb = x0 + vg * t0, x0 + vg * t1
+        for pos, U in links:
+            hit = (xa < pos) & (xb >= pos)
+            if hit.any():
+                s[hit] = s[hit] @ U.T
+    rho = np.einsum("m,mi,mj->ij", wts, s, s.conj())
+    tr = np.real(np.trace(rho))
+    return np.array([np.real(np.trace(S @ rho)) / tr for S in lat.G])
+
+
 def _windows(lat, u, v, seg):
     w = (u * u + (v * v) / lat.omega ** 2).sum(axis=1)
     idx = np.arange(lat.N)
@@ -642,6 +692,8 @@ def ordering_test(n, gA, gB, seg=(60, 80), T=180.0, q=1, side=None,
         co, pur = lat.readout(u, v)
         if q == 1:
             pred = precession_prediction(lat, spec, T, width, n0, amp, psi0)
+            if lat.well == "radial" and readout == "clear":
+                out.setdefault("slice", {})[name] = slice_prediction(lat, spec, T, width, n0, amp, psi0)
         else:
             Qt = transverse_Q(lat, u, v)
             gs = (gA, gB) if order == (1, 0) else (gB, gA)
@@ -739,7 +791,10 @@ def abelian_floor(n, gA, gB, **kw):
     return_pred = kw.pop("return_pred", False)
     r = ordering_test(n, gA, gB, axes=(0, 0), **kw)
     fl = angle(r["AB"][0], r["BA"][0])
-    return (fl, angle(r["AB"][1], r["BA"][1])) if return_pred else fl
+    if not return_pred:
+        return fl
+    sl = r.get("slice")
+    return fl, angle(r["AB"][1], r["BA"][1]), (angle(sl["AB"], sl["BA"]) if sl else None)
 
 
 # --------------------------------------------------------------- build gates
@@ -833,8 +888,8 @@ def main():
         r = ordering_test(nn, gA, gB, readout=GATE7_READOUT)
         mAB, pAB, pur, dr = r["AB"]; mBA, pBA, _, _ = r["BA"]
         ms = angle(mAB, mBA)
-        floor, pfloor = abelian_floor(nn, gA, gB, readout=GATE7_READOUT, return_pred=True)
-        floors[nn] = (floor, pfloor)
+        floor, pfloor, sfloor = abelian_floor(nn, gA, gB, readout=GATE7_READOUT, return_pred=True)
+        floors[nn] = (floor, pfloor, sfloor)
         # CRITERION REVISED. The earlier test "split > 10 x Abelian floor" is
         # VACUOUS at q = 1: under a clearing readout the elementwise floor is
         # exactly 0 (its ~0.016 deg was the packet's tail still inside the second
@@ -846,17 +901,25 @@ def main():
         dAB, dBA = angle(mAB, pAB), angle(mBA, pBA)
         psplit = angle(pAB, pBA)
         if GATE7_READOUT == "clear":
-            # FLOOR REPORTED WITHOUT PASS/FAIL (2026-09-26). The impulsive
-            # self-precession correction over-predicts the order-dependent floor by
-            # ~1.8x, so no floor criterion is applied until the slice-resolved
-            # derivation exists. The small-amplitude claim (the model reduces to the
-            # linear gauge dynamics) is certified separately by
-            # shape_zero_tests/certify_gates.py (MODEL_SPEC sec 4d).
-            ok = (dAB < 1.0 and dBA < 1.0 and abs(ms - psplit) < 1.0)
+            # FLOOR vs the SLICE-RESOLVED prediction (adopted 2026-09-26, q = 1 only):
+            # |floor - slice_prediction| < 0.01 deg. [2026-09-26, earlier the same day:
+            # the floor was reported without a pass/fail, the impulsive correction
+            # (precession_prediction, still shown) over-predicting it ~1.8x.] The
+            # split and per-order criteria are unchanged (against the impulsive-
+            # corrected product); the slice model's split and per-order values are
+            # not used (MODEL_SPEC sec 4d). The small-amplitude claim is certified by
+            # shape_zero_tests/certify_gates.py.
+            if sfloor is not None:
+                okf = abs(floor - sfloor) < 0.01
+                ftxt = (f"Abelian floor {floor:.4f} deg vs slice prediction {sfloor:.4f} "
+                        f"(|d| < 0.01; impulsive {pfloor:.3f})")
+            else:
+                okf = True
+                ftxt = f"Abelian floor {floor:.3f} deg (reported, no pass/fail)"
+            ok = (dAB < 1.0 and dBA < 1.0 and abs(ms - psplit) < 1.0 and okf)
             gate(7, f"{lbl} ordering vs independent prediction", ok,
                  f"split {ms:.2f} deg vs predicted {psplit:.2f} deg | per-order "
-                 f"{dAB:.2f} / {dBA:.2f} deg | Abelian floor {floor:.3f} deg (reported, "
-                 f"no pass/fail; impulsive prediction {pfloor:.3f}) | clearing T "
+                 f"{dAB:.2f} / {dBA:.2f} deg | {ftxt} | clearing T "
                  f"{r['T']:.0f} | drift {dr:.1e}")
         else:
             ok = (dAB < 1.0 and dBA < 1.0 and abs(ms - psplit) < 1.0
@@ -867,10 +930,11 @@ def main():
                  f"{floor:.3f} deg (algebra: 0) | drift {dr:.1e}")
 
     # ---- 8 Abelian control is now gate 7's own zero ----------------------
-    fl, pfl = floors[2]
+    fl, pfl, sfl = floors[2]
     gate(8, "Abelian control (commuting axes, unequal strengths)", fl < 3.0,
          f"{fl:.4f} deg   (theory 0; equal strengths would be vacuous)"
-         + (f"; predicted {pfl:.4f} (radial well's self-precession)" if J_WELL == "radial" else ""))
+         + (f"; predicted {sfl:.4f} slice-resolved, {pfl:.4f} impulsive (radial well's "
+            f"self-precession)" if sfl is not None else ""))
 
     # ---- 9 cone state (MODEL_SPEC sec 0) --------------------------------
     lat = Lattice(n=3, N=200, q=1)
