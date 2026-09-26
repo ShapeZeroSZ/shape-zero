@@ -1,0 +1,21 @@
+kappa* AND C_r ON TOGETHER -- PREDICTIONS (committed before the run), 2026-09-26
+Script: shape_zero_tests/kappa_cr_gate.py. Never run before: gate 11 uses kappa = 0.
+
+What is run. Gate 11's residual test (n = 8 node, D = 16, sedenion table cd(4),
+g = the gate's random imaginary octonion, packet amp 1e-3 plus 0.3 x copy into the upper
+half, T = 20, N = 512, q = 1 and q = 3) at kappa in {0, kappa*} x C_r in {0, 0.05, 0.20},
+radial well (model.py default). Gates 1-10 do not involve the residual (it needs the
+16-dimensional n = 8 node and a tower), so "C_r on" is meaningful only here; model.py's
+full gate list is rerun unchanged as the reference.
+
+Predictions:
+ R1 gate 11's criteria hold at kappa*: inert at C_r = 0 (B < 1e-12), active at C_r > 0.
+ R2 energy drift < 1e-6 in every run (both gyroscopic terms are velocity terms that do no
+    work; the drift is RK4's).
+ R3 L_g does not commute with JJ for generic g: ||[JJ, L_g]|| / ||L_g|| = O(1). So the
+    residual coupling is NOT J-compatible, and with C_r on the U(1) phase charge
+    N = sum Im(conj psi dpsi) - (kappa/2)|psi|^2 (conserved by the radial well + kappa JJ)
+    is NOT conserved: relative drift growing with C_r (roughly proportional), while at
+    C_r = 0 it is conserved to RK4 accuracy (< 1e-6).
+ R4 B changes when kappa is switched on (kappa changes the dynamics the residual acts on);
+    the size is not predicted. B remains roughly proportional to C_r^2 at small C_r.
