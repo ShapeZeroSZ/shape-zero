@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """g3_cone_lensing.py — cone-deficit lensing (log: G3). Constant deflection
 pi(1/zeta - 1) after aperture correction 2*arcsin(b/r0); Newtonian varies.
+positive-definite geodesic result; not a Lorentzian lensing claim.
 
 (Cone deficit renamed beta -> zeta on 2026-09-25, to free beta for the lattice
 gyroscopic coupling; the code variable keeps the name beta/BETA.)

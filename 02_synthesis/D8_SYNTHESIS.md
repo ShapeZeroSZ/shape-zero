@@ -147,7 +147,7 @@ The selected law is **linear**: M = R_a + L_b is antisymmetric, so the flow is
 exp(Mt) in SO(8) — exactly integrable, constant frequencies.
 
 That closes the last lead. The a–b angle controls the frequency ratio, which
-sweeps monotonically over [1.04, 23.9] as the angle runs 5° to 150°. The golden
+sweeps monotonically over [1.04, 23.9] as the angle runs 5° to 150° [**CORRECTED 2026-09-26:** 23.9 → **22.93**, a frequency-resolution artifact. The ratio is exactly 1/sin(θ/2) (the flow's frequencies are 0, 2 sin(θ/2), 2); the lost sweep's Fourier-peak readout at T = 600 (resolution 1/600, `z1_d8_plurality.py`) puts θ = 5°'s lower frequency 0.01388 on bin 8 (0.01333), giving 23.875; at 150° and 76.3° the bin effect is negligible (1.038, 1.619 vs exact 1.035, 1.619). Reproduced: `shape_zero_tests/d8_angle_readout.py`; `03_current/INPUT_LEDGER.md` §3.2.] The golden
 ratio is attainable near 76° — **and so is every other value in the range**.
 Attainability is not selection. KAM-style persistence would select the most
 irrational ratio, but KAM needs a perturbation, and an exactly integrable flow on

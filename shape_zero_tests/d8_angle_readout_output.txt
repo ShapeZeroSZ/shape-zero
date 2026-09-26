@@ -1,0 +1,5 @@
+Fourier-peak readout, T = 600, N = 240000, resolution 0.00167 cycles per unit time
+  theta exact f_low exact ratio eig ratio bin ratio   readout peaks (cycles/unit time) readout ratio
+    5.0     0.01388     22.9256   22.9256   23.8750                 [0.01333, 0.31833]       23.8750
+   76.3     0.19663      1.6189    1.6189    1.6186                 [0.19667, 0.31833]        1.6186
+  150.0     0.30746      1.0353    1.0353    1.0380                 [0.30667, 0.31833]        1.0380

@@ -319,6 +319,11 @@ first), `slice_precession_compare.txt`. `model_gates_radialA_v3.txt`: model.py's
 ĉ, κ̂, β̂, ĝ, Ĉ_r, A/K, T√K held fixed agrees to ≤ 1.3×10⁻¹⁴ in four sectors; changing c/K
 alone by 20% changes it by 93% (MODEL_SPEC §1b).
 
+### 21. D8 angle readout (2026-09-26)
+`d8_angle_readout.py` → `d8_angle_readout_output.txt`: the D8 ratio is exactly 1/sin(θ/2); the
+T = 600 Fourier-peak readout reproduces the recorded 23.9 at 5° (23.875, bin 8) against the exact
+22.926, and gives 1.619 / 1.038 at 76.3° / 150° (INPUT_LEDGER §3.2).
+
 ### P-1 investigation
 `p1/` — the decay-window investigation behind the P-1 annotation; its README maps
 each file to its finding.
