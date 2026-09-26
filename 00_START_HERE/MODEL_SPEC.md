@@ -863,13 +863,13 @@ term one level up.
 | 0.05 | 1.4×10⁻⁷ | 0 → 0.0204 |
 | 0.20 | 1.6×10⁻⁷ | 0 → 0.0200 |
 
-**OPEN ANOMALY, recorded not buried:** B lands near 0.020 at both C_r = 0.05 and
+**OPEN ANOMALY, recorded not buried:** [**CLOSED — label corrected 2026-09-26:** §9 and §5b.7 record it closed as the fixed-T phase sampling of the residual oscillation (f_res ∝ C_r); the text below is kept as written. **No saved script or output reproduces** this table's 0.0204 / 0.0200 rows, §5b.7's ratios 3.88 / 3.83 / 3.85, or the f_res ∝ C_r measurement — the current gate 11 gives B = 3.3×10⁻³ at C_r = 0.05 (`shape_zero_tests/model_gates_radialA_v3.txt`).] B lands near 0.020 at both C_r = 0.05 and
 C_r = 0.20 — a fourfold change in coupling producing nearly the same result. That
 is not linear response. Either the residual saturates quickly or something is
 clamping it, and **C_r should not be treated as a meaningful dial until this is
 understood.**
 
-**FINDING 2026-09-26 — the residual coupling is not J-compatible** (`shape_zero_tests/kappa_cr_gate.py`, `kappa_cr_gate_output.txt`; predictions committed first, 53ce955). C_r·L_g does not commute with 𝕁: ‖[𝕁, L_g]‖/‖L_g‖ = **0.999**. So it **violates the adopted J-compatibility principle** (§3: [coupling, 𝕁] = 0) whenever κ > 0 and C_r > 0 — the requirements table above never listed J-compatibility, and gate 11 runs at κ = 0. Consequence: the U(1) phase charge N = Σ Im(ψ̄ψ̇) − (κ/2)\|ψ\|² is not conserved. At κ = 0 it drifts **−36%** (C_r = 0.05) and **−128%** (C_r = 0.20) over T = 20 (q = 1 and q = 3 alike); at **κ\*** it drifts −3.1×10⁻⁴ and −6.3×10⁻³ (q = 1; −4.8×10⁻⁴, −6.4×10⁻³ at q = 3) — **κ\* suppresses the violation to about (C_r/κ)², without removing it** (interpretation, not tested: the non-commuting part of L_g couples the two chirality branches, which κ detunes by κ at every k). Gate 11's criteria still pass at κ\*; energy drift ≤ 1×10⁻⁷ everywhere; at C_r = 0 the charge is conserved to 1×10⁻⁸. κ also changes B: at C_r = 0.05, 2.5× (q = 1) and 6.5× (q = 3) lower at κ\*. **Misses:** the charge drift was predicted to grow ∝ C_r — at κ\* it grows ∝ C_r² (×20 for ×4); B was predicted roughly ∝ C_r² — B(0.20)/B(0.05) = 1.6–1.9 at κ = 0 and 5.0–5.8 at κ\*, against 16 (consistent with the fixed-T turnover above C_r ≈ 0.1 recorded in §6b).
+**FINDING 2026-09-26 — the residual coupling is not J-compatible** (`shape_zero_tests/kappa_cr_gate.py`, `kappa_cr_gate_output.txt`; predictions committed first, 53ce955). C_r·L_g does not commute with 𝕁: ‖[𝕁, L_g]‖/‖L_g‖ = **0.999**. So it **violates the adopted J-compatibility principle** (§3: [coupling, 𝕁] = 0) whenever κ > 0 and C_r > 0 — the requirements table above never listed J-compatibility, and gate 11 runs at κ = 0. Consequence: the U(1) phase charge N = Σ Im(ψ̄ψ̇) − (κ/2)\|ψ\|² is not conserved. At κ = 0 it drifts **−36%** (C_r = 0.05) and **−128%** (C_r = 0.20) over T = 20 (q = 1 and q = 3 alike); at **κ\*** it drifts −3.1×10⁻⁴ and −6.3×10⁻³ (q = 1; −4.8×10⁻⁴, −6.4×10⁻³ at q = 3) — **κ\* suppresses the violation to about (C_r/κ)², without removing it** (interpretation, not tested: the non-commuting part of L_g couples the two chirality branches, which κ detunes by κ at every k). Gate 11's criteria still pass at κ\*; energy drift ≤ 1×10⁻⁷ everywhere; at C_r = 0 the charge is conserved to 1×10⁻⁸. κ also changes B: at C_r = 0.05, 2.5× (q = 1) and 6.5× (q = 3) lower at κ\*. **Misses:** the charge drift was predicted to grow ∝ C_r — at κ\* it grows ∝ C_r² (×20 for ×4); B was predicted roughly ∝ C_r² — B(0.20)/B(0.05) = 1.6–1.9 at κ = 0 and 5.0–5.8 at κ\*, against 16 (consistent with the fixed-T turnover above C_r ≈ 0.1 recorded in §6b). [**CORRECTED 2026-09-26:** the charge used above, N = Σ Im(ψ̄ψ̇) − (κ/2)\|ψ\|², omits the C_r part of the Noether charge. With the full charge Q = v·𝕁u + ½u·(G𝕁)u, G = κ𝕁 + C_r L_g, the drift at κ\* is **−3.7×10⁻⁵ (C_r = 0.05) and −5.0×10⁻³ (0.20)** (q = 1; at κ = 0 unchanged, −36% / −131%); "about (C_r/κ)²" is **withdrawn** — κ\* strongly suppresses the violation without removing it, and its scaling is not established (`shape_zero_tests/residual_j_projection.py`, `residual_j_projection_output.txt`).]
 
 **One free parameter appears: C_r**, the coupling strength. Dimensionless, and
 recorded in `INPUT_LEDGER.md` §2d. Nothing yet fixes its value.
@@ -2492,7 +2492,7 @@ requirements.
 | check | status |
 |---|---|
 | C_r = 0 inert | **pass** — both q = 3 sizes and q = 1 |
-| B ∝ C_r² | **pass** — ratios 3.88, 3.83, 3.85 for 2× C_r |
+| B ∝ C_r² | **pass** — ratios 3.88, 3.83, 3.85 for 2× C_r [2026-09-26: **no saved script or output reproduces these ratios or f_res ∝ C_r**; at T = 20 the current runs give B(0.20)/B(0.05) = 1.6–1.9 at κ = 0 (`kappa_cr_gate_output.txt`)] |
 | drift | **pass** — ~10⁻⁷ throughout |
 | **working range** | **C_r ≲ 0.05** |
 | side dependence | ~20% on \|B\| — flagged |
@@ -2602,7 +2602,9 @@ instance of su(3)'s three.
 **Gates run in order and stop at the first failure**, because a later gate means
 nothing if an earlier one is broken.
 
-`force()` is a single function. The residual term (§4b) would be **one more line
+`force()` is a single function. [**2026-09-26: done** — the residual term is implemented,
+`model.py` `force()`, `f + C_r·einsum(E, g, v)` (velocity form, §4b.1); gate 11 tests it.]
+The residual term (§4b) would be **one more line
 in it** — even in direction, respecting V = −2 log(1 − 4B), vanishing at B = 0.
 That is now a concrete edit rather than an open design question.
 
@@ -2670,7 +2672,9 @@ there.** It was asked at D8, answered negatively, and not re-asked above. So:
 > the residual sector or nowhere — and that has not been tested.
 
 That is an open question, not a closed one, and §4b is in the model partly
-because of it.
+because of it. [**SUPERSEDED — see §8:** generations are **closed negatively** — the tower
+doubles, so three is unreachable at any height, and neither D8 nor the residual carries
+generations.]
 
 **The tower also saturates.** dim Der = 14 at dimensions 8, 16 and 32 alike
 (Schafer 1954). Eigenvalue multiplicities of LᵀL are multiples of 4 at every

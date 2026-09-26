@@ -6439,8 +6439,19 @@
    "file": "./00_START_HERE/MODEL_SPEC.md",
    "line": 866,
    "section": "4b.1 The coupling form \u2014 determined, not chosen",
-   "text": "**OPEN ANOMALY, recorded not buried:** B lands near 0.020 at both C_r = 0.05 and",
+   "text": "**OPEN ANOMALY, recorded not buried:** [**CLOSED \u2014 label corrected 2026-09-26:** \u00a79 and \u00a75b.7 record it closed as the fixed-T phase sampling of the residual oscillation (f_res \u221d C_r); the text below is kept as written. *",
    "numbers": [
+    "2026",
+    "09",
+    "26",
+    "0.0204",
+    "0.0200",
+    "3.88",
+    "3.83",
+    "3.85",
+    "11",
+    "10",
+    "0.05",
     "0.020",
     "0.05"
    ],
@@ -6485,9 +6496,19 @@
     "20",
     "0.20",
     "0.05",
-    "16"
+    "16",
+    "2026",
+    "09",
+    "26",
+    "10",
+    "0.05",
+    "10",
+    "0.20",
+    "36",
+    "131"
    ],
    "status": [
+    "WITHDRAWN",
     "VERIFIED"
    ]
   },
@@ -11104,11 +11125,17 @@
    "file": "./00_START_HERE/MODEL_SPEC.md",
    "line": 2495,
    "section": "5b.7 Residual sector \u2014 base-stable on q = 3",
-   "text": "| B \u221d C_r\u00b2 | **pass** \u2014 ratios 3.88, 3.83, 3.85 for 2\u00d7 C_r |",
+   "text": "| B \u221d C_r\u00b2 | **pass** \u2014 ratios 3.88, 3.83, 3.85 for 2\u00d7 C_r [2026-09-26: **no saved script or output reproduces these ratios or f_res \u221d C_r**; at T = 20 the current runs give B(0.20)/B(0.05) = 1.6\u20131.9 at \u03ba = 0 (`kappa_cr_",
    "numbers": [
     "3.88",
     "3.83",
-    "3.85"
+    "3.85",
+    "2026",
+    "09",
+    "26",
+    "20",
+    "0.20",
+    "0.05"
    ],
    "status": [
     "VERIFIED"
@@ -11651,7 +11678,29 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2614,
+   "line": 2605,
+   "section": "6b. The assembled model \u2014 `04_scripts/session/model.py`",
+   "text": "`force()` is a single function. [**2026-09-26: done** \u2014 the residual term is implemented,",
+   "numbers": [
+    "2026",
+    "09",
+    "26"
+   ],
+   "status": []
+  },
+  {
+   "file": "./00_START_HERE/MODEL_SPEC.md",
+   "line": 2606,
+   "section": "6b. The assembled model \u2014 `04_scripts/session/model.py`",
+   "text": "`model.py` `force()`, `f + C_r\u00b7einsum(E, g, v)` (velocity form, \u00a74b.1); gate 11 tests it.]",
+   "numbers": [
+    "11"
+   ],
+   "status": []
+  },
+  {
+   "file": "./00_START_HERE/MODEL_SPEC.md",
+   "line": 2616,
    "section": "7. Build order",
    "text": "| 2 | ring of N nodes, \u03c6-well, elastic coupling | free packet propagates, drift < 10\u207b\u2076 |",
    "numbers": [
@@ -11661,7 +11710,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2615,
+   "line": 2617,
    "section": "7. Build order",
    "text": "| 3 | gyroscopic \u03ba\ud835\udd41 | complex structure selected; chirality purity ~0.98 |",
    "numbers": [
@@ -11671,7 +11720,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2617,
+   "line": 2619,
    "section": "7. Build order",
    "text": "| 5 | nonlinear regime | \u03ba = 0.0799 reproduced, \u03b2-collapse holds \u2014 \u03ba RETRACTED (\u00a75); gate now reports \u22120.0184, collapse still holds |",
    "numbers": [
@@ -11684,7 +11733,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2618,
+   "line": 2620,
    "section": "7. Build order",
    "text": "| 6 | n = 2 nodes, Pauli W | ordering 59.86\u00b0 vs 59.84\u00b0 |",
    "numbers": [
@@ -11695,7 +11744,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2619,
+   "line": 2621,
    "section": "7. Build order",
    "text": "| 7 | n = 3 nodes, Gell-Mann W | ordering 65.12\u00b0 vs 64.97\u00b0, control ~0 |",
    "numbers": [
@@ -11706,7 +11755,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2620,
+   "line": 2622,
    "section": "7. Build order",
    "text": "| 8 | segments at \u2264 20-site separation | Abelian control 0.0137\u00b0 |",
    "numbers": [
@@ -11717,7 +11766,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2622,
+   "line": 2624,
    "section": "7. Build order",
    "text": "[Rows 3, 6\u20138 were done at \u03ba = 0.5 \u2014 superseded by the change of operating point (2026-09-25), not retracted; values at \u03ba\\* in \u00a73, \"ADOPTED\".]",
    "numbers": [
@@ -11732,7 +11781,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2625,
+   "line": 2627,
    "section": "7. Build order",
    "text": "segments; at a 60-site gap the Abelian control reads 62\u00b0 where theory says 0.",
    "numbers": [
@@ -11743,7 +11792,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2638,
+   "line": 2640,
    "section": "7b. Why the model stops at D8 \u2014 the tower says so",
    "text": "| \ud835\udd4a (16) | both halves generic | 3.075 |",
    "numbers": [
@@ -11754,7 +11803,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2639,
+   "line": 2641,
    "section": "7b. Why the model stops at D8 \u2014 the tower says so",
    "text": "| \ud835\udd4a (16) | one half zero \u2014 **octonionic** | **8.9\u00d710\u207b\u00b9\u2076** |",
    "numbers": [
@@ -11765,7 +11814,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2640,
+   "line": 2642,
    "section": "7b. Why the model stops at D8 \u2014 the tower says so",
    "text": "| A\u2085 (32) | both halves generic | 9.918 |",
    "numbers": [
@@ -11776,7 +11825,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2641,
+   "line": 2643,
    "section": "7b. Why the model stops at D8 \u2014 the tower says so",
    "text": "| A\u2085 (32) | Q = 0, P a generic **sedenion** | 3.638 |",
    "numbers": [
@@ -11787,7 +11836,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2642,
+   "line": 2644,
    "section": "7b. Why the model stops at D8 \u2014 the tower says so",
    "text": "| A\u2085 (32) | supported on the first 8 \u2014 **octonionic** | **3.6\u00d710\u207b\u00b9\u2075** |",
    "numbers": [
@@ -11798,7 +11847,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2644,
+   "line": 2646,
    "section": "7b. Why the model stops at D8 \u2014 the tower says so",
    "text": "**The composition locus of every level \u2265 16 is the octonions.** Not the",
    "numbers": [
@@ -11808,7 +11857,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2661,
+   "line": 2663,
    "section": "7b. Why the model stops at D8 \u2014 the tower says so",
    "text": "single su(3) orbit, connected by finite elements at ~10\u207b\u00b9\u00b2, so the discrete 3 is",
    "numbers": [
@@ -11818,7 +11867,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2675,
+   "line": 2679,
    "section": "7b. Why the model stops at D8 \u2014 the tower says so",
    "text": "**The tower also saturates.** dim Der = 14 at dimensions 8, 16 and 32 alike",
    "numbers": [
@@ -11830,7 +11879,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2676,
+   "line": 2680,
    "section": "7b. Why the model stops at D8 \u2014 the tower says so",
    "text": "(Schafer 1954). Eigenvalue multiplicities of L\u1d40L are multiples of 4 at every",
    "numbers": [
@@ -11840,7 +11889,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2677,
+   "line": 2681,
    "section": "7b. Why the model stops at D8 \u2014 the tower says so",
    "text": "level \u2014 [4,8,4] at D16, all 4s at D32 (Biss\u2013Christensen\u2013Dugger\u2013Isaksen 2009).",
    "numbers": [
@@ -11850,7 +11899,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2681,
+   "line": 2685,
    "section": "7b. Why the model stops at D8 \u2014 the tower says so",
    "text": "**Verified at D16, and standing:** non-homogeneous with orbits of dimension 11 in",
    "numbers": [
@@ -11862,7 +11911,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2682,
+   "line": 2686,
    "section": "7b. Why the model stops at D8 \u2014 the tower says so",
    "text": "S\u00b9\u2075 (codimension 4); four invariants Re(a), Re(q), |p|\u00b2, p\u00b7q constant to 10\u207b\u00b9\u2076;",
    "numbers": [
@@ -11872,7 +11921,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2684,
+   "line": 2688,
    "section": "7b. Why the model stops at D8 \u2014 the tower says so",
    "text": "G\u2082/SU(2), stabiliser 3, bracket-closed at 1.4\u00d710\u207b\u00b9\u2075; the exact reduced metric,",
    "numbers": [
@@ -11882,7 +11931,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2686,
+   "line": 2690,
    "section": "7b. Why the model stops at D8 \u2014 the tower says so",
    "text": "non-round structure \u2014 \u03c3_min 0.102\u20130.853 at D16 against 1.0000 exactly at D8.",
    "numbers": [
@@ -11894,7 +11943,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2703,
+   "line": 2707,
    "section": "8. Not in the build, and why",
    "text": "| **generation structure (three-fold)** | **CLOSED NEGATIVELY \u2014 do not re-run.** The tower **doubles**: copies of the D8 content go 1, 2, 4, 8, 16 = 2^(k\u22123), every level a power of two. Three is unreachable at any height",
    "numbers": [
@@ -11907,7 +11956,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2706,
+   "line": 2710,
    "section": "8. Not in the build, and why",
    "text": "| G\u2082-stabiliser su(3) | imported (G\u00fcnaydin\u2013G\u00fcrsey 1973); the trimer route is the programme's own |",
    "numbers": [
@@ -11917,7 +11966,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2718,
+   "line": 2722,
    "section": "9. Open, and what each blocks",
    "text": "| **what fixes the fibre metric scale** | **the largest one \u2014 it blocks three numbers at once.** \u210f, c\u2088 and \u039b are all functions of it (\u03ba_\u210f \u221d 1/k, c\u2088 \u221d k\u00b2, \u039b \u221d 1/k). Nothing in the architecture supplies a length: structure",
    "numbers": [
@@ -11928,7 +11977,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2720,
+   "line": 2724,
    "section": "9. Open, and what each blocks",
    "text": "| ~~fourth-order cross-modulation (\u03ba, F at A = 0.30)~~ **DONE for the plane wave, 2026-09-25** (\u00a75, \"\u03ba to fourth order\"); the original entry: | the derived F is second order; it matches every sharp point except the two n",
    "numbers": [
@@ -11945,7 +11994,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2721,
+   "line": 2725,
    "section": "9. Open, and what each blocks",
    "text": "| ~~beam fourth order with orbit-consistent launches~~ **DONE 2026-09-25** (\u00a75): launch pieces derived, H0 and S1 excluded; the original entry: | the beam fourth-order tests (H0 excluded at large fill; S1 against S2 unre",
    "numbers": [
@@ -11959,7 +12008,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2722,
+   "line": 2726,
    "section": "9. Open, and what each blocks",
    "text": "| ~~S2 at w = 3, L = 4, and why the cross terms cancel~~ **SUPERSEDED 2026-09-25** (\u00a75): with the third harmonic in the launch S2 fails three of four L = 4 beams, and the cross terms are partly present; the original entr",
    "numbers": [
@@ -11974,7 +12023,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2723,
+   "line": 2727,
    "section": "9. Open, and what each blocks",
    "text": "| ~~which J-compatibility bound applies at q = 3~~ **RESOLVED 2026-09-25** (\u00a73, \"ADOPTED\"): 0.972 \u2014 the model's slab segments conserve transverse momentum (code and `jcompat_q3.py`); a finite-width segment would need 2.0",
    "numbers": [
@@ -11989,7 +12038,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2724,
+   "line": 2728,
    "section": "9. Open, and what each blocks",
    "text": "| ~~the q = 3 Abelian floor at \u03ba\\*~~ **RESOLVED 2026-09-25** (\u00a73, \"ADOPTED\"; \u00a74d; \u00a74d.1): a readout-timing artefact \u2014 a carrier launch leaves off-branch content that makes the readout oscillate, and the two runs were rea",
    "numbers": [
@@ -12005,7 +12054,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2725,
+   "line": 2729,
    "section": "9. Open, and what each blocks",
    "text": "| ~~\u00a76b's gate-7 u(3) entry~~ **RESOLVED 2026-09-25**: it is the platform benchmark `phi_gauge_u3_working.py` (reproduced exactly), mislabelled as `model.py`'s gate 7; label corrected in \u00a76b. The original entry: | 65.116",
    "numbers": [
@@ -12021,7 +12070,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2726,
+   "line": 2730,
    "section": "9. Open, and what each blocks",
    "text": "| ~~the operating point against persistence~~ **RESOLVED 2026-09-26** by the change of node form (\u00a71a): under the radial form the window is [\u03ba\\*, \u221e) and \u03ba\\* is no longer excluded. The original entry: | the strongest pers",
    "numbers": [
@@ -12033,7 +12082,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2727,
+   "line": 2731,
    "section": "9. Open, and what each blocks",
    "text": "| **the D8 two-generator flow is not realised in the lattice** | the D8 flow \u03c8\u0307 = \u03c8a + b\u03c8 needs two octonionic generators on one node; in the lattice \ud835\udd41 is not an octonionic multiplication (neither L_x nor R_y nor L_x + R",
    "numbers": [
@@ -12051,7 +12100,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2728,
+   "line": 2732,
    "section": "9. Open, and what each blocks",
    "text": "| **gate 7's floor under the radial form** | the first-order self-precession correction captures the per-order errors but over-predicts the order-dependent floor ~1.8\u00d7; gate 7 fails its floor criterion. Next: the slice m",
    "numbers": [
@@ -12074,7 +12123,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2731,
+   "line": 2735,
    "section": "9. Open, and what each blocks",
    "text": "| **the beam's fourth-order cross kernel** | derive it \u2014 every fourth-order cross term between a beam's transverse components, on the lattice \u2014 with the measured r values as the target: 0.351/0.350 (w = 1.5), 0.547/0.549",
    "numbers": [
@@ -12094,7 +12143,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2732,
+   "line": 2736,
    "section": "9. Open, and what each blocks",
    "text": "| ~~verify the 0.39\u00b0 attribution~~ | **CLOSED** \u2014 readout timing; the Abelian floor is exactly 0 under clearing readout at q = 1 and q = 3 |",
    "numbers": [
@@ -12104,7 +12153,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2733,
+   "line": 2737,
    "section": "9. Open, and what each blocks",
    "text": "| ~~wavenumber-averaged prediction at q = 3~~ | **CLOSED** \u2014 closes the gap to 0.04\u20130.17\u00b0; the q = 3 gauge sector is quantitatively verified |",
    "numbers": [
@@ -12117,7 +12166,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2735,
+   "line": 2739,
    "section": "9. Open, and what each blocks",
    "text": "| ~~permanent q = 3 gate~~ | **CLOSED** \u2014 `shape_zero_tests/q3_gate.py` (commit `ed32937`). u(2) and u(3), AB/BA plus Abelian floors, clearing readout, spectrum-averaged prediction; PASS needs every error < 1\u00b0 and floors",
    "numbers": [
@@ -12133,7 +12182,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2736,
+   "line": 2740,
    "section": "9. Open, and what each blocks",
    "text": "| free-evolution operator between segments | would remove the \u226420-site gap constraint in \u00a77 step 8. Note the profile-map test showed the q = 1 product residual is already sub-degree, so this matters at q = 3 or not at al",
    "numbers": [
@@ -12143,7 +12192,7 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
-   "line": 2744,
+   "line": 2748,
    "section": "Closed this session",
    "text": "0.08\u00b0 gain) \u00b7 the C_r saturation anomaly (oscillation, f_res \u221d C_r)",
    "numbers": [
@@ -18405,9 +18454,18 @@
    "numbers": [
     "2026",
     "09",
-    "26"
+    "26",
+    "2026",
+    "09",
+    "26",
+    "10",
+    "10",
+    "0.05",
+    "0.20"
    ],
-   "status": []
+   "status": [
+    "WITHDRAWN"
+   ]
   },
   {
    "file": "./03_current/INPUT_LEDGER.md",
@@ -18670,7 +18728,31 @@
   },
   {
    "file": "./03_current/INPUT_LEDGER.md",
-   "line": 331,
+   "line": 328,
+   "section": "2d. The remaining free parameters",
+   "text": "*On C_r:* [**CORRECTED 2026-09-26:** the form below is the **retracted state form**;",
+   "numbers": [
+    "2026",
+    "09",
+    "26"
+   ],
+   "status": [
+    "RETRACTED"
+   ]
+  },
+  {
+   "file": "./03_current/INPUT_LEDGER.md",
+   "line": 330,
+   "section": "2d. The remaining free parameters",
+   "text": "does work), with no net work F\u00b7v = 2.2\u00d710\u207b\u00b9\u2075, and it is **not J-compatible** (\u00a72d #5, C39). The",
+   "numbers": [
+    "10"
+   ],
+   "status": []
+  },
+  {
+   "file": "./03_current/INPUT_LEDGER.md",
+   "line": 334,
    "section": "2d. The remaining free parameters",
    "text": "(no velocity dependence), no net work (skew generator, 2.7\u00d710\u207b\u00b9\u2075), norm-preserving",
    "numbers": [
@@ -18680,7 +18762,7 @@
   },
   {
    "file": "./03_current/INPUT_LEDGER.md",
-   "line": 332,
+   "line": 335,
    "section": "2d. The remaining free parameters",
    "text": "(3.3\u00d710\u207b\u00b9\u2076), and reducing to the existing D8 structure at B = 0. Only the",
    "numbers": [
@@ -18690,7 +18772,7 @@
   },
   {
    "file": "./03_current/INPUT_LEDGER.md",
-   "line": 357,
+   "line": 360,
    "section": "3.1 \u03ba \u2014 the live one",
    "text": "equal \u03ba exactly (0.0524, 0.1518, 0.3979, 1.0001 against \u03ba = 0.05, 0.15, 0.40,",
    "numbers": [
@@ -18706,7 +18788,7 @@
   },
   {
    "file": "./03_current/INPUT_LEDGER.md",
-   "line": 358,
+   "line": 361,
    "section": "3.1 \u03ba \u2014 the live one",
    "text": "1.00). Then Section 9's closed-form nonlinear predictions carry **zero free",
    "numbers": [
@@ -18716,7 +18798,7 @@
   },
   {
    "file": "./03_current/INPUT_LEDGER.md",
-   "line": 369,
+   "line": 372,
    "section": "3.2 The a\u2013b angle",
    "text": "frequency ratio: parameter-free flows give exactly **one** frequency (6/6",
    "numbers": [
@@ -18726,7 +18808,7 @@
   },
   {
    "file": "./03_current/INPUT_LEDGER.md",
-   "line": 370,
+   "line": 373,
    "section": "3.2 The a\u2013b angle",
    "text": "trials), the generic flow gives **two** (6/6 at adequate resolution), and the",
    "numbers": [
@@ -18736,7 +18818,7 @@
   },
   {
    "file": "./03_current/INPUT_LEDGER.md",
-   "line": 371,
+   "line": 374,
    "section": "3.2 The a\u2013b angle",
    "text": "ratio sweeps monotonically over [1.04, 23.9] as the angle runs 5\u00b0 to 150\u00b0.",
    "numbers": [
@@ -18747,7 +18829,7 @@
   },
   {
    "file": "./03_current/INPUT_LEDGER.md",
-   "line": 372,
+   "line": 375,
    "section": "3.2 The a\u2013b angle",
    "text": "[**CORRECTED 2026-09-26:** 23.9 \u2192 **22.93**, a frequency-resolution artifact. The ratio is exactly 1/sin(\u03b8/2) (the flow's frequencies are 0, 2 sin(\u03b8/2), 2); the lost sweep's Fourier-peak readout at T = 600 (resolution 1/",
    "numbers": [
@@ -18770,7 +18852,7 @@
   },
   {
    "file": "./03_current/INPUT_LEDGER.md",
-   "line": 374,
+   "line": 377,
    "section": "3.2 The a\u2013b angle",
    "text": "**Closed form (2026-09-26).** The generic D8 flow \u03c8\u0307 = \u03c8a + b\u03c8 is linear, \u03c8\u0307 = M\u03c8 with M = R_a + L_b antisymmetric. For unit imaginary a, b at angle \u03b8 its frequencies are exactly **{0, 2 sin(\u03b8/2), 2}** (multiplicities: a",
    "numbers": [
@@ -18790,7 +18872,7 @@
   },
   {
    "file": "./03_current/INPUT_LEDGER.md",
-   "line": 376,
+   "line": 379,
    "section": "3.2 The a\u2013b angle",
    "text": "**What fixes \u03b8_ab? (investigated 2026-09-26; predictions committed first, 40abe6d; tests `shape_zero_tests/d8_theta.py`, `d8_theta_output.txt`, d420fa0).** **\u03b8_ab remains a chosen genuine parameter (kind 3).** (1) **Orth",
    "numbers": [
@@ -18812,7 +18894,7 @@
   },
   {
    "file": "./03_current/INPUT_LEDGER.md",
-   "line": 381,
+   "line": 384,
    "section": "3.2 The a\u2013b angle",
    "text": "**Note:** the golden ratio is attainable near 76\u00b0, and **so is every other value",
    "numbers": [
@@ -18822,7 +18904,7 @@
   },
   {
    "file": "./03_current/INPUT_LEDGER.md",
-   "line": 387,
+   "line": 390,
    "section": "3.3 \u03b6 \u2014 testable but the target is unclear",
    "text": "(cone deficit renamed \u03b2 \u2192 \u03b6 on 2026-09-25; \u03b2 now denotes only the lattice gyroscopic coupling)",
    "numbers": [
@@ -18834,7 +18916,7 @@
   },
   {
    "file": "./03_current/INPUT_LEDGER.md",
-   "line": 390,
+   "line": 393,
    "section": "3.3 \u03b6 \u2014 testable but the target is unclear",
    "text": "parameter to 7.6\u00d710\u207b\u00b9\u2075 across two decades, against a point mass varying 100\u00d7",
    "numbers": [
@@ -18845,7 +18927,7 @@
   },
   {
    "file": "./03_current/INPUT_LEDGER.md",
-   "line": 399,
+   "line": 402,
    "section": "3.3 \u03b6 \u2014 testable but the target is unclear",
    "text": "With it: the CMB-lensing bound G\u03bc \u2264 4.3\u00d710\u207b\u2075 gives 1 \u2212 \u03b6 \u2272 1.7\u00d710\u207b\u2074.",
    "numbers": [
@@ -18856,7 +18938,7 @@
   },
   {
    "file": "./03_current/INPUT_LEDGER.md",
-   "line": 404,
+   "line": 407,
    "section": "3.3 \u03b6 \u2014 testable but the target is unclear",
    "text": "embedding to the unit sphere verified to 6.7\u00d710\u207b\u00b9\u2076, disjoint supports",
    "numbers": [
@@ -18868,7 +18950,7 @@
   },
   {
    "file": "./03_current/INPUT_LEDGER.md",
-   "line": 405,
+   "line": 408,
    "section": "3.3 \u03b6 \u2014 testable but the target is unclear",
    "text": "orthogonal. Candidate \u03b6 = (\u03c0/2)/(2\u03c0) = **1/4**. *Closing condition:* shape space",
    "numbers": [
@@ -18878,7 +18960,7 @@
   },
   {
    "file": "./03_current/INPUT_LEDGER.md",
-   "line": 408,
+   "line": 411,
    "section": "3.3 \u03b6 \u2014 testable but the target is unclear",
    "text": "**OPEN INCONSISTENCY, recorded not resolved (2026-09-25).** `02_synthesis/C1S_SYNTHESIS.md`",
    "numbers": [
@@ -18892,7 +18974,7 @@
   },
   {
    "file": "./03_current/INPUT_LEDGER.md",
-   "line": 409,
+   "line": 412,
    "section": "3.3 \u03b6 \u2014 testable but the target is unclear",
    "text": "\u00a712 states that plurality forbids the rational values of 2\u03b6; no derivation of that",
    "numbers": [
@@ -18902,7 +18984,7 @@
   },
   {
    "file": "./03_current/INPUT_LEDGER.md",
-   "line": 413,
+   "line": 416,
    "section": "3.3 \u03b6 \u2014 testable but the target is unclear",
    "text": "rational, so the rule would exclude it. The candidate \u03b6 = 1/4 (2\u03b6 = 1/2) would be",
    "numbers": [
@@ -18913,7 +18995,7 @@
   },
   {
    "file": "./03_current/INPUT_LEDGER.md",
-   "line": 452,
+   "line": 455,
    "section": "5. What is already tested, and failed",
    "text": "The one apparent match \u2014 S\u00b2 giving 1, 3, 6, 10, matching molecular rotation \u2014",
    "numbers": [
@@ -18925,7 +19007,7 @@
   },
   {
    "file": "./03_current/INPUT_LEDGER.md",
-   "line": 460,
+   "line": 463,
    "section": "5. What is already tested, and failed",
    "text": "(4.4\u00d710\u207b\u00b9\u2076), so the algebra's own metric reduces to the round one on the",
    "numbers": [
@@ -18935,7 +19017,7 @@
   },
   {
    "file": "./03_current/INPUT_LEDGER.md",
-   "line": 467,
+   "line": 470,
    "section": "6. What the construction is",
    "text": "A ladder of **what can be tracked**, not of what can be. The 112 discarded",
    "numbers": [
@@ -18945,7 +19027,7 @@
   },
   {
    "file": "./03_current/INPUT_LEDGER.md",
-   "line": 470,
+   "line": 473,
    "section": "6. What the construction is",
    "text": "**measurability**, not structure: in the 16, measuring the parts tells you the",
    "numbers": [
@@ -18955,7 +19037,7 @@
   },
   {
    "file": "./03_current/INPUT_LEDGER.md",
-   "line": 471,
+   "line": 474,
    "section": "6. What the construction is",
    "text": "whole; in the 112 it does not.",
    "numbers": [
@@ -23517,9 +23599,18 @@
     "0.20",
     "2026",
     "09",
+    "26",
+    "10",
+    "0.05",
+    "10",
+    "0.20",
+    "2026",
+    "09",
     "26"
    ],
-   "status": []
+   "status": [
+    "WITHDRAWN"
+   ]
   },
   {
    "file": "./03_current/PREMISE_LEDGER.md",
@@ -28118,6 +28209,15 @@
    "docstring": "Run the no-segment packet until < THR of its weight lies within 10 sites     of the segment (either side, so a wrapped front also counts); +10% margin."
   },
   {
+   "file": "./shape_zero_tests/residual_j_projection.py",
+   "lines": 76,
+   "banner": false,
+   "blocked": false,
+   "fixes": [],
+   "predictions": 4,
+   "docstring": "residual_j_projection.py -- the JJ-commuting part of the residual generator L_g (2026-09-26; a report, not a prediction test). C = (L_g - JJ L_g JJ)/2 is the projection of L_g onto the commutant of JJ"
+  },
+  {
    "file": "./shape_zero_tests/ring_model.py",
    "lines": 110,
    "banner": false,
@@ -28308,7 +28408,7 @@
   }
  ],
  "counts": {
-  "doc_claims": 2241,
-  "scripts": 178
+  "doc_claims": 2245,
+  "scripts": 179
  }
 }
