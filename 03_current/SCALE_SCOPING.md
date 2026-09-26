@@ -38,7 +38,7 @@ letter c is the elastic inter-node coupling in the force law (§1b below).
 
 | symbol | what it is | status | source |
 |---|---|---|---|
-| on-site force −(x² − x − 1), linear stiffness √5 | the φ-well; fixed points at the golden-ratio roots | **stated as the model's force law**; the sources used here state it and do not derive it | `MODEL_SPEC.md` §1 |
+| on-site force −(x² − x − 1), linear stiffness √5 | the φ-well; fixed points at the golden-ratio roots | **stated as the model's force law**; the sources used here state it and do not derive it [**2026-09-26:** contributes no dimensionless parameter — √5 and φ are coordinates; the premise is a quadratic on-site force applied radially (`MODEL_SPEC.md` §1b)] | `MODEL_SPEC.md` §1 |
 | c (elastic) | inter-node elastic coupling, F = c(x₊ + x₋ − 2x) | **CHOSEN** — c = 1.0 in `model.py` and in every lattice script; **not listed** among the free parameters of `INPUT_LEDGER.md` §2d, so its status is unrecorded there | `MODEL_SPEC.md` §3; `04_scripts/session/model.py` (C = 1.0) |
 | κ (gyroscopic ratio) | intra-node gyroscopic coupling, F = κ𝕁v; D4 coupling strength | **OPEN, measurable** — fixed by one bench measurement (the Larmor splitting equals κ). [Candidate floor, not adopted, 2026-09-25: κ ≥ 0.971737 if J-compatibility is required at every wavelength — a floor, not a value; MODEL_SPEC §3] [**ADOPTED 2026-09-25:** **DERIVED FLOOR** κ ≥ 2c/√(K + 2c) = 0.971737; value still OPEN, measurable; operating value κ = κ\* CHOSEN] [**Finding 2026-09-25, not adopted:** the strongest persistence the model admits confines κ to [4.9, 7.5] at q = 3, c = 1, excluding κ\* (MODEL_SPEC §3, "FINDING")] [2026-09-26: that window was the elementwise node form's; under the adopted radial form it is [κ\*, ∞) (MODEL_SPEC §1a, §3)] | `INPUT_LEDGER.md` §2d #3 and §3.1; `MODEL_SPEC.md` §2, §3; `model.py` (KAPPA = 0.5 until 2026-09-25, now κ\*) |
 | β (lattice) | inter-node antisymmetric velocity coupling, βc(v₊ − v₋) — the synthetic U(1) | **CHOSEN** — β = 0.05 in the κ scripts; `MODEL_SPEC.md` §4c.4 calls it the U(1) "charge" and "already an input (§2d of the ledger)" | `MODEL_SPEC.md` §4b.1, §4c.4 |
@@ -239,6 +239,14 @@ procedure, the same one used for the κ and F predictions in `MODEL_SPEC.md` §5
 From the kind column of `INPUT_LEDGER.md` §2d (added 2026-09-25). These are the
 numbers the physics depends on and no principle fixes; a complete derivation must
 fix each of them, or record it as an input.
+
+**In invariant form (2026-09-26, `MODEL_SPEC.md` §1b)** — the minimal independent set,
+after every rescaling of amplitude and time (length is fixed by the lattice):
+**ĉ = c/K** (1/√5 now), **κ̂ = κ/√K** (≥ κ̂\* = 2ĉ/√(1 + 2ĉ) = 0.6498), **β̂ = βc/√K**
+(0.0334 at β = 0.05; the unclassified entry below), **Ĉ_r = C_r/√K**, **θ_ab** (\|b\|/\|a\|
+fixed at 1). The well (K = √5 and its unit nonlinear coefficient) contributes none; the
+amplitude A/K, ĝ = gc/√K, k₀, packet width, geometry, T√K, n and q are protocol settings.
+The list below is kept as written; items 1, 2 and 4 are ĉ, κ̂ and Ĉ_r.
 
 **Kind 3 — genuine:**
 1. **c/√5** — the elastic coupling relative to the well stiffness (§2d #6); the

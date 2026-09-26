@@ -221,6 +221,13 @@ listed in §2d as remaining free.
 | 7 | **β**, lattice gyroscopic coupling | the synthetic U(1), βc(ẋ₊ − ẋ₋) | the lattice (MODEL_SPEC §3, §5) | **CHOSEN** — **β = 0.05 has no derivation**: it was one point of the original sweep {0, 0.02, 0.05, 0.10} in `04_scripts/platform/phi_gauge_test.py`, and lies just below the (0, π) decay window near 0.06 (PROVENANCE §6o, P-1). Carries the dimension of time; dimensionless only in simulation units. Added 2026-09-25 | **2 for the pinning; 2 at leading order for κ; unclassified otherwise.** *Marked CHOSEN.* The normalised asymmetry Δω/(2cβ sin k) = 1 holds for every β (Prove2Me missions 3, 4b; MODEL_SPEC §3) — kind 2. κ: the reference β-sweep gives \|Δ/Δ₀\| = 0.998339, 0.998316, 0.998390, 0.998316 at β = 0.02, 0.05, 0.10, 0.20 (`PINNED_ASYMMETRY_TEST.md`, κ note; −0.0184 ± 0.00033), but the derived κ₂ drifts at O(β²) — −0.017448, −0.017480, −0.017595, −0.018071, +3.4% from 0.05 to 0.20 (`param_classify_output.txt`) — inside that sweep's spread, so κ is β-independent at leading order only. **Not shown β-independent:** every F and κ_box measurement, the launch pieces and the beam fourth-order tests (all at β = 0.05 only), and the (0, π) decay window, which is located at β ≈ 0.06 and so depends on β. Settled by β sweeps of F and of the launch pieces. The absolute asymmetry 2cβ sin k scales with β, so an experiment fixes β by one measurement of Δω, as it fixes κ by the Larmor splitting |
 
 
+**In invariant form (2026-09-26, MODEL_SPEC §1b).** The well's stiffness K = √5 and its unit
+nonlinear coefficient fix the amplitude and time units, so the genuine parameters are the
+dimensionless combinations **ĉ = c/K** (#6; 1/√5 now), **κ̂ = κ/√K** (#3; κ̂\* = 2ĉ/√(1 + 2ĉ)
+= 0.6498 at the floor), **β̂ = βc/√K** (#7; 0.0334 at β = 0.05), **Ĉ_r = C_r/√K** (#5) and
+**θ_ab** (#4, with \|b\|/\|a\| fixed at 1). The amplitude A/K, ĝ = gc/√K, k₀, packet width,
+geometry, T√K, n and q are protocol settings. The well contributes no parameter.
+
 *Kinds (added 2026-09-25):* **1** unit convention — scaled away without changing any
 dimensionless prediction; **2** test value — every result using it shown not to depend
 on it; **3** genuine parameter — the physics depends on it and no principle fixes it.
@@ -241,6 +248,11 @@ satisfies all four (MODEL_SPEC §1a). The earlier per-component form lets a node
 above energy 1.863 per component. An isotropic cubic well cannot be analytic at the
 origin; the D2 rung's own confinement is quadratic; **the φ-well remains an underived
 premise**.]
+[**RESTATED 2026-09-26 (MODEL_SPEC §1b):** what remains a premise is **a quadratic
+on-site force applied radially (form (A))**; its **φ form is a coordinate choice** — every
+quadratic force with two real roots is unit-equivalent to it, and the well contributes zero
+dimensionless parameters. "Fixed points at the golden-ratio roots, linear stiffness √5"
+describes the coordinates, not the physics.]
 
 **Method rule (adopted 2026-09-26).** Selection rule (method): the model's principles
 decide first. Where they leave a choice open or unclear, the option that leads to known

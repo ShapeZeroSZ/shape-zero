@@ -47,6 +47,8 @@ that, so together they machine-verify C1 Theorem 3.6 ("Roles Force Fano").
   the routine gate 7 reports its floor without a pass/fail (MODEL_SPEC §4d)]
   [Slice-resolved self-precession, 2026-09-26: predicts the q = 1 floor to 0.2% and is gate 7's
   floor prediction at q = 1 (|Δ| < 0.01°); per-order ~10% high, q = 3 and splits open]
+  [Scaling analysis, 2026-09-26: five invariants (c/K, κ/√K, βc/√K, C_r/√K, θ_ab); the
+  φ-well contributes none — φ and √5 are coordinates (MODEL_SPEC §1b)]
   (the latter a standing gate, `q3_gate.py`, shown to fail against a wrong
   prediction). Commuting segments give exactly zero, as the algebra requires.
 - **J-compatibility is enforced by the dynamics for long wavelengths.** A

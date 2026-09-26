@@ -314,6 +314,11 @@ reporting its floor without a pass/fail.
 first), `slice_precession_compare.txt`. `model_gates_radialA_v3.txt`: model.py's gates with gate
 7's floor against `model.slice_prediction` at q = 1 (|Δ| < 0.01°).
 
+### 20. Scale invariance (2026-09-26)
+`scale_invariance.py` → `scale_invariance_output.txt`: the same run at K = √5, 2, 1, 7.3 with
+ĉ, κ̂, β̂, ĝ, Ĉ_r, A/K, T√K held fixed agrees to ≤ 1.3×10⁻¹⁴ in four sectors; changing c/K
+alone by 20% changes it by 93% (MODEL_SPEC §1b).
+
 ### P-1 investigation
 `p1/` — the decay-window investigation behind the P-1 annotation; its README maps
 each file to its finding.

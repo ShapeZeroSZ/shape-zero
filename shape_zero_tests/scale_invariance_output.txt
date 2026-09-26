@@ -1,0 +1,13 @@
+radial dimer lattice, u(2), kappa*, gauge     K'=2.0: max rel diff u 1.2e-14, v 1.3e-14
+radial dimer lattice, u(2), kappa*, gauge     K'=1.0: max rel diff u 4.7e-15, v 6.5e-15
+radial dimer lattice, u(2), kappa*, gauge     K'=7.3: max rel diff u 6.5e-15, v 9.1e-15
+elementwise, u(2), gauge                      K'=2.0: max rel diff u 1.2e-14, v 1.3e-14
+elementwise, u(2), gauge                      K'=1.0: max rel diff u 5.9e-15, v 7.8e-15
+elementwise, u(2), gauge                      K'=7.3: max rel diff u 5.7e-15, v 7.4e-15
+scalar sector n=1, beta=0.05                  K'=2.0: max rel diff u 1.2e-14, v 1.1e-14
+scalar sector n=1, beta=0.05                  K'=1.0: max rel diff u 5.7e-15, v 5.0e-15
+scalar sector n=1, beta=0.05                  K'=7.3: max rel diff u 6.0e-15, v 6.0e-15
+residual n=8, C_r=0.05, kappa=0               K'=2.0: max rel diff u 1.2e-14, v 1.3e-14
+residual n=8, C_r=0.05, kappa=0               K'=1.0: max rel diff u 6.2e-15, v 6.1e-15
+residual n=8, C_r=0.05, kappa=0               K'=7.3: max rel diff u 8.3e-15, v 1.1e-14
+control, c/K changed by 20%: max rel diff 0.9336010632599129

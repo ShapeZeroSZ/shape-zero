@@ -1214,6 +1214,12 @@ comparison (806ea86). Disclosure: the q = 1 u(2) floor value was seen during set
 and baseline checks); the u(3) floor was not, and matches equally. Adopted as gate 7's floor
 prediction at q = 1 only; the q = 3 and split failures are recorded in MODEL_SPEC §4d.
 
+**Scaling analysis (same day):** two free scalings (amplitude, time) leave five invariants
+(ĉ, κ̂, β̂, Ĉ_r, θ_ab); the well contributes none; checked numerically
+(`scale_invariance.py`). Corrected: κ\* = 2φ^(−3/2) needs the chosen c = 1 as well as K = √5;
+the barrier 1.863 is E/K³ = 1/6; "φ is in the force law itself" is a coordinate artifact
+(MODEL_SPEC §1, §1b, §3).
+
 **Catch:** the node form was an inherited platform choice ("per-component"), never
 derived, whose O(2) breaking the spec itself noted (v5.3, Result 4, line 143) and on which
 a prediction (P-3) was built. Failure mode #1's cousin: a modelling choice carried forward

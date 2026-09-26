@@ -166,6 +166,12 @@ why it produces pure numbers and nothing else. Note also that 0 × ∞ is
 Fixed points at the golden-ratio roots. **phi is in the force law itself**, not
 decoration — the linearised stiffness is sqrt(5) and the packet oscillates about
 PHI = 1.618034.
+[**CORRECTED 2026-09-26 (§1b):** "φ is in the force law itself, not decoration" is a
+**coordinate artifact**. Any quadratic force with two real roots is unit-equivalent to this
+one: x = y + ½ gives −(y² − 5/4), and rescaling y and t gives −(z² − 1). The well
+contributes **zero** dimensionless parameters; the stiffness √5 and the roots φ, −1/φ are
+the coordinates in which it is written. This agrees with the v5.3 spec's own S2 verdict
+that "the numerical value √5 is decorative in the dynamics layer" (`shape_zero_v5-3.txt`).]
 
 **Script:** `phi_gauge_nonlinear.py`. **Present in all 7 platform files.**
 
@@ -176,7 +182,7 @@ dimer) it can be applied in three ways, and the choice matters beyond linear ord
 
 | node form | force per dimer | phase conservation at all orders | persistence as bounded motion (Formal Proofs, Principle (Persistence)) | the D2 rung's isotropic, origin-centred node | keeps κ\* |
 |---|---|---|---|---|---|
-| **elementwise** (`model.py` until 2026-09-26; the platform's "per-component phi restoring force") | −(√5u + u∘u) per real component | **no** — linear order only: at κ\* the ψ\*² term converts a-waves into the opposite chirality (§3, "CORRECTION"; R1, slope 0.991 × rA²) | **no** — the per-component potential √5u²/2 + u³/3 is unbounded below past the saddle u = −√5; a node **escapes above energy 1.863 per component** (5√5/6; a node launched with kinetic energy 5 escaped at t = 3.5, `shape_zero_tests/ring_spectrum.py`) | **no** — origin-centred but anisotropic (§0a) | yes |
+| **elementwise** (`model.py` until 2026-09-26; the platform's "per-component phi restoring force") | −(√5u + u∘u) per real component | **no** — linear order only: at κ\* the ψ\*² term converts a-waves into the opposite chirality (§3, "CORRECTION"; R1, slope 0.991 × rA²) | **no** — the per-component potential √5u²/2 + u³/3 is unbounded below past the saddle u = −√5; a node **escapes above energy 1.863 per component** (5√5/6 [**2026-09-26:** in invariant form E/K³ = 1/6 for any quadratic well; 1.863 is 5√5/6 in the model's units, §1b]; a node launched with kinetic energy 5 escaped at t = 3.5, `shape_zero_tests/ring_spectrum.py`) | **no** — origin-centred but anisotropic (§0a) | yes |
 | **(A) radial** — **ADOPTED** | −(√5 + \|ψ\|)ψ, i.e. V = √5r²/2 + r³/3, r = \|ψ\| | **yes** — U(1)-equivariant; phase charge conserved at every order (drift 2×10⁻⁷, RK4); R1's conversion vanishes (9.9×10⁻¹⁷ A) | **yes** — V ≥ 0 and confining at every energy (max \|u\| = 1.67 in the same test) | **yes** — isotropic, minimum at the origin, linear part the D2 quadratic confinement with δ = √5 | **yes** — the linear part is unchanged |
 | **(B) ring** — the well on x = \|ψ\|, minimum on \|ψ\| = φ (§0's "radial coordinate" sentence read literally) | −(x² − x − 1)ψ/x | yes (U(1)-symmetric) | yes (bounded, max \|u\| = 4.84) | **no** — minimum on a ring; the origin is not an equilibrium (unit outward force), so L = 0 motion cannot reach it | **no** — the phase mode is massless (acoustic, v² = c√5/(√5 + κ²)); no chirality branches |
 
@@ -217,6 +223,73 @@ component); the elementwise form is kept as an option (`SZ_J_WELL=elementwise`, 
   `radialA_tests.py`); the commuting-segment floor becomes a real 0.16° effect that
   survives the clearing readout and scales with amplitude (§4d, "Gate 7 under the radial
   well"); gate 7's prediction must include the self-precession.
+
+### 1b. Scaling analysis — the independent dimensionless parameters (2026-09-26)
+
+**The rescalings.** Every force term in `model.py` — √5u, cΔu, κ𝕁u̇, βc(u̇₊ − u̇₋),
+c(W u̇₊ − W⁻u̇₋), C_r·mul(g, u̇) — is homogeneous of degree 1 in the displacement; only the
+on-site nonlinearity (u∘u elementwise, \|ψ\|ψ in form (A)) is of degree 2. So two scalings
+are free: amplitude, u = K w, and time, t = τ/√K (K = √5 the linear stiffness); length is
+not, because the lattice spacing is one site. **Numerical check**
+(`shape_zero_tests/scale_invariance.py`, `scale_invariance_output.txt`): the same run made
+at K = √5, K′ = 2 (the z² − 1 form), 1 and 7.3, with the invariants below held fixed, gives
+the same fields to 5×10⁻¹⁵–1.3×10⁻¹⁴ in every sector — radial u(2) lattice with gauge links
+at κ\*, elementwise u(2), the scalar β sector, the n = 8 residual sector; changing c/K alone
+by 20% changes them by 93% (control).
+
+**The minimal independent dimensionless set:**
+
+| invariant | value now | sector |
+|---|---|---|
+| **ĉ = c/K** | 1/√5 = 0.4472 | every lattice sector; cannot be scaled away on a lattice (a length unit only in the continuum limit) |
+| **κ̂ = κ/√K** | κ\*/√K = 0.6498 | J sector (and the scalar sector when the gyroscopic term is on) |
+| **β̂ = βc/√K** | 0.05/5^(1/4) = 0.0334 | scalar β sector |
+| **Ĉ_r = C_r/√K** | — (0.05 in gate 11: 0.0334) | residual sector |
+| **θ_ab** | chosen | D8 — a separate linear flow; a time rescaling leaves its frequency ratios unchanged. \|b\|/\|a\| is fixed at 1 (it would otherwise be a further parameter) |
+
+**Protocol settings, not physics:** the amplitude **A/K** (the nonlinear strength — the
+nonlinear coefficient is absorbed into it), **ĝ = gc/√K**, k₀, the packet width, the
+geometry, **T√K**, and the discrete choices **n** and **q**.
+
+**The well contributes zero parameters.** Consequences: κ̂\* = κ\*/√K = 2ĉ/√(1 + 2ĉ) is a
+function of ĉ alone; the elementwise escape barrier is E/K³ = 1/6 for every quadratic well.
+
+**Unit equivalence, sector by sector** (the claim: the φ-well is unit-equivalent to every
+quadratic-force well with two real roots, so φ and √5 are coordinate choices):
+- **single scalar node — holds.** −a(x − r₁)(x − r₂), r₁ ≠ r₂ real, maps to z̈ = −(z² − 1)
+  by a shift, an amplitude scale and a time scale (the sign of a by z → −z).
+- **scalar β sector and the elementwise lattice — holds.** A uniform shift is a symmetry of
+  every linear coupling term (the Laplacian of a constant vanishes; the velocity terms do
+  not see it).
+- **the radial node, form (A) — holds, more simply.** −(K + r)ψ has two coefficients, both
+  removed by the scalings; its second root (r = −K) is unphysical, so the two-root
+  structure is not even present.
+- **the full lattice — holds.** φ and √5 are coordinates; the physics is ĉ, κ̂, β̂, Ĉ_r, θ_ab.
+- **The limit.** The equivalence needs the shift, available only where nothing else fixes
+  the origin of x. In the ring form (B) the well acts on \|ψ\|, whose origin the U(1)
+  symmetry fixes: three coefficients, two scalings, one invariant survives — the **root
+  ratio −φ², which would be physics** in (B). (B) is not adopted (§1a).
+
+**Every recorded φ, classified:**
+
+| where | claim | verdict |
+|---|---|---|
+| §1 above; `shape_zero_v5-3.txt` l.100–101; PREMISE_LEDGER P9/K9; INPUT_LEDGER; SCALE_SCOPING §1b | fixed points φ, −1/φ; stiffness √5 = V″(φ); "φ is in the force law itself, not decoration" | **coordinate artifact.** What survives is V″(stable)/V″(saddle) = −1, true of every quadratic well; consistent with v5.3's S2 verdict ("√5 decorative") |
+| §3 (CANDIDATE, ADOPTED); PREMISE_LEDGER C14 | κ\* = 2φ^(−3/2), "a consequence of K = √5" | **artifact.** It needs K + 2c = 2 + √5 = φ³, i.e. **K = √5 and the chosen c = 1**. Invariant: κ̂\* = 2ĉ/√(1 + 2ĉ) = 0.6498 at ĉ = 1/√5; in z² − 1 units κ\* = 0.9190 |
+| `shape_zero_tests/jcompat_effects.txt` (no document) | at κ = 1, ω(π/2) = φ exactly; v_g = φ⁻³ | **artifact** of κ̂ = 5^(−1/4), ĉ = 5^(−1/2) |
+| §1a; PREMISE_LEDGER C35; `ring_predictions.txt` | escape barrier 5√5/6 = 1.863 at u = −√5 | **artifact** in value; physics: E/K³ = 1/6 |
+| §1a; `ring_predictions.txt` | (B) ring minimum at \|ψ\| = φ | **physics within (B)** (root ratio −φ²); (B) not adopted |
+| §1a | (A)'s linear part is the D2 confinement with δ = √5 | **artifact**; δ is the unit |
+| §3 ("β and c"); INPUT_LEDGER §2d #6; PREMISE_LEDGER K6 | c < 3√5/4 (1-D), √5/4 (3-D); c/√5 genuine | **physics as ĉ** (ĉ < 3/4, 1/4) — already recorded in invariant form |
+| v5.3 l.135/140/153; the K-grid {√5/4, √5, 4√5, 16√5} (§3) | √5 in the dispersion and correction formulas; stiffness scans | **artifact** in form; a K scan at c = 1 is a ĉ scan |
+| v5.3 l.157, "Where the golden ratio actually lives" | φ the fixed point of x = 1 + 1/x; Hurwitz's √5; the golden KAM torus; "endurance selects maximally irrational winding" | **survives rescaling in principle** (winding ratios are dimensionless) but **not a model result**: the model does not select φ (`HIERARCHIES.md`: "φ is not predicted"); S2b's +0.66 is a correlation with Diophantine badness in general; the Fibonacci argument is not dynamics. "The same √5" is a coincidence of normalisation — the stiffness equals √(discriminant) because the well is written as φ's minimal polynomial |
+| `HIERARCHIES.md`; README; AUDIT | convergent denominators grow as φⁿ; golden-torus K_c = 0.971635 | **invariant number theory**, true of any noble winding; not a model output. K_c ≈ κ\* to four digits is a coincidence (κ\* depends on the chosen ĉ) |
+| INPUT_LEDGER §3.2; C1S/D8_SYNTHESIS §7 | φ attainable near 76° of the a–b angle | **invariant; correctly recorded** as "attainability is not selection". No script in the repository performs the sweep — prose only |
+| v5.3 l.13–19, 74, 108–109, 200 | φ-governed recursion, universal attractor | **no dynamical content** to test |
+| `shape_zero_predictions_v1.md`; Prove2Me | none | **no φ** (predictions_v1: they hold for any lattice in the model class) |
+
+Not φ, despite the symbol or digits: the G₂ 3-form φ, the HK coordinate φ in the spec,
+phase angles φ₀/φ_π, and "s = 0.618" in the κ⁴ files (a packet fill factor).
 
 ---
 
@@ -319,6 +392,9 @@ chosen at short wavelength:
   closed for k₀ < 1.4536 (the k_c above).
 - **κ\* = 2φ^(−3/2)**, because 2 + √5 = φ³. This is a **consequence of K = √5**, not a
   selection: the bound is 2c/√(K + 2c) for any K and c.
+  [**CORRECTED 2026-09-26 (§1b):** a consequence of K = √5 **and the chosen c = 1** (it needs
+  K + 2c = φ³). Invariant form: **κ̂\* = κ\*/√K = 2ĉ/√(1 + 2ĉ) = 0.6498 at ĉ = 1/√5**; the φ
+  is a coordinate artifact.]
 - **Lower bound only.** No principle in the repository supplies an upper side:
   plurality excludes only κ = 0 (`C1S_SYNTHESIS.md` §12), and minimality ("no
   unforced parameters") admits κ by its exemption clause without choosing a value.
@@ -380,7 +456,8 @@ and the operating point κ = κ\*.**
   at linear order only**. See "CORRECTION — the scope of J-compatibility at κ\*" below.]
 - **Derived consequence: κ ≥ κ\* = 2c/√(K + 2c) = 0.971737** at c = 1, K = √5
   (derivation in the candidate block). κ\* = 2φ^(−3/2) is a **consequence of K = √5**
-  (2 + √5 = φ³), **not a selection**. At κ = κ\* every travelling wavenumber is strictly
+  (2 + √5 = φ³), **not a selection**. [**CORRECTED 2026-09-26:** of K = √5 **and the chosen
+  c = 1**; invariant form κ̂\* = 2ĉ/√(1 + 2ĉ) = 0.6498 at ĉ = 1/√5 (§1b).] At κ = κ\* every travelling wavenumber is strictly
   closed; only the standing mode k₀ = π is marginal (k′ = 0, v_g = 0).
 - **A floor, not a value.** No principle in the repository supplies an upper side
   (plurality excludes only κ = 0; minimality's exemption clause admits κ without
