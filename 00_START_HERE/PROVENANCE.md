@@ -1204,6 +1204,11 @@ per-order errors 0.16–0.41° (were 3.4–3.8° without it), but the floor is o
 amplitude was not lowered. P-3 replaced by Ω = A(cos χ − sin χ)/(2ω + κ), the old law kept
 as superseded.
 
+**Amplitude scaling (same day, predictions first):** every deviation linear in A; q = 3
+intercepts zero, q = 1 floor zero and split/per-order intercepts at the single-carrier
+error, as predicted. Adopted as a certification test (`certify_gates.py`, run when the
+model changes); the routine gate 7 reports its floor without a pass/fail.
+
 **Catch:** the node form was an inherited platform choice ("per-component"), never
 derived, whose O(2) breaking the spec itself noted (v5.3, Result 4, line 143) and on which
 a prediction (P-3) was built. Failure mode #1's cousin: a modelling choice carried forward

@@ -126,13 +126,13 @@ def no_wrap_check(L0, t, kappa):
 # --------------------------------------------------------------- one run
 def run_pair(args):
     """Both runs of a pair in lockstep; read both at the first time BOTH have cleared."""
-    n, jobs, L0, S, kappa = args
+    n, jobs, L0, S, kappa, amp = args
     t0 = time.time()
     st = []
     for job in jobs:
         lat = Slab(n, L0, S, kappa)
         W, Wm = M.make_links(lat, spec_for(n, job))
-        u, v = lat.packet3()
+        u, v = lat.packet3(amp)
         st.append(dict(job=job, lat=lat, W=W, Wm=Wm, u=u, v=v, E0=lat.energy(u, v), seen=False))
     t = 0.0
     while t < TMAX:
@@ -247,6 +247,7 @@ def main():
     ap.add_argument("--predictor", choices=("averaged", "carrier"), default="averaged")
     ap.add_argument("--from-saved", default=None)
     ap.add_argument("--tag", default="", help="suffix for the output files (e.g. kstar)")
+    ap.add_argument("--amp", type=float, default=1e-3, help="packet amplitude (default 1e-3)")
     ap.add_argument("--kappa", type=float, default=None,
                     help="gyroscopic ratio (default: model.py's KAPPA)")
     a = ap.parse_args()
@@ -260,10 +261,10 @@ def main():
         L0, S = a.L0, a.S
         KAPPA_RUN[0] = float(M.KAPPA) if a.kappa is None else a.kappa
         with Pool(a.workers) as pool:
-            runs = [r for pr in pool.map(run_pair, [(n, p, L0, S, KAPPA_RUN[0]) for n, p in PAIRS])
+            runs = [r for pr in pool.map(run_pair, [(n, p, L0, S, KAPPA_RUN[0], a.amp) for n, p in PAIRS])
                     for r in pr]
         sim_wall = time.time() - t0
-        json.dump(dict(L0=L0, S=S, kappa=KAPPA_RUN[0], sim_wall=sim_wall, workers=a.workers, runs=runs),
+        json.dump(dict(L0=L0, S=S, kappa=KAPPA_RUN[0], amp=a.amp, sim_wall=sim_wall, workers=a.workers, runs=runs),
                   open(os.path.join(HERE, f"q3_gate_runs_{L0}x{S}{'_' + a.tag if a.tag else ''}.json"), "w"), indent=1)
 
     print(f"q = 3 ORDERING GATE   lattice {L0} x {S} x {S}   predictor: {a.predictor}   "

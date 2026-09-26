@@ -1,0 +1,26 @@
+============================================================================================
+PREDICTIONS (committed before any run) -- amplitude scaling under the radial well
+============================================================================================
+  TOLERANCE, fixed now: an intercept is ZERO if |a| < max(2 sigma_a, 0.01 deg), sigma_a
+  from the straight-line fit (3 points, 1 dof); 0.01 deg is a numerical floor well above
+  the measured elementwise clearing floor (4e-5 deg). LINEAR if the 3-point fit residuals
+  are < 5% of the largest deviation (for vector fits: of each component's range).
+
+  HYPOTHESIS. The radial well adds a first-order self-precession on top of the LINEAR
+  dynamics. So every deviation from the linear DYNAMICS is linear in A and vanishes at
+  A = 0. But the linear PREDICTION is not the linear dynamics everywhere:
+  - q = 1 (gate 7): the single-carrier product has its own error, measured with the
+    elementwise well (second-order nonlinearity, ~ A -> 0) under the clearing readout:
+    per-order 0.12 / 0.27 deg (u(2)), 0.40 / 0.26 deg (u(3)); split error +0.26 deg (u(2)),
+    -0.02 deg (u(3)); floor 4e-5 deg. PREDICTED intercepts: the floor -> ZERO (u(2),
+    u(3)); the signed split error -> +0.26 (u(2), NOT zero) and -0.02 (u(3), at the
+    tolerance); the per-order vector-fit intercepts -> 0.12 / 0.27 and 0.40 / 0.26 deg (NOT
+    zero). So at q = 1 the claim "the linear gauge prediction is exact at A -> 0" is
+    PREDICTED TO FAIL for the split and per-order errors -- by the single-carrier
+    approximation, not by anything nonlinear.
+  - q = 3 (q3_gate): the spectrum-averaged predictor matched the linear dynamics to
+    0.001-0.005 deg (elementwise, 2026-09-25). PREDICTED: every intercept (floor, split
+    error, per-order) is ZERO within tolerance.
+  - Slopes: all LINEAR. Expected size, deg per 1e-3 of amplitude: 1-D floors 0.160 (u(2)),
+    0.096 (u(3)) (radialA_tests.py); q = 3 floors ~0.10 (u(2)), ~0.05 (u(3)); per-order
+    precession ~3-4 deg per 1e-3 at q = 1, ~0.15-0.45 at q = 3.

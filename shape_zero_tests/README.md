@@ -301,6 +301,14 @@ now defaults to the radial well. Set `SZ_J_WELL=elementwise` (and, for `model.py
 reproduced to the last digit). Scripts that load a pinned version from `model_versions/`
 are unaffected.
 
+### 18. Amplitude scaling and the certification test (2026-09-26)
+`amp_scaling.py` (predictions `amp_scaling_predictions.txt`, committed first) → `amp_scaling_1d.json`
+(gate 7 at q = 1), `q3_gate_ampA1/A2/A4.txt` and their json (q3_gate at 1e-3, 5e-4, 2.5e-4;
+`q3_gate.py --amp`), `amp_scaling_report.txt`. `certify_gates.py run | evaluate` — the
+certification test (MODEL_SPEC §4d) → `certify_gates_output.txt`, `certify_gates_slopes.json`
+(the measured slopes). `model_gates_radialA_v2.txt`: model.py's gates with the routine gate 7
+reporting its floor without a pass/fail.
+
 ### P-1 investigation
 `p1/` — the decay-window investigation behind the P-1 annotation; its README maps
 each file to its finding.
