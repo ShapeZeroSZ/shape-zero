@@ -1,0 +1,26 @@
+{
+ "1": {
+  "u(2) floor": 0.1600535537961564,
+  "u(2) floor (baseline, precession off)": 0.0,
+  "u(2) split": 0.026111447540642985,
+  "u(2) per-order AB": 4.297922129121581,
+  "u(2) per-order BA": 4.404814044059781,
+  "u(3) floor": 0.09624393474302093,
+  "u(3) floor (baseline, precession off)": 0.0,
+  "u(3) split": -0.01496241024990752,
+  "u(3) per-order AB": 2.50517632516487,
+  "u(3) per-order BA": 2.4482708361165995
+ },
+ "3": {
+  "u(2) floor": 0.09023231195151998,
+  "u(2) floor (baseline, precession off)": 0.0,
+  "u(2) split": 0.026512855396006785,
+  "u(2) per-order AB": 0.4871047426857985,
+  "u(2) per-order BA": 0.5305723129508384,
+  "u(3) floor": 0.04054416117152663,
+  "u(3) floor (baseline, precession off)": 8.537736462515939e-07,
+  "u(3) split": -0.00104918619797445,
+  "u(3) per-order AB": 0.11086747150277007,
+  "u(3) per-order BA": 0.10951924702331262
+ }
+}

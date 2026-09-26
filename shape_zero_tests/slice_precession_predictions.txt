@@ -1,0 +1,32 @@
+SLICE-RESOLVED FIRST-ORDER SELF-PRECESSION -- PREDICTED SLOPES (deg per 1e-3 of amplitude)
+(computed before any comparison with the measured slopes; model: this file's docstring)
+
+  q = 1 (gate 7):
+     u(2) floor                                 +0.16005
+     u(2) floor (baseline, precession off)      +0.00000
+     u(2) split                                 +0.02611
+     u(2) per-order AB                          +4.29792
+     u(2) per-order BA                          +4.40481
+     u(3) floor                                 +0.09624
+     u(3) floor (baseline, precession off)      +0.00000
+     u(3) split                                 -0.01496
+     u(3) per-order AB                          +2.50518
+     u(3) per-order BA                          +2.44827
+  q = 3 (q3_gate):
+     u(2) floor                                 +0.09023
+     u(2) floor (baseline, precession off)      +0.00000
+     u(2) split                                 +0.02651
+     u(2) per-order AB                          +0.48710
+     u(2) per-order BA                          +0.53057
+     u(3) floor                                 +0.04054
+     u(3) floor (baseline, precession off)      +0.00000
+     u(3) split                                 -0.00105
+     u(3) per-order AB                          +0.11087
+     u(3) per-order BA                          +0.10952
+
+NOTE (disclosure). The model above was fixed before any output was seen. Its q = 1 u(2)
+values were seen once, before this file was written, in a check that the precession-off
+run reproduces model.U_segment's product exactly (it does: 0.68000828 -0.33540006
+0.65199351 both) and that DT = 0.5 and 0.25 agree (floor 0.16015 / 0.16005). Nothing in
+the model was changed after that. The measured slopes (certify_gates_slopes.json) were
+known when the model was written; no comparison was computed before this file was committed.
