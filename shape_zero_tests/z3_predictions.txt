@@ -1,0 +1,48 @@
+Z3 PHASE CONSERVATION IN THE OCTONIONIC SECTOR -- HYPOTHESIS AND PREDICTIONS
+(committed before any test is run), 2026-09-26. Tests: shape_zero_tests/z3_test.py.
+
+HYPOTHESIS (the request): in the octonionic sector the right phase conservation is Z3 --
+invariance under e^{(2pi/3) JJ} -- not the continuous U(1).
+
+Two Z3's must be distinguished:
+  Z3a  e^{(2pi/3) JJ} with JJ the node's complex structure acting on ALL components (as the
+       lattice's JJ = rho(i I) does; with JJ = L_e this rotates the line span{1, e} too).
+  Z3b  the centre of the SU(3) that fixes e: identity on span{1, e}, e^{2 pi i/3} on C^3
+       (the Z3 under which c was found invariant, octonionic_u1_check.py). It lies in G2,
+       so it is an AUTOMORPHISM of O.
+
+A GENERAL FACT, stated before testing: for a LINEAR operator W, [W, e^{theta X}] = 0 is
+equivalent to [W, X] = 0 whenever lambda -> e^{theta lambda} is injective on the spectrum of X.
+For X = JJ (spectrum +-i) or the Z3b generator (spectrum 0, +-i), theta = 2 pi/3 is injective.
+So for every linear coupling, Z3-compatibility EQUALS U(1)-compatibility; Z3 differs from U(1)
+only for NONLINEAR terms of charge 3 (e.g. the C^3 volume form Re Omega, cubic).
+
+(1) The residual and the charge.
+ Z1 C_r L_g does NOT commute with e^{(2pi/3) JJ} (Z3a): ||[R, L_g]|| = sin(2pi/3) ||[JJ, L_g]||,
+    i.e. 0.866 x the U(1) commutator. It does not commute with Z3b unless g lies in span{e}.
+ Z2 L_g's violation is CHARGE 2, not charge 3: under theta -> e^{-theta JJ} L_g e^{theta JJ}
+    its Fourier content is at charges 0 and +-2 only (the commuting part C at 0; the
+    anticommuting part A = (L_g + JJ L_g JJ)/2 at +-2), nothing at +-3. So the charge is NOT
+    conserved mod 3 in the kappa* + C_r runs; the violation is not of charge-3 form.
+ Z3 in the gate-11 runs, replacing L_g by A alone reproduces L_g's charge drift (to within
+    ~30%); C alone conserves the full Noether charge (as measured, 1e-8).
+(2) Gauge class under passivity + Z3 compatibility (octonionic node R^8, symmetric couplings):
+ Z4 Z3a: the same as JJ-compatibility -- dimension 16 = u(4); with the unit selected (also
+    commuting with the split C + C^3) 10 = u(1) + u(3).
+ Z5 Z3b: symmetric 8x8 commuting with Z3b -- all symmetric 2x2 on span{1, e} (dim 3) plus the
+    u(3) block on C^3 (dim 9): dimension 12 = u(3) + sym(2), i.e. u(1) + u(3) plus 2 extra
+    directions that break JJ on the C line. Neither "su(3) plus something" nor u(1) + u(3).
+(3) The D8 two-generator structure M = R_a + L_b:
+ Z6 forbidden under Z3a exactly as under JJ-compatibility (linear operators).
+ Z7 under Z3b (an automorphism, phi L_b phi^-1 = L_phi(b)) M commutes iff a and b are both
+    fixed by phi, i.e. both in span{e} -- then a || b, which plurality excludes. So Z3b also
+    forbids it.
+ Z8 the simplest on-site charge-3 term, c(u, u, u), vanishes identically (c antisymmetric);
+    a nonzero charge-3 term needs three distinct vectors (neighbours or derivatives) -- the
+    octonionic field term, which is not in the model.
+
+PREDICTED VERDICT: the hypothesis does not hold as a rescue of the residual or of the D8
+structure. Z3 is the symmetry of c (hence of cubic octonionic terms), but for every linear
+coupling -- C_r L_g, the gauge links, the D8 generators -- Z3-compatibility is equivalent to
+(Z3a) or no weaker than (Z3b, except 2 J-breaking directions on the C line) U(1)-compatibility;
+the residual's violation is charge 2, which Z3 does not permit either.
