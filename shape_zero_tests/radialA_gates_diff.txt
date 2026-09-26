@@ -1,0 +1,23 @@
+model.py gates at kappa*: elementwise + fixed readout (model_gates_kstar_v2.txt, superseded) vs radial (A) + clearing readout (model_gates_radialA.txt)
+1. harness calibrated                            PASS->PASS  same
+2. free propagation                              PASS->PASS  same
+3. complex structure selected                    PASS->PASS  CHANGED
+    before: chirality purity 0.9871  drift 5.06e-08
+    after : chirality purity 0.9872  drift 5.06e-08
+4. passivity gives u(n), dim n^2                 PASS->PASS  same
+5. n=1 asymmetry, MEASURED                       PASS->PASS  same
+6. kappa and the beta-collapse                   PASS->PASS  same
+7. u(2) ordering vs independent prediction       PASS->FAIL  CHANGED
+    before: split 98.69 deg vs predicted 98.26 deg | per-order 0.25 / 0.20 deg | Abelian floor 0.050 deg (algebra: 0) | drift 1.5e-07
+    after : split 98.50 deg vs predicted 98.28 deg | per-order 0.16 / 0.36 deg | Abelian floor 0.160 deg vs predicted 0.294 | clearing T 1314 | drift 1.1e-06
+7. u(3) ordering vs independent prediction       PASS->FAIL  CHANGED
+    before: split 106.98 deg vs predicted 107.15 deg | per-order 0.43 / 0.28 deg | Abelian floor 0.044 deg (algebra: 0) | drift 1.5e-07
+    after : split 107.11 deg vs predicted 107.13 deg | per-order 0.41 / 0.29 deg | Abelian floor 0.096 deg vs predicted 0.175 | clearing T 1309 | drift 1.1e-06
+8. Abelian control (commuting axes, unequal stre PASS->PASS  CHANGED
+    before: 0.0498 deg   (theory 0; equal strengths would be vacuous)
+    after : 0.1603 deg   (theory 0; equal strengths would be vacuous); predicted 0.2939 (radial well's self-precession)
+9. cone state: radial/angular split              PASS->PASS  same
+10. base runs at q = 1, 2, 3 with so(q) angular  PASS->PASS  same
+11. residual: inert at C_r=0, active otherwise,  PASS->PASS  CHANGED
+    before: q=1 C_r=0.0: B=2.30e-18  q=1 C_r=0.05: B=3.25e-03  q=3 C_r=0.0: B=-7.81e-18  q=3 C_r=0.05: B=1.29e-02
+    after : q=1 C_r=0.0: B=3.10e-18  q=1 C_r=0.05: B=3.25e-03  q=3 C_r=0.0: B=2.63e-18  q=3 C_r=0.05: B=1.29e-02

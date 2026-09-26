@@ -1,0 +1,31 @@
+TEST 1 -- gates 7 and 8, fixed-time (N = 200, T = 180) vs clearing (N = 1200, one common T)
+   model        n  axes    readout      amp      T      split/floor (deg)  pred split  per-order AB/BA  max window
+   elementwise  2  (0, 1)  fixed T    1e-03     180  split  98.68507        98.256    0.245 / 0.197     2.7e-01
+   elementwise  2  (0, 1)  clearing   1e-03    1364  split  98.51682        98.256    0.119 / 0.273     9.9e-07
+   elementwise  2  (0, 0)  fixed T    1e-03     180  floor   0.04979         0.000    0.050 / 0.100     2.8e-01
+   elementwise  2  (0, 0)  clearing   1e-03    1364  floor   0.00004         0.000    0.130 / 0.130     9.9e-07
+   elementwise  3  (0, 1)  fixed T    1e-03     180  split 106.97844       107.155    0.432 / 0.281     2.7e-01
+   elementwise  3  (0, 1)  clearing   1e-03    1336  split 107.13809       107.155    0.395 / 0.263     9.6e-07
+   elementwise  3  (0, 0)  fixed T    1e-03     180  floor   0.04399         0.000    0.428 / 0.456     2.7e-01
+   elementwise  3  (0, 0)  clearing   1e-03    1342  floor   0.00003         0.000    0.432 / 0.432     1.0e-06
+   radial       2  (0, 1)  fixed T    1e-03     180  split  98.70735        98.256    0.334 / 0.221     2.7e-01
+   radial       2  (0, 1)  clearing   1e-03    1314  split  98.49606        98.256    3.812 / 3.787     9.5e-07
+   radial       2  (0, 0)  fixed T    1e-03     180  floor   0.16137         0.000    0.033 / 0.188     2.8e-01
+   radial       2  (0, 0)  clearing   1e-03    1314  floor   0.16032         0.000    3.424 / 3.584     9.5e-07
+   radial       3  (0, 1)  fixed T    1e-03     180  split 106.98498       107.155    0.580 / 0.312     2.7e-01
+   radial       3  (0, 1)  clearing   1e-03    1309  split 107.11444       107.155    2.637 / 2.250     9.1e-07
+   radial       3  (0, 0)  fixed T    1e-03     180  floor   0.09862         0.000    0.468 / 0.464     2.7e-01
+   radial       3  (0, 0)  clearing   1e-03    1309  floor   0.09646         0.000    3.253 / 3.158     9.1e-07
+   radial       2  (0, 0)  clearing   5e-04    1314  floor   0.08033         0.000    1.709 / 1.789     9.5e-07
+   elementwise  2  (0, 0)  clearing   5e-04    1358  floor   0.00001         0.000    0.130 / 0.130     9.3e-07
+   u(2) floor under clearing, amplitude 5e-4 / 1e-3: radial 0.501, elementwise 1.42e-05 / 3.53e-05 deg
+
+TEST 2 -- P-3 under (A): spinor precession rate
+      A     chi   measured     exact roots   linear formula   meas/exact  meas/linear   rate/(A^2 n_z)
+    0.05    25   +0.005677   +0.005697     +0.005718        0.9965      0.9928       +3.5326
+    0.10    25   +0.011270   +0.011352     +0.011436        0.9928      0.9855       +1.7533
+    0.20    25   +0.022230   +0.022540     +0.022872        0.9862      0.9719       +0.8646
+    0.15    10   +0.028233   +0.028493     +0.028768        0.9909      0.9814       +1.3353
+    0.15    25   +0.016786   +0.016966     +0.017154        0.9894      0.9786       +1.1607
+    0.15    65   -0.016786   -0.016966     -0.017154        0.9894      0.9786       +1.1607
+    0.15    80   -0.028233   -0.028493     -0.028768        0.9909      0.9814       +1.3353

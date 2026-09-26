@@ -1,0 +1,33 @@
+==========================================================================================
+READING (B) -- predictions (committed before any run)
+==========================================================================================
+  LINEAR SPECTRUM (analytic): Omega^2 - (sqrt5 + 2s + kappa^2) Omega + s(sqrt5 + s) = 0
+     kappa = 0.0000: k = 0: w = 0.0000 (phase mode), 1.4953; k = pi: 2.0000, 2.4972; acoustic speed v = 1.0000
+     kappa = 0.9717: k = 0: w = 0.0000 (phase mode), 1.7834; k = pi: 1.7547, 2.8463; acoustic speed v = 0.8385
+     numeric check: the linearised ring copy's eigenfrequencies (N = 32) equal the formula to < 1e-6
+     branch-separation kappa (the analogue of kappa*, for comparison only), q = 1, c = 1: 0.939130   [kappa* = 0.971737 (q = 1), 2.090698 (q = 3 general)]
+     branch-separation kappa (the analogue of kappa*, for comparison only), q = 3, c = 1: 2.209517   [kappa* = 0.971737 (q = 1), 2.090698 (q = 3 general)]
+
+  BOUNDED MOTION (single node, n = 1, kappa*, launched with kinetic energy 5 at the equilibrium):
+     elementwise model.py: the per-component well is unbounded below (u -> -inf past the saddle
+       u = -sqrt5, barrier 5 sqrt5/6 = 1.863): the node ESCAPES, |u| > 100 within T = 200
+     radial (A): V = sqrt5 r^2/2 + r^3/3 >= 0, confining: max |u| < 5 over T = 200
+     ring (B): V(x) = x^3/3 - x^2/2 - x on x >= 0, confining: max |u| < 5 over T = 200
+
+  GATES on the ring copy (u = displacement from psi0 = (phi, 0); every gate reports):
+     1 PASS, unchanged (harness)
+     2 PASS (energy conserved; drift < 1e-6), drift value may change
+     3 FAIL: chirality purity < 0.95 -- the circular packet is not a mode about the ring (radial
+       part gapped at sqrt(sqrt5 + kappa^2), tangential part acoustic); readout at the isotropic omega
+     4, 5, 6 PASS, unchanged (algebra; reference scripts independent of Lattice's force)
+     7 u(2), u(3) FAIL: the independent prediction uses the isotropic chirality branch, which
+       does not exist about the ring; per-order errors >= 1 deg
+     8 PASS (commuting sigma_x segments commute with the per-dimer ring dynamics when every
+       dimer sits at the same ring point): floor < 3 deg
+     9 PASS, unchanged value: it inspects the initial displacement only (never evolves) -- under
+       (B) it splits the displacement u, not the node state psi0 + u
+     10 PASS (drift < 1e-6), values change
+     11 not predicted (no derivation)
+  GATES on the literal copy (psi = u, no offset): the gates' states sit at the origin, which is
+     not an equilibrium (|F| = 1 outward); gate 2 FAILS (drift >= 1e-6 or the packet leaves the
+     small-amplitude regime); gates 3 and 7 FAIL.

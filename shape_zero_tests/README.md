@@ -281,6 +281,26 @@ channel at q = 1 and q = 3, the (κ, c) scan at q = 1 and the β sector.
 `persist_sim3d_report.txt`: the q = 3 upper side (S1, S2). MODEL_SPEC §3, "CORRECTION" and
 "FINDING".
 
+### 17. The node form — radial well (A), ring reading (B), and the adoption of (A)
+`radial_model.py` → `model_radial.py` (the radial variant, before adoption);
+`persist_radial.py` (predictions `persist_radial_predictions.txt`) → `persist_radial_runs.json`,
+`persist_radial_report.txt`; `radial_gates.txt`, `radial_gates_diff.txt`. `ring_model.py` →
+`model_ring.py`, `model_ring_literal.py`; `ring_spectrum.py` (predictions `ring_predictions.txt`)
+→ `ring_spectrum_output.txt`; `ring_gates.txt`, `ring_literal_gates.txt`. `radialA_tests.py`
+(predictions `radialA_predictions.txt`) → `radialA_runs.json`, `radialA_report.txt` (gate 7/8
+floor under clearing; P-3 under (A)). After adoption: `gate7A_predict.py` →
+`gate7A_predictions.txt` (committed first); `model_gates_radialA.txt` (model.py, radial,
+clearing gate 7); `radialA_gates_diff.txt` (every changed value);
+`model_gates_elementwise_fixed_repro.txt` (the elementwise option reproduces
+`model_gates_kstar_v2.txt` exactly); `q3_gate_radialA.txt` and its json files.
+**Reproducing results made before 2026-09-26 with the working `model.py`:** its J sector
+now defaults to the radial well. Set `SZ_J_WELL=elementwise` (and, for `model.py`'s own gate
+7, `SZ_GATE7_READOUT=fixed`) — e.g. for `q3_gate.py --tag kstar_v2`, `jcompat_gates.py`,
+`model_gates_*` files. `persist_sim.py`, `persist_radial.py`, `radialA_tests.py` and
+`ring_spectrum.py` pin the elementwise form themselves (checked: R1's |B| at t = 100 is
+reproduced to the last digit). Scripts that load a pinned version from `model_versions/`
+are unaffected.
+
 ### P-1 investigation
 `p1/` — the decay-window investigation behind the P-1 annotation; its README maps
 each file to its finding.

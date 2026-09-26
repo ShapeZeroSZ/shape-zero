@@ -233,6 +233,22 @@ F = −(x² − x − 1), with fixed points at the golden-ratio roots and linear
 √5, is **stated** in MODEL_SPEC §1 and **not derived** there or in this ledger. It
 is a premise of the lattice model. (Recorded 2026-09-25, from
 `03_current/SCALE_SCOPING.md` §1b.)
+[**Node form adopted 2026-09-26:** at a dimer node (the J sector) the well acts on the
+dimer's radius, F = −(√5 + |ψ|)ψ; the scalar β sector keeps the per-component form.
+Chosen by the principles alone — phase conservation at all orders, persistence as
+bounded motion, the D2 rung's isotropic origin-centred node, keeping κ\*; only this form
+satisfies all four (MODEL_SPEC §1a). The earlier per-component form lets a node escape
+above energy 1.863 per component. An isotropic cubic well cannot be analytic at the
+origin; the D2 rung's own confinement is quadratic; **the φ-well remains an underived
+premise**.]
+
+**Method rule (adopted 2026-09-26).** Selection rule (method): the model's principles
+decide first. Where they leave a choice open or unclear, the option that leads to known
+physical structure is selected; where neither does, a chosen value from known physics is
+used. Any choice made this way is recorded as "selected by physics" — an input, not a
+derivation — and any fact used in making it cannot afterwards be counted as a prediction
+or as evidence for the model. The physical criterion must be written down before options
+are compared. (Not used for the node form, which the principles decided.)
 
 **Principle, not a parameter: J-compatibility required at every wavelength.**
 (Adopted 2026-09-25; it replaces the premise "J-compatibility chosen at short
@@ -252,7 +268,8 @@ persistence — no resonant channel for any wave — is unsatisfiable for all pa
 identified after the strict form failed — no decay and no change of branch, same-branch
 scattering allowed — confines κ to windows; at q = 3, c = 1, κ ∈ [4.9, 7.5], and the
 window vanishes for c/√5 between 0.45 and 0.89. Not adopted (MODEL_SPEC §3, "FINDING",
-with its caveats).
+with its caveats). [2026-09-26: under the adopted radial node form the window is
+[κ\*, ∞) at every c tested; the [4.9, 7.5] window was the elementwise form's.]
 
 **ℏ is NOT derived — retracted.** See MODEL_SPEC §4c.2a-R. The step converting
 tr(λ_aλ_b) = 2δ_ab into a geometric radius was a category error: a generator

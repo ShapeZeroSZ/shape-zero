@@ -1,0 +1,32 @@
+
+radialA_tests.py -- two tests of variant (A), the radial well (model_radial.py).
+
+TEST 1 -- gates 7 and 8 with a CLEARING readout. model.py's gate 7/8 read at a fixed
+T = 180 on N = 200 (MODEL_SPEC §4d.1 trap 6: the packet's tail is still in the
+second window). Under (A) the Abelian floor rose from 0.050 to 0.161 deg. Two
+hypotheses:
+  H-trap  : the rise is the fixed-time readout -- under clearing it goes to ~0.
+  H-prec  : (A) makes the spinor self-precession FIRST order in amplitude
+            (Omega = A (cos chi - sin chi)/(2w + kappa), P-3 under (A)). Between the
+            two segments the spinor precesses about z by an amount that depends on
+            which segment came first, so commuting x-rotations no longer commute in
+            effect. Estimate: ~2.4e-4 rad/unit time x ~43 time units between segments
+            x a population difference ~0.3 -> ~0.17 deg. This survives clearing and
+            scales LINEARLY with amplitude.
+Prediction (H-prec): under clearing, the (A) u(2) floor stays >= 0.05 deg at amplitude
+1e-3 and falls to 0.5 +- 0.1 of that at amplitude 5e-4; the elementwise floor under
+clearing is < 1e-3 deg. The fixed-time rows reproduce gate 7's floors (0.161 / 0.050).
+Protocol: gate 7's own geometry (segments at 60, 80, RAMP, width 8, n0 = 20), per-mode
+launch (as model.py's gate 7), N = 1200, both orders of a pair read at ONE common time
+1.1 x the later clearing time (every window < 1e-6), as gate7_readout.py does.
+
+TEST 2 -- P-3 under (A). A uniform circular spinor wave, dimer amplitudes A cos chi and
+A sin chi, has |psi_j| constant, so each dimer sees stiffness Q + A_j and turns at the
+exact root of w^2 + kappa w = Q + A_j. Spinor precession rate (phase of conj(S0) S1):
+    Omega = w_0 - w_1 = A (cos chi - sin chi)/(2w + kappa) + O(A^2)
+-- LINEAR in A, and with angular factor cos chi - sin chi, not the elementwise P-3 law
+C A^2 n_z. Prediction: measured Omega within 2% of the exact root difference and of the
+linear formula, at A = 0.05, 0.1, 0.2 and chi = 10, 25, 65, 80 deg; Omega/(A^2 n_z) not
+constant (spread > 20% across A).
+
+

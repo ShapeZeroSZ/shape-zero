@@ -40,7 +40,7 @@ letter c is the elastic inter-node coupling in the force law (§1b below).
 |---|---|---|---|
 | on-site force −(x² − x − 1), linear stiffness √5 | the φ-well; fixed points at the golden-ratio roots | **stated as the model's force law**; the sources used here state it and do not derive it | `MODEL_SPEC.md` §1 |
 | c (elastic) | inter-node elastic coupling, F = c(x₊ + x₋ − 2x) | **CHOSEN** — c = 1.0 in `model.py` and in every lattice script; **not listed** among the free parameters of `INPUT_LEDGER.md` §2d, so its status is unrecorded there | `MODEL_SPEC.md` §3; `04_scripts/session/model.py` (C = 1.0) |
-| κ (gyroscopic ratio) | intra-node gyroscopic coupling, F = κ𝕁v; D4 coupling strength | **OPEN, measurable** — fixed by one bench measurement (the Larmor splitting equals κ). [Candidate floor, not adopted, 2026-09-25: κ ≥ 0.971737 if J-compatibility is required at every wavelength — a floor, not a value; MODEL_SPEC §3] [**ADOPTED 2026-09-25:** **DERIVED FLOOR** κ ≥ 2c/√(K + 2c) = 0.971737; value still OPEN, measurable; operating value κ = κ\* CHOSEN] [**Finding 2026-09-25, not adopted:** the strongest persistence the model admits confines κ to [4.9, 7.5] at q = 3, c = 1, excluding κ\* (MODEL_SPEC §3, "FINDING")] | `INPUT_LEDGER.md` §2d #3 and §3.1; `MODEL_SPEC.md` §2, §3; `model.py` (KAPPA = 0.5 until 2026-09-25, now κ\*) |
+| κ (gyroscopic ratio) | intra-node gyroscopic coupling, F = κ𝕁v; D4 coupling strength | **OPEN, measurable** — fixed by one bench measurement (the Larmor splitting equals κ). [Candidate floor, not adopted, 2026-09-25: κ ≥ 0.971737 if J-compatibility is required at every wavelength — a floor, not a value; MODEL_SPEC §3] [**ADOPTED 2026-09-25:** **DERIVED FLOOR** κ ≥ 2c/√(K + 2c) = 0.971737; value still OPEN, measurable; operating value κ = κ\* CHOSEN] [**Finding 2026-09-25, not adopted:** the strongest persistence the model admits confines κ to [4.9, 7.5] at q = 3, c = 1, excluding κ\* (MODEL_SPEC §3, "FINDING")] [2026-09-26: that window was the elementwise node form's; under the adopted radial form it is [κ\*, ∞) (MODEL_SPEC §1a, §3)] | `INPUT_LEDGER.md` §2d #3 and §3.1; `MODEL_SPEC.md` §2, §3; `model.py` (KAPPA = 0.5 until 2026-09-25, now κ\*) |
 | β (lattice) | inter-node antisymmetric velocity coupling, βc(v₊ − v₋) — the synthetic U(1) | **CHOSEN** — β = 0.05 in the κ scripts; `MODEL_SPEC.md` §4c.4 calls it the U(1) "charge" and "already an input (§2d of the ledger)" | `MODEL_SPEC.md` §4b.1, §4c.4 |
 | ζ (cone deficit; β before 2026-09-25) | the D2 arena's cone deficit | **OPEN** — contingent on an unresolved embedding; B-2 candidate ζ = 1/4 has an unmet closing condition | `INPUT_LEDGER.md` §2d #2, §3.3 |
 | a–b angle | D8 flow frequency ratio (second generator's direction) | **OPEN, measurable** — plurality forces a second generator, not which; every ratio in [1.04, 23.9] is attainable | `INPUT_LEDGER.md` §2d #4, §3.2 |
@@ -246,7 +246,8 @@ fix each of them, or record it as an input.
    (`shape_zero_tests/param_classify_output.txt`). [Finding 2026-09-25, not adopted:
    under the strongest persistence the model admits, the q = 3 window in κ vanishes
    for c/√5 between 0.45 and 0.89 — a bound on c/√5 if that form were adopted
-   (MODEL_SPEC §3, "FINDING").]
+   (MODEL_SPEC §3, "FINDING").] [2026-09-26: not under the adopted radial node form, where
+   the window is [κ\*, ∞) at every c tested.]
 2. **κ**, the gyroscopic ratio (§2d #3) — measurable by the Larmor splitting.
    [2026-09-25: **genuine parameter with a derived floor**, κ ≥ 2c/√(K + 2c) = 0.971737,
    from the principle "J-compatibility required at every wavelength". A complete
@@ -255,6 +256,8 @@ fix each of them, or record it as an input.
    [Finding 2026-09-25, not adopted: the strongest persistence the model admits — no
    decay, no change of branch — would confine κ to [4.9, 7.5] at q = 3, c = 1, an
    interval, not a value (MODEL_SPEC §3, "FINDING").]
+   [2026-09-26: under the adopted radial node form the window is [κ\*, ∞) — the floor
+   only (MODEL_SPEC §1a).]
 3. **the a–b angle** (§2d #4) — measurable as the D8 frequency ratio.
 4. **C_r**, the residual coupling strength (§2d #5).
 

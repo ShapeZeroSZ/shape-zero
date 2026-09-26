@@ -39,6 +39,9 @@ usage:  python3 persist_sim.py predict | run | report
 import json
 import math
 import os
+# model.py's J sector defaults to the radial well since 2026-09-26; this script's
+# "model.py" results are the ELEMENTWISE form, so pin it (before model is imported).
+os.environ["SZ_J_WELL"] = "elementwise"
 import sys
 
 import numpy as np

@@ -1185,6 +1185,30 @@ Also: `model.py` must be run from `04_scripts/session/` — run from elsewhere, 
 cannot find `d16_spectrum_v2.py` and FAILs (seen once in this re-run; re-run from
 the right directory, it passes).
 
+## 6q. The node form: the radial well adopted (2026-09-26)
+
+Sequence (all in `shape_zero_tests/`, predictions committed before each run):
+persistence at every wavelength (`persist_*`) found the elementwise nonlinearity
+J-breaking at κ\* (R1, second harmonic into the opposite chirality). The radial well (A)
+was tested (`radial_model.py`, `persist_radial.py`): phase charge conserved at every
+order, R1's conversion at 9.9×10⁻¹⁷ A, the persistence windows [κ\*, ∞). The ring reading
+(B) of MODEL_SPEC §0 was tested (`ring_model.py`, `ring_spectrum.py`): massless phase mode,
+conflicts with the D2 rung, gates 3 and 7 fail as written. A bounded-motion test found
+the elementwise form lets a node escape (above energy 1.863 per component). Adopted by
+the user: (A), selected by the principles alone; the method rule recorded (MODEL_SPEC
+§1a). `model.py`: `J_WELL = "radial"`; elementwise kept (`SZ_J_WELL=elementwise`,
+`SZ_GATE7_READOUT=fixed` reproduces the earlier gate output exactly). Gate 7 now reads
+out after clearing and its prediction includes the derived first-order self-precession:
+per-order errors 0.16–0.41° (were 3.4–3.8° without it), but the floor is over-predicted
+~1.8× and gate 7 fails its floor criterion — recorded, with the slice model proposed; the
+amplitude was not lowered. P-3 replaced by Ω = A(cos χ − sin χ)/(2ω + κ), the old law kept
+as superseded.
+
+**Catch:** the node form was an inherited platform choice ("per-component"), never
+derived, whose O(2) breaking the spec itself noted (v5.3, Result 4, line 143) and on which
+a prediction (P-3) was built. Failure mode #1's cousin: a modelling choice carried forward
+as if it were a result.
+
 ## 7. Recurring failure modes
 
 Each has produced at least two errors in this programme.

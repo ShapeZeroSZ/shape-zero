@@ -1,0 +1,23 @@
+model.py gates at kappa*: elementwise u*u (model_gates_kstar_v2.txt) vs radial well (radial_gates.txt)
+1. harness calibrated                            PASS->PASS  same
+2. free propagation                              PASS->PASS  same
+3. complex structure selected                    PASS->PASS  CHANGED
+    elementwise: chirality purity 0.9871  drift 5.06e-08
+    radial     : chirality purity 0.9872  drift 5.06e-08
+4. passivity gives u(n), dim n^2                 PASS->PASS  same
+5. n=1 asymmetry, MEASURED                       PASS->PASS  same
+6. kappa and the beta-collapse                   PASS->PASS  same
+7. u(2) ordering vs independent prediction       PASS->PASS  CHANGED
+    elementwise: split 98.69 deg vs predicted 98.26 deg | per-order 0.25 / 0.20 deg | Abelian floor 0.050 deg (algebra: 0) | drift 1.5e-07
+    radial     : split 98.71 deg vs predicted 98.26 deg | per-order 0.33 / 0.22 deg | Abelian floor 0.161 deg (algebra: 0) | drift 1.5e-07
+7. u(3) ordering vs independent prediction       PASS->PASS  CHANGED
+    elementwise: split 106.98 deg vs predicted 107.15 deg | per-order 0.43 / 0.28 deg | Abelian floor 0.044 deg (algebra: 0) | drift 1.5e-07
+    radial     : split 106.98 deg vs predicted 107.15 deg | per-order 0.58 / 0.31 deg | Abelian floor 0.099 deg (algebra: 0) | drift 1.5e-07
+8. Abelian control (commuting axes, unequal stre PASS->PASS  CHANGED
+    elementwise: 0.0498 deg   (theory 0; equal strengths would be vacuous)
+    radial     : 0.1614 deg   (theory 0; equal strengths would be vacuous)
+9. cone state: radial/angular split              PASS->PASS  same
+10. base runs at q = 1, 2, 3 with so(q) angular  PASS->PASS  same
+11. residual: inert at C_r=0, active otherwise,  PASS->PASS  CHANGED
+    elementwise: q=1 C_r=0.0: B=2.30e-18  q=1 C_r=0.05: B=3.25e-03  q=3 C_r=0.0: B=-7.81e-18  q=3 C_r=0.05: B=1.29e-02
+    radial     : q=1 C_r=0.0: B=3.10e-18  q=1 C_r=0.05: B=3.25e-03  q=3 C_r=0.0: B=2.63e-18  q=3 C_r=0.05: B=1.29e-02

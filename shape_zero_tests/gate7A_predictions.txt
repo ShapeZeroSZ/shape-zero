@@ -1,0 +1,4 @@
+u(2) split axes (0, 1): clearing T = 1314; predicted split 98.2821 deg (linear product: 98.2563); precession moves AB by 3.969 deg, BA by 4.095 deg
+u(2) floor axes (0, 0): clearing T = 1314; predicted floor 0.2939 deg (linear product: 0.0000); precession moves AB by 3.390 deg, BA by 3.683 deg
+u(3) split axes (0, 1): clearing T = 1309; predicted split 107.1316 deg (linear product: 107.1547); precession moves AB by 2.307 deg, BA by 2.232 deg
+u(3) floor axes (0, 0): clearing T = 1309; predicted floor 0.1747 deg (linear product: 0.0000); precession moves AB by 3.273 deg, BA by 3.098 deg

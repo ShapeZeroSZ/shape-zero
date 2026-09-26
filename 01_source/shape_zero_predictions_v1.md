@@ -127,6 +127,24 @@ absent for non-parallel axes, or present for parallel ones.
 
 ## P-3. The amplitude-Zeeman effect (spinor self-precession)
 
+**[REPLACED 2026-09-26 — the law under the model's adopted node form.]** With the φ-well
+acting on each dimer's radius (MODEL_SPEC §1a, form (A), adopted by the principles), a
+circular spinor wave with dimer amplitudes A cos χ and A sin χ turns each dimer at the
+root of ω² + κω = Q + A_j, so the spinor precesses about the dimer-population axis at
+
+  **Ω = A (cos χ − sin χ) / (2ω + κ)**  (+ O(A²)),
+
+**linear in A**, with angular factor cos χ − sin χ. Confirmed by simulation at κ = κ\*,
+k = π/2 (`shape_zero_tests/radialA_tests.py`): within 0.4–1.4% of the exact per-dimer
+frequency difference at A = 0.05–0.2; within 0.7% (A = 0.05) and 1.45% (A = 0.1) of the
+linear formula, 2.1–2.8% at A = 0.15–0.2 (the O(A²) term); rate(10°)/rate(25°) = 1.682
+against 1.677 (the old n_z law would give 1.462). **Falsified if:** the precession rate is
+not linear in A at small A, or its angular dependence is not cos χ − sin χ.
+
+**[SUPERSEDED 2026-09-26 by the change of node form, not retracted — the text below is
+the law of the elementwise (per-component) form, which it depended on; it was correct
+for that form.]**
+
 At finite drive, the per-component quadratic nonlinearity adds a universal
 on-site precession of the internal polarization about the dimer-population
 axis: **Ω = C·A²·n_z**, with n_z conserved, and

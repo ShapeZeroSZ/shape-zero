@@ -1,0 +1,21 @@
+============================================================================================
+PREDICTIONS (committed before any run) -- radial phi-well in the J sector
+============================================================================================
+  kappa* = 0.971737, N = 656, k1 = 1.25472 (R1's resonant wavenumber), k2 = pi/2, A = 0.01
+  P1  radial, single a-wave at k1: |psi| = A is constant, so F = -(sqrt5 + A) psi and the
+      plane wave is an EXACT solution (frequency shifted, Q -> Q + A). The b-mode at 2k1 does
+      not grow at all: max |B|/A over T < 1e-10 (elementwise R1 gave 0.207 at T; slope
+      r A^2, r = 0.07166). a-amplitude at k1 constant to < 1e-10 relative.
+  P2  radial, two a-waves (k1, k2): phase charge N conserved, |dN/N| < 1e-6 over T (RK4);
+      the b-branch weight at 2k1 shows no secular growth: |B(2k1)|(T) < 1e-3 A (it would be
+      0.215 A under the elementwise well). All b content is non-resonant.
+  P2c elementwise, same two waves (control): |B(2k1)| grows linearly, slope within 10% of
+      r A^2 as in R1; N NOT conserved (|dN/N| > 1e-4).
+
+  ANALYSIS (no simulation): pair creation n a -> (n+1) a + b, lowest open n, c = 1:
+     q = 1: kappa 0.972: n = 4, kappa 2.000: n = 6, kappa 5.000: n = 10, kappa 7.500: n = 18, kappa 10.000: n = 30
+     q = 3: kappa 0.972: n = 2, kappa 2.000: n = 2, kappa 5.000: n = 4, kappa 7.500: n = 8, kappa 10.000: n = 10
+     -> no kappa closes every order: n grows with kappa but some n always opens.
+  P1 radial, R1 rerun (k1 only) done
+  P2 radial, two waves k1 + k2 done
+  P2c elementwise, two waves k1 + k2 done

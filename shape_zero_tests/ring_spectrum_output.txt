@@ -1,0 +1,6 @@
+MEASURED
+  spectrum, kappa = 0.0000: max |numeric - analytic| = 4.10e-08; lowest four [0.      0.19603 0.19603 0.39018]
+  spectrum, kappa = 0.9717: max |numeric - analytic| = 6.77e-08; lowest four [0.      0.1645  0.1645  0.32812]
+  bounded motion, elementwise model.py: ESCAPED (|u| > 100) at t = 3.5
+  bounded motion, radial (A): bounded, max |u| = 1.670 over T = 200
+  bounded motion, ring (B): bounded, max |u| = 4.844 over T = 200

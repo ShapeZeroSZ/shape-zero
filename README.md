@@ -39,6 +39,9 @@ that, so together they machine-verify C1 Theorem 3.6 ("Roles Force Fano").
   0.2–0.45° on a one-dimensional base and 0.10–0.18° on a three-dimensional base
   [0.001–0.005° since 2026-09-25, with each Fourier mode launched at its own
   frequency and each pair of runs read at one time; MODEL_SPEC §3, §4d.1]
+  [2026-09-26, under the adopted radial node form (MODEL_SPEC §1a): `q3_gate.py` passes
+  at 0.005–0.45°, floors 0.05–0.10°; the 1-D gate 7 fails its floor criterion — its
+  first-order self-precession correction over-predicts the floor ~1.8× (MODEL_SPEC §4d)]
   (the latter a standing gate, `q3_gate.py`, shown to fail against a wrong
   prediction). Commuting segments give exactly zero, as the algebra requires.
 - **J-compatibility is enforced by the dynamics for long wavelengths.** A
