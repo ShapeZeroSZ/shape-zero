@@ -95,7 +95,14 @@ that, so together they machine-verify C1 Theorem 3.6 ("Roles Force Fano").
   measurable.]
 - A per-mode coefficient in three dimensions does not converge with box size,
   without a named mechanism.
-- Formal proof that every seven-point Steiner triple system is the Fano plane.
+  [2026-09-27: this is the stiffness-coupling coefficient **C_q(N)** of joint #5,
+  δ(Δω) = −¼βs²S²: it converges at q = 1 (0.6%) but not with box size at q ≥ 2
+  (spread 244% at q = 2, 243% at q = 3); two proposed mechanisms were retracted, and
+  it remains open (MODEL_SPEC §5b.6a; PROVENANCE §6i). It is **distinct from** the
+  localised-beam amplitude coefficient κ, whose box dependence is closed:
+  κ_box = κ_pw·fill·F (MODEL_SPEC §5).]
+- ~~Formal proof that every seven-point Steiner triple system is the Fano plane.~~
+  [Done 2026-09-24: Prove2Me mission 6, approved and published.]
 
 ### Retracted — see `PROVENANCE.md`
 

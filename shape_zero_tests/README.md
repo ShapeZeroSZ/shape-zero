@@ -16,7 +16,10 @@ folder.
     cd shape_zero_tests
     python3 <script> [args]
 
-Python 3 with NumPy.
+Python 3 with NumPy and SciPy. SciPy is imported directly by `joint3_kappa_stiffness.py`,
+`kappa_launch_pt.py`, `kappa_pw4_pt.py`, `kappa_readout_test.py`, `octonionic_u1_check.py` and
+`persist_resonance.py`, and by `04_scripts/session/model.py` (gate 5, via
+`pinned_asymmetry_reference.py`).
 
 ## Pinned model versions
 

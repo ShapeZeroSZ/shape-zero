@@ -722,8 +722,9 @@ wave — constrain the parameters, as J-compatibility at every wavelength gave �
 | 4 | 16 | u(4) | — |
 | 5 | 25 | u(5) | — |
 
-**MACHINE-VERIFIED (Lean 4, Prove2Me, 2026-09-23).** Two results are now proved
-for every size, relying only on Lean's three standard axioms:
+**MACHINE-VERIFIED (Lean 4, Prove2Me, 2026-09-23).** ~~Two results are now proved
+for every size~~ [UPDATED 2026-09-27: nine missions, 48 theorems, are now proved —
+the table below; `PROVENANCE.md` §6l], relying only on Lean's three standard axioms:
 
 | mission | statement | status |
 |---|---|---|

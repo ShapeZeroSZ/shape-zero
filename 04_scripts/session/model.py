@@ -37,7 +37,8 @@ not new physics. Where a number differs from its source script it is because the
 geometry differs (segment separation, readout time), and the gate compares
 against theory rather than against a remembered number.
 
-Python 3 + NumPy. Run:  python3 model.py
+Python 3 + NumPy + SciPy (SciPy for gate 5, via pinned_asymmetry_reference.py).
+Run:  python3 model.py
 """
 
 import numpy as np
