@@ -1,0 +1,12 @@
+JOINT SCOPING CHECKS (natural/JOINT_HYPOTHESES.md)
+  J1   transverse fall in a lapse gradient, g = 0.0004: a / (-c g), predicted in brackets
+        matter at rest     :  0.9915  [1.000]
+        matter moving kx=0.6:  0.9918  [1.000]
+        light c_g^2 = c   :  0.9761  [1.000]
+        light c_g^2 = 1.5 c:  1.4621  [1.500]
+        diagnostic g = 0.0002, sigma = 12: light 0.9780, matter moving 0.9946, light/matter 0.9833
+        diagnostic g = 0.0004, sigma = 20: light 0.9896, matter moving 0.9946, light/matter 0.9950
+        diagnostic g = 0.0002, sigma = 20: light 0.9916, matter moving 0.9974, light/matter 0.9941
+  J2   kappa* branches, lapse on gauge-invariant vs lab energy, g = 0.0002: a / (-c g)
+        a-branch (lab omega 1.0864):  invariant-energy lapse 0.9959 [1.000]   lab-energy lapse 0.6895   energy drift 6.4e-07
+        b-branch (lab omega 2.0582):  invariant-energy lapse 0.9959 [1.000]   lab-energy lapse 1.3005   energy drift 3.0e-05
