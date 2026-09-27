@@ -1,0 +1,19 @@
+
+  q = 1 under A' -- deviations from the LINEAR prediction, per amplitude
+  q = 1 u(2) split error (signed): A=1.00e-03: +0.25608, A=5.00e-04: +0.25824, A=2.50e-04: +0.25936 | fit a = +0.26045 +- 0.00003, slope -0.00437 per 1e-3, max resid 1.8e-05 | ZERO: NO; linear: yes
+      per-order AB: 0.1290, 0.1234, 0.1207 deg | vector-fit intercept angle 0.1180 +- 0.0000 deg | ZERO: NO; components linear: yes
+      per-order BA: 0.2811, 0.2768, 0.2746 deg | vector-fit intercept angle 0.2725 +- 0.0000 deg | ZERO: NO; components linear: yes
+  q = 1 u(2) floor: A=1.00e-03: 0.00005, A=5.00e-04: 0.00003, A=2.50e-04: 0.00002 | fit a = +0.00001 +- 0.00000 deg, slope 0.00004 deg per 1e-3, max resid 4.9e-07 | intercept ZERO: yes; linear: yes
+  q = 1 u(3) split error (signed): A=1.00e-03: +0.00035, A=5.00e-04: -0.00809, A=2.50e-04: -0.01232 | fit a = -0.01655 +- 0.00001, slope +0.01690 per 1e-3, max resid 4.4e-06 | ZERO: NO; linear: yes
+      per-order AB: 0.3975, 0.3964, 0.3959 deg | vector-fit intercept angle 0.3954 +- 0.0000 deg | ZERO: NO; components linear: yes
+      per-order BA: 0.2727, 0.2675, 0.2650 deg | vector-fit intercept angle 0.2625 +- 0.0000 deg | ZERO: NO; components linear: yes
+  q = 1 u(3) floor: A=1.00e-03: 0.00015, A=5.00e-04: 0.00008, A=2.50e-04: 0.00005 | fit a = +0.00001 +- 0.00000 deg, slope 0.00014 deg per 1e-3, max resid 1.1e-08 | intercept ZERO: yes; linear: yes
+  certification under A': CERTIFIED
+   u(2) split error: intercept +0.26045 +- 0.00003 (tolerance 1.000); linear: True; slope -0.00437 per 1e-3 -> ok
+      per-order AB: intercept 0.1180 +- 0.0000 (tolerance 1.000); components linear: True; slope 0.0160 deg per 1e-3 -> ok
+      per-order BA: intercept 0.2725 +- 0.0000 (tolerance 1.000); components linear: True; slope 0.0126 deg per 1e-3 -> ok
+   u(2) floor: intercept +0.00001 +- 0.00000 (zero: True); linear: True; slope 0.00004 deg per 1e-3 -> ok
+   u(3) split error: intercept -0.01655 +- 0.00001 (tolerance 1.000); linear: True; slope +0.01690 per 1e-3 -> ok
+      per-order AB: intercept 0.3954 +- 0.0000 (tolerance 1.000); components linear: True; slope 0.0133 deg per 1e-3 -> ok
+      per-order BA: intercept 0.2625 +- 0.0000 (tolerance 1.000); components linear: True; slope 0.0173 deg per 1e-3 -> ok
+   u(3) floor: intercept +0.00001 +- 0.00000 (zero: True); linear: True; slope 0.00014 deg per 1e-3 -> ok

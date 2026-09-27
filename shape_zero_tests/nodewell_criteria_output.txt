@@ -1,0 +1,8 @@
+n=2 radial: amplitude ~0.3, T=50: charge rel drift +8.1e-07, energy drift 5.7e-07
+          single node, kinetic energy 5, T=100: max |u| = 1.639 (bounded if finite and O(1))
+n=2 node  : amplitude ~0.3, T=50: charge rel drift +8.0e-07, energy drift 6.0e-07
+          single node, kinetic energy 5, T=100: max |u| = 1.557 (bounded if finite and O(1))
+n=3 radial: amplitude ~0.3, T=50: charge rel drift +1.2e-06, energy drift 5.8e-07
+          single node, kinetic energy 5, T=100: max |u| = 1.461 (bounded if finite and O(1))
+n=3 node  : amplitude ~0.3, T=50: charge rel drift +6.9e-07, energy drift 6.0e-07
+          single node, kinetic energy 5, T=100: max |u| = 1.226 (bounded if finite and O(1))

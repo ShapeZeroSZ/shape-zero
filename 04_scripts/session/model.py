@@ -67,6 +67,8 @@ K0 = np.pi / 2
 # reproduce (SZ_J_WELL=elementwise). The scalar beta sector always keeps the
 # per-component form. Gate 7's readout: 'clear' (default) or 'fixed' (the earlier
 # T = 180 on N = 200; SZ_GATE7_READOUT=fixed).
+# 'node' (TEST OPTION, 2026-09-26, not adopted): the well on the whole node's radius,
+# F = -(sqrt5 + |psi|) psi with |psi| over all n complex components (A', U(n)-invariant).
 J_WELL = os.environ.get("SZ_J_WELL", "radial")
 GATE7_READOUT = os.environ.get("SZ_GATE7_READOUT", "clear")
 # Residual coupling (ADOPTED 2026-09-26: C_r = 0 for the coded coupling C_r mul(g, v);
@@ -223,6 +225,8 @@ class Lattice:
         """Nonlinear part of the on-site well: r psi per dimer (radial) or u*u."""
         if self.well == "elementwise":
             return u * u
+        if self.well == "node":                  # A': the well on the whole node's radius
+            return np.linalg.norm(u, axis=1, keepdims=True) * u
         r = self._dimer_r(u)
         out = np.empty_like(u)
         out[:, 0::2] = r * u[:, 0::2]
@@ -233,6 +237,8 @@ class Lattice:
         """Cubic part of the on-site energy, matching _onsite_nl."""
         if self.well == "elementwise":
             return (u ** 3).sum() / 3
+        if self.well == "node":
+            return (np.linalg.norm(u, axis=1) ** 3).sum() / 3
         return (self._dimer_r(u) ** 3).sum() / 3
 
     def force(self, u, v, W=None, Wm=None):

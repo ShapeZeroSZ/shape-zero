@@ -1,0 +1,8 @@
+  n = 2, segment A (axis 0)  : V_A 0.3333 -> 0.3206 (rel -0.038);  V_A' 0.3333 -> 0.3333 (rel -7.7e-15)
+  n = 2, segment B (axis 1)  : V_A 0.3333 -> 0.2795 (rel -0.161);  V_A' 0.3333 -> 0.3333 (rel -7.7e-15)
+  n = 2, both, AB            : V_A 0.3333 -> 0.2744 (rel -0.177);  V_A' 0.3333 -> 0.3333 (rel -1.6e-14)
+  n = 2, random U(n)         : V_A rel -0.011;  V_A' rel -4.4e-16
+  n = 3, segment A (axis 0)  : V_A 0.3333 -> 0.2481 (rel -0.256);  V_A' 0.3333 -> 0.3333 (rel -9.0e-15)
+  n = 3, segment B (axis 1)  : V_A 0.3333 -> 0.3273 (rel -0.018);  V_A' 0.3333 -> 0.3333 (rel -8.7e-15)
+  n = 3, both, AB            : V_A 0.3333 -> 0.2474 (rel -0.258);  V_A' 0.3333 -> 0.3333 (rel -1.8e-14)
+  n = 3, random U(n)         : V_A rel -0.000;  V_A' rel +2.2e-16
