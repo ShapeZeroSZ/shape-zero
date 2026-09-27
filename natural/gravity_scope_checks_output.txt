@@ -1,0 +1,25 @@
+GRAVITY SCOPING CHECKS (natural/GRAVITY_HYPOTHESES.md)
+  G1a  first-order frequency shift at k = pi/2, beta = 0.05 vs u(1) phase theta = 0.05
+        K         beta: d(omega)      u(1): d(omega)     group velocity
+        2.236     +0.05061 (d/dbeta 1.0243)   +0.02414          0.4859
+        8.944     +0.05038 (d/dbeta 1.0151)   +0.01507          0.3023
+       35.777     +0.05020 (d/dbeta 1.0081)   +0.00813          0.1627
+  G1b  EL force of -beta c P vs the model's beta force: max diff 0.0e+00
+  G1b  P conservation at beta = 0, linear lattice      : P0 = +0.6282, max |P - P0| over T = 200: 1.4e-08
+  G1b  P conservation at beta = 0, phi-well (u^2 term) : P0 = +0.6282, max |P - P0| over T = 200: 9.9e-03
+  G2   free fall under a lapse potential Phi = g x, g = 0.0002: a / (-c g), predicted in brackets
+        scalar      K =   2.236  omega = 1.4953:  0.9960  [1.000]   energy drift 4.8e-06
+        scalar      K =   8.944  omega = 2.9907:  0.9926  [1.000]   energy drift 4.9e-05
+        scalar      K =  35.777  omega = 5.9814:  0.9789  [1.000]   energy drift 1.9e-04
+        gyroscopic  a-branch, kappa* = 0.9717, omega = 1.0864:  0.6895  [0.691]   energy drift 7.1e-07
+        gyroscopic  b-branch, kappa* = 0.9717, omega = 2.0582:  1.3005  [1.309]   energy drift 3.3e-05
+        diagnostic  K =  35.777, g = 0.0001, sigma = 30:  0.9945   (k reached ~ g w T = 0.18)
+        diagnostic  K =  35.777, g = 0.0002, sigma = 60:  0.9791   (k reached ~ g w T = 0.36)
+  G4   A' (main): K r^2/2 + r^3/3                                                     min 2V/r^2 - K = +0.0001  -> no Q-balls
+  G4   pendulum: K (1 - cos r)                                                        min 2V/r^2 - K = -2.2361  -> Q-balls admitted
+  G4   smooth |psi|^2 psi softening + sextic: K r^2/2 - r^4/4 + r^6/6 (lam = sig = 1) min 2V/r^2 - K = -0.1875  -> Q-balls admitted
+  G4   smooth |psi|^2 psi hardening: K r^2/2 + r^4/4                                  min 2V/r^2 - K = +0.0000  -> no Q-balls
+  G4   self-gravitating Gaussian lump under A', G = 1: E_min = -4.360e-02 at R = 4.364e+00  (bound (E < 0, interior minimum))
+  G4   self-gravitating Gaussian lump under A', G = 0.01: E_min = -1.003e-06 at R = 1.493e+03  (bound (E < 0, interior minimum))
+  G4   self-gravitating Gaussian lump under A', G = 0.0001: E_min = -1.580e-12 at R = 8.434e+06  (bound (E < 0, interior minimum))
+  G4   self-gravitating Gaussian lump under A', G = 1e-06: E_min = -1.591e-18 at R = 8.359e+10  (bound (E < 0, interior minimum))

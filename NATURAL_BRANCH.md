@@ -46,6 +46,7 @@ kinematic**.
 |---|---|---|---|---|
 | baseline (`main` 646a238) | 3 | ~6 | 4 (3) | inherited |
 | *projected:* target 1 as scoped, if built | 5 (+2 discrete selections) | ~7 (8) | 5 (6) | **not built, not adopted** — `natural/EM_SCOPE.md` §5 |
+| *projected:* target 2 as scoped, if built | 4 (G free; c_g selected; β̂ → a state) + ≥ 4 discrete selections | ~7 | 5 | **not built, not adopted** — `natural/GRAVITY_SCOPE.md` §5; no improvement; equivalence principle violated in the κ sector unless a selection removes it |
 
 ## Adaptation ledger
 
