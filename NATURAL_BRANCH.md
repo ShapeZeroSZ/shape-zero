@@ -46,6 +46,12 @@ produce.
      fails for the adopted node form (`natural/EM_SCOPE.md` C5). Self-gravitating lumps exist
      (`natural/GRAVITY_SCOPE.md` §4), and they would give electromagnetism the static charges it
      otherwise lacks.
+4. **The residual as the missing part** (added 2026-09-27). This is a Le Verrier / Pauli-style
+   hypothesis: an unseen residual whose properties are fixed by what gravity needs and `main` lacks
+   (both CP-G pilots), tested only by consequences nobody asked for.
+   - **The frozen property list:** `natural/RESIDUAL_HYPOTHESES.md`.
+   - **Its check against `main`'s principles and its consequences:** `natural/RESIDUAL_SCOPE.md`.
+   - **Scoping only, not built, not adopted.**
 
 ## Candidate principles — under test, not adopted
 
