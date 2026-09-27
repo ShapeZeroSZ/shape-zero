@@ -1,0 +1,29 @@
+JOINT #5 AT q >= 2: A SCATTERING RATE INSTEAD OF A FREQUENCY SHIFT? -- HYPOTHESIS AND PREDICTIONS
+(committed before any computation), 2026-09-27. Script: shape_zero_tests/joint5_rate.py.
+
+SETUP CHANGE, stated first. The recorded protocol scales the bump with the box (sigma = L/8, eta
+normalised to unit rms over the box), so there is no fixed physical system whose infinite-volume limit
+is taken. The infinite-lattice question needs a FIXED localised bump: K(x) = s (1 + S eta(x)),
+eta(x) = exp(-r^2 / 2 sigma^2), sigma fixed, peak 1 (no demeaning). Then <p|V|k> = s S Phi(p - k) / V,
+Phi(q) = sum_x eta(x) e^{-i q.x}, V = L^q.
+
+HYPOTHESIS. With d_p(w) -> d_p(w + i0), the same second-order sum splits into a principal part (the
+shift) and a delta-function part on the energy shell d_p(w_k) = 0 (the golden-rule decay rate):
+    Gamma(k) = (pi s^2 S^2 / V^2) sum_p |Phi(p - k)|^2 delta(d_p(w_k)) / |d'_k(w_k)|
+ R1 For a fixed bump both the shift and the rate of an extended mode scale as 1/V; the box-independent
+    quantities are V Gamma / S^2 (equivalently the scattering cross-section, V Gamma / v_g) and
+    V delta w / S^2.
+ R2 V Gamma / S^2 has a box-size-independent limit at q = 2 and q = 3, equal to the continuum integral
+    (pi s^2 / ((2 pi)^q |d'_k|)) int d^q p |Phi(p - k)|^2 delta(d_p(w_k)). Finite-L sums with a Lorentzian
+    broadening eps (eps >> the near-shell level spacing, eps -> 0) converge to it within a few percent
+    by L = 64 (q = 2) and L = 32 (q = 3).
+ R3 The rate carries the pin's nonreciprocity: Gamma(+k) != Gamma(-k), difference O(beta).
+ R4 The V-scaled SHIFT for a fixed bump ALSO converges at q >= 2 (the principal-value integral is finite:
+    the shell passes through p = k with d ~ v dp_x + c dp_perp^2, and PV over dp_x is finite), but more
+    slowly and with larger finite-size scatter than the rate, because near-shell modes enter it with
+    1/d_p rather than being smoothed by the broadening. So the non-convergence of the recorded C_q(N) is
+    a consequence of the box-scaled protocol, not of the shift observable as such -- this prediction can
+    fail: if V delta w / S^2 does not settle by L = 128 (q = 2), the shift itself has no limit.
+ VERDICT PREDICTED: the rate (cross-section) is a well-defined, box-independent observable at q >= 2
+ and is the natural one for a localised bump in an infinite lattice; the shift may also be, once the
+ bump is held fixed.
