@@ -47,6 +47,21 @@ produce.
      (`natural/GRAVITY_SCOPE.md` §4), and they would give electromagnetism the static charges it
      otherwise lacks.
 
+## Candidate principles — under test, not adopted
+
+- **CP-G (added 2026-09-27): gravity is a consequence, not an ingredient.** The lattice should
+  produce gravitational behaviour from couplings its own principles allow — local, passive,
+  J-compatible, including energy-dependent couplings and fluctuation-induced interactions from
+  non-isolation's populated levels (`main` P0) — with no added gravitational field.
+  - **Tested inside-out** (`natural/INSIDE_OUT_HYPOTHESES.md`, `natural/INSIDE_OUT_SCOPE.md`). An
+    external teacher gravity is kept in place as training wheels, and the lattice learns internal
+    couplings that reproduce its behaviour without it.
+  - **The teacher is the repaired spin-2 form** — linearised general relativity, PPN γ = 1 — not
+    the lapse alone, which `natural/JOINT_PREDICTIONS.md` shows is falsified.
+  - **Accounting:** the training set counts as selections; only held-out results count as
+    evidence.
+  - **Not adopted.** Nothing enters the ledger until a held-out test passes.
+
 ## The count
 
 *Primary measure from target 3 on: the **joint** count of targets 1 and 2 (rows marked joint).*
