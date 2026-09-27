@@ -499,10 +499,13 @@ with the 28-theorem running total:
 | 5 | 2 | 5 | 7 |
 | *missions 1–5 (the 36 above)* | *8* | *28* | *36* |
 | 6 | 1 | 7 | 8 |
-| **total** | **9** | **35** | **44** |
+| 7 | 2 | 8 | 10 |
+| **total** | **11** | **43** | **54** |
 
 Mission 6 (below) adds one definition (IsFano) and seven theorems; it imports
 mission 5's STS and fano as references, which are not counted again.
+Mission 7 (below) adds two definitions (the flow and the blocks) and eight
+theorems; it imports mission 5's fano as a reference, which is not counted again.
 
 **Priority, recorded as it happened.** All five mission-5 theorems were first
 solved by another solver within minutes of publication, before our proofs were
@@ -536,6 +539,59 @@ uniqueness of STS(7) that C1 Theorem 3.3 cites. The moderator independently
 checked that both completions, A and B, cover the twelve cross pairs exactly
 once, confirmed the corollaries and the capstone — including that the capstone
 keeps 0 < n, as the erratum requires — and made no changes.
+
+**Approvals of missions 1, 2, 4a and 4b (2026-09-24), all by Prove2Me moderator
+Shuze Chen.** Recorded from the platform's review records; times are UTC. By
+those timestamps mission 1 (04:07) and mission 2 (04:40:29) were approved before
+mission 3 (04:40:30), so the "First / Second / Third publication" labels above
+give the order in which approvals were recorded here, not the order in which
+they were granted.
+
+- **Mission 1 (04:07 UTC).** The review read the admissible class as the
+  intersection of the symmetric matrices with those commuting with J, both kernels
+  of linear maps, and the goal as the standard fact that this is the real form of
+  the n × n Hermitian matrices, of dimension n². It confirmed that M1–M4 (J² = −1,
+  the block form of commuting with J, the symmetry condition, and the dimension
+  count in ℕ with exact floor division) are the description's milestones, that the
+  n = 0 case is included honestly, and that the description separates the linear
+  algebra from the unverified physical premise — "the right thing to do."
+- **Mission 2 (04:40 UTC).** The review followed the argument through: the power
+  is defined with wrap-around indices, M1 follows by reindexing the incoming term,
+  symmetric links give zero power on every ring, and for at least three sites a
+  velocity on two neighbouring sites isolates one link, giving the converse. It
+  noted that the description correctly explains why three sites are necessary and
+  separates what is proved from the premise about the complex structure.
+- **Mission 4a (05:02 UTC).** Read as the lattice form of the released ring
+  result, with one matrix per site and axis on a periodic cubic lattice of any
+  dimension. The review confirmed the power identity, both directions of the goal
+  and the reindexing lemma, agreed that L ≥ 3 is necessary for the reason given
+  (at L = 2 the forward and backward neighbours coincide), and noted that the
+  description is explicit that commuting with the complex structure is not
+  derived.
+- **Mission 4b (05:02 UTC).** Read as the q-dimensional version of the released
+  pinned-asymmetry mission: reversing axis 0 leaves the radicand unchanged, so the
+  square roots cancel and the asymmetry is 2βc·sin k₀ for all real parameters,
+  including where `Real.sqrt` returns 0. The review noted that the branch-frequency
+  milestone carries the non-negativity hypothesis it needs and that both
+  corollaries in the title follow from the goal.
+
+With these, **all seven missions before mission 7 are approved and published.**
+
+**Mission 7 (launched 2026-09-27, 05:27 UTC, in review): "The spectrum of the
+octonionic two-generator flow."** For a = e₁ and b = c e₁ + s e₂ with c² + s² = 1,
+the characteristic polynomial of M = R_a + L_b on the octonions is
+X²(X² + 4)(X² + (2 − 2c))², so the frequencies are 0, 2 and 2 sin(θ/2). The
+mission is motivated by the D8 flow (MODEL_SPEC §1b) and makes no claim about how
+the model uses it. All eight theorems — three milestones (the block-diagonal form
+in the basis (e₀, e₁, e₂, e₄ | e₃, e₅, e₆, e₇) and the two blocks' characteristic
+polynomials), the goal, three further results (the norm is multiplicative, so the
+table is the octonions; the flow matrix is antisymmetric; an annihilating
+polynomial) and the eigenvalue corollary — were proved and accepted as **first
+solves**, submitted within six seconds of launch. It adds 8 theorems and 2
+definitions (the flow and the blocks), and imports mission 5's fano as a
+reference, which is not counted again.
+
+**Running total: eight missions, 43 theorems, all machine-verified.**
 
 ## 6m. J-compatibility — the one premise, classified CHOSEN
 

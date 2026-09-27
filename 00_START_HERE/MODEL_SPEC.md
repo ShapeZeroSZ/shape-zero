@@ -723,13 +723,14 @@ for every size, relying only on Lean's three standard axioms:
 
 | mission | statement | status |
 |---|---|---|
-| 1 | symmetric real matrices commuting with J on ℝ²ⁿ form a space of dimension **n² = dim u(n)**, for every n | proved, in review |
-| 2 | on a ring of **N ≥ 3** sites, the per-link coupling Wᵢvᵢ₊₁ − Wᵢ₋₁vᵢ₋₁ does no net work for all motions **iff every Wᵢ is symmetric** | proved, in review |
+| 1 | symmetric real matrices commuting with J on ℝ²ⁿ form a space of dimension **n² = dim u(n)**, for every n | **APPROVED — published** 2026-09-24 (moderator Shuze Chen) (`PROVENANCE.md` §6l) |
+| 2 | on a ring of **N ≥ 3** sites, the per-link coupling Wᵢvᵢ₊₁ − Wᵢ₋₁vᵢ₋₁ does no net work for all motions **iff every Wᵢ is symmetric** | **APPROVED — published** 2026-09-24 (moderator Shuze Chen) (`PROVENANCE.md` §6l) |
 | 3 | on a uniform ring, ω(q) − ω(−q) = **2βc·sin q** for the branch frequency ω, so the propagation asymmetry is **independent of the on-site stiffness K**; ω is shown to be a root of the dispersion relation | **proved, APPROVED — published** |
-| 4a | on a periodic lattice with **any number of axes q** and **L ≥ 3** sites per axis, the per-link coupling (one matrix per site per axis) does no net work for all motions **iff every link matrix is symmetric**; the L = 2 counterexample is also proved | proved, in review |
-| 4b | on a uniform lattice with **any number of axes**, reversing the wave along the propagation axis changes its frequency by exactly **2βc·sin k₀** — **independent of the stiffness and of every transverse wavenumber**; the formula is checked against the eigenvalues of a real q = 3 lattice to 1.8×10⁻¹⁴ | proved, in review |
+| 4a | on a periodic lattice with **any number of axes q** and **L ≥ 3** sites per axis, the per-link coupling (one matrix per site per axis) does no net work for all motions **iff every link matrix is symmetric**; the L = 2 counterexample is also proved | **APPROVED — published** 2026-09-24 (moderator Shuze Chen) (`PROVENANCE.md` §6l) |
+| 4b | on a uniform lattice with **any number of axes**, reversing the wave along the propagation axis changes its frequency by exactly **2βc·sin k₀** — **independent of the stiffness and of every transverse wavenumber**; the formula is checked against the eigenvalues of a real q = 3 lattice to 1.8×10⁻¹⁴ | **APPROVED — published** 2026-09-24 (moderator Shuze Chen) (`PROVENANCE.md` §6l) |
 | 5 | a Steiner triple system with at least one point admitting a **role colouring has exactly 7 points** (the count, not that it is the Fano plane) | **APPROVED — published** 2026-09-24; first solved by another solver, ours accepted as later solves (`PROVENANCE.md` §6l) |
 | 6 | **every seven-point Steiner triple system is the Fano plane** — so the role postulates force the Fano plane; defines IsFano and imports mission 5's STS and fano | **APPROVED — published** 2026-09-24 (moderator Shuze Chen); all seven theorems accepted as first solves (`PROVENANCE.md` §6l) |
+| 7 | for a = e₁, b = c e₁ + s e₂ with c² + s² = 1, the characteristic polynomial of **M = R_a + L_b** on the octonions (table built from mission 5's Fano plane) is **X²(X² + 4)(X² + (2 − 2c))²**, so the frequencies are 0, 2 and 2 sin(θ/2); milestones: the block-diagonal form and the two blocks' characteristic polynomials; motivated by the D8 flow (§1b), no claim about the model's use | proved, in review — launched 2026-09-27 05:27 UTC; all eight theorems accepted as first solves (`PROVENANCE.md` §6l) |
 
 Missions 5 and 6 together machine-verify **C1 Theorem 3.6 ("Roles Force Fano")**
 in full: the role postulates force 7 points (mission 5), and every STS(7) is the

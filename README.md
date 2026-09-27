@@ -20,13 +20,14 @@ claim is marked where it appears and traced in `00_START_HERE/PROVENANCE.md`.
 
 | # | result | status |
 |---|---|---|
-| 1 | Real symmetric 2n×2n matrices commuting with J form a space of dimension **n² = dim u(n)**, for every n | proved, in review |
-| 2 | On a ring of N ≥ 3 sites, the per-link neighbour coupling does no net work for all motions **iff every link matrix is symmetric** | proved, in review |
+| 1 | Real symmetric 2n×2n matrices commuting with J form a space of dimension **n² = dim u(n)**, for every n | **proved, approved and published** |
+| 2 | On a ring of N ≥ 3 sites, the per-link neighbour coupling does no net work for all motions **iff every link matrix is symmetric** | **proved, approved and published** |
 | 3 | The propagation asymmetry is exactly **2βc·sin q**, independent of the on-site stiffness | **proved, approved and published** |
-| 4a | Result 2 on a periodic lattice with **any number of axes** | proved, in review |
-| 4b | Result 3 in any dimension, also independent of **transverse** wavenumbers | proved, in review |
+| 4a | Result 2 on a periodic lattice with **any number of axes** | **proved, approved and published** |
+| 4b | Result 3 in any dimension, also independent of **transverse** wavenumbers | **proved, approved and published** |
 | 5 | A Steiner triple system with at least one point admitting a **role colouring has exactly 7 points** | **proved, approved and published** (first solved by another solver; ours accepted as later solves) |
 | 6 | **Every seven-point Steiner triple system is the Fano plane** — so the role postulates force the Fano plane | **proved, approved and published** (all seven theorems first solves) |
+| 7 | The two-generator octonionic flow p ↦ p·e₁ + (cos θ e₁ + sin θ e₂)·p has frequencies exactly **0, 2 and 2 sin(θ/2)** (characteristic polynomial X²(X² + 4)(X² + 4 sin²(θ/2))²) | proved, in review (all eight theorems first solves) |
 
 Each mission states what it does **not** prove. In particular: why couplings
 commute with J is not derived by passivity (see "Measured" below), and mission 5
