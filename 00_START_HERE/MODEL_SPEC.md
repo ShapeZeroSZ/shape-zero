@@ -2608,12 +2608,72 @@ values (5.8×10⁻⁴, 1.2×10⁻⁴) came from `eigs` near a shift returning ne
 | 3 | 1.4×10⁻¹, 3.8×10⁻², 5.9×10⁻² |
 
 **So C_q(N) not converging for q ≥ 2 is a measured fact without a named
-mechanism.** The label is isolated and the coefficient still refuses a limit —
+mechanism.** [**SUPERSEDED 2026-09-27:** mechanism named, limit shown not to exist — below.] The label is isolated and the coefficient still refuses a limit —
 isolation was never sufficient for a universal number, only for a well-defined
 per-box one. A plausible unproven account: the second-order sum runs over *many*
 modes, and as the box changes the discrete **k**-grid under a fixed blob fraction
 moves, sampling different parts of a 3-D kernel that is not IR-flat. Sign flips
-with N look like that. No collapsing neighbour required.
+with N look like that. No collapsing neighbour required. [**Superseded 2026-09-27 — see below.**]
+
+**MECHANISM NAMED, LIMIT SHOWN NOT TO EXIST (2026-09-27).** (Predictions committed before the
+re-measurement, 23e4206; results 191ae32; `shape_zero_tests/joint5_cq.py` — ε-continuation on the
+Hermitian-definite pencil — `joint5_kernel.py`, `joint5_mechanism.py`, `joint5_predictions.txt`,
+`joint5_sweep_output.txt`.) **The non-convergence at q ≥ 2 is real and static**: every box from side 8
+to 32 at q = 2 and q = 3 equals the **exact second-order kernel summed over its own k-grid**,
+
+  C = s² Σ_{p≠k} |η̂(p − k)|² / [d_p(ω_k) d′_k(ω_k)] − (same at −k),
+  d_p(ω) = s + 2c Σ_a(1 − cos p_a) + 2βcω sin p₀ − ω²,
+
+within the error bar (the larger of the fit's standard error and the difference between two fits).
+
+| L | C₂ measured | C₂ kernel | C₃ measured | C₃ kernel |
+|---|---|---|---|---|
+| 8 | −0.03972 ± 0.00005 | −0.03972 | −0.18840 ± 0.00001 | −0.18844 |
+| 12 | +1.91737 ± 0.00058 | +1.91691 | +1.45807 ± 0.0034 | +1.45772 |
+| 16 | −0.07367 ± 0.00014 | −0.07366 | −1.42713 ± 0.0083 | −1.42980 |
+| 20 | −0.05473 ± 0.00010 | −0.05471 | −0.07131 ± 0.00004 | −0.07133 |
+| 24 | −0.05303 ± 0.00011 | −0.05300 | −0.14692 ± 0.00024 | −0.14693 |
+| 28 | −0.29769 ± 0.00029 | −0.29773 | −0.25613 ± 0.00071 | −0.25632 |
+| 32 | −0.04966 ± 0.00011 | −0.04965 | −0.08961 ± 0.00014 | −0.08963 |
+
+11 of the 12 successive steps depart by > 10% and 11–3364× the combined error bar (the exception:
+q = 2, 20 → 24, 3%); the kernel keeps jumping beyond (q = 3: −0.42 at 40, −0.04 at 48).
+
+**The mechanism.** The kernel grows as **1/p⊥²** transverse to the probe while staying flat along
+it (pair sum at q = 3: −12, −49, −194, −777 as \|p⊥\| halves; −0.0128 longitudinally at every \|p\|).
+So C is a **small remainder of large, nearly cancelling first-transverse-neighbour terms** — the
+probe's neighbours (k, ±1, 0, …), denominator ≈ c(2π/L)², growing roughly as L² and cancelling
+between +k and −k — **plus sporadic near-resonances** (e.g. q = 2, side 12: p = (2, −2), d = −0.028).
+**q = 1 converges because it has no transverse directions**: its kernel is flat at small p, IR limit
+−βs²/2. **So the second-order coefficient has no infinite-volume limit at q ≥ 2.** The plausible
+account above ("a 3-D kernel that is not IR-flat") is confirmed and made specific.
+
+**Validation against the records** (the original protocol recovered: K(x) = √5(1 + S η(x)), η a
+mean-zero unit-rms Gaussian, **σ = L/8**, probe k = 2π(L/4)/L, β = 0.05, c = 1): q = 1, N = 128,
+σ = 8 / 16: −0.06266 / −0.06255 (recorded −0.06268 / −0.06256); q = 1 sides 48 / 64 at σ = L/16:
+−0.06366 / −0.06314 (recorded −0.06343 / −0.06303); **q = 3 sides 8 / 12 / 16: −0.18840 / +1.45807 /
+−1.42713 (recorded −0.188 / +1.458 / −1.429)**, IR shares −0.0254 / −0.0369 (recorded −0.0253 /
+−0.0365); q = 3 side 6 with m = 1: +1.937 (recorded +1.928). The recorded values were the S → 0
+second-order coefficient on σ = L/8 boxes.
+
+**Instrument corrections:** (1) δ(Δω) has a real **S³ term** (the blob is not symmetric under
+η → −η); an S² + S⁴ fit biased C by 3–7%, and the fit is now C S² + E S³ + D S⁴. (2) The probe lives in
+the sector even under transverse reflections and axis swaps; restricting to it is exact (reproduces
+side 16 to 10⁻⁵) and cut memory ~8× — the full q = 3 side-24 factorisation had exceeded the container.
+
+**Misses:** the first table's **q = 2 values at sides 10 and 12 (−0.2905, +2.9336) are not
+reproduced** — no (m, σ) tried gives both; their protocol was unrecorded. The committed S-range rule
+(admixture ≤ 0.05) left S⁴ shares above 5% at q = 3 sides 20–32 and q = 2 side 28; **a re-measure at
+S_max/4 was added after side 20 missed**, and both values are in the output. **The q = 2 shape
+prediction missed**: C₂ holds near −0.05 from 20 to 24 and then jumps to −0.30 at 28.
+
+**Further findings.** The records' q ≥ 2 values used σ = L/8, so the blob's spectral width and the
+grid spacing both scale as 1/L — the grid samples the singular transverse shell at L-dependent
+positions. And at large boxes the **fixed-S response becomes non-perturbative**: the admixture at
+S = 0.02 reaches 1.7 at q = 2, side 64, so at finite source strength the second-order law itself fails
+there.
+
+**Open:** the correct infinite-volume observable for a localised stiffness bump at q ≥ 2.
 
 **On (1,3):** the spectral behaviour singles out q = 1 and says **nothing about
 how many** spatial dimensions follow — q = 2 and q = 3 fail identically. It is a

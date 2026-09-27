@@ -359,7 +359,7 @@ on it a second time. Dense diagonalisation is authoritative for spectral
 questions; a windowed solver is not.
 
 **What survives:** C₃(N) = −0.188, +1.458, −1.429 at sides 8/12/16, every point
-resolved and S-extrapolated — a measured non-limit **without** a named mechanism.
+resolved and S-extrapolated — a measured non-limit **without** a named mechanism. [**2026-09-27: mechanism named** — every box from side 8 to 32 at q = 2, 3 equals the exact second-order kernel summed over its own grid; the kernel grows as 1/p⊥² transverse to the probe, so C is a small remainder of nearly cancelling terms growing ~L², plus sporadic near-resonances; no infinite-volume limit at q ≥ 2 (MODEL_SPEC §5b.6a). Predictions committed first (23e4206). Instrument corrections: the S³ term in the fit, the symmetry-sector reduction. Misses: the q = 2 records at sides 10, 12 not reproduced (protocol unrecorded); the S-range re-measure added after side 20 missed; the q = 2 shape prediction.]
 The IR/dense split does not rescue it (C_IR moves 44% and carries ~2% of the
 total), and additivity checks to ~1%, so that is not a method artifact either.
 

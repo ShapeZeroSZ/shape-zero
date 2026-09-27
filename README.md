@@ -101,6 +101,10 @@ that, so together they machine-verify C1 Theorem 3.6 ("Roles Force Fano").
   it remains open (MODEL_SPEC §5b.6a; PROVENANCE §6i). It is **distinct from** the
   localised-beam amplitude coefficient κ, whose box dependence is closed:
   κ_box = κ_pw·fill·F (MODEL_SPEC §5).]
+  [**2026-09-27: mechanism named, limit shown not to exist.** Every box from side 8 to 32 at
+  q = 2, 3 equals the exact second-order kernel over its own grid; the kernel grows as 1/p⊥²
+  transverse to the probe, so C is a small remainder of nearly cancelling terms. **Open:** the
+  correct infinite-volume observable for a localised stiffness bump at q ≥ 2 (MODEL_SPEC §5b.6a).]
 - ~~Formal proof that every seven-point Steiner triple system is the Fano plane.~~
   [Done 2026-09-24: Prove2Me mission 6, approved and published.]
 
