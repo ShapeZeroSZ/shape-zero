@@ -1,0 +1,4 @@
+U2 as built: modulation depth of s (beat amplitude / mean) = 0.064 (1.0 = full)
+U2 aligned phases: s(t) at site-mean ranges 4.77e-07 - 2.00e-04 (mean 9.92e-05); <var s> 3.68e-10; gain rate +1.250e-08 (+- 2.5e-09); f(T) -5.147e-05; phase at T -0.595 rad; dE_a -2.02e-05, dE_b +3.06e-05; E_tot 2.5e-06
+L D16 seed 0: min f over [2000, 20000] +2.401e-03 at t = 2000; f(2000) +2.401e-03; f(20000) +0.0091
+L D16 seed 1: min f over [2000, 20000] +1.143e-03 at t = 2300; f(2000) +1.173e-03; f(20000) +0.0069

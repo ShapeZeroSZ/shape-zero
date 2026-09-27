@@ -387,6 +387,9 @@ the rotation, fails (error 1.9 at q = 1, 1.1 at q = 2, independent of dt).
     `natural/KGRAD_HYPOTHESIS.md` (0b12001). Script: `shape_zero_tests/kgrad_test.py` → `kgrad_test_output.txt`.
   - **This is not an adaptation.** It uses `main`'s force law, with κ(x) as a configuration —
     like the stiffness bumps of joint #5.
+  - **Not independent.** It follows from the Larmor splitting (census row 5) holding locally, plus
+    ray kinematics, plus the band curvature c/ω̄. It is recorded as a **verified consequence**
+    (UNIVERSAL_RELATIONS row 12) and does not raise the strict-prediction count (PROVENANCE §6t).
 
 **β is a renamed coupling at long wavelength** (scalar sector).
 - **At fixed frequency, exactly on the lattice, a Peierls phase growing with frequency:**
@@ -980,6 +983,37 @@ coordinate of the state** (§4b: B, V = −2 log(1 − 4B), the rank-opening res
 point). Everything below in this section is kept as written and is **superseded** for the model;
 it describes the coded coupling, which is an option, not the model. Open: the residual as the
 tower acting on the D ≤ 8 structure (§9).
+
+**MEASURED 2026-09-27 — the populated tower under (A′): PARTIAL, under the criteria as
+pre-registered.** Under (A′) the node radius \|u\| runs over all of a D16/D32/D64 node's components,
+so the octonion half (D ≤ 8, components 0–7) and the upper levels interact through it with **no new
+coupling and no new parameter**. The earlier test (`shape_zero_tests/tower_env_test.py`, E1–E3b)
+started the upper components at zero, an invariant set under (A′). Under non-isolation
+(PREMISE_LEDGER P0) every level is populated from the start, so the test was rerun with the D ≤ 8
+part in a coherent packet and every upper component incoherent at rms 0.005 per complex component
+(`shape_zero_tests/tower_populated_test.py`; hypotheses, criteria and predictions committed first,
+bc7c827; output `tower_populated_output.txt`; q = 1, N = 128, κ\*, T = 2000, four realisations per D).
+Result, D16 / D32 / D64:
+- **A one-way, non-reversing energy gain into the D ≤ 8 part**, growing with D: late-run change of
+  its self-energy +0.17% / +0.26% / +0.52% (seed means), rising roughly linearly in time, same sign in
+  every realisation, 5–13× its late-run fluctuation; no first near-return in any run. With the upper
+  levels' total norm held at D16's (control F), the gain **falls** with D (+0.057% at D32, +0.043% at
+  D64): it is set by the **site-to-site variation of the upper levels' combined size**, not by their
+  number.
+- **No charge flow.** (A′), and every other term, is invariant under separate phase rotations of the
+  two parts, so each part's U(1) charge is separately conserved; the D ≤ 8 charge drifted 1.9×10⁻⁶,
+  as in the isolated run.
+- **A large, reproducible phase shift and distortion, growing with D**: phase against the isolated
+  packet −0.61 / −1.40 / −3.16 rad, overlap with it 0.72 / 0.51 / 0.26 at T — but identical across
+  realisations (inter-realisation overlap 0.998 / 0.984 / 0.997, phase spread 0.04 / 0.01 / 0.04 rad).
+  **Coherence is kept; criterion (d) fails.**
+
+Pre-registered criteria, as committed: (a) secular loss > 1% — **not met** (a gain, < 1%); (b) growth
+with D — met; (c) no return — met; (d) dephasing — **not met**. Neither "environment" nor "not an
+environment": **PARTIAL.** Misses against the committed predictions, and the post-hoc checks, are
+listed in PROVENANCE §6s. **Untested hypothesis** (recorded, not established): the gain is
+parametric heating — the D ≤ 8 part absorbs energy from the random, site- and time-dependent
+stiffness Δ = \|u\| − \|u_l\| that the populated upper levels impose.
 
 **The residual is not a separate field. It is a coordinate of the same state,
 one level up.** The node carries a level-≥16 element; its octonionic part is the
@@ -3047,7 +3081,7 @@ established — see §7b.*
 |---|---|
 | **what fixes the fibre metric scale** | **the largest one — it blocks three numbers at once.** ℏ, c₈ and Λ are all functions of it (κ_ℏ ∝ 1/k, c₈ ∝ k², Λ ∝ 1/k). Nothing in the architecture supplies a length: structure constants are ±1, \|1\| = 1 is a norm, and 2, 6, 42, 3/8, 2π² are ratios. The φ-well does supply a length (√5) but it lives on the **radial** coordinate while ℂP² is the **angular** one, and the HK cone relation ties them only as k = m — which discretises the node mass without fixing its unit |
 | ~~**what fixes C_r**~~ | the residual coupling *form* is determined (§4b.1); its *strength* is not [**SUPERSEDED 2026-09-26:** C_r = 0 adopted for the coded coupling (§4b.1)] |
-| **the residual as the tower acting on the D ≤ 8 structure** | **not implemented**: the coded coupling (now off) never coupled the octonion half to the level above, and **the sources supply no coupling between the octonion half and higher levels**. Proposed test, once a coupling exists: run the tower at D16, D32 and D64 (`cd(4)`–`cd(6)`, n = 8, 16, 32) with the D ≤ 8 half excited and measure the energy and U(1)-phase flow into the residual components, whether it reverses, and whether the recurrence time grows with tower level (irreversible flow with a recurrence time growing with level would be the signature of an environment). **Any such coupling must be derived, or selected under the selection rule (§1a), not added silently.** No source links the residual or the tower to a classical limit |
+| **the residual as the tower acting on the D ≤ 8 structure** | **not implemented**: the coded coupling (now off) never coupled the octonion half to the level above, and **the sources supply no coupling between the octonion half and higher levels**. Proposed test, once a coupling exists: run the tower at D16, D32 and D64 (`cd(4)`–`cd(6)`, n = 8, 16, 32) with the D ≤ 8 half excited and measure the energy and U(1)-phase flow into the residual components, whether it reverses, and whether the recurrence time grows with tower level (irreversible flow with a recurrence time growing with level would be the signature of an environment). **Any such coupling must be derived, or selected under the selection rule (§1a), not added silently.** No source links the residual or the tower to a classical limit [**2026-09-27:** under (A′) the node radius couples the octonion half to the upper levels with no new coupling; with every level populated (non-isolation, PREMISE_LEDGER P0) the test gave **PARTIAL** — a one-way energy gain into D ≤ 8 growing with D, no charge flow, coherence kept (§4b.1, "MEASURED 2026-09-27")] |
 | ~~fourth-order cross-modulation (κ, F at A = 0.30)~~ **DONE for the plane wave, 2026-09-25** (§5, "κ to fourth order"); the original entry: | the derived F is second order; it matches every sharp point except the two narrowest beams at A = 0.30, which it matches at A = 0.10 (§5, "The cross-modulation factor F, derived") |
 | ~~beam fourth order with orbit-consistent launches~~ **DONE 2026-09-25** (§5): launch pieces derived, H0 and S1 excluded; the original entry: | the beam fourth-order tests (H0 excluded at large fill; S1 against S2 unresolved) used plain-cosine launches, so they mix physics with launch effects. Redo them with orbit-consistent (second-order) launches (`kappa_seed2_test.py`), derive the beam's fourth-order kernel, and derive the launch's static-shift and second-harmonic pieces, which are measured, not derived (§5) |
 | ~~S2 at w = 3, L = 4, and why the cross terms cancel~~ **SUPERSEDED 2026-09-25** (§5): with the third harmonic in the launch S2 fails three of four L = 4 beams, and the cross terms are partly present; the original entry: | two things: (1) test S2 at w = 3, L = 4 with the third harmonic added to the launch — S2 failed that beam by +18σ under the committed criterion and fits it only under a post-hoc third-harmonic band; (2) derive why the fourth-order cross terms cancel, leaving only the box-wide component's own term (S2 is a surviving hypothesis, not a derivation) |
