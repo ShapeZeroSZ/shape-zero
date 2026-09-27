@@ -1,0 +1,12 @@
+E1 octonion half only
+  D16 : max |u_upper| 0.000e+00; charge drift octonion half -2.0e-06, upper +0.0e+00; energy fraction in upper: initial 0.0000e+00, max change 0.00e+00 of the octonion half's share; sign changes 0; first near-return t = None  (41 s)
+  D32 : max |u_upper| 0.000e+00; charge drift octonion half -2.0e-06, upper +0.0e+00; energy fraction in upper: initial 0.0000e+00, max change 0.00e+00 of the octonion half's share; sign changes 0; first near-return t = None  (55 s)
+  D64 : max |u_upper| 0.000e+00; charge drift octonion half -2.0e-06, upper +0.0e+00; energy fraction in upper: initial 0.0000e+00, max change 0.00e+00 of the octonion half's share; sign changes 0; first near-return t = None  (95 s)
+E2/E3 upper seeded at 10%
+  D16 : max |u_upper| 7.425e-03; charge drift octonion half -2.0e-06, upper -2.0e-06; energy fraction in upper: initial 9.9010e-03, max change 1.07e-16 of the octonion half's share; sign changes 5; first near-return t = None  (41 s)
+  D32 : max |u_upper| 7.425e-03; charge drift octonion half -2.0e-06, upper -2.0e-06; energy fraction in upper: initial 9.9010e-03, max change 1.07e-16 of the octonion half's share; sign changes 3; first near-return t = None  (55 s)
+  D64 : max |u_upper| 7.425e-03; charge drift octonion half -2.0e-06, upper -2.0e-06; energy fraction in upper: initial 9.9010e-03, max change 1.07e-16 of the octonion half's share; sign changes 3; first near-return t = None  (95 s)
+E3b (post hoc) upper seeded at 10%, counter-propagating packet
+  D16 : max |u_upper| 4.993e-03; charge drift octonion half -2.0e-06, upper -1.7e-06; energy fraction in upper: initial 9.9010e-03, max change 2.70e-05 of the octonion half's share; sign changes 12; first near-return t = 58.0  (42 s)
+  D32 : max |u_upper| 4.993e-03; charge drift octonion half -2.0e-06, upper -1.7e-06; energy fraction in upper: initial 9.9010e-03, max change 2.70e-05 of the octonion half's share; sign changes 12; first near-return t = 58.0  (55 s)
+  D64 : max |u_upper| 4.993e-03; charge drift octonion half -2.0e-06, upper -1.7e-06; energy fraction in upper: initial 9.9010e-03, max change 2.70e-05 of the octonion half's share; sign changes 12; first near-return t = 58.0  (93 s)
