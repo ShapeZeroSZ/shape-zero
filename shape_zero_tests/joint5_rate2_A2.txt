@@ -1,0 +1,3 @@
+L=256: +k [np.float64(85.0457), np.float64(86.0519), np.float64(86.4066)] lin 86.7613 quad 86.6623 | -k [np.float64(86.4844), np.float64(87.6892), np.float64(88.6743)] lin 89.6593 quad 89.9144 | diff lin -2.8981 quad -3.2521  (3s)
+L=320: +k [np.float64(85.0638), np.float64(86.1373), np.float64(86.908)] lin 87.6787 quad 87.8347 | -k [np.float64(86.4971), np.float64(87.5538), np.float64(87.8024)] lin 88.0509 quad 87.8643 | diff lin -0.3722 quad -0.0297  (4s)
+L=384: +k [np.float64(85.0716), np.float64(86.0975), np.float64(86.499)] lin 86.9006 quad 86.8263 | -k [np.float64(86.5069), np.float64(87.6157), np.float64(88.3635)] lin 89.1114 quad 89.2403 | diff lin -2.2108 quad -2.4140  (7s)

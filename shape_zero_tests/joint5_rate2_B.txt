@@ -1,0 +1,24 @@
+
+q = 2: nu = (Gamma+ - Gamma-)/mean, continuum
+   gauss    (1.0,)      : Gamma+     3.1212  Gamma-     3.2210  nu -0.03150
+   gauss    (1.5,)      : Gamma+    10.7936  Gamma-    10.9666  nu -0.01590
+   gauss    (2.0,)      : Gamma+    26.0427  Gamma-    26.3009  nu -0.00987
+   gauss    (3.0,)      : Gamma+    89.4846  Gamma-    89.9257  nu -0.00492
+   gauss    (4.0,)      : Gamma+   213.7908  Gamma-   214.4172  nu -0.00293
+   gauss    (6.0,)      : Gamma+   726.1491  Gamma-   727.1410  nu -0.00137
+   sech2    (1.1,)      : Gamma+     1.9728  Gamma-     2.0410  nu -0.03398
+   sech2    (2.2,)      : Gamma+    16.2827  Gamma-    16.4628  nu -0.01100
+   twobump  (1.5, 3.0)  : Gamma+    37.8153  Gamma-    38.1282  nu -0.00824
+   twobump  (1.5, 5.0)  : Gamma+    34.1199  Gamma-    34.4176  nu -0.00869
+
+q = 3: nu = (Gamma+ - Gamma-)/mean, continuum
+   gauss    (1.0,)      : Gamma+     4.8833  Gamma-     5.1147  nu -0.04628
+   gauss    (1.5,)      : Gamma+    26.4057  Gamma-    27.1313  nu -0.02711
+   gauss    (2.0,)      : Gamma+    87.1983  Gamma-    88.7498  nu -0.01764
+   gauss    (3.0,)      : Gamma+   461.5092  Gamma-   465.7859  nu -0.00922
+   gauss    (4.0,)      : Gamma+  1487.7511  Gamma-  1496.1322  nu -0.00562
+   gauss    (6.0,)      : Gamma+  7654.3126  Gamma-  7674.8187  nu -0.00268
+   sech2    (1.1,)      : Gamma+     2.4912  Gamma-     2.6086  nu -0.04600
+   sech2    (2.2,)      : Gamma+    44.0403  Gamma-    44.8919  nu -0.01915
+   twobump  (1.5, 3.0)  : Gamma+    77.3701  Gamma-    78.3712  nu -0.01286
+   twobump  (1.5, 5.0)  : Gamma+    63.9653  Gamma-    65.1988  nu -0.01910
