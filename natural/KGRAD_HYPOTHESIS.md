@@ -32,3 +32,24 @@ on opposite charges. It is the local-frame form of Larmor's theorem: κ(x) = 2eA
 
 **If it holds:** it is a derivation on `main`'s own terms — `main`'s force law, no adaptation —
 and a merge candidate for `main` (charter rule 6).
+
+---
+
+## RESULT (kgrad_test.py → kgrad_test_output.txt; run after 0b12001) — **HELD**
+
+| κ′ | a_a (pred) | a_b (pred) | a_a − a_b (pred) | common (pred) |
+|---|---|---|---|---|
+| +4×10⁻⁴ | +8.776×10⁻⁵ (+8.789×10⁻⁵) | −1.6605×10⁻⁴ (−1.6651×10⁻⁴) | **+2.538×10⁻⁴ (+2.544×10⁻⁴), −0.23%** | −3.915×10⁻⁵ (−3.931×10⁻⁵), −0.4% |
+| −4×10⁻⁴ | exactly reversed | exactly reversed | −2.538×10⁻⁴, −0.23% | +3.915×10⁻⁵, −0.4% |
+| 0 (control) | −2×10⁻¹⁷ | −3×10⁻¹⁷ | — | — |
+
+**Validation:**
+- both packets are pure branches, with centre rotation rates −1.0871 and +2.0588 against
+  −1.0864 and +2.0582;
+- energy is conserved, with a worst drift of 1.0×10⁻⁶ (κ does no work);
+- the κ′ = 0 control does not move.
+
+**Verdict:** well inside the 3% criterion. A static κ gradient pushes the two chirality branches
+apart exactly as an electric field pushes opposite charges, with a_a − a_b = c·κ′/ω_rot. It was
+found on `main`'s own force law with no dynamical links, so it is a derivation on `main`'s terms
+and a merge candidate (branch `kgrad-merge-candidate`).

@@ -60,7 +60,7 @@ consequence of target 3 that was not used to select any ingredient, parameter or
   oscillating lump.
 - **Cleanliness:** very clean.
 
-### 3. The κ-gradient force — a charge-dependent acceleration (genuine; **OPEN**)
+### 3. The κ-gradient force — a charge-dependent acceleration (genuine; **HELD** — `KGRAD_HYPOTHESIS.md`: a_a − a_b within 0.23% of c·κ′/ω_rot on `main`'s lattice)
 
 - **What:** a static, non-uniform κ(x) is exactly a static potential A₀(x) = κ(x)/(2e), with the
   local shift K′ = K + κ²/4. It follows the same algebra as EM_SCOPE §4, with the cross term
