@@ -1482,6 +1482,46 @@ reproducing the earlier late means exactly (+1.819×10⁻³, +9.968×10⁻⁴); 
 grew in every incoherent run, carrying 28–92% of the linear-energy gain where that gain is
 positive. Consistent with pair creation; not a demonstration of it.
 
+## 6v. Pair creation SUPPORTED; universal refraction REFUTED under the literal criterion (2026-09-27)
+
+Test: `shape_zero_tests/tower_pairs_refraction_test.py`; hypotheses, criteria and predictions
+committed with the script before any run (3063afd); output and post-hoc checks c8f1d79. Recorded
+result: MODEL_SPEC §4b.1, "TESTED 2026-09-27 — pair creation …"; PREMISE_LEDGER C49, C50.
+
+**(1) Pair creation — SUPPORTED** on every criterion (b-branch growth > 0 in every incoherent run;
+coherent uniform tower ~0% of the x = 1 pair rate; pair-rate exponent 1.06 against the energy's 1.07;
+pair fraction 0.74 ≥ 0.5). Hits beyond the criteria: 1a's magnitudes (4.6–6.7×10⁻⁴ in
+[2×10⁻⁴, 1.5×10⁻³]; ×7.2 and ×10.7 at A_U = 0.01, in [4, 12]); the pair fraction in [0.5, 1.2].
+Misses, all in runs with little or no gain:
+- 1d, a-branch redistribution \|fraction\| < 0.5: x = 0.25 gave +0.592 (seed 0) and −1.264 (seed 1,
+  gain 6.4×10⁻⁵).
+- 1d, linear energy within 20% of the gain: x = 0.25 seed 1 gave 1.598; x = 0 gave 0.490 of a gain
+  that is zero (−7.4×10⁻⁵).
+- In the same x = 0.25 seed 1 run the pair fraction is 2.862 — a ratio to a near-zero gain.
+
+**(2) Universal refraction — REFUTED under the literal pre-registered criterion.** The criterion read
+"REFUTED if chirality or node size changes dK_eff or dp by more than 10%". In the gradient runs dp
+differed between the a- and b-branch probes by 27% (k0 = π/4: −1.548×10⁻³ against −1.966×10⁻³), 26%
+(π/2) and 24% (3π/4). Misses that go with it: 2d's "a and b within 5%" and "dp (2ω_a + κ) across k0
+within 20%" (43%).
+**The trajectory confound, stated beside the verdict:** the test launched the b-branch probes with
+carrier e^{+ik0x}, so they travelled toward −x while the a-branch probes travelled toward +x. The
+prediction claimed the two sampled mirror gradients; that holds for s = s0(1 + 0.5 sin), not for
+√s, whose gradient is steeper on the −x side. Each probe matched its own ray prediction to within
+0.5% (ratios 0.995–1.003), so the difference is the path, not the chirality.
+**Post hoc, labelled as written after the output was seen** (`tower_pairs_refraction_checks.py`):
+with the b-branch probes relaunched with carrier e^{−ik0x}, on the a-probes' trajectory, **b/a =
+1.0000** for dp and for dx at every carrier.
+**Displacement misses:** the predicted dx signs were wrong for three of six probes (a at π/2 and 3π/4,
+b at π/4), and the magnitudes off for the other three (by factors 1.7–5); the prediction varied only the wavenumber and omitted the
+background's direct slowing of the group velocity (higher stiffness raises ω). Post hoc, with that
+term, the ray displacement matches to within 4×10⁻⁴ sites (e.g. −0.0421 against −0.0421).
+**Hits:** 2a — dK_eff/√⟨s⟩ = 0.993–0.995 in [0.98, 1.00], spread 0.0023 ≤ 0.02, a = b to six digits,
+the dw ratios; 2b — a/b within 0.8%, dK_eff/⟨√s⟩ = 1.004, 0.996, ⟨√s⟩/√⟨s⟩ = 0.969; 2c — 0.93, 0.49,
+0.15, each in range; 2d — dp < 0 for every probe, ratios in [0.95, 1.05], \|dp\| in range, D16 = D32
+= D64 to four digits.
+A fresh, pre-registered chirality comparison with matched trajectories follows.
+
 ## 7. Recurring failure modes
 
 Each has produced at least two errors in this programme.

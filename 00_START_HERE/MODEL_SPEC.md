@@ -1044,6 +1044,38 @@ unless stated; gain rate = slope of the D ≤ 8 part's fractional self-energy ch
   gain is positive — consistent with pair creation, not a demonstration of it.
 Misses: PROVENANCE §6u.
 
+**TESTED 2026-09-27 — pair creation SUPPORTED; universal refraction REFUTED under the literal
+criterion, with a trajectory confound** (`shape_zero_tests/tower_pairs_refraction_test.py`;
+hypotheses, criteria and predictions committed first, 3063afd; output
+`tower_pairs_refraction_output.txt`; post-hoc checks `tower_pairs_refraction_checks.py`, labelled as
+written after the output was seen; PROVENANCE §6v). D ≤ 8 energy and populations resolved by
+chirality branch, N = Σ(ω_a + κ/2)\|amplitude\|² per branch; the D ≤ 8 charge is **exactly**
+N_b − N_a (1.9×10⁻¹⁶ at t = 0), so equal growth of the two branches is an identity of charge
+conservation, checked (≤ 1×10⁻⁷ of N_a) and not counted.
+- **(1) Pair creation — SUPPORTED.** Relative to the isolated packet (D16, T = 2000): the b-branch
+  population grows in every incoherent run, +4.6×10⁻⁴ to +6.7×10⁻⁴ of N_a(0) at A_U = 0.005, 7–11×
+  that at A_U = 0.01; ~0 for the coherent uniform tower. At fixed mean s the pair rate goes as
+  (var s)^1.06, against (var s)^1.07 for the energy gain in the same runs. **Pairs account for 0.74 of
+  the gain** (seed mean; 0.58–1.09), counted as ΔE_b + ω₀ΔN_b with ω₀ = 1.6293 the packet's
+  a-frequency; the rest is redistribution within the a-branch (−0.06 to +0.42). Misses: PROVENANCE §6v.
+- **(2) Universal refraction — REFUTED under the literal pre-registered criterion** ("chirality
+  changes … dp by more than 10%"): in the gradient runs the a- and b-branch probes' wavenumber changes
+  differed by up to 27% at the same carrier. **Beside it — the trajectory confound:** the test's
+  b-branch probes travelled toward −x and its a-branch probes toward +x, and √s is not symmetric about
+  the launch point, so they sampled different gradients; each matched its own ray prediction within
+  0.5%. **Post hoc, labelled:** relaunched on the a-probes' trajectory, the b-branch probes give
+  **b/a = 1.0000** for the wavenumber change and the displacement at every carrier.
+  The other results held: weak probes in the uniform background sense a stiffness shift
+  dK_eff/√⟨s⟩ = 0.993–0.995, identical to six digits across chirality, carrier, colour and node
+  size (D16, D32, D64); the frequency shift scales as 1/(2ω_a + κ); in the incoherent background a and
+  b agree within 0.8% and dK_eff/⟨√s⟩ = 1.004, 0.996; strong packets sense less (0.93, 0.49, 0.15 of
+  the weak-probe value at amplitudes 10⁻³, 10⁻², 5×10⁻², as predicted — universality holds only in the
+  weak-packet limit, because the packet's own amplitude is part of the shared radius); in a gradient
+  the wavenumber is pushed **away from the denser region** for every probe, within 0.5% of the ray
+  prediction. The displacement is dominated by the background's direct slowing of the group velocity,
+  which the pre-registered displacement prediction omitted (post hoc, with that term: agreement
+  within 4×10⁻⁴ sites).
+
 **The residual is not a separate field. It is a coordinate of the same state,
 one level up.** The node carries a level-≥16 element; its octonionic part is the
 shape the gauge structure acts on; **B** measures how far the state is from being
