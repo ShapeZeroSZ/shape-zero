@@ -1,0 +1,68 @@
+PARAMETRIC-HEATING READING OF THE POPULATED-TOWER GAIN -- HYPOTHESIS, CRITERIA AND PREDICTIONS
+(committed with the script, before any run), 2026-09-27. Test: shape_zero_tests/tower_heating_test.py.
+Recorded result under test: PREMISE_LEDGER C47, MODEL_SPEC 4b.1 "MEASURED 2026-09-27", PROVENANCE 6s.
+
+HYPOTHESIS (recorded as untested in 6s). The D <= 8 part feels the upper levels only as an extra
+stiffness Delta(x,t) = |u| - |u_l|, a function of s(x,t) = |u_upper(x,t)|^2. The one-way gain is
+parametric heating: the packet absorbs energy from the random, site- and time-dependent part of that
+stiffness. The reproducible phase shift is a separate, refractive effect of the populated
+background's mean size.
+
+WHAT THE RECORDED RUNS ALREADY SAY (used to set the numbers below; seed-mean whole-run slopes of f):
+D16/D32/D64 at A_U = 0.005: 1.07e-6, 1.63e-6, 3.25e-6 per unit time (<s> and var s both ~ M = 4, 12, 28);
+control F (<s> fixed, var s ~ 1/M): D32 3.2e-7, D64 2.4e-7. Fitting rate ~ (var s)^a <s>^b to these
+gives a ~ 0.8-1.1, b ~ -0.45. Phases -0.61, -1.40, -3.16 rad (<s> ratio 1:3:7), and control F at D16's
+<s> gave -0.60, -0.59 rad at var s one third and one seventh of D16's.
+
+(1) SCALING OF THE GAIN RATE (rate = slope of f over [T/4, T]).
+ 1a amplitude, D16, all four upper components incoherent, A_U = 0.0025, 0.005, 0.01, 0.02 (var s ~ A_U^4,
+    <s> ~ A_U^2): rate ~ A_U^p with p = 4a + 2b in [2.0, 3.5] (central 2.7). Rates, seed means:
+    A_U = 0.0025: 0.9e-7 - 2.7e-7; 0.005: 0.7e-6 - 1.5e-6; 0.01: 3.5e-6 - 1.2e-5; 0.02: 1.4e-5 - 1.2e-4.
+    (At 0.02, sqrt<s> = 0.04 approaches the packet's 0.05 peak; this point is the least secure.)
+ 1b variance at FIXED MEAN, D16: two incoherent components carrying a fraction x of <s>, two coherent,
+    spatially uniform components carrying 1 - x; var s ~ x^2. rate ~ (var s)^a with a in [0.6, 1.3]:
+    rate(0.5)/rate(1) in [0.16, 0.44], rate(0.25)/rate(1) in [0.03, 0.19]; rate(1) in 1.3e-6 - 2.8e-6
+    (var s twice the recorded D16's at the same <s>). Monotone: rate(0.25) < rate(0.5) < rate(1).
+
+(2) TIME DEPENDENCE OVER LONG RUNS (T = 20000, incoherent, A_U = 0.005; D16 seeds 0, 1; D64 seed 0).
+    No reversal: f > 0 throughout [2000, 20000]. Rough saturation estimate: if the populated D <= 8
+    component (256 modes) comes to equipartition with the upper modes (~3e-5 energy per mode at
+    A_U = 0.005), f saturates near +9% at any D. So:
+    D16: roughly linear -- rate over [15000, 20000] / rate over [2000, 7000] in [0.6, 1.2];
+         f(20000) in [+1%, +3%].
+    D64: bending toward saturation -- ratio in [0.3, 1.0]; f(20000) in [+3%, +7%].
+
+(3) NO SITE-TO-SITE VARIATION -> NO GAIN.
+ 3a x = 0 (the upper levels coherent and uniform: s constant in space and time at t = 0):
+    |rate| < 5% of rate(x = 1).
+ 3b U2 (uniform in space, oscillating in time at w_a(0) + w_b(0) = 3.14): the modulation can only
+    create packet pairs where 2 w_a(k) + kappa = 3.14, i.e. at k = 0, where the packet (k0 = pi/2,
+    width 8) has no content: |rate| < 10% of the incoherent rate at the same <s> (A_U = 0.005).
+
+(4) THE PHASE SHIFT IS REFRACTIVE: set by <s>, not by var s.
+ 4a fixed-mean scan x = 1, 0.5, 0.25, 0: phases at T equal within 10% ((max - min)/|mean| <= 0.10),
+    while the rates differ by more than 4x.
+ 4b amplitude scan: |phase| ~ <s>^gamma, gamma in [0.65, 1.0]; phases -0.15 to -0.25 (A_U = 0.0025),
+    -0.5 to -0.7 (0.005), -1.5 to -2.4 (0.01), -3.7 to -9.8 rad (0.02).
+ 4c U2: phase within 20% of the incoherent phase at the same <s>.
+
+CONTROLS AND DIAGNOSTICS
+ C1 the A_U = 0.005 seeds 0, 1 use the same generator and seeds as tower_populated_test.py: their late
+    means of f over [1500, 2000] must reproduce that output's D16 seeds 0, 1 (+1.82e-03, +9.97e-04) to
+    the printed digits.
+ C2 charge: D <= 8 drift <= 1e-5; upper drift <= 1e-4 of |Q_l(0)|; total energy <= 5e-5 (DT = 0.02).
+ D1 (mechanism diagnostic, not a criterion): if the gain is pair creation, the populated D <= 8
+    component's b-branch (opposite-chirality) linear energy grows: dE_b > 0 in every incoherent run
+    and carries >= 20% of dE_a + dE_b. Low confidence.
+
+CRITERIA (fixed in advance) FOR THE PARAMETRIC-HEATING READING
+ SUPPORTED if all: (i) 3a holds (x = 0 below 5% of x = 1); (ii) at fixed mean the rate increases
+   monotonically with var s, with fitted exponent a in [0.5, 1.5]; (iii) 3b holds; (iv) no reversal
+   in any long run.
+ REFUTED if any: x = 0 gives >= 25% of the x = 1 rate; at fixed mean rate(1) <= rate(0.25); f < 0
+   anywhere in [2000, 20000] in a long run.
+ Otherwise PARTIAL.
+ The refractive reading of the phase (4): SUPPORTED if 4a holds and gamma is in [0.5, 1.2]; REFUTED
+   if the phase varies across the fixed-mean scan by more than 30%.
+
+PREDICTED OUTCOME: parametric heating SUPPORTED; refractive phase SUPPORTED.
