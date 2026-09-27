@@ -1,0 +1,17 @@
+T1  kappa = rotating frame: psi(t) = exp(mu t JJ) phi(t), phi under kappa = 0 with K -> K + mu^2
+    well=node        q=1: max|psi - R phi| at T=20: dt .01 2.18e-07, dt .005 1.37e-08  (ratio 16.0; 16 = pure RK4 error)   |u| ~ 1.11
+    well=node        q=2: max|psi - R phi| at T=20: dt .01 2.74e-07, dt .005 1.72e-08  (ratio 15.9; 16 = pure RK4 error)   |u| ~ 1.15
+    well=radial      q=1: max|psi - R phi| at T=20: dt .01 1.79e-07, dt .005 1.10e-08  (ratio 16.3; 16 = pure RK4 error)   |u| ~ 1.52
+    well=radial      q=2: max|psi - R phi| at T=20: dt .01 4.48e-07, dt .005 2.79e-08  (ratio 16.1; 16 = pure RK4 error)   |u| ~ 1.26
+    well=elementwise q=1: max|psi - R phi| at T=20: dt .01 1.93e+00, dt .005 1.93e+00  (ratio 1.0; 16 = pure RK4 error)   |u| ~ 1.71
+    well=elementwise q=2: max|psi - R phi| at T=20: dt .01 1.09e+00, dt .005 1.09e+00  (ratio 1.0; 16 = pure RK4 error)   |u| ~ 1.96
+
+T2  scalar beta sector
+    Peierls identity  w^2 = K + 2c - 2c sqrt(1+beta^2 w^2) cos(k + arctan(beta w)): max resid 2.7e-15
+    k= 0.40: lattice 1.5668316075  boosted KG (V = beta c, s^2 = c + V^2) 1.5680529634  diff -1.22e-03
+    k= 0.20: lattice 1.5185863410  boosted KG (V = beta c, s^2 = c + V^2) 1.5186974440  diff -1.11e-04
+    k= 0.10: lattice 1.5036859571  boosted KG (V = beta c, s^2 = c + V^2) 1.5036970933  diff -1.11e-05
+    k= 0.05: lattice 1.4986853444  boosted KG (V = beta c, s^2 = c + V^2) 1.4986865617  diff -1.22e-06
+
+T3  kappa floor = 'a-wave at k0 cannot reach the b-branch at equal lab frequency'
+    disagreements between resonance condition and recorded closed-iff (kappa w > c(1 - cos k0)): 0 of 3600

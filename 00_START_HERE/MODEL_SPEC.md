@@ -341,6 +341,65 @@ quadratic-force well with two real roots, so φ and √5 are coordinate choices)
 Not φ, despite the symbol or digits: the G₂ 3-form φ, the HK coordinate φ in the spec,
 phase angles φ₀/φ_π, and "s = 0.618" in the κ⁴ files (a packet fill factor).
 
+### 1c. The continuum limit — κ a rotating frame, β a moving frame (2026-09-27)
+
+**Status: derived, then checked — not predicted.** No predictions were committed before the
+derivation; the checks (`shape_zero_tests/continuum_checks.py`, output
+`continuum_checks_output.txt`) were written after it.
+
+**κ is a rotating frame — Larmor's theorem, exact on the lattice at all orders.** In the J
+sector without links, write ψ(t) = e^{μt𝕁} φ(t) with μ = κ/2. The gyroscopic term cancels,
+and φ obeys the same lattice with **κ = 0 and K → K′ = K + κ²/4**, at every order in the
+amplitude, whenever the force commutes with the rotation: the elastic term and K always, and the
+well for node forms **A′ and A**. Check: both systems integrated with `model.py`'s own force
+(amplitude ≈ 1, n = 2, q = 1 and 2, T = 20) agree at RK4 accuracy — 1.4×10⁻⁸ (A′, q = 1),
+falling ×16 per halving of dt. **Control:** the old elementwise form, which does not commute with
+the rotation, fails (error 1.9 at q = 1, 1.1 at q = 2, independent of dt).
+
+- **The lab-frame action** is a complex scalar at **chemical potential μ = κ/2**:
+  L = ½\|(∂_t − μ𝕁)ψ\|² − ½c\|∇ψ\|² − ½(K + μ²)\|ψ\|² − ⅓\|ψ\|³, with **wave speed √c** and
+  **mass² K + κ²/4** (in the rotating frame the dispersion is Ω² = K′ + ck² at long wavelength).
+  Under A′ the rotating-frame theory is O(2n)-symmetric — it contains no 𝕁; the complex
+  structure is the rotation plane of the frame (§2, "selected, not chosen").
+- **In the J sector without links, κ̂ enters only through ĉ′ = ĉ/(1 + κ̂²/4)**, the one
+  dimensionless lattice number of the rotating-frame theory. κ is physical **only through the
+  links** (in the rotating frame a uniform link c W(v₊ − v₋) acquires a static position coupling
+  cμW𝕁(w₊ − w₋), and at fixed frequency its Peierls angle depends on the lab frequency) **and
+  through J-breaking terms**, which rotate at κ in that frame. The κ floor (§3, "CANDIDATE",
+  "ADOPTED") is their no-resonance condition: an a-wave at k₀ reaches the b-branch at equal lab
+  frequency iff κω_a ≤ c(1 − cos k₀) — the recorded closed-iff rule, agreeing at all 3600 points
+  of a 60 × 60 (κ, k₀) grid. The Larmor splitting ω_b − ω_a = κ is the frame's 2μ.
+
+**β is a renamed coupling at long wavelength** (scalar sector).
+- **At fixed frequency, exactly on the lattice, a Peierls phase growing with frequency:**
+  ω² = K + 2c − 2c√(1 + β²ω²) cos(k + arctan βω) (residual 3×10⁻¹⁵) — the "synthetic U(1)"
+  of `model.py`, with a charge proportional to frequency.
+- **In the continuum, a uniform drift:** L = ½(u̇ + V u_x)² − ½s²u_x² − ½Ku² with **V = βc** and
+  **s² = c + V²** — Klein–Gordon in a uniformly flowing medium, **a removable Galilean boost**:
+  ω = Vk + √(K + s²k²), matching the lattice to 1.2×10⁻⁶ at k = 0.05 (departures fall about
+  ×10 per halving of k). The **Mach number V/s = V/√(c + V²) is always below 1** (0.050 at
+  β = 0.05, c = 1), so no horizon can form, even for a β varying in space. The frame reading holds
+  for any local nonlinearity.
+- **β is physical only relative to structures fixed to the lattice** — the lattice itself (sin k
+  in place of k), bumps, boundaries.
+
+**ĉ becomes a unit — the healing length ξ = √(c/K′) — only in a continuum the model does not
+operate in.** In that limit ĉ′ survives only as the lattice spacing in units of ξ, in the
+irrelevant k⁴ term (confirming the table above: "a length unit only in the continuum limit").
+At the model's values ĉ′ = 0.4472/(1 + 0.6498²/4) = 0.4045, so **ξ = 0.64 lattice spacings**,
+and the carrier k₀ = π/2 sits at **kξ ≈ 1.0** — at the cutoff. Every measured phenomenon
+(the sin k shape, the segment holonomies, joint #5, ν) lives at the lattice scale. Dropping ĉ
+would need ĉ ≫ 1, which is not the chosen model.
+
+| sector | continuum | lattice, as run |
+|---|---|---|
+| J, no links | no dimensionless parameter; κ a frame rotation | ĉ′ = ĉ/(1 + κ̂²/4) |
+| scalar β | no dimensionless parameter; β a frame velocity | ĉ, β̂ (β̂ as the Peierls angle against the lattice) |
+| links | trace part a frame; traceless part not removable by any frame | κ physical through the lab frequency — open (§9) |
+
+Census consequences: `UNIVERSAL_RELATIONS.md`, notes on rows 1, 2, 4 and 5, and "The count —
+under the continuum reading".
+
 ---
 
 ## 2. Intra-node: the complex structure is selected, not chosen
@@ -2982,6 +3041,8 @@ established — see §7b.*
 | **the remaining amplitude-proportional effect under (A′)** | with the self-precession gone, deviations from the linear gauge prediction still grow ∝ A (≈ A·g): split slopes −0.0044 / +0.0169 (q = 1) and −0.0095 / +0.0076 (q = 3) per 10⁻³, only 1.5–6× below form (A)'s, u(3) changing sign; q = 3 u(3) per-order 0.024; q3_gate deviations 0.011–0.020° at 10⁻³. Not derived; a candidate is the common frequency shift changing each link's rotation angle (~ gλ δω). Open (§1a, "ADOPTED 2026-09-27") |
 | **gate 7's floor under the radial form** | [2026-09-27: form (A)'s — superseded by (A′), §1a]  the first-order self-precession correction captures the per-order errors but over-predicts the order-dependent floor ~1.8×; gate 7 fails its floor criterion. Next: the slice model (§4d, "Gate 7 under the radial well"), predictions first [2026-09-26: the routine gate now reports the floor without a pass/fail; the small-amplitude limit is certified (§4d, "Amplitude scaling"); the measured slopes there are the target for the slice derivation] [2026-09-26: the slice-resolved model matches the q = 1 floors (≤ 0.2%) and is adopted as gate 7's floor prediction at q = 1 (|Δ| < 0.01°); per-order ~10% high, q = 3 off 10–30%, split slopes wrong — open (§4d, "Slice-resolved")] |
 | **four-wave coupling strengths** | the four-wave channels are counted by linear resonance only; their effective couplings are not derived (§3, "FINDING", caveats) |
+| **the link sector in the continuum reading** | whether the traceless part of the matrix links W — a component-dependent drift that no frame can remove — carries physics beyond the fixed-frequency Peierls form arctan(ωW) (§1c; derived as algebra, not simulated) |
+| **whether census row 9 is kinematic** | whether ν → 0 for wide bumps at k = π/2 (§5b.6a) is the moving-frame statement seen from the lattice (§1c); if so it leaves the count of genuine predictions (`UNIVERSAL_RELATIONS.md`) |
 | **the exact value of κ** | only the floor κ ≥ κ\* is derived; the value is a genuine parameter, fixed by the Larmor measurement (`INPUT_LEDGER.md` §3.1); `model.py`'s κ = κ\* is a chosen operating point |
 | **the beam's fourth-order cross kernel** | derive it — every fourth-order cross term between a beam's transverse components, on the lattice — with the measured r values as the target: 0.351/0.350 (w = 1.5), 0.547/0.549 (w = 2), 0.750/0.758 (w = 3) at L = 4, A = 0.30/0.40, which lie 0.33, 0.50, 0.68 of the way from the self-only limit S2 to the all-terms limit S1 (§5, measured with the third-harmonic launch, `kappa4_orbit3_launch.py`) |
 | ~~verify the 0.39° attribution~~ | **CLOSED** — readout timing; the Abelian floor is exactly 0 under clearing readout at q = 1 and q = 3 |
