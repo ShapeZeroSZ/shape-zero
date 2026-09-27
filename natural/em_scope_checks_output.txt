@@ -1,0 +1,18 @@
+EM SCOPING CHECKS (natural/EM_HYPOTHESES.md)
+  C1  literal   velocity link, W = 0.3 I + 0.0 J:  power = -3.469e-18   (passive)
+  C1  literal   velocity link, W = 0.3 I + 0.2 J:  power = +7.310e-01   (DOES WORK)
+  C1  covariant velocity link, W = 0.3 I + 0.0 J:  power = -3.469e-18   (passive)
+  C1  covariant velocity link, W = 0.3 I + 0.2 J:  power = +1.249e-16   (passive)
+  C2  elastic Peierls link: |F + grad V| = 6.9e-10 (conservative);  covariance error 8.9e-16
+  C3  q = 1: eigenvalues [0.]  vs 4 sum sin^2(k/2) = 0.340911  -> 0 photon polarisation(s)
+  C3  q = 2: eigenvalues [-0.        1.396685]  vs 4 sum sin^2(k/2) = 1.396685  -> 1 photon polarisation(s), dispersion exact
+  C3  q = 3: eigenvalues [-0.        6.399053  6.399053]  vs 4 sum sin^2(k/2) = 6.399053  -> 2 photon polarisation(s), dispersion exact
+  C4  q = 3: force / inverse-square (Coulomb) law = r= 4: 1.0657, r= 8: 1.0148, r=16: 1.0033, r=32: 0.9875
+  C4  q = 2: force / 1/r (logarithmic potential) law = r= 4: 1.0153, r= 8: 1.0036, r=16: 1.0001, r=32: 0.9871
+  C4  q = 1: force / constant (linear potential) law = r= 4: 1.0000, r= 8: 1.0000, r=16: 1.0000, r=32: 1.0000
+  C5  node form A': min_r 2V/r^2 = 2.236069 vs K = 2.236068  -> no Q-balls (Coleman condition fails)
+  C6  K =   2.236: carrier w = 2.058; beta link's Peierls angle arctan(beta w) = 0.1025  (a u(1) phase theta would be the same for every w)
+  C6  K =   8.944: carrier w = 3.308; beta link's Peierls angle arctan(beta w) = 0.1639  (a u(1) phase theta would be the same for every w)
+  C6  K =  35.777: carrier w = 6.146; beta link's Peierls angle arctan(beta w) = 0.2982  (a u(1) phase theta would be the same for every w)
+  C7  dressed u(2) velocity link W U(theta_n), literal   form: power = +1.566e+01 (DOES WORK), covariance error 7.0e+00
+  C7  dressed u(2) velocity link W U(theta_n), covariant form: power = +1.776e-15 (passive), covariance error 2.7e-15

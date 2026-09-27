@@ -45,6 +45,7 @@ kinematic**.
 | after | parameters | conditions | strict predictions | note |
 |---|---|---|---|---|
 | baseline (`main` 646a238) | 3 | ~6 | 4 (3) | inherited |
+| *projected:* target 1 as scoped, if built | 5 (+2 discrete selections) | ~7 (8) | 5 (6) | **not built, not adopted** — `natural/EM_SCOPE.md` §5 |
 
 ## Adaptation ledger
 
