@@ -1,0 +1,10 @@
+  q=2 L=  8 S_max=2.00e-02: C = -0.03972 +- 0.00005; kernel -0.03972 (|diff| 2.8e-06: match); S^4 share 7.8e-03; 0 s
+  q=2 L= 12 S_max=5.69e-03: C = +1.91737 +- 0.00058; kernel +1.91691 (|diff| 4.6e-04: match); S^4 share 2.6e-03; 1 s
+  q=2 L= 16 S_max=9.38e-03: C = -0.07367 +- 0.00014; kernel -0.07366 (|diff| 9.8e-06: match); S^4 share 1.2e-02; 3 s
+  q=2 L= 20 S_max=6.03e-03: C = -0.05473 +- 0.00010; kernel -0.05471 (|diff| 1.2e-05: match); S^4 share 1.2e-02; 6 s
+  q=2 L= 24 S_max=4.20e-03: C = -0.05303 +- 0.00011; kernel -0.05300 (|diff| 2.6e-05: match); S^4 share 1.3e-02; 15 s
+  q=3 L=  8 S_max=2.00e-02: C = -0.18840 +- 0.00001; kernel -0.18844 (|diff| 3.7e-05: match); S^4 share 2.8e-04; 11 s
+  q=3 L= 12 S_max=9.12e-03: C = +1.45807 +- 0.00340; kernel +1.45772 (|diff| 3.5e-04: match); S^4 share 1.5e-02; 20 s
+  q=3 L= 16 S_max=5.55e-03: C = -1.42713 +- 0.00831; kernel -1.42980 (|diff| 2.7e-03: match); S^4 share 4.5e-02; 92 s
+  q=3 L= 20 S_max=9.65e-03: C = -0.06833 +- 0.00249; kernel -0.07133 (|diff| 3.0e-03: NO match); S^4 share 1.1e-01; 352 s
+Killed

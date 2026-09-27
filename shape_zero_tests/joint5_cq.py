@@ -22,8 +22,9 @@ to the nearest eigenvalue of any symmetry, coupled or not; resolution is judged 
 (joint5_kernel.py), which knows which modes the blob couples.
 
 C AND ITS ERROR BAR (the policy of kappa_extended_gpu.py): C from a fit delta(Delta omega) =
-C S^2 + D S^4 over S = 0.0025 ... 0.02 (8 points); the error bar is the larger of the fit's
-standard error and |C - C'|, C' the S^2-only fit over S <= 0.01. The probe must stay resolved:
+C S^2 + E S^3 + D S^4 over 8 points up to S_max; the error bar is the larger of the fit's
+standard error and |C - C'|, C' the S^2 + S^3 fit over the lower half. [An S^2 + S^4 fit was used
+first and biased C by 3-7%: the S^3 term is real.] The probe must stay resolved:
 max |delta omega| < 0.1 x the gap to its nearest neighbour.
 
 usage:  python3 joint5_cq.py validate           (q = 1 records; q = 2, 3 reproduction attempts)
@@ -70,9 +71,30 @@ def operators(q, L):
     return lap.tocsr(), G.tocsr()
 
 
-def pencil(lap, G, Kx):
-    n = len(Kx)
+def sym_basis(q, L):
+    """Orthonormal basis of the sector even under every transverse reflection y_a -> L - y_a (a >= 1)
+    and every permutation of the transverse axes. The operator, the centred blob and the probe
+    (uniform across the transverse axes) all live in it, so restricting to it is exact.
+    [Added 2026-09-27: the full q = 3, L = 24 factorisation ran out of memory.]"""
+    from itertools import permutations
+    X = grid(q, L)
+    n = len(X)
+    key = {}
+    cols = np.empty(n, dtype=int)
+    for i, x in enumerate(X):
+        tr = sorted(min(int(v) % L, (L - int(v)) % L) for v in x[1:])
+        k = (int(x[0]),) + tuple(tr)
+        cols[i] = key.setdefault(k, len(key))
+    P = sp.csr_matrix((np.ones(n), (np.arange(n), cols)), shape=(n, len(key)))
+    norm = np.sqrt(np.asarray(P.sum(axis=0)).ravel())
+    return (P @ sp.diags(1.0 / norm)).tocsr()
+
+
+def pencil(lap, G, Kx, P=None):
     Km = sp.diags(Kx) - C * lap
+    if P is not None:
+        Km = (P.T @ Km @ P).tocsr(); G = (P.T @ G @ P).tocsr()
+    n = Km.shape[0]
     Sop = sp.bmat([[None, Km], [-Km, G]]).tocsc()
     B = sp.block_diag([Km, sp.identity(n)]).tocsc()
     return (1j * Sop).tocsc(), B
@@ -106,44 +128,56 @@ def eig_near(H, B, z_prev, om_prev, dense_limit=1600):
     return w[i], Z[:, i] / norms[i], ov[i], gap
 
 
-def branch(q, L, m, sign, eta, lap, G, S_list):
+def branch(q, L, m, sign, eta, lap, G, S_list, sub=0.0025, P=None):
     z, om = plane_wave(q, L, m, sign, None)
+    if P is not None:
+        n = P.shape[0]
+        z = np.concatenate([P.T @ z[:n], P.T @ z[n:]])
     om0 = om
     out, gaps, ovs = [], [], []
     S_prev = 0.0
     for S in S_list:
         # continuation in sub-steps of at most 0.0025
-        nsub = max(1, int(np.ceil((S - S_prev) / 0.0025 - 1e-9)))
+        nsub = max(1, int(np.ceil((S - S_prev) / sub - 1e-9)))
         for j in range(1, nsub + 1):
             Sj = S_prev + (S - S_prev) * j / nsub
-            H, B = pencil(lap, G, S0 * (1 + Sj * eta))
+            H, B = pencil(lap, G, S0 * (1 + Sj * eta), P)
             om, z, ov, gap = eig_near(H, B, z, om)
         S_prev = S
         out.append(om); gaps.append(gap); ovs.append(ov)
     return om0, np.array(out), np.array(gaps), np.array(ovs)
 
 
-def measure(q, L, m=None, frac=1 / 16, sigma=None, verbose=True):
+def measure(q, L, m=None, frac=1 / 16, sigma=None, verbose=True, smax=0.02, sym=False):
     m = m if m is not None else L // 4
     sigma = sigma if sigma is not None else frac * L
     eta = eta_blob(q, L, sigma)
     lap, G = operators(q, L)
     t0 = time.time()
-    p0, wp, gp, op = branch(q, L, m, +1, eta, lap, G, SGRID)
-    m0, wm, gm, om_ = branch(q, L, m, -1, eta, lap, G, SGRID)
+    SG = SGRID * (smax / 0.02)
+    P = sym_basis(q, L) if (sym and q > 1) else None
+    p0, wp, gp, op = branch(q, L, m, +1, eta, lap, G, SG, sub=smax / 8, P=P)
+    m0, wm, gm, om_ = branch(q, L, m, -1, eta, lap, G, SG, sub=smax / 8, P=P)
     D0 = p0 - m0
     dD = (wp - wm) - D0
-    A = np.vstack([SGRID ** 2, SGRID ** 4]).T
+    # delta(Delta omega) = C S^2 + E S^3 + D S^4: the S^3 term is real (third order; the blob is not
+    # symmetric under eta -> -eta). [Corrected 2026-09-27 after the first sweep: an S^2 + S^4 fit
+    # biased C by 3-7% -- found at q = 3, L = 8, where C(S) = dD/S^2 runs linearly to -0.18835 at S = 1e-4.]
+    SGRID_ = SG
+    A = np.vstack([SGRID_ ** 2, SGRID_ ** 3, SGRID_ ** 4]).T
     coef, *_ = np.linalg.lstsq(A, dD, rcond=None)
     r = dD - A @ coef
-    cov = (r @ r) / max(len(dD) - 2, 1) * np.linalg.inv(A.T @ A)
+    cov = (r @ r) / max(len(dD) - 3, 1) * np.linalg.inv(A.T @ A)
     Cfit, se = coef[0], np.sqrt(cov[0, 0])
-    small = SGRID <= 0.01 + 1e-12
-    C2 = np.linalg.lstsq(SGRID[small, None] ** 2, dD[small], rcond=None)[0][0]
+    small = SGRID_ <= 0.5 * smax + 1e-12
+    A2 = np.vstack([SGRID_[small] ** 2, SGRID_[small] ** 3]).T
+    C2 = np.linalg.lstsq(A2, dD[small], rcond=None)[0][0]
+    coef = [coef[0], coef[2]]
     err = max(se, abs(Cfit - C2))
     shift = max(np.abs(wp - p0).max(), np.abs(wm - m0).max())
     gap = min(gp.min(), gm.min())
-    res = dict(q=q, L=L, m=m, sigma=sigma, C=Cfit, err=err, C_S2only=C2, D=coef[1], resolved=bool(shift < 0.1 * gap),
+    res = dict(q=q, L=L, m=m, sigma=sigma, smax=smax, C=Cfit, err=err, C_S2only=C2, D=coef[1],
+               S4frac=abs(coef[1]) * smax ** 2 / max(abs(Cfit), 1e-30), resolved=bool(shift < 0.1 * gap),
                shift=shift, gap=gap, overlap=float(min(op.min(), om_.min())), D0=D0, secs=time.time() - t0)
     if verbose:
         print(f"  q={q} L={L:3d} m={m} sigma={sigma:.3g}: C = {Cfit:+.5f} +- {err:.5f} (S^2-only {C2:+.5f}); "
@@ -167,9 +201,50 @@ def validate():
             measure(q, L, m=max(1, int(round(L / 4))), frac=fr)
 
 
+def sweep(qs=(2, 3), Ls=(8, 12, 16, 20, 24, 28, 32)):
+    """The re-measurement (predictions: joint5_predictions.txt). sigma = L/8, m = L/4; S_max from the
+    kernel so the admixture stays <= 0.05."""
+    import json
+    import joint5_kernel as K
+    rows = []
+    for q in qs:
+        for L in Ls:
+            kr = K.kernel(q, L, L // 4, 1 / 8)
+            smax = min(0.02, 0.02 * 0.05 / kr["admix"])
+            r = measure(q, L, L // 4, 1 / 8, smax=smax, verbose=False, sym=True)
+            if r["S4frac"] > 0.05:
+                # POST HOC (added after q = 3, L = 20 missed with an 11% S^4 share): re-measure with
+                # S_max / 4; both are reported, the smaller-S value is used.
+                r1 = r
+                r = measure(q, L, L // 4, 1 / 8, smax=smax / 4, verbose=False, sym=True)
+                r["first_try"] = dict(C=float(r1["C"]), err=float(r1["err"]), smax=float(smax), S4frac=float(r1["S4frac"]))
+            r.update(C_pred=kr["C_pred"], C_IR=kr["C_IR"])
+            dev = abs(r["C"] - kr["C_pred"])
+            r["match"] = bool(dev <= max(r["err"], 0.01 * abs(kr["C_pred"])))
+            if "first_try" in r:
+                ft = r["first_try"]
+                print(f"  q={q} L={L:3d} first try S_max={ft['smax']:.2e}: C = {ft['C']:+.5f} +- {ft['err']:.5f} "
+                      f"(S^4 share {ft['S4frac']:.1e}) -> re-measured at S_max/4:", flush=True)
+            print(f"  q={q} L={L:3d} S_max={r['smax']:.2e}: C = {r['C']:+.5f} +- {r['err']:.5f}; kernel {kr['C_pred']:+.5f} "
+                  f"(|diff| {dev:.1e}: {'match' if r['match'] else 'NO match'}); S^4 share {r['S4frac']:.1e}; "
+                  f"{r['secs']:.0f} s", flush=True)
+            rows.append({k: (float(v) if isinstance(v, (np.floating, float)) else v) for k, v in r.items()})
+            json.dump(rows, open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "joint5_sweep.json"), "w"), indent=1)
+    print("\n  successive departures (real if > 10% AND > 2 x the combined error bar):")
+    for q in qs:
+        rr = [r for r in rows if r["q"] == q]
+        for a, b in zip(rr, rr[1:]):
+            d = abs(b["C"] - a["C"]); e = np.hypot(a["err"], b["err"])
+            rel = d / max(abs(a["C"]), abs(b["C"]))
+            print(f"    q={q} L {a['L']:3d} -> {b['L']:3d}: {a['C']:+.5f} -> {b['C']:+.5f}  ({100 * rel:.0f}%, {d / max(e, 1e-30):.0f} x err)"
+                  f" -> {'REAL departure' if rel > 0.10 and d > 2 * e else 'inside'}")
+
+
 if __name__ == "__main__":
     if sys.argv[1] == "validate":
         validate()
+    elif sys.argv[1] == "sweep":
+        sweep()
     else:
         a = sys.argv[2:]
         measure(int(a[0]), int(a[1]), int(a[2]) if len(a) > 2 else None, float(a[3]) if len(a) > 3 else 1 / 16)
