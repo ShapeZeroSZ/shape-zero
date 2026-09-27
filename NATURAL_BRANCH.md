@@ -61,6 +61,12 @@ produce.
   - **Accounting:** the training set counts as selections; only held-out results count as
     evidence.
   - **Not adopted.** Nothing enters the ledger until a held-out test passes.
+  - **Status after the pilot (2026-09-27): NOT SUPPORTED.** The CPU pilot (`natural/cpg_pilot.py`,
+    predictions 45c4c8f) finds no gapless mode in `main`: the smallest |ω| is 1.0864, and a static
+    influence decays with ξ = 0.71 sites. So IO3 holds. The one inside route, a ring node's
+    Goldstone, is recorded as a **fork, not adopted** (`natural/RING_FORK.md`). It is scalar and
+    derivatively coupled, so it gives no inverse-square attraction between masses, and it would cost
+    `main` its chirality branches and κ\*. The GPU inside-out program is not worth running as a test.
 
 ## The count
 

@@ -1,6 +1,6 @@
 # CP-G, inside-out: scoping report
 
-*Scoping only; nothing is built. Hypotheses were committed first: `INSIDE_OUT_HYPOTHESES.md`
+*Scoping only; nothing is built. **Update 2026-09-27: the Step-0 pilot ran — IO3 HELD** (no gapless mode in `main`; `cpg_pilot_output.txt`), so CP-G fails at H-r and the GPU program is not recommended (`RING_FORK.md`). Hypotheses were committed first: `INSIDE_OUT_HYPOTHESES.md`
 (53ccd07), IO1–IO8, all OPEN until the pilot or a run tests them. The candidate principle CP-G is
 in the charter, under test and not adopted.*
 

@@ -1,0 +1,18 @@
+==============================================================================
+CP-G PILOT -- is every field of main gapped? (predictions: CPG_PILOT_PREDICTIONS.md)
+==============================================================================
+P1  mode census from model.py's linearised force (smallest |omega| over the zone)
+    sector                                         N    smallest |w|   predicted   max Re(lambda)
+    J sector n=1, kappa*, q=1                       200   1.0864        1.0864      +1.1e-15
+    J sector n=2, kappa*, q=1                        60   1.0864        1.0864      +8.9e-16
+    J sector n=3, kappa*, q=1                        40   1.0864        1.0864      +1.8e-15
+    J sector n=1, kappa*, q=3 (side 6)              216   1.0864        1.0864      +3.8e-15
+    scalar beta sector, beta=0.05, q=1              200   1.4935        1.4935      +2.8e-15
+    kappa=0 nodes, n=8 (tower configuration), q=1    12   1.4953        1.4953      +2.2e-15
+    global smallest |omega| = 1.0864  -> NO gapless mode
+
+P2  range of a static force from main's static operator
+    (a) side 12: max |u_main - FFT(1/Q)| = 2.1e-09  (main's static operator is Q)
+    (b) side 64: fitted decay length xi = 0.7089 sites  (predicted 0.7233, -2.0%)
+        G(r)/G(1) along the axis: r = 2: 1.57e-01, 5: 9.46e-04, 10: 4.28e-07
+        single-field exchange: Yukawa, range 0.71 sites; two-field (fluctuation-induced): range <= 0.35 sites
