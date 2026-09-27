@@ -1,0 +1,21 @@
+==============================================================================
+KAPPA-GRADIENT FORCE ON MAIN'S LATTICE (model.py, n = 1, q = 1, no dynamical links)
+==============================================================================
+  kappa* = 0.971737, w_rot = 1.57230, c/w_rot = 0.6360
+    kappa' = +4e-04  branch a:  a = +8.7755e-05   energy drift 2.2e-08   centre rotation rate -1.0871
+    kappa' = +4e-04  branch b:  a = -1.6605e-04   energy drift 1.0e-06   centre rotation rate +2.0588
+    kappa' = -4e-04  branch a:  a = -8.7755e-05   energy drift 2.2e-08   centre rotation rate -1.0871
+    kappa' = -4e-04  branch b:  a = +1.6605e-04   energy drift 1.0e-06   centre rotation rate +2.0588
+    kappa' = +0e+00  branch a:  a = -2.0854e-17   energy drift 2.2e-08   centre rotation rate -1.0871
+    kappa' = +0e+00  branch b:  a = -3.2678e-17   energy drift 1.0e-06   centre rotation rate +2.0588
+
+VALIDATION
+  branch a is pure: rotation rate -1.0871 vs -1.0864   PASS
+  branch b is pure: rotation rate +2.0588 vs +2.0582   PASS
+  energy conserved (kappa does no work): worst drift 1.0e-06   PASS
+  control kappa' = 0: |a| <= 3.3e-17   PASS
+
+RESULT (predictions from KGRAD_HYPOTHESIS.md, committed 0b12001 before this run)
+   kappa'     a_a (pred)                a_b (pred)                 a_a - a_b (pred)          common (pred)
+   +4e-04  +8.7755e-05 (+8.7894e-05)   -1.6605e-04 (-1.6651e-04)   +2.5381e-04 (+2.5440e-04) -0.23%   -3.915e-05 (-3.931e-05) -0.4%
+   -4e-04  -8.7755e-05 (-8.7894e-05)   +1.6605e-04 (+1.6651e-04)   -2.5381e-04 (-2.5440e-04) -0.23%   +3.915e-05 (+3.931e-05) -0.4%

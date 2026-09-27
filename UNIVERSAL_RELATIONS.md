@@ -19,6 +19,7 @@ measurement); the model is not presented as a theory of nature (`OVERVIEW.md`, "
 | 9 | wide-bump nonreciprocity limit ν = (Γ(+k) − Γ(−k))/Γ → 0 at k = π/2, q ≥ 2 | bump shape; ĉ, β̂ enter only at finite width | **derived + computed** | `shape_zero_tests/joint5_rate2.py` | yes, in principle |
 | 10 | symmetric + J-commuting couplings have dimension n² (mission 1); passivity ⇔ symmetric links (missions 2, 4a); roles force Fano (missions 5, 6) | every parameter (structural) | **proved** | missions 1, 2, 4a, 5, 6 | no — constraints on the model's form, not a measured number |
 | 11 | small-amplitude reduction to the linear gauge dynamics | amplitude, in the limit | **measured** (certified) | `shape_zero_tests/certify_gates.py` | no — an internal consistency check |
+| 12 | **κ-gradient force:** in a static κ gradient, packets at rest on the two branches accelerate apart with a_a − a_b = c·∂ₓ(ω_b − ω_a)/ω̄, ω̄ = (ω_a + ω_b)/2 — the electric-field analogue, branches as opposite charges | the well; K and κ enter only through the measured branch frequencies | **derived + measured** (−0.23%; predictions committed first) — **a verified consequence of row 5 plus ray kinematics and the band curvature; not independent** | `shape_zero_tests/kgrad_test.py`; MODEL_SPEC §1c; PROVENANCE §6t | yes, in a realisation with a position-dependent Larmor splitting — but it would test ray kinematics, not a new condition |
 
 ## The count
 
@@ -37,6 +38,12 @@ independence; the κ̂ floor (an inequality); P-3's absence; and the ν → 0 li
 - **P-3 is excluded** from the predictions: its absence of self-precession is a consequence of node form
   A′, which was selected under the selection rule, and what that selection produced "cannot be counted as
   evidence for the model" (MODEL_SPEC §1a, "ADOPTED 2026-09-27").
+
+**Row 12 (added 2026-09-27) does not change either count.** It is implied by row 5 applied locally,
+standard ray (eikonal) kinematics and the band curvature 1/m\* = c/ω̄. A packet at rest accelerates at
+ẍ = −(∂²ω/∂k²)(∂ω/∂x); with ω_b = ω_a + κ(x) at every k, the branches share 1/m\*, and their
+x-derivatives differ by κ′ (PROVENANCE §6t). It is recorded as a **verified consequence**. The strict
+genuine predictions stay at **four** (three if ν → 0 is kinematic).
 
 ## The count — under the continuum reading (2026-09-27)
 

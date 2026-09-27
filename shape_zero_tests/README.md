@@ -344,6 +344,13 @@ first), `nodewell_criteria.py`; runs `nodewell_1d.json`, `q3_gate_*nodeA*`; `mod
 `certify_gates_output_nodewell.txt`, `certify_gates_slopes_nodewell.json`. `amp_scaling.py` and
 `certify_gates.py` follow the model's form (`SZ_J_WELL=radial` for form (A)'s files).
 
+### 25. κ-gradient force (2026-09-27)
+`kgrad_test.py` → `kgrad_test_output.txt`. `model.py`'s force law (n = 1, q = 1, node form A′) with κ made
+site-dependent, κ(x) = κ\* + κ′x, and no links. It measures the accelerations of packets at rest on the
+a- and b-branches. Predictions were committed first on branch `natural-physics`
+(`natural/KGRAD_HYPOTHESIS.md`, 0b12001). Result: a_a − a_b = c·κ′/ω_rot to −0.23% (MODEL_SPEC §1c;
+UNIVERSAL_RELATIONS row 12). About 40 s on one CPU core.
+
 ### P-1 investigation
 `p1/` — the decay-window investigation behind the P-1 annotation; its README maps
 each file to its finding.

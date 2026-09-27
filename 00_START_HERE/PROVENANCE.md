@@ -1408,9 +1408,39 @@ as a random, site- and time-dependent extra stiffness Δ = \|u\| − \|u_l\|; an
 random stiffness modulation absorbs energy on average, whatever the sign of each fluctuation. This
 reading is consistent with the sign being the same in every realisation, with the roughly linear
 growth, and with control F, but it has **not been tested**.
-[2026-09-27: tested — SUPPORTED under the pre-registered criteria, §6t.]
+[2026-09-27: tested — SUPPORTED under the pre-registered criteria, §6u.]
 
-## 6t. Parametric heating tested — SUPPORTED; the phase refractive — SUPPORTED (2026-09-27)
+## 6t. The κ-gradient force — from the natural-physics branch, on `main`'s terms (2026-09-27)
+
+- **Where it came from.** Branch `natural-physics` scoped electromagnetism as an adaptation. It
+  found that a uniform κ is a uniform electrostatic potential (`natural/EM_SCOPE.md` §4), and it
+  listed "a κ gradient acts as an electric field" among the joint theory's candidate predictions
+  (`natural/JOINT_PREDICTIONS.md`, candidate 3).
+- **Why it belongs on `main`.** The effect needs **no adaptation**: it follows from `main`'s own
+  force law with κ made site-dependent, the local form of MODEL_SPEC §1c's rotating-frame reading.
+- **How it was tested.**
+  - Hypothesis and numbers committed first (`natural/KGRAD_HYPOTHESIS.md`, 0b12001, on that branch).
+  - Run there (3c1a445), then re-run here on `main`'s `model.py` with identical output.
+  - Result: a_a − a_b = c·κ′/ω_rot to −0.23%, the common part to −0.4%.
+- **Recorded as** MODEL_SPEC §1c and UNIVERSAL_RELATIONS row 12.
+- **Merged under the branch's charter rule 6:** it closes on `main`'s own terms. The branch's
+  electromagnetic reading of it (κ = 2eA₀) stays on the branch.
+- **Independence, tested before the merge: it is IMPLIED, so it does not raise the count.**
+  - **Ray kinematics:** a packet at rest at k = 0 accelerates at ẍ = −(∂²ω/∂k²)(∂ω/∂x).
+  - **Row 5 locally:** with ω_b = ω_a + κ(x) holding at every k, the two branches share one band
+    curvature 1/m\*, and their x-derivatives differ by exactly κ′.
+  - **Hence** a_a − a_b = (1/m\*)·∂ₓ(ω_b − ω_a).
+  - **The curvature is band shape:** differentiating ω_a² + κω_a = Q twice at k = 0 gives
+    1/m\* = 2c/(2ω_a + κ) = c/ω̄ — the calibration that fixes ĉ.
+  - The common part follows the same way, from ∂ω̄/∂x.
+  - **What the run verified beyond that:** that ray kinematics applies with no correction — no
+    anomalous (Berry-type) velocity and no first-order gradient term. The branches' circular
+    polarisations do not depend on k or x, so no such term can arise. That is structural, not an
+    independent condition.
+  - **Recorded as** a verified consequence (UNIVERSAL_RELATIONS row 12). The strict-prediction
+    count stays at four (three).
+
+## 6u. Parametric heating tested — SUPPORTED; the phase refractive — SUPPORTED (2026-09-27)
 
 Test: `shape_zero_tests/tower_heating_test.py`; hypothesis, criteria and predictions committed with
 the script before any run (4b82759); output and post-hoc checks 6991acb. Recorded result:

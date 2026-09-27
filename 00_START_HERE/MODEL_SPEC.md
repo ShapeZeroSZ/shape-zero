@@ -369,6 +369,27 @@ the rotation, fails (error 1.9 at q = 1, 1.1 at q = 2, independent of dt).
   "ADOPTED") is their no-resonance condition: an a-wave at k₀ reaches the b-branch at equal lab
   frequency iff κω_a ≤ c(1 − cos k₀) — the recorded closed-iff rule, agreeing at all 3600 points
   of a 60 × 60 (κ, k₀) grid. The Larmor splitting ω_b − ω_a = κ is the frame's 2μ.
+- **A κ gradient pushes the two branches apart (derived and measured 2026-09-27).** For a static,
+  site-dependent κ(x), the rotating-frame reading holds locally. Each branch's frequency is
+  ω_{a,b}(k, x) = ω_rot(k, x) ∓ κ(x)/2, with ω_rot = √(K + κ²/4 + Q-part) and group velocity
+  ck/ω_rot. So a packet at rest feels
+  - **an opposite force on the two branches:** a_a − a_b = c·κ′/ω_rot;
+  - **plus a common part:** −c·κκ′/(4ω_rot²) each, from κ entering ω_rot.
+  - The a-branch moves toward larger κ. In measured quantities:
+    **a_a − a_b = c·∂ₓ(ω_b − ω_a)/ω̄**, with ω̄ = (ω_a + ω_b)/2.
+  - It is the electric-field analogue, with the two branches as opposite charges.
+  - **Measured on `model.py`'s own force law** (node form A′, n = 1, q = 1), with only κ made
+    site-dependent and no links: at κ\*, κ′ = 4×10⁻⁴, a_a − a_b = 2.538×10⁻⁴ against
+    2.544×10⁻⁴ (−0.23%) and the common part −3.915×10⁻⁵ against −3.931×10⁻⁵ (−0.4%).
+    Both are exactly reversed for κ′ < 0, the κ′ = 0 control is at zero, and energy drift is
+    ≤ 10⁻⁶.
+  - Predictions were committed before the run: branch `natural-physics`,
+    `natural/KGRAD_HYPOTHESIS.md` (0b12001). Script: `shape_zero_tests/kgrad_test.py` → `kgrad_test_output.txt`.
+  - **This is not an adaptation.** It uses `main`'s force law, with κ(x) as a configuration —
+    like the stiffness bumps of joint #5.
+  - **Not independent.** It follows from the Larmor splitting (census row 5) holding locally, plus
+    ray kinematics, plus the band curvature c/ω̄. It is recorded as a **verified consequence**
+    (UNIVERSAL_RELATIONS row 12) and does not raise the strict-prediction count (PROVENANCE §6t).
 
 **β is a renamed coupling at long wavelength** (scalar sector).
 - **At fixed frequency, exactly on the lattice, a Peierls phase growing with frequency:**
@@ -997,7 +1018,7 @@ stiffness Δ = \|u\| − \|u_l\| that the populated upper levels impose.
 **TESTED 2026-09-27 — parametric heating SUPPORTED; the refractive reading SUPPORTED** (under the
 criteria as pre-registered; `shape_zero_tests/tower_heating_test.py`, hypothesis, criteria and
 predictions committed first, 4b82759; output `tower_heating_output.txt`; post-hoc checks
-`tower_heating_checks.py`, labelled as written after the output was seen; PROVENANCE §6t). D16
+`tower_heating_checks.py`, labelled as written after the output was seen; PROVENANCE §6u). D16
 unless stated; gain rate = slope of the D ≤ 8 part's fractional self-energy change over [T/4, T].
 - **The gain goes with the site-to-site variance of s = \|u_upper\|².** At fixed mean s, with a
   fraction x of it incoherent and the rest coherent and spatially uniform, the rate falls as
@@ -1021,7 +1042,7 @@ unless stated; gain rate = slope of the D ≤ 8 part's fractional self-energy ch
 - **Diagnostic, not a result:** the opposite-chirality (b-branch) linear energy of the populated
   D ≤ 8 component grew in every incoherent run, carrying 28–92% of the linear-energy gain where that
   gain is positive — consistent with pair creation, not a demonstration of it.
-Misses: PROVENANCE §6t.
+Misses: PROVENANCE §6u.
 
 **The residual is not a separate field. It is a coordinate of the same state,
 one level up.** The node carries a level-≥16 element; its octonionic part is the
