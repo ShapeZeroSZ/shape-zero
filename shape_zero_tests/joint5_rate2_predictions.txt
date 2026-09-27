@@ -1,0 +1,21 @@
+JOINT #5 RATE, q = 3 CONFIRMATION AND THE NONRECIPROCITY FRACTION -- PREDICTIONS (committed before
+running), 2026-09-27. Script: shape_zero_tests/joint5_rate2.py.
+
+(A) q = 3 CONVERGENCE (fixed Gaussian bump sigma = 2; box sums with Lorentzian width eps, extrapolated
+    eps -> 0 from the two smallest eps; sides 128, 160, 192, 256 fit the container -- arrays only).
+ Q1 V Gamma/S^2 (+k and -k) reach the continuum shell integral within 1% by side 192.
+ Q2 The settled Gamma(+k) - Gamma(-k) equals the continuum difference within 5%. The continuum itself
+    is recomputed on a finer transverse grid to check its own precision.
+
+(B) IS nu = (Gamma(+k) - Gamma(-k)) / Gamma UNIVERSAL? (fixed beta = 0.05, k = pi/2)
+ Reasoning fixed in advance: the rate is (pi s^2 / |d'_k|) x (shell integral with delta(d_p) -> 1/|d_p_x|).
+ At k = pi/2 both |d'_k| = 2 sqrt(beta^2 c^2 + w0^2) and |d_p d| = 2c are IDENTICAL for +k and -k, so for
+ a wide bump (scattering only near forward, on the shell's leading-order geometry) nu -> 0. The
+ difference first enters through the shell's longitudinal curvature, d_pp d = 2c cos p - 2 beta c w sin p,
+ which is -2 beta c w_+ at +k and +2 beta c w_- at -k: an O(beta) asymmetry weighted by how much the bump's
+ transform extends off forward -- i.e. by its width and shape.
+ N1 nu is NOT universal: over Gaussian widths sigma = 1, 1.5, 2, 3, 4 it changes by more than 10%, and at
+    equal rms width a sech^2-product bump and a two-bump profile give nu differing by more than 10%.
+ N2 nu -> 0 as sigma grows, roughly as 1/sigma^2 (shape-dependent coefficient). The only universal
+    statement predicted is the limit nu_inf = 0 at k = pi/2.
+ N3 The same holds at q = 2.
