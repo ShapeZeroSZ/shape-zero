@@ -61,7 +61,7 @@ produce.
   - **Accounting:** the training set counts as selections; only held-out results count as
     evidence.
   - **Not adopted.** Nothing enters the ledger until a held-out test passes.
-  - **Status after the first pilot (2026-09-27): NOT SUPPORTED around the empty vacuum** — the vacuum the pilot tested. [**Amended 2026-09-27:** **untested around the populated background that `main`'s P0 (non-isolation) requires**, since there the vacuum is never empty. A second pilot tests it: `natural/CPG_PILOT2_PREDICTIONS.md`.] The first pilot's record: The CPU pilot (`natural/cpg_pilot.py`,
+  - **Status after the first pilot (2026-09-27): NOT SUPPORTED around the empty vacuum** — the vacuum the pilot tested. [**Amended 2026-09-27:** **untested around the populated background that `main`'s P0 (non-isolation) requires**, since there the vacuum is never empty. A second pilot tests it: `natural/CPG_PILOT2_PREDICTIONS.md`.] **Second pilot (2026-09-27): NOT SUPPORTED around the populated background either** (`natural/CPG_PILOT2_REPORT.md`): the conserved densities are gapless, but they carry no static long-range response and no power-law correlations, and the one long-range effect — a sink's depletion — follows the lump's radius profile, not its energy. The first pilot's record: The CPU pilot (`natural/cpg_pilot.py`,
     predictions 45c4c8f) finds no gapless mode in `main`: the smallest |ω| is 1.0864, and a static
     influence decays with ξ = 0.71 sites. So IO3 holds. The one inside route, a ring node's
     Goldstone, is recorded as a **fork, not adopted** (`natural/RING_FORK.md`). It is scalar and
