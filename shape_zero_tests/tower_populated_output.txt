@@ -1,0 +1,67 @@
+TOWER POPULATED (non-isolation) under A' -- N = 128, T = 2000, packet 0.05, A_U = 0.005 per upper complex component, seeds (0, 1, 2, 3)
+reference (D8, isolated): D<=8 self-energy drift 2.0e-06, charge drift 2.0e-06, purity 0.9872 -> 0.9494
+V  (D16, upper = 0): max |E_l - E_l,ref| / E_l = 0.0e+00; max |chi - chi_ref| = 0.0e+00
+
+MAIN (A_U per component)
+  D16  seed 0: upper rms |u| per site 0.0100; E_tot drift 9.6e-06; (45 s)
+      energy: max|dE_l|/E_l 2.40e-03; late mean +1.82e-03 (sd early 9.4e-05, late 3.4e-04); slope +1.1e-06/t; sign changes 4; first near-return t = None; at T: dE_u -2.48e-03, dE_int +6.28e-05 (of E_l)
+      charge: max drift D<=8 1.9e-06, upper 3.2e-04
+      coherence: |O_ref| at T 0.7301 (min 0.7301), arg O_ref at T -0.635 rad; purity 0.9872 -> 0.9427 (min 0.9298)
+  D16  seed 1: upper rms |u| per site 0.0100; E_tot drift 9.6e-06; (45 s)
+      energy: max|dE_l|/E_l 1.17e-03; late mean +9.97e-04 (sd early 3.8e-05, late 1.3e-04); slope +6.8e-07/t; sign changes 8; first near-return t = None; at T: dE_u -1.26e-03, dE_int +7.63e-05 (of E_l)
+      charge: max drift D<=8 1.9e-06, upper 1.5e-03
+      coherence: |O_ref| at T 0.7304 (min 0.7304), arg O_ref at T -0.552 rad; purity 0.9872 -> 0.9435 (min 0.9296)
+  D16  seed 2: upper rms |u| per site 0.0100; E_tot drift 1.0e-05; (46 s)
+      energy: max|dE_l|/E_l 2.56e-03; late mean +2.26e-03 (sd early 1.5e-04, late 1.9e-04); slope +1.4e-06/t; sign changes 2; first near-return t = None; at T: dE_u -2.65e-03, dE_int +6.96e-05 (of E_l)
+      charge: max drift D<=8 1.9e-06, upper 4.5e-04
+      coherence: |O_ref| at T 0.7097 (min 0.7097), arg O_ref at T -0.654 rad; purity 0.9872 -> 0.9400 (min 0.9295)
+  D16  seed 3: upper rms |u| per site 0.0100; E_tot drift 9.4e-06; (45 s)
+      energy: max|dE_l|/E_l 2.11e-03; late mean +1.71e-03 (sd early 5.3e-05, late 2.7e-04); slope +1.1e-06/t; sign changes 2; first near-return t = None; at T: dE_u -2.08e-03, dE_int +1.34e-05 (of E_l)
+      charge: max drift D<=8 1.9e-06, upper 1.1e-03
+      coherence: |O_ref| at T 0.7278 (min 0.7278), arg O_ref at T -0.585 rad; purity 0.9872 -> 0.9437 (min 0.9304)
+  D32  seed 0: upper rms |u| per site 0.0173; E_tot drift 1.5e-05; (60 s)
+      energy: max|dE_l|/E_l 3.76e-03; late mean +2.97e-03 (sd early 2.0e-04, late 3.8e-04); slope +1.8e-06/t; sign changes 0; first near-return t = None; at T: dE_u -3.90e-03, dE_int +1.07e-04 (of E_l)
+      charge: max drift D<=8 1.9e-06, upper 4.5e-04
+      coherence: |O_ref| at T 0.4833 (min 0.4630), arg O_ref at T -1.420 rad; purity 0.9872 -> 0.9295 (min 0.9240)
+  D32  seed 1: upper rms |u| per site 0.0173; E_tot drift 1.6e-05; (60 s)
+      energy: max|dE_l|/E_l 3.50e-03; late mean +2.72e-03 (sd early 9.2e-05, late 3.9e-04); slope +1.9e-06/t; sign changes 2; first near-return t = None; at T: dE_u -3.68e-03, dE_int +1.45e-04 (of E_l)
+      charge: max drift D<=8 1.9e-06, upper 5.2e-04
+      coherence: |O_ref| at T 0.5579 (min 0.5309), arg O_ref at T -1.386 rad; purity 0.9872 -> 0.9330 (min 0.9243)
+  D32  seed 2: upper rms |u| per site 0.0173; E_tot drift 1.6e-05; (59 s)
+      energy: max|dE_l|/E_l 3.91e-03; late mean +2.90e-03 (sd early 1.6e-04, late 5.5e-04); slope +1.8e-06/t; sign changes 2; first near-return t = None; at T: dE_u -4.16e-03, dE_int +2.10e-04 (of E_l)
+      charge: max drift D<=8 1.9e-06, upper 9.4e-04
+      coherence: |O_ref| at T 0.4663 (min 0.4469), arg O_ref at T -1.410 rad; purity 0.9872 -> 0.9322 (min 0.9270)
+  D32  seed 3: upper rms |u| per site 0.0173; E_tot drift 1.6e-05; (59 s)
+      energy: max|dE_l|/E_l 2.43e-03; late mean +1.84e-03 (sd early 1.2e-04, late 3.0e-04); slope +1.0e-06/t; sign changes 0; first near-return t = None; at T: dE_u -2.60e-03, dE_int +1.29e-04 (of E_l)
+      charge: max drift D<=8 1.9e-06, upper 1.5e-03
+      coherence: |O_ref| at T 0.5170 (min 0.4921), arg O_ref at T -1.396 rad; purity 0.9872 -> 0.9334 (min 0.9255)
+  D64  seed 0: upper rms |u| per site 0.0265; E_tot drift 2.0e-05; (105 s)
+      energy: max|dE_l|/E_l 5.89e-03; late mean +4.96e-03 (sd early 3.9e-04, late 5.3e-04); slope +2.9e-06/t; sign changes 0; first near-return t = None; at T: dE_u -6.02e-03, dE_int +4.00e-05 (of E_l)
+      charge: max drift D<=8 1.9e-06, upper 1.6e-03
+      coherence: |O_ref| at T 0.2404 (min 0.2330), arg O_ref at T -3.187 rad; purity 0.9872 -> 0.9269 (min 0.9209)
+  D64  seed 1: upper rms |u| per site 0.0265; E_tot drift 2.0e-05; (105 s)
+      energy: max|dE_l|/E_l 5.21e-03; late mean +4.21e-03 (sd early 9.2e-05, late 4.8e-04); slope +2.8e-06/t; sign changes 4; first near-return t = None; at T: dE_u -5.51e-03, dE_int +2.20e-04 (of E_l)
+      charge: max drift D<=8 1.9e-06, upper 8.0e-04
+      coherence: |O_ref| at T 0.2526 (min 0.2290), arg O_ref at T -3.108 rad; purity 0.9872 -> 0.9189 (min 0.9151)
+  D64  seed 2: upper rms |u| per site 0.0265; E_tot drift 2.0e-05; (104 s)
+      energy: max|dE_l|/E_l 6.23e-03; late mean +5.18e-03 (sd early 2.9e-04, late 6.2e-04); slope +3.2e-06/t; sign changes 4; first near-return t = None; at T: dE_u -6.37e-03, dE_int +4.53e-05 (of E_l)
+      charge: max drift D<=8 1.9e-06, upper 5.8e-02
+      coherence: |O_ref| at T 0.2735 (min 0.2446), arg O_ref at T -3.138 rad; purity 0.9872 -> 0.9229 (min 0.9193)
+  D64  seed 3: upper rms |u| per site 0.0265; E_tot drift 2.0e-05; (106 s)
+      energy: max|dE_l|/E_l 7.20e-03; late mean +6.53e-03 (sd early 2.8e-04, late 6.1e-04); slope +4.1e-06/t; sign changes 0; first near-return t = None; at T: dE_u -7.43e-03, dE_int +1.56e-04 (of E_l)
+      charge: max drift D<=8 1.9e-06, upper 1.6e-03
+      coherence: |O_ref| at T 0.2627 (min 0.2435), arg O_ref at T -3.206 rad; purity 0.9872 -> 0.9198 (min 0.9138)
+CONTROL F (fixed total upper norm = D16's)
+  D32  seed 0: upper rms |u| per site 0.0100; E_tot drift 9.3e-06; (59 s)
+      energy: max|dE_l|/E_l 7.83e-04; late mean +5.65e-04 (sd early 4.3e-05, late 1.4e-04); slope +3.2e-07/t; sign changes 0; first near-return t = None; at T: dE_u -8.52e-04, dE_int +7.73e-05 (of E_l)
+      charge: max drift D<=8 1.9e-06, upper 4.4e-04
+      coherence: |O_ref| at T 0.7075 (min 0.7075), arg O_ref at T -0.603 rad; purity 0.9872 -> 0.9485 (min 0.9334)
+  D64  seed 0: upper rms |u| per site 0.0100; E_tot drift 9.3e-06; (93 s)
+      energy: max|dE_l|/E_l 5.65e-04; late mean +4.34e-04 (sd early 3.3e-05, late 9.3e-05); slope +2.4e-07/t; sign changes 0; first near-return t = None; at T: dE_u -6.21e-04, dE_int +5.41e-05 (of E_l)
+      charge: max drift D<=8 1.9e-06, upper 1.6e-03
+      coherence: |O_ref| at T 0.7128 (min 0.7128), arg O_ref at T -0.589 rad; purity 0.9872 -> 0.9502 (min 0.9345)
+
+ENSEMBLE (main runs, across seeds)
+  D16 : inter-seed |O| at T mean 0.9984 (min 0.9974; min over t 0.9974); arg O_ref spread (sd) 0.040 rad, mean -0.607; late dE_l/E_l mean +1.70e-03 (sd 4.5e-04); max|dE_l|/E_l mean 2.06e-03; near-return t ['None', 'None', 'None', 'None']
+  D32 : inter-seed |O| at T mean 0.9837 (min 0.9617; min over t 0.9617); arg O_ref spread (sd) 0.013 rad, mean -1.403; late dE_l/E_l mean +2.61e-03 (sd 4.5e-04); max|dE_l|/E_l mean 3.40e-03; near-return t ['None', 'None', 'None', 'None']
+  D64 : inter-seed |O| at T mean 0.9969 (min 0.9954; min over t 0.9950); arg O_ref spread (sd) 0.039 rad, mean -3.160; late dE_l/E_l mean +5.22e-03 (sd 8.4e-04); max|dE_l|/E_l mean 6.13e-03; near-return t ['None', 'None', 'None', 'None']

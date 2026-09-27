@@ -1,0 +1,3 @@
+D64 seed 2 DT 0.02: Q_l(0) -7.4951e-02, Q_u(0) -5.4565e-05; max |Q_u - Q_u(0)| 3.19e-06 = 4.3e-05 of |Q_l(0)|; max |Q_l - Q_l(0)| 1.43e-07; f_late +5.183e-03, slope +3.23e-06/t, E_tot drift 2.0e-05
+D16 seed 0 DT 0.02: Q_l(0) -7.4951e-02, Q_u(0) -1.4043e-03; max |Q_u - Q_u(0)| 4.48e-07 = 6.0e-06 of |Q_l(0)|; max |Q_l - Q_l(0)| 1.45e-07; f_late +1.819e-03, slope +1.14e-06/t, E_tot drift 9.6e-06
+D16 seed 0 DT 0.01: Q_l(0) -7.4951e-02, Q_u(0) -1.4043e-03; max |Q_u - Q_u(0)| 1.40e-08 = 1.9e-07 of |Q_l(0)|; max |Q_l - Q_l(0)| 4.54e-09; f_late +1.821e-03, slope +1.14e-06/t, E_tot drift 3.0e-07
