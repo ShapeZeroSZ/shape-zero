@@ -304,6 +304,10 @@ function of ĉ alone; the elementwise escape barrier is E/K³ = 1/6 for every qu
 quadratic-force well with two real roots, so φ and √5 are coordinate choices):
 - **single scalar node — holds.** −a(x − r₁)(x − r₂), r₁ ≠ r₂ real, maps to z̈ = −(z² − 1)
   by a shift, an amplitude scale and a time scale (the sign of a by z → −z).
+  [2026-09-27: **machine-verified for the single oscillator** — Prove2Me mission 8 proves
+  this for every C² solution on ℝ, in both directions, with the transformation fixed
+  before the solution; the golden-ratio well is its explicit instance. Coupled systems
+  and the other sectors below are not covered by it.]
 - **scalar β sector and the elementwise lattice — holds.** A uniform shift is a symmetry of
   every linear coupling term (the Laplacian of a constant vanishes; the velocity terms do
   not see it).
@@ -731,6 +735,7 @@ for every size, relying only on Lean's three standard axioms:
 | 5 | a Steiner triple system with at least one point admitting a **role colouring has exactly 7 points** (the count, not that it is the Fano plane) | **APPROVED — published** 2026-09-24; first solved by another solver, ours accepted as later solves (`PROVENANCE.md` §6l) |
 | 6 | **every seven-point Steiner triple system is the Fano plane** — so the role postulates force the Fano plane; defines IsFano and imports mission 5's STS and fano | **APPROVED — published** 2026-09-24 (moderator Shuze Chen); all seven theorems accepted as first solves (`PROVENANCE.md` §6l) |
 | 7 | for a = e₁, b = c e₁ + s e₂ with c² + s² = 1, the characteristic polynomial of **M = R_a + L_b** on the octonions (table built from mission 5's Fano plane) is **X²(X² + 4)(X² + (2 − 2c))²**, so the frequencies are 0, 2 and 2 sin(θ/2); milestones: the block-diagonal form and the two blocks' characteristic polynomials; motivated by the D8 flow (§1b), no claim about the model's use | proved, in review — launched 2026-09-27 05:27 UTC; all eight theorems accepted as first solves (`PROVENANCE.md` §6l) |
+| 8 | for a ≠ 0 and real roots r₁ ≠ r₂, one fixed shift and scaling of the value and one fixed rescaling of time, chosen before any solution, turn **x″ = −a(x − r₁)(x − r₂)** into **z″ = −(z² − 1)** for every C² solution on ℝ, in both directions; corollary: the golden-ratio well x″ = −(x² − x − 1) is the explicit instance, so its φ is a coordinate choice; motivated by the scaling analysis (§1b), no claim about any model's use | proved, in review — launched 2026-09-27 06:36 UTC; all five theorems accepted as first solves (`PROVENANCE.md` §6l) |
 
 Missions 5 and 6 together machine-verify **C1 Theorem 3.6 ("Roles Force Fano")**
 in full: the role postulates force 7 points (mission 5), and every STS(7) is the

@@ -500,12 +500,14 @@ with the 28-theorem running total:
 | *missions 1–5 (the 36 above)* | *8* | *28* | *36* |
 | 6 | 1 | 7 | 8 |
 | 7 | 2 | 8 | 10 |
-| **total** | **11** | **43** | **54** |
+| 8 | 0 | 5 | 5 |
+| **total** | **11** | **48** | **59** |
 
 Mission 6 (below) adds one definition (IsFano) and seven theorems; it imports
 mission 5's STS and fano as references, which are not counted again.
 Mission 7 (below) adds two definitions (the flow and the blocks) and eight
 theorems; it imports mission 5's fano as a reference, which is not counted again.
+Mission 8 adds five theorems and no definitions.
 
 **Priority, recorded as it happened.** All five mission-5 theorems were first
 solved by another solver within minutes of publication, before our proofs were
@@ -592,6 +594,21 @@ definitions (the flow and the blocks), and imports mission 5's fano as a
 reference, which is not counted again.
 
 **Running total: eight missions, 43 theorems, all machine-verified.**
+
+**Mission 8 (launched 2026-09-27, 06:36 UTC, in review): "Every quadratic-force
+oscillator is the same oscillator in different units."** For a ≠ 0 and real roots
+r₁ ≠ r₂, one fixed shift and scaling of the value and one fixed rescaling of time —
+chosen before any solution is considered — turn x″ = −a(x − r₁)(x − r₂) into
+z″ = −(z² − 1), for every twice continuously differentiable solution on ℝ, in both
+directions. The golden-ratio well x″ = −(x² − x − 1) is the explicit instance
+(m = ½, d = √5/2, ω = √(√5/2)): its φ is a coordinate choice. The mission is
+motivated by the scaling analysis (MODEL_SPEC §1b) and makes no claim about how any
+model uses it. All five theorems — three milestones (the force in shifted, scaled
+form; the choice of the sign of d; the chain rule for the rescaling), the goal and
+the golden-ratio corollary — were proved and accepted as **first solves**, submitted
+within four seconds of launch. It adds 5 theorems and no definitions.
+
+**Running total: nine missions, 48 theorems, all machine-verified.**
 
 ## 6m. J-compatibility — the one premise, classified CHOSEN
 
