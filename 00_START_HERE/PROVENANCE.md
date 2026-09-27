@@ -1357,6 +1357,58 @@ units, so the golden-ratio well's φ is a coordinate choice. The origin recorded
 consistent with that: φ was neither derived from the premise nor needed by the
 dynamics; it is a label, and in the force law a choice of units.
 
+## 6s. The populated tower under (A′) — PARTIAL (2026-09-27)
+
+Sequence: `shape_zero_tests/tower_env_test.py` (E1–E3b; predictions 6e49d2d, output 38c08af; no
+document change then) started the upper components at zero, an invariant set under (A′). Under
+non-isolation (PREMISE_LEDGER P0) every level is populated, so `tower_populated_test.py` reran it
+with every upper component incoherent at low amplitude. Hypotheses, the criteria for
+"environment" and "not an environment", and the predictions were committed with the script before
+any run (bc7c827); output and post-hoc checks 9acb9c0. The first launch stopped at `import numpy`
+(not installed in the container) before any dynamics ran; the output is from the second launch.
+
+**Recorded result: PARTIAL under the criteria as pre-registered** (MODEL_SPEC §4b.1, "MEASURED
+2026-09-27"; PREMISE_LEDGER C47): (a) secular loss not met — the D ≤ 8 part **gains** energy, one
+way, below 1%; (b) growth with D met; (c) no return met; (d) dephasing not met — coherence kept.
+
+**Misses against the committed predictions:**
+- P2: max\|ΔE_l\|/E_l predicted in 1×10⁻⁵ – 1×10⁻³; observed 1.2×10⁻³ – 7.2×10⁻³.
+- P2: \|seed-mean late ΔE_l/E_l\| predicted < 1×10⁻³; observed +1.7×10⁻³, +2.6×10⁻³, +5.2×10⁻³
+  (D16, D32, D64) — and of positive sign: a gain, where the hypotheses framed any secular flow as
+  a loss toward equipartition.
+- P2: more than 3 sign changes predicted; observed 0–8, several runs 0 or 2.
+- P2: total energy conserved to ≤ 1×10⁻⁶ predicted; observed 9.3×10⁻⁶ – 2.0×10⁻⁵.
+- P3: a finite first near-return time at every D and seed predicted; there is none in any run.
+- P1 (upper part): charge conserved to ≤ 1×10⁻⁵ relative predicted; observed up to 5.8×10⁻²
+  relative (D64 seed 2).
+- P4: overlap with the isolated packet at T predicted in 0.3–0.99; D64 gave 0.24–0.27.
+- P4: chirality purity change predicted < 0.01; observed 0.044–0.068 (the isolated reference itself
+  changes by 0.038, which the prediction did not anticipate).
+- The predicted verdict, NOT AN ENVIRONMENT, was wrong: PARTIAL.
+
+**Hits:** P1 for the D ≤ 8 charge (1.9×10⁻⁶, as isolated); P2's growth factor of max\|ΔE_l\| from
+D16 to D64 between 1 and 3 (observed 2.98); P2's control F not growing (it falls); P4's
+inter-realisation overlap > 0.95 (min 0.962) and phase spread < 0.3 rad (≤ 0.04), the phase drifting
+negative with magnitude in 0.3–20 rad (0.55–3.21) and growing with D; P5, the empty tower
+reproducing the isolated D8 node exactly (0.0).
+
+**Post-hoc checks — written after the output was seen** (`tower_populated_checks.py`, output
+`tower_populated_checks_output.txt`; not part of the pre-registered test):
+1. The upper-part charge: the both-branch incoherent state carries nearly cancelling charge
+   (Q_u(0) = −5.5×10⁻⁵ at D64 seed 2, against Q_l(0) = −7.5×10⁻²), so the relative drift had a
+   near-zero denominator. In units of \|Q_l(0)\| the drift is 4.3×10⁻⁵ (D64 seed 2) and 6.0×10⁻⁶
+   (D16 seed 0), and it falls 32× at DT = 0.01 (to 1.9×10⁻⁷): integration error, not flow.
+2. The time step: D16 seed 0 at DT = 0.01 gives late ΔE_l/E_l = +1.821×10⁻³ against +1.819×10⁻³ at
+   DT = 0.02; slope unchanged (+1.14×10⁻⁶ per unit time); total-energy drift 3.0×10⁻⁷ against
+   9.6×10⁻⁶. The gain is not an integration artifact; the P2 energy-drift miss is integration
+   accuracy.
+
+**Untested hypothesis — the parametric-heating reading.** The D ≤ 8 part feels the upper levels only
+as a random, site- and time-dependent extra stiffness Δ = \|u\| − \|u_l\|; an oscillator driven by
+random stiffness modulation absorbs energy on average, whatever the sign of each fluctuation. This
+reading is consistent with the sign being the same in every realisation, with the roughly linear
+growth, and with control F, but it has **not been tested**.
+
 ## 7. Recurring failure modes
 
 Each has produced at least two errors in this programme.
