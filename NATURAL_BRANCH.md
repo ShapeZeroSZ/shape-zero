@@ -74,6 +74,87 @@ produce.
     derivatively coupled, so it gives no inverse-square attraction between masses, and it would cost
     `main` its chirality branches and κ\*. The GPU inside-out program is not worth running as a test.
 
+## The gravity arc — summary (closed 2026-09-27)
+
+*This section is added, not a replacement: the entries above stand as written. Sources:
+`natural/CPG_PILOT_PREDICTIONS.md`, `cpg_pilot_output.txt`, `RING_FORK.md`,
+`CPG_PILOT2_PREDICTIONS.md`, `CPG_PILOT2_REPORT.md`, `RESIDUAL_HYPOTHESES.md` and
+`RESIDUAL_SCOPE.md`.*
+
+**1. CP-G (gravity as a consequence, not an ingredient): NOT SUPPORTED — on both backgrounds.**
+- **Around the empty vacuum** (first pilot): every mode is gapped. The smallest |ω| is 1.0864, and a
+  static influence is Yukawa with ξ = 0.71 sites. The one inside route with a massless mode, the
+  ring node, is recorded as a fork, not adopted: its Goldstone is scalar and derivatively coupled.
+- **Around the populated background that P0 requires** (second pilot; 17 hits, 12 misses against
+  99131c0):
+  - the conserved densities are gapless, but their transport is ballistic — a two-quasiparticle
+    continuum |ω| ≤ v_max q, with no diffusion and no sound within reach;
+  - there is **no long-range static response**: Yukawa with the populated operator Q + ⟨|ψ_B|⟩, and
+    a range *shorter* than in the vacuum (0.7220 against 0.7233);
+  - there are no power-law correlations;
+  - the one long-range effect, a lump draining the background, has a **sink strength that follows
+    the lump's radius profile |u|, not its energy**. a- and b-lumps whose energies differ 1.89×
+    drain identically, and an A′ packet feels the depletion only as a scalar 1/r³ refraction.
+
+**2. Target 4 (the residual as a Le Sage-type shadow medium): FALSIFIED as scoped.** The frozen
+property list R1–R7 was committed at f20137d, and the falsifiers at 6badcc3, before evaluation.
+- **Decisive:**
+  - **F2:** under R2 the residual absorbs itself, with a mean free path c²h/(4πG) ≤ 11 km at the
+    shielding bound h ≤ 10⁻²² m²/kg (Eckhardt 1990, lunar laser ranging). R4 needs ≳ 10¹³ m.
+  - **F4:** drag below the orbit bound needs the shadow speed u ≥ 5×10²¹ c, but
+    −3×10⁻¹⁵ < (c_g − c)/c < 7×10⁻¹⁶ (GW170817).
+  - **F7:** under A′, absorption follows |u|, so composition dependence is O(1), against
+    MICROSCOPE's η ≲ 10⁻¹⁵.
+  - **F8:** light is deflected like a Newtonian corpuscle (γ-equivalent 0), against
+    γ = 1 ± 2×10⁻⁵ (Cassini).
+  - **F9:** the clock shift follows the ∝ 1/r² deficit, not the potential, against redshift ∝ ΔΦ
+    to 10⁻⁴–10⁻⁵ (GP-A; Galileo 5 and 6).
+  - **F11:** the shadow dynamics has no tensor polarisations, against the LIGO/Virgo polarisation
+    tests and binary-pulsar damping.
+- **Survivable only through counted escapes:**
+  - **F5:** heating ≥ 1.3×10⁴³ W/kg against ≈ 8×10⁻¹² W/kg (Earth's heat budget). Needs R5's
+    hidden channel.
+  - **F6:** unreplenished depletion gives |Ġ/G| ≥ 1.3×10⁻¹¹ yr⁻¹ against ≲ 10⁻¹³ yr⁻¹ (LLR).
+    Makes R7 compulsory.
+  - **F10:** a uniform energy density ≥ 8.4×10³⁴ J/m³ ≈ 10⁴⁴ ρ_crit c². Needs the residual to be
+    exempt from gravitating, which contradicts R2.
+
+**3. The core reason.** A shadow needs net, sustained, one-way absorption. `main`'s lattice is
+closed, conservative (passive) and fully populated (P0), and such a system re-emits what it absorbs:
+in the steady state absorption equals emission everywhere (Kirchhoff), so it **cannot hold a steady
+shadow**. Every gravity-like effect it does produce is transient (the pilot's sink), or scalar and
+short-range.
+
+**4. Conclusion: in this model, gravity must be an ingredient.** Its form is the **spin-2 form of
+target 3** — linearised general relativity, γ = 1, tensor waves — added as a counted selection. Its
+count, from the table below:
+- 5 parameters plus a state;
+- 7 discrete selections (the 6 of the joint scope, plus spin-2);
+- ~9 conditions;
+- **8 firm predictions**: the joint 6, frame dragging, and the κ-gradient force HELD at −0.23%.
+Light bending and tensor waves do not count: they motivated the selection. The joint theory is
+still below 1:1 with selections counted. **Not built, not adopted** — the ledger stays empty.
+
+**5. Open question — recorded as a question, not a claim.**
+- Every route to emergent gravity tried here failed for the same missing thing: a **one-way sink,
+  i.e. irreversibility**.
+  - The empty vacuum has nothing to absorb.
+  - The populated background absorbs only transiently.
+  - A shadow medium needs a drive that a passive lattice forbids.
+- **Irreversibility is also what the model lacks for an arrow of time.** Its dynamics is
+  conservative and time-reversal symmetric, apart from the gyroscopic κ, which reverses under
+  T together with the chirality.
+- **The one widely respected derivation of emergent gravity**, Jacobson's (T. Jacobson,
+  "Thermodynamics of Spacetime: The Einstein Equation of State", PRL 75, 1260 (1995)), obtains the
+  Einstein equations from δQ = T dS applied to local causal horizons. That is a thermodynamic
+  premise: entropy and heat flow across a one-way boundary.
+- **Open:**
+  - whether an irreversible ingredient — a coarse-graining, a horizon, or a genuine sink — would
+    turn `main`'s gapless conserved densities into a source of long-range gravity;
+  - whether the same ingredient would supply the arrow of time;
+  - and what it would cost in the count.
+- **Nothing here is scoped, tested or adopted.**
+
 ## The count
 
 *Primary measure from target 3 on: the **joint** count of targets 1 and 2 (rows marked joint).*
