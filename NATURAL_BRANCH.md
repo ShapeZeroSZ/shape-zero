@@ -63,6 +63,8 @@ kinematic**.
 | *projected:* target 1 as scoped, if built | 5 (+2 discrete selections) | ~7 (8) | 5 (6) | **not built, not adopted** — `natural/EM_SCOPE.md` §5 |
 | *projected:* target 2 as scoped, if built | 4 (G free; c_g selected; β̂ → a state) + ≥ 4 discrete selections | ~7 | 5 | **not built, not adopted** — `natural/GRAVITY_SCOPE.md` §5; no improvement; equivalence principle violated in the κ sector unless a selection removes it |
 | ***joint*** *(projected, primary measure):* targets 1 + 2 as scoped, if built | **5** + a state (+ **6 (+1)** discrete selections) | ~9 (10) | **6 (7)** | **not built, not adopted** — `natural/JOINT_SCOPE.md` (d); beats the separate sum (6 / 7 (+1) / 5); fitting level against the baseline with selections counted; the κ-sector equivalence-principle violation of target 2 alone is removed, the coupling being forced by gauge invariance |
+| ***joint, after the candidate review*** (`natural/JOINT_PREDICTIONS.md`) | 5 + a state (+ 6 discrete selections) | ~9 | **6 firm** (+2 open: κ-gradient force, lump scaling) | **FALSIFIED as scoped:** two genuine predictions fail against nature — light deflection / Shapiro at PPN γ = 0 (half the observed bending), and scalar rather than tensor gravitational radiation |
+| ***joint, repaired by a spin-2 selection*** *(projected)* | 5 + a state (+ **7** discrete selections) | ~9 | **7 firm** (frame dragging added; light bending and tensor waves do not count, having motivated the selection) (+2 open) | neutral repair: +1 selection, +1 prediction; still below 1:1 with selections counted |
 
 ## Adaptation ledger
 
