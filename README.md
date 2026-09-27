@@ -108,6 +108,8 @@ that, so together they machine-verify C1 Theorem 3.6 ("Roles Force Fano").
   [**2026-09-27: answered** — for a fixed bump the frequency shift has no limit, while the golden-rule
   scattering rate does (q = 2 within 0.7%) and carries the pin's nonreciprocity. **Open:** q = 3 rate
   convergence to be confirmed (MODEL_SPEC §5b.6a).]
+  [**2026-09-27: closed** — q = 3 rates within 0.16% of the continuum at side 256; census of
+  universal relations in `UNIVERSAL_RELATIONS.md`.]
 - ~~Formal proof that every seven-point Steiner triple system is the Fano plane.~~
   [Done 2026-09-24: Prove2Me mission 6, approved and published.]
 

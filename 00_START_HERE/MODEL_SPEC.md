@@ -2709,7 +2709,22 @@ V·Γ/S² = π s² / ((2π)^q |d′_k|) ∫ |Φ(p − k)|² δ(d_p(ω_k)) d^q p.
   included the probe's own term. At q = 1 a broadened box sum is not a valid rate estimator (it picks up
   the forward modes next to the probe).
 
-**Open:** q = 3 rate convergence to be confirmed.
+**Open:** q = 3 rate convergence to be confirmed. [**CLOSED 2026-09-27 — below.**]
+
+**q = 3 RATE CONVERGENCE CONFIRMED; ν NOT UNIVERSAL (2026-09-27).** (Predictions committed first,
+db25603; results 07d12cd; `shape_zero_tests/joint5_rate2.py`, `joint5_rate2_A.txt`, `joint5_rate2_A2.txt`,
+`joint5_rate2_B.txt`.) The q = 3 box rates meet the continuum shell integral **within 0.16% at side 256**
+(+k 87.06, −k 88.89 against 87.198, 88.750; within 0.8% at side 192), and the continuum is **stable to
+five digits** across transverse grids 600²–2000². **Γ(+k) − Γ(−k) = −1.552, ν = −1.76%**, set by the
+continuum integral. **Miss (Q2):** the committed estimator — linear extrapolation of the broadening to
+zero from its two smallest values — gives −1.84 at side 256, and at smaller broadening the box sums turn
+grainy (−2.90, −0.37, −2.21 at sides 256, 320, 384); a fixed-broadening average (0.0125) gives −1.52 ± 0.1,
+**an estimator chosen after the miss**. **ν is not universal:** it falls roughly as 1/σ² (Gaussian σ = 1 → 6:
+−3.15% → −0.14% at q = 2, −4.63% → −0.27% at q = 3) and depends on shape at equal rms width (sech² vs
+Gaussian 9–11%; two bumps vary with their separation). **Only the wide-bump limit ν → 0 at k = π/2 is
+universal**: there |∂_p d| = 2c and |d′_k| are identical for ±k, and the nonreciprocity enters only through
+the shell's O(β) curvature, weighted by the bump's shape. Census of the model's universal relations:
+`UNIVERSAL_RELATIONS.md`.
 
 **On (1,3):** the spectral behaviour singles out q = 1 and says **nothing about
 how many** spatial dimensions follow — q = 2 and q = 3 fail identically. It is a

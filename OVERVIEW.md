@@ -2,6 +2,8 @@
 
 **The claim.** Shape Zero is a lattice model in which each node carries internal oscillators with a complex structure J and neighbouring nodes are coupled by velocity-dependent link matrices. Requiring the couplings to do no net work (passivity) and to respect J fixes the space of allowed couplings to the dimension of u(n) — u(1), u(2) and u(3) at node sizes n = 1, 2, 3 (`README.md`; `00_START_HERE/MODEL_SPEC.md` §3).
 
+**Universal relations** — the results that hold independently of the genuine parameters, and how many conditions they place on them: [`UNIVERSAL_RELATIONS.md`](UNIVERSAL_RELATIONS.md).
+
 **Scope.** The current target is a closed theory of a passive lattice with complex structure J and emergent u(n). The model is dimensionless and takes its units as inputs (`MODEL_SPEC.md` §1b); it is not presented as a theory of nature, and it makes no claims about consciousness or about deriving ℏ, G or Λ.
 
 ## Machine-proved (Lean 4, [Prove2Me](https://prove2.me); list in `00_START_HERE/PROVENANCE.md` §6l)
@@ -38,7 +40,7 @@
 - **J-compatibility as a consequence** of the dynamics rather than an adopted principle (`MODEL_SPEC.md` §3).
 - ~~**The q ≥ 2 stiffness-coupling coefficient C_q(N)**: the pin shift δ(Δω) = −¼βs²S² (joint #5) converges with box size at q = 1 (0.6%) but not at q ≥ 2 (spread 244% at q = 2, 243% at q = 3, with sign flips), and no mechanism is named (`MODEL_SPEC.md` §5b.6a; `PROVENANCE.md` §6i).~~ [2026-09-27: mechanism named, limit shown not to exist — the kernel grows as 1/p⊥² transverse to the probe.]
 - ~~**The correct infinite-volume observable for a localised stiffness bump at q ≥ 2**: the second-order coefficient C_q(N) has no limit there (`MODEL_SPEC.md` §5b.6a, "MECHANISM NAMED").~~ [2026-09-27: answered — the golden-rule scattering rate, which carries the pin's nonreciprocity.]
-- **q = 3 rate convergence to be confirmed**: the scattering rate is converged at q = 2 and −2.6% from its limit at side 96 at q = 3 (`MODEL_SPEC.md` §5b.6a).
+- ~~**q = 3 rate convergence to be confirmed**: the scattering rate is converged at q = 2 and −2.6% from its limit at side 96 at q = 3 (`MODEL_SPEC.md` §5b.6a).~~ [CLOSED 2026-09-27: within 0.16% at side 256.]
 - **A continuum limit**, stated or explicitly refused: ĉ is a length unit only in that limit, which is not taken (`MODEL_SPEC.md` §1b).
 - **A prediction with more independent conditions than parameters** (`03_current/SCALE_SCOPING.md`, "Success").
 
