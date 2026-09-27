@@ -1,0 +1,42 @@
+CHIRALITY COMPARISON OF UNIVERSAL REFRACTION WITH MATCHED TRAJECTORIES -- HYPOTHESIS, CRITERIA AND
+PREDICTIONS (committed with the script, before any run), 2026-09-27.
+Test: shape_zero_tests/tower_chirality_matched_test.py. Recorded result under retest: PREMISE_LEDGER C50,
+MODEL_SPEC 4b.1 "TESTED 2026-09-27 -- pair creation ...", PROVENANCE 6v (REFUTED under the literal
+criterion, with a trajectory confound).
+
+DISCLOSURE. Some of these numbers have been seen: the post-hoc check (tower_pairs_refraction_checks.py)
+ran matched-trajectory gradient probes at D16 only (dp a = b = -1.5482e-3, -1.0540e-3, -1.4141e-3 and dx
+= -0.0848, -0.0421, -0.0009 sites at k0 = pi/4, pi/2, 3pi/4; b/a = 1.0000), and the earlier test ran
+uniform-background phase probes at D16, D32, D64 with the b-branch on the opposite trajectory (dK_eff
+identical to six digits). New here: the matched-trajectory phase comparison at every carrier and node
+size, the gradient at D32, D64 and D128, D128 at all, the incoherent background with matched
+trajectories, and the mirrored gradient.
+
+HYPOTHESIS. A' has one radius shared by every component, so a populated background enters every weak
+D <= 8 packet as the same extra stiffness dK = sqrt(s); the a-branch (w_a^2 + kappa w_a = Q + dK) and the
+b-branch (w_b^2 - kappa w_b = Q + dK) then shift by the same dw = dK/(2 w_a + kappa), and on the same
+path feel the same force on the physical wavenumber, dp/dt = -d_x sqrt(s)/(2 w_a + kappa). Nothing in
+this depends on which upper components carry s, so it is independent of node size.
+
+CRITERIA (fixed in advance).
+ UNIVERSAL (SUPPORTED) if all:
+  (i)   P: |b/a - 1| of dK_eff <= 1e-3 at every carrier and node size;
+  (ii)  P: |D/D16 - 1| of dK_eff <= 1e-3 for every kind and node size;
+  (iii) G: |b/a - 1| of dp and of dx <= 1e-2 at every carrier and node size, and |D/D16 - 1| of dp <= 1e-2;
+  (iv)  every probe's wavenumber pushed away from the denser region: dp < 0 in G and dp > 0 in GM.
+ NOT UNIVERSAL (REFUTED) if any matched |b/a - 1| or |D/D16 - 1| (P or G) exceeds 5e-2, or any probe's
+  wavenumber is pushed toward the denser region.
+ Otherwise PARTIAL.
+
+PREDICTIONS
+ P  |b/a - 1| <= 1e-4 and |D/D16 - 1| <= 1e-4 everywhere; dK_eff/sqrt<s> in [0.990, 0.997] (the probe's
+    own amplitude lowers it by a few parts per thousand); dw = dK_eff/(2 w_a + kappa), about 2.84e-3,
+    2.35e-3, 2.05e-3 at k0 = pi/4, pi/2, 3pi/4.
+ I  |b/a - 1| <= 5e-3 at each node size (same realisation, same path); dK_eff/<sqrt s> in [0.97, 1.03].
+ G  |b/a - 1| <= 1e-3 for dp and dx; |D/D16 - 1| <= 1e-3; dp < 0 for every probe; dp/dp_ray in
+    [0.99, 1.01]; dx within 5e-3 sites of dx_ray; at every node size dp and dx equal the D16 values
+    disclosed above to the printed digits.
+ GM dp > 0 for a and b at D16 and D64; b/a within 1e-3; dp/dp_ray in [0.99, 1.01].
+
+PREDICTED OUTCOME: UNIVERSAL -- a chirality- and node-size-independent stiffness shift, with the
+wavenumber pushed away from the denser region.
