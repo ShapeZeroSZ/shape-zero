@@ -1,0 +1,4 @@
+1. sum rule, 5000 random draws (2-D, oblique, anisotropic, kappa 0-30):
+   worst |sum_pos d_omega - 2*(2 beta c sin k0)| = 1.23e-13   (largest imaginary part of any root 3.9e-15)
+2. slow branch, isotropic: worst |d_omega_a - exact form| = 5.44e-15;  first-order form b(1 - kappa/sqrt(kappa^2 + 4Q)) off by at most 8.78e-06 (O(b^3), beta = 0.05)
+3. kappa = 0: worst |d_omega - 2 beta c sin k| on either branch = 6.77e-15

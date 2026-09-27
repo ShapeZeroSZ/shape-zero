@@ -544,6 +544,233 @@
    "status": []
   },
   {
+   "file": "./REALISATION.md",
+   "line": 3,
+   "section": "Realisation \u2014 gyroscopic metamaterials (scoping)",
+   "text": "*Recorded 2026-09-27 on the branch `realisation-gyroscopic`, not on main. A scoping report:",
+   "numbers": [
+    "2026",
+    "09",
+    "27"
+   ],
+   "status": []
+  },
+  {
+   "file": "./REALISATION.md",
+   "line": 10,
+   "section": "Realisation \u2014 gyroscopic metamaterials (scoping)",
+   "text": "\"Topological mechanics of gyroscopic metamaterials\", *PNAS* 112(47), 14495 (2015); arXiv:1504.03362.",
+   "numbers": [
+    "112",
+    "47",
+    "14495",
+    "2015"
+   ],
+   "status": []
+  },
+  {
+   "file": "./REALISATION.md",
+   "line": 43,
+   "section": "1. The platform, from the papers",
+   "text": "- gyroscopes spun by DC motors at about 300 Hz;",
+   "numbers": [
+    "300"
+   ],
+   "status": []
+  },
+  {
+   "file": "./REALISATION.md",
+   "line": 46,
+   "section": "1. The platform, from the papers",
+   "text": "- non-idealities: about 10% spread in motor speed, position error, next-nearest-neighbour coupling, and",
+   "numbers": [
+    "10"
+   ],
+   "status": []
+  },
+  {
+   "file": "./REALISATION.md",
+   "line": 60,
+   "section": "1. The platform, from the papers",
+   "text": "- the interaction scale is \u03a9_k = \u2113\u00b2k_m/(I\u03c9), with \u03a9_k/\u03a9_p\u2070 = 0.67 in the experiments;",
+   "numbers": [
+    "0.67"
+   ],
+   "status": []
+  },
+  {
+   "file": "./REALISATION.md",
+   "line": 87,
+   "section": "2. Parameter mapping and the large-\u03ba\u0302 limit",
+   "text": "| \u0109 = c/K | \u03a9_k/(2\u03a9_g) for springs: 0.5 in [N] Fig. 1 (\u03a9_g = \u03a9_k); about 0.3 at [M]'s \u03a9_k/\u03a9_p\u2070 = 0.67 (\u03a9_k is only the scale of \u03a9^\u00b1, so this is an order of magnitude). The model has \u0109 = 1/\u221a5 = 0.447. |",
+   "numbers": [
+    "0.67"
+   ],
+   "status": []
+  },
+  {
+   "file": "./REALISATION.md",
+   "line": 88,
+   "section": "2. Parameter mapping and the large-\u03ba\u0302 limit",
+   "text": "| \u03ba\u0302 = \u03ba/\u221aK | \u221a(\u03c9_nut/\u03a9_g), since \u03a9_g = K/\u03ba. The papers do not give I\u2083/I_p; for I\u2083/I_p between 0.05 and 0.5, \u03c9_s \u2248 300 Hz and \u03a9_g \u2248 1 Hz give **\u03ba\u0302 \u2248 4\u201312** (our estimate). The model's floor value is \u03ba\u0302\\* = 0.6498. |",
+   "numbers": [
+    "0.05",
+    "300",
+    "12"
+   ],
+   "status": []
+  },
+  {
+   "file": "./REALISATION.md",
+   "line": 99,
+   "section": "2. Parameter mapping and the large-\u03ba\u0302 limit",
+   "text": "**Reaching \u03ba\u0302\\* \u2248 0.65 means slowing the spin.** On our estimate the spin must drop by a factor of about",
+   "numbers": [
+    "0.65"
+   ],
+   "status": []
+  },
+  {
+   "file": "./REALISATION.md",
+   "line": 100,
+   "section": "2. Parameter mapping and the large-\u03ba\u0302 limit",
+   "text": "40\u2013350, to roughly 1\u20138 Hz.",
+   "numbers": [
+    "40",
+    "350"
+   ],
+   "status": []
+  },
+  {
+   "file": "./REALISATION.md",
+   "line": 131,
+   "section": "3. The J-breaking bond term",
+   "text": "| repulsive point dipoles, moments held vertical, V \u221d 1/r\u00b3 | \u22121/4 | **5/3** | **our idealisation**: k\u2225 = V\u2033 = 12A/a\u2075, k\u22a5 = V\u2032/a = \u22123A/a\u2075; [M] reports only the sign (\"anti-restoring\") |",
+   "numbers": [
+    "1/4",
+    "5/3"
+   ],
+   "status": []
+  },
+  {
+   "file": "./REALISATION.md",
+   "line": 221,
+   "section": "4. \u03b2 \u2014 no counterpart",
+   "text": "- **Sum rule:** 5000 random draws on a 2-D lattice, with oblique bonds, k\u22a5/k\u2225 from \u22120.4 to 1.5, \u03ba from 0",
+   "numbers": [
+    "5000"
+   ],
+   "status": [
+    "SAMPLED"
+   ]
+  },
+  {
+   "file": "./REALISATION.md",
+   "line": 222,
+   "section": "4. \u03b2 \u2014 no counterpart",
+   "text": "to 30, and any k\u2080 and k\u2081. Worst deviation **1.2 \u00d7 10\u207b\u00b9\u00b3**.",
+   "numbers": [
+    "30",
+    "10"
+   ],
+   "status": []
+  },
+  {
+   "file": "./REALISATION.md",
+   "line": 223,
+   "section": "4. \u03b2 \u2014 no counterpart",
+   "text": "- **Slow-branch exact form:** worst deviation 5 \u00d7 10\u207b\u00b9\u2075. The first-order form is off by at most",
+   "numbers": [
+    "10"
+   ],
+   "status": []
+  },
+  {
+   "file": "./REALISATION.md",
+   "line": 224,
+   "section": "4. \u03b2 \u2014 no counterpart",
+   "text": "9 \u00d7 10\u207b\u2076 at \u03b2 = 0.05.",
+   "numbers": [
+    "10"
+   ],
+   "status": []
+  },
+  {
+   "file": "./REALISATION.md",
+   "line": 225,
+   "section": "4. \u03b2 \u2014 no counterpart",
+   "text": "- **\u03ba = 0:** each branch alone gives 2\u03b2c sin k to 7 \u00d7 10\u207b\u00b9\u2075, for any anisotropy.",
+   "numbers": [
+    "10"
+   ],
+   "status": []
+  },
+  {
+   "file": "./REALISATION.md",
+   "line": 235,
+   "section": "5. The census, row by row",
+   "text": "| 1 | \u0394\u03c9 = 2\u03b2c sin k | Motors off (\u03ba = 0): pendula in a ring with bond rotors. Measure the \u00b1k standing-wave splitting at several k. At \u03ba = 0 this is exact for any anisotropy (the stiffness independence is tested by varyi",
+   "numbers": [
+    "0.05"
+   ],
+   "status": []
+  },
+  {
+   "file": "./REALISATION.md",
+   "line": 237,
+   "section": "5. The census, row by row",
+   "text": "| 3 | q = 1 pin shift \u2212\u00bc\u03b2s\u00b2S\u00b2, shape-independent | Row 1's chain plus a pinning bump K(x) = K\u2080(1 + S\u03b7(x)), set by per-site coil currents (native to [M]). The signal is small: at S = 0.02 and k = \u03c0/2, \u03b4(\u0394\u03c9)/\u0394\u03c9 \u2248 2.5 \u00d7 10\u207b",
+   "numbers": [
+    "0.02",
+    "10",
+    "0.05"
+   ],
+   "status": []
+  },
+  {
+   "file": "./REALISATION.md",
+   "line": 238,
+   "section": "5. The census, row by row",
+   "text": "| 4 | \u03ba\u0302 \u2265 2\u0109/\u221a(1 + 2\u0109) | The inequality can be measured from single-site and band spectroscopy. It holds trivially (\u03ba\u0302 \u2248 4\u201312 against a floor of about 0.5 at \u0109 \u2248 0.33). What the floor protects is J-compatibility of the ",
+   "numbers": [
+    "12",
+    "0.33"
+   ],
+   "status": [
+    "FAILED"
+   ]
+  },
+  {
+   "file": "./REALISATION.md",
+   "line": 244,
+   "section": "5. The census, row by row",
+   "text": "| 10 | structural (missions 1, 2, 4a, 5, 6) | not measurements. Mission 1's n = 1 case says the allowed J-commuting coupling is the isotropic part \u2014 the k\u2225 = k\u22a5 condition of \u00a73. | \u2014 |",
+   "numbers": [
+    "10"
+   ],
+   "status": []
+  },
+  {
+   "file": "./REALISATION.md",
+   "line": 245,
+   "section": "5. The census, row by row",
+   "text": "| 11 | small-amplitude reduction | an internal check | \u2014 |",
+   "numbers": [
+    "11"
+   ],
+   "status": []
+  },
+  {
+   "file": "./REALISATION.md",
+   "line": 265,
+   "section": "7. Bottom line",
+   "text": "as c (springs) or larger (magnets, 5/3 in our idealisation). It has no \u03b2.",
+   "numbers": [
+    "5/3"
+   ],
+   "status": []
+  },
+  {
    "file": "./UNIVERSAL_RELATIONS.md",
    "line": 3,
    "section": "Universal relations \u2014 a census",
@@ -30121,6 +30348,24 @@
    "docstring": ""
   },
   {
+   "file": "./shape_zero_tests/gyro_beta.py",
+   "lines": 61,
+   "banner": false,
+   "blocked": false,
+   "fixes": [],
+   "predictions": 0,
+   "docstring": " gyro_beta.py -- the scalar beta asymmetry placed on GYROSCOPIC (kappa) nodes, with isotropic or J-breaking (anisotropic) bond stiffness (REALISATION.md sec 4).  WHY. The model's beta sector is scalar"
+  },
+  {
+   "file": "./shape_zero_tests/gyro_sumrule_verify.py",
+   "lines": 112,
+   "banner": true,
+   "blocked": false,
+   "fixes": [],
+   "predictions": 0,
+   "docstring": " gyro_sumrule_verify.py -- verification of the TWO-BRANCH SUM RULE (REALISATION.md sec 4).  STATUS: FOUND, THEN VERIFIED -- NOT PREDICTED. The rule was noticed in the output of gyro_beta.py (2026-09-2"
+  },
+  {
    "file": "./shape_zero_tests/j_compat_test.py",
    "lines": 161,
    "banner": false,
@@ -30896,7 +31141,7 @@
   }
  ],
  "counts": {
-  "doc_claims": 2425,
-  "scripts": 190
+  "doc_claims": 2446,
+  "scripts": 192
  }
 }
