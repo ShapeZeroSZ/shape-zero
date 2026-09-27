@@ -79,3 +79,45 @@ parameter cost.**
 - **Against the baseline (3 parameters, 4 strict):** the joint count beats the sum of the
   separate counts, but it **does not beat the baseline** once the discrete selections are counted,
   as the charter requires. On numeric parameters alone the strict ratio is 6/5 against 4/3.
+
+---
+
+## LATE HYPOTHESIS L1 (added after J1–J3 ran; committed before check J4 was written or run)
+
+*The file cannot contain its own commit, so this block's commit hash and time are recorded in
+`JOINT_SCOPE.md`. The original hypotheses above were committed at d054844
+(2026-09-27T18:53:50Z), and J1–J3 ran and were reported at ca6a63c (2026-09-27T19:02:00Z).*
+
+**Statement (as requested).** In the joint theory, gauge invariance requires gravity to couple to
+the gauge-invariant energy, not the lab-frame energy. So the rotating-frame coupling that removes
+the gyroscopic equivalence-principle violation is **forced, not selected**.
+- This was already stated as H1 ("forced") and tested as J2, with predictions committed at
+  d054844 and results at ca6a63c: 0.9959 / 0.9959. **J2 shows the outcome, not the reason.**
+
+**What is new here — a test of the reason (J4).** In the joint theory a uniform κ is a uniform
+potential eA₀ = κ/2. Moving to a frame rotating at rate ν is then a gauge transformation: it moves
+ν of the frame rotation into A₀. The gyroscopic term becomes κ_ν = κ − 2ν and the stiffness
+K_ν = K + νκ − ν², with K_ν + κ_ν²/4 = K + κ²/4 unchanged.
+- **A coupling to "lab energy"** means the energy in whatever frame the lapse is attached to. In
+  frame ν it gives
+
+  a/(−cg) = (ω_rot ∓ (κ/2 − ν))/ω_rot,  ω_rot = √(K + κ²/4) = 1.5723,
+
+  **which depends on ν, i.e. on the gauge.** A physical prediction that depends on the gauge is
+  inconsistent, so gauge invariance rules that coupling out.
+- **The gauge-invariant coupling** gives the same result, 1.000, in every gauge.
+
+**Predictions (J4)** — κ = κ\*, K = √5, a/(−cg):
+
+| ν | lab-type coupling, a-branch / b-branch | gauge-invariant coupling, both |
+|---|---|---|
+| −κ/2 | 0.382 / 1.618 | 1.000 |
+| 0 | 0.691 / 1.309 | 1.000 |
+| κ/4 | 0.846 / 1.155 | 1.000 |
+| κ/2 | 1.000 / 1.000 | 1.000 |
+
+All within the scalar sector's accuracy at this setting (0.996).
+
+**Count prediction:** the joint count has one fewer discrete selection than the separate counts
+(already H1: 6 (+1) against 7 (+1)). It is justified only if J4 holds — only if the coupling is
+forced rather than chosen.
