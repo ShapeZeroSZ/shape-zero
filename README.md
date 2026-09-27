@@ -1,5 +1,7 @@
 # Shape Zero
 
+**New here? Start with [`OVERVIEW.md`](OVERVIEW.md)** — a one-page on-ramp: the claim, what is proved, measured, chosen and open, and how to run the model.
+
 A research archive for a lattice model in which gauge structure arises from a
 single rule. Each node carries internal oscillators with a complex structure J;
 neighbouring nodes are coupled by velocity-dependent link matrices. Requiring
