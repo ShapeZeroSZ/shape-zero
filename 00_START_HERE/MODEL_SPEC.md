@@ -994,6 +994,35 @@ listed in PROVENANCE §6s. **Untested hypothesis** (recorded, not established): 
 parametric heating — the D ≤ 8 part absorbs energy from the random, site- and time-dependent
 stiffness Δ = \|u\| − \|u_l\| that the populated upper levels impose.
 
+**TESTED 2026-09-27 — parametric heating SUPPORTED; the refractive reading SUPPORTED** (under the
+criteria as pre-registered; `shape_zero_tests/tower_heating_test.py`, hypothesis, criteria and
+predictions committed first, 4b82759; output `tower_heating_output.txt`; post-hoc checks
+`tower_heating_checks.py`, labelled as written after the output was seen; PROVENANCE §6t). D16
+unless stated; gain rate = slope of the D ≤ 8 part's fractional self-energy change over [T/4, T].
+- **The gain goes with the site-to-site variance of s = \|u_upper\|².** At fixed mean s, with a
+  fraction x of it incoherent and the rest coherent and spatially uniform, the rate falls as
+  x = 1, 0.5, 0.25, 0 → 1 : 0.255 : 0.062 : −0.003, rate ∝ (var s)^1.07. Against the upper
+  amplitude A_U = 0.0025 … 0.02 the rate goes as A_U^2.92, (var s)^0.73 — the mean size lowers it
+  somewhat (exponent ≈ −0.7 at fixed variance).
+- **No site-to-site variation, no gain:** the coherent uniform upper state (x = 0) gains at −0.3% of
+  the x = 1 rate, zero within the fit error. The pre-registered time-modulated uniform state (U2)
+  passed (−0.4%) but **was a weak test as built**: its four components' fixed phases nearly cancel,
+  so s oscillated by only 6.4% of its mean. **Post hoc**, with aligned phases (s swinging fully
+  between 0 and twice its mean) the rate is 1.25×10⁻⁸, about 1% of the incoherent rate at the same
+  mean: uniform modulation in time alone does not heat either.
+- **The long-run gain (T = 20 000; D16 two seeds, D64 one) is non-reversing and still rising at
+  T = 20 000, but decelerating unevenly — neither linear nor saturated; no saturation is reached.**
+  f(20 000) = +0.91%, +0.69% (D16), +1.94% (D64); late-to-early rate ratios 1.03, 0.28 (D16), 0.77
+  (D64). Criterion (iv), no reversal, **rests on a post-hoc rerun**: min f over [2000, 20 000] is
+  +2.4×10⁻³ and +1.1×10⁻³ (D16); D64's whole-run minimum is 0 (at t = 0).
+- **The phase shift is refractive — set by the mean of s, not its variance:** −0.577 / −0.589 /
+  −0.595 / −0.599 rad across the fixed-mean scan (spread 3.8%) while the rate changes 16×;
+  \|phase\| ∝ ⟨s⟩^0.87 across the amplitude scan; −0.595 rad for aligned-phase U2.
+- **Diagnostic, not a result:** the opposite-chirality (b-branch) linear energy of the populated
+  D ≤ 8 component grew in every incoherent run, carrying 28–92% of the linear-energy gain where that
+  gain is positive — consistent with pair creation, not a demonstration of it.
+Misses: PROVENANCE §6t.
+
 **The residual is not a separate field. It is a coordinate of the same state,
 one level up.** The node carries a level-≥16 element; its octonionic part is the
 shape the gauge structure acts on; **B** measures how far the state is from being

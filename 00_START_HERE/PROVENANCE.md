@@ -1408,6 +1408,49 @@ as a random, site- and time-dependent extra stiffness Δ = \|u\| − \|u_l\|; an
 random stiffness modulation absorbs energy on average, whatever the sign of each fluctuation. This
 reading is consistent with the sign being the same in every realisation, with the roughly linear
 growth, and with control F, but it has **not been tested**.
+[2026-09-27: tested — SUPPORTED under the pre-registered criteria, §6t.]
+
+## 6t. Parametric heating tested — SUPPORTED; the phase refractive — SUPPORTED (2026-09-27)
+
+Test: `shape_zero_tests/tower_heating_test.py`; hypothesis, criteria and predictions committed with
+the script before any run (4b82759); output and post-hoc checks 6991acb. Recorded result:
+MODEL_SPEC §4b.1, "TESTED 2026-09-27"; PREMISE_LEDGER C48. Both readings are SUPPORTED under the
+pre-registered criteria, with two qualifications stated plainly:
+1. **Criterion (iv), no reversal in the long runs, rests on a labelled post-hoc rerun.** The test
+   printed min f over the whole run only (−1.3×10⁻⁵ and −8.8×10⁻⁵ at D16, early in the run); the
+   rerun gives min f over [2000, 20 000] = +2.4×10⁻³ and +1.1×10⁻³. D64's whole-run minimum was 0.
+2. **U2 as built was a weak test.** Its components' fixed golden-angle phases 2.39996·c make the beat
+   terms of s nearly cancel: modulation depth 0.064 of the mean. It passed its threshold (−0.4%) but
+   hardly tested time modulation. **Post hoc**, with aligned phases (full modulation, s from 4.8×10⁻⁷
+   to 2.0×10⁻⁴), the rate is +1.25×10⁻⁸, about 1% of the incoherent rate at the same mean, and the
+   phase −0.595 rad.
+
+**The long-run gain** is non-reversing and still rising at T = 20 000, but decelerating unevenly —
+neither linear nor saturated; no saturation is reached (the rough equipartition estimate of ~9% is
+not approached).
+
+**Misses against the committed predictions:**
+- (2) D16 late-to-early rate ratio predicted in [0.6, 1.2]: seed 1 gave 0.28 (seed 0: 1.03).
+- (2) f(20 000) predicted in [+1%, +3%] at D16: +0.91% and +0.69%.
+- (2) D64 f(20 000) predicted in [+3%, +7%]: +1.94% (its ratio, 0.77, was in range).
+- (2) the predicted shape — D16 roughly linear, D64 bending toward a ~9% saturation — was wrong: all
+  three runs decelerate unevenly after a fast first few thousand time units, and none nears 9%.
+- C2 in the long runs (integration accuracy over 10× the time): D ≤ 8 charge drift 1.8–1.9×10⁻⁵
+  against ≤ 1×10⁻⁵; upper charge drift 4.1×10⁻⁴ of \|Q_l\| at D64 against ≤ 1×10⁻⁴; total energy
+  0.95–2.0×10⁻⁴ against ≤ 5×10⁻⁵. The total-energy drift is 1.5–3.6% of the measured gain.
+- D1 (diagnostic): "≥ 20% of dE_a + dE_b in every incoherent run" is undefined for A_U = 0.0025
+  seed 1, where dE_a + dE_b < 0 (dE_a −1.17×10⁻⁴, dE_b +9.3×10⁻⁵); dE_b > 0 held in every run.
+- The design flaw in U2 (above), and the script's not printing what criterion (iv) needed.
+
+**Hits:** (1a) p = 2.92 in [2.0, 3.5], and all four amplitude-scan rates in range; (1b) fixed-mean
+ratios 0.255 and 0.062 in range, rate(1) = 1.70×10⁻⁶ in range, monotone, fitted exponent 1.07;
+(3a) x = 0 at −0.3%; (3b) U2 at −0.4% (weak, above); (4a) phase spread 3.8% with the rate changing
+16×; (4b) γ = 0.87 and all four phases in range; (4c) U2's phase ratio 1.010; C1, the reused seeds
+reproducing the earlier late means exactly (+1.819×10⁻³, +9.968×10⁻⁴); C2 in every T = 2000 run.
+
+**Diagnostic, not a result:** the opposite-chirality linear energy of the populated D ≤ 8 component
+grew in every incoherent run, carrying 28–92% of the linear-energy gain where that gain is
+positive. Consistent with pair creation; not a demonstration of it.
 
 ## 7. Recurring failure modes
 
