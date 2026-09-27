@@ -1,0 +1,5 @@
+H1: wide-bump limit at other k (q = 2, Gaussian) vs the dwell-time value
+   k=pi/4  : nu(sigma) -0.16926 -0.16857 -0.16809 -0.16793 -0.16782 -0.16778  -> limit -0.16772   dwell-time -0.16772   rel -5.50e-07
+   k=pi/3  : nu(sigma) -0.10474 -0.10431 -0.10400 -0.10390 -0.10382 -0.10379  -> limit -0.10376   dwell-time -0.10376   rel -8.62e-08
+   k=2pi/3 : nu(sigma) +0.12785 +0.12969 +0.13110 +0.13162 +0.13199 +0.13213  -> limit +0.13230   dwell-time +0.13230   rel -2.20e-05
+   k=pi/2  : nu(sigma) -0.00137 -0.00078 -0.00035 -0.00020 -0.00009 -0.00005  -> limit -0.00000   dwell-time +0.00000   rel +nan
