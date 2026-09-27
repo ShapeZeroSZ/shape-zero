@@ -1,0 +1,21 @@
+VALIDATION: focused rate vs joint5_rate2.continuum (k = pi/2, Gaussian)
+   q=2 sigma=2.0 +k: joint5_rate2 26.042700  focused 26.042700  rel +0.0e+00
+   q=2 sigma=2.0 -k: joint5_rate2 26.300895  focused 26.300895  rel +0.0e+00
+   q=2 sigma=3.0 +k: joint5_rate2 89.484597  focused 89.484597  rel +0.0e+00
+   q=2 sigma=3.0 -k: joint5_rate2 89.925722  focused 89.925722  rel +0.0e+00
+   q=3 sigma=2.0 +k: joint5_rate2 87.198286  focused 87.198286  rel +0.0e+00
+   q=3 sigma=2.0 -k: joint5_rate2 88.749798  focused 88.749798  rel +0.0e+00
+   q=3 sigma=3.0 +k: joint5_rate2 461.509157  focused 461.509157  rel +0.0e+00
+   q=3 sigma=3.0 -k: joint5_rate2 465.785922  focused 465.785922  rel +0.0e+00
+   grid convergence (q = 3, sigma = 12, gauss, nu): ng 200: -0.0007022  ng 300: -0.0007022  ng 400: -0.0007022
+ADDED AFTER THE PREDICTIONS COMMIT: focused vs full-zone grid where the focus is active
+   q=2 gauss    sigma=6.0: focused 726.14908  full-zone 726.14908  rel -1.6e-16
+   q=2 gauss    sigma=8.0: focused 1725.3828  full-zone 1725.3828  rel +0.0e+00
+   q=2 sech2    sigma=6.0: focused 464.07005  full-zone 464.07005  rel -3.7e-16
+   q=2 sech2    sigma=8.0: focused 1104.647  full-zone 1104.647  rel -2.1e-16
+   q=2 twobump  sigma=6.0: focused 2890.7011  full-zone 2890.7011  rel -4.7e-16
+   q=2 twobump  sigma=8.0: focused 6882.2946  full-zone 6882.2946  rel +0.0e+00
+   q=3 gauss    sigma=6.0: focused 7654.3126  full-zone 7654.3126  rel +2.4e-16
+   q=3 gauss    sigma=8.0: focused 24340.572  full-zone 24340.572  rel +4.5e-16
+   q=3 sech2    sigma=6.0: focused 4031.651  full-zone 4031.651  rel +4.5e-16
+   [run stopped at the 10-minute tool limit after the rows above; all nine agree to machine precision]

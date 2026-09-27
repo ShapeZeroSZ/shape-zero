@@ -14,6 +14,9 @@ Shapes at rms width sigma (rms of the profile read as a distribution, per axis):
           single Gaussian of width sigma (as joint5_rate2.py). Probe-axis rms sqrt2 sigma.
 
 usage:  python3 joint5_rate3.py validate | h1 | h2
+
+[After the predictions commit: the lattice transforms are evaluated on the 1-D transverse grid and in
+chunks -- memory only, same arithmetic; checked to reproduce the committed version's values.]
 """
 import os
 import sys
@@ -54,16 +57,18 @@ def rate(q, k, sign, shape, sig, ng, focus=True):
     trans = sum(2 * C * (1 - np.cos(g)) for g in grids)
     x = (2 * C - (w * w - S0 - trans)) / A
     ok = np.abs(x) < 1
-    pt = np.ones_like(trans)
-    for g in grids:
-        pt = pt * np.abs(R2.phi_axis(shape, g, False)) ** 2
+    pt1 = np.abs(R2.phi_axis(shape, t, False)) ** 2          # transverse factor on the 1-D grid
+    pt = pt1 if q == 2 else np.outer(pt1, pt1).ravel()
     tot = 0.0
     for rs in (+1, -1):
         p = rs * np.arccos(np.clip(x, -1, 1)) - psi
         jac = np.abs(A * np.sin(p + psi))
         amp = np.zeros_like(p)
         if ok.any():
-            amp[ok] = np.abs(R2.phi_axis(shape, (p - kx)[ok], True)) ** 2 * pt[ok] / jac[ok]
+            idx = np.flatnonzero(ok); arg = (p - kx)[idx]
+            ph = np.concatenate([np.abs(R2.phi_axis(shape, arg[i:i + 4000], True)) ** 2
+                                 for i in range(0, len(arg), 4000)])   # chunked: memory only
+            amp[idx] = ph * pt[idx] / jac[idx]
         tot += amp.sum() * wt
     return np.pi * S0 ** 2 / ((2 * np.pi) ** q * abs(dpr)) * tot
 
