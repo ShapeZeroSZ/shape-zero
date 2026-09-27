@@ -103,3 +103,41 @@ in.
 **Rule:** any one of F2, F3/F4, F7, F8, F9 or F11 occurring **falsifies target 4 as scoped**. F5, F6
 and F10 falsify it unless the named escape is taken, and each escape is then counted as a further
 selection with its §1 conflicts.
+
+## §4 — Evaluation (after §3 was committed at 6badcc3)
+
+Inputs: G = 6.674×10⁻¹¹; c = 2.998×10⁸ m/s; C = 4/3; ρ_m = 0.3 ρ_crit = 2.6×10⁻²⁷ kg/m³.
+**Every quantity is taken at the most favourable allowed h** — its upper bound from F1 — unless
+stated.
+
+| # | derived value | bound | outcome |
+|---|---|---|---|
+| F1 | h is free below 10⁻²²; Π = 4πG/h² ≥ **8.4×10³⁴ Pa** | h ≤ 10⁻²² m²/kg | no violation on its own; it forces the rest |
+| **F2** | λ_self = c²h/(4πG) ≤ **1.1×10⁴ m (11 km)**. λ ≥ 10¹³ m needs h ≥ 9.3×10⁻¹⁴ m²/kg — 9×10⁸ × the shielding bound | 10¹³ m | **occurs — falsifies.** R2 (all energy absorbs) and R4 (ballistic over the solar system) are incompatible with shielding below the LLR bound, whatever u and Π are |
+| **F3** | u ≥ 4πG·C/(h × 7×10⁻¹⁸ s⁻¹) = **1.6×10³⁰ m/s = 5.3×10²¹ c** | u ≤ c(1 + 10⁻¹⁵) | **occurs** |
+| **F4** | gravity's speed = u ≥ 5.3×10²¹ c | \|c_g − c\|/c ≲ 10⁻¹⁵ (GW170817) | **occurs — falsifies.** Drag and the measured speed of gravity cannot both hold, by 21 orders — Laplace's and Poincaré's objection, now closed by a direct measurement |
+| F5 | H = 4πG·u/h ≥ **1.3×10⁴³ W/kg** | 8×10⁻¹² W/kg | **occurs, by 55 orders.** Survivable only through R5's channel, whose three §1 conflicts are counted; the escape adds 1 selection |
+| F6 | depletion rate ρ_m·h·u ≥ ρ_m·4πG·C/(7×10⁻¹⁸ s⁻¹) = **1.3×10⁻¹¹ yr⁻¹**, independent of h | 10⁻¹³ yr⁻¹ | **occurs, by 130×.** R7 is therefore compulsory, with its passivity conflict |
+| **F7** | under A′ the absorption follows \|u\|: a- vs b-lumps 1.89× per unit energy; amplitude 2.2× (pilot 2) | η ≲ 10⁻¹⁵ | **occurs — falsifies**, as committed. It says that A′ cannot supply R2: R2 needs a new energy-density coupling (§1), and F7 records that `main`'s coupling fails by 15 orders |
+| **F8** | photons absorb (R2) → Newtonian deflection, γ-equivalent 0; secular blueshift at H/c² ≥ 1.5×10²⁶ s⁻¹ (bounded by F5's escape) | γ = 1 ± 2×10⁻⁵ | **occurs — falsifies** (half the bending — the defect of the scoped joint theory, not repaired) |
+| **F9** | clock shift follows the deficit ∝ 1/r² (ballistic) | redshift ∝ ΔΦ ∝ 1/r to 10⁻⁴–10⁻⁵ | **occurs — falsifies** |
+| F10 | ε ≈ Π ≥ 8.4×10³⁴ J/m³ = **1.1×10⁴⁴ ρ_crit c²** | ρ_crit c² | **occurs.** The escape (the residual does not gravitate) contradicts R2 — the same exemption F2 would need; counted as 1 selection |
+| **F11** | shadow dynamics: no tensor polarisations | tensor GW polarisations; binary-pulsar damping | **occurs — falsifies** |
+
+**Verdict: target 4 as scoped is FALSIFIED.**
+- **Six decisive outcomes:** F2, F4, F7, F8, F9, F11.
+- **Three more need escapes:** F5, F6, F10.
+- **Two are internal contradictions within the frozen list** — the Pauli-style test at work, since
+  the list's own unasked-for consequences contradict each other and the data:
+  - **F2:** R2 plus R4 against shielding;
+  - **F3/F4:** R6 against the measured speed of gravity.
+- **Unlike the neutrino** (whose required properties — neutral, light, weakly interacting — were
+  mutually consistent and later detected), **the properties gravity would need from a residual are
+  not.** These are the classical Le Sage objections — heating (Maxwell), drag and speed (Laplace,
+  Poincaré) — with the self-absorption bound and GW170817 now making them quantitative and closed.
+
+**The count (for `NATURAL_BRANCH.md`):**
+- **+7 selections** (R1–R7), **+2 escape selections** (R5-channel, residual-non-gravitating), and
+  **+3 parameters** (Π, u, h; λ is fixed by h through F2).
+- **1 condition consumed** (G, used as input).
+- **0 new firm predictions passed**, and 6 decisive failures.
