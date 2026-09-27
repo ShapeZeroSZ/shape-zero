@@ -561,10 +561,14 @@
    "text": "| 1 | \u0394\u03c9 = 2\u03b2c sin k, i.e. \u0394\u03c9/\u221aK = 2\u03b2\u0302 sin k | \u0109, \u03ba\u0302, the well \u2014 depends on \u03b2\u0302 only | **proved** (Lean, published) | Prove2Me mission 3; joint #2 (null to 2\u00d710\u207b\u2076 over \u00b110% stiffness) | **yes** \u2014 one k fixes \u03b2\u0302; the sin k",
    "numbers": [
     "10",
-    "10"
+    "10",
+    "2026",
+    "09",
+    "27"
    ],
    "status": [
-    "PROVED"
+    "PROVED",
+    "VERIFIED"
    ]
   },
   {
@@ -25209,6 +25213,9 @@
     "2026",
     "09",
     "26",
+    "2026",
+    "09",
+    "27",
     "2026",
     "09",
     "27"

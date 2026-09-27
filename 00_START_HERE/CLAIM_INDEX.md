@@ -9,7 +9,7 @@
 ## Claims by status
 
 - **UNTAGGED** — 2061
-- **VERIFIED** — 137
+- **VERIFIED** — 138
 - **FAILED** — 66
 - **RETRACTED** — 62
 - **SUPERSEDED** — 53
@@ -2033,7 +2033,7 @@
 ### `./UNIVERSAL_RELATIONS.md` (8 claims)
 
 - L3 [-] `Universal relations — a census` — *Recorded 2026-09-27. A relation is listed if it holds independently of the genuine parameters —
-- L11 [PROVED] `Universal relations — a census` — | 1 | Δω = 2βc sin k, i.e. Δω/√K = 2β̂ sin k | ĉ, κ̂, the well — depends on β̂ only | **proved** (Lean, published) | Prove2Me mission 3; joint #2 (nul
+- L11 [PROVED,VERIFIED] `Universal relations — a census` — | 1 | Δω = 2βc sin k, i.e. Δω/√K = 2β̂ sin k | ĉ, κ̂, the well — depends on β̂ only | **proved** (Lean, published) | Prove2Me mission 3; joint #2 (nul
 - L18 [-] `Universal relations — a census` — | 8 | P-3: a circular spinor wave does not precess, Ω = 0 at every amplitude (node form A′) | every parameter and amplitude | **derived + measured** (
 - L20 [PROVED,VERIFIED] `Universal relations — a census` — | 10 | symmetric + J-commuting couplings have dimension n² (mission 1); passivity ⇔ symmetric links (missions 2, 4a); roles force Fano (missions 5, 6)
 - L21 [-] `Universal relations — a census` — | 11 | small-amplitude reduction to the linear gauge dynamics | amplitude, in the limit | **measured** (certified) | `shape_zero_tests/certify_gates.p
