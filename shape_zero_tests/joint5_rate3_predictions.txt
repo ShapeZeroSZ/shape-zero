@@ -1,0 +1,58 @@
+JOINT #5, CENSUS ROW 9 -- IS THE WIDE-BUMP LIMIT nu -> 0 AT k = pi/2 KINEMATIC?
+Predictions committed before any run of joint5_rate3.py (2026-09-27). MODEL_SPEC sec 1c, sec 9
+("whether census row 9 is kinematic"); physics and normalisation as joint5_rate2.py
+(scalar beta sector, s = sqrt5, c = 1, beta = 0.05, fixed bump, golden-rule rate).
+
+DERIVATION (done before the run)
+For a bump of width sigma -> infinity, |eta^(p - k)|^2 confines the final states to p = k + P,
+|P| ~ 1/sigma, on the energy shell d(p) = 0 through k. Near +-k the shell is
+    d = (dd/dp_x) P_x + c P_perp^2 + O(P^3),    P_x ~ P_perp^2 / 2 ~ 1/sigma^2,
+so to leading order Gamma(+-k) = pi s^2/((2 pi)^q |dd/dw|) * Int d^(q-1)P_perp |eta^(0, P_perp)|^2 / |dd/dp_x|.
+|dd/dw| = 2 sqrt(beta^2 c^2 sin^2 k + Q) is the same for +-k; |dd/dp_x| / |dd/dw| = |v_g|.
+Hence Gamma(+-k) -> const / |v_g(+-k)|: the wide-bump rate is a DWELL-TIME law, and
+    nu_inf(k) = 2 (|v_-| - |v_+|) / (|v_+| + |v_-|),   |v_+| - |v_-| = d(Delta omega)/dk = 2 beta c cos k,
+i.e. nu_inf ~ -2 beta Omega cot k. In the continuum drift reading (k << 1) the drift adds V = beta c
+to the group velocity and nu_inf = -2V/v_g != 0; on the lattice the drift adds V cos k, which vanishes
+at the zone middle. So:
+
+H1. nu -> 0 at k = pi/2 is KINEMATIC -- the drift reading generalised to the lattice -- but it does
+    NOT follow from the continuum drift alone: the continuum predicts nu_inf = -2V/v_g, not 0. The zero
+    at pi/2 is the stationary point of Delta omega(k) = 2 beta c sin k, i.e. it is contained in census
+    row 1's sin k shape and is not an independent condition.
+    Test: the continuum integral at q = 2, large sigma, k = pi/4, pi/3, 2pi/3 approaches
+        k = pi/4: nu_inf = -0.16772    k = pi/3: -0.10376    k = 2pi/3: +0.13230
+    (exact dwell-time values from the lattice group velocities). PASS if the extrapolated limits agree
+    within 1% (relative).
+
+H2. At k = pi/2 the leading correction comes from the Jacobian |dd/dp_x| = 2c -+ beta c omega P_perp^2 on
+    the displaced shell (the |eta^|^2 factor is even in P_x and contributes nothing odd):
+        lim nu * sigma^2 = -beta Omega (q - 1) J,   Omega = sqrt(beta^2 c^2 + K + 2c) = 2.05878,
+        J = sigma^2 Int eta'^2 / Int eta^2 of the TRANSVERSE profile (per axis), sigma its rms width.
+    J(Gaussian) = 1/2; J(sech^2) = pi^2/15 = 0.65797; two-bump (two Gaussians at +-a along the probe axis,
+    as joint5_rate2.py) has a Gaussian transverse profile, so J = 1/2 when normalised by its transverse
+    rms. Predicted limits of nu * sigma_rms^2:
+                          q = 2       q = 3
+        Gaussian        -0.05147    -0.10294
+        sech^2          -0.06773    -0.13546
+        two-bump (a = sigma_perp), normalised by the transverse rms sigma_perp:
+                        -0.05147    -0.10294   (identical to the Gaussian -- by construction, not universality)
+        the same, normalised by the probe-axis rms sqrt(sigma^2 + a^2) = sqrt2 sigma:
+                        -0.10294    -0.20588
+    PASS if each extrapolated limit agrees with its prediction within 2%.
+
+UNIVERSALITY CRITERION (fixed in advance). The coefficient counts as universal -- a new universal relation
+and a genuine prediction -- only if the extrapolated lim nu * sigma_rms^2 agree across the Gaussian, sech^2
+and two-bump shapes at equal rms width within 2% (max/min - 1), at both q = 2 and q = 3, under a single
+stated definition of rms width.
+PREDICTED OUTCOME: NOT universal -- sech^2 differs from the Gaussian by a factor pi^2/7.5 = 1.316 (32%),
+and the two-bump agrees with the Gaussian only when normalised by its transverse width (factor 2 otherwise).
+The coefficient is a transverse gradient functional of the bump's shape.
+
+H3 (count). If H1 and H2 hold: row 9 leaves the count of genuine predictions (it is contained in row 1's
+sin k shape), and no new universal relation replaces it. The genuine predictions would be three -- the sin k
+departure, the coefficient 1/4, its shape independence -- equal to, not above, the three parameters.
+
+METHOD. joint5_rate3.py: the joint5_rate2.py continuum shell integral generalised to any k, with the
+transverse grid focused on |t| <= min(pi, 14/sigma_rms) (the rest of the shell carries weight below
+e^-40); validated against joint5_rate2.continuum at sigma = 2 and 3 (must agree to 1e-4 relative).
+Limits by fitting nu sigma^2 = A + B/sigma^2 + C/sigma^4 over sigma_rms = 6 ... 32 (q = 2) and 6 ... 20 (q = 3).
