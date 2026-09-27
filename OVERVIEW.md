@@ -37,7 +37,8 @@
 - **A derived scale**: nothing internal fixes the fibre metric scale; a length or mass unit is an input (`MODEL_SPEC.md` §9; `03_current/SCALE_SCOPING.md`).
 - **J-compatibility as a consequence** of the dynamics rather than an adopted principle (`MODEL_SPEC.md` §3).
 - ~~**The q ≥ 2 stiffness-coupling coefficient C_q(N)**: the pin shift δ(Δω) = −¼βs²S² (joint #5) converges with box size at q = 1 (0.6%) but not at q ≥ 2 (spread 244% at q = 2, 243% at q = 3, with sign flips), and no mechanism is named (`MODEL_SPEC.md` §5b.6a; `PROVENANCE.md` §6i).~~ [2026-09-27: mechanism named, limit shown not to exist — the kernel grows as 1/p⊥² transverse to the probe.]
-- **The correct infinite-volume observable for a localised stiffness bump at q ≥ 2**: the second-order coefficient C_q(N) has no limit there (`MODEL_SPEC.md` §5b.6a, "MECHANISM NAMED").
+- ~~**The correct infinite-volume observable for a localised stiffness bump at q ≥ 2**: the second-order coefficient C_q(N) has no limit there (`MODEL_SPEC.md` §5b.6a, "MECHANISM NAMED").~~ [2026-09-27: answered — the golden-rule scattering rate, which carries the pin's nonreciprocity.]
+- **q = 3 rate convergence to be confirmed**: the scattering rate is converged at q = 2 and −2.6% from its limit at side 96 at q = 3 (`MODEL_SPEC.md` §5b.6a).
 - **A continuum limit**, stated or explicitly refused: ĉ is a length unit only in that limit, which is not taken (`MODEL_SPEC.md` §1b).
 - **A prediction with more independent conditions than parameters** (`03_current/SCALE_SCOPING.md`, "Success").
 

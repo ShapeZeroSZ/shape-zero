@@ -105,6 +105,9 @@ that, so together they machine-verify C1 Theorem 3.6 ("Roles Force Fano").
   q = 2, 3 equals the exact second-order kernel over its own grid; the kernel grows as 1/p⊥²
   transverse to the probe, so C is a small remainder of nearly cancelling terms. **Open:** the
   correct infinite-volume observable for a localised stiffness bump at q ≥ 2 (MODEL_SPEC §5b.6a).]
+  [**2026-09-27: answered** — for a fixed bump the frequency shift has no limit, while the golden-rule
+  scattering rate does (q = 2 within 0.7%) and carries the pin's nonreciprocity. **Open:** q = 3 rate
+  convergence to be confirmed (MODEL_SPEC §5b.6a).]
 - ~~Formal proof that every seven-point Steiner triple system is the Fano plane.~~
   [Done 2026-09-24: Prove2Me mission 6, approved and published.]
 

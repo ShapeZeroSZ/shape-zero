@@ -2674,6 +2674,42 @@ S = 0.02 reaches 1.7 at q = 2, side 64, so at finite source strength the second-
 there.
 
 **Open:** the correct infinite-volume observable for a localised stiffness bump at q ≥ 2.
+[**Superseded 2026-09-27 — answered below; open now: q = 3 rate convergence to be confirmed.**]
+
+**THE INFINITE-VOLUME OBSERVABLE IS THE SCATTERING RATE (2026-09-27).** (Hypothesis and predictions
+committed first, 61dbc5d; results a6af660; `shape_zero_tests/joint5_rate.py`, `joint5_rate_output.txt`,
+`joint5_rate_predictions.txt`.) **Setup change:** the recorded protocol grows the bump with the box
+(σ = L/8, unit rms over the box), so it has no fixed infinite-volume system; here the bump is **fixed**
+(σ = 2, peak 1), K(x) = s(1 + S η), ⟨p|V|k⟩ = sS Φ(p − k)/V with Φ the bump's exact lattice transform.
+With d_p → d_p(ω + i0) the same second-order sum splits into a principal part (the shift) and an
+energy-shell part, the **golden-rule decay rate**
+Γ(k) = (π s²S²/V²) Σ_p |Φ(p − k)|² δ(d_p(ω_k)) / |d′_k|, whose infinite-volume form is the shell integral
+V·Γ/S² = π s² / ((2π)^q |d′_k|) ∫ |Φ(p − k)|² δ(d_p(ω_k)) d^q p.
+
+| | continuum V·Γ/S² (+k / −k) | box sums (+k, ε → 0) | status |
+|---|---|---|---|
+| q = 2 | 26.04 / 26.30 | 27.3 (64), 27.8 (128), **25.87 (256), 25.86 (512)** | **converged within 0.7%** |
+| q = 3 | 87.2 / 88.7 | 59.6 (32), 76.2 (48), 82.3 (64), **84.9 (96)** | **approaching, −2.6% at side 96** |
+| q = 1 | ≈ 0 | — | a smooth bump does not reflect; forward scattering is the probe itself |
+
+- **For a fixed bump the frequency shift has no box-size-independent limit, even broadened.** The raw ±k
+  shift difference (V·δω/S²) swings −1.7, +5.5, +18.9, −10.3, −3.5 over q = 2 sides 32–512 and −58, −47,
+  −46, +80, +4 over q = 3 sides 16–96; near-shell modes enter it as 1/d_p. **The broadened shift** (Re of
+  the sum with d → d + iε) was **added after the raw shift failed**: it settles with box size at fixed ε
+  at q = 2 (−0.618 at 256 and 512) but moves as ε → 0 (−0.32 → −0.62), and is still scattered at q = 3.
+- **The golden-rule rate does have the limit**, and **it carries the pin's nonreciprocity**:
+  Γ(+k) − Γ(−k) = −0.258 (≈ −1% of Γ) at q = 2, matched by the side-512 box sums; about −1.55 (−1.8%) at
+  q = 3, where the box sums (−0.85 at side 96) have not yet settled.
+- **Predictions:** R1 (both shift and rate ∝ 1/V; V·Γ is the box-independent quantity) held; R2 (V·Γ
+  converges to the continuum integral) held but **more slowly than predicted** (side 256, not 64, at
+  q = 2; about 96, not 32, at q = 3); R3 (nonreciprocity O(β)) held; **R4 (the fixed-bump shift also
+  converges) missed**, meeting its own committed failure condition.
+- **Two bugs found and fixed** before these numbers: the q = 1 continuum multiplied by a spurious
+  transverse factor and counted the forward root (the probe itself) as a scattered state; the box sums
+  included the probe's own term. At q = 1 a broadened box sum is not a valid rate estimator (it picks up
+  the forward modes next to the probe).
+
+**Open:** q = 3 rate convergence to be confirmed.
 
 **On (1,3):** the spectral behaviour singles out q = 1 and says **nothing about
 how many** spatial dimensions follow — q = 2 and q = 3 fail identically. It is a
