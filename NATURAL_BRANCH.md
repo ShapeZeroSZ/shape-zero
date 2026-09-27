@@ -33,8 +33,23 @@ produce.
 
 1. **Electromagnetism through dynamical u(1) links.**
 2. **Gravity through couplings that respond to energy while conserving it.**
+3. **Electromagnetism and gravity together** (added 2026-09-27). **From here on the joint count
+   is the branch's primary measure**; the separate counts of targets 1 and 2 are kept as
+   components. Why:
+   - **Gravity couples to all energy, including electromagnetic field energy.** The equivalence
+     principle is a statement that different kinds of energy fall alike, so it needs more than
+     one kind of energy to be tested. Scoped alone, target 2 can test it only within matter.
+   - **The two targets may share selections.** A single universal wave speed for photons,
+     gravity and matter, or the q = 3 base, would be counted once, not twice. Counting them
+     separately would overstate the cost.
+   - **Gravity may supply stable lumps where the node well alone cannot.** Coleman's criterion
+     fails for the adopted node form (`natural/EM_SCOPE.md` C5). Self-gravitating lumps exist
+     (`natural/GRAVITY_SCOPE.md` §4), and they would give electromagnetism the static charges it
+     otherwise lacks.
 
 ## The count
+
+*Primary measure from target 3 on: the **joint** count of targets 1 and 2 (rows marked joint).*
 
 **Baseline, inherited from `main`** (`UNIVERSAL_RELATIONS.md`, "The count — under the continuum
 reading"): three genuine parameters **ĉ, κ̂, β̂**; about **six independent conditions**; strictly,
