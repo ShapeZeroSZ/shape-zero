@@ -1,0 +1,50 @@
+PAIRS AND REFRACTION (A'), N = 128, kappa* = 0.971737
+PART 1 -- chirality-resolved gain, D16, packet 0.05, T = 2000 (reference-subtracted)
+  identity Q = N_b - N_a at t = 0: max relative error 1.9e-16; packet w0 = 1.6293; reference: dN_b/N_a(0) at T +1.01e-05
+  incoh A_U=0.005 seed 0: gain f(T) +2.403e-03 (rate +1.32e-06); dN_b/N_a(0) +5.751e-04 (rate +3.54e-07); (dN_a - dN_b)/N_a(0) +1.9e-08; of the gain: pair 0.609, a-redistribution +0.384, linear total 0.993; <var s> 2.57e-09; charge drift 1.9e-06 (46 s)
+  incoh A_U=0.005 seed 1: gain f(T) +1.175e-03 (rate +7.86e-07); dN_b/N_a(0) +4.974e-04 (rate +3.14e-07); (dN_a - dN_b)/N_a(0) +2.2e-08; of the gain: pair 1.087, a-redistribution -0.056, linear total 1.031; <var s> 2.31e-09; charge drift 1.9e-06 (46 s)
+  incoh A_U=0.005 seed 2: gain f(T) +2.566e-03 (rate +1.73e-06); dN_b/N_a(0) +6.737e-04 (rate +4.54e-07); (dN_a - dN_b)/N_a(0) +1.9e-08; of the gain: pair 0.669, a-redistribution +0.341, linear total 1.010; <var s> 2.90e-09; charge drift 1.9e-06 (46 s)
+  incoh A_U=0.005 seed 3: gain f(T) +2.052e-03 (rate +1.28e-06); dN_b/N_a(0) +4.629e-04 (rate +2.92e-07); (dN_a - dN_b)/N_a(0) +1.8e-08; of the gain: pair 0.577, a-redistribution +0.422, linear total 0.998; <var s> 2.37e-09; charge drift 1.9e-06 (45 s)
+  incoh A_U=0.01 seed 0: gain f(T) +1.445e-02 (rate +8.51e-06); dN_b/N_a(0) +5.880e-03 (rate +3.65e-06); (dN_a - dN_b)/N_a(0) +9.5e-08; of the gain: pair 1.043, a-redistribution -0.051, linear total 0.992; <var s> 4.10e-08; charge drift 1.9e-06 (46 s)
+  incoh A_U=0.01 seed 1: gain f(T) +1.036e-02 (rate +7.62e-06); dN_b/N_a(0) +3.950e-03 (rate +2.78e-06); (dN_a - dN_b)/N_a(0) +6.9e-08; of the gain: pair 0.958, a-redistribution +0.056, linear total 1.014; <var s> 3.67e-08; charge drift 1.9e-06 (46 s)
+  mix x=1.0      seed 0: gain f(T) +4.201e-03 (rate +2.27e-06); dN_b/N_a(0) +1.241e-03 (rate +7.97e-07); (dN_a - dN_b)/N_a(0) +2.4e-08; of the gain: pair 0.751, a-redistribution +0.237, linear total 0.988; <var s> 4.95e-09; charge drift 1.9e-06 (46 s)
+  mix x=1.0      seed 1: gain f(T) +2.284e-03 (rate +1.12e-06); dN_b/N_a(0) +1.043e-03 (rate +6.19e-07); (dN_a - dN_b)/N_a(0) +2.8e-08; of the gain: pair 1.177, a-redistribution -0.163, linear total 1.014; <var s> 4.60e-09; charge drift 1.9e-06 (46 s)
+  mix x=0.5      seed 0: gain f(T) +1.338e-03 (rate +6.58e-07); dN_b/N_a(0) +3.138e-04 (rate +1.99e-07); (dN_a - dN_b)/N_a(0) +1.7e-08; of the gain: pair 0.599, a-redistribution +0.402, linear total 1.000; <var s> 1.27e-09; charge drift 1.9e-06 (46 s)
+  mix x=0.5      seed 1: gain f(T) +5.188e-04 (rate +2.08e-07); dN_b/N_a(0) +2.746e-04 (rate +1.65e-07); (dN_a - dN_b)/N_a(0) +2.0e-08; of the gain: pair 1.362, a-redistribution -0.290, linear total 1.072; <var s> 1.19e-09; charge drift 1.9e-06 (45 s)
+  mix x=0.25     seed 0: gain f(T) +4.447e-04 (rate +2.06e-07); dN_b/N_a(0) +7.909e-05 (rate +4.91e-08); (dN_a - dN_b)/N_a(0) +1.6e-08; of the gain: pair 0.455, a-redistribution +0.592, linear total 1.047; <var s> 3.66e-10; charge drift 1.9e-06 (46 s)
+  mix x=0.25     seed 1: gain f(T) +6.403e-05 (rate +6.38e-09); dN_b/N_a(0) +7.126e-05 (rate +4.23e-08); (dN_a - dN_b)/N_a(0) +1.7e-08; of the gain: pair 2.862, a-redistribution -1.264, linear total 1.598; <var s> 3.49e-10; charge drift 1.9e-06 (44 s)
+  mix x=0        seed 0: gain f(T) -7.446e-05 (rate -3.64e-09); dN_b/N_a(0) +1.941e-06 (rate -2.52e-10); (dN_a - dN_b)/N_a(0) +1.6e-08; of the gain: pair -0.065, a-redistribution +0.556, linear total 0.490; <var s> 8.10e-11; charge drift 1.9e-06 (43 s)
+  fixed-mean scan x = 1, 0.5, 0.25, 0: pair rates 7.081e-07, 1.819e-07, 4.570e-08, -2.521e-10 (x=0 / x=1 = -0.000); energy rates 1.699e-06, 4.333e-07, 1.064e-07
+    exponents vs <var s>: pair 1.06, energy 1.07
+  pair fraction of the gain, incoherent A_U = 0.005, seeds 0-3: 0.609, 1.087, 0.669, 0.577; mean 0.736
+
+PART 2a -- refraction: stiffness shift sensed dK_eff = dw (2 w_a(k0) + kappa)
+  phase D16 a k0=0.785    : dw +2.8389e-03; dK_eff 9.92882e-03; sqrt<s> 9.98996e-03, <sqrt s> 9.98995e-03; dK_eff/sqrt<s> 0.9939; dK_eff/<sqrt s> 0.9939; |O| at T 0.99832 (38 s)
+  phase D16 a k0=1.571    : dw +2.3454e-03; dK_eff 9.91973e-03; sqrt<s> 9.98996e-03, <sqrt s> 9.98995e-03; dK_eff/sqrt<s> 0.9930; dK_eff/<sqrt s> 0.9930; |O| at T 0.99896 (38 s)
+  phase D16 a k0=2.356    : dw +2.0491e-03; dK_eff 9.94284e-03; sqrt<s> 9.98996e-03, <sqrt s> 9.98995e-03; dK_eff/sqrt<s> 0.9953; dK_eff/<sqrt s> 0.9953; |O| at T 0.99976 (38 s)
+  phase D16 b k0=0.785    : dw +2.8389e-03; dK_eff 9.92881e-03; sqrt<s> 9.98996e-03, <sqrt s> 9.98995e-03; dK_eff/sqrt<s> 0.9939; dK_eff/<sqrt s> 0.9939; |O| at T 0.99832 (37 s)
+  phase D16 b k0=1.571    : dw +2.3454e-03; dK_eff 9.91973e-03; sqrt<s> 9.98996e-03, <sqrt s> 9.98995e-03; dK_eff/sqrt<s> 0.9930; dK_eff/<sqrt s> 0.9930; |O| at T 0.99896 (39 s)
+  phase D16 b k0=2.356    : dw +2.0491e-03; dK_eff 9.94284e-03; sqrt<s> 9.98996e-03, <sqrt s> 9.98995e-03; dK_eff/sqrt<s> 0.9953; dK_eff/<sqrt s> 0.9953; |O| at T 0.99976 (39 s)
+  phase D16 a colour2     : dw +2.3454e-03; dK_eff 9.91973e-03; sqrt<s> 9.98996e-03, <sqrt s> 9.98995e-03; dK_eff/sqrt<s> 0.9930; dK_eff/<sqrt s> 0.9930; |O| at T 0.99896 (38 s)
+  phase D32 a             : dw +2.3454e-03; dK_eff 9.91973e-03; sqrt<s> 9.98996e-03, <sqrt s> 9.98995e-03; dK_eff/sqrt<s> 0.9930; dK_eff/<sqrt s> 0.9930; |O| at T 0.99896 (45 s)
+  phase D32 b             : dw +2.3454e-03; dK_eff 9.91973e-03; sqrt<s> 9.98996e-03, <sqrt s> 9.98995e-03; dK_eff/sqrt<s> 0.9930; dK_eff/<sqrt s> 0.9930; |O| at T 0.99896 (45 s)
+  phase D64 a             : dw +2.3454e-03; dK_eff 9.91973e-03; sqrt<s> 9.98996e-03, <sqrt s> 9.98995e-03; dK_eff/sqrt<s> 0.9930; dK_eff/<sqrt s> 0.9930; |O| at T 0.99896 (60 s)
+  phase D64 b             : dw +2.3454e-03; dK_eff 9.91973e-03; sqrt<s> 9.98996e-03, <sqrt s> 9.98995e-03; dK_eff/sqrt<s> 0.9930; dK_eff/<sqrt s> 0.9930; |O| at T 0.99896 (62 s)
+  phase D16 a incoh       : dw +2.3213e-03; dK_eff 9.81805e-03; sqrt<s> 1.00960e-02, <sqrt s> 9.78232e-03; dK_eff/sqrt<s> 0.9725; dK_eff/<sqrt s> 1.0037; |O| at T 0.99478 (38 s)
+  phase D16 b incoh       : dw +2.3028e-03; dK_eff 9.73958e-03; sqrt<s> 1.00960e-02, <sqrt s> 9.78232e-03; dK_eff/sqrt<s> 0.9647; dK_eff/<sqrt s> 0.9956; |O| at T 0.99664 (39 s)
+  phase D16 a amp=0.001   : dw +2.2002e-03; dK_eff 9.30587e-03; sqrt<s> 9.98995e-03, <sqrt s> 9.98995e-03; dK_eff/sqrt<s> 0.9315; dK_eff/<sqrt s> 0.9315; |O| at T 0.99884 (39 s)
+  phase D16 a amp=0.01    : dw +1.1554e-03; dK_eff 4.88665e-03; sqrt<s> 9.98947e-03, <sqrt s> 9.98939e-03; dK_eff/sqrt<s> 0.4892; dK_eff/<sqrt s> 0.4892; |O| at T 0.97609 (40 s)
+  phase D16 a amp=0.05    : dw +3.5857e-04; dK_eff 1.51656e-03; sqrt<s> 9.98404e-03, <sqrt s> 9.97441e-03; dK_eff/sqrt<s> 0.1519; dK_eff/<sqrt s> 0.1520; |O| at T 0.97237 (39 s)
+  weak probes, coherent background: dK_eff spread (max-min)/mean 0.0023, mean/sqrt(1e-4) 0.9926
+
+PART 2b -- deflection in a gradient (density rising toward +x at the packet); p = physical wavenumber
+  grad D16 a k0=0.785     : dp(T) -1.5482e-03, predicted -1.5553e-03, ratio 0.9954; dx(T) -0.0848 sites (predicted -0.0252); F(0) -1.188e-04; dp (2w_a + kappa) -5.4148e-03 (3 s)
+  grad D16 a k0=1.571     : dp(T) -1.0540e-03, predicted -1.0584e-03, ratio 0.9958; dx(T) -0.0421 sites (predicted +0.0065); F(0) -1.188e-04; dp (2w_a + kappa) -4.4577e-03 (3 s)
+  grad D16 a k0=2.356     : dp(T) -1.4141e-03, predicted -1.4157e-03, ratio 0.9988; dx(T) -0.0009 sites (predicted +0.0213); F(0) -1.188e-04; dp (2w_a + kappa) -6.8615e-03 (3 s)
+  grad D16 b k0=0.785     : dp(T) -1.9663e-03, predicted -1.9599e-03, ratio 1.0033; dx(T) +0.0114 sites (predicted -0.0302); F(0) -1.188e-04; dp (2w_a + kappa) -6.8769e-03 (3 s)
+  grad D16 b k0=1.571     : dp(T) -1.3293e-03, predicted -1.3265e-03, ratio 1.0022; dx(T) +0.0412 sites (predicted +0.0079); F(0) -1.188e-04; dp (2w_a + kappa) -5.6224e-03 (3 s)
+  grad D16 b k0=2.356     : dp(T) -1.7485e-03, predicted -1.7475e-03, ratio 1.0006; dx(T) +0.0414 sites (predicted +0.0248); F(0) -1.188e-04; dp (2w_a + kappa) -8.4843e-03 (3 s)
+  grad D32 a              : dp(T) -1.0540e-03, predicted -1.0584e-03, ratio 0.9958; dx(T) -0.0421 sites (predicted +0.0065); F(0) -1.188e-04; dp (2w_a + kappa) -4.4577e-03 (4 s)
+  grad D32 b              : dp(T) -1.3293e-03, predicted -1.3265e-03, ratio 1.0022; dx(T) +0.0412 sites (predicted +0.0079); F(0) -1.188e-04; dp (2w_a + kappa) -5.6224e-03 (4 s)
+  grad D64 a              : dp(T) -1.0540e-03, predicted -1.0584e-03, ratio 0.9958; dx(T) -0.0421 sites (predicted +0.0065); F(0) -1.188e-04; dp (2w_a + kappa) -4.4577e-03 (5 s)
+  grad D64 b              : dp(T) -1.3293e-03, predicted -1.3265e-03, ratio 1.0022; dx(T) +0.0412 sites (predicted +0.0079); F(0) -1.188e-04; dp (2w_a + kappa) -5.6224e-03 (5 s)

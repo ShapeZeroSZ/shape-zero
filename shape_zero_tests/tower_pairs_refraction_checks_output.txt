@@ -1,0 +1,10 @@
+POST HOC. Both branches launched toward +x (physical wavenumber +k0), D16, gradient as in the test
+  a k0=0.785: dp -1.5482e-03 (ray -1.5553e-03, ratio 0.9954); dx -0.0848 sites; full ray dx -0.0852 (direct term alone -0.0600)
+  a k0=1.571: dp -1.0540e-03 (ray -1.0584e-03, ratio 0.9958); dx -0.0421 sites; full ray dx -0.0421 (direct term alone -0.0485)
+  a k0=2.356: dp -1.4141e-03 (ray -1.4157e-03, ratio 0.9988); dx -0.0009 sites; full ray dx -0.0007 (direct term alone -0.0220)
+  b k0=0.785: dp -1.5482e-03 (ray -1.5553e-03, ratio 0.9954); dx -0.0848 sites; full ray dx -0.0852 (direct term alone -0.0600)
+  b k0=1.571: dp -1.0540e-03 (ray -1.0584e-03, ratio 0.9958); dx -0.0421 sites; full ray dx -0.0421 (direct term alone -0.0485)
+  b k0=2.356: dp -1.4141e-03 (ray -1.4157e-03, ratio 0.9988); dx -0.0009 sites; full ray dx -0.0007 (direct term alone -0.0220)
+  k0=0.785: dp b/a 1.0000; dx b/a 1.0000
+  k0=1.571: dp b/a 1.0000; dx b/a 1.0000
+  k0=2.356: dp b/a 1.0000; dx b/a 1.0000
