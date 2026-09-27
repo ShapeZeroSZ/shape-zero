@@ -11,6 +11,11 @@ charge drift, and the commutator of JJ with L_g.
 
 usage:  python3 kappa_cr_gate.py   (run from anywhere)
 """
+import os
+# recorded under node form A (per-dimer radial well); pinned so the outputs reproduce after
+# the default became A' (whole-node well) on 2026-09-27.
+os.environ.setdefault("SZ_J_WELL", "radial")
+
 import importlib.util
 import os
 import sys

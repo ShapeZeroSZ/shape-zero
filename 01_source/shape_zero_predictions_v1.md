@@ -127,6 +127,16 @@ absent for non-parallel axes, or present for parallel ones.
 
 ## P-3. The amplitude-Zeeman effect (spinor self-precession)
 
+**[REPLACED 2026-09-27 — a prediction of ABSENCE under the adopted node form (A′).]** With the
+φ-well acting on the whole node's radius (MODEL_SPEC §1a, form (A′), selected under the selection
+rule), every component of a circular spinor wave sees the same stiffness Q + A, so a plane wave of
+**any** internal state is an exact solution and **the spinor does not precess: Ω = 0 exactly**, at
+every amplitude and angle χ. Measured 10⁻¹⁸–10⁻¹⁹ at A = 0.05–0.2, χ = 10°–80°, against
+0.006–0.029 under form (A) (`shape_zero_tests/nodewell_test.py p3`). **Falsified if:** a circular
+spinor wave's internal state precesses at a rate that grows with its amplitude.
+
+**[SUPERSEDED 2026-09-27 by the change of node form, not retracted — the law below is form (A)'s.]**
+
 **[REPLACED 2026-09-26 — the law under the model's adopted node form.]** With the φ-well
 acting on each dimer's radius (MODEL_SPEC §1a, form (A), adopted by the principles), a
 circular spinor wave with dimer amplitudes A cos χ and A sin χ turns each dimer at the

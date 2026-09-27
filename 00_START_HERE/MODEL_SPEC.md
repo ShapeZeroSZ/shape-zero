@@ -183,7 +183,8 @@ dimer) it can be applied in three ways, and the choice matters beyond linear ord
 | node form | force per dimer | phase conservation at all orders | persistence as bounded motion (Formal Proofs, Principle (Persistence)) | the D2 rung's isotropic, origin-centred node | keeps κ\* |
 |---|---|---|---|---|---|
 | **elementwise** (`model.py` until 2026-09-26; the platform's "per-component phi restoring force") | −(√5u + u∘u) per real component | **no** — linear order only: at κ\* the ψ\*² term converts a-waves into the opposite chirality (§3, "CORRECTION"; R1, slope 0.991 × rA²) | **no** — the per-component potential √5u²/2 + u³/3 is unbounded below past the saddle u = −√5; a node **escapes above energy 1.863 per component** (5√5/6 [**2026-09-26:** in invariant form E/K³ = 1/6 for any quadratic well; 1.863 is 5√5/6 in the model's units, §1b]; a node launched with kinetic energy 5 escaped at t = 3.5, `shape_zero_tests/ring_spectrum.py`) | **no** — origin-centred but anisotropic (§0a) | yes |
-| **(A) radial** — **ADOPTED** | −(√5 + \|ψ\|)ψ, i.e. V = √5r²/2 + r³/3, r = \|ψ\| | **yes** — U(1)-equivariant; phase charge conserved at every order (drift 2×10⁻⁷, RK4); R1's conversion vanishes (9.9×10⁻¹⁷ A) | **yes** — V ≥ 0 and confining at every energy (max \|u\| = 1.67 in the same test) | **yes** — isotropic, minimum at the origin, linear part the D2 quadratic confinement with δ = √5 | **yes** — the linear part is unchanged |
+| **(A) radial, per dimer** — ~~ADOPTED~~ **SUPERSEDED 2026-09-27 by (A′)** | −(√5 + \|ψ\|)ψ, i.e. V = √5r²/2 + r³/3, r = \|ψ\| | **yes** — U(1)-equivariant; phase charge conserved at every order (drift 2×10⁻⁷, RK4); R1's conversion vanishes (9.9×10⁻¹⁷ A) | **yes** — V ≥ 0 and confining at every energy (max \|u\| = 1.67 in the same test) | **yes** — isotropic, minimum at the origin, linear part the D2 quadratic confinement with δ = √5 | **yes** — the linear part is unchanged |
+| **(A′) radial, whole node** — **ADOPTED 2026-09-27** | −(√5 + \|ψ\|)ψ with \|ψ\|² = Σ_j \|ψ_j\|² over all n complex components, V = √5r²/2 + r³/3 | **yes** — U(n)- (indeed O(2n)-) invariant; charge drift 7×10⁻⁷ at amplitude 0.3, as (A) | **yes** — V ≥ 0; a node with kinetic energy 5 stays within \|u\| ≤ 1.56 (n = 2), 1.23 (n = 3) | **yes** — fully isotropic; = (A) at n = 1 | **yes** — the linear part is unchanged |
 | **(B) ring** — the well on x = \|ψ\|, minimum on \|ψ\| = φ (§0's "radial coordinate" sentence read literally) | −(x² − x − 1)ψ/x | yes (U(1)-symmetric) | yes (bounded, max \|u\| = 4.84) | **no** — minimum on a ring; the origin is not an equilibrium (unit outward force), so L = 0 motion cannot reach it | **no** — the phase mode is massless (acoustic, v² = c√5/(√5 + κ²)); no chirality branches |
 
 **Only (A) satisfies all four.** **This choice was made by the principles alone**
@@ -200,7 +201,48 @@ is recorded as "selected by physics" — an input, not a derivation — and any 
 making it cannot afterwards be counted as a prediction or as evidence for the model. The
 physical criterion must be written down before options are compared.
 
-**Implemented** in `04_scripts/session/model.py` (`J_WELL = "radial"`, default): the J
+**ADOPTED 2026-09-27 — (A′), the φ-well on the whole node's radius, under the selection rule.**
+(Tests: `shape_zero_tests/nodewell_test.py`, `nodewell_criteria.py`; predictions committed first,
+8d5a507; runs 337a509.) **The four criteria above and the principles do not decide between (A) and
+(A′)**: both conserve phase at every order, both are bounded, both are isotropic and origin-centred
+(identical at n = 1), both keep κ\*; passivity and J-compatibility are stated for couplings and say
+nothing about the on-site potential. **The choice rests on two things:**
+1. **§0's cone reading.** "A node carries a point on the **cone**: a mass/radial coordinate and a
+   shape/angular coordinate … The platform's node is an unbounded displacement in a phi-well — that
+   is the **radial** coordinate." `model.cone_split` defines that radial coordinate over the whole
+   node (m = \|u\|²). (A′) is the φ-well on that coordinate; (A) is not.
+2. **A physical criterion, stated under the selection rule:** *an on-site self-interaction must share
+   the symmetry of the gauge class acting on the node.* (A) is invariant only under U(1)ⁿ and carries
+   a preferred split of the node into dimers that nothing forces; gate 7's segment rotations change
+   its potential Σ\|ψ_j\|³/3 by 4–26% (n = 2, 3), while (A′)'s is unchanged to 10⁻¹⁴. **This criterion
+   was written after the comparison ran.** It does not use the gates' improvement as its reason; per
+   the selection rule, what it selected (the absence of self-precession below) cannot be counted as
+   evidence for the model.
+
+**Consequences.**
+- **The first-order self-precession vanishes**: the local frequency shift \|ψ\|/(2ω + κ) is common to
+  all components. Gate 7's Abelian floors fall from 0.160 / 0.096° to 0.000° (5×10⁻⁵, 1.5×10⁻⁴);
+  the per-order errors return to the single-carrier values (0.13 / 0.28°, 0.40 / 0.27°).
+- **P-3's rate is exactly zero** for a plane wave of any internal state (an exact solution): measured
+  10⁻¹⁸–10⁻¹⁹ against 0.006–0.029 under (A) — recorded in `shape_zero_predictions_v1.md` as a
+  **prediction of absence**.
+- **The slice-precession work (§4d) and gate 7's slice floor prediction belong to form (A)**; under
+  (A′) gate 7's floor criterion is floor < 0.01° (its linear prediction, 0).
+- **New certification slopes** (degrees per 10⁻³; both q = 1 and q = 3 CERTIFIED; intercepts
+  unchanged; `certify_gates_output_nodewell.txt`, `certify_gates_slopes_nodewell.json`):
+  q = 1 floors 0.00004 / 0.00014, per-order 0.016 / 0.013 (u(2)) and 0.013 / 0.017 (u(3)), split
+  −0.0044 / +0.0169; q = 3 floors 0.00019 / 0.0016, per-order 0.011 / 0.0076 and 0.015 / 0.024, split
+  −0.0095 / +0.0076 (form (A)'s: §4d, "Measured slopes").
+- **Misses (predictions of 8d5a507):** the split slopes fell only **1.5–6×** (≥ 10× predicted); the u(3)
+  split slope **changed sign** at both q; the q = 3 u(3) per-order slope is **0.024** (≤ 0.02
+  predicted); q3_gate deviations at 10⁻³ are **0.011–0.020°** (≤ 0.01° predicted). A remaining
+  amplitude-proportional effect, ∝ A·g, survives — open (§9).
+
+**Implemented** in `model.py`: `J_WELL = "node"` (default); **(A) stays available** as
+`SZ_J_WELL=radial` (and the elementwise form as `SZ_J_WELL=elementwise`). Everything below and in §4d
+about (A) is kept as written and is **superseded** for the model.
+
+**Implemented** [superseded 2026-09-27: (A′) is the default] in `04_scripts/session/model.py` (`J_WELL = "radial"`, default): the J
 sector — every dimer node — uses (A); the **scalar β sector is unchanged** (per
 component); the elementwise form is kept as an option (`SZ_J_WELL=elementwise`, with
 `SZ_GATE7_READOUT=fixed` reproducing the earlier gate output exactly —
@@ -1741,7 +1783,7 @@ linear gauge dynamics:**
 - **Every deviation is linear in amplitude** (fits, and every Bloch-vector component), so
   **nothing beyond the first-order self-precession is present.**
 
-**Measured slopes — the targets for the next derivation** (degrees per 10⁻³ of amplitude;
+[2026-09-27: form (A)'s slopes; form (A′)'s are in §1a, "ADOPTED 2026-09-27".] **Measured slopes — the targets for the next derivation** (degrees per 10⁻³ of amplitude;
 per-order = the precession part of the vector fit at A = 10⁻³; `certify_gates_slopes.json`):
 
 | quantity | q = 1 (gate 7) | q = 3 (q3_gate) |
@@ -1771,7 +1813,7 @@ precession-corrected prediction); the linear claim rests on the certification re
 [**Superseded the same day at q = 1** by the slice-resolved floor prediction below; q = 3
 keeps the no-pass/fail reporting.]
 
-**Slice-resolved self-precession (2026-09-26; predictions committed before comparison).**
+[**2026-09-27: belongs to form (A)** — under the adopted (A′) there is no first-order self-precession (§1a).] **Slice-resolved self-precession (2026-09-26; predictions committed before comparison).**
 `shape_zero_tests/slice_precession.py`: the packet is cut into slices, one per launched site
 (weight F(x, 0)²; unit node state s). Every slice moves at the carrier group velocity; when it
 crosses a link it takes that link's unitary (one factor of `U_segment`), so a slice inside a
@@ -1808,7 +1850,7 @@ comparison: `slice_precession_compare.txt` (806ea86). Slopes, degrees per 10⁻�
   Why the slice resolution fixes the floor while the impulsive centre-time treatment does not
   is not isolated.
 
-**Adopted (2026-09-26): the slice model is gate 7's floor prediction at q = 1 only.**
+**Adopted (2026-09-26): the slice model is gate 7's floor prediction at q = 1 only.** [**SUPERSEDED 2026-09-27** with form (A): under (A′) gate 7's floor criterion is floor < 0.01°; `SZ_J_WELL=radial` restores the slice criterion.]
 Criterion: **|floor − slice prediction| < 0.01°** at the routine amplitude 10⁻³
 (`model.slice_prediction`; the observed agreement is ≤ 0.0002°). Gate 7's split and
 per-order criteria are unchanged (< 1° against the impulsive-corrected product). At q = 3
@@ -2680,6 +2722,7 @@ prediction 0.294 / 0.175); gate 8 0.1603° PASS; all gates pass.]
 u(3) **0.0965°** vs **0.0962°** — **PASS** (split and per-order unchanged: 98.50 vs 98.28,
 0.16 / 0.36°; 107.11 vs 107.13, 0.41 / 0.29°); gate 8 0.1603° (slice 0.1601); all gates pass.]
 [**2026-09-26 — C_r = 0 adopted (§4b.1):** gate 11 now tests the inert half only, "residual (C_r = 0 adopted): inert at q=1 and q=3" (`shape_zero_tests/model_gates_residual_off.txt`); its active-half values (B = 3.25×10⁻³ and 1.29×10⁻² at C_r = 0.05) are superseded and reproduce with `SZ_RESIDUAL=coded` (`model_gates_residual_coded_repro.txt`). Gates 1–10 unchanged.]
+[**2026-09-27 — node form (A′) adopted (§1a):** all gates pass (`shape_zero_tests/model_gates_nodewell_adopted.txt`). Changed: gate 7 u(2) split **98.51** vs predicted **98.26** (was 98.50 vs 98.28), per-order **0.13 / 0.28°** (was 0.16 / 0.36), floor **0.0001°** vs 0 (was 0.1603 vs slice 0.1601); u(3) **107.16** vs **107.15** (was 107.11 vs 107.13), per-order **0.40 / 0.27°** (was 0.41 / 0.29), floor **0.0002°** (was 0.0965); gate 8 **0.0001°** (was 0.1603); gate 11 B **2.6×10⁻¹⁸ / −6.3×10⁻¹⁹** (was 3.1×10⁻¹⁸ / 2.6×10⁻¹⁸). Gates 1–6, 9, 10 unchanged. Form (A)'s values reproduce with `SZ_J_WELL=radial`.]
 
 **One script now reproduces every verified result the programme has** — u(1),
 u(2), u(3), the pinned asymmetry, κ, the β-collapse, both ordering splittings and
@@ -2818,7 +2861,8 @@ established — see §7b.*
 | ~~§6b's gate-7 u(3) entry~~ **RESOLVED 2026-09-25**: it is the platform benchmark `phi_gauge_u3_working.py` (reproduced exactly), mislabelled as `model.py`'s gate 7; label corrected in §6b. The original entry: | 65.1166 / 64.9712 is not reproduced by the current `model.py` at κ = 0.5 (117.92 / 118.29); pre-existing, found in the κ\* re-run — which configuration produced it is unrecorded |
 | ~~the operating point against persistence~~ **RESOLVED 2026-09-26** by the change of node form (§1a): under the radial form the window is [κ\*, ∞) and κ\* is no longer excluded. The original entry: | the strongest persistence the model admits (no decay, no change of branch) confines κ to [4.9, 7.5] at q = 3, c = 1 and excludes the operating point κ\*, where the u∘u nonlinearity converts a-waves into the opposite chirality (§3, "FINDING", "CORRECTION"); whether to adopt that form, and so move the operating point, is undecided |
 | **the D8 two-generator flow is not realised in the lattice** | the D8 flow ψ̇ = ψa + bψ needs two octonionic generators on one node; in the lattice 𝕁 is not an octonionic multiplication (neither L_x nor R_y nor L_x + R_y, best-fit residual 0.82–1.00), the residual term C_r·mul(g, v) supplies one generator, and κ and C_r have never been on together (gate 11 runs at κ = 0). θ_ab therefore has no lattice counterpart (INPUT_LEDGER §3.2; `shape_zero_tests/d8_theta.py`) [**REFINED 2026-09-26:** "𝕁 is not an octonionic multiplication" holds **in the model's present identification** of node components with octonion units (an unrecorded choice in the tower code). 𝕁 shares R_e's orientation class (Pfaffian +1, against −1 for L_e; `shape_zero_tests/d8_lattice_scoping.py`), so an orientation-preserving relabelling could make 𝕁 = R_a, and κ𝕁 + C_r L_g would then have the D8 form R_a + L_b — but §2 names **L_a**, which gives L_(κa + C_r g), one generator. **Exact J-compatibility forbids a second generator:** [R_a, L_b] = 0 only for b ∥ a. κ and C_r have now been run together (§4b.1, FINDING 2026-09-26). **New tension:** §4b.1 says the residual "becomes the existing D8 structure" at B = 0, but L_g alone is the one-generator law that D8's plurality argument excludes as the D8 dynamics (it is D2 motion; `z1_d8_plurality.py`).] |
-| **gate 7's floor under the radial form** | the first-order self-precession correction captures the per-order errors but over-predicts the order-dependent floor ~1.8×; gate 7 fails its floor criterion. Next: the slice model (§4d, "Gate 7 under the radial well"), predictions first [2026-09-26: the routine gate now reports the floor without a pass/fail; the small-amplitude limit is certified (§4d, "Amplitude scaling"); the measured slopes there are the target for the slice derivation] [2026-09-26: the slice-resolved model matches the q = 1 floors (≤ 0.2%) and is adopted as gate 7's floor prediction at q = 1 (|Δ| < 0.01°); per-order ~10% high, q = 3 off 10–30%, split slopes wrong — open (§4d, "Slice-resolved")] |
+| **the remaining amplitude-proportional effect under (A′)** | with the self-precession gone, deviations from the linear gauge prediction still grow ∝ A (≈ A·g): split slopes −0.0044 / +0.0169 (q = 1) and −0.0095 / +0.0076 (q = 3) per 10⁻³, only 1.5–6× below form (A)'s, u(3) changing sign; q = 3 u(3) per-order 0.024; q3_gate deviations 0.011–0.020° at 10⁻³. Not derived; a candidate is the common frequency shift changing each link's rotation angle (~ gλ δω). Open (§1a, "ADOPTED 2026-09-27") |
+| **gate 7's floor under the radial form** | [2026-09-27: form (A)'s — superseded by (A′), §1a]  the first-order self-precession correction captures the per-order errors but over-predicts the order-dependent floor ~1.8×; gate 7 fails its floor criterion. Next: the slice model (§4d, "Gate 7 under the radial well"), predictions first [2026-09-26: the routine gate now reports the floor without a pass/fail; the small-amplitude limit is certified (§4d, "Amplitude scaling"); the measured slopes there are the target for the slice derivation] [2026-09-26: the slice-resolved model matches the q = 1 floors (≤ 0.2%) and is adopted as gate 7's floor prediction at q = 1 (|Δ| < 0.01°); per-order ~10% high, q = 3 off 10–30%, split slopes wrong — open (§4d, "Slice-resolved")] |
 | **four-wave coupling strengths** | the four-wave channels are counted by linear resonance only; their effective couplings are not derived (§3, "FINDING", caveats) |
 | **the exact value of κ** | only the floor κ ≥ κ\* is derived; the value is a genuine parameter, fixed by the Larmor measurement (`INPUT_LEDGER.md` §3.1); `model.py`'s κ = κ\* is a chosen operating point |
 | **the beam's fourth-order cross kernel** | derive it — every fourth-order cross term between a beam's transverse components, on the lattice — with the measured r values as the target: 0.351/0.350 (w = 1.5), 0.547/0.549 (w = 2), 0.750/0.758 (w = 3) at L = 4, A = 0.30/0.40, which lie 0.33, 0.50, 0.68 of the way from the self-only limit S2 to the all-terms limit S1 (§5, measured with the third-harmonic launch, `kappa4_orbit3_launch.py`) |

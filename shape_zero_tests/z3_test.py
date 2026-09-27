@@ -4,6 +4,11 @@
 e^{2 pi i/3} on C^3). Octonions: the D8 rung table (z1_d8_flow.oct_table), e = e_1, JJ = L_e
 (the sources' J, MODEL_SPEC sec 2-3); the lattice's own JJ = rho(i I) is also used where noted.
 usage: python3 z3_test.py   (~3 min)"""
+import os
+# recorded under node form A (per-dimer radial well); pinned so the outputs reproduce after
+# the default became A' (whole-node well) on 2026-09-27.
+os.environ.setdefault("SZ_J_WELL", "radial")
+
 import importlib.util
 import os
 import sys

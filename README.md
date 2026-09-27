@@ -47,6 +47,8 @@ that, so together they machine-verify C1 Theorem 3.6 ("Roles Force Fano").
   the routine gate 7 reports its floor without a pass/fail (MODEL_SPEC §4d)]
   [Slice-resolved self-precession, 2026-09-26: predicts the q = 1 floor to 0.2% and is gate 7's
   floor prediction at q = 1 (|Δ| < 0.01°); per-order ~10% high, q = 3 and splits open]
+  [Node form (A′) adopted 2026-09-27: the φ-well on the whole node's radius — no first-order
+  self-precession; P-3's rate is exactly zero (MODEL_SPEC §1a)]
   [C_r = 0 adopted 2026-09-26 for the coded residual coupling (MODEL_SPEC §4b.1); the lattice's
   invariants are now c/K, κ/√K with its floor, βc/√K; θ_ab acts only in the D8 derivation]
   [Scaling analysis, 2026-09-26: five invariants (c/K, κ/√K, βc/√K, C_r/√K, θ_ab); the

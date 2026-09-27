@@ -17,6 +17,9 @@ CERTIFIED iff, for every quantity:
      for per-order errors, of each Bloch-vector component's range;
   3. slopes -- reported (the first-order self-precession; the target for its derivation).
 
+Follows model.py's node form: form A' (default since 2026-09-27) reads nodewell_1d.json and
+the q3 nodeA* runs; SZ_J_WELL=radial reproduces form A's certification (amp_scaling_1d.json, ampA*).
+
 usage:  python3 certify_gates.py run        (the runs: ~30 min + ~1 h on 4 cores)
         python3 certify_gates.py evaluate   (from the saved runs)
 """
@@ -97,8 +100,9 @@ def evaluate():
         res[q] = slopes
         print(f"\n  q = {q} ({'gate 7' if q == 1 else 'q3_gate'}): {'CERTIFIED' if ok else 'NOT CERTIFIED'}")
         print("\n".join(lines))
-    json.dump(res, open(os.path.join(HERE, "certify_gates_slopes.json"), "w"), indent=1)
-    print("\n  slopes (deg per 1e-3 of amplitude) -> certify_gates_slopes.json")
+    fn = "certify_gates_slopes.json" if M.J_WELL != "node" else "certify_gates_slopes_nodewell.json"
+    json.dump(res, open(os.path.join(HERE, fn), "w"), indent=1)
+    print(f"\n  slopes (deg per 1e-3 of amplitude) -> {fn}")
 
 
 if __name__ == "__main__":

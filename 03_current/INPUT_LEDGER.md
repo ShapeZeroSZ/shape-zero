@@ -249,7 +249,7 @@ above energy 1.863 per component. An isotropic cubic well cannot be analytic at 
 origin; the D2 rung's own confinement is quadratic; **the φ-well remains an underived
 premise**.]
 [**RESTATED 2026-09-26 (MODEL_SPEC §1b):** what remains a premise is **a quadratic
-on-site force applied radially (form (A))**; its **φ form is a coordinate choice** — every
+on-site force applied radially (form (A))** [2026-09-27: on the whole node's radius, form (A′) — MODEL_SPEC §1a]; its **φ form is a coordinate choice** — every
 quadratic force with two real roots is unit-equivalent to it, and the well contributes zero
 dimensionless parameters. "Fixed points at the golden-ratio roots, linear stiffness √5"
 describes the coordinates, not the physics.]

@@ -7,6 +7,11 @@ identifications JJ = L_e1, R_e1; and gate-11 dynamics with C in place of L_g at 
 including the FULL Noether charge Q = v.JJ u + (1/2) u.(G JJ) u, G = kappa JJ + C_r X (the charge
 recorded in MODEL_SPEC 4b.1, FINDING 2026-09-26, omitted the C_r part).
 usage: python3 residual_j_projection.py (from anywhere; ~3 min)"""
+import os
+# recorded under node form A (per-dimer radial well); pinned so the outputs reproduce after
+# the default became A' (whole-node well) on 2026-09-27.
+os.environ.setdefault("SZ_J_WELL", "radial")
+
 import os; os.chdir(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
 import sys, importlib.util, numpy as np
 sys.path.insert(0,"04_scripts/session"); import model as M

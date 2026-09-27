@@ -6,6 +6,11 @@ L_g L_g x = g(gx) hold (they fail only for generic, non-octonionic g past O); (b
 residual at D16: the block structure of L_g in the octonion / upper halves, and in the gate-11
 run which half s U(1) charge drifts.
 usage: python3 residual_tower_check.py"""
+import os
+# recorded under node form A (per-dimer radial well); pinned so the outputs reproduce after
+# the default became A' (whole-node well) on 2026-09-27.
+os.environ.setdefault("SZ_J_WELL", "radial")
+
 import os; os.chdir(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
 import sys, importlib.util, numpy as np
 sys.path.insert(0,"04_scripts/session"); import model as M

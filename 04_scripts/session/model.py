@@ -67,9 +67,12 @@ K0 = np.pi / 2
 # reproduce (SZ_J_WELL=elementwise). The scalar beta sector always keeps the
 # per-component form. Gate 7's readout: 'clear' (default) or 'fixed' (the earlier
 # T = 180 on N = 200; SZ_GATE7_READOUT=fixed).
-# 'node' (TEST OPTION, 2026-09-26, not adopted): the well on the whole node's radius,
-# F = -(sqrt5 + |psi|) psi with |psi| over all n complex components (A', U(n)-invariant).
-J_WELL = os.environ.get("SZ_J_WELL", "radial")
+# 'node' (ADOPTED 2026-09-27, the default; MODEL_SPEC sec 1a, "A'"): the well on the whole
+# node's radius, F = -(sqrt5 + |psi|) psi with |psi| over all n complex components -- the
+# node's radial coordinate of sec 0 (cone_split), invariant under U(n) (indeed O(2n)).
+# 'radial' (form A, the default 2026-09-26 -> 09-27): per dimer, kept so its results
+# reproduce (SZ_J_WELL=radial).
+J_WELL = os.environ.get("SZ_J_WELL", "node")
 GATE7_READOUT = os.environ.get("SZ_GATE7_READOUT", "clear")
 # Residual coupling (ADOPTED 2026-09-26: C_r = 0 for the coded coupling C_r mul(g, v);
 # MODEL_SPEC sec 4b.1, "ADOPTED -- C_r = 0"). The coded coupling is block-diagonal in the
@@ -923,7 +926,12 @@ def main():
             # corrected product); the slice model's split and per-order values are
             # not used (MODEL_SPEC sec 4d). The small-amplitude claim is certified by
             # shape_zero_tests/certify_gates.py.
-            if sfloor is not None:
+            if J_WELL == "node" and sfloor is None:
+                # A' (adopted 2026-09-27): no first-order self-precession, so the floor's
+                # prediction is the linear one, 0; criterion floor < 0.01 deg.
+                okf = floor < 0.01
+                ftxt = f"Abelian floor {floor:.4f} deg vs 0 (A', |d| < 0.01)"
+            elif sfloor is not None:
                 okf = abs(floor - sfloor) < 0.01
                 ftxt = (f"Abelian floor {floor:.4f} deg vs slice prediction {sfloor:.4f} "
                         f"(|d| < 0.01; impulsive {pfloor:.3f})")

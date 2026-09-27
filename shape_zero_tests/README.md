@@ -334,6 +334,13 @@ for unit imaginary a, b at angle θ; ratio 1/sin(θ/2) (INPUT_LEDGER §3.2).
 gate 11. Supporting checks: `residual_tower_check.py`, `kappa_cr_gate.py`, `residual_j_projection.py`,
 `z3_test.py` (MODEL_SPEC §4b.1, "ADOPTED — C_r = 0").
 
+### 24. Node form (A′) (2026-09-27)
+`nodewell_test.py sym | p3 | run1d | report` (predictions `nodewell_predictions.txt`, committed
+first), `nodewell_criteria.py`; runs `nodewell_1d.json`, `q3_gate_*nodeA*`; `model_gates_nodewell.txt`
+(A′ as an option) and `model_gates_nodewell_adopted.txt` (A′ as the default);
+`certify_gates_output_nodewell.txt`, `certify_gates_slopes_nodewell.json`. `amp_scaling.py` and
+`certify_gates.py` follow the model's form (`SZ_J_WELL=radial` for form (A)'s files).
+
 ### P-1 investigation
 `p1/` — the decay-window investigation behind the P-1 annotation; its README maps
 each file to its finding.

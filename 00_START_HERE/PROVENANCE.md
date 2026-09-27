@@ -1225,6 +1225,11 @@ octonion half to the level above) and breaks J-compatibility inside the octonion
 it to colour, generations or a classical limit. Gate 11 now tests the inert half; `SZ_RESIDUAL=coded`
 reproduces the earlier gate. Open: the residual as the tower acting on D ≤ 8 (MODEL_SPEC §9).
 
+**Node form (A′) adopted (2026-09-27):** predictions committed first (8d5a507), runs 337a509; chosen
+under the selection rule on §0's cone reading and the criterion that an on-site self-interaction
+shares the gauge class's symmetry — the criterion written after the comparison ran. Form (A) is
+`SZ_J_WELL=radial`.
+
 **Catch:** the node form was an inherited platform choice ("per-component"), never
 derived, whose O(2) breaking the spec itself noted (v5.3, Result 4, line 143) and on which
 a prediction (P-3) was built. Failure mode #1's cousin: a modelling choice carried forward
