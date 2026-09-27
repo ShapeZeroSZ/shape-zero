@@ -1357,6 +1357,22 @@ units, so the golden-ratio well's φ is a coordinate choice. The origin recorded
 consistent with that: φ was neither derived from the premise nor needed by the
 dynamics; it is a label, and in the force law a choice of units.
 
+## 6s. The κ-gradient force — from the natural-physics branch, on `main`'s terms (2026-09-27)
+
+- **Where it came from.** Branch `natural-physics` scoped electromagnetism as an adaptation. It
+  found that a uniform κ is a uniform electrostatic potential (`natural/EM_SCOPE.md` §4), and it
+  listed "a κ gradient acts as an electric field" among the joint theory's candidate predictions
+  (`natural/JOINT_PREDICTIONS.md`, candidate 3).
+- **Why it belongs on `main`.** The effect needs **no adaptation**: it follows from `main`'s own
+  force law with κ made site-dependent, the local form of MODEL_SPEC §1c's rotating-frame reading.
+- **How it was tested.**
+  - Hypothesis and numbers committed first (`natural/KGRAD_HYPOTHESIS.md`, 0b12001, on that branch).
+  - Run there (3c1a445), then re-run here on `main`'s `model.py` with identical output.
+  - Result: a_a − a_b = c·κ′/ω_rot to −0.23%, the common part to −0.4%.
+- **Recorded as** MODEL_SPEC §1c and UNIVERSAL_RELATIONS row 12.
+- **Merged under the branch's charter rule 6:** it closes on `main`'s own terms. The branch's
+  electromagnetic reading of it (κ = 2eA₀) stays on the branch.
+
 ## 7. Recurring failure modes
 
 Each has produced at least two errors in this programme.
