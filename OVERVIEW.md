@@ -17,8 +17,8 @@
 | 4b | Result 3 in any dimension, also independent of transverse wavenumbers | [mission](https://prove2.me/missions/9ff04037-d5c4-4f85-9134-da4857002c2f) |
 | 5 | A nonempty Steiner triple system with a role colouring has exactly 7 points | [mission](https://prove2.me/missions/d322e356-9907-4f54-ac53-198182d579ae) |
 | 6 | Every Steiner triple system on 7 points is the Fano plane | [mission](https://prove2.me/missions/41c20aa4-1fd8-4027-9122-cc980db17bc9) |
-| 7 | The octonionic flow p ↦ p·e₁ + (cos θ e₁ + sin θ e₂)·p has frequencies 0, 2, 2 sin(θ/2) (in review) | [goal](https://prove2.me/theorems/0850ee71-7133-4033-b33f-f964f8b18a0f) |
-| 8 | Every force −a(x − r₁)(x − r₂), r₁ ≠ r₂, is z″ = −(z² − 1) in other units (in review) | [goal](https://prove2.me/theorems/f9298e70-0c29-4f54-a448-291860e866e1) |
+| 7 | The octonionic flow p ↦ p·e₁ + (cos θ e₁ + sin θ e₂)·p has frequencies 0, 2, 2 sin(θ/2) | [mission](https://prove2.me/missions/b9a79764-3d38-4e70-8f04-c11007d85d2b) |
+| 8 | Every force −a(x − r₁)(x − r₂), r₁ ≠ r₂, is z″ = −(z² − 1) in other units | [mission](https://prove2.me/missions/7b44c83e-e0ba-494c-b5c2-35b84c1001f2) |
 
 ## Measured (simulation; each result from the script named)
 

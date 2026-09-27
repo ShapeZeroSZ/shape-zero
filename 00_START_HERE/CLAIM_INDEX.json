@@ -54,17 +54,6 @@
   },
   {
    "file": "./OVERVIEW.md",
-   "line": 20,
-   "section": "Machine-proved (Lean 4, [Prove2Me](https://prove2.me); list in `00_START_HERE/PROVENANCE.md` \u00a76l)",
-   "text": "| 7 | The octonionic flow p \u21a6 p\u00b7e\u2081 + (cos \u03b8 e\u2081 + sin \u03b8 e\u2082)\u00b7p has frequencies 0, 2, 2 sin(\u03b8/2) (in review) | [goal](https://prove2.me/theorems/0850ee71-7133-4033-b33f-f964f8b18a0f) |",
-   "numbers": [
-    "7133",
-    "4033"
-   ],
-   "status": []
-  },
-  {
-   "file": "./OVERVIEW.md",
    "line": 25,
    "section": "Measured (simulation; each result from the script named)",
    "text": "- **Non-commuting gauge ordering at q = 3** matches its independent linear prediction to 0.011\u20130.020\u00b0 at amplitude 10\u207b\u00b3 \u2014 `shape_zero_tests/q3_gate.py` (`MODEL_SPEC.md` \u00a79).",
@@ -7123,9 +7112,7 @@
     "05",
     "27"
    ],
-   "status": [
-    "PROVED"
-   ]
+   "status": []
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
@@ -7139,9 +7126,7 @@
     "06",
     "36"
    ],
-   "status": [
-    "PROVED"
-   ]
+   "status": []
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
@@ -15716,7 +15701,56 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
+   "line": 613,
+   "section": "6l. Mission 3 \u2014 the pinned asymmetry, proved exactly",
+   "text": "**Approvals of missions 7 and 8 (2026-09-27), both by Prove2Me moderator Shuze",
+   "numbers": [
+    "2026",
+    "09",
+    "27"
+   ],
+   "status": []
+  },
+  {
+   "file": "./00_START_HERE/PROVENANCE.md",
+   "line": 616,
+   "section": "6l. Mission 3 \u2014 the pinned asymmetry, proved exactly",
+   "text": "- **Mission 8 (14:21 UTC).** The moderator verified all five items independently:",
+   "numbers": [
+    "14",
+    "21"
+   ],
+   "status": [
+    "VERIFIED"
+   ]
+  },
+  {
+   "file": "./00_START_HERE/PROVENANCE.md",
+   "line": 620,
+   "section": "6l. Mission 3 \u2014 the pinned asymmetry, proved exactly",
+   "text": "m = \u00bd, d = \u221a5/2, \u03c9 = (\u221a5/2)^\u00bd. The review confirmed that m, d and \u03c9 are",
+   "numbers": [
+    "5/2",
+    "5/2"
+   ],
+   "status": [
+    "VERIFIED"
+   ]
+  },
+  {
+   "file": "./00_START_HERE/PROVENANCE.md",
    "line": 625,
+   "section": "6l. Mission 3 \u2014 the pinned asymmetry, proved exactly",
+   "text": "- **Mission 7 (14:21 UTC).** Read as pure linear algebra about an explicitly",
+   "numbers": [
+    "14",
+    "21"
+   ],
+   "status": []
+  },
+  {
+   "file": "./00_START_HERE/PROVENANCE.md",
+   "line": 654,
    "section": "6m. J-compatibility \u2014 the one premise, classified CHOSEN",
    "text": "O(2n) have dimension 3, 1, 1, 1 at n = 1; 10, 4, 1, 1 at n = 2; 21, 9, 1, 1 at",
    "numbers": [
@@ -15727,7 +15761,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 641,
+   "line": 670,
    "section": "6m. J-compatibility \u2014 the one premise, classified CHOSEN",
    "text": "the model's k\u2080 = \u03c0/2 levels off at ~0.08, not \u221d g/\u03c9), but the experiment found",
    "numbers": [
@@ -15737,7 +15771,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 644,
+   "line": 673,
    "section": "6m. J-compatibility \u2014 the one premise, classified CHOSEN",
    "text": "model's own parameters close it for k\u2080 < 1.45 and open it above; the prediction",
    "numbers": [
@@ -15749,7 +15783,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 648,
+   "line": 677,
    "section": "6m. J-compatibility \u2014 the one premise, classified CHOSEN",
    "text": "[Superseded 2026-09-25 \u2014 \u00a76p.]",
    "numbers": [
@@ -15763,7 +15797,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 653,
+   "line": 682,
    "section": "6n. q = 3 readout check \u2014 a guard that was the error",
    "text": "certifies exit by centroid position and **fires with 98% of the packet still in",
    "numbers": [
@@ -15773,7 +15807,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 656,
+   "line": 685,
    "section": "6n. q = 3 readout check \u2014 a guard that was the error",
    "text": "Under a clearing readout (< 10\u207b\u2076 in every window, 320\u00d712\u00d712 full slab):",
    "numbers": [
@@ -15786,7 +15820,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 658,
+   "line": 687,
    "section": "6n. q = 3 readout check \u2014 a guard that was the error",
    "text": "and gate 8's 0.39\u00b0 were both the packet read mid-exit, not unequal group",
    "numbers": [
@@ -15796,7 +15830,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 660,
+   "line": 689,
    "section": "6n. q = 3 readout check \u2014 a guard that was the error",
    "text": "error 0.06\u00b0) was a coincidence of mid-exit timing** \u2014 a near-miss agreement from",
    "numbers": [
@@ -15808,7 +15842,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 662,
+   "line": 691,
    "section": "6n. q = 3 readout check \u2014 a guard that was the error",
    "text": "error is 4.4\u20135.1\u00b0**, and a single segment misses by 2.70\u00b0: intrinsic to the",
    "numbers": [
@@ -15818,7 +15852,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 667,
+   "line": 696,
    "section": "6n. q = 3 readout check \u2014 a guard that was the error",
    "text": "u(2) split of ~106\u00b0 where \u00a74d quoted ~30\u00b0. Old-vs-new comparisons are on",
    "numbers": [
@@ -15829,7 +15863,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 675,
+   "line": 704,
    "section": "6n. q = 3 readout check \u2014 a guard that was the error",
    "text": "0.04\u20130.17\u00b0: u(2) split 105.89\u00b0 measured vs 105.85\u00b0 predicted, u(3) 60.54\u00b0 vs",
    "numbers": [
@@ -15843,7 +15877,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 676,
+   "line": 705,
    "section": "6n. q = 3 readout check \u2014 a guard that was the error",
    "text": "60.71\u00b0. **Retracted:** the claim that the ~4\u20135\u00b0 was irreducible because \"a pure",
    "numbers": [
@@ -15855,7 +15889,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 683,
+   "line": 712,
    "section": "6n. q = 3 readout check \u2014 a guard that was the error",
    "text": "SHA-256 and reproduction verified from the repository alone. Four printed-only",
    "numbers": [
@@ -15867,7 +15901,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 687,
+   "line": 716,
    "section": "6n. q = 3 readout check \u2014 a guard that was the error",
    "text": "**Made permanent.** `q3_gate.py` (commit `ed32937`) passes at 0.10\u20130.18\u00b0 with the",
    "numbers": [
@@ -15880,7 +15914,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 690,
+   "line": 719,
    "section": "6n. q = 3 readout check \u2014 a guard that was the error",
    "text": "the backward side and accepted a 240-site lattice that a direct run showed",
    "numbers": [
@@ -15890,7 +15924,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 691,
+   "line": 720,
    "section": "6n. q = 3 readout check \u2014 a guard that was the error",
    "text": "failing (a stray wave re-entered the second segment at t \u2248 350). Fixed in commit",
    "numbers": [
@@ -15902,7 +15936,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 697,
+   "line": 726,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "## 6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "numbers": [
@@ -15917,7 +15951,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 702,
+   "line": 731,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "asymmetry correction as +0.0349 \u03b2A\u00b2, i.e. \u03ba = \u22120.0175; \u00a75 quoted +0.0799.",
    "numbers": [
@@ -15928,7 +15962,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 708,
+   "line": 737,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "+0.1007 at \u03b2 = 0.05, A = 0.30, and its own main block (d0 = \u22120.1 hard-coded) could",
    "numbers": [
@@ -15940,7 +15974,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 709,
+   "line": 738,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "not have printed 0.0799; the quoted value is (|\u0394/\u0394\u2080| \u2212 1)/A\u00b2. The O(\u03b2) velocity",
    "numbers": [
@@ -15950,7 +15984,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 713,
+   "line": 742,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "(0.009 \u2192 0.076 over the \u03b2-sweep); after the fix it is flat at 0.0054\u20130.0057.",
    "numbers": [
@@ -15962,7 +15996,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 717,
+   "line": 746,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "| amplitude sweep, \u03b2 = 0.05, A = 0.10 / 0.20 / 0.30 / 0.40 | +0.0773 / +0.0783 / +0.0799 / +0.0821 | \u22120.0176 / \u22120.0179 / \u22120.0187 / \u22120.0200 |",
    "numbers": [
@@ -15984,7 +16018,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 718,
+   "line": 747,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "| \u03b2-sweep, A = 0.30, \u03b2 = 0.02 / 0.05 / 0.10 / 0.20: \\|\u0394/\u0394\u2080\\| | 1.007227 / 1.007190 / 1.007262 / 1.007051 | 0.998339 / 0.998316 / 0.998390 / 0.998316 |",
    "numbers": [
@@ -16006,7 +16040,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 719,
+   "line": 748,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "| \u03b2-sweep \u03ba | +0.0798 \u00b1 0.00089 | **\u22120.0184 \u00b1 0.00033** |",
    "numbers": [
@@ -16019,7 +16053,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 720,
+   "line": 749,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "| linear, A = 0.02, \u03b2 = 0.05: \\|\u0394\u03c9\\| \u2212 2c\u03b2 sin k | +3.1\u00d710\u207b\u2076 | \u22127\u00d710\u207b\u2077 |",
    "numbers": [
@@ -16032,7 +16066,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 722,
+   "line": 751,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "Corrected \u03ba = \u22120.0187 at \u03b2 = 0.05, A = 0.30 was confirmed independently with",
    "numbers": [
@@ -16046,7 +16080,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 724,
+   "line": 753,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "gives \u22120.01775 at A = 0.30 \u2014 \"\u03ba to fourth order, and the launch\", below.] `model.py` gate 6 also took abs() of the drift, so it could not",
    "numbers": [
@@ -16057,7 +16091,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 731,
+   "line": 760,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "mismatch but not a swap; not changed here, and its superseded 0.0305 carries",
    "numbers": [
@@ -16070,7 +16104,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 745,
+   "line": 774,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "seeding each direction at its own root, gives \u03ba = \u22120.0214, \u22120.0187, \u22120.0165 at",
    "numbers": [
@@ -16082,7 +16116,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 746,
+   "line": 775,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "stiffness 0.90, 1.00, 1.10 (26% spread; retracted: 0.0959, 0.0799, 0.0677, 35%)",
    "numbers": [
@@ -16101,7 +16135,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 747,
+   "line": 776,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "with the linear ratio 0.999992 / 0.999993 / 0.999994. Its unit-stiffness A = 0.30",
    "numbers": [
@@ -16113,7 +16147,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 748,
+   "line": 777,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "ratio, 0.998316, equals the fixed reference \u03b2-sweep value. MODEL_SPEC \u00a75b.2",
    "numbers": [
@@ -16123,7 +16157,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 756,
+   "line": 785,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "table). Counter-propagating admixture at A = 0.001, \u03b2 = 0.05: 1.25\u00d710\u207b\u00b2 with the",
    "numbers": [
@@ -16136,7 +16170,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 757,
+   "line": 786,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "\u03b2 = 0 seed, 1.5\u00d710\u207b\u00b3 with the own root (the finite-record floor), 2.4\u00d710\u207b\u00b2 with",
    "numbers": [
@@ -16147,7 +16181,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 758,
+   "line": 787,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "the other direction's root. Hypothesis beforehand: linear results move < 10\u207b\u2075,",
    "numbers": [
@@ -16157,7 +16191,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 763,
+   "line": 792,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "| `phi_gauge_nonlinear.py`, \u03b2 = 0 rows and \u03b2 = 0.05, A = 0.001 row | 2.00878 / 2.10878 / \u22120.10000 | unchanged to 5 decimals |",
    "numbers": [
@@ -16171,7 +16205,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 764,
+   "line": 793,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "| same, \u03b2 = 0.05, \u0394\u03c9 at A = 0.1 / 0.2 / 0.3 / 0.4 | \u22120.10003 / \u22120.10012 / \u22120.10028 / \u22120.10050 | \u22120.09998 / \u22120.09993 / \u22120.09983 / \u22120.09968 |",
    "numbers": [
@@ -16189,7 +16223,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 765,
+   "line": 794,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "| same, \u03c9(+k) / \u03c9(\u2212k) at A = 0.4 | 1.99237 / 2.09287 | 1.99278 / 2.09246 (centre 2.04262 unchanged) |",
    "numbers": [
@@ -16203,7 +16237,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 766,
+   "line": 795,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "| residual/A\u00b2, \u03b2 = 0.05, A = 0.1\u20130.4 (PINNED_ASYMMETRY_TEST \u00a73b) | \u22120.002978 \u2026 \u22120.003109 | +0.001757 \u2026 +0.001996 |",
    "numbers": [
@@ -16217,7 +16251,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 767,
+   "line": 796,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "| coeff/\u03b2 at \u03b2 = 0.02 / 0.05 / 0.10 / 0.20 (\u00a73b) | \u22120.06146 / \u22120.06091 / \u22120.06302 / \u22120.05891 | +0.03670 / +0.03707 / +0.03510 / +0.03721 |",
    "numbers": [
@@ -16238,7 +16272,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 768,
+   "line": 797,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "| `phi_gauge_closure.py` fit | \u03b4 = \u22120.0598\u00b7\u03b2, max residual 1.28\u00d710\u207b\u2074 (1.4%) | **\u03b4 = +0.0357\u00b7\u03b2**, 8.35\u00d710\u207b\u2075 (1.5%) |",
    "numbers": [
@@ -16253,7 +16287,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 769,
+   "line": 798,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "| closure \u03b4(0.05) (its docstring) | \u22120.0031 (printed \u22120.00303) | +0.00179 |",
    "numbers": [
@@ -16266,7 +16300,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 770,
+   "line": 799,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "| closure parity sum | \u22123.7\u00d710\u207b\u00b9\u2074 | \u22122.0\u00d710\u207b\u00b9\u2074 |",
    "numbers": [
@@ -16277,7 +16311,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 771,
+   "line": 800,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "| `pinned_asymmetry_headline.py` drift/A\u00b2, A = 0.1 / 0.2 / 0.3 / 0.4 | 0.0662 / 0.0471 / 0.0307 / 0.0311 | +0.0180 / \u22120.0029 / \u22120.0203 / \u22120.0205 |",
    "numbers": [
@@ -16294,7 +16328,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 772,
+   "line": 801,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "| headline coefficient | 0.044 \u00b1 0.015 (mean over all A) | **\u22120.0205** (fit over A \u2265 0.3) |",
    "numbers": [
@@ -16306,7 +16340,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 774,
+   "line": 803,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "The closure fit now agrees with second-order PT (+0.0349\u00b7\u03b2) to 2%, and",
    "numbers": [
@@ -16316,7 +16350,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 775,
+   "line": 804,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "\u03ba = \u2212\u03b4/(2c \u03b2 sin k) = \u22120.0179 agrees with the reference \u03b2-sweep (\u22120.0184 \u00b1 0.00033).",
    "numbers": [
@@ -16328,7 +16362,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 778,
+   "line": 807,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "`pinned_asymmetry_headline.py` also changed how it fits. Its T = 300 readout does",
    "numbers": [
@@ -16338,7 +16372,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 781,
+   "line": 810,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "\u22120.006 \u00b1 0.016 even after the re-seed. It now fits only A \u2265 0.3, where the drift",
    "numbers": [
@@ -16349,7 +16383,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 782,
+   "line": 811,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "exceeds twice the record-length check. It had been printing 0.044, not the 0.0305",
    "numbers": [
@@ -16360,7 +16394,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 787,
+   "line": 816,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "**\u03ba(w = 2, side) re-measured (same day) \u2014 measured and open [now CLOSED, below].** `shape_zero_tests/kappa_readout_test.py` (\u03b2 = 0.05, A = 0.30, q = 3, transverse",
    "numbers": [
@@ -16373,7 +16407,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 788,
+   "line": 817,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "width w = 2, periodic BC, T = 300, uniform transverse readout). Its gyro term is",
    "numbers": [
@@ -16383,7 +16417,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 792,
+   "line": 821,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "frequency (counter-propagating content 10\u207b\u00b9\u2076; one carrier at the right root",
    "numbers": [
@@ -16393,7 +16427,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 796,
+   "line": 825,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "| side | 8 | 12 | 16 | 24 | 32 |",
    "numbers": [
@@ -16406,7 +16440,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 798,
+   "line": 827,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "| transverse fill fraction | 0.194 | 0.087 | 0.049 | 0.022 | 0.012 |",
    "numbers": [
@@ -16420,7 +16454,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 799,
+   "line": 828,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "| **\u03ba, own-branch seed** | **\u22120.00447** | **\u22120.00289** | **\u22120.00204** | **\u22120.00115** | **\u22120.00047** |",
    "numbers": [
@@ -16434,7 +16468,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 800,
+   "line": 829,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "| \u03ba / \u03ba(plane wave, \u22120.01869) | 0.239 | 0.155 | 0.109 | 0.062 | 0.025 |",
    "numbers": [
@@ -16449,7 +16483,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 801,
+   "line": 830,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "| that ratio / fill fraction | 1.23 | 1.77 | 2.22 | 2.82 | 2.05 |",
    "numbers": [
@@ -16463,7 +16497,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 802,
+   "line": 831,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "| \u03ba, swapped seed, re-run \u2014 RETRACTED | +0.01772 | +0.01128 | +0.00801 | +0.00457 | +0.00185 |",
    "numbers": [
@@ -16479,7 +16513,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 803,
+   "line": 832,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "| \u03ba, swapped seed, as quoted in the script's docstring \u2014 RETRACTED | 0.0175 | 0.0113 | 0.0082 | **0.0027** (does not reproduce) | 0.0018 |",
    "numbers": [
@@ -16495,7 +16529,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 805,
+   "line": 834,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "- **Plane-wave control: \u03ba = \u22120.01869** (linear ratio 0.999993) at every side and",
    "numbers": [
@@ -16506,7 +16540,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 808,
+   "line": 837,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "`joint3_kappa_stiffness.py`. (Swapped seed: +0.07994, the retracted value.) It",
    "numbers": [
@@ -16518,7 +16552,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 811,
+   "line": 840,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "- **Linear pinning holds** at 0.999997\u20131.000000 for every side and readout.",
    "numbers": [
@@ -16529,7 +16563,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 812,
+   "line": 841,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "- **\u03ba still has no side-independent limit.** It falls tenfold from side 8 to 32",
    "numbers": [
@@ -16539,7 +16573,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 813,
+   "line": 842,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "and steepens at the end (\u2248 side\u207b\u00b3 from 24 to 32) [within error \u2014 below]. **No \u03ba(w) is published.**",
    "numbers": [
@@ -16550,7 +16584,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 814,
+   "line": 843,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "- **Mechanism unresolved** [since CLOSED \u2014 a fixed dilution with factor F = 2 \u2212 s, below]. It is **not seeding**: new/old is \u22120.25 at every side",
    "numbers": [
@@ -16562,7 +16596,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 816,
+   "line": 845,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "is **not readout**: the uniform readout is clean (phase residual 0.003\u20130.011);",
    "numbers": [
@@ -16573,7 +16607,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 820,
+   "line": 849,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "amplitude driving the shift) and **failed**: |\u03ba|/(|\u03ba_pw|\u00b7fill) runs 1.23 \u2192",
    "numbers": [
@@ -16585,7 +16619,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 821,
+   "line": 850,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "2.82, not constant.",
    "numbers": [
@@ -16595,7 +16629,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 822,
+   "line": 851,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "- **The original docstring's 0.0027 at side 24 does not reproduce**: the",
    "numbers": [
@@ -16606,7 +16640,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 831,
+   "line": 860,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "**\u03ba(w = 2, side) \u2014 CLOSED (2026-09-24).** Three GPU scans (Google Colab, Tesla",
    "numbers": [
@@ -16618,7 +16652,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 832,
+   "line": 861,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "T4, PyTorch float64, fixed-step RK4 dt = 0.01; physics, Fourier-space seed and",
    "numbers": [
@@ -16628,7 +16662,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 838,
+   "line": 867,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "`kappa_extended_gpu.py` (NumPy backend) at L = 20, 24, 28, 32: every \u03ba, error bar,",
    "numbers": [
@@ -16641,7 +16675,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 839,
+   "line": 868,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "[0, 150] value and energy drift identical to the Colab output.",
    "numbers": [
@@ -16651,7 +16685,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 843,
+   "line": 872,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "| 8 | 0.19387 | \u22120.00447 \u00b1 0.00011 | 1.23 \u00b1 0.03 | 1.35 |",
    "numbers": [
@@ -16666,7 +16700,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 844,
+   "line": 873,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "| 12 | 0.08726 | \u22120.00289 \u00b1 0.00014 | 1.77 \u00b1 0.08 | 1.66 |",
    "numbers": [
@@ -16682,7 +16716,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 845,
+   "line": 874,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "| 16 | 0.04909 | \u22120.00204 \u00b1 0.00021 | 2.22 \u00b1 0.23 | 1.80 |",
    "numbers": [
@@ -16698,7 +16732,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 846,
+   "line": 875,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "| 20 | 0.03142 | \u22120.00147 \u00b1 0.00030 | 2.50 \u00b1 0.52 | 1.87 |",
    "numbers": [
@@ -16714,7 +16748,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 847,
+   "line": 876,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "| 24 | 0.02182 | \u22120.00115 \u00b1 0.00036 | 2.81 \u00b1 0.89 | 1.91 |",
    "numbers": [
@@ -16730,7 +16764,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 848,
+   "line": 877,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "| 28 | 0.01603 | \u22120.00075 \u00b1 0.00034 | 2.49 \u00b1 1.13 | 1.94 |",
    "numbers": [
@@ -16746,7 +16780,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 849,
+   "line": 878,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "| 32 | 0.01227 | \u22120.00047 \u00b1 0.00015 | 2.03 \u00b1 0.63 | 1.95 |",
    "numbers": [
@@ -16762,7 +16796,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 850,
+   "line": 879,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "| 36 | 0.00970 | \u22120.00040 \u00b1 0.00016 | 2.22 \u00b1 0.86 | 1.96 |",
    "numbers": [
@@ -16778,7 +16812,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 851,
+   "line": 880,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "| 40 | 0.00785 | \u22120.00033 \u00b1 0.00017 | 2.26 \u00b1 1.16 | 1.97 |",
    "numbers": [
@@ -16794,7 +16828,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 852,
+   "line": 881,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "| 48 | 0.00545 | \u22120.00025 \u00b1 0.00019 | 2.43 \u00b1 1.83 | 1.98 |",
    "numbers": [
@@ -16810,7 +16844,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 853,
+   "line": 882,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "| 64 | 0.00307 | \u22120.00018 \u00b1 0.00021 | 3.22 \u00b1 3.64 | 1.99 |",
    "numbers": [
@@ -16826,7 +16860,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 854,
+   "line": 883,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "| 80 | 0.00196 | \u22120.00017 \u00b1 0.00022 | 4.59 \u00b1 5.91 | 1.99 |",
    "numbers": [
@@ -16842,7 +16876,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 856,
+   "line": 885,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "(\u03ba over [0, 300]; the error bar is the larger of the weighted-vs-unweighted",
    "numbers": [
@@ -16852,7 +16886,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 861,
+   "line": 890,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "\u03ba(L = 16) over [0, 150] and over [0, 300] are both \u22120.00204 \u2014 and it is a clean",
    "numbers": [
@@ -16865,7 +16899,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 862,
+   "line": 891,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "A\u00b2 coefficient (\u22120.00201 / \u22120.00202 / \u22120.00204 at A = 0.10 / 0.20 / 0.30, flat",
    "numbers": [
@@ -16880,7 +16914,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 865,
+   "line": 894,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "cause: its amplitude grows up to 11% (L = 16, T = 1200) and \u03ba drifts ~10% over",
    "numbers": [
@@ -16893,7 +16927,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 866,
+   "line": 895,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "long runs (\u22120.00204 at T = 300 \u2192 \u22120.00184 at T = 1200), while the plane-wave",
    "numbers": [
@@ -16906,7 +16940,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 867,
+   "line": 896,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "control stays put (\u22120.01869 early, \u22120.01874 late). `kappa_side_gpu.py`.",
    "numbers": [
@@ -16917,7 +16951,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 868,
+   "line": 897,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "2. **\u03ba_box = \u03ba_pw \u00d7 fill \u00d7 F**, with F rising from 1.23 \u00b1 0.03 at L = 8 toward",
    "numbers": [
@@ -16928,7 +16962,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 872,
+   "line": 901,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "largest 1.8\u03c3 at L = 16 \u2014 at every L \u2265 12, though all eleven of those points",
    "numbers": [
@@ -16939,7 +16973,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 873,
+   "line": 902,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "lie above it. It is **9% high at L = 8** (1.35 against 1.23 \u00b1 0.03). Deriving",
    "numbers": [
@@ -16951,7 +16985,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 882,
+   "line": 911,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "negative. From L = 64 it cannot be distinguished from zero by this method",
    "numbers": [
@@ -16961,7 +16995,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 883,
+   "line": 912,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "(\u22120.00018 \u00b1 0.00021 at 64, \u22120.00017 \u00b1 0.00022 at 80); nothing suggests a sign",
    "numbers": [
@@ -16976,7 +17010,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 886,
+   "line": 915,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "within its error bar \u2014 e.g. +13% \u00b1 32% at L = 24, \u221214% \u00b1 31% at L = 32. The",
    "numbers": [
@@ -16990,7 +17024,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 889,
+   "line": 918,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "from 24 to 32), which is inside the error bars.",
    "numbers": [
@@ -17001,7 +17035,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 890,
+   "line": 919,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "5. **Only the plane-wave \u03ba = \u22120.0187 is a real coefficient.** [\u22120.0187 is the",
    "numbers": [
@@ -17012,7 +17046,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 891,
+   "line": 920,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "plain-cosine-launch value at A = 0.3; the exact travelling wave gives \u22120.01775",
    "numbers": [
@@ -17022,7 +17056,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 892,
+   "line": 921,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "there, and \u22120.017480 at small amplitude \u2014 \"\u03ba to fourth order\", below.] A localised beam's",
    "numbers": [
@@ -17032,7 +17066,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 909,
+   "line": 938,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "**\u03ba across beam widths \u2014 w = 3 CLOSED (2026-09-24).** `kappa_widthscan_gpu.py`",
    "numbers": [
@@ -17044,7 +17078,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 914,
+   "line": 943,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "w/L = 1/4 and varies w from 1 to 6; it reproduced the Colab values for w = 2, 3",
    "numbers": [
@@ -17054,7 +17088,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 919,
+   "line": 948,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "| 1/4 | 1.15 \u00b1 0.01 | \u2014 | 1.23 \u00b1 0.03 | 1.32 \u00b1 0.04 | 1.33 \u00b1 0.07 | 1.29 \u00b1 0.10 | 1.34 \u00b1 0.16 | 1.34\u20131.38 |",
    "numbers": [
@@ -17078,7 +17112,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 920,
+   "line": 949,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "| 1/8 | \u2014 | 2.01 \u00b1 0.12 | 2.22 \u00b1 0.23 | 2.38 \u00b1 0.65 | 1.61 \u00b1 0.53 | \u2014 | \u2014 | 1.80 |",
    "numbers": [
@@ -17097,7 +17131,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 921,
+   "line": 950,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "| 1/12 | \u2014 | \u2014 | 2.81 \u00b1 0.89 | 1.99 \u00b1 0.83 | 2.78 \u00b1 1.66 | \u2014 | \u2014 | 1.91 |",
    "numbers": [
@@ -17114,7 +17148,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 922,
+   "line": 951,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "| 1/16 | \u2014 | 2.86 \u00b1 0.86 | 2.03 \u00b1 0.63 | 2.60 \u00b1 1.85 | 4.82 \u00b1 3.09 | \u2014 | \u2014 | 1.95 |",
    "numbers": [
@@ -17133,7 +17167,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 929,
+   "line": 958,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "w/L = 1/4 (error bars \u00b10.03\u20130.07), partly sharp at 1/8, and **not a real test",
    "numbers": [
@@ -17146,7 +17180,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 930,
+   "line": 959,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "at 1/12 and 1/16**, where error bars reach \u00b13 \u2014 agreement there means only",
    "numbers": [
@@ -17157,7 +17191,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 933,
+   "line": 962,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "effect, established at w/L = 1/4:** the gap is \u221216.5% at w = 1 (18.6 of its",
    "numbers": [
@@ -17167,7 +17201,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 941,
+   "line": 970,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "before running and **held**. [**CORRECTED 2026-09-24:** at A = 0.30 the gap",
    "numbers": [
@@ -17180,7 +17214,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 943,
+   "line": 972,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "partly fourth order in amplitude: from A = 0.10 to 0.30 the plane-wave \u03ba grows",
    "numbers": [
@@ -17191,7 +17225,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 944,
+   "line": 973,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "6.5% while the narrow beam's barely changes, and at A = 0.10 the derived kernel",
    "numbers": [
@@ -17201,7 +17235,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 945,
+   "line": 974,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "accounts for the whole gap (w = 1: 1.221 \u00b1 0.018 against 1.225; w = 2: 1.312 \u00b1",
    "numbers": [
@@ -17214,7 +17248,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 946,
+   "line": 975,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "0.031 against 1.318). The prediction's result stands; its reading is corrected \u2014",
    "numbers": [
@@ -17225,7 +17259,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 947,
+   "line": 976,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "see \"The cross-modulation factor F, derived\" below.] [**CORRECTED 2026-09-25:** the",
    "numbers": [
@@ -17237,7 +17271,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 948,
+   "line": 977,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "plane-wave growth that lowers F at A = 0.30 is **mostly a launch effect**, not",
    "numbers": [
@@ -17247,7 +17281,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 950,
+   "line": 979,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "orbit-consistent (second-order) launches F at A = 0.30 is 1.201 (w = 1) and",
    "numbers": [
@@ -17258,7 +17292,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 951,
+   "line": 980,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "1.281 (w = 2), against 1.154 and 1.234 from plain cosines and 1.225 and 1.318",
    "numbers": [
@@ -17272,7 +17306,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 952,
+   "line": 981,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "derived at second order: the launch accounts for 66% and 56% of the gap, and the",
    "numbers": [
@@ -17283,7 +17317,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 955,
+   "line": 984,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "3. **Unresolved:** whether F exceeds 2 \u2212 s at smaller w/L (10 of 14 width-scan",
    "numbers": [
@@ -17296,7 +17330,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 959,
+   "line": 988,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "4. **w = 3 \u03ba, correctly seeded:** \u22120.00478 \u00b1 0.00013 at L = 12, \u22120.00218 \u00b1 0.00059",
    "numbers": [
@@ -17310,7 +17344,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 960,
+   "line": 989,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "at L = 24, \u22120.00081 \u00b1 0.00034 at L = 36, \u22120.00060 \u00b1 0.00043 at L = 48. These",
    "numbers": [
@@ -17325,7 +17359,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 961,
+   "line": 990,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "**supersede** the old w = 3 value (0.0311) and the old geometry table (1D 0.0799,",
    "numbers": [
@@ -17338,7 +17372,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 962,
+   "line": 991,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "w = 2 0.0168, w = 3 0.0311; swapped seeding, single carrier), which stay",
    "numbers": [
@@ -17349,7 +17383,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 966,
+   "line": 995,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "**The cross-modulation factor F, derived (2026-09-24).** `kappa_cross_pt.py`",
    "numbers": [
@@ -17361,7 +17395,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 968,
+   "line": 997,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "(\u03b4 = +0.0349\u03b2; the script reproduces the plane-wave \u03ba as \u22120.01748 against",
    "numbers": [
@@ -17371,7 +17405,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 969,
+   "line": 998,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "\u22120.01745) to the **cross kernel** R(q\u22a5) = K(q\u22a5)/K(0) on the lattice: the",
    "numbers": [
@@ -17381,7 +17415,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 976,
+   "line": 1005,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "on the lattice it falls to 1.39 at q\u22a5 = (\u03c0, 0) and 1.12 at (\u03c0, \u03c0).",
    "numbers": [
@@ -17392,7 +17426,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 983,
+   "line": 1012,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "plus one pump at (K, q\u22a5), 16 values of q\u22a5): at pump amplitude 0.10 the measured",
    "numbers": [
@@ -17403,7 +17437,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 984,
+   "line": 1013,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "R matches the derived kernel within about one error bar at 15 of 16 points",
    "numbers": [
@@ -17416,7 +17450,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 985,
+   "line": 1014,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "(1.389 \u00b1 0.012 against 1.391 at (\u03c0, 0); 1.116 \u00b1 0.011 against 1.118 at (\u03c0, \u03c0)),",
    "numbers": [
@@ -17431,7 +17465,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 986,
+   "line": 1015,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "2.8\u03c3 at the smallest q\u22a5. At 0.30 it sits 3\u20134% below at large q\u22a5 \u2014 beyond second",
    "numbers": [
@@ -17441,7 +17475,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 994,
+   "line": 1023,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "read out over the experiment's [0, 300] window, with linear detunings.",
    "numbers": [
@@ -17451,7 +17485,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 995,
+   "line": 1024,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "`kappa_cross_compare.py`, against every measured F (sharp = error bar \u2264 0.25,",
    "numbers": [
@@ -17461,7 +17495,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1002,
+   "line": 1031,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "| **P3b, all triads** | **7 of 9** \u2014 every point except w = 1, L = 4 (1.225 against 1.15 \u00b1 0.01) and w = 2, L = 8 (1.318 against 1.23 \u00b1 0.03), both at A = 0.30 |",
    "numbers": [
@@ -17477,7 +17511,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1006,
+   "line": 1035,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "sharp w/L = 1/8 and L = 12 points; P3b rises above it and lies within 1.1 error",
    "numbers": [
@@ -17488,7 +17522,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1010,
+   "line": 1039,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "Re-measured at A = 0.10 they give 1.221 \u00b1 0.018 (w = 1, L = 4; derived 1.225)",
    "numbers": [
@@ -17501,7 +17535,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1011,
+   "line": 1040,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "and 1.312 \u00b1 0.031 (w = 2, L = 8; derived 1.318). From A = 0.10 to 0.30 the",
    "numbers": [
@@ -17515,7 +17549,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1012,
+   "line": 1041,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "plane-wave \u03ba grows 6.5% (\u22120.01755 \u2192 \u22120.01869) while the narrow beam's \u03ba barely",
    "numbers": [
@@ -17526,7 +17560,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1013,
+   "line": 1042,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "changes (\u22120.004121 \u2192 \u22120.004147), so F, which divides by the plane-wave \u03ba, falls.",
    "numbers": [
@@ -17537,7 +17571,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1014,
+   "line": 1043,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "[**CORRECTED 2026-09-25:** that plane-wave growth is mostly the plain-cosine launch,",
    "numbers": [
@@ -17549,7 +17583,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1015,
+   "line": 1044,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "not fourth-order physics \u2014 the exact travelling wave grows 1.5% from A \u2192 0 to 0.30,",
    "numbers": [
@@ -17559,7 +17593,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1019,
+   "line": 1048,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "where P3a and P3b differ most in small boxes, measured at A = 0.10; both",
    "numbers": [
@@ -17569,7 +17603,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1027,
+   "line": 1056,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "| w = 0.75, 8 \u00d7 6 \u00d7 6 | 1.421 \u00b1 0.111 | 1.536 (+1.0\u03c3) | **1.425 (0.0\u03c3)** |",
    "numbers": [
@@ -17583,7 +17617,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1028,
+   "line": 1057,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "| w = 1.25, 8 \u00d7 10 \u00d7 10 | 1.988 \u00b1 0.123 | 1.676 (\u22122.6\u03c3) | **1.994 (+0.1\u03c3)** |",
    "numbers": [
@@ -17599,7 +17633,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1029,
+   "line": 1058,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "| w = 1.0, 12 \u00d7 12 \u00d7 12 | 2.127 \u00b1 0.175 | 1.732 (\u22122.3\u03c3) | **2.131 (0.0\u03c3)** |",
    "numbers": [
@@ -17615,7 +17649,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1032,
+   "line": 1061,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "discrimination is weaker than planned: the error bars at A = 0.10 came out",
    "numbers": [
@@ -17625,7 +17659,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1033,
+   "line": 1062,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "0.11\u20130.18, not the 0.02\u20130.12 expected, so no configuration separates the two",
    "numbers": [
@@ -17638,7 +17672,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1036,
+   "line": 1065,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "criterion was **not met**. But P3b's three predictions land within **0.006** of",
    "numbers": [
@@ -17648,7 +17682,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1037,
+   "line": 1066,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "the measured F while the error bars are 0.11\u20130.18 \u2014 agreement that close would be",
    "numbers": [
@@ -17659,7 +17693,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1039,
+   "line": 1068,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "A = 0.10 the error-bar estimator (the disagreement between weighted and unweighted",
    "numbers": [
@@ -17669,7 +17703,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1048,
+   "line": 1077,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "nonlinear shifts of the components are not in them. [**Done for the plane wave, 2026-09-25** \u2014 below;",
    "numbers": [
@@ -17681,7 +17715,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1051,
+   "line": 1080,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "**\u03ba to fourth order, and the launch (2026-09-25).** `shape_zero_tests/kappa_pw4_pt.py`",
    "numbers": [
@@ -17693,7 +17727,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1055,
+   "line": 1084,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "\u03ba(A) = \u22120.017480 \u2212 0.002947\u00b7A\u00b2",
    "numbers": [
@@ -17704,7 +17738,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1057,
+   "line": 1086,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "It is confirmed by an exact 24-harmonic solution (the same \u03ba\u2084 to every printed",
    "numbers": [
@@ -17716,7 +17750,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1060,
+   "line": 1089,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "error bar. The physical value is **\u22120.01751 at A = 0.1**, **\u22120.01775 at A = 0.3**",
    "numbers": [
@@ -17727,7 +17761,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1061,
+   "line": 1090,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "and **\u22120.01797 at A = 0.4** (exact solution; the A\u00b2 truncation gives \u22120.01795 at",
    "numbers": [
@@ -17738,7 +17772,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1064,
+   "line": 1093,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "**The measured amplitude sweep is mostly a launch effect.** The sweep \u22120.0176,",
    "numbers": [
@@ -17748,7 +17782,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1065,
+   "line": 1094,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "\u22120.0179, \u22120.0187, \u22120.0200 at A = 0.1\u20130.4 (`pinned_asymmetry_reference.py`; the same",
    "numbers": [
@@ -17760,7 +17794,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1066,
+   "line": 1095,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "on the side-8 cube and on a 1-D ring: \u22120.01755, \u22120.01792, \u22120.01869, \u22120.01996)",
    "numbers": [
@@ -17773,7 +17807,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1068,
+   "line": 1097,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "harmonic and sets the velocity at the linear frequency. That adds **\u22120.00094 at",
    "numbers": [
@@ -17783,7 +17817,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1069,
+   "line": 1098,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "A = 0.3**, about **80%** of the apparent growth over \u22120.01748. Attribution at",
    "numbers": [
@@ -17793,7 +17827,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1071,
+   "line": 1100,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "T = 300 and T = 900, so a frequency shift, not a transient):",
    "numbers": [
@@ -17804,7 +17838,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1075,
+   "line": 1104,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "| velocity at the linear frequency | \u22120.00016 | **derived** (forward/backward split of the fundamental; matches) |",
    "numbers": [
@@ -17816,7 +17850,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1076,
+   "line": 1105,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "| static shift | \u22120.00029 | **measured, not derived** |",
    "numbers": [
@@ -17826,7 +17860,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1077,
+   "line": 1106,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "| second harmonic | \u22120.00031 | **measured, not derived** |",
    "numbers": [
@@ -17836,7 +17870,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1078,
+   "line": 1107,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "| interaction of the two | about \u22120.00024 | **measured, not derived** |",
    "numbers": [
@@ -17846,7 +17880,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1079,
+   "line": 1108,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "| total, plain-cosine launch | \u22120.00094 | \u22120.01869 against the wave's \u22120.01775 |",
    "numbers": [
@@ -17858,7 +17892,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1082,
+   "line": 1111,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "derived, 2026-09-25** \u2014 \"The launch pieces derived\", below; the table's status column",
    "numbers": [
@@ -17870,7 +17904,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1087,
+   "line": 1116,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "third of the measured shift (\u22122.5\u00d710\u207b\u2076 against \u22121.55\u00d710\u207b\u2075 and \u22129.9\u00d710\u207b\u2076 against",
    "numbers": [
@@ -17883,7 +17917,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1088,
+   "line": 1117,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "\u22123.6\u00d710\u207b\u2075 per direction), which grows roughly linearly with that mode's amplitude",
    "numbers": [
@@ -17893,7 +17927,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1090,
+   "line": 1119,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "to the launch** (`kappa_seed2_test.py`) gives **\u22120.01787 \u00b1 0.00006** at A = 0.3,",
    "numbers": [
@@ -17904,7 +17938,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1100,
+   "line": 1129,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "own term, r = fill\u00b7s\u00b2/F\u2082. At the nine sharp points (A = 0.30): H0 9/9, S1 8/9",
    "numbers": [
@@ -17916,7 +17950,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1101,
+   "line": 1130,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "(w = 1, L = 4 at +2.1\u03c3), S2 9/9; the second-order F\u2082 alone 7/9. Two never-measured",
    "numbers": [
@@ -17926,7 +17960,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1102,
+   "line": 1131,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "large-fill beams at A = 0.10 and 0.30: the second-order F\u2082 holds there (1.0063 \u00b1",
    "numbers": [
@@ -17938,7 +17972,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1103,
+   "line": 1132,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "0.014 against 1.0076; 1.0316 \u00b1 0.014 against 1.0338), and **H0 is excluded at",
    "numbers": [
@@ -17952,7 +17986,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1104,
+   "line": 1133,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "large fill** \u2014 w = 3, L = 4: F(0.30)/F(0.10) at \u22122.2\u03c3, F(0.30) at \u22123.4\u03c3; w = 2,",
    "numbers": [
@@ -17964,7 +17998,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1105,
+   "line": 1134,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "L = 4: F(0.30) at \u22122.4\u03c3; the box \u03ba grows 4.4% and 3.0%. S1 and S2 both pass",
    "numbers": [
@@ -17976,7 +18010,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1109,
+   "line": 1138,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "with orbit-consistent launches is open (MODEL_SPEC \u00a79). [**Done 2026-09-25** \u2014 below.]",
    "numbers": [
@@ -17990,7 +18024,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1111,
+   "line": 1140,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "**The launch pieces derived (2026-09-25)** (`kappa_launch_pt.py`; measured by",
    "numbers": [
@@ -18002,7 +18036,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1113,
+   "line": 1142,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "T = 900).",
    "numbers": [
@@ -18012,7 +18046,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1124,
+   "line": 1153,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "missing second harmonic:            \u03b4W = \u221232 W W\u2082 c\u2082\u00b2 A\u2074 / \u221a(b\u00b2 + Q)",
    "numbers": [
@@ -18022,7 +18056,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1128,
+   "line": 1157,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "the exact projection at small A (velocity \u22120.000037 against \u22120.000038, second",
    "numbers": [
@@ -18033,7 +18067,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1129,
+   "line": 1158,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "harmonic \u22120.000092 against \u22120.000093 at A = 0.15).",
    "numbers": [
@@ -18045,7 +18079,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1140,
+   "line": 1169,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "| 0.15 | \u22120.000029 / \u22120.000030 | \u22120.000072 / \u22120.000071 | \u22120.000112 / \u22120.000108 | \u22120.000150 / \u22120.000146 |",
    "numbers": [
@@ -18063,7 +18097,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1141,
+   "line": 1170,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "| 0.20 | \u22120.000079 / \u22120.000080 | \u22120.000131 / \u22120.000131 | \u22120.000254 / \u22120.000252 | \u22120.000323 / \u22120.000321 |",
    "numbers": [
@@ -18081,7 +18115,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1142,
+   "line": 1171,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "| 0.30 | \u22120.000278 / \u22120.000278 | \u22120.000311 / \u22120.000313 | \u22120.000794 / \u22120.000786 | \u22120.000959 / \u22120.000954 |",
    "numbers": [
@@ -18099,7 +18133,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1143,
+   "line": 1172,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "| 0.40 | \u22120.000583 / \u22120.000574 | \u22120.000581 / \u22120.000582 | \u22120.001698 / \u22120.001681 | \u22120.002022 / \u22120.002014 |",
    "numbers": [
@@ -18117,7 +18151,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1146,
+   "line": 1175,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "from A = 0.15 to 0.4.** Directly, the exact wave plus an explicit free uniform",
    "numbers": [
@@ -18127,7 +18161,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1147,
+   "line": 1176,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "mode gives per-direction shifts within 0.04% (A = 0.3, amplitude 0.02).",
    "numbers": [
@@ -18138,7 +18172,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1152,
+   "line": 1181,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "was found\": the pump's four-wave decay k\u2080 + k\u2080 \u2192 0 + \u03c0). The detuning is **0.04",
    "numbers": [
@@ -18148,7 +18182,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1153,
+   "line": 1182,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "for \u2212k against 0.24 for +k** at A = 0.3, so a free uniform mode drives a staggered",
    "numbers": [
@@ -18158,7 +18192,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1158,
+   "line": 1187,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "**Beam fourth-order tests, redone with orbit-consistent launches (2026-09-25)**",
    "numbers": [
@@ -18170,7 +18204,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1162,
+   "line": 1191,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "it removes **96%** of the launch effect, the error bars are **25 times smaller**,",
    "numbers": [
@@ -18181,7 +18215,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1163,
+   "line": 1192,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "and the residual, **+0.000039 at A = 0.3**, is the missing third harmonic. The test",
    "numbers": [
@@ -18191,7 +18225,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1164,
+   "line": 1193,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "compares \u03ba_box(A)/\u03ba_box(0.10) at A = 0.30 and 0.40 against (1 + r g(A))/(1 + r g(0.10)),",
    "numbers": [
@@ -18204,7 +18238,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1167,
+   "line": 1196,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "- **H0 and S1 are excluded.** H0 fails every L = 4 beam with fill \u2265 0.38 (\u221214\u03c3 to",
    "numbers": [
@@ -18216,7 +18250,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1168,
+   "line": 1197,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "\u2212142\u03c3); S1 fails every L = 4 beam (+3\u03c3 to +31\u03c3 at T = 900).",
    "numbers": [
@@ -18228,7 +18262,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1171,
+   "line": 1200,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "T = 900; +10.7\u03c3 at 0.3). It is consistent there only under a band that allows the",
    "numbers": [
@@ -18238,7 +18272,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1174,
+   "line": 1203,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "points and S1 none. [**CORRECTED 2026-09-25:** with the third harmonic added to the",
    "numbers": [
@@ -18250,7 +18284,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1175,
+   "line": 1204,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "launch (plane-wave residual down from +0.000039 to \u22120.000006 at A = 0.3;",
    "numbers": [
@@ -18261,7 +18295,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1178,
+   "line": 1207,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "A = 0.30, 0.40; T = 900), w = 2 (\u221211.7\u03c3, \u221221.9\u03c3) and w = 3 (\u22129.9\u03c3, \u221221.3\u03c3) grow",
    "numbers": [
@@ -18273,7 +18307,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1181,
+   "line": 1210,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "at w = 1.5 and w = 2 are **robust**; w = 3 is **marginal** \u2014 a 0.05% miss, within",
    "numbers": [
@@ -18285,7 +18319,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1184,
+   "line": 1213,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "not discriminate** (\u00b10.0017).]",
    "numbers": [
@@ -18295,7 +18329,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1187,
+   "line": 1216,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "A = 0.30 and 0.40 (0.351/0.350 at w = 1.5, 0.547/0.549 at w = 2, 0.750/0.758 at",
    "numbers": [
@@ -18312,7 +18346,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1188,
+   "line": 1217,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "w = 3) \u2014 and it lies **0.33, 0.50 and 0.68 of the way from S2 to S1** at fills",
    "numbers": [
@@ -18324,7 +18358,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1189,
+   "line": 1218,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "0.38, 0.53 and 0.74. **The fourth-order cross terms are partly present, not",
    "numbers": [
@@ -18335,7 +18369,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1190,
+   "line": 1219,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "zero.** Also post hoc: each fraction is close to 0.9 \u00d7 the fill (0.34, 0.48, 0.66).",
    "numbers": [
@@ -18347,7 +18381,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1191,
+   "line": 1220,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "- **w = 2, L = 8 was excluded:** its \u03ba changes 2.5% with record length at A = 0.10",
    "numbers": [
@@ -18357,7 +18391,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1192,
+   "line": 1221,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "(\u22120.004463 at T = 300, \u22120.004350 at T = 900), from the slow secondary energy",
    "numbers": [
@@ -18370,7 +18404,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1194,
+   "line": 1223,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "T = 300 and 900.",
    "numbers": [
@@ -18380,7 +18414,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1197,
+   "line": 1226,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "and derive why the fourth-order cross terms cancel.~~ [**Superseded 2026-09-25:** the",
    "numbers": [
@@ -18394,7 +18428,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1205,
+   "line": 1234,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "and lets only the pump soften, giving \u22120.0991 A\u00b2 exactly \u2014 an incomplete",
    "numbers": [
@@ -18404,7 +18438,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1207,
+   "line": 1236,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "the (0, \u03c0) band midpoint at \u2248 0.063 + 0.08 A\u00b2, moving up.",
    "numbers": [
@@ -18415,7 +18449,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1210,
+   "line": 1239,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "four digits and is 0.9998 from the exact wave) and of the fixed T = 400",
    "numbers": [
@@ -18426,7 +18460,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1211,
+   "line": 1240,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "readout (the dip moves from \u03b2 = 0.075 to 0.0675 with readout time) \u2014",
    "numbers": [
@@ -18437,7 +18471,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1213,
+   "line": 1242,
    "section": "6o. \u03ba = 0.0799 retracted; P-1 decay window not supported (2026-09-24)",
    "text": "3. A clean start shows broad instability across \u03b2 = 0.05\u20130.10 at A = 0.3\u20130.4",
    "numbers": [
@@ -18448,7 +18482,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1226,
+   "line": 1255,
    "section": "6p. J-compatibility adopted as a principle; \u03ba moved to its floor (2026-09-25)",
    "text": "## 6p. J-compatibility adopted as a principle; \u03ba moved to its floor (2026-09-25)",
    "numbers": [
@@ -18460,7 +18494,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1230,
+   "line": 1259,
    "section": "6p. J-compatibility adopted as a principle; \u03ba moved to its floor (2026-09-25)",
    "text": "first (band edge binds, \u03ba\\* = 2c/\u221a(K + 2c) \u2248 0.972, lower bound only) \u2014 it held.",
    "numbers": [
@@ -18470,7 +18504,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1235,
+   "line": 1264,
    "section": "6p. J-compatibility adopted as a principle; \u03ba moved to its floor (2026-09-25)",
    "text": "q = 3: the floor is 0.972 if the segments conserve transverse momentum, 2.091 if",
    "numbers": [
@@ -18481,7 +18515,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1248,
+   "line": 1277,
    "section": "6p. J-compatibility adopted as a principle; \u03ba moved to its floor (2026-09-25)",
    "text": "**Found while re-running:** the q = 3 Abelian floor reads 0.066\u00b0 / 0.030\u00b0 at \u03ba\\*,",
    "numbers": [
@@ -18492,7 +18526,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1249,
+   "line": 1278,
    "section": "6p. J-compatibility adopted as a principle; \u03ba moved to its floor (2026-09-25)",
    "text": "not 0; and MODEL_SPEC \u00a76b's u(3) gate-7 entry (65.1166 / 64.9712) is not what the",
    "numbers": [
@@ -18503,7 +18537,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1250,
+   "line": 1279,
    "section": "6p. J-compatibility adopted as a principle; \u03ba moved to its floor (2026-09-25)",
    "text": "current `model.py` prints at \u03ba = 0.5 (117.92 / 118.29). Both open (MODEL_SPEC \u00a79).",
    "numbers": [
@@ -18516,7 +18550,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1252,
+   "line": 1281,
    "section": "6p. J-compatibility adopted as a principle; \u03ba moved to its floor (2026-09-25)",
    "text": "which reproduces 65.1166 / 64.9712 exactly; \u00a76b had labelled it as `model.py`'s gate 7.",
    "numbers": [
@@ -18527,7 +18561,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1253,
+   "line": 1282,
    "section": "6p. J-compatibility adopted as a principle; \u03ba moved to its floor (2026-09-25)",
    "text": "Label corrected 2026-09-25.]",
    "numbers": [
@@ -18538,7 +18572,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1256,
+   "line": 1285,
    "section": "6p. J-compatibility adopted as a principle; \u03ba moved to its floor (2026-09-25)",
    "text": "`q3_gate.py` and `model.py` gates 3, 7, 8; floor 0.000\u00b0 at both \u03ba (MODEL_SPEC \u00a74d.1).]",
    "numbers": [
@@ -18548,7 +18582,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1257,
+   "line": 1286,
    "section": "6p. J-compatibility adopted as a principle; \u03ba moved to its floor (2026-09-25)",
    "text": "Also: `model.py` must be run from `04_scripts/session/` \u2014 run from elsewhere, gate 11",
    "numbers": [
@@ -18558,7 +18592,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1261,
+   "line": 1290,
    "section": "6q. The node form: the radial well adopted (2026-09-26)",
    "text": "## 6q. The node form: the radial well adopted (2026-09-26)",
    "numbers": [
@@ -18570,7 +18604,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1267,
+   "line": 1296,
    "section": "6q. The node form: the radial well adopted (2026-09-26)",
    "text": "order, R1's conversion at 9.9\u00d710\u207b\u00b9\u2077 A, the persistence windows [\u03ba\\*, \u221e). The ring reading",
    "numbers": [
@@ -18580,7 +18614,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1270,
+   "line": 1299,
    "section": "6q. The node form: the radial well adopted (2026-09-26)",
    "text": "the elementwise form lets a node escape (above energy 1.863 per component). Adopted by",
    "numbers": [
@@ -18590,7 +18624,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1275,
+   "line": 1304,
    "section": "6q. The node form: the radial well adopted (2026-09-26)",
    "text": "per-order errors 0.16\u20130.41\u00b0 (were 3.4\u20133.8\u00b0 without it), but the floor is over-predicted",
    "numbers": [
@@ -18601,7 +18635,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1292,
+   "line": 1321,
    "section": "6q. The node form: the radial well adopted (2026-09-26)",
    "text": "(`scale_invariance.py`). Corrected: \u03ba\\* = 2\u03c6^(\u22123/2) needs the chosen c = 1 as well as K = \u221a5;",
    "numbers": [
@@ -18611,7 +18645,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1293,
+   "line": 1322,
    "section": "6q. The node form: the radial well adopted (2026-09-26)",
    "text": "the barrier 1.863 is E/K\u00b3 = 1/6; \"\u03c6 is in the force law itself\" is a coordinate artifact",
    "numbers": [
@@ -18622,7 +18656,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1298,
+   "line": 1327,
    "section": "6q. The node form: the radial well adopted (2026-09-26)",
    "text": "it to colour, generations or a classical limit. Gate 11 now tests the inert half; `SZ_RESIDUAL=coded`",
    "numbers": [
@@ -18632,7 +18666,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1301,
+   "line": 1330,
    "section": "6q. The node form: the radial well adopted (2026-09-26)",
    "text": "**Node form (A\u2032) adopted (2026-09-27):** predictions committed first (8d5a507), runs 337a509; chosen",
    "numbers": [
@@ -18644,7 +18678,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1307,
+   "line": 1336,
    "section": "6q. The node form: the radial well adopted (2026-09-26)",
    "text": "derived, whose O(2) breaking the spec itself noted (v5.3, Result 4, line 143) and on which",
    "numbers": [
@@ -18654,7 +18688,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1316,
+   "line": 1345,
    "section": "7. Recurring failure modes",
    "text": "2. **An uncalibrated instrument.** \u2192 \u03ba = 0.0305; four estimator failures in one",
    "numbers": [
@@ -18666,7 +18700,7 @@
   },
   {
    "file": "./00_START_HERE/PROVENANCE.md",
-   "line": 1323,
+   "line": 1352,
    "section": "7. Recurring failure modes",
    "text": "5. **A relative-only rank threshold.** \u2192 rank 67 against a true 22; spurious",
    "numbers": [
@@ -31093,7 +31127,7 @@
   }
  ],
  "counts": {
-  "doc_claims": 2440,
+  "doc_claims": 2443,
   "scripts": 191
  }
 }

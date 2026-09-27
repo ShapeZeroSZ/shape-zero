@@ -29,8 +29,8 @@ claim is marked where it appears and traced in `00_START_HERE/PROVENANCE.md`.
 | 4b | Result 3 in any dimension, also independent of **transverse** wavenumbers | **proved, approved and published** |
 | 5 | A Steiner triple system with at least one point admitting a **role colouring has exactly 7 points** | **proved, approved and published** (first solved by another solver; ours accepted as later solves) |
 | 6 | **Every seven-point Steiner triple system is the Fano plane** — so the role postulates force the Fano plane | **proved, approved and published** (all seven theorems first solves) |
-| 7 | The two-generator octonionic flow p ↦ p·e₁ + (cos θ e₁ + sin θ e₂)·p has frequencies exactly **0, 2 and 2 sin(θ/2)** (characteristic polynomial X²(X² + 4)(X² + 4 sin²(θ/2))²) | proved, in review (all eight theorems first solves) |
-| 8 | Every oscillator **x″ = −a(x − r₁)(x − r₂)** with two distinct real roots is **z″ = −(z² − 1)** in different units; the golden-ratio well's φ is a coordinate choice | proved, in review (all five theorems first solves) |
+| 7 | The two-generator octonionic flow p ↦ p·e₁ + (cos θ e₁ + sin θ e₂)·p has frequencies exactly **0, 2 and 2 sin(θ/2)** (characteristic polynomial X²(X² + 4)(X² + 4 sin²(θ/2))²) | **proved, approved and published** (all eight theorems first solves) |
+| 8 | Every oscillator **x″ = −a(x − r₁)(x − r₂)** with two distinct real roots is **z″ = −(z² − 1)** in different units; the golden-ratio well's φ is a coordinate choice | **proved, approved and published** (all five theorems first solves) |
 
 Each mission states what it does **not** prove. In particular: why couplings
 commute with J is not derived by passivity (see "Measured" below), and mission 5

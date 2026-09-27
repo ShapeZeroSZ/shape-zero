@@ -610,6 +610,35 @@ within four seconds of launch. It adds 5 theorems and no definitions.
 
 **Running total: nine missions, 48 theorems, all machine-verified.**
 
+**Approvals of missions 7 and 8 (2026-09-27), both by Prove2Me moderator Shuze
+Chen.** Recorded from the platform's review records; times are UTC.
+
+- **Mission 8 (14:21 UTC).** The moderator verified all five items independently:
+  the shifted, scaled form of the force (M1), the sign of d that makes a·d > 0
+  (M2), the chain rule z″(τ) = x″(τ/ω)/(ω²d) (M3), the goal in both directions
+  with ω² = ad (the converse by τ = ωt), and the golden-ratio corollary with
+  m = ½, d = √5/2, ω = (√5/2)^½. The review confirmed that m, d and ω are
+  correctly chosen before the solution x. It noted, with no action required, that
+  the type is Textbook while the sources are Wikipedia pages and a motivational
+  repository, and that the mathematics is self-contained and does not depend on
+  that repository. No changes made.
+- **Mission 7 (14:21 UTC).** Read as pure linear algebra about an explicitly
+  defined octonion table, built from the published Fano plane (mission 5's `fano`,
+  unchanged) with the stated cyclic orientation; the review noted that the
+  eight-square identity among the proved items certifies the table is a
+  composition algebra, hence the octonions. It confirmed the flow and block
+  definitions against their descriptions, and that the goal, the block-diagonal
+  milestones, antisymmetry, the annihilating polynomial and the eigenvalue
+  multiset are consistent with each other and with a direct computation of the
+  8×8 matrix, and that the description limits the claim to the canonical pair and
+  one Fano orientation. It noted, with no action required, that **the type is
+  Textbook while the references are Wikipedia and a motivational repository.** No
+  changes made.
+
+With these, **all nine missions are approved and published.** Mission 8's M3
+milestone text, damaged at upload (primes and τ lost), was corrected on the live
+mission after approval; its goal and M3 titles had been corrected before.
+
 ## 6m. J-compatibility — the one premise, classified CHOSEN
 
 Hypothesis tested (Claude, this session): J-compatibility follows from requiring
