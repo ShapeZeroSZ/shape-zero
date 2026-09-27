@@ -1,0 +1,36 @@
+CHIRALITY, MATCHED TRAJECTORIES (A'), N = 128, kappa* = 0.971737; weak probes 1e-4, p = +k0 for both
+P  uniform coherent background, <s> = 1e-4: dK_eff = dw (2 w_a + kappa)
+  k0=0.785 D16 : dK_eff a 9.9288160e-03, b 9.9288147e-03, b/a 1.000000; dK_eff/sqrt<s> 0.99388; dw a 2.838927e-03
+  k0=0.785 D32 : dK_eff a 9.9288160e-03, b 9.9288147e-03, b/a 1.000000; dK_eff/sqrt<s> 0.99388; dw a 2.838927e-03
+  k0=0.785 D64 : dK_eff a 9.9288160e-03, b 9.9288147e-03, b/a 1.000000; dK_eff/sqrt<s> 0.99388; dw a 2.838927e-03
+  k0=0.785 D128: dK_eff a 9.9288160e-03, b 9.9288147e-03, b/a 1.000000; dK_eff/sqrt<s> 0.99388; dw a 2.838927e-03
+  k0=1.571 D16 : dK_eff a 9.9197311e-03, b 9.9197290e-03, b/a 1.000000; dK_eff/sqrt<s> 0.99297; dw a 2.345376e-03
+  k0=1.571 D32 : dK_eff a 9.9197311e-03, b 9.9197290e-03, b/a 1.000000; dK_eff/sqrt<s> 0.99297; dw a 2.345376e-03
+  k0=1.571 D64 : dK_eff a 9.9197311e-03, b 9.9197290e-03, b/a 1.000000; dK_eff/sqrt<s> 0.99297; dw a 2.345376e-03
+  k0=1.571 D128: dK_eff a 9.9197311e-03, b 9.9197290e-03, b/a 1.000000; dK_eff/sqrt<s> 0.99297; dw a 2.345376e-03
+  k0=2.356 D16 : dK_eff a 9.9428385e-03, b 9.9428351e-03, b/a 1.000000; dK_eff/sqrt<s> 0.99528; dw a 2.049073e-03
+  k0=2.356 D32 : dK_eff a 9.9428385e-03, b 9.9428351e-03, b/a 1.000000; dK_eff/sqrt<s> 0.99528; dw a 2.049073e-03
+  k0=2.356 D64 : dK_eff a 9.9428385e-03, b 9.9428351e-03, b/a 1.000000; dK_eff/sqrt<s> 0.99528; dw a 2.049073e-03
+  k0=2.356 D128: dK_eff a 9.9428385e-03, b 9.9428351e-03, b/a 1.000000; dK_eff/sqrt<s> 0.99528; dw a 2.049073e-03
+  max |b/a - 1| 3.4e-07; max |D/D16 - 1| 1.1e-15; dK_eff/sqrt<s> range 0.99297 - 0.99528
+I  incoherent background, k0 = pi/2
+  D16 : dK_eff a 9.818051e-03, b 9.818048e-03, b/a 1.00000; dK_eff/<sqrt s> a 1.0037, b 1.0037
+  D32 : dK_eff a 1.003439e-02, b 1.003438e-02, b/a 1.00000; dK_eff/<sqrt s> a 1.0060, b 1.0060
+  D64 : dK_eff a 9.857801e-03, b 9.857799e-03, b/a 1.00000; dK_eff/<sqrt s> a 0.9954, b 0.9954
+G  gradient, density rising toward +x (away = dp < 0)
+  k0=0.785 D16 : dp a -1.548239e-03, b -1.548239e-03, b/a 1.000000, ray ratio a 0.9954; dx a -0.08481, b -0.08481, b/a 1.00000, ray -0.08521
+  k0=0.785 D32 : dp a -1.548239e-03, b -1.548239e-03, b/a 1.000000, ray ratio a 0.9954; dx a -0.08481, b -0.08481, b/a 1.00000, ray -0.08521
+  k0=0.785 D64 : dp a -1.548239e-03, b -1.548239e-03, b/a 1.000000, ray ratio a 0.9954; dx a -0.08481, b -0.08481, b/a 1.00000, ray -0.08521
+  k0=0.785 D128: dp a -1.548239e-03, b -1.548239e-03, b/a 1.000000, ray ratio a 0.9954; dx a -0.08481, b -0.08481, b/a 1.00000, ray -0.08521
+  k0=1.571 D16 : dp a -1.053967e-03, b -1.053968e-03, b/a 1.000000, ray ratio a 0.9958; dx a -0.04211, b -0.04211, b/a 1.00000, ray -0.04205
+  k0=1.571 D32 : dp a -1.053967e-03, b -1.053968e-03, b/a 1.000000, ray ratio a 0.9958; dx a -0.04211, b -0.04211, b/a 1.00000, ray -0.04205
+  k0=1.571 D64 : dp a -1.053967e-03, b -1.053968e-03, b/a 1.000000, ray ratio a 0.9958; dx a -0.04211, b -0.04211, b/a 1.00000, ray -0.04205
+  k0=1.571 D128: dp a -1.053967e-03, b -1.053968e-03, b/a 1.000000, ray ratio a 0.9958; dx a -0.04211, b -0.04211, b/a 1.00000, ray -0.04205
+  k0=2.356 D16 : dp a -1.414059e-03, b -1.414059e-03, b/a 1.000000, ray ratio a 0.9988; dx a -0.00088, b -0.00088, b/a 1.00003, ray -0.00067
+  k0=2.356 D32 : dp a -1.414059e-03, b -1.414059e-03, b/a 1.000000, ray ratio a 0.9988; dx a -0.00088, b -0.00088, b/a 1.00003, ray -0.00067
+  k0=2.356 D64 : dp a -1.414059e-03, b -1.414059e-03, b/a 1.000000, ray ratio a 0.9988; dx a -0.00088, b -0.00088, b/a 1.00003, ray -0.00067
+  k0=2.356 D128: dp a -1.414059e-03, b -1.414059e-03, b/a 1.000000, ray ratio a 0.9988; dx a -0.00088, b -0.00088, b/a 1.00003, ray -0.00067
+  max |b/a - 1| (dp, dx) 3.4e-05; max |D/D16 - 1| (dp) 4.2e-13; dp/ray 0.9954 - 0.9988; all dp < 0: True
+GM mirrored gradient, density falling toward +x (away = dp > 0), k0 = pi/2
+  D16 : dp a +1.329334e-03, b +1.329334e-03, b/a 1.000000; ray ratio a 1.0022, b 1.0022; dx a -0.04115 (ray -0.04217), b -0.04115
+  D64 : dp a +1.329334e-03, b +1.329334e-03, b/a 1.000000; ray ratio a 1.0022, b 1.0022; dx a -0.04115 (ray -0.04217), b -0.04115
