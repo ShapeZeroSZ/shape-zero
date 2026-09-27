@@ -31,6 +31,18 @@ MODEL_SPEC = `00_START_HERE/MODEL_SPEC.md`, INPUT_LEDGER and SCALE_SCOPING = `03
 
 ## 1. Premises
 
+### 1a-0. The ground premise (recorded 2026-09-27)
+
+| # | premise | plain statement | enters the model | status | source |
+|---|---|---|---|---|---|
+| P0 | **The cumulative hierarchy, taken whole, with non-isolation** | The domain of possible structure is the cumulative hierarchy of sets taken as a whole — all levels simultaneously, each level containing every level below it. **Non-isolation is part of the premise:** no level exists in isolation from the others, and every level is present, in simultaneous state, with all the others | as the domain only: **the hierarchy alone selects nothing**. The model's content comes from the principles that select within it (P1–P10, the structure rows S1–S7, and the selection rule M1) | **principle** — the ground premise, stated by the author 2026-09-27; not derived. **The totality is not itself a set** (it is a proper class); it is admissible only as a whole, never as a member of any level | this entry (the author, 2026-09-27); PROVENANCE §6r |
+
+**Caution — the ladder is not the sequence of level sizes.** The hierarchy's level sizes
+are \|V₁\|, \|V₂\|, \|V₃\|, \|V₄\|, \|V₅\| = 1, 2, 4, 16, 65,536; the ladder's dimensions are
+D1, D2, D4, D8, D16 = 1, 2, 4, 8, 16. The ladder skips no number (8 is a rung); the
+hierarchy's sizes jump from 4 to 16 and from 16 to 65,536. The match at 1, 2, 4 is a
+coincidence of sizes, not an identification of rungs with levels.
+
 ### 1a. Principles and postulates
 
 | # | premise | plain statement | enters the model | status | source |

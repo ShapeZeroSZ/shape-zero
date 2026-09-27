@@ -1337,6 +1337,26 @@ derived, whose O(2) breaking the spec itself noted (v5.3, Result 4, line 143) an
 a prediction (P-3) was built. Failure mode #1's cousin: a modelling choice carried forward
 as if it were a result.
 
+## 6r. φ's origin (recorded 2026-09-27)
+
+**How φ entered the project.** The golden ratio came in as a **label an AI gave** to the
+author's thought exercise about how nothing becomes everything: a mix of sets and
+counting that, within a few steps, grows beyond anyone's ability to track. **The author
+did not derive φ and did not choose it.** It was attached to the exercise from outside
+and was then carried into the force law (PREMISE_LEDGER P9).
+
+**What the exercise is.** That exercise is the cumulative hierarchy of sets — ∅, then
+{∅}, then every set of what came before, with sizes 1, 2, 4, 16, 65,536, … — now recorded
+as the ground premise P0 (PREMISE_LEDGER §1a-0). **The cumulative hierarchy does not
+produce φ.** Nothing in its construction yields the golden ratio; the label did not come
+from the structure it named.
+
+**Consistency with mission 8.** Mission 8 (MODEL_SPEC §1b) proves that every oscillator
+x″ = −a(x − r₁)(x − r₂) with two distinct real roots is z″ = −(z² − 1) in different
+units, so the golden-ratio well's φ is a coordinate choice. The origin recorded here is
+consistent with that: φ was neither derived from the premise nor needed by the
+dynamics; it is a label, and in the force law a choice of units.
+
 ## 7. Recurring failure modes
 
 Each has produced at least two errors in this programme.
