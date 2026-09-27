@@ -1,0 +1,77 @@
+THE TOWER AS AN ENVIRONMENT UNDER (A'), EVERY LEVEL POPULATED -- HYPOTHESES AND PREDICTIONS
+(committed with the script, before any run), 2026-09-27. Test: shape_zero_tests/tower_populated_test.py.
+
+WHY. The earlier test (tower_env_test.py, E1-E3b; predictions 6e49d2d, output 38c08af) started the
+upper components at zero, and under A' an empty component stays empty (an invariant set). The ground
+premise P0 (PREMISE_LEDGER 1a-0) includes non-isolation: every level is present, in simultaneous
+state, with all the others. So every level is populated from the start. Nothing else changes: A' as
+adopted, C_r = 0, no new coupling, no new parameter.
+
+SET-UP. q = 1 ring, N = 128, kappa*, T = 2000; D16, D32, D64 (n = 8, 16, 32). D <= 8 part (components
+0-7) starts in the coherent packet of E1 (0.05, width 8, k0 = pi/2, per-mode launch). Upper part (M =
+4, 12, 28 complex components) starts incoherent and low-amplitude: random-phase Fourier modes on both
+chirality branches in every component, rms |psi_c| = A_U = 0.005 per component. Four realisations
+(seeds 0-3). Control F: D32, D64 with the upper total norm held at D16's. Validation V: D16 with the
+upper part empty must reproduce the isolated D8 reference exactly.
+
+Choices made here, stated so they can be questioned: the per-component amplitude (10% of the packet's
+peak), equal population of every upper component and both chiralities ("incoherent" read as no
+preferred phase, wavenumber or chirality), and the D <= 8 self-energy as the measure of energy flow.
+
+STRUCTURAL FACTS (from the force law, before running):
+ S1 A' couples the parts only through the node radius |u| = sqrt(|u_l|^2 + |u_u|^2): the D <= 8 part
+    feels the upper levels only as an extra, site- and time-dependent stiffness
+    Delta(x,t) = |u| - |u_l|, which depends on the upper part's TOTAL norm s = |u_u|^2 alone.
+ S2 Every term is invariant under separate phase rotations of the two parts, so each part's U(1)
+    charge is separately and exactly conserved. Charge cannot flow between the D <= 8 part and the
+    tower at any D, in any state. The tower cannot be a charge environment under A'.
+ S3 At fixed per-component amplitude, s has mean M A_U^2 and site-to-site fluctuation ~ sqrt(M) A_U^2;
+    so Delta's mean grows with D, while its fluctuation is ~ A_U / 2 where the packet is small (D-
+    independent) and ~ sqrt(M) A_U^2 / (2|u_l|) where the packet is large.
+
+HYPOTHESES
+ H-ENV  (the tower acts as an environment): populated upper levels drain the packet's energy one
+        way, toward equipartition (per mode the packet is ~100x more energetic than the upper
+        modes), and dephase it, with both effects growing with the number of levels.
+ H-NULL (it does not): the exchange is a small, reversible, mean-field modulation of the packet's
+        stiffness; no secular loss, and the packet's phase stays reproducible across realisations.
+
+CRITERIA (fixed in advance). f(t) = (E_l,self(t) - E_l,self(0)) / E_l,self(0); f_late = mean of f over
+[1500, 2000], sd_late its standard deviation there; O_ref the overlap with the isolated reference;
+O_ss' the overlap between realisations; "phase spread" the sd over seeds of arg O_ref at T.
+ ENVIRONMENT if all of:
+   (a) secular loss: seed-mean f_late < -0.01 (more than 1% of the packet's energy gone to the tower)
+       and |f_late| > 3 sd_late in every seed;
+   (b) the loss grows with D: |seed-mean f_late| increases D16 -> D32 -> D64;
+   (c) no return: first near-return time absent within T at D64, or growing with D by more than 2x
+       from D16 to D64;
+   (d) dephasing: inter-seed |O_ss'| at T < 0.5 or phase spread > 1 rad at D64, larger than at D16.
+ NOT AN ENVIRONMENT if all of:
+   |seed-mean f_late| < 0.01 or not separated from the oscillation (< 3 sd_late); f changes sign
+   repeatedly; a finite near-return time at every D with t_ret(D64)/t_ret(D16) < 2 (seed means);
+   inter-seed |O_ss'| > 0.9 and phase spread < 0.3 rad at T at every D.
+ Anything else: PARTIAL, reported criterion by criterion.
+ A drop of |O_ref| (overlap with the isolated run) with the inter-seed overlap staying high is a
+ coherent, deterministic mean-field distortion (S1), not decoherence; it is reported, not counted
+ under (d).
+
+PREDICTIONS
+ P1 charge (S2): each part's charge conserved to <= 1e-5 relative (RK4 accuracy; E-runs gave 2e-6)
+    in every run. Net charge flow zero.
+ P2 energy: nonzero exchange, max|f| between 1e-5 and 1e-3 at every D, with sign changes (> 3);
+    |seed-mean f_late| < 1e-3 at every D. The mean over seeds of max|f| grows with D by a factor
+    between 1 and 3 from D16 to D64 (S3); in control F it does not grow (D64 <= D16 x 1.5).
+    E_total conserved to <= 1e-6.
+ P3 reversal: f reverses; a finite first near-return time at every D and seed, of order 10-200
+    time units, with t_ret(D64)/t_ret(D16) < 2 (seed means). No systematic growth with D.
+ P4 coherence: inter-seed |O_ss'| > 0.95 at T at every D; phase spread < 0.3 rad at every D.
+    arg O_ref drifts negative (extra stiffness raises the frequency), magnitude between 0.3 and 20 rad
+    at T, larger at larger D. |O_ref| at T between 0.3 and 0.99, lower at larger D (mean-field
+    distortion, as the dispersing packet's amplitude falls toward the upper levels'). Chirality
+    purity of the D <= 8 part changes by < 0.01.
+ P5 validation: V reproduces the reference to <= 1e-12 (the empty tower is invariant and identical
+    to the isolated D8 node).
+
+VERDICT PREDICTED: NOT AN ENVIRONMENT. Charge cannot flow (structural); energy exchange is small,
+reversible and not growing with tower level beyond the mean-field factor; the packet's phase is
+shifted coherently and reproducibly by the populated tower, not randomised.
