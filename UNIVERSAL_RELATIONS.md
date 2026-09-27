@@ -20,6 +20,7 @@ measurement); the model is not presented as a theory of nature (`OVERVIEW.md`, "
 | 10 | symmetric + J-commuting couplings have dimension n² (mission 1); passivity ⇔ symmetric links (missions 2, 4a); roles force Fano (missions 5, 6) | every parameter (structural) | **proved** | missions 1, 2, 4a, 5, 6 | no — constraints on the model's form, not a measured number |
 | 11 | small-amplitude reduction to the linear gauge dynamics | amplitude, in the limit | **measured** (certified) | `shape_zero_tests/certify_gates.py` | no — an internal consistency check |
 | 12 | **κ-gradient force:** in a static κ gradient, packets at rest on the two branches accelerate apart with a_a − a_b = c·∂ₓ(ω_b − ω_a)/ω̄, ω̄ = (ω_a + ω_b)/2 — the electric-field analogue, branches as opposite charges | the well; K and κ enter only through the measured branch frequencies | **derived + measured** (−0.23%; predictions committed first) — **a verified consequence of row 5 plus ray kinematics and the band curvature; not independent** | `shape_zero_tests/kgrad_test.py`; MODEL_SPEC §1c; PROVENANCE §6t | yes, in a realisation with a position-dependent Larmor splitting — but it would test ray kinematics, not a new condition |
+| 13 | **universal refraction:** a weak D ≤ 8 packet in a populated tower senses one stiffness shift dK = √s, the same for both chiralities, every colour and every node size (b/a ≤ 3.4×10⁻⁷, D16–D128 to 10⁻¹⁵); dw = √s/(2ω_a + κ); in a gradient the wavenumber is pushed away from the denser region, dp/dt = −∂ₓ√s/(2ω_a + κ) | chirality, colour, node size; which upper components carry s | **measured** (predictions committed first) — **a verified consequence of node form A′'s single shared radius; not independent** | `shape_zero_tests/tower_chirality_matched_test.py`; PREMISE_LEDGER C51; PROVENANCE §6w | no — it follows from a form selected under the selection rule |
 
 ## The count
 
@@ -44,6 +45,12 @@ standard ray (eikonal) kinematics and the band curvature 1/m\* = c/ω̄. A packe
 ẍ = −(∂²ω/∂k²)(∂ω/∂x); with ω_b = ω_a + κ(x) at every k, the branches share 1/m\*, and their
 x-derivatives differ by κ′ (PROVENANCE §6t). It is recorded as a **verified consequence**. The strict
 genuine predictions stay at **four** (three if ν → 0 is kinematic).
+
+**Row 13 (added 2026-09-27) does not change either count.** Universal refraction follows from node form
+A′'s single shared radius — every D ≤ 8 component feels the same \|u\|, so a background enters every
+weak packet as the same stiffness √s — and A′ was selected under the selection rule, so, like P-3
+(row 8), what that selection produced is not counted as evidence. It is recorded as a **verified
+consequence** (PREMISE_LEDGER C51).
 
 ## The count — under the continuum reading (2026-09-27)
 

@@ -1076,6 +1076,38 @@ conservation, checked (≤ 1×10⁻⁷ of N_a) and not counted.
   which the pre-registered displacement prediction omitted (post hoc, with that term: agreement
   within 4×10⁻⁴ sites).
 
+**TESTED 2026-09-27 — universal refraction SUPPORTED with matched trajectories, under its own
+pre-registered criteria** (`shape_zero_tests/tower_chirality_matched_test.py`; hypothesis, criteria and
+predictions committed first, c66115b; output `tower_chirality_matched_output.txt`, 62f1eb5; PREMISE_LEDGER
+C51; PROVENANCE §6w). The chirality comparison rerun as a fresh test: a-branch probes with carrier
+e^{+ik0x}, b-branch probes with e^{−ik0x}, both travelling toward +x on the same path; weak probes
+(10⁻⁴); k0 = π/4, π/2, 3π/4; node sizes D16, D32, D64, D128; uniform, incoherent, gradient and
+mirrored-gradient backgrounds. C50's literal REFUTED verdict stands as recorded.
+
+| criterion (fixed in advance) | limit | measured |
+|---|---|---|
+| (i) uniform background: \|b/a − 1\| of dK_eff, three carriers × D16, D32, D64, D128 | ≤ 1×10⁻³ | **3.4×10⁻⁷** at worst |
+| (ii) uniform background: \|D/D16 − 1\| of dK_eff, every kind | ≤ 1×10⁻³ | **1.1×10⁻¹⁵** |
+| (iii) gradient: \|b/a − 1\| of dp and dx; \|D/D16 − 1\| of dp | ≤ 1×10⁻² | **3.4×10⁻⁵**; **4.2×10⁻¹³** |
+| (iv) wavenumber pushed away from the denser region | every probe | **yes** — dp < 0 in all 24 gradient runs, dp > 0 in all 4 mirrored-gradient runs |
+
+Predictions, all hit: dK_eff/√⟨s⟩ = 0.993–0.995 (predicted [0.990, 0.997]); dw = 2.839×10⁻³,
+2.345×10⁻³, 2.049×10⁻³ at k0 = π/4, π/2, 3π/4, i.e. dK_eff/(2ω_a + κ); incoherent background a and b
+within 3×10⁻⁷ at D16, D32, D64 (predicted ≤ 5×10⁻³), dK_eff/⟨√s⟩ = 0.995–1.006 (predicted
+[0.97, 1.03]); gradient dp/dp_ray = 0.9954–0.9988 (predicted [0.99, 1.01]) and dx within 4×10⁻⁴ sites
+of the ray value (predicted 5×10⁻³); the D16 gradient values seen in the earlier post-hoc check
+(disclosed in the predictions file) reproduced at every node size up to D128; mirrored gradient
+dp = +1.329×10⁻³ for both chiralities (b/a = 1.000000), dp/dp_ray = 1.0022. No post-hoc checks.
+**Observation:** the displacement is −0.041 sites (k0 = π/2) in both the normal and the mirrored
+gradient — the background's uniform slowing of the group velocity dominates it, not deflection.
+
+**Reading:** in the weak-packet limit the populated tower acts on every D ≤ 8 packet as **one universal
+stiffness shift √s** — the same for both chiralities, every colour and every node size — pushing the
+wavenumber away from denser regions. It is not a universal frequency shift (dw = √s/(2ω_a + κ)) or
+displacement, and it does not hold for strong packets (C50). **This universality follows from A′'s
+single shared radius, and A′ was selected under the selection rule (MODEL_SPEC §1a), so it is recorded
+as a verified consequence, not counted as an independent prediction** (UNIVERSAL_RELATIONS row 13).
+
 **The residual is not a separate field. It is a coordinate of the same state,
 one level up.** The node carries a level-≥16 element; its octonionic part is the
 shape the gauge structure acts on; **B** measures how far the state is from being
