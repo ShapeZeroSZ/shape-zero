@@ -10,3 +10,14 @@ JOINT SCOPING CHECKS (natural/JOINT_HYPOTHESES.md)
   J2   kappa* branches, lapse on gauge-invariant vs lab energy, g = 0.0002: a / (-c g)
         a-branch (lab omega 1.0864):  invariant-energy lapse 0.9959 [1.000]   lab-energy lapse 0.6895   energy drift 6.4e-07
         b-branch (lab omega 2.0582):  invariant-energy lapse 0.9959 [1.000]   lab-energy lapse 1.3005   energy drift 3.0e-05
+  J3   charged self-gravitating Gaussian lump under A' (G w^2 = 0.01):
+        lam = e^2/(4 pi G w^2) = 0.5:  E_min = -1.518e-07 at R = 4.728e+03  -> bound
+        lam = e^2/(4 pi G w^2) = 0.9:  E_min = -1.492e-09 at R = 9.095e+04  -> bound
+        lam = e^2/(4 pi G w^2) = 1.1:  E_min = +3.989e-18 at R = 1.000e+14  -> NOT bound
+        lam = e^2/(4 pi G w^2) = 2.0:  E_min = +3.989e-17 at R = 1.000e+14  -> NOT bound
+  J4   fall in a frame rotating at nu (a gauge transformation), g = 0.0002: a / (-c g), predicted in brackets
+          nu        lab-type a      lab-type b      invariant a     invariant b
+        -0.4859   0.3818 [0.382]   1.6028 [1.618]   0.9959 [1.000]   0.9959 [1.000]
+        +0.0000   0.6895 [0.691]   1.3005 [1.309]   0.9959 [1.000]   0.9959 [1.000]
+        +0.2429   0.8429 [0.845]   1.1484 [1.155]   0.9959 [1.000]   0.9959 [1.000]
+        +0.4859   0.9959 [1.000]   0.9959 [1.000]   0.9959 [1.000]   0.9959 [1.000]

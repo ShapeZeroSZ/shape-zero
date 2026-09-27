@@ -16,6 +16,11 @@ J2  H2: the kappa* branches with the lapse coupled to the GAUGE-INVARIANT (rotat
         K' = K + kappa^2/4; the charge term (A0 times the Gauss constraint) is not
         lapse-weighted. Predicted: both branches 1.000. Contrast: lapse on lab energy
         (gravity_scope_checks.fall): 0.69 / 1.30.
+J4  L1 (late hypothesis, committed at 8a40790 before this check was written): gauge dependence.
+        In a frame rotating at nu -- a gauge transformation once kappa is eA0 -- the system has
+        gyroscopic kappa_nu = kappa - 2 nu and stiffness K_nu = K + nu kappa - nu^2. A lapse on
+        that frame's energy ("lab-type") should give a nu-dependent fall,
+        (w_rot -+ (kappa/2 - nu))/w_rot; the gauge-invariant lapse 1.000 at every nu.
 J3  H3: self-gravitating charged Gaussian lump under node form A' (q = 3):
         E(R) = a N/R^2 + b N^1.5 R^-1.5 + (lam - 1) G w^2 N^2/(sqrt(2 pi) R),
         lam = e^2/(4 pi G w^2). Predicted: bound for lam = 0.5, 0.9; unbound for 1.1, 2.
@@ -175,6 +180,26 @@ def j3():
               f"-> {'bound' if bound else 'NOT bound'}")
 
 
+def j4():
+    g = 2e-4
+    k = KSTAR
+    wr = math.sqrt(SQ5 + k * k / 4)
+    print(f"  J4   fall in a frame rotating at nu (a gauge transformation), g = {g}: a / (-c g), "
+          f"predicted in brackets")
+    print("          nu        lab-type a      lab-type b      invariant a     invariant b")
+    for nu in (-k / 2, 0.0, k / 4, k / 2):
+        kn, Kn = k - 2 * nu, SQ5 + nu * k - nu * nu
+        dt = 0.1 / math.sqrt(Kn + kn * kn / 4 + 4 * C)
+        cells = []
+        for br, s in (("a", +1), ("b", -1)):
+            al, _, _ = GS.fall(Kn, kn, br, g, dt=dt)
+            cells.append(f"{al/(-C*g):.4f} [{(wr - s*(k/2 - nu))/wr:.3f}]")
+        for br in ("a", "b"):
+            ai, _, _ = fall_invariant(Kn, kn, br, g)
+            cells.append(f"{ai/(-C*g):.4f} [1.000]")
+        print(f"        {nu:+.4f}   " + "   ".join(cells), flush=True)
+
+
 if __name__ == "__main__":
     print("JOINT SCOPING CHECKS (natural/JOINT_HYPOTHESES.md)")
-    j1(); j2(); j3()
+    j1(); j2(); j3(); j4()
