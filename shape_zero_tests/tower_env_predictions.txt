@@ -1,0 +1,28 @@
+THE TOWER AS AN ENVIRONMENT UNDER FORM (A') -- PREDICTIONS (committed before any run), 2026-09-27.
+Test: shape_zero_tests/tower_env_test.py.
+
+Reading of MODEL_SPEC 4b.1, "The node carries a level-≥16 element": if the node IS that element (an
+n = 8, 16, 32 node = D16, D32, D64), then (A')'s radius |psi|, taken over all the node's components,
+spans the whole tower element, and (A') couples the octonion half (components 0-7) to the upper
+components with NO new parameter -- through the common radius only. Every other term (kappa JJ, the
+Laplacian) is block-diagonal (C_r = 0 is adopted).
+
+STRUCTURAL FACTS, stated before running:
+ - the force on the upper components is -(sqrt5 + |psi|) u_upper + (block-diagonal terms): it vanishes
+   when the upper components vanish, so "upper components exactly zero" is an INVARIANT set;
+ - (A') is invariant under a separate phase rotation of the octonion half and of the upper components,
+   and so is every other term; so each part's U(1) charge is SEPARATELY conserved.
+
+Runs: q = 1 ring, N = 128, kappa = kappa*, packet amplitude 0.05 in the first dimer (width 8, k0 = pi/2,
+per-mode launch), T = 2000, at D16, D32, D64.
+ E1 octonion half excited only: the upper components stay EXACTLY 0.0 at every D -- no energy and no
+    charge flow, nothing to reverse, no near-return time defined.
+ E2 upper components seeded at 10% amplitude (the same packet in the first upper dimer): each part's
+    U(1) charge is conserved separately to RK4 accuracy (<= 1e-6 relative): the charge flowing into the
+    upper components is zero.
+ E3 energy exchange between the parts (quadratic energy of each part) is nonzero but small -- O(1e-4)
+    of the octonion half's energy or less, through the cross term of |psi|^3 -- oscillates and reverses,
+    and is INDEPENDENT of D (the coupling sees only the upper part's total norm): the exchanged
+    fraction and the first near-return time agree across D16, D32, D64 to within 10%.
+ VERDICT PREDICTED: (A') does not make the tower an environment. Nothing flows into an unexcited upper
+ part, charge never flows, energy exchange is small, reversible, and does not grow with tower level.
