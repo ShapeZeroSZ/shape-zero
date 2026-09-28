@@ -76,3 +76,13 @@ the wide-bump, large-ring limit; on 32 nodes the localised shapes spread by 0.05
 These are consequences of the model's equations applied to a circuit built to realise them; a pass says the
 circuit realises the lattice to the stated tolerance and that the three relations hold in hardware. The model is
 not a theory of nature (`OVERVIEW.md`, "Scope"; `LAB_NOTE.md` §5).
+
+## Amendment 1 — GIC component values (2026-09-28; before any build or measurement)
+
+Found in the SPICE unit test of one GIC (`spice/gic_test.cir`), **after** the commit above and before anything was
+built or measured: the GIC values in §1 give L = C4·R1·R3·R5/R2 = 10 nF × 10 kΩ × 10 kΩ × 66.7 kΩ / 10 kΩ = 6.67 H,
+not 6.67 mH (an arithmetic error: the factor R3 was dropped). **Corrected values: C4 = 1.000 nF (C0G), R1 = R2 = R3 =
+2.000 kΩ, R5 = 3.333 kΩ (programmable), L = 2×10⁻⁶ Ω⁻¹H × R5 = 6.667 mH.** The target inductance, every other
+component value, the calibrations, the estimator, the predictions, the tolerances and the failure criteria are
+unchanged. With the corrected values the SPICE GIC gives 6.62–6.70 mH over 40–80 kHz (a 1.2% frequency dependence
+the model does not have) and Q = 100–190.
