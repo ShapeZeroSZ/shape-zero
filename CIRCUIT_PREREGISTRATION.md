@@ -86,3 +86,13 @@ not 6.67 mH (an arithmetic error: the factor R3 was dropped). **Corrected values
 component value, the calibrations, the estimator, the predictions, the tolerances and the failure criteria are
 unchanged. With the corrected values the SPICE GIC gives 6.62–6.70 mH over 40–80 kHz (a 1.2% frequency dependence
 the model does not have) and Q = 100–190.
+
+## Amendment 2 — GIC op-amp input assignment (2026-09-28; before any build or measurement)
+
+Found in the SPICE transient check (`spice/`), before anything was built or measured: with the GIC's second op-amp
+wired + input at g5 (the R5/C4 junction), − input at g3, a single node driven by a 10 µA kick runs to the ±12 V
+rails (46 kHz), although the AC impedance is correct (AC analysis cannot see the instability). **Corrected: op-amp B
++ input at g3, − input at g5** (op-amp A unchanged: + at the node, − at g3); the same node then rings at 50 kHz and
+decays at the inductor-set rate. With the corrected wiring the GIC is 6.58–6.64 mH over 40–80 kHz with a small
+negative series resistance (Q −40 to −80), which lowers each node's effective Q but leaves it damped. Component
+values, predictions, tolerances and failure criteria are unchanged.
