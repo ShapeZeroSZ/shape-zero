@@ -1,0 +1,4 @@
+4. 0.1% tolerance plus one non-ideality at a time, 60 realisations (N = 32, S = 0.05)
+  + Q = 100    : median 1.0364, sd 0.0129, max |dev| 0.0406
+  + C_p, C_in  : median 1.1313, sd 0.1351, max |dev| 0.2416
+  + 5 MHz pole : median 1.0348, sd 0.0039, max |dev| 0.0100

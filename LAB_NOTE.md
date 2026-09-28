@@ -6,6 +6,9 @@
 first, 1c63b6d) and the post-hoc diagnostics `platform_error_budget_checks.py`. Every design choice below is
 ours, not taken from a source.*
 
+*Second platform (added 2026-09-28): an LC ring with gyrator bonds, §6. §6.4 records a design flaw found
+there that also affects this section's §4 (post hoc).*
+
 ## 1. Platform
 
 **System.** A ring of N planar pendula (one angle θ_n each) with the motors off: no on-site spin, so the
@@ -118,9 +121,136 @@ phase-slope estimator. **Post-hoc** diagnostics, written after the budget output
   independence at 1%. That needs N = 64 (1.1% intrinsic spread, S = 0.02) with springs at ≤ 0.1%; the
   model's own 0.4% check needs N ≳ 128.
 
+**[Post hoc, 2026-09-28 — see §6.4.]** The design point ĉ = 0.25, β̂ = 0.10 places the k = π/2 probe mode
+8.4×10⁻⁴ √K from the ω(−13π/16) mode — an accidental near-degeneracy about the size of the P2 signal, which
+disorder couples. Much of the P2 scatter above comes from it. Rerun at β̂ = 0.106 (rotor speed ×1.06; nearest
+other mode 8.8×10⁻³ √K away): with the nominal parts P2 scatters by **2.9%** (not 19%); with springs at 0.3%,
+0.96%; with springs and K at 0.1%, 0.20%; P1 max 5.9×10⁻³, 1.5×10⁻³, 3.2×10⁻⁴. These numbers are post hoc,
+not pre-registered; the design should use β̂ = 0.106.
+
 ## 5. Scope
 
 This is a theory of a class of realisable lattices: linear, passive, gyroscopically coupled oscillator
 chains described by three dimensionless parameters, ĉ = c/K, κ̂ = κ/√K and β̂ = βc/√K. Three measurements
 fix them; the three predictions above are further conditions on the same chain that no calibration uses, and
 they can fail. The note makes no claims about fundamental physics.
+
+## 6. Second platform — an LC ring with gyrator bonds
+
+*Added 2026-09-28. Every design choice here is ours. Expectations committed before the simulation
+(`shape_zero_tests/circuit_error_budget_predictions.txt`, 65ee4eb); simulation `circuit_error_budget.py`;
+post-hoc diagnostics `circuit_error_budget_checks.py` and `detuned_design_checks.py`, labelled as such.*
+
+### 6.1 Circuit and mapping
+
+Each node n has a capacitor C to ground and an inductor L_g to ground; each bond has an inductor L_c and a
+gyrator made of two voltage-controlled current sources (VCCS) with buffered, high-impedance inputs: one
+injects −G V_{n+1} into node n, the other +G V_n into node n+1. With the node flux φ_n (V_n = φ̇_n),
+Kirchhoff's current law gives
+
+  C φ̈_n = −φ_n/L_g + (φ_{n+1} + φ_{n−1} − 2φ_n)/L_c − G φ̇_{n+1} + G φ̇_{n−1},
+
+the pendulum ring's equation (§1) term by term:
+
+| pendulum | circuit | model |
+|---|---|---|
+| θ_n | φ_n (node flux) | u_n |
+| I_eff | C | 1 |
+| τ_g | 1/L_g | K = 1/(L_g C) |
+| k_t | 1/L_c | c = 1/(L_c C); ĉ = L_g/L_c |
+| H (bond rotor) | G (gyrator) | b = βc = G/C; β̂ = G√(L_g/C) |
+| no spin | no on-site gyrator | κ = 0 |
+
+**Passivity and velocity-linearity.** An ideal gyrator delivers P = V_n(−G V_{n+1}) + V_{n+1}(G V_n) = 0: it is
+lossless, and its currents are linear in the node voltages, i.e. in φ̇ — the velocity-linear bond. Real VCCS
+break this in four ways:
+- **gain mismatch** G_a ≠ G_b adds a symmetric conductance coupling (P = −δG V_nV_{n+1}, not sign-definite);
+- **finite bandwidth** G(ω) = G/(1 + iωτ) adds a current in phase with V: a direction-dependent conductance
+  ±2Gωτ sin k — loss for one propagation direction and **gain** for the other;
+- **finite output impedance** of a Howland pump with resistor mismatch ε: a shunt conductance ~ ±εG per output;
+- **offsets** (input offset, bias currents) set a DC operating point only; they cannot change a linear
+  circuit's frequencies.
+A Howland pump with unbuffered inputs would also load each sensed node with ~G/2 (Q ≈ 12 here), hence the
+buffered inputs. The circuit has no anharmonicity to the precision that matters here.
+
+### 6.2 Design (ours)
+
+| item | value |
+|---|---|
+| node | C = 10 nF (C0G), L_g = 1 mH (shielded ferrite), series R for Q = 100 |
+| bond | L_c = 4 mH (shielded ferrite); ĉ = 0.25 |
+| gyrator | two buffered improved-Howland VCCS per bond (one quad op-amp, ~10 MHz GBW, VCCS pole ~5 MHz), R_set = 2.98 kΩ → G = 3.35×10⁻⁴ S, **β̂ = 0.106** (not 0.10; §6.4) |
+| bumps | a programmable grounded synthetic inductor (GIC) in parallel with L_g at each node, setting δK_n |
+| frequencies | K = 10¹¹ s⁻² (50.3 kHz); band 50.3–71.2 kHz; at k = π/2, ω₊ = 67.2 kHz, ω₋ = 56.5 kHz, **Δω(π/2) = 6.70×10⁴ rad/s (10.7 kHz)**; P2 signal at S = 0.05: −335 rad/s (−53 Hz); linewidth at Q = 100: ~670 Hz |
+| readout | current drive into one node through a resistor from a function generator; lock-in (or synchronous DAQ) reading of every node voltage via an analog multiplexer; spatial Fourier transform to ±k spectra; resonance fits |
+
+**Calibrations** as in §2: gyrators unpowered — ±k doublets degenerate (κ̂ = 0) and the band gives K, c;
+gyrators on — Δω(π/2) gives b. The product rule ω(k)ω(−k) = Q(k) is the diagnostic that the powered gyrators
+are velocity-linear. A uniform temperature drift of the ferrite inductors changes K and c together and is
+recalibrated; non-uniform drift acts as tolerance.
+
+### 6.3 Error budget
+
+N = 32, protocol and predictions as §3–§4, at the pre-registered design point β̂ = 0.10 unless marked. The
+first run's mode selector admitted the fast, non-oscillating VCCS-pole modes and returned wrong modes wherever
+the VCCS pole was included, and in some τ = 0 realisations (the 0.1% row read sd 12.8%). It was restricted to
+oscillatory modes in the band, marked in the script, with the expectations unchanged; that output is kept as
+`circuit_error_budget_output_modeid.txt`.
+
+| non-ideality | expected | simulated | verdict |
+|---|---|---|---|
+| ideal circuit | identical to the ideal pendulum ring | P1 4×10⁻¹⁴; C ratio 1.03404 | hit — same equations |
+| tolerance 1% (C, L_g, L_c, G_a, G_b, shunts) | P1 ≤ 10⁻²; P2 sd 15–25%; P3 fails | P1 max 2.1×10⁻²; **P2 sd 53%**; P3 fails | miss on P1 and P2 |
+| tolerance 0.1% | P1 ≤ 1.5×10⁻³; P2 sd ≤ 1%; P3 finite-size-limited | P1 4.7×10⁻⁴; P2 sd 1.3% (60 realisations, post hoc: 2.0%, 28% of them > 2% off); P3 4.7% | P2 miss |
+| inductor Q = 50, 100, 300 | Δω ≤ 10⁻⁴; C ≤ 1%; stable | Δω ~10⁻¹⁴; C ≤ 2.6×10⁻⁴; stable | hit |
+| VCCS pole 5 MHz / 50 MHz | Δω ~1.5×10⁻⁴; C ≤ 10⁻³; gain ~4×10² s⁻¹; unstable above Q ≈ 500 / 5000 | Δω −1.6×10⁻⁴ / −1.6×10⁻⁶; C −3×10⁻⁵; gain 459 / 46 s⁻¹ (lossless inductors); unstable between Q = 300 and 500 / 3000 and 10000 | hit |
+| VCCS mismatch and shunts, 1% / 0.1% | Δω ≤ 10⁻⁴ | Δω up to 2.7×10⁻³ / 2.3×10⁻⁴; gain up to 165 / 16 s⁻¹ | **miss** — post hoc: the change tracks the mean-G change and is absorbed by the β̂ calibration |
+| parasitics: 10 pF across L_c, 3 pF per VCCS input | P1 ≤ 3×10⁻³; C ≤ 0.5% | P1 1.0×10⁻³ (systematic, from the k-dependent capacitance); C −0.42% | hit |
+| offsets: 1 mV, 10 nA per op-amp | frequencies unchanged; V_dc ≤ 10 µV, i_dc ≤ 1 µA | V_dc 2 µV; i_dc 0.5 µA | hit |
+| combined realistic (0.1%, Q 100, 5 MHz, parasitics, mismatch, shunts) | P1 ≤ 5×10⁻³; P2 sd ≤ 1%; P3 (N = 64, S = 0.02) ≤ 2%; stable | P1 1.1×10⁻³; P2 sd 0.22% (0.29% at S = 0.02; 0.49% at N = 64); P3 1.1% mean, **2.3% max**; stable (−1.3×10³ s⁻¹) | hit, except P3 max |
+| lock-in estimator (single-node drive) | Δω ≤ 10⁻⁴ of eigen; δ(Δω) within 2% | Δω −3.7×10⁻⁴; δ(Δω) +3.3% | **miss** — overlapping, asymmetric lines under a one-node drive |
+| which part drives the 1% P2 spread (post hoc) | — | C alone 50%; L_g 26%; L_c 15%; gyrators 2.8% | mass (C) disorder dominates |
+| added non-idealities at 0.1% (post hoc) | — | + Q 100: sd 1.3%; + parasitics: 13.5%; + VCCS pole: 0.39% — erratic | led to §6.4 |
+
+### 6.4 An accidental degeneracy in the design point (post hoc; both platforms)
+
+At ĉ = 0.25, β̂ = 0.10 the probe mode ω(+π/2) = 1.32882 √K lies 8.4×10⁻⁴ √K from ω(−13π/16) (m = −13 at
+N = 32, −26 at N = 64). That is the size of the P2 signal (10⁻³ √K), and disorder couples the two modes, so the
+P2 shift is ill-conditioned: small changes (a parasitic, a loss) move the detuning and the scatter erratically.
+At **β̂ = 0.106** the nearest other mode is 8.8×10⁻³ √K away at both N = 32 and 64. Rerun there (30
+realisations, post hoc):
+
+| circuit, β̂ = 0.106 | P1 max | P2 median, sd (max dev) | P3 spread mean (max) |
+|---|---|---|---|
+| N = 32, S = 0.05, ideal | — | 1.0351 | ratio range 0.051 (finite size) |
+| — 1% tolerance | 2.7×10⁻² | 1.018, 16% (0.43) | 14% (40%) |
+| — 0.1% tolerance | 4.9×10⁻⁴ | 1.0352, **0.19%** (0.006) | 4.8% (5.3%) |
+| — realistic | 1.1×10⁻³ | 1.0307, **0.17%** (0.006) | 4.8% (5.3%) |
+| N = 64, S = 0.02, ideal | — | 1.0069 | ratio range 0.011 |
+| — 0.1% tolerance | 7.2×10⁻⁴ | 1.010, 2.5% (0.060) | 1.9% (5.9%) |
+| — realistic | 1.1×10⁻³ | 1.0034, **0.78%** (0.021) | **1.2% (2.8%)** |
+
+At 1% tolerance (N = 32) the P2 scatter by part is C 8.7%, L_g 2.5%, L_c 1.9%, gyrators 0.4%. The pendulum
+ring at β̂ = 0.106 is in §4's post-hoc note. The design value β̂ = 0.106 above follows from this check.
+
+### 6.5 What a 32- or 64-node circuit could test
+
+- **P1 (sin k):** testable at 0.1% parts to ~0.1% (the residual is the parasitic-capacitance systematic,
+  ~10⁻³, correctable from the band). With 1% parts the residual reaches 2.7%: parts at ≲ 0.3% are needed for a
+  1% test.
+- **P2 (¼):** testable on 32 nodes with 0.1% parts to ~0.2% scatter, against a computable finite-ring
+  correction of +3.5% (S = 0.05); the estimator must fit the spatially resolved lines properly (the naive
+  one-node lock-in peak read was 3.3% off).
+- **P3 (shape independence):** 32 nodes give a 5% intrinsic (finite-size) spread — only a class test (ramp vs
+  localised). 64 nodes with 0.1% parts reach ~1.2% mean spread (2.8% worst realisation): a 2–3% test.
+- **Parts and cost (rough, 2026 hobby prices).** Per node: C0G capacitor (sorted to 0.1%: ~$1), two shielded
+  ferrite inductors (5–10% as bought, sorted or trimmed to 0.1%: ~$4–8), one quad op-amp plus ~10 0.1%
+  resistors for the bond's two VCCS (~$8), a GIC bump stage with digitally switched resistors (~$5), PCB
+  share (~$3). About $20–25 per node: **~$700–800 for 32 nodes, ~$1500 for 64**, plus instruments — a precision
+  LCR meter at 50–70 kHz (0.05% class; the costliest item unless borrowed), a function generator and a lock-in
+  or USB scope/AWG with a 32-to-1 analog multiplexer (~$300–500).
+- **Could a skilled hobbyist build it?** The 32-node board, powered gyrators and P1 — yes: standard
+  through-hole or SMD analog work at 50–70 kHz. P2 and P3 need 0.1% matching of ~100 inductors and capacitors
+  at the operating frequency, a stable temperature (non-uniform ferrite drift at ~10⁻⁴/K acts as tolerance),
+  and careful line fitting: feasible for a patient hobbyist with access to a precision LCR meter, and the
+  sorting is the main labour. Stability needs inductor Q below ~300–400 with ~10 MHz op-amps (or faster op-amps).

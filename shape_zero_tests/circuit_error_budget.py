@@ -79,7 +79,10 @@ def modes(p, bump=None, gyro=True):
 def mode_w(lam, V, m, sign):
     N = V.shape[0]
     pw = np.exp(1j * sign * 2 * np.pi * m / N * np.arange(N)) / np.sqrt(N)
-    sel = lam.imag < 0
+    # INSTRUMENT FIX (after the first run, circuit_error_budget_output_modeid.txt): with tau > 0 the fast,
+    # non-oscillating VCCS-pole modes were eligible and some were picked; only oscillatory modes in the band are
+    # eligible now. Expectations unchanged.
+    sel = (lam.imag < -0.3 * np.sqrt(K0)) & (np.abs(lam.real) < 0.1 * np.abs(lam.imag))
     ov = np.abs(pw.conj() @ V[:, sel]) / np.linalg.norm(V[:, sel], axis=0)
     j = np.argmax(ov)
     return -lam[sel][j].imag

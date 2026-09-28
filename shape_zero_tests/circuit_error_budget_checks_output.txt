@@ -1,0 +1,15 @@
+POST HOC. 1. P2 spread by component (N = 32, S = 0.05, 20 realisations)
+  1.0% C only       : C ratio mean 1.0872, sd 0.4972
+  1.0% L_g only     : C ratio mean 1.0563, sd 0.2595
+  1.0% L_c only     : C ratio mean 1.0442, sd 0.1493
+  1.0% gyrator only : C ratio mean 1.0256, sd 0.0282
+  0.1% C only       : C ratio mean 1.0344, sd 0.0152
+  0.1% L_g only     : C ratio mean 1.0341, sd 0.0053
+  0.1% L_c only     : C ratio mean 1.0341, sd 0.0026
+  0.1% gyrator only : C ratio mean 1.0340, sd 0.0002
+2. gyrator mismatch 1%: Delta w change vs the mean-G change
+  Delta w change -1.13e-03; mean-G change -1.86e-03
+  Delta w change +1.39e-03; mean-G change +1.43e-03
+  Delta w change -9.27e-04; mean-G change -9.86e-04
+  Delta w change +2.68e-03; mean-G change +2.29e-03
+  Delta w change -1.55e-03; mean-G change -1.84e-03

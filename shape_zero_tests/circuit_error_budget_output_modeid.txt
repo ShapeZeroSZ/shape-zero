@@ -1,0 +1,24 @@
+LC-GYRATOR RING -- C = 10 nF, L_g = 1 mH, L_c = 4 mH, G = 3.1623e-04 S; K = 1.000e+11 s^-2, c-hat = 0.250, beta-hat = 0.100; w(pi/2) = 3.8730e+05 rad/s
+X0 ideal: Delta w(pi/2) = 6.32456e+04 (2b = 6.32456e+04); P1 residual 4.1e-14; C ratio 1.03404
+X1 1% tolerance: P1 max 2.1e-02 (mean 1.2e-02); P2 C ratio mean 1.0769, sd 0.5259; P3 shape spread mean 0.495, max 1.332
+X2 0.1% tolerance: P1 max 4.7e-04 (mean 2.1e-04); P2 C ratio mean 1.0647, sd 0.1279; P3 shape spread mean 0.047, max 0.068
+X3 inductor Q (series R), ideal otherwise
+  Q = 50: Delta w change -3.66e-15; C ratio change -2.64e-04; max Re lambda -3.553e+03 s^-1
+  Q = 100: Delta w change +1.78e-15; C ratio change -6.70e-05; max Re lambda -1.777e+03 s^-1
+  Q = 300: Delta w change -5.34e-14; C ratio change -7.56e-06; max Re lambda -5.922e+02 s^-1
+X4 VCCS bandwidth (single pole), with inductor Q
+  pole 5 MHz: Delta w change +4.64e+00; P1 residual 8.2e-01; C ratio change -9.04e-01; max Re lambda: lossless +4.593e+02, Q=100 -1.32e+03, Q=300 -1.36e+02, Q=500 +1.02e+02, Q=1000 +2.81e+02, Q=3000 +4.00e+02, Q=10000 +4.41e+02
+  pole 50 MHz: Delta w change +4.64e+00; P1 residual 8.1e-01; C ratio change -9.04e-01; max Re lambda: lossless +4.594e+01, Q=100 -1.73e+03, Q=300 -5.47e+02, Q=500 -3.10e+02, Q=1000 -1.32e+02, Q=3000 -1.36e+01, Q=10000 +2.81e+01
+X5 VCCS gain mismatch and Howland shunt only (20 realisations)
+  1.0%: max |Delta w change| 2.7e-03; max Re lambda (lossless inductors) +1.65e+02 s^-1
+  0.1%: max |Delta w change| 2.3e-04; max Re lambda (lossless inductors) +1.59e+01 s^-1
+X6 parasitics (C_p across L_c, C_in per VCCS input)
+  C_p 10 pF, C_in 3 pF: P1 residual 1.0e-03; C ratio change -4.23e-03
+X7 offsets (1 mV V_os on each VCCS, 10 nA bias per input), realistic circuit: DC solution
+  max |V_dc| 2.01e-06 V; max |i_dc| in L_g 5.19e-07 A, in L_c 2.03e-07 A (eigenfrequencies unaffected: linear superposition)
+X8 combined realistic (0.1%, Q = 100, 5 MHz pole, C_p 10 pF, C_in 3 pF, mismatch, shunts), 20 realisations
+  N = 32, S = 0.05: P1 max 6.8e+00; P2 C ratio mean -711.9222, sd 426.1072; P3 spread mean 0.012, max 0.053; max Re lambda -1.32e+03 s^-1 (all stable: True)
+  N = 32, S = 0.02: P1 max 6.8e+00; P2 C ratio mean -4451.9326, sd 2664.3222; P3 spread mean 0.011, max 0.050; max Re lambda -1.32e+03 s^-1 (all stable: True)
+  N = 64, S = 0.02: P1 max 6.8e+00; P2 C ratio mean -5719.3632, sd 2.1287; P3 spread mean 0.000, max 0.000; max Re lambda -1.32e+03 s^-1 (all stable: True)
+X9 lock-in estimator, X8 realisation 0 (N = 32, S = 0.05)
+  eigen: Delta w 6.307340e+04, d(Delta w) +2.93257e+05 (ratio -1433.7712); lock-in: Delta w 6.304988e+04 (-3.73e-04), d(Delta w) -3.41917e+02 (-1.00e+00; ratio 1.6717)

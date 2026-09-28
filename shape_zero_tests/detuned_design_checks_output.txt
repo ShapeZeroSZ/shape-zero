@@ -1,0 +1,18 @@
+CIRCUIT at beta-hat = 0.106 (G = 3.3520e-04 S, R_set = 2983 Ohm)
+  N = 32, S = 0.05: ideal C ratio 1.0351; ideal shape spread 0.0508
+    1% tolerance                              : P1 max 2.7e-02; P2 C ratio median 1.0183, sd 0.1567, max |dev| 0.4276; P3 spread mean 0.144, max 0.402
+    0.1% tolerance                            : P1 max 4.9e-04; P2 C ratio median 1.0352, sd 0.0019, max |dev| 0.0058; P3 spread mean 0.048, max 0.053
+    realistic (0.1%, Q 100, 5 MHz, parasitics): P1 max 1.1e-03; P2 C ratio median 1.0307, sd 0.0017, max |dev| 0.0056; P3 spread mean 0.048, max 0.053
+  N = 64, S = 0.02: ideal C ratio 1.0069; ideal shape spread 0.0110
+    1% tolerance                              : P1 max 2.6e-02; P2 C ratio median 1.2576, sd 1.4630, max |dev| 3.4456; P3 spread mean 4.594, max 85.171
+    0.1% tolerance                            : P1 max 7.2e-04; P2 C ratio median 1.0104, sd 0.0250, max |dev| 0.0597; P3 spread mean 0.019, max 0.059
+    realistic (0.1%, Q 100, 5 MHz, parasitics): P1 max 1.1e-03; P2 C ratio median 1.0034, sd 0.0078, max |dev| 0.0207; P3 spread mean 0.012, max 0.028
+  1% component decomposition (N = 32, S = 0.05, 30 realisations): P2 sd
+    C       : sd 0.0869
+    L_g     : sd 0.0245
+    L_c     : sd 0.0185
+    gyrator : sd 0.0040
+PENDULUM RING at beta-hat = 0.106 (b = 0.6071 s^-1; rotor speed x1.06)
+  nominal (K 0.3%, springs 1%, rotors 0.5%) : P1 max 5.9e-03; P2 C ratio median 1.0348, sd 0.0287, max |dev| 0.0637
+  springs 0.3%                              : P1 max 1.5e-03; P2 C ratio median 1.0349, sd 0.0096, max |dev| 0.0253
+  springs 0.1%, K 0.1%                      : P1 max 3.2e-04; P2 C ratio median 1.0350, sd 0.0020, max |dev| 0.0046
