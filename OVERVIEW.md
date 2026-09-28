@@ -42,7 +42,7 @@
 - ~~**The correct infinite-volume observable for a localised stiffness bump at q ≥ 2**: the second-order coefficient C_q(N) has no limit there (`MODEL_SPEC.md` §5b.6a, "MECHANISM NAMED").~~ [2026-09-27: answered — the golden-rule scattering rate, which carries the pin's nonreciprocity.]
 - ~~**q = 3 rate convergence to be confirmed**: the scattering rate is converged at q = 2 and −2.6% from its limit at side 96 at q = 3 (`MODEL_SPEC.md` §5b.6a).~~ [CLOSED 2026-09-27: within 0.16% at side 256.]
 - ~~**A continuum limit**, stated or explicitly refused: ĉ is a length unit only in that limit, which is not taken (`MODEL_SPEC.md` §1b).~~ [2026-09-27: **stated** (`MODEL_SPEC.md` §1c): κ is a rotating frame; **β is a frame velocity in the continuum**; ĉ is the healing length there, ξ = 0.64 lattice spacings, with the carrier at kξ ≈ 1 — **the model's content is lattice-scale**.]
-- **A prediction with more independent conditions than parameters** (`03_current/SCALE_SCOPING.md`, "Success").
+- ~~**A prediction with more independent conditions than parameters** (`03_current/SCALE_SCOPING.md`, "Success").~~ [2026-09-28: **met as a theory of realisable lattices** (`UNIVERSAL_RELATIONS.md`, "The count — corrected accounting"): six conditions against three parameters — three consumed as calibrations (Δω at one k → β̂, the Larmor splitting → κ̂, the band shape → ĉ) and three satisfied without being used (the sin k departure, the coefficient ¼, its shape independence), over-constrained by three. Within the model the three are exact; they can genuinely fail only in a physical realisation (branch `realisation-gyroscopic`).]
 
 ## Run the model
 

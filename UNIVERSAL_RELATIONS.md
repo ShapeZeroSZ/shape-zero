@@ -16,7 +16,7 @@ measurement); the model is not presented as a theory of nature (`OVERVIEW.md`, "
 | 6 | every two-root quadratic well is the same well in other units | — (removes parameters) | **proved**, in review | mission 8; `shape_zero_tests/scale_invariance.py` | no — a statement about coordinates |
 | 7 | D8 frequency ratio 1/sin(θ/2) | all but θ_ab | **proved**, in review | mission 7; `shape_zero_tests/d8_closed_form.py` | no — the lattice does not realise the D8 flow (MODEL_SPEC §9) |
 | 8 | P-3: a circular spinor wave does not precess, Ω = 0 at every amplitude (node form A′) | every parameter and amplitude | **derived + measured** (10⁻¹⁸) | `shape_zero_tests/nodewell_test.py p3` | yes — but **excluded from the count** (below) |
-| 9 | wide-bump nonreciprocity limit ν = (Γ(+k) − Γ(−k))/Γ → 0 at k = π/2, q ≥ 2 | bump shape; ĉ, β̂ enter only at finite width | **derived + computed** | `shape_zero_tests/joint5_rate2.py` | yes, in principle |
+| 9 | wide-bump nonreciprocity limit ν = (Γ(+k) − Γ(−k))/Γ → 0 at k = π/2, q ≥ 2 | bump shape; ĉ, β̂ enter only at finite width | **derived + computed** | `shape_zero_tests/joint5_rate2.py` | yes, in principle [**NOTE 2026-09-28** (MODEL_SPEC §5b.6a, "CORRECTED 2026-09-28"; `shape_zero_tests/joint5_rate3.py`, predictions committed first): **kinematic, not independent** — a wide bump's rate is a dwell-time law, Γ ∝ 1/\|v_g\|, and ν → 0 at π/2 is the stationary point of row 1's sin k shape (dΔω/dk = 2βc cos k = 0); confirmed at π/4, π/3, 2π/3 within 2×10⁻⁵. Its leading correction −βΩ(q − 1)J is **not universal** (31.5% spread across shapes against the pre-registered 2%).] |
 | 10 | symmetric + J-commuting couplings have dimension n² (mission 1); passivity ⇔ symmetric links (missions 2, 4a); roles force Fano (missions 5, 6) | every parameter (structural) | **proved** | missions 1, 2, 4a, 5, 6 | no — constraints on the model's form, not a measured number |
 | 11 | small-amplitude reduction to the linear gauge dynamics | amplitude, in the limit | **measured** (certified) | `shape_zero_tests/certify_gates.py` | no — an internal consistency check |
 | 12 | **κ-gradient force:** in a static κ gradient, packets at rest on the two branches accelerate apart with a_a − a_b = c·∂ₓ(ω_b − ω_a)/ω̄, ω̄ = (ω_a + ω_b)/2 — the electric-field analogue, branches as opposite charges | the well; K and κ enter only through the measured branch frequencies | **derived + measured** (−0.23%; predictions committed first) — **a verified consequence of row 5 plus ray kinematics and the band curvature; not independent** | `shape_zero_tests/kgrad_test.py`; MODEL_SPEC §1c; PROVENANCE §6t | yes, in a realisation with a position-dependent Larmor splitting — but it would test ray kinematics, not a new condition |
@@ -46,7 +46,7 @@ independence; the κ̂ floor (an inequality); P-3's absence; and the ν → 0 li
 standard ray (eikonal) kinematics and the band curvature 1/m\* = c/ω̄. A packet at rest accelerates at
 ẍ = −(∂²ω/∂k²)(∂ω/∂x); with ω_b = ω_a + κ(x) at every k, the branches share 1/m\*, and their
 x-derivatives differ by κ′ (PROVENANCE §6t). It is recorded as a **verified consequence**. The strict
-genuine predictions stay at **four** (three if ν → 0 is kinematic).
+genuine predictions stay at **four** (three if ν → 0 is kinematic). [2026-09-28: it is kinematic; see "The count — corrected accounting".]
 
 **Row 13 (added 2026-09-27) does not change either count.** Universal refraction follows from node form
 A′'s single shared radius — every D ≤ 8 component feels the same \|u\|, so a background enters every
@@ -83,7 +83,35 @@ uniformly drifting medium. What remains:
 down from eight. It **still exceeds three.** But the stricter count, genuine predictions
 neither used to choose a parameter nor excluded, is **four** (sin k departure, ¼, shape
 independence, ν → 0), and **three if ν → 0 turns out to be kinematic** — equal to the number of
-parameters, not above it. The calibrations are unchanged (Δω at one k fixes β̂; the Larmor
+parameters, not above it. [**CORRECTED 2026-09-28:** ν → 0 is kinematic (row 9's note), so three remain — but comparing predictions with parameters was the wrong accounting: the calibrations are conditions too. See "The count — corrected accounting".] The calibrations are unchanged (Δω at one k fixes β̂; the Larmor
 splitting — Larmor's theorem — defines κ̂; the band shape fixes ĉ). Note also that in the J sector
 without links κ̂ enters only through ĉ′ = ĉ/(1 + κ̂²/4) (MODEL_SPEC §1c).
+
+## The count — corrected accounting (2026-09-28)
+
+*Added after the row-9 test (MODEL_SPEC §5b.6a, "CORRECTED 2026-09-28"); the counts above are kept as
+written.* **The criterion** is **more satisfied conditions than parameters, with at least one condition not
+used to choose a parameter** — the over-determination test that `03_current/SCALE_SCOPING.md`, "Success",
+states for the fibre scale ("more conditions than it spends parameters"), applied here to the lattice. So the conditions are counted
+**including the calibrations**; comparing only the uncalibrated predictions with the parameters, as the
+sections above did, double-counts the parameters.
+
+| condition | role |
+|---|---|
+| Δω at one k | **calibration** — fixes β̂ |
+| the Larmor splitting | **calibration** — fixes κ̂ |
+| the band shape | **calibration** — fixes ĉ |
+| the sin k departure from linear Doppler (row 1, beyond the calibrating point) | **satisfied, not used** |
+| the coefficient ¼ (row 3) | **satisfied, not used** |
+| its shape independence (row 3) | **satisfied, not used** |
+
+**Six conditions against three parameters — over-constrained by three**, and each genuine prediction
+is the excess. Not counted: the κ̂ floor (used to choose κ), P-3 (a consequence of the selected form A′),
+row 9 (kinematic — contained in row 1's sin k shape), and the verified consequences (rows 12–15).
+
+**What the over-constraint is.** The three genuine predictions follow from the model's own equations, so
+**within the model they are exact and cannot fail**. They can genuinely fail **only in a physical
+realisation** — a lattice whose couplings are measured, not assumed. The over-constraint is therefore
+**as a theory of realisable lattices**. Rows 1–2 are testable as described on the branch
+`realisation-gyroscopic` (`REALISATION.md` §5): a chain of motors-off pendula with bond rotors.
 

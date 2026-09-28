@@ -170,6 +170,20 @@
   },
   {
    "file": "./OVERVIEW.md",
+   "line": 45,
+   "section": "Open",
+   "text": "- ~~**A prediction with more independent conditions than parameters** (`03_current/SCALE_SCOPING.md`, \"Success\").~~ [2026-09-28: **met as a theory of realisable lattices** (`UNIVERSAL_RELATIONS.md`, \"The count \u2014 correcte",
+   "numbers": [
+    "2026",
+    "09",
+    "28"
+   ],
+   "status": [
+    "FAILED"
+   ]
+  },
+  {
+   "file": "./OVERVIEW.md",
    "line": 54,
    "section": "Run the model",
    "text": "Requires Python 3 with NumPy and SciPy. `model.py` runs eleven build gates in order and stops at the first failure; all pass, in about 16 minutes on one core (`04_scripts/session/model.py`).",
@@ -631,6 +645,24 @@
   },
   {
    "file": "./UNIVERSAL_RELATIONS.md",
+   "line": 19,
+   "section": "Universal relations \u2014 a census",
+   "text": "| 9 | wide-bump nonreciprocity limit \u03bd = (\u0393(+k) \u2212 \u0393(\u2212k))/\u0393 \u2192 0 at k = \u03c0/2, q \u2265 2 | bump shape; \u0109, \u03b2\u0302 enter only at finite width | **derived + computed** | `shape_zero_tests/joint5_rate2.py` | yes, in principle [**NOTE 20",
+   "numbers": [
+    "2026",
+    "09",
+    "28",
+    "2026",
+    "09",
+    "28",
+    "10"
+   ],
+   "status": [
+    "VERIFIED"
+   ]
+  },
+  {
+   "file": "./UNIVERSAL_RELATIONS.md",
    "line": 20,
    "section": "Universal relations \u2014 a census",
    "text": "| 10 | symmetric + J-commuting couplings have dimension n\u00b2 (mission 1); passivity \u21d4 symmetric links (missions 2, 4a); roles force Fano (missions 5, 6) | every parameter (structural) | **proved** | missions 1, 2, 4a, 5, 6",
@@ -754,6 +786,18 @@
   },
   {
    "file": "./UNIVERSAL_RELATIONS.md",
+   "line": 49,
+   "section": "The count",
+   "text": "genuine predictions stay at **four** (three if \u03bd \u2192 0 is kinematic). [2026-09-28: it is kinematic; see \"The count \u2014 corrected accounting\".]",
+   "numbers": [
+    "2026",
+    "09",
+    "28"
+   ],
+   "status": []
+  },
+  {
+   "file": "./UNIVERSAL_RELATIONS.md",
    "line": 51,
    "section": "The count",
    "text": "**Row 13 (added 2026-09-27) does not change either count.** Universal refraction follows from node form",
@@ -801,6 +845,55 @@
     "27"
    ],
    "status": []
+  },
+  {
+   "file": "./UNIVERSAL_RELATIONS.md",
+   "line": 86,
+   "section": "The count \u2014 under the continuum reading (2026-09-27)",
+   "text": "parameters, not above it. [**CORRECTED 2026-09-28:** \u03bd \u2192 0 is kinematic (row 9's note), so three remain \u2014 but comparing predictions with parameters was the wrong accounting: the calibrations are conditions too. See \"The ",
+   "numbers": [
+    "2026",
+    "09",
+    "28"
+   ],
+   "status": []
+  },
+  {
+   "file": "./UNIVERSAL_RELATIONS.md",
+   "line": 90,
+   "section": "The count \u2014 corrected accounting (2026-09-28)",
+   "text": "## The count \u2014 corrected accounting (2026-09-28)",
+   "numbers": [
+    "2026",
+    "09",
+    "28"
+   ],
+   "status": []
+  },
+  {
+   "file": "./UNIVERSAL_RELATIONS.md",
+   "line": 92,
+   "section": "The count \u2014 corrected accounting (2026-09-28)",
+   "text": "*Added after the row-9 test (MODEL_SPEC \u00a75b.6a, \"CORRECTED 2026-09-28\"); the counts above are kept as",
+   "numbers": [
+    "2026",
+    "09",
+    "28"
+   ],
+   "status": []
+  },
+  {
+   "file": "./UNIVERSAL_RELATIONS.md",
+   "line": 110,
+   "section": "The count \u2014 corrected accounting (2026-09-28)",
+   "text": "row 9 (kinematic \u2014 contained in row 1's sin k shape), and the verified consequences (rows 12\u201315).",
+   "numbers": [
+    "12",
+    "15"
+   ],
+   "status": [
+    "VERIFIED"
+   ]
   },
   {
    "file": "./04_scripts/c1s/README.md",
@@ -13982,6 +14075,23 @@
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
+   "line": 2983,
+   "section": "5b.6a Joint #5 is q = 1 ONLY \u2014 and the observable, not the geometry, is why",
+   "text": "the shell's O(\u03b2) curvature, weighted by the bump's shape. [**CORRECTED 2026-09-28** (predictions committed first, d47f9a1; `shape_zero_tests/joint5_rate3.py`, `joint5_rate3_h1.txt`, `joint5_rate3_h2.txt`): the limit is *",
+   "numbers": [
+    "2026",
+    "09",
+    "28",
+    "10",
+    "15",
+    "0.17"
+   ],
+   "status": [
+    "VERIFIED"
+   ]
+  },
+  {
+   "file": "./00_START_HERE/MODEL_SPEC.md",
    "line": 2994,
    "section": "5b.7 Residual sector \u2014 base-stable on q = 3",
    "text": "[**SUPERSEDED 2026-09-26** for the model: C_r = 0 is adopted (\u00a74b.1); the table describes the coded coupling, and its ratios had no reproducing script. \"Colour stays on n = 3 / u(3)\" stands.]",
@@ -15132,6 +15242,21 @@
     "OPEN",
     "VERIFIED"
    ]
+  },
+  {
+   "file": "./00_START_HERE/MODEL_SPEC.md",
+   "line": 3243,
+   "section": "9. Open, and what each blocks",
+   "text": "| ~~**whether census row 9 is kinematic**~~ **CLOSED 2026-09-28** (\u00a75b.6a, \"CORRECTED 2026-09-28\"): the wide-bump limit is kinematic \u2014 a dwell-time law, the stationary point of row 1's sin k shape \u2014 and its leading corre",
+   "numbers": [
+    "2026",
+    "09",
+    "28",
+    "2026",
+    "09",
+    "28"
+   ],
+   "status": []
   },
   {
    "file": "./00_START_HERE/MODEL_SPEC.md",
@@ -33357,7 +33482,7 @@
   }
  ],
  "counts": {
-  "doc_claims": 2618,
+  "doc_claims": 2627,
   "scripts": 201
  }
 }
