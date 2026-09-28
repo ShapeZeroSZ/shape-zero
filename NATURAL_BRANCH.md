@@ -52,6 +52,15 @@ produce.
    - **The frozen property list:** `natural/RESIDUAL_HYPOTHESES.md`.
    - **Its check against `main`'s principles and its consequences:** `natural/RESIDUAL_SCOPE.md`.
    - **Scoping only, not built, not adopted.**
+5. **Irreversibility as the gradient half of the dynamics** (added 2026-09-28). This is the open
+   question of the gravity arc taken up:
+   - **the framework:** GENERIC (Grmela–Öttinger) — `main`'s Hamiltonian as the conservative part,
+     plus a thermal variable per node and a dissipative bracket;
+   - **the tests:** one-way sinks, an arrow of time, the asymmetry principle, and the attraction
+     test rerun.
+   - **Hypotheses:** `natural/IRREV_HYPOTHESES.md`.
+   - **Pilot and report:** `natural/IRREV_SCOPE.md`.
+   - **Pilot only, not adopted.**
 
 ## Candidate principles — under test, not adopted
 
