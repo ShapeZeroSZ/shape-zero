@@ -155,6 +155,24 @@ still below 1:1 with selections counted. **Not built, not adopted** — the ledg
   - and what it would cost in the count.
 - **Nothing here is scoped, tested or adopted.**
 
+## Caution — P0's populated tower and the physical universe (recorded 2026-09-28; a caution, not a result)
+
+- **Under A′, a *physically* populated tower implies hidden species.** A′ gives every tower level
+  the same stiffness (√5) and the same chirality branches as the D ≤ 8 part. So every level is a
+  neutral species degenerate with ordinary matter. It couples to ordinary matter through A′'s
+  shared radius — a coupling that grows as √(depth) (`natural/DILUTION_SCOPE.md`) — and through
+  gravity.
+- **Excluded by nucleosynthesis.** Even a modest number of such species, thermalised before
+  nucleosynthesis, exceeds the bound on extra light species (ΔN_eff ≲ 0.3). With depths large
+  enough to matter, they thermalise through gravity alone.
+- **The escape is a negligible per-level amplitude.** With it the population is nominal, and the
+  species are never thermally produced.
+- **So `main`'s P0 (every level populated at once) should not be read as a claim about the physical
+  universe unless the per-level amplitude is negligible.** It stands as a statement about the
+  model's state space and its dynamics — which is how `main`'s tower tests use it, at amplitudes
+  chosen for numerics.
+- **This records a condition, not a refutation of P0.**
+
 ## The count
 
 *Primary measure from target 3 on: the **joint** count of targets 1 and 2 (rows marked joint).*
@@ -179,6 +197,7 @@ kinematic**.
 | ***Kaluza–Klein reading of the joint theory*** *(projected)* (`natural/KK_HYPOTHESES.md`, `natural/KK_SCOPE.md`) | **4** + a state (ĉ, κ̂, G, R; e traded for R) (+ **3 (+1)** discrete selections: the KK premise, q = 3, fibre U(1) = 𝕁, (+1) radion treatment) | ~9 (+1 new: λ ≤ 4, **fails**) | 7 firm, **1 falsified** | **FALSIFIED as scoped.** The gauge sector is an exact KK structure on the node's target space (A₀ = −κ/2, to 2×10⁻¹⁵), but not a reduction of gravity: there is no fibre modulus, the circle collapses in A′'s vacuum and is Higgsed in the ring's, and a posited higher metric forces λ ≤ 4 against nature's ~10⁴⁰. Not adopted; **the branch count is unchanged** (repaired joint row: 5 + a state, 7 selections, ~9 conditions, 7 firm) |
 | ***Kaluza–Klein reading + Klein's step (the quantum circle)*** *(projected; late hypothesis LK, 7a8f588)* | **5** + a state (ĉ, κ̂, G, R, **ℏ** — ℏ counted as an adaptation) (+ **4 (+1)** discrete selections: + quantized rotor) | ~9 (+ LK1–LK4 internal; + λ₁ ≤ 4, **fails**) | 7 firm, **1 falsified** | **Still FALSIFIED as scoped.** Charge quantization motivated the step and is not evidence. The quantum circle reproduces the field's quanta (ℏω_a, ℏω_b) and a tower of multiply-charged states whose spacing ℏω_rot grows with \|ℓ\| (A′'s cubic). The node well sets the circle's size and adds rest mass, and both only lower λ₁, which stays ≤ 4 in a genuine KK. Branch count unchanged |
 | ***dilution of gravity over the populated tower (ADD/RS-style)*** *(projected)* (`natural/DILUTION_HYPOTHESES.md`, `natural/DILUTION_SCOPE.md`) | **7** + a state (+ N, m; G_* replaces G) (+ **10** discrete selections: + D ≤ 8 sub-U(1), level-resolved gravity, complete-graph mixing; warped variant 8 / 11) | ~9 (+1 used: the hierarchy, to set N) | 7 firm, **+0** | **Impossible through `main`'s scalar-radius coupling** (contact, gapped, grows as √depth: dK/(A_U√M) = 0.971 → 0.999). **As an added structure, FALSIFIED as scoped** by P3: A′'s level democracy makes N ~ 10³⁰–10⁴⁰ neutral species degenerate with ordinary matter, which thermalise before BBN. Short-range gravity and spin-2 tower states are excluded below a few TeV and untestable above. Branch count unchanged |
+| ***self-coupling: gravity subject to gravity*** *(projected, on the spin-2 row)* (`natural/SELFCOUPLING_HYPOTHESES.md`, `natural/SELFCOUPLING_SCOPE.md`) | **6** + a state (+ Λ) (+ **7** discrete selections: self-coupling is the all-energy selection already counted; the nonlinear-lapse selection candidate 7 would have needed is pre-empted, not added) | **~11** | **9 firm** (+ β = 1: perihelion, no Nordtvedt effect; + horizons and their strong-field dynamics) | The nonlinear completion is **GR + Λ** (Feynman, Deser 1970, Wald 1986), given Lorentz covariance, two derivatives and field-redefinition freedom. Candidate 7's lapse is closed (Schwarzschild: β = 1, reaches zero), and **horizons follow as a consequence**. Tension: GR's diffeomorphism invariance against `main`'s fixed lattice (continuum only). **G is unchanged, so the hierarchy is not addressed.** Not adopted; the branch count is unchanged |
 
 ## Adaptation ledger
 

@@ -1,0 +1,3 @@
+linear lapse 1 - U (candidate 7)         N^2 = U**2 - 2*U + 1;  beta = 1/2;  N = 0 at U = [1]
+exponential lapse e^-U (candidate 7)     N^2 = 2*U**2 - 2*U + 1;  beta = 1;  N = 0 at U = never
+GR, isotropic (1 - U/2)/(1 + U/2)        N^2 = 2*U**2 - 2*U + 1;  beta = 1;  N = 0 at U = [2]
