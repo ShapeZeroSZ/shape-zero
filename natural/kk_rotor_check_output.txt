@@ -1,0 +1,39 @@
+========================================================================================
+KK LATE HYPOTHESIS LK -- the quantum circle (predictions: KK_HYPOTHESES.md, 7a8f588)
+========================================================================================
+w_rot = 1.572303, w_a = 1.086434, w_b = 2.058171, kappa* = 0.971737
+
+LK1  harmonic limit (cubic off), grid, hbar = 0.1: E / hbar against Fock-Darwin w_rot(2 n_r + |l| + 1) + (kappa/2) l
+    E/hbar = 1.572300  <L_z>/hbar = -0.0000  Fock-Darwin 1.572303
+    E/hbar = 2.658732  <L_z>/hbar = -1.0000  Fock-Darwin 2.658737
+    E/hbar = 3.630459  <L_z>/hbar = +1.0000  Fock-Darwin 3.630474
+    E/hbar = 3.745165  <L_z>/hbar = -2.0000  Fock-Darwin 3.745172
+    E/hbar = 4.716876  <L_z>/hbar = -0.0000  Fock-Darwin 4.716908
+    E/hbar = 4.831603  <L_z>/hbar = -2.9999  Fock-Darwin 4.831606
+    E/hbar = 5.688602  <L_z>/hbar = +2.0000  Fock-Darwin 5.688645
+    E/hbar = 5.803292  <L_z>/hbar = -1.0000  Fock-Darwin 5.803343
+    E/hbar = 5.918046  <L_z>/hbar = -3.9998  Fock-Darwin 5.918041
+    E/hbar = 6.774992  <L_z>/hbar = +1.0000  Fock-Darwin 6.775079
+    E/hbar = 6.889709  <L_z>/hbar = -1.9999  Fock-Darwin 6.889777
+    E/hbar = 7.004497  <L_z>/hbar = -4.9997  Fock-Darwin 7.004475
+    max relative deviation 1.3e-05 (predicted <= 1e-5)
+    one-quantum states: l = -1: (E - E0)/hbar = 1.086432 (w_a = 1.086434); l = +1: 2.058159 (w_b = 2.058171)
+
+LK2-LK4  A' cubic on, hbar = 0.001 (eps = 0.02522)
+    basis: gauge-invariant m_l / (hbar w_rot), l = 1..7: 1.00673 2.01513 3.02492 4.03592 5.04801 6.06109 7.07509
+    spacings l -> l+1 (0..6):           1.00673 1.00840 1.00979 1.01100 1.01209 1.01308 1.01400
+    first-order prediction:             1.00678 1.00848 1.00989 1.01112 1.01224 1.01326 1.01420
+    max |basis - first order| / first order = 2.0e-04
+    LK4: E(n_r = 1, l = 0) - E0 = 2.01681, E(0, 2) - E0 = 2.01513 -> (1,0) above (0,2)
+    LK3: lightest charged |l| = 1; superlinear: m_2 - 2 m_1 = +0.00167
+
+LK2-LK4  A' cubic on, hbar = 0.1 (eps = 0.25219)
+    basis: gauge-invariant m_l / (hbar w_rot), l = 1..7: 1.06345 2.14172 3.23205 4.33273 5.44258 6.56070 7.68640
+    spacings l -> l+1 (0..6):           1.06345 1.07827 1.09033 1.10068 1.10985 1.11812 1.12570
+    first-order prediction:             1.06781 1.08476 1.09888 1.11124 1.12237 1.13257 1.14203
+    max |basis - first order| / first order = 1.4e-02
+    LK4: E(n_r = 1, l = 0) - E0 = 2.15685, E(0, 2) - E0 = 2.14172 -> (1,0) above (0,2)
+    LK3: lightest charged |l| = 1; superlinear: m_2 - 2 m_1 = +0.01482
+
+LK3  grid with the kappa term and the cubic, hbar = 0.1: +-1 masses after removing (kappa/2) hbar l
+    lab: l = -1 1.18619, l = +1 2.15791 (units hbar); gauge-invariant 1.06344, 1.06344 (units hbar w_rot); basis m_1 = 1.06345

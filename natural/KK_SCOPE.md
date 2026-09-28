@@ -171,3 +171,71 @@ swap, not a saving.
 | K3 | a posited higher metric forces six joint selections; inputs 12 → 7 (8); e swapped for R | **HELD** (projection) |
 | K4 | charge-to-mass fails (λ ≤ 4 against ~10⁴⁰); no radion here; branches are charge conjugates | **HELD** — KC3 exact; rounding misses at the fourth digit (1.5722 → 1.5723, 0.6361 → 0.6360) |
 | K5 | KK on target space, not a reduction of gravity; the count is unchanged; the KK row falsified as scoped | **HELD** |
+
+## (5) Klein's step — the quantum circle (late hypothesis LK)
+
+*Late hypothesis: `KK_HYPOTHESES.md` § LK, committed at **7a8f588, 2026-09-28T04:53:57Z**. That was
+after K1–K5 (88cf23d) and the scope above (2271c5b), and before `kk_rotor_check.py` was written or
+run. Output: `kk_rotor_check_output.txt`.*
+
+**The step.**
+- Each node's phase is quantized as a quantum rotor. From KC1 the node Hamiltonian is
+  H = H_rot + (κ/2)L_z, with H_rot = ½p² + ½ω_rot²r² + r³/3, so L_z = ℏℓ with ℓ ∈ ℤ, and the phase
+  charge is an integer.
+- **ℏ is an input unit.** The classical lattice has no action scale (MODEL_SPEC §0b).
+- **Counted as an adaptation: +1 selection** (quantize, with the rotor as the object) **and
+  +1 parameter** (ℏ in lattice units, equivalently ε = √(ℏ/ω_rot)).
+- **Charge quantization motivated the step, so it is not evidence.**
+
+**Results against the committed predictions.** Method A is the 2-D grid with the full canonical H
+including κ. Method B is the oscillator basis at fixed |ℓ|.
+
+| # | predicted | measured | verdict |
+|---|---|---|---|
+| LK1 | harmonic limit = Fock–Darwin ω_rot(2n_r + \|ℓ\| + 1) + (κ/2)ℓ, ≤ 10⁻⁵ relative; ℓ = ∓1 quanta = ℏω_a, ℏω_b | 12 levels, ⟨L_z⟩/ℏ integer to 3×10⁻⁴; max deviation **1.3×10⁻⁵** (the grid's error at higher levels); ℓ = −1: 1.086432 (ω_a 1.086434), ℓ = +1: 2.058159 (ω_b 2.058171) | structure **hit**; the ≤ 10⁻⁵ bound **missed** (grid-limited) |
+| LK2 | tower spacing grows with \|ℓ\| (A′ cubic), unlike KK's uniform spacing; first-order values within 10⁻⁴ (ℏ = 10⁻³) and 1% (ℏ = 0.1), second order negative | spacings 1.00673 → 1.01400 (ℏ = 10⁻³) and 1.06345 → 1.12570 (ℏ = 0.1), rising at every step; deviations from first order **2.0×10⁻⁴** and **1.4%**, both below first order | rising spacing and the sign of the second order **hit**; both tolerances **missed** (the second order is larger than I allowed) |
+| LK3 | lightest charged state \|ℓ\| = 1; ± gauge-invariant masses equal; lab masses split by ℏκ | \|ℓ\| = 1 (m₂ − 2m₁ = +0.00167 and +0.01482); gauge-invariant **1.06344 / 1.06344** (grid, with κ) against 1.06345 (basis, without κ); lab 1.18619 / 2.15791 ℏ | **hit** |
+| LK4 | (n_r = 1, ℓ = 0) above (0, ±2); harmonic degeneracy split by the cubic | 2.01681 > 2.01513 (ℏ = 10⁻³); 2.15685 > 2.14172 (ℏ = 0.1) | **hit** |
+
+**What the quantum circle predicts that was not used to choose it:**
+- **The charge-1 states are the field's own two branches** (LK1): ℏω_a and ℏω_b. The rotor adds no
+  new particle.
+- **The KK-like tower is a tower of multiply-charged states** at one node, with gauge-invariant
+  masses m_ℓ ≈ |ℓ|ℏω_rot. Its spacing is ℏω_rot in place of KK's ℏc/R, and it grows with |ℓ|
+  because of A′'s repulsive cubic, where KK's is uniform. Neutral radial excitations sit between the
+  charged levels (LK4).
+- **None of these shapes is a fact about nature** that the model is scored on: they are
+  consistency and shape predictions. The one that meets nature is the charge-to-mass relation.
+
+**The charge-to-mass relation of the lightest charged state (LK5; analytic).**
+- m₁ = ℏω_rot(1 + δ₁)/c², with δ₁ = 0.0067 at ℏ = 10⁻³ and 0.063 at ℏ = 0.1.
+- **In the target-space reading**, e is free and λ₁ = e²/(4πGm₁²) is a fitted ratio — no test.
+- **In a genuine KK reading** (the circle a spacetime dimension of physical radius R,
+  e² = 16πGℏ²/(R²c²)):
+  - λ₁ = 4(c/(ω_rot(1 + δ₁)R))²;
+  - the higher-dimensional mass shell m₁c² ≥ ℏc/R then gives **λ₁ ≤ 4**.
+- **Does the node well change it?** It changes the circle's effective size — the lightest state's
+  orbit radius is ≈ √2·ε, set by the well, not a free R — and it adds rest mass (δ₁ > 0). **Both
+  lower λ₁.** The well can move λ₁ only downward within [0, 4].
+- **Reaching nature's λ ~ 4×10⁴²** needs ω_rot R/c ~ 10⁻²¹: a state whose circle momentum ℏ/R
+  exceeds its entire mass by 10²¹, which a relativistic higher dimension forbids.
+- **So Klein's step keeps the classic failure, and the node well does not rescue it.** Dropping the
+  circle as a spacetime dimension would free λ₁, but it also drops the e–G relation that gave the
+  reading its count gain.
+
+**Tally for LK: 5 hits, 3 misses.**
+- Hits: LK1's structure; LK2's rising spacing and second-order sign; LK3; LK4.
+- Misses: LK1's 10⁻⁵ bound; LK2's two tolerances.
+- None of the misses touches a qualitative prediction.
+
+**Count, updated.**
+- **With Klein's step, projected:**
+  - **5 + a state** numeric parameters (ĉ, κ̂, G, R, ℏ);
+  - **4 (+1)** discrete selections (KK premise, q = 3, fibre U(1) = 𝕁, quantized rotor, (+1)
+    radion treatment);
+  - ~9 conditions, plus LK1–LK4 as internal consistency (not facts about nature), plus
+    λ₁ ≤ 4 — **fails**;
+  - 7 firm predictions, **1 falsified**;
+  - **still FALSIFIED as scoped, now with 1 more input.**
+- **The branch's count is unchanged**, since nothing is adopted: 5 + a state, 7 selections, ~9
+  conditions, 7 firm.
