@@ -163,6 +163,30 @@ still below 1:1 with selections counted. **Not built, not adopted** — the ledg
   - whether the same ingredient would supply the arrow of time;
   - and what it would cost in the count.
 - **Nothing here is scoped, tested or adopted.**
+- [**Update 2026-09-28 — answered by target 5** (`natural/IRREV_SCOPE.md`; predictions 1c9e5bf; 16
+  hits, 3 misses).]
+  - **What irreversibility supplied.** The GENERIC completion of `main` keeps energy, each U(1)
+    charge and A′, and breaks passivity by design. It supplies what every earlier route lacked:
+    - **one-way sinks** — absorption positive in every window of every seed;
+    - **an arrow of time** — entropy never decreased in the deterministic limit, and rose in the
+      seed mean with fluctuations.
+  - **What it did not supply: gravity.**
+    - **The depletion around a sink falls faster than 1/r at q = 3.** The local slope steepens to
+      −2.3, so the pull on probes is not inverse-square. A clean law is pending the larger run in
+      `natural/irrev_q3_colab.py`.
+    - **The sink follows energy only in the weak (optically thin) limit, and only by construction**
+      — the absorption rate was chosen ∝ energy density (b/a = 1.880 at Γ = 0.1 against
+      E_b/E_a = 1.885). When strong it saturates, and its strength is set by the lump's size and
+      the incoming flux, not its energy (1.51 at Γ = 10).
+    - **It heats and drags.** The lump's heat store took up twice the lump's own energy, and a
+      moving lump slows (Δv/v = −7.6×10⁻⁴).
+  - **So irreversibility was the missing piece for the arrow of time, not for emergent gravity.**
+- [**Caution, 2026-09-28 — not a result.** In a closed system the tower energy drained by sinks
+  does not vanish: it settles by equipartition among all the degrees of freedom that exchange it
+  (mechanical and thermal). **A residual with many more degrees of freedom than matter would
+  therefore keep most of the energy at equilibrium**, rather than relax to a small remainder held
+  by matter. Any reading of the populated tower or the heat reservoir as a physical background
+  should carry that condition.]
 
 ## Caution — P0's populated tower and the physical universe (recorded 2026-09-28; a caution, not a result)
 
