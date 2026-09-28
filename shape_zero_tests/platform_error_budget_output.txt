@@ -1,0 +1,25 @@
+PLATFORM ERROR BUDGET -- N = 32, K = 32.805 s^-2, c = 8.201 s^-2 (c-hat 0.25), b = 0.5728 s^-1 (beta-hat 0.10), S = 0.05
+  ideal Delta w(pi/2) = 1.145507 rad/s (2b = 1.145507); predicted d(Delta w) = -5.7275e-03 rad/s, relative -5.0000e-03
+E1 finite ring, ideal (Gaussian sigma = N/8, +-S even part)
+  P1 max residual (N = 32) 1.7e-14
+  N = 32  S = 0.05: d(Delta w) -5.92248e-03, 1/4-law -5.72754e-03, ratio 1.0340
+  N = 32  S = 0.02: d(Delta w) -9.35073e-04, 1/4-law -9.16406e-04, ratio 1.0204
+  N = 64  S = 0.05: d(Delta w) +1.04538e-01, 1/4-law -5.72754e-03, ratio -18.2518
+  N = 64  S = 0.02: d(Delta w) -9.22530e-04, 1/4-law -9.16406e-04, ratio 1.0067
+  N = 128 S = 0.05: d(Delta w) -7.33093e-03, 1/4-law -5.72754e-03, ratio 1.2799
+  N = 128 S = 0.02: d(Delta w) -9.19461e-04, 1/4-law -9.16406e-04, ratio 1.0033
+E2 damping
+  Q = 500: Delta w(pi/2) change -1.32e-14; C ratio 1.03404 vs 1.03404 (change -2.12e-07)
+  Q = 200: Delta w(pi/2) change -1.17e-14; C ratio 1.03404 vs 1.03404 (change -1.22e-06)
+E3 disorder (K 0.3%, c 1%, b 0.5% rms), 20 realisations, Q = 500
+  P1 max residual: mean 3.0e-03, max 6.9e-03, sd 1.5e-03
+  P2 +-S protocol: C ratio mean 1.0143, sd 0.1918, range 0.6635 - 1.3703
+  P2 one-sided:    C ratio mean 1.0471, sd 0.1940, range 0.7029 - 1.3988
+  P3 shapes (gauss 3, gauss 5, sech2 4, two bumps) mean ratios 1.0335, 1.0075, 1.0352, 1.0636; ramp 1.5654
+     spread among the four localised shapes per realisation: mean 0.153, max 0.389; ramp / localised mean 1.525
+  ideal-ring shapes: 1.0567, 1.0251, 1.0576, 1.0742, 1.7441
+E4/E5 time domain (RK4 with sin th, Q = 500, T = 300 s, 20 Hz sampling), disorder realisation 0
+  eigen: Delta w(pi/2) 1.1446495; d(Delta w) -5.77741e-03; ratio to 1/4-law 1.0156
+  A = 0.02 rad: Delta w(pi/2) 1.1448839 (vs eigen +2.05e-04); d(Delta w) -5.81659e-03 (vs eigen +6.78e-03); ratio to 1/4-law 1.0225
+  A = 0.1 rad: Delta w(pi/2) 1.1449259 (vs eigen +2.41e-04); d(Delta w) -5.86496e-03 (vs eigen +1.52e-02); ratio to 1/4-law 1.0310
+  P1 in the time domain (A = 0.02): Delta w(m)/Delta w(8) - sin k at m = 2, 4, 12, 14: +9.1e-05, +7.4e-05, -1.1e-04, -2.2e-03

@@ -1,0 +1,32 @@
+POST HOC. 1. P2 spread by disorder component (N = 32, S = 0.05, +-S protocol, 20 realisations)
+  K 0.3% only : C ratio mean 1.0274, sd 0.0331
+  c 1% only   : C ratio mean 1.0294, sd 0.1755
+  b 0.5% only : C ratio mean 1.0343, sd 0.0026
+2. P2 spread against K disorder (c 1%, b 0.5% kept)
+  N = 32  S = 0.05: K disorder 0.30%: C ratio mean 1.0049, sd 0.1802
+  N = 32  S = 0.05: K disorder 0.10%: C ratio mean 1.0203, sd 0.1734
+  N = 32  S = 0.05: K disorder 0.03%: C ratio mean 1.0254, sd 0.1729
+  N = 32  S = 0.05: K disorder 0.01%: C ratio mean 1.0268, sd 0.1730
+  N = 32  S = 0.02: K disorder 0.30%: C ratio mean 0.9882, sd 0.2676
+  N = 32  S = 0.02: K disorder 0.10%: C ratio mean 1.0107, sd 0.2445
+  N = 32  S = 0.02: K disorder 0.03%: C ratio mean 1.0189, sd 0.2413
+  N = 32  S = 0.02: K disorder 0.01%: C ratio mean 1.0213, sd 0.2409
+  N = 64  S = 0.05: K disorder 0.30%: C ratio mean -5.7282, sd 5.4081
+  N = 64  S = 0.05: K disorder 0.10%: C ratio mean -6.2057, sd 5.1147
+  N = 64  S = 0.05: K disorder 0.03%: C ratio mean -8.2314, sd 6.3575
+  N = 64  S = 0.05: K disorder 0.01%: C ratio mean -8.2306, sd 6.3550
+  N = 64  S = 0.02: K disorder 0.30%: C ratio mean 1.0738, sd 0.5152
+  N = 64  S = 0.02: K disorder 0.10%: C ratio mean 1.0432, sd 0.3747
+  N = 64  S = 0.02: K disorder 0.03%: C ratio mean 1.0296, sd 0.3399
+  N = 64  S = 0.02: K disorder 0.01%: C ratio mean 1.0255, sd 0.3322
+3. P3 spread of the four localised shapes (S = 0.02, 10 realisations)
+  N = 32  disorder none: spread mean 0.0441, max 0.0441
+  N = 32  disorder {'K': 0.0003, 'c': 0.001, 'b': 0.001}: spread mean 0.0446, max 0.0505
+  N = 32  disorder {'K': 0.0001, 'c': 0.0003, 'b': 0.0003}: spread mean 0.0441, max 0.0448
+  N = 64  disorder none: spread mean 0.0106, max 0.0106
+  N = 64  disorder {'K': 0.0003, 'c': 0.001, 'b': 0.001}: spread mean 0.0110, max 0.0167
+  N = 64  disorder {'K': 0.0001, 'c': 0.0003, 'b': 0.0003}: spread mean 0.0106, max 0.0113
+4. anharmonicity alone (ideal ring, gamma = 0, T = 300 s)
+  A = 0.001: Delta w(pi/2) 1.14550606, relative to A = 0.001: +0.00e+00
+  A = 0.02: Delta w(pi/2) 1.14550606, relative to A = 0.001: +2.55e-09
+  A = 0.1: Delta w(pi/2) 1.14550605, relative to A = 0.001: -6.60e-09
