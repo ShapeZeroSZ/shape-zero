@@ -1,0 +1,46 @@
+LC-GYRATOR RING -- MAPPING AND ERROR-BUDGET EXPECTATIONS (committed with the script, before any run), 2026-09-28.
+Branch realisation-gyroscopic. Script: shape_zero_tests/circuit_error_budget.py. Note: LAB_NOTE.md, second platform.
+
+CIRCUIT (all design choices ours). N nodes on a ring. Node n: capacitor C to ground (the mass), inductor L_g to
+ground (the on-site stiffness). Bond n (n to n+1): inductor L_c (the spring) and a gyrator made of two
+voltage-controlled current sources (VCCS) with buffered high-impedance inputs: one injects -G V_{n+1} into node n,
+the other +G V_n into node n+1. With the node flux phi_n (V_n = phi_n'), Kirchhoff at node n gives
+    C phi_n'' = -phi_n/L_g + (phi_{n+1} + phi_{n-1} - 2 phi_n)/L_c - G phi_{n+1}' + G phi_{n-1}'
+-- the pendulum ring's equation with theta -> phi, I -> C, tau -> 1/L_g, k_t -> 1/L_c, H -> G:
+    K = 1/(L_g C), c = 1/(L_c C), b = beta c = G/C;  c-hat = L_g/L_c, beta-hat = G sqrt(L_g/C), kappa = 0.
+Passivity: the ideal gyrator delivers P = V_n(-G V_{n+1}) + V_{n+1}(G V_n) = 0 (velocity-linear, lossless).
+Where real VCCS break it: (a) gain mismatch G_a != G_b adds a symmetric conductance coupling (P = -dG V_n V_{n+1},
+not sign-definite: can supply energy); (b) finite bandwidth, G(w) = G/(1 + i w tau), adds a component in phase
+with V -- a direction-dependent conductance +-2 G w tau sin k, i.e. loss for one propagation direction and GAIN
+for the other; (c) finite output impedance of a Howland pump with resistor mismatch eps, a shunt conductance
+~ +-eps G at each output (either sign); (d) offsets: DC only, no effect on a linear circuit's frequencies.
+Design: C = 10 nF, L_g = 1 mH, L_c = 4 mH, G = 3.162e-4 S (R_set = 3.162 kOhm): K = 1e11 s^-2 (50.3 kHz),
+c-hat = 0.25, beta-hat = 0.10 -- the same dimensionless point as the pendulum ring. w(pi/2) = 3.873e5 rad/s
+(61.6 kHz); Delta w(pi/2) = 2b = 6.325e4 rad/s (10.07 kHz); P2 signal at S = 0.05: -316 rad/s (-50 Hz).
+Bumps: dK_n via a programmable grounded synthetic inductor in parallel with L_g at each node (ours).
+
+EXPECTATIONS (P1, P2, P3 and the protocol exactly as LAB_NOTE.md sec 1-4; N = 32 unless stated; 20 realisations)
+ X0 ideal circuit: identical to the ideal pendulum ring (same c-hat, beta-hat): P1 residual <= 1e-12; C ratio
+    1.0340 (S = 0.05) to 1e-6.
+ X1 component tolerance 1% (C, L_g, L_c, G_a, G_b independent; Howland shunt +-eps G): P1 max <= 1e-2; P2 sd
+    15-25% (L_c is spring disorder -- 17.5% alone in the pendulum budget -- and C is mass disorder); P3 fails.
+ X2 tolerance 0.1%: P1 max <= 1.5e-3; P2 sd <= 1%; P3 limited by finite size (4.4% at N = 32; ~1.1% at N = 64,
+    S = 0.02).
+ X3 inductor Q = 100 (series R; also 50 and 300), ideal otherwise: |d Delta w / Delta w| <= 1e-4; |dC/C| <= 1%;
+    stable (max Re lambda < 0).
+ X4 VCCS bandwidth (single pole at 5 MHz and 50 MHz, i.e. op-amps of ~10 and ~100 MHz GBW), with Q = 100:
+    Delta w changes by ~ (w tau)^2 ~ 1.5e-4 relative (5 MHz); C by <= 1e-3; the direction-dependent gain rate
+    b w tau sin k ~ 4e2 s^-1 stays below the inductor loss w/(2Q) ~ 2e3 s^-1: stable; instability expected for
+    inductor Q >~ 500 at 5 MHz and >~ 5000 at 50 MHz.
+ X5 VCCS gain mismatch and Howland shunt at 1% and 0.1%: frequency effects <= 1e-4 relative; loss/gain rates
+    ~ +-G eps/C ~ +-3e2 s^-1 (1%).
+ X6 parasitics: 10 pF across each L_c and 3 pF op-amp input capacitance per VCCS input: P1 residual <= 3e-3
+    (systematic, ~ 2 (C_p/C) cos k, from the k-dependent effective capacitance); C changes <= 0.5%.
+ X7 offsets (1 mV input offset, 10 nA bias per op-amp): eigenfrequencies unchanged (linear superposition); DC node
+    voltages <= 10 uV, DC inductor currents <= 1 uA.
+ X8 combined realistic (0.1%, Q = 100, 5 MHz VCCS pole, parasitics, mismatch, shunts): P1 max <= 5e-3; P2 sd <= 1%;
+    P3 at N = 64, S = 0.02: spread <= 2%; stable in every realisation.
+ X9 measurement: lock-in response to a single-node drive, spatially Fourier-transformed, resonance peaks fitted
+    (X8 realisation 0): Delta w within 1e-4 of the eigenvalue; d(Delta w) within 2% of the eigenvalue.
+EXPECTED SURVIVAL: P1 with 1% parts at ~1% and with 0.1% parts at ~0.2%; P2 only with 0.1% (sorted/trimmed)
+inductors and capacitors; P3 only at N = 64 with 0.1% parts, at ~1-2%.
