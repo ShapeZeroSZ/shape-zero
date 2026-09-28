@@ -1,0 +1,39 @@
+============================================================================================
+IRREVERSIBILITY PILOT, q = 1 (predictions: IRREV_HYPOTHESES.md, 1c9e5bf)
+============================================================================================
+validation: max total-energy drift 2.0e-05 of the mechanical energy (<= 5e-5); max charge drift 3.5e-05 of N_a+N_b (<= 5e-5); eps clamps 0
+theta_r at t = 0: 5.502e-05 (predicted 5.9e-5 +- 15%)
+
+I2  SINK (fluctuating G, a-lump, C = 1000, Gamma = 10, K_th = 1)
+    seed 0: P0 (first 10) 8.538e-05; cumulative at T 0.1217; 100-unit window rates min +3.49e-05 max +7.93e-05; windows > 0: 20/20
+    seed 1: P0 (first 10) 8.814e-05; cumulative at T 0.1214; 100-unit window rates min +3.98e-05 max +7.98e-05; windows > 0: 20/20
+    seed 2: P0 (first 10) 9.863e-05; cumulative at T 0.1219; 100-unit window rates min +3.83e-05 max +7.72e-05; windows > 0: 20/20
+    seed 3: P0 (first 10) 1.181e-04; cumulative at T 0.1229; 100-unit window rates min +3.23e-05 max +8.15e-05; windows > 0: 20/20
+    predicted P0 1.45e-4 (x2), cumulative [0.03, 0.2], every window > 0
+    ARROW deterministic: S decreases at 0 of 2000 samples (predicted 0); S(T) - S(0) = +1.448e+04
+    ARROW fluctuating: seed-mean S at 100-unit marks nondecreasing: True; increments min +3.82e+02
+    single-run S decreases: worst step = -2.08 sigma of step fluctuation (predicted > -3)
+
+I3a PARITY (uniform gamma0 = 0.05, C = 4, K_th = 0): J over [0, 5] and relaxation rate of theta_r - T
+    delta = 0.5  : J = +2.139e-03 (seeds +2.13e-03, +2.15e-03); relaxation rate 0.0668 (seeds 0.0634, 0.0701)
+    delta = 0.2  : J = +7.561e-04 (seeds +8.10e-04, +7.03e-04); relaxation rate 0.0538 (seeds 0.0524, 0.0551)
+    delta = 0.1  : J = +3.000e-04 (seeds +3.75e-04, +2.25e-04); relaxation rate -0.0058 (seeds 0.0408, -0.0523)
+    delta = 0.05 : J = +6.920e-05 (seeds +1.58e-04, -1.97e-05); relaxation rate 0.0194 (seeds 0.0194, nan)
+    J ~ delta^p: p = 1.463 (predicted 1.0 +- 0.1); rate spread (max-min)/mean = 2.162 (predicted < 0.10; rate in [0.05, 0.4])
+I3b PURE CONDUCTION: dT, J0, slowest-mode decay rate (predicted J ~ dT, rate = 1.5060e-04 independent of dT)
+    dT = 1e-01: J0 = 1.000e-01  J0/dT = 1.0000  rate = 1.5060e-04 (+0.00%)
+    dT = 1e-02: J0 = 1.000e-02  J0/dT = 1.0000  rate = 1.5060e-04 (+0.00%)
+    dT = 1e-03: J0 = 1.000e-03  J0/dT = 1.0000  rate = 1.5060e-04 (+0.00%)
+    dT = 1e-04: J0 = 1.000e-04  J0/dT = 1.0000  rate = 1.5060e-04 (+0.00%)
+
+I4  q = 1 DEPLETION (deterministic G minus Gamma = 0, seed 0): tower energy change by region
+    t =    200: |x-x0| <= 30 -1.039e-02; 30 < |x-x0| <= cone(127) -8.323e-03; beyond cone -1.461e-10
+    t =    400: |x-x0| <= 30 -1.010e-02; 30 < |x-x0| <= cone(224) -2.634e-02; beyond cone -2.272e-10
+    t =   1000: |x-x0| <= 30 -9.478e-03; 30 < |x-x0| <= cone(256) -7.810e-02; beyond cone +0.000e+00
+    t =   2000: |x-x0| <= 30 -1.597e-02; 30 < |x-x0| <= cone(256) -1.326e-01; beyond cone +0.000e+00
+    SINK RATIO over [0, 50] (fluctuating): absorbed(b) / absorbed(a)
+    G: a 3.735e-03, b 5.626e-03, ratio 1.506  (predicted 1.885 +- 10% (by construction))
+    G-R: a 3.683e-03, b 3.683e-03, ratio 1.000  (predicted 1.00 +- 10%)
+    F-DRAG (k0 = pi/4, deterministic): lump displacement over 500: with sinks 199.6362, without 199.7878; dv/v = -7.59e-04 (predicted < 0, |.| < 1e-2); v = 0.3996
+
+run time 1016 s (sum)
