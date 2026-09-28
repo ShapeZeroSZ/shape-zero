@@ -1,0 +1,18 @@
+==============================================================================
+KK SCOPE CHECKS (predictions: KK_HYPOTHESES.md, 88cf23d)
+==============================================================================
+KC1  model.py force vs the KK-form Euler-Lagrange acceleration (single node)
+    n = 1, A0 = -0.485868: max |f_model - f_KK| = 1.78e-15  (max |f| = 11.48)
+    n = 1, A0 = +0.485868: max |f_model - f_KK| = 5.43e+00  (max |f| = 10.56)
+    n = 3, A0 = -0.485868: max |f_model - f_KK| = 3.55e-15  (max |f| = 23.70)
+    n = 3, A0 = +0.485868: max |f_model - f_KK| = 5.44e+00  (max |f| = 11.91)
+
+KC2  linearised spectrum of one node about r = 0 (distinct |omega|)
+    n = 1: 4 eigenvalues, distinct |omega| = [np.float64(1.086435), np.float64(2.058171)], max Re = 2.8e-16
+    n = 3: 12 eigenvalues, distinct |omega| = [np.float64(1.086435), np.float64(2.058171)], max Re = 3.3e-16
+
+KC3  gauge-invariant masses and charge-to-mass
+    w_a = 1.0864344838, w_b = 2.0581710273
+    w_a + kappa/2 = 1.572302755515, w_b - kappa/2 = 1.572302755515, sqrt(sqrt5 + kappa^2/4) = 1.572302755515
+    |q|/m = 1/w_rot = 0.636009824757; 2/(2 w_a + kappa) = 0.636009824757; diff 0.0e+00
+    lab-frame q/m: a 0.9204, b 0.4859 (ratio 1.8944) -- gauge-dependent
