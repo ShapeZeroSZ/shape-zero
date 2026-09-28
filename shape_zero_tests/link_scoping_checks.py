@@ -45,7 +45,10 @@ def state(lat, chi, k, w, branch, amp):
     return u, v, psi
 
 
-def measure_w(lat, chi, k, w0, branch, H, g, T=200.0, dts=10.0):
+def measure_w(lat, chi, k, w0, branch, H, g, T=200.0, dts=0.5):
+    # INSTRUMENT FIX (after the first run, link_scoping_checks_output_aliased.txt): dts was 10, so the phase
+    # advanced ~16 rad between samples and np.unwrap aliased; 0.5 keeps the advance below pi. Predictions
+    # unchanged.
     W, Wm = links(lat, H, g)
     u, v, psi0 = state(lat, chi, k, w0, branch, 1e-6)
     ref = psi0 / np.linalg.norm(psi0)
