@@ -1,0 +1,8 @@
+POST-HOC: energy-weighted sink ratio b/a against Gamma (deterministic G, seeds 0-1)
+  Gamma   absorbed a [0,50]   absorbed b   ratio [0,50]   ratio [0,5]   a absorbed / Gamma
+    0.1   6.0683e-05          1.1409e-04   1.880          1.884         6.0683e-04
+    0.3   1.8092e-04          3.3827e-04   1.870          1.882         6.0305e-04
+    1.0   5.9012e-04          1.0830e-03   1.835          1.875         5.9012e-04
+    3.0   1.6673e-03          2.9132e-03   1.747          1.856         5.5578e-04
+   10.0   4.5865e-03          7.0073e-03   1.528          1.792         4.5865e-04
+  E_b / E_a = 1.8854 (optically thin limit)
