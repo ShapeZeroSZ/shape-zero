@@ -1,0 +1,43 @@
+PENDULUM-RING PLATFORM -- ERROR-BUDGET EXPECTATIONS (committed with the script, before any run), 2026-09-28.
+Branch realisation-gyroscopic. Script: shape_zero_tests/platform_error_budget.py. Note: LAB_NOTE.md.
+
+PLATFORM (all design choices are ours): N = 32 planar pendula on a ring (radius 1.02 m, spacing 0.20 m),
+motors off (kappa = 0, scalar nodes), nearest-neighbour coil springs, one bond rotor per bond (REALISATION.md
+sec 4, bond-rotor design), per-site coil trim under each bob, axle encoders. Per pendulum: I_eff = 0.0471 kg m^2,
+gravity stiffness 1.545 N m/rad -> K = 32.81 s^-2 (w0 = 5.728 rad/s); c = 8.203 s^-2 (c-hat = c/K = 0.25);
+rotor coupling b = beta c = H/I_eff = 0.5728 s^-1 (beta-hat = b/sqrt K = 0.10).
+Linear equations:  I th_n'' = -tau_n sin th_n - I gamma th_n' + k_n (th_{n+1} - th_n) + k_{n-1} (th_{n-1} - th_n)
+                              - H_n th_{n+1}' + H_{n-1} th_{n-1}'
+(the bond-n rotor gives -H_n th_{n+1}' on n and +H_n th_n' on n+1). Plane waves: w^2 - 2 b sin k w - Q(k) = 0,
+Q = K + 2c(1 - cos k), so Delta w(k) = w(k) - w(-k) = 2 b sin k exactly.
+
+THE THREE PREDICTIONS UNDER TEST (UNIVERSAL_RELATIONS, "The count -- corrected accounting"):
+ P1 sin k shape: Delta w(k) / Delta w(pi/2) = sin k at every other k (m = 1..15 on N = 32).
+ P2 coefficient 1/4: a mean-zero stiffness bump dK_n = K S eta_n (eta unit-rms over the ring) shifts the
+    k = pi/2 asymmetry by d(Delta w) = -(1/4)(b/c^2) <dK^2>, i.e. d(Delta w)/Delta w = -S^2/(8 c-hat^2)
+    (= -2 S^2 here; -5.0e-3 at S = 0.05). [Model form -1/4 beta s^2 S^2 with c restored.]
+ P3 its shape independence at equal S.
+PROTOCOL (ours): C = [Delta w(+S) + Delta w(-S) - 2 Delta w(0)] / (2 S^2) (the +-S even part), S = 0.05,
+ Gaussian bump sigma = 4 sites; prediction C_1/4 = -(1/4) b_cal K^2 / c_cal^2 with b_cal = Delta w(pi/2)/2
+ measured at S = 0 and K, c from the rotors-off band.
+
+NON-IDEALITIES AND WHAT WE EXPECT THEM TO DO
+ E1 finite ring, ideal otherwise (N = 32, sigma = 4, S = 0.05): C / C_1/4 within 5% of 1 (finite size and S^4);
+    N = 64 (sigma 8) within 2%; N = 128 (sigma 16) within 1%. P1 exact (<= 1e-12).
+ E2 damping, Q = 500 and 200: |d(Delta w(pi/2))/Delta w| < 1e-4; |dC/C| < 1e-3.
+ E3 disorder, 20 realisations: K_n 0.3% rms (after coil trim), spring k_n 1% rms, rotor H_n 0.5% rms:
+    - P1: max_m |Delta w(m)/Delta w(8) - sin k_m| <= 5e-3 in every realisation (sd over realisations <= 2e-3);
+    - P2 with the +-S protocol: realisation sd of C / C_1/4 <= 3%, mean within 5% of 1;
+    - P2 with the one-sided estimate [Delta w(S) - Delta w(0)]/S^2: realisation sd > 10% (the linear cross term
+      between bump and disorder) -- the reason for the +-S protocol;
+    - P3: Gaussian sigma = 3 and 5, sech^2 (w = 4) and two separated Gaussians (sigma 2.5, 16 sites apart) agree
+      within 5% of each other in every realisation; a linear ramp (a different class, as in MODEL_SPEC 5b.6)
+      differs by more than 20%.
+ E4 anharmonicity (pendulum sin th), time domain, amplitudes matched between runs: at A = 0.02 rad, C changes
+    by < 1% against the linear value and Delta w by ~ K A^2/(16 w^2) ~ 2e-5 relative; at A = 0.1 rad, Delta w
+    changes by ~ 4e-4 relative and C by < 5%.
+ E5 finite measurement time, T = 300 s ring-down (Q = 500), phase-slope estimator on the projection onto
+    e^{-+ikn}, sampled at 20 Hz: Delta w within 1e-4 (relative) of the eigenvalue; C within 1% of the eigenvalue C.
+EXPECTED SURVIVAL: P1 at <= 0.5%; P2 at ~ 5% (enough to tell 1/4 from 1/8 or 1/2, not a 1% test); P3 at the
+ few-% level (distinguishes the localised class from a ramp), not the 0.4% of the model's own check -- that needs
+ better apparatus (disorder <= 0.1%, a larger ring).
