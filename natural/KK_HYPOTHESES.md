@@ -154,3 +154,60 @@ falsified prediction.
   - ~9 conditions;
   - 7 firm predictions.
 - **The KK row, projected: FALSIFIED as scoped.**
+
+---
+
+## LATE HYPOTHESIS LK — item (5), Klein's step: the quantum circle
+
+*Added after K1–K5 were committed (88cf23d, 2026-09-28) and after KC1–KC3 ran and the scope was
+reported (2271c5b). Committed before `kk_rotor_check.py` was written or run. The commit time is in
+this commit's metadata and is copied into `KK_SCOPE.md` §5.*
+
+**The step.** Quantize each node's phase as a quantum rotor, so that the conserved phase charge is
+an integer.
+- **Needs ℏ as an input unit.** The classical lattice has no scale of action (MODEL_SPEC §0b).
+- **ℏ is counted as an adaptation:**
+  - +1 selection (quantization, and the rotor as the object quantized);
+  - +1 parameter (ℏ in lattice units, i.e. the amplitude scale ε = √(ℏ/ω_rot) at unit node
+    inertia).
+- **Charge quantization is a known fact that motivates the step, so it cannot count as evidence**
+  (charter rule 3).
+
+**Classical reduction (from KC1).**
+- The node Hamiltonian is H = H_rot + (κ/2)L_z, with H_rot = ½p² + ½ω_rot²r² + r³/3,
+  ω_rot = √(√5 + κ²/4) = 1.572303, and L_z the conserved phase charge (p·𝕁u).
+- **Quantized:** L_z = ℏℓ, ℓ ∈ ℤ; E(n_r, ℓ) = E_rot(n_r, |ℓ|) + (κ/2)ℏℓ.
+
+**Predictions — the genuine tests (not used to choose the step):**
+
+| # | prediction | test |
+|---|---|---|
+| **LK1** | **Harmonic limit (cubic off):** E = ℏ[ω_rot(2n_r + \|ℓ\| + 1) + (κ/2)ℓ] exactly (Fock–Darwin). The ℓ = −1 and +1 quanta are ℏω_a and ℏω_b: the field's two branches. The rotor adds nothing beyond the field's quanta. | agreement ≤ 10⁻⁵ relative on a radial grid |
+| **LK2** | **The tower.** The gauge-invariant masses m_ℓ = E_rot(0, \|ℓ\|) − E_rot(0, 0) are ≈ \|ℓ\|ℏω_rot — the KK tower's linear spacing, with ω_rot in place of c/R. The A′ cubic adds a first-order shift (1/3)ε³Γ(\|ℓ\| + 5/2)/Γ(\|ℓ\| + 1), so **the spacing grows with \|ℓ\|, unlike the uniform KK tower.** | numerical values below |
+| **LK3** | **The lightest charged state is \|ℓ\| = 1** (the cubic is repulsive: E_rot(0, \|ℓ\|) is superlinear). Its gauge-invariant mass is ℏω_rot(1 + δ₁), the same for ±1. The lab masses ℏω_rot(1 + δ₁) ∓ ℏκ/2 are gauge artefacts. | ± masses equal after removing (κ/2)ℏℓ |
+| **LK4** | **Radial excitations are neutral states,** not in a KK tower on S¹: (n_r = 1, ℓ = 0) is degenerate with (0, ±2) in the harmonic limit (2ℏω_rot), and **the cubic splits them, with (1, 0) above (0, 2).** | ordering and gap |
+| **LK5** | **The charge-to-mass relation** of the lightest charged state is λ₁ = e²/(4πG m₁²). | analytic, see below |
+
+**Predicted numbers** (first order in the cubic; spacings in units of ℏω_rot, ℓ = 0→1, 1→2, …, 5→6):
+- **ℏ = 10⁻³ (ε = 0.02522):** m₁ = 1.00678; spacings 1.00678, 1.00848, 1.00989, 1.01112, 1.01224,
+  1.01326; E(1, 0) − E₀ = 2.01695 > E(0, 2) − E₀ = 2.01526. Numerics within 10⁻⁴.
+- **ℏ = 0.1 (ε = 0.2522):** m₁ = 1.0678; spacings 1.0678 … 1.1326, rising; E(1, 0) − E₀ = 2.170 >
+  E(0, 2) − E₀ = 2.153. Numerics within 1% of first order; second order is negative.
+
+**LK5 — the charge-to-mass relation (analytic). Does the node well change it? Predicted: it
+cannot raise λ above 4 in a genuine KK theory.**
+- **Target-space reading only:** e is free (target 1), so λ₁ is a fitted ratio, not a prediction.
+- **Genuine KK** (the circle a spacetime dimension of physical radius R, e² = 16πGℏ²/(R²c²)):
+  - λ₁ = 4(ℏ/(R c m₁))² = 4(c/(ω_rot R))² for a well-set mass m₁ = ℏω_rot/c²;
+  - **the 5D mass shell requires m₁c² ≥ ℏc/R**, i.e. ω_rot R ≥ c;
+  - **so λ₁ ≤ 4 whatever the well does.** The well sets the circle's size and adds rest mass, and
+    both can only lower λ.
+- **λ₁ ≫ 4** (nature: ~4×10⁴²) needs ω_rot R/c ~ 10⁻²¹. That is a state whose circle momentum ℏ/R
+  exceeds its whole mass by 10²¹, which a relativistic higher dimension forbids.
+- **Predicted: the classic failure survives Klein's step, and the node well does not remove it.** It
+  would be removed only by giving up the circle as a spacetime dimension, which also gives up the
+  e–G relation, and with it the reading's count gain.
+
+**Count, predicted:** +1 selection and +1 parameter (ℏ); 0 new passing predictions (LK1–LK4 are
+internal consistency and shapes, and none is a known fact about nature except through LK5); LK5
+fails.
