@@ -1,0 +1,6 @@
+D1b  dK = <|u_tower|> against depth (A_U = 0.005 per level)
+    n =    8 (M =    4 levels): dK = 0.00971   predicted ~ 0.00969   ratio to sqrt(M) A_U: 0.9707
+    n =   16 (M =   12 levels): dK = 0.01714   predicted ~ 0.01678   ratio to sqrt(M) A_U: 0.9894
+    n =   32 (M =   28 levels): dK = 0.02633   predicted ~ 0.02564   ratio to sqrt(M) A_U: 0.9953
+    n =   64 (M =   60 levels): dK = 0.03865   predicted ~ 0.03753   ratio to sqrt(M) A_U: 0.9978
+    n =  128 (M =  124 levels): dK = 0.05562   predicted ~ 0.05395   ratio to sqrt(M) A_U: 0.9990
