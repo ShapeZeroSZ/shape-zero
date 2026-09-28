@@ -1,0 +1,69 @@
+LINK SECTOR SCOPING -- DERIVATION, HYPOTHESES AND PREDICTIONS (committed with the check script, before any
+run), 2026-09-28. Open item: MODEL_SPEC sec 9, "the link sector in the continuum reading". Checks:
+shape_zero_tests/link_scoping_checks.py.
+
+SET-UP. Links as in model.py / MODEL_SPEC sec 3: F_n = c (W_n v_{n+1} - W_{n-1} v_{n-1}), W symmetric and
+commuting with JJ, i.e. W = g rho(H) with H Hermitian on C^n (g a configuration strength, g-hat = gc/sqrt K,
+MODEL_SPEC 1b). In complex form the link force is c g H (psi'_{n+1} - psi'_{n-1}). Genuine parameters:
+c-hat, kappa-hat, beta-hat. Linear stiffness K = sqrt5; Q(k) = K + 2c(1 - cos k).
+
+DERIVATION 1 -- uniform link, q = 1, per Fourier mode (exact on the lattice, linear order).
+ For a plane wave chi e^{i(kn -+ w t)} with H chi = h chi, the link term is -+ 2 c g h w sin k chi, so
+    a-branch (e^{-iwt}):  w^2 + (kappa + 2cgh sin k) w - Q(k) = 0
+    b-branch (e^{+iwt}):  w^2 - (kappa + 2cgh sin k) w - Q(k) = 0
+ The two positive roots satisfy (Vieta), EXACTLY, for every eigen-direction h, strength g, kappa, K, c:
+    (S) SPLITTING RULE   w_b(k) - w_a(k) = kappa + 2 c g h sin k
+    (P) PRODUCT RULE     w_a(k) w_b(k)   = Q(k)   -- the link-free, spin-free value, the same for every h.
+ At fixed frequency the same relation reads w^2 +- kappa w = K + 2c - 2c sqrt(1 + (g w h)^2) cos(k -+ theta),
+ tan theta = g w h: a Peierls shift theta per eigen-direction, opposite on the two branches, with tan theta
+ proportional to the branch's own lab frequency and to h -- AND a hopping renormalisation
+ c -> c sqrt(1 + tan^2 theta), which is not a gauge phase. (S) and (P) are the fixed-k reading of both.
+ Consequences:
+  - Trace part (H = I): a common Peierls shift = a Galilean drift in the continuum (sec 1c) plus the
+    hopping renormalisation (the continuum's s^2 = c + V^2): removable by one frame.
+  - Traceless part: component-dependent Peierls shifts and drifts V_j ~ -c g h_j w/(w + kappa/2); no single
+    frame removes them. In the free linear theory each is removable by a component-dependent boost -- a
+    transformation that is not a symmetry once components interact (the shared radius of A', or
+    non-commuting links elsewhere).
+  - For generators with unequal |eigenvalues| (e.g. lambda_8: 1, 1, -2 over sqrt3) the renormalisation is
+    component-dependent -- a gauge-invariant, frame-invariant effect: tan theta_3 / tan theta_1 = -2 exactly,
+    so theta_3 / theta_1 != -2 (an ordinary unitary link would give angles in the eigenvalue ratio); and
+    arctan(g w lambda_8) carries a trace part (2 arctan x - arctan 2x)/3 != 0 (x = g w/sqrt3): a traceless
+    link produces a colour-blind Peierls part at third order.
+  - kappa enters only through w: the branch Peierls angles obey tan theta_b / tan theta_a = -w_b/w_a
+    (opposite charges, magnitude in the ratio of lab frequencies; sec 1c's "kappa physical through links").
+
+DERIVATION 2 -- q >= 2, links of non-commuting generators on different axes (e.g. g sigma_1 on x-bonds,
+ g sigma_2 on y-bonds). Per mode the link matrix is 2 c g w (sin k_x sigma_1 + sin k_y sigma_2): the internal
+ eigenbasis is locked to the propagation direction (axis at angle atan2(sin k_y, sin k_x)), with band
+ touchings at (0,0), (pi,0), (0,pi), (pi,pi) of winding +1, -1, -1, +1 (sum 0). This is a non-Abelian field
+ strength -i[A_x, A_y] != 0 from uniform links -- the genuinely non-Abelian content, absent in q = 1. The
+ axis angle and the windings are independent of every parameter. model.py implements links along axis 0
+ only; a test needs the same passive link term on a second axis (same coupling class, not a new coupling).
+ Non-commuting segments along one line (q = 1) give order-dependent holonomies -- the existing gates 6-7.
+
+HYPOTHESES
+ H1 At linear order and fixed frequency the link sector is exactly the matrix Peierls form plus the hopping
+    renormalisation, per eigen-direction; (S) and (P) hold exactly for model.py's force.
+ H2 The only link consequences that are independent of the genuine parameters and not already implied by
+    counted census rows are: (P) (the even part of the dispersion, unchanged in the branch product by any
+    link), and, in q >= 2, the direction locking and windings of Derivation 2.
+ H3 Of these, (S) is not independent: it is row 1's two-branch rule applied per eigen-direction, with row 5
+    at g = 0. The windings and locking follow from row 2 (per-axis sin k, transverse independence) and the
+    su(2) algebra (structural, row 10): verified consequences, not independent. (P) is the one candidate
+    genuine prediction: it constrains the even part of the dispersion, which rows 1, 2, 5 and 12 do not, and
+    it would fail if the link coupled other than linearly in velocity, or as an ordinary unitary link.
+
+CHECKS AND PREDICTIONS (model.py's own force; node form A'; kappa*; ring N = 128)
+ C1 Plane-wave residual at t = 0 (amplitude 1e-10): links n = 2 with H = sigma_1, sigma_3; n = 3 with
+    lambda_1, lambda_8; g = 0.3; k = 2 pi m/128, m = 6, 32, 51; both branches; every eigen-direction.
+    |F - (-w^2 psi)| / |w^2 psi| <= 1e-9 with w from Derivation 1.
+ C2 Dynamic: the same plane waves evolved with model.run (RK4, DT = 0.02) for T = 200 at amplitude 1e-6;
+    w measured from the phase of the projection on chi e^{ikn}. Predictions: each measured w within 1e-8
+    (relative) of Derivation 1; (P) w_a w_b / Q(k) - 1 within 1e-8 for every generator, eigen-direction,
+    k and g, and the same product with g = 0 (link-free control at kappa*); (S) within 1e-8 of
+    kappa + 2cgh sin k. lambda_8: the product for h = -2/sqrt3 equals that for h = 1/sqrt3 to 1e-8, while
+    the splittings differ by 2cg sqrt3 sin k.
+ (The fixed-frequency statements -- tan theta_3/tan theta_1 = -2, the trace part of arctan(g w lambda_8) --
+    are algebra on Derivation 1 and are not separately checked.)
+ Not simulated here: Derivation 2 (needs second-axis links); nonlinear cross-component effects.
