@@ -416,10 +416,63 @@ would need ĉ ≫ 1, which is not the chosen model.
 |---|---|---|
 | J, no links | no dimensionless parameter; κ a frame rotation | ĉ′ = ĉ/(1 + κ̂²/4) |
 | scalar β | no dimensionless parameter; β a frame velocity | ĉ, β̂ (β̂ as the Peierls angle against the lattice) |
-| links | trace part a frame; traceless part not removable by any frame | κ physical through the lab frequency — open (§9) |
+| links | trace part a frame; traceless part not removable by any frame | κ physical through the lab frequency — open (§9) [**scoped 2026-09-28:** exact per-mode equation, splitting and product rules, component-dependent drift and bandwidth, q ≥ 2 locking and windings — all verified consequences; "The link sector" below] |
 
 Census consequences: `UNIVERSAL_RELATIONS.md`, notes on rows 1, 2, 4 and 5, and "The count —
 under the continuum reading".
+
+**The link sector — scoped 2026-09-28 (answers the §9 item "the link sector in the continuum
+reading").** Derivation, hypotheses and predictions committed before any check
+(`shape_zero_tests/link_scoping_predictions.txt`, 93debc6); checks `shape_zero_tests/link_scoping_checks.py`
+→ `link_scoping_checks_output.txt` (c1f7f08). **Every effect below is a verified consequence of census
+rows 1–2 plus the link algebra (structural, row 10); none is counted as an independent prediction**
+(UNIVERSAL_RELATIONS rows 14, 15).
+- **The exact per-mode equation.** For a uniform link W = g·ρ(H) (H Hermitian, g a configuration
+  strength, ĝ = gc/√K) and an internal eigen-direction Hχ = hχ, a plane wave χe^{i(kn ∓ ωt)} obeys
+  - a-branch: ω² + (κ + 2cgh sin k)ω − Q(k) = 0,
+  - b-branch: ω² − (κ + 2cgh sin k)ω − Q(k) = 0, with Q(k) = K + 2c(1 − cos k).
+  On `model.py`'s own force (node form A′, κ\*, N = 128, g = 0.3) the plane-wave residual is
+  **9.0×10⁻¹¹** for σ₁, σ₃ links (n = 2) and λ₁, λ₈ links (n = 3), three wavenumbers, both branches,
+  every eigen-direction (check C1). Its roots give the **splitting rule** ω_b − ω_a = κ + 2cgh sin k
+  (row 1's two-branch rule per eigen-direction; row 5 at g = 0) and the **product rule**
+  ω_a ω_b = Q(k) (Vieta: a coupling linear in velocity changes only the linear coefficient).
+- **The fixed-frequency reading.** ω² ± κω = K + 2c − 2c√(1 + tan²θ) cos(k ∓ θ), tan θ = gωh: a
+  **Peierls shift opposite on the two branches, with tan θ proportional to the branch's own lab
+  frequency** (the branches as opposite charges, as in row 12), **plus a hopping renormalisation**
+  c → c√(1 + tan²θ), which is not a gauge phase. For the trace part (H ∝ I) both are removable by one
+  frame: the common drift of §1c and the continuum's s² = c + V².
+- **The traceless part's non-removable effects.** (i) **Component-dependent drift**, V_j ∝ h_j, which
+  no single frame removes; in the free linear theory each is removable by its own boost, which stops
+  being a symmetry once the components interact (A′'s shared radius; non-commuting links elsewhere).
+  (ii) **Component-dependent bandwidth** for generators with unequal \|eigenvalues\| — a gauge- and
+  frame-invariant effect: for λ₈ (eigenvalues 1, 1, −2 over √3) **tan θ₃ / tan θ₁ = −2 exactly**, so
+  θ₃/θ₁ ≠ −2 (an ordinary unitary link would give angles in the eigenvalue ratio), and arctan(gωλ₈)
+  carries a colour-blind trace part (2 arctan x − arctan 2x)/3 at third order (x = gω/√3). The q = 1
+  holonomy effects of non-commuting segments are the existing ordering gates (6, 7).
+- **At q ≥ 2: direction locking and windings.** Uniform non-commuting links on different axes (e.g.
+  gσ₁ on x-bonds, gσ₂ on y-bonds) give per mode the link matrix 2cgω(sin k_x σ₁ + sin k_y σ₂) — a
+  non-Abelian field strength −i[A_x, A_y] ≠ 0 from uniform links. The internal eigenbasis is **locked
+  to the propagation direction** (axis at atan2(sin k_y, sin k_x)), and the internal splitting closes at
+  the four band touchings (0,0), (π,0), (0,π), (π,π) with **windings +1, −1, −1, +1** (sum 0). Derived
+  as algebra; not simulated — `model.py` has links on axis 0 only, and a test needs the same passive link
+  term on a second axis (the same coupling class, not a new coupling).
+- **Instrument failure and miss (check C2, dynamic frequencies, RK4, amplitude 10⁻⁶).** The first C2
+  run failed as an instrument: the phase was sampled every 10 time units, advancing ~16 rad per sample,
+  and the unwrapped readout aliased (kept as `link_scoping_checks_output_aliased.txt`). Fixed to 0.5,
+  marked in the script, predictions unchanged. The rerun agrees with the derivation to
+  **≤ 4×10⁻⁷**, against the predicted 1×10⁻⁸ — **a miss**. The **link-free control shows the same
+  offset** (+4.0×10⁻⁷, +1.7×10⁻⁷, +5.0×10⁻⁸ at the three wavenumbers), consistent with A′'s own
+  amplitude stiffness shift divided by Q, which the prediction ignored. Against that control the links
+  change the branch product by ≤ 5×10⁻⁸ (the printout's rounding limit) while moving the splitting from
+  0.28 to 1.57 (κ = 0.97); λ₈'s h = −2/√3 and +1/√3 directions share the product while their
+  splittings differ.
+- **Why the product rule is not counted.** It is Vieta's formula: in ω² + (linear term)ω − Q(k) = 0
+  the product of the roots is the constant term, which no coupling linear in velocity — κ, β or links
+  — can change; and its k-dependence Q(k) = K + 2c(1 − cos k) is the band shape the census already names
+  as ĉ's calibration, whose cos k form tests the same nearest-neighbour range as the sin k form, so
+  counting it would double-count. **It is a useful realisation diagnostic:** it distinguishes
+  velocity-linear links (product unchanged) from ordinary unitary links (ω(k) = ω₀(k − θ), product
+  changed).
 
 ---
 
@@ -3186,7 +3239,7 @@ established — see §7b.*
 | **the remaining amplitude-proportional effect under (A′)** | with the self-precession gone, deviations from the linear gauge prediction still grow ∝ A (≈ A·g): split slopes −0.0044 / +0.0169 (q = 1) and −0.0095 / +0.0076 (q = 3) per 10⁻³, only 1.5–6× below form (A)'s, u(3) changing sign; q = 3 u(3) per-order 0.024; q3_gate deviations 0.011–0.020° at 10⁻³. Not derived; a candidate is the common frequency shift changing each link's rotation angle (~ gλ δω). Open (§1a, "ADOPTED 2026-09-27") |
 | **gate 7's floor under the radial form** | [2026-09-27: form (A)'s — superseded by (A′), §1a]  the first-order self-precession correction captures the per-order errors but over-predicts the order-dependent floor ~1.8×; gate 7 fails its floor criterion. Next: the slice model (§4d, "Gate 7 under the radial well"), predictions first [2026-09-26: the routine gate now reports the floor without a pass/fail; the small-amplitude limit is certified (§4d, "Amplitude scaling"); the measured slopes there are the target for the slice derivation] [2026-09-26: the slice-resolved model matches the q = 1 floors (≤ 0.2%) and is adopted as gate 7's floor prediction at q = 1 (|Δ| < 0.01°); per-order ~10% high, q = 3 off 10–30%, split slopes wrong — open (§4d, "Slice-resolved")] |
 | **four-wave coupling strengths** | the four-wave channels are counted by linear resonance only; their effective couplings are not derived (§3, "FINDING", caveats) |
-| **the link sector in the continuum reading** | whether the traceless part of the matrix links W — a component-dependent drift that no frame can remove — carries physics beyond the fixed-frequency Peierls form arctan(ωW) (§1c; derived as algebra, not simulated) |
+| **the link sector in the continuum reading** | whether the traceless part of the matrix links W — a component-dependent drift that no frame can remove — carries physics beyond the fixed-frequency Peierls form arctan(ωW) (§1c; derived as algebra, not simulated) [**ANSWERED 2026-09-28** (§1c, "The link sector"): **yes, but nothing independent.** Beyond the Peierls shift the link renormalises the hopping, c → c√(1 + tan²θ); the traceless part gives component-dependent drift and, for generators with unequal \|eigenvalues\|, component-dependent bandwidth (λ₈: tan θ₃/tan θ₁ = −2); at q ≥ 2 non-commuting uniform links give direction locking and ±1 windings at the four band touchings. All are verified consequences of rows 1–2 plus the link algebra; the product rule ω_aω_b = Q(k) is Vieta's formula and double-counts the band shape — none raises the count (UNIVERSAL_RELATIONS rows 14, 15). Open within it: the q ≥ 2 locking and windings are derived, not simulated (links on axis 0 only)] |
 | **whether census row 9 is kinematic** | whether ν → 0 for wide bumps at k = π/2 (§5b.6a) is the moving-frame statement seen from the lattice (§1c); if so it leaves the count of genuine predictions (`UNIVERSAL_RELATIONS.md`) |
 | **the exact value of κ** | only the floor κ ≥ κ\* is derived; the value is a genuine parameter, fixed by the Larmor measurement (`INPUT_LEDGER.md` §3.1); `model.py`'s κ = κ\* is a chosen operating point |
 | **the beam's fourth-order cross kernel** | derive it — every fourth-order cross term between a beam's transverse components, on the lattice — with the measured r values as the target: 0.351/0.350 (w = 1.5), 0.547/0.549 (w = 2), 0.750/0.758 (w = 3) at L = 4, A = 0.30/0.40, which lie 0.33, 0.50, 0.68 of the way from the self-only limit S2 to the all-terms limit S1 (§5, measured with the third-harmonic launch, `kappa4_orbit3_launch.py`) |

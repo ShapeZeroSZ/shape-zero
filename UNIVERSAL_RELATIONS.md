@@ -21,6 +21,8 @@ measurement); the model is not presented as a theory of nature (`OVERVIEW.md`, "
 | 11 | small-amplitude reduction to the linear gauge dynamics | amplitude, in the limit | **measured** (certified) | `shape_zero_tests/certify_gates.py` | no — an internal consistency check |
 | 12 | **κ-gradient force:** in a static κ gradient, packets at rest on the two branches accelerate apart with a_a − a_b = c·∂ₓ(ω_b − ω_a)/ω̄, ω̄ = (ω_a + ω_b)/2 — the electric-field analogue, branches as opposite charges | the well; K and κ enter only through the measured branch frequencies | **derived + measured** (−0.23%; predictions committed first) — **a verified consequence of row 5 plus ray kinematics and the band curvature; not independent** | `shape_zero_tests/kgrad_test.py`; MODEL_SPEC §1c; PROVENANCE §6t | yes, in a realisation with a position-dependent Larmor splitting — but it would test ray kinematics, not a new condition |
 | 13 | **universal refraction:** a weak D ≤ 8 packet in a populated tower senses one stiffness shift dK = √s, the same for both chiralities, every colour and every node size (b/a ≤ 3.4×10⁻⁷, D16–D128 to 10⁻¹⁵); dw = √s/(2ω_a + κ); in a gradient the wavenumber is pushed away from the denser region, dp/dt = −∂ₓ√s/(2ω_a + κ) | chirality, colour, node size; which upper components carry s | **measured** (predictions committed first) — **a verified consequence of node form A′'s single shared radius; not independent** | `shape_zero_tests/tower_chirality_matched_test.py`; PREMISE_LEDGER C51; PROVENANCE §6w | no — it follows from a form selected under the selection rule |
+| 14 | **product rule:** ω_a(k)·ω_b(k) = Q(k) = K + 2c(1 − cos k) in every internal eigen-direction of a link, for any link strength, generator and κ; with the splitting rule ω_b − ω_a = κ + 2cgh sin k. **β obeys the same product rule** (scalar sector: ω(k)·ω(−k) = Q(k)) | g, H, κ̂, β̂ | **derived** (exact per-mode equation, residual 9×10⁻¹¹ on `model.py`'s force) + **measured** (links change the product by ≤ 5×10⁻⁸ against the link-free control) — **a verified consequence: Vieta's formula, and its k-dependence is the band shape already named as ĉ's calibration; not independent** | `shape_zero_tests/link_scoping_checks.py`; MODEL_SPEC §1c, "The link sector" | yes, as a **realisation diagnostic** — it distinguishes velocity-linear links (product unchanged) from ordinary unitary links (product changed) |
+| 15 | **q ≥ 2 direction locking and windings:** uniform non-commuting links on different axes lock the internal eigenbasis to the propagation direction (axis at atan2(sin k_y, sin k_x)) and close the internal splitting at (0,0), (π,0), (0,π), (π,π) with windings +1, −1, −1, +1 | every parameter and the link strength | **derived** (algebra), not simulated — `model.py` has links on axis 0 only — **a verified consequence of row 2 (per-axis sin k) plus the su(2) algebra (row 10); not independent** | MODEL_SPEC §1c, "The link sector"; `shape_zero_tests/link_scoping_predictions.txt` | in principle — it would test the per-axis form and the link algebra, not a new condition |
 
 ## The count
 
@@ -51,6 +53,14 @@ A′'s single shared radius — every D ≤ 8 component feels the same \|u\|, so
 weak packet as the same stiffness √s — and A′ was selected under the selection rule, so, like P-3
 (row 8), what that selection produced is not counted as evidence. It is recorded as a **verified
 consequence** (PREMISE_LEDGER C51).
+
+**Rows 14 and 15 (added 2026-09-28) change neither count.** Row 14, the product rule, is Vieta's
+formula — in ω² + (linear term)ω − Q(k) = 0 the product of the roots is the constant term, which any
+coupling linear in velocity (κ, β or links) cannot change — and its k-dependence is the band shape already
+named as ĉ's calibration, whose cos k form tests the same nearest-neighbour range as the sin k form, so
+counting it would double-count; β obeys the same rule. It is useful as a **realisation diagnostic**,
+distinguishing velocity-linear links from ordinary unitary ones. Row 15 follows from row 2 and the su(2)
+algebra. Both are recorded as **verified consequences** (MODEL_SPEC §1c, "The link sector").
 
 ## The count — under the continuum reading (2026-09-27)
 
