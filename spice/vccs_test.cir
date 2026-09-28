@@ -1,0 +1,31 @@
+* one VCCS: OPA197 follower + basic Howland; input vin, output current into load node L (held by V source to measure current)
+.include OPAx197.LIB
+.param Rset=2983.28 R34=10k
+VCC vcc 0 12
+VEE vee 0 -12
+VIN in 0 dc 0 ac 1
+XBUF in buf vcc vee buf OPAx197
+* Howland (positive: I_L = +Vin/R1): R1 from buf to np, R2 from out to np... see derivation
+R1 buf np {Rset}
+R2 hout np {Rset}
+R3 nm 0 {R34}
+R4 nm hout {R34}
+XH np nm vcc vee hout OPAx197
+* load node = np; measure current into a load: connect np to a node held at vl through ammeter
+VAM np nl 0
+VL nl 0 dc 0 ac 0
+.control
+ac dec 50 1k 20Meg
+let gm = -i(VAM)
+let G0 = 1/2983.28
+meas ac gm60 find mag(gm) at=61.6k
+meas ac ph60 find vp(gm) at=61.6k
+print gm60/G0 ph60
+wrdata vccs_ac.txt mag(gm) vp(gm)
+* output conductance: vin=0, drive load node
+alter VIN ac=0
+alter VL ac=1
+ac lin 1 61.6k 61.6k
+print -i(VAM)
+.endc
+.end

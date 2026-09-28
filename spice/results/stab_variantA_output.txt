@@ -1,0 +1,5 @@
+POST HOC: variant A (ideal on-site inductor, real OPA4197 VCCS), 32 nodes: min signed decay rate over m = 1..15
+  Q = 100: min decay rate +1.052e+03 s^-1 (stable)
+  Q = 200: min decay rate +2.552e+02 s^-1 (stable)
+  Q = 300: min decay rate -1.037e+01 s^-1 (unstable)
+  Q = 450: min decay rate -1.874e+02 s^-1 (unstable)

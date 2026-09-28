@@ -1,0 +1,50 @@
+SPICE VERIFICATION OF THE 32-NODE DESIGN (ngspice 42, TI OPAx197 macro-model). This checks the design;
+the simulator solves the circuit equations, which the design was built to make the model's equations.
+
+CALIBRATION (SPICE)
+  zero check, gyrators off: max |f+ - f-| = 0.0e+00 of Delta f(pi/2)
+  band fit: K = 1.00120e+11 s^-2 (design 1e11), c-hat = 0.24747 (design 0.25), max band-fit residual 2.3e-04
+  b = 3.33293e+04 s^-1, beta-hat = 0.10533 (design 0.106)
+  product rule w+ w- / Q(k) - 1: max 4.0e-03
+
+RESONANCES: SPICE vs own linear model (own: ideal GIC; VCCS pole 9.25 MHz; C_p 10 pF; C_in 6.5 pF; Q 100)
+   m   f+ SPICE   f+ own    diff(Hz)   f- SPICE   f- own    diff(Hz)   P1 SPICE   P1 own
+   1   51597.56  51585.70   +11.86    49521.38  49506.97   +14.41   +6.10e-04  +3.85e-04
+   2   53326.70  53319.00    +7.71    49254.86  49241.89   +12.97   +1.13e-03  +7.12e-04
+   3   55407.19  55405.56    +1.63    49497.53  49487.63    +9.91   +1.47e-03  +9.30e-04
+   4   57727.31  57733.57    -6.25    50208.73  50203.35    +5.38   +1.59e-03  +1.01e-03
+   5   60165.37  60181.07   -15.69    51328.72  51329.17    -0.45   +1.47e-03  +9.29e-04
+   6   62600.74  62627.10   -26.36    52787.38  52794.82    -7.44   +1.12e-03  +7.11e-04
+   7   64922.51  64960.31   -37.80    54510.89  54526.35   -15.46   +6.06e-04  +3.84e-04
+   8   67035.03  67084.52   -49.49    56426.00  56450.32   -24.32   +0.00e+00  +0.00e+00
+   9   68860.92  68921.76   -60.84    58462.15  58495.98   -33.83   -6.05e-04  -3.84e-04
+  10   70341.98  70413.26   -71.28    60552.35  60596.08   -43.74   -1.12e-03  -7.09e-04
+  11   71438.75  71519.02   -80.27    62633.11  62686.85   -53.74   -1.46e-03  -9.26e-04
+  12   72129.28  72216.61   -87.34    64644.27  64707.75   -63.49   -1.57e-03  -1.00e-03
+  13   72407.27  72499.42   -92.15    66528.63  66601.22   -72.58   -1.45e-03  -9.25e-04
+  14   72280.12  72374.65   -94.52    68232.02  68312.64   -80.62   -1.11e-03  -7.08e-04
+  15   71766.80  71861.20   -94.40    69703.47  69790.64   -87.18   -6.02e-04  -3.83e-04
+  P1 max |residual|: SPICE 1.59e-03
+
+P2 AND P3 (SPICE, +-S even part at m = 8; ratio R to -(1/4) b <dK^2>/c^2 with the design dK)
+  gauss 4: d(Delta f) = -58.608 Hz; R SPICE 1.0826; own (realistic nominal) 1.0308; own (ideal) 1.0351
+  gauss 3: d(Delta f) = -59.973 Hz; R SPICE 1.1078; own (realistic nominal) 1.0541; own (ideal) 1.0582
+  gauss 5: d(Delta f) = -58.062 Hz; R SPICE 1.0725; own (realistic nominal) 1.0215; own (ideal) 1.0258
+  sech2 4: d(Delta f) = -59.968 Hz; R SPICE 1.1077; own (realistic nominal) 1.0539; own (ideal) 1.0580
+  two 2.5: d(Delta f) = -60.964 Hz; R SPICE 1.1261; own (realistic nominal) 1.0723; own (ideal) 1.0767
+  ramp None: d(Delta f) = -53.053 Hz; R SPICE 0.9800; own (realistic nominal) 0.9176; own (ideal) 0.8945
+
+STABILITY from AC pole widths (full ring, gyrators on): minimum over m = 1..15 and both branches of the
+signed decay rate 2 pi Im(pole) from the vector fit (negative = growing; convention checked on Q = 100)
+  Q =   100: SPICE min decay rate +1.216e+03 s^-1 (stable); own max Re lambda -1.507e+03 s^-1
+  Q =   200: SPICE min decay rate +4.204e+02 s^-1 (stable); own max Re lambda -6.217e+02 s^-1
+  Q =   300: SPICE min decay rate +1.551e+02 s^-1 (stable); own max Re lambda -3.268e+02 s^-1
+  Q =   450: SPICE min decay rate -2.172e+01 s^-1 (unstable); own max Re lambda -1.301e+02 s^-1
+  Q =   600: SPICE min decay rate -1.101e+02 s^-1 (unstable); own max Re lambda -3.182e+01 s^-1
+  Q =  1000: SPICE min decay rate -2.175e+02 s^-1 (unstable); own max Re lambda +8.621e+01 s^-1
+
+STABILITY, time domain: 4-node ring of the same cells, 10 uA triangular kick at 5-15 us, 0.35 ms, Gear
+  Q =  100, real GIC : max |V| before the kick 1.71e-08 V, overall 9.76e+00 V; growth rate after 50 us +1.478e+02 s^-1
+  Q =  100, ideal GIC: max |V| before the kick 1.56e-14 V, overall 3.23e-03 V; growth rate after 50 us -1.647e+03 s^-1
+  Q = 1000, real GIC : max |V| before the kick 1.72e-08 V, overall 1.01e+01 V; growth rate after 50 us +1.342e+02 s^-1
+  Q = 1000, ideal GIC: max |V| before the kick 1.56e-14 V, overall 3.32e-03 V; growth rate after 50 us -8.397e+01 s^-1

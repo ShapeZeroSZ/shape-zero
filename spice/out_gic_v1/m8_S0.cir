@@ -1,0 +1,109 @@
+* 32-node LC-gyrator ring (shape_zero realisation-gyroscopic branch)
+.include OPAx197.LIB
+VCC vcc 0 12
+VEE vee 0 -12
+* ---- cells (design choices ours) ----
+.subckt NODE a vcc vee params: R5=3333.3
+C1 a 0 10n
+LG a xg 0.001176
+RG xg 0 4.55463
+RG1 a g2 2k
+RG2 g2 g3 2k
+RG3 g3 g4 2k
+CG4 g4 g5 1n
+RG5 g5 0 {R5}
+XGA a g3 vcc vee g2 OPAx197
+XGB g5 g3 vcc vee g4 OPAx197
+.ends NODE
+.subckt BOND a b vcc vee params: Rset=2983.28
+LC a yc 0.004
+RC yc b 15.4919
+CP a b 1e-11
+* VCCS B: +V(a)/Rset into b
+XB1 a bufa vcc vee bufa OPAx197
+RB1 bufa b {Rset}
+RB2 hb b {Rset}
+RB3 mb 0 10k
+RB4 mb hb 10k
+XB2 b mb vcc vee hb OPAx197
+* VCCS A: -V(b)/Rset into a
+XA1 b bufb vcc vee bufb OPAx197
+RA1 0 a {Rset}
+RA2 ha a {Rset}
+RA3 bufb ma 10k
+RA4 ma ha 10k
+XA2 a ma vcc vee ha OPAx197
+.ends BOND
+
+XN0 n0 vcc vee NODE params: R5=3340.91
+XN1 n1 vcc vee NODE params: R5=3340.91
+XN2 n2 vcc vee NODE params: R5=3340.91
+XN3 n3 vcc vee NODE params: R5=3340.91
+XN4 n4 vcc vee NODE params: R5=3340.91
+XN5 n5 vcc vee NODE params: R5=3340.91
+XN6 n6 vcc vee NODE params: R5=3340.91
+XN7 n7 vcc vee NODE params: R5=3340.91
+XN8 n8 vcc vee NODE params: R5=3340.91
+XN9 n9 vcc vee NODE params: R5=3340.91
+XN10 n10 vcc vee NODE params: R5=3340.91
+XN11 n11 vcc vee NODE params: R5=3340.91
+XN12 n12 vcc vee NODE params: R5=3340.91
+XN13 n13 vcc vee NODE params: R5=3340.91
+XN14 n14 vcc vee NODE params: R5=3340.91
+XN15 n15 vcc vee NODE params: R5=3340.91
+XN16 n16 vcc vee NODE params: R5=3340.91
+XN17 n17 vcc vee NODE params: R5=3340.91
+XN18 n18 vcc vee NODE params: R5=3340.91
+XN19 n19 vcc vee NODE params: R5=3340.91
+XN20 n20 vcc vee NODE params: R5=3340.91
+XN21 n21 vcc vee NODE params: R5=3340.91
+XN22 n22 vcc vee NODE params: R5=3340.91
+XN23 n23 vcc vee NODE params: R5=3340.91
+XN24 n24 vcc vee NODE params: R5=3340.91
+XN25 n25 vcc vee NODE params: R5=3340.91
+XN26 n26 vcc vee NODE params: R5=3340.91
+XN27 n27 vcc vee NODE params: R5=3340.91
+XN28 n28 vcc vee NODE params: R5=3340.91
+XN29 n29 vcc vee NODE params: R5=3340.91
+XN30 n30 vcc vee NODE params: R5=3340.91
+XN31 n31 vcc vee NODE params: R5=3340.91
+XB0 n0 n1 vcc vee BOND params: Rset=2983.28
+XB1 n1 n2 vcc vee BOND params: Rset=2983.28
+XB2 n2 n3 vcc vee BOND params: Rset=2983.28
+XB3 n3 n4 vcc vee BOND params: Rset=2983.28
+XB4 n4 n5 vcc vee BOND params: Rset=2983.28
+XB5 n5 n6 vcc vee BOND params: Rset=2983.28
+XB6 n6 n7 vcc vee BOND params: Rset=2983.28
+XB7 n7 n8 vcc vee BOND params: Rset=2983.28
+XB8 n8 n9 vcc vee BOND params: Rset=2983.28
+XB9 n9 n10 vcc vee BOND params: Rset=2983.28
+XB10 n10 n11 vcc vee BOND params: Rset=2983.28
+XB11 n11 n12 vcc vee BOND params: Rset=2983.28
+XB12 n12 n13 vcc vee BOND params: Rset=2983.28
+XB13 n13 n14 vcc vee BOND params: Rset=2983.28
+XB14 n14 n15 vcc vee BOND params: Rset=2983.28
+XB15 n15 n16 vcc vee BOND params: Rset=2983.28
+XB16 n16 n17 vcc vee BOND params: Rset=2983.28
+XB17 n17 n18 vcc vee BOND params: Rset=2983.28
+XB18 n18 n19 vcc vee BOND params: Rset=2983.28
+XB19 n19 n20 vcc vee BOND params: Rset=2983.28
+XB20 n20 n21 vcc vee BOND params: Rset=2983.28
+XB21 n21 n22 vcc vee BOND params: Rset=2983.28
+XB22 n22 n23 vcc vee BOND params: Rset=2983.28
+XB23 n23 n24 vcc vee BOND params: Rset=2983.28
+XB24 n24 n25 vcc vee BOND params: Rset=2983.28
+XB25 n25 n26 vcc vee BOND params: Rset=2983.28
+XB26 n26 n27 vcc vee BOND params: Rset=2983.28
+XB27 n27 n28 vcc vee BOND params: Rset=2983.28
+XB28 n28 n29 vcc vee BOND params: Rset=2983.28
+XB29 n29 n30 vcc vee BOND params: Rset=2983.28
+XB30 n30 n31 vcc vee BOND params: Rset=2983.28
+XB31 n31 n0 vcc vee BOND params: Rset=2983.28
+IDRV 0 n0 dc 0 ac 1
+.control
+set wr_singlescale
+set wr_vecnames
+ac lin 633 54000 69800
+wrdata /home/user/rg/spice/out/m8_S0.txt v(n0) v(n1) v(n2) v(n3) v(n4) v(n5) v(n6) v(n7) v(n8) v(n9) v(n10) v(n11) v(n12) v(n13) v(n14) v(n15) v(n16) v(n17) v(n18) v(n19) v(n20) v(n21) v(n22) v(n23) v(n24) v(n25) v(n26) v(n27) v(n28) v(n29) v(n30) v(n31)
+.endc
+.end

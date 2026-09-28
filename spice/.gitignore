@@ -1,0 +1,9 @@
+# TI's OPAx197 macro-model is not redistributed: download https://www.ti.com/lit/zip/SBOMA34
+OPAx197.LIB
+__pycache__/
+# raw AC/transient data (reproducible with the scripts; tens of MB)
+out/
+out_gic_v1/*.txt
+out_variantA/*.txt
+gic_search/*.txt
+vccs_ac.txt

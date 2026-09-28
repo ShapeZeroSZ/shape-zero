@@ -1,0 +1,20 @@
+* Antoniou GIC grounded inductor, OPA197 models: Zin = s C4 R1 R3 R5 / R2 = 6.667 mH
+.include OPAx197.LIB
+VCC vcc 0 12
+VEE vee 0 -12
+IIN 0 n1 dc 0 ac 1
+R1 n1 n2 2k
+R2 n2 n3 2k
+R3 n3 n4 2k
+C4 n4 n5 1n
+R5 n5 0 3.3333k
+XA n1 n3 vcc vee n2 OPAx197
+XB n3 n5 vcc vee n4 OPAx197
+.control
+ac lin 7 40k 80k
+let z = v(n1)
+let L = imag(z)/(2*pi*frequency)
+let Q = imag(z)/real(z)
+print frequency L Q
+.endc
+.end

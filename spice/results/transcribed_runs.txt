@@ -1,0 +1,35 @@
+TRANSCRIBED RESULTS (copied verbatim from the session's run output; the scripts that produced them are in spice/,
+their raw data files are not committed). 2026-09-28.
+
+1. vccs_test.cir -- one VCCS (OPAx197 follower + basic Howland), TI model:
+   1 kHz |gm|/G = 1.000000, phase error -1.081e-04 rad; 60.3 kHz |gm|/G = 0.999970, phase error -6.517e-03 rad;
+   1 MHz 0.994156, -1.047e-01 rad; 5 MHz 0.969436, -4.944e-01 rad; equivalent single pole 9.25 MHz.
+   Output admittance at 61.6 kHz: -1.45e-07 + j2.53e-06 S (1.4e-7 S parallel 6.5 pF).
+
+2. gic_test.cir -- GIC unit test. (a) Values as first pre-registered (C4 10 nF, R1-R3 10 kOhm, R5 66.7 kOhm): L =
+   2.78 H at 40 kHz, 1.01 H at 80 kHz (the 6.67 H arithmetic error, amendment 1). (b) Corrected values, op-amp B
+   version 1 (+ g5, - g3): L 6.616-6.698 mH over 40-80 kHz, Q +194 to +98. (c) Corrected values, version 2 (+ g3,
+   - g5): L 6.640-6.577 mH, Q -79 to -39.
+
+3. gic_bump_diag.py with GIC version 1: realised d(1/L) / design at 56.5, 61.9, 67.2 kHz: +S peak 1.0309, 1.0308,
+   1.0306; -S peak 1.0152, 1.0150, 1.0148. Own model band-fit c-hat with the same parasitics: 0.24790.
+
+4. 4-node transients (10 uA triangular kick, 0.35 ms, Gear; decay fitted on the oscillating part):
+   GIC version 1: runs to the rails (max |V| 9.8 V at Q = 100, 10.1 V at Q = 1000) within ~15 us.
+   Ideal on-site inductor (variant A): Q = 100 decay 1.66e3 s^-1; Q = 1000 decay 97 s^-1 (AC part).
+   GIC version 2: Q = 100 -- the DC operating point latches (op-amp B output +11.75 V, all nodes -26 mV; without
+   rshunt the operating point does not converge: singular matrix in a Howland op-amp model); Q = 1000 -- DC point
+   normal (op-amp B output 0.197 V), oscillation decays at 36 s^-1. (Raw files deleted in a cleanup; the operating-
+   point latch is reproduced by diag_op/op_Q100*.cir.)
+
+5. gic_search/search.py -- one node (10 nF || 1.176 mH Q 100 || GIC), eight Antoniou variants:
+   C2_A0_B0: op ok; transient decays (4.34e-03 -> 3.74e-03 V); L 6.681/6.703/6.729 mH, Q -24.6/-20.4/-17.4 at 50/60/70 kHz
+   C2_A0_B1: op ok; transient to the rails (10.4 -> 13.4 V); L 6.69/6.716/6.748 mH, Q 148/123/105
+   C2_A1_B0: op ok; transient 0.99 V peak -> 2.2 mV (large start-up excursion); Q -50/-42/-36
+   C2_A1_B1: op ok; transient 0.93 -> 0.83 V (sustained); Q 38/31/27
+   C4_A0_B0 (= version 2): op fails without convergence aids; Q -63/-52/-45
+   C4_A0_B1: op ok; transient to the rails (9.3 -> 13.9 V); Q 155/130/111 (= version 1, the pin order of
+            gen_ring version 1)
+   C4_A1_B0: op ok; transient 0.99 V -> 2.3 mV; Q 140/116/99
+   C4_A1_B1: op ok; transient 0.80 -> 0.74 V (sustained); Q 35/29/25
+   (A0: + at node, - at g3; A1 swapped. B0: + at g3, - at g5; B1: swapped.)

@@ -1,0 +1,17 @@
+* ac
+.include ../OPAx197.LIB
+VCC vcc 0 12
+VEE vee 0 -12
+R1 a g2 2k
+R2 g2 g3 2k
+R3 g3 g4 2k
+C4 g4 g5 1n
+R5 g5 0 3333.3
+XA a g3 vcc vee g2 OPAx197
+XB g5 g3 vcc vee g4 OPAx197
+IIN 0 a dc 0 ac 1
+.control
+ac lin 3 50k 70k
+print frequency v(a)
+.endc
+.end

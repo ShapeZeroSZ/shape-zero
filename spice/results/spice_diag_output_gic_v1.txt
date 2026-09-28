@@ -1,0 +1,5 @@
+POST HOC SPICE DIAGNOSTICS (variant: c-hat, beta-hat, product rule, P1 max, P2 R, min decay rate at Q = 450)
+  original (both real, from spice_verify): c-hat 0.24747, beta-hat 0.10533, product 4.0e-03, P1 1.59e-03, R 1.0826, Q450 -21.7 s^-1
+  A_idealGIC  : c-hat 0.24790, beta-hat 0.10548, product 4.0e-03, P1 1.59e-03, R 1.0377, Q450 -187.4 s^-1
+  B_idealVCCS : c-hat 0.24747, beta-hat 0.10562, product 4.2e-04, P1 1.00e-03, R 1.0751, Q450 +511.9 s^-1
+  C_bothideal : c-hat 0.24790, beta-hat 0.10577, product 4.2e-04, P1 1.00e-03, R 1.0305, Q450 +347.6 s^-1

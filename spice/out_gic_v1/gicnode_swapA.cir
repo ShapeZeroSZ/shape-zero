@@ -1,0 +1,23 @@
+* single node: 10 nF || 1.176 mH (Q 100) || GIC 6.667 mH, OPAx197; op-amp input assignment 'swapA'
+.include OPAx197.LIB
+VCC vcc 0 12
+VEE vee 0 -12
+C1 a 0 10n
+LG a xg 1.176m
+RG xg 0 4.555
+R1 a g2 2k
+R2 g2 g3 2k
+R3 g3 g4 2k
+C4 g4 g5 1n
+R5 g5 0 3333.3
+XA g3 a vcc vee g2 OPAx197
+XB g5 g3 vcc vee g4 OPAx197
+IK 0 a pwl(0 0 5u 0 10u 10u 15u 0)
+.options method=gear reltol=1e-3 rshunt=1e9
+.control
+set wr_singlescale
+set wr_vecnames
+tran 50n 300u 0 50n
+wrdata /home/user/rg/spice/out/gicnode_swapA.txt v(a)
+.endc
+.end

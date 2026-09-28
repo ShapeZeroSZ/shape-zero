@@ -1,0 +1,50 @@
+* 32-node LC-gyrator ring (shape_zero realisation-gyroscopic branch)
+.include OPAx197.LIB
+VCC vcc 0 12
+VEE vee 0 -12
+* ---- cells (design choices ours) ----
+.subckt NODE a vcc vee params: R5=3333.3
+C1 a 0 10n
+LG a xg 0.001176
+RG xg 0 0.455463
+RG1 a g2 2k
+RG2 g2 g3 2k
+RG3 g3 g4 2k
+CG4 g4 g5 1n
+RG5 g5 0 {R5}
+XGA a g3 vcc vee g2 OPAx197
+XGB g3 g5 vcc vee g4 OPAx197
+.ends NODE
+.subckt BOND a b vcc vee params: Rset=2983.28
+LC a yc 0.004
+RC yc b 1.54919
+CP a b 1e-11
+* VCCS B: +V(a)/Rset into b
+XB1 a bufa vcc vee bufa OPAx197
+RB1 bufa b {Rset}
+RB2 hb b {Rset}
+RB3 mb 0 10k
+RB4 mb hb 10k
+XB2 b mb vcc vee hb OPAx197
+* VCCS A: -V(b)/Rset into a
+XA1 b bufb vcc vee bufb OPAx197
+RA1 0 a {Rset}
+RA2 ha a {Rset}
+RA3 bufb ma 10k
+RA4 ma ha 10k
+XA2 a ma vcc vee ha OPAx197
+.ends BOND
+
+XN0 n0 vcc vee NODE params: R5=3340.91
+XN1 n1 vcc vee NODE params: R5=3340.91
+XN2 n2 vcc vee NODE params: R5=3340.91
+XN3 n3 vcc vee NODE params: R5=3340.91
+XB0 n0 n1 vcc vee BOND params: Rset=2983.28
+XB1 n1 n2 vcc vee BOND params: Rset=2983.28
+XB2 n2 n3 vcc vee BOND params: Rset=2983.28
+XB3 n3 n0 vcc vee BOND params: Rset=2983.28
+.control
+op
+print v(n0) v(xn0.g2) v(xn0.g3) v(xn0.g4) v(xn0.g5) v(xb0.hb) v(xb0.ha) v(xb0.bufa)
+.endc
+.end

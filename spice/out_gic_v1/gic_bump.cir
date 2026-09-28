@@ -1,0 +1,35 @@
+* GIC impedance at the probe frequencies
+.include OPAx197.LIB
+VCC vcc 0 12
+VEE vee 0 -12
+I0 0 a0 dc 0 ac 1
+R10 a0 b0 2k
+R20 b0 c0 2k
+R30 c0 d0 2k
+C40 d0 e0 1n
+R50 e0 0 3340.91
+XA0 a0 c0 vcc vee b0 OPAx197
+XB0 e0 c0 vcc vee d0 OPAx197
+I1 0 a1 dc 0 ac 1
+R11 a1 b1 2k
+R21 b1 c1 2k
+R31 c1 d1 2k
+C41 d1 e1 1n
+R51 e1 0 2021
+XA1 a1 c1 vcc vee b1 OPAx197
+XB1 e1 c1 vcc vee d1 OPAx197
+I2 0 a2 dc 0 ac 1
+R12 a2 b2 2k
+R22 b2 c2 2k
+R32 c2 d2 2k
+C42 d2 e2 1n
+R52 e2 0 9630.67
+XA2 a2 c2 vcc vee b2 OPAx197
+XB2 e2 c2 vcc vee d2 OPAx197
+.control
+set wr_singlescale
+set wr_vecnames
+ac lin 3 56536 67206
+wrdata /home/user/rg/spice/out/gic_bump.txt v(a0) v(a1) v(a2)
+.endc
+.end
