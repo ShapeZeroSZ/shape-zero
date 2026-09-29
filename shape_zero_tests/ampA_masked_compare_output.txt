@@ -1,0 +1,12 @@
+  q=1 u(2) AB: |IN|/|ALL| 0.073; additivity 0.002; cos(IN,OUT) -0.246; ALL vs recorded co1: |ALL|/|co1| 1.002, cos +1.0000; factor OUT 0.597, ALL 0.588, IN -0.009
+  q=1 u(2) BA: |IN|/|ALL| 0.056; additivity 0.004; cos(IN,OUT) -0.735; ALL vs recorded co1: |ALL|/|co1| 1.000, cos +1.0000; factor OUT 0.608, ALL 0.583, IN -0.025
+  q=1 u(3) AB: |IN|/|ALL| 0.101; additivity 0.003; cos(IN,OUT) -0.825; ALL vs recorded co1: |ALL|/|co1| 1.002, cos +1.0000; factor OUT 0.607, ALL 0.563, IN -0.044
+  q=1 u(3) BA: |IN|/|ALL| 0.040; additivity 0.003; cos(IN,OUT) -0.262; ALL vs recorded co1: |ALL|/|co1| 1.000, cos +1.0000; factor OUT 0.601, ALL 0.595, IN -0.006
+  q=3 u(2) AB: |IN|/|ALL| 0.346; additivity 0.000; cos(IN,OUT) +0.255; ALL vs recorded co1: |ALL|/|co1| 1.000, cos +1.0000; factor OUT 0.609, ALL 0.693, IN +0.084
+  q=3 u(2) BA: |IN|/|ALL| 0.286; additivity 0.003; cos(IN,OUT) -0.444; ALL vs recorded co1: |ALL|/|co1| 1.002, cos +1.0000; factor OUT 0.650, ALL 0.584, IN -0.066
+  q=3 u(3) AB: |IN|/|ALL| 0.465; additivity 0.000; cos(IN,OUT) +0.280; ALL vs recorded co1: |ALL|/|co1| 1.000, cos +1.0000; factor OUT 0.619, ALL 0.797, IN +0.178
+  q=3 u(3) BA: |IN|/|ALL| 0.308; additivity 0.001; cos(IN,OUT) +0.960; ALL vs recorded co1: |ALL|/|co1| 1.000, cos +1.0000; factor OUT 0.577, ALL 0.815, IN +0.238
+  q=1 separated u(2) AB: factor ALL 0.578 (certification geometry 0.588); cos +0.985; |sep|/|cert| measured 0.975, model 0.988
+  q=1 separated u(2) BA: factor ALL 0.563 (certification geometry 0.583); cos +0.980; |sep|/|cert| measured 0.927, model 0.951
+  q=1 separated u(3) AB: factor ALL 0.504 (certification geometry 0.563); cos +0.989; |sep|/|cert| measured 0.807, model 0.902
+  q=1 separated u(3) BA: factor ALL 0.592 (certification geometry 0.595); cos +0.987; |sep|/|cert| measured 0.989, model 0.989

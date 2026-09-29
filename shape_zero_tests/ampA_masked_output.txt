@@ -1,0 +1,15 @@
+MASKED FIRST-ORDER RUNS (A = 1e-3; deg per 1e-3; against ampA_MASKED_PREDICTIONS.md)
+  q=1 cert u(2) IN   split +0.00030  per-order AB 0.00038  BA 0.00058   drift 1.1e-06
+  q=1 cert u(2) OUT  split -0.00481  per-order AB 0.01636  BA 0.01310   drift 1.1e-06
+  q=1 cert u(2) ALL  split -0.00444  per-order AB 0.01599  BA 0.01258   drift 1.1e-06
+  q=1 cert u(3) IN   split -0.00080  per-order AB 0.00125  BA 0.00041   drift 1.1e-06
+  q=1 cert u(3) OUT  split +0.01769  per-order AB 0.01451  BA 0.01750   drift 1.1e-06
+  q=1 cert u(3) ALL  split +0.01691  per-order AB 0.01337  BA 0.01734   drift 1.1e-06
+  q=3 cert u(2) IN   split -0.00262  per-order AB 0.00195  BA 0.00220   drift 3.7e-07
+  q=3 cert u(2) OUT  split -0.00695  per-order AB 0.01186  BA 0.00870   drift 3.7e-07
+  q=3 cert u(2) ALL  split -0.00954  per-order AB 0.01112  BA 0.00763   drift 3.7e-07
+  q=3 cert u(3) IN   split +0.00690  per-order AB 0.00726  BA 0.00727   drift 3.6e-07
+  q=3 cert u(3) OUT  split +0.00077  per-order AB 0.01206  BA 0.01644   drift 3.6e-07
+  q=3 cert u(3) ALL  split +0.00764  per-order AB 0.01530  BA 0.02356   drift 3.6e-07
+  q=1 sep  u(2) ALL  split -0.00396  per-order AB 0.01505  BA 0.01155   drift 1.2e-06
+  q=1 sep  u(3) ALL  split +0.01459  per-order AB 0.01061  BA 0.01701   drift 1.2e-06
