@@ -1,0 +1,28 @@
+
+  q=1 u(2)
+    split         measured -0.00437 | angle -0.01426 (no, meas/pred 0.31) | total -0.01449 (no, meas/pred 0.30) |
+    per-order AB  measured +0.01596 | angle +0.02725 (no, meas/pred 0.59) | total +0.02704 (no, meas/pred 0.59) |
+    per-order BA  measured +0.01258 | angle +0.02214 (no, meas/pred 0.57) | total +0.02138 (no, meas/pred 0.59) |
+    vector AB: |co1| 2.80e-04 | angle: cos +0.983, |meas|/|pred| 0.59, projection ratio 0.58 | total: cos +0.987, |meas|/|pred| 0.59, projection ratio 0.59
+    vector BA: |co1| 2.19e-04 | angle: cos +0.988, |meas|/|pred| 0.57, projection ratio 0.56 | total: cos +0.989, |meas|/|pred| 0.59, projection ratio 0.58
+
+  q=1 u(3)
+    split         measured +0.01690 | angle +0.02752 (no, meas/pred 0.61) | total +0.02640 (no, meas/pred 0.64) |
+    per-order AB  measured +0.01335 | angle +0.02511 (no, meas/pred 0.53) | total +0.02356 (no, meas/pred 0.57) |
+    per-order BA  measured +0.01734 | angle +0.02895 (no, meas/pred 0.60) | total +0.02888 (no, meas/pred 0.60) |
+    vector AB: |co1| 2.69e-04 | angle: cos +0.991, |meas|/|pred| 0.53, projection ratio 0.53 | total: cos +0.988, |meas|/|pred| 0.57, projection ratio 0.56
+    vector BA: |co1| 3.48e-04 | angle: cos +0.990, |meas|/|pred| 0.60, projection ratio 0.59 | total: cos +0.991, |meas|/|pred| 0.60, projection ratio 0.60
+
+  q=3 u(2)
+    split         measured -0.00953 | angle -0.00635 (ok, meas/pred 1.50) | total -0.01466 (no, meas/pred 0.65) |
+    per-order AB  measured +0.01113 | angle +0.01597 (ok, meas/pred 0.70) | total +0.01898 (no, meas/pred 0.59) |
+    per-order BA  measured +0.00762 | angle +0.01256 (no, meas/pred 0.61) | total +0.01347 (no, meas/pred 0.57) |
+    vector AB: |co1| 2.57e-04 | angle: cos +0.713, |meas|/|pred| 0.96, projection ratio 0.69 | total: cos +0.966, |meas|/|pred| 0.72, projection ratio 0.69
+    vector BA: |co1| 1.38e-04 | angle: cos +0.870, |meas|/|pred| 0.65, projection ratio 0.56 | total: cos +0.975, |meas|/|pred| 0.60, projection ratio 0.58
+
+  q=3 u(3)
+    split         measured +0.00763 | angle -0.01148 (no, meas/pred -0.66) | total +0.00165 (no, meas/pred 4.64) |
+    per-order AB  measured +0.01530 | angle +0.01378 (ok, meas/pred 1.11) | total +0.01909 (ok, meas/pred 0.80) |
+    per-order BA  measured +0.02356 | angle +0.01378 (no, meas/pred 1.71) | total +0.02840 (ok, meas/pred 0.83) |
+    vector AB: |co1| 3.21e-04 | angle: cos +0.395, |meas|/|pred| 1.20, projection ratio 0.47 | total: cos +0.965, |meas|/|pred| 0.83, projection ratio 0.80
+    vector BA: |co1| 4.59e-04 | angle: cos +0.840, |meas|/|pred| 1.71, projection ratio 1.44 | total: cos +0.981, |meas|/|pred| 0.83, projection ratio 0.81
