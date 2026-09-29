@@ -1,0 +1,11 @@
+ANOMALY E -- isolated reference purity: single-carrier (recorded 0.9872 -> 0.9494) and per-mode readout
+   t =      0: single-carrier 0.9872   per-mode 1.000000
+   t =    250: single-carrier 0.9720   per-mode 0.996327
+   t =    500: single-carrier 0.9411   per-mode 0.996090
+   t =    750: single-carrier 0.9356   per-mode 0.996857
+   t =   1000: single-carrier 0.9350   per-mode 0.997142
+   t =   1250: single-carrier 0.9344   per-mode 0.996142
+   t =   1500: single-carrier 0.9375   per-mode 0.996716
+   t =   1750: single-carrier 0.9408   per-mode 0.996690
+   t =   2000: single-carrier 0.9494   per-mode 0.996823
+   change 0 -> T: single-carrier -0.0378; per-mode -3.18e-03; energy drift 2.0e-06

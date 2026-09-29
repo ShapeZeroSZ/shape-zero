@@ -1,0 +1,5 @@
+POST-HOC -- per-mode purity loss (1 - purity) at t = 0, 250, 500, 750, 1000
+   A = 0.025 : 1.11e-16  1.75e-03  1.87e-03  1.95e-03  1.78e-03   (loss / A at T: 0.0712)
+   A = 0.05  : 1.11e-16  3.67e-03  3.91e-03  3.14e-03  2.86e-03   (loss / A at T: 0.0572)
+   A = 0.1   : 1.11e-16  8.26e-03  5.91e-03  6.00e-03  6.30e-03   (loss / A at T: 0.0630)
+   A = 0.05, force linearised (no well nonlinearity): 1.1e-16  3.1e-15  4.3e-15  5.3e-15  6.1e-15
