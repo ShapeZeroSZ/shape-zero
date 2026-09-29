@@ -51,11 +51,13 @@ V0 = 2 * M.C * np.sin(M.K0) / D0
 
 
 # ------------------------------------------------------------------ geometry
-def setup(q):
+def setup(q, segs_override=None):
     if q == 1:
         shape, n0, width, segs = (1200,), 20, 8.0, (60, 80)
     else:
         shape, n0, width, segs = (260, 8, 8), Q.X0, Q.WIDTH, Q.SEGS
+    if segs_override is not None:          # 2026-09-29 masked test: separated-segment geometry
+        segs = segs_override
     ks = np.meshgrid(*[2 * np.pi * np.fft.fftfreq(m) for m in shape], indexing="ij")
     Qt = 2 * M.C * sum(1 - np.cos(k) for k in ks[1:]) if q == 3 else np.zeros(shape)
     om = 0.5 * (-KAP + np.sqrt(KAP ** 2 + 4 * (M.SQ5 + 2 * M.C * (1 - np.cos(ks[0])) + Qt)))
@@ -90,10 +92,10 @@ def seg_phase(kx, om, Qt, geig, Omega=None):
 
 # ------------------------------------------------------------------ the model
 class Model:
-    def __init__(self, q, n, spec, T, amp):
+    def __init__(self, q, n, spec, T, amp, segs=None):
         """spec: [(axis, g), (axis, g)] for the two segments, in order."""
         self.q, self.n, self.T, self.amp = q, n, T, amp
-        self.s = setup(q)
+        self.s = setup(q, segs)
         s = self.s
         self.G = M.generators(n)
         self.mask = (s["kx"] > 0) & (s["kx"] < np.pi)       # a right-moving packet
