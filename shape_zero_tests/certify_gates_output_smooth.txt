@@ -1,0 +1,23 @@
+CERTIFICATION TEST -- amplitude scaling of the deviations from the linear gauge prediction
+
+  q = 1 (gate 7): NOT CERTIFIED
+   u(2) split error: intercept +0.26052 +- 0.00000 (tolerance 1.000); linear: True; slope -0.00000 per 1e-3 -> ok
+      per-order AB: intercept 0.1180 +- 0.0000 (tolerance 1.000); components linear: False; slope 0.0000 deg per 1e-3 -> FAIL
+      per-order BA: intercept 0.2725 +- 0.0000 (tolerance 1.000); components linear: False; slope 0.0000 deg per 1e-3 -> FAIL
+   u(2) floor: intercept +0.00001 +- 0.00000 (zero: True); linear: True; slope 0.00000 deg per 1e-3 -> ok
+   u(3) split error: intercept -0.01657 +- 0.00000 (tolerance 1.000); linear: True; slope +0.00001 per 1e-3 -> ok
+      per-order AB: intercept 0.3954 +- 0.0000 (tolerance 1.000); components linear: False; slope 0.0000 deg per 1e-3 -> FAIL
+      per-order BA: intercept 0.2626 +- 0.0000 (tolerance 1.000); components linear: False; slope 0.0000 deg per 1e-3 -> FAIL
+   u(3) floor: intercept +0.00003 +- 0.00000 (zero: True); linear: True; slope -0.00000 deg per 1e-3 -> ok
+
+  q = 3 (q3_gate): NOT CERTIFIED
+   u(2) split error: intercept -0.00157 +- 0.00000 (tolerance 0.010); linear: True; slope -0.00001 per 1e-3 -> ok
+      per-order AB: intercept 0.0008 +- 0.0000 (tolerance 0.010); components linear: False; slope 0.0000 deg per 1e-3 -> FAIL
+      per-order BA: intercept 0.0008 +- 0.0000 (tolerance 0.010); components linear: False; slope 0.0000 deg per 1e-3 -> FAIL
+   u(2) floor: intercept +0.00000 +- 0.00000 (zero: True); linear: False; slope 0.00000 deg per 1e-3 -> FAIL
+   u(3) split error: intercept -0.00277 +- 0.00000 (tolerance 0.010); linear: True; slope +0.00001 per 1e-3 -> ok
+      per-order AB: intercept 0.0037 +- 0.0000 (tolerance 0.010); components linear: False; slope 0.0000 deg per 1e-3 -> FAIL
+      per-order BA: intercept 0.0037 +- 0.0000 (tolerance 0.010); components linear: False; slope 0.0000 deg per 1e-3 -> FAIL
+   u(3) floor: intercept +0.00000 +- 0.00000 (zero: True); linear: True; slope -0.00000 deg per 1e-3 -> ok
+
+  slopes (deg per 1e-3 of amplitude) -> certify_gates_slopes_smooth.json
