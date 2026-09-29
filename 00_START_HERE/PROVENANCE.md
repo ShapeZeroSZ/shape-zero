@@ -1558,6 +1558,64 @@ displacement, and it does not hold for strong packets (C50). **This universality
 single shared radius, and A′ was selected under the selection rule (MODEL_SPEC §1a), so it is recorded
 as a verified consequence, not counted as an independent prediction** (UNIVERSAL_RELATIONS row 13).
 
+## 6x. Anomalies A and E followed (2026-09-29)
+
+From the anomaly census of 2026-09-29 (a report, no documents changed). Predictions and expectation
+committed before any run: c9297a1 (`shape_zero_tests/ampA_link_predict.py`, `ampA_PREDICTIONS.md`,
+`ampA_link_predictions.txt`, `anomalyE_purity.py`); runs 125823c, 0ad11d3, 99c8a0e. Recorded result:
+MODEL_SPEC §1a, "TRACED 2026-09-29", and §9; PREMISE_LEDGER C52, C53, and notes on P9 and C43.
+
+**Anomaly A — half explained.** Hypothesis: under (A′) the frequency shift δω = ⟨\|ψ\|⟩/(2ω + κ) is
+common to every component (a global phase) and reaches the gauge readout only through the link sector,
+per eigen-direction δθ_j = g h_j δω/(1 + (gωh_j)²), with no new parameter. The (A′) certification was
+rerun and reproduced the recorded runs exactly (identical Bloch coordinates at every amplitude).
+
+| slope (deg per 10⁻³) | predicted | measured | sign |
+|---|---|---|---|
+| q = 1 u(2) split | −0.0144 | −0.0044 | ✓ |
+| q = 1 u(3) split | +0.0279 | +0.0169 | ✓ |
+| q = 3 u(2) split | −0.0058 | −0.0095 | ✓ |
+| q = 3 u(3) split | −0.0120 | +0.0076 | **✗** |
+| q = 1 per-order u(2) AB / BA | 0.0273 / 0.0223 | 0.0160 / 0.0126 | — |
+| q = 1 per-order u(3) AB / BA | 0.0253 / 0.0291 | 0.0133 / 0.0173 | — |
+| q = 3 (q3_gate) per-order u(2) AB / BA | 0.0158 / 0.0125 | 0.0111 / 0.0076 | — |
+| q = 3 (q3_gate) per-order u(3) AB / BA | 0.0136 / 0.0136 | 0.0153 / 0.0236 | — |
+
+The angle law gets the order of magnitude and 3 of 4 split signs. At q = 1 the measured slopes are
+about 0.57× the predicted per-order slopes (0.53–0.60) and 0.30× the predicted u(2) split. It gets the
+q = 3 u(3) sign wrong and does not produce the q = 3 u(3) AB/BA asymmetry (equal strengths give equal
+predicted per-order slopes). Under the tolerance (sign, and \|pred − meas\| ≤ 0.3\|meas\| + 0.002)
+1 of 4 split slopes and 2 of 8 per-order slopes pass; the floors pass only through the 0.002 term and
+do not discriminate. The secondary variant (full branch equation at ω + δω, Q fixed) is identical at
+k₀ = π/2, where the hopping renormalisation vanishes. **An unidentified first-order mechanism remains
+open.**
+
+Smooth-force diagnostic −(√5 + \|ψ\|²)ψ (`SZ_J_WELL=smooth`, a diagnostic only, not a change of
+premise): every slope ≤ 1×10⁻⁵ per 10⁻³ at q = 1 and q = 3 (committed: < 0.001); intercepts as
+predicted (q = 1 split +0.2605 / −0.0166, per-order 0.118 / 0.273 and 0.395 / 0.263; q = 3 ≤ 0.004°).
+The deviations (~10⁻⁵° at 10⁻³) lie below the 10⁻⁴° level the committed "dev/A² constant within 20%"
+test required, so A² scaling was checked **post hoc** by the successive-difference ratio
+\|co(A) − co(A/2)\| / \|co(A/2) − co(A/4)\|: **4.00 in all 16 cases** (A² gives 4, A gives 2; the
+same check gives 2.00 under (A′)). The certifier prints "NOT CERTIFIED" for the smooth runs only
+because its straight-line check fails on the curved (A²) residue. **So the linear-in-A gate residue
+comes entirely from (A′)'s non-analytic force.**
+
+**Disclosures:** the (A′) slope values were known before the derivation; the pass tolerance was set
+after seeing the predictions; the A² ratio check is post hoc. **A second session derived the same
+predictions independently, including the wrong u(3) sign, and reproduced anomaly E.**
+
+**Anomaly E — closed.** The isolated reference packet of `tower_populated_test.py` (n = 4, N = 128,
+amplitude 0.05, T = 2000) lost purity 0.9872 → 0.9494 under the carrier readout. The same run with the
+per-mode readout (`readout_modes`) goes 1.0000 → 0.9968 (`anomalyE_purity_output.txt`): about 92% of
+the 0.038 was the single-carrier readout. The per-mode remainder of 0.0032 appears within the first
+100 time units and then stays flat (0.9961–0.9971) — a fixed nonlinear dressing, not ongoing loss.
+Committed expectation (per-mode loss < 0.005): hit.
+
+**On P9 (a fact, not a change of premise):** the gate residue is traced to the non-analyticity at the
+origin of (A′)'s \|ψ\|ψ. An isotropic analytic force f(\|ψ\|²)ψ contains only odd powers — ψ,
+\|ψ\|²ψ, and so on — so the φ-well's quadratic character is compatible with isotropy only through
+non-analyticity: a three-way choice between isotropy, smoothness and the quadratic term.
+
 ## 7. Recurring failure modes
 
 Each has produced at least two errors in this programme.
