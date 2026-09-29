@@ -40,7 +40,10 @@ AMPS = (1e-3, 5e-4, 2.5e-4)
 CASES = ((2, 0.12, 0.08), (3, 0.15, 0.10))
 # form A (per-dimer radial well) runs: amp_scaling_1d.json, q3 tags ampA*; form A' (whole-node
 # well, the model default since 2026-09-27): nodewell_1d.json, tags nodeA* (nodewell_test.py).
-if M.J_WELL == "node":
+if M.J_WELL == "smooth":                 # diagnostic only (anomaly A, ampA_link_predict.py)
+    OUT1 = os.path.join(HERE, "smooth_1d.json")
+    TAG = {1e-3: "smoothA1", 5e-4: "smoothA2", 2.5e-4: "smoothA4"}
+elif M.J_WELL == "node":
     OUT1 = os.path.join(HERE, "nodewell_1d.json")
     TAG = {1e-3: "nodeA1", 5e-4: "nodeA2", 2.5e-4: "nodeA4"}
 else:

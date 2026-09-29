@@ -1,0 +1,98 @@
+PREDICTIONS (committed before any run) -- anomaly A: certification slopes under A' from the
+link-sector angle law, and the smooth-force diagnostic. Slopes in deg per 1e-3 of amplitude.
+
+  [primary] q = 1
+      u(2) split error: intercept -0.00000 +- 0.00000 (tolerance 1.000); linear: True; slope -0.01435 per 1e-3 -> ok
+         per-order AB: intercept 0.0000 +- 0.0000 (tolerance 1.000); components linear: True; slope 0.0273 deg per 1e-3 -> ok
+         per-order BA: intercept 0.0000 +- 0.0000 (tolerance 1.000); components linear: True; slope 0.0223 deg per 1e-3 -> ok
+      u(2) floor: intercept -0.00000 +- 0.00000 (zero: True); linear: True; slope 0.00005 deg per 1e-3 -> ok
+      u(3) split error: intercept +0.00000 +- 0.00000 (tolerance 1.000); linear: True; slope +0.02792 per 1e-3 -> ok
+         per-order AB: intercept 0.0000 +- 0.0000 (tolerance 1.000); components linear: True; slope 0.0253 deg per 1e-3 -> ok
+         per-order BA: intercept 0.0000 +- 0.0000 (tolerance 1.000); components linear: True; slope 0.0291 deg per 1e-3 -> ok
+      u(3) floor: intercept +0.00000 +- 0.00000 (zero: True); linear: True; slope 0.00005 deg per 1e-3 -> ok
+      u(2) split error at 1e-3: -0.014350 deg
+      u(2) per-order AB at 1e-3: +0.027293 deg
+      u(2) per-order BA at 1e-3: +0.022252 deg
+      u(3) split error at 1e-3: +0.027927 deg
+      u(3) per-order AB at 1e-3: +0.025323 deg
+      u(3) per-order BA at 1e-3: +0.029081 deg
+
+  [primary] q = 3
+      u(2) split error: intercept -0.00000 +- 0.00000 (tolerance 0.010); linear: True; slope -0.00577 per 1e-3 -> ok
+         per-order AB: intercept 0.0000 +- 0.0000 (tolerance 0.010); components linear: True; slope 0.0158 deg per 1e-3 -> ok
+         per-order BA: intercept 0.0000 +- 0.0000 (tolerance 0.010); components linear: True; slope 0.0125 deg per 1e-3 -> ok
+      u(2) floor: intercept +0.00000 +- 0.00000 (zero: True); linear: True; slope 0.00050 deg per 1e-3 -> ok
+      u(3) split error: intercept +0.00000 +- 0.00000 (tolerance 0.010); linear: True; slope -0.01197 per 1e-3 -> ok
+         per-order AB: intercept 0.0000 +- 0.0000 (tolerance 0.010); components linear: True; slope 0.0136 deg per 1e-3 -> ok
+         per-order BA: intercept 0.0000 +- 0.0000 (tolerance 0.010); components linear: True; slope 0.0136 deg per 1e-3 -> ok
+      u(3) floor: intercept -0.00000 +- 0.00000 (zero: True); linear: True; slope 0.00050 deg per 1e-3 -> ok
+      u(2) split error at 1e-3: -0.005769 deg
+      u(2) per-order AB at 1e-3: +0.015830 deg
+      u(2) per-order BA at 1e-3: +0.012493 deg
+      u(3) split error at 1e-3: -0.011967 deg
+      u(3) per-order AB at 1e-3: +0.013634 deg
+      u(3) per-order BA at 1e-3: +0.013634 deg
+
+  [secondary] q = 1
+      u(2) split error: intercept -0.00000 +- 0.00000 (tolerance 1.000); linear: True; slope -0.01435 per 1e-3 -> ok
+         per-order AB: intercept 0.0000 +- 0.0000 (tolerance 1.000); components linear: True; slope 0.0273 deg per 1e-3 -> ok
+         per-order BA: intercept 0.0000 +- 0.0000 (tolerance 1.000); components linear: True; slope 0.0223 deg per 1e-3 -> ok
+      u(2) floor: intercept -0.00000 +- 0.00000 (zero: True); linear: True; slope 0.00005 deg per 1e-3 -> ok
+      u(3) split error: intercept +0.00000 +- 0.00000 (tolerance 1.000); linear: True; slope +0.02792 per 1e-3 -> ok
+         per-order AB: intercept 0.0000 +- 0.0000 (tolerance 1.000); components linear: True; slope 0.0253 deg per 1e-3 -> ok
+         per-order BA: intercept 0.0000 +- 0.0000 (tolerance 1.000); components linear: True; slope 0.0291 deg per 1e-3 -> ok
+      u(3) floor: intercept +0.00000 +- 0.00000 (zero: True); linear: True; slope 0.00005 deg per 1e-3 -> ok
+      u(2) split error at 1e-3: -0.014350 deg
+      u(2) per-order AB at 1e-3: +0.027293 deg
+      u(2) per-order BA at 1e-3: +0.022252 deg
+      u(3) split error at 1e-3: +0.027927 deg
+      u(3) per-order AB at 1e-3: +0.025322 deg
+      u(3) per-order BA at 1e-3: +0.029081 deg
+
+  [secondary] q = 3
+      u(2) split error: intercept -0.00000 +- 0.00000 (tolerance 0.010); linear: True; slope -0.00577 per 1e-3 -> ok
+         per-order AB: intercept 0.0000 +- 0.0000 (tolerance 0.010); components linear: True; slope 0.0158 deg per 1e-3 -> ok
+         per-order BA: intercept 0.0000 +- 0.0000 (tolerance 0.010); components linear: True; slope 0.0125 deg per 1e-3 -> ok
+      u(2) floor: intercept +0.00000 +- 0.00000 (zero: True); linear: True; slope 0.00050 deg per 1e-3 -> ok
+      u(3) split error: intercept +0.00000 +- 0.00000 (tolerance 0.010); linear: True; slope -0.01197 per 1e-3 -> ok
+         per-order AB: intercept 0.0000 +- 0.0000 (tolerance 0.010); components linear: True; slope 0.0136 deg per 1e-3 -> ok
+         per-order BA: intercept 0.0000 +- 0.0000 (tolerance 0.010); components linear: True; slope 0.0136 deg per 1e-3 -> ok
+      u(3) floor: intercept +0.00000 +- 0.00000 (zero: True); linear: True; slope 0.00050 deg per 1e-3 -> ok
+      u(2) split error at 1e-3: -0.005769 deg
+      u(2) per-order AB at 1e-3: +0.015830 deg
+      u(2) per-order BA at 1e-3: +0.012492 deg
+      u(3) split error at 1e-3: -0.011967 deg
+      u(3) per-order AB at 1e-3: +0.013634 deg
+      u(3) per-order BA at 1e-3: +0.013634 deg
+
+  [smooth] q = 1
+      u(2) split error: intercept +0.00000 +- 0.00000 (tolerance 1.000); linear: False; slope -0.00002 per 1e-3 -> FAIL
+         per-order AB: intercept 0.0000 +- 0.0000 (tolerance 1.000); components linear: False; slope 0.0000 deg per 1e-3 -> FAIL
+         per-order BA: intercept 0.0000 +- 0.0000 (tolerance 1.000); components linear: False; slope 0.0000 deg per 1e-3 -> FAIL
+      u(2) floor: intercept +0.00000 +- 0.00000 (zero: True); linear: False; slope 0.00000 deg per 1e-3 -> FAIL
+      u(3) split error: intercept -0.00001 +- 0.00000 (tolerance 1.000); linear: False; slope +0.00003 per 1e-3 -> FAIL
+         per-order AB: intercept 0.0000 +- 0.0000 (tolerance 1.000); components linear: False; slope 0.0000 deg per 1e-3 -> FAIL
+         per-order BA: intercept 0.0000 +- 0.0000 (tolerance 1.000); components linear: False; slope 0.0000 deg per 1e-3 -> FAIL
+      u(3) floor: intercept +0.00000 +- 0.00000 (zero: True); linear: False; slope -0.00000 deg per 1e-3 -> FAIL
+      u(2) split error at 1e-3: -0.000012 deg
+      u(2) per-order AB at 1e-3: +0.000023 deg
+      u(2) per-order BA at 1e-3: +0.000019 deg
+      u(3) split error at 1e-3: +0.000024 deg
+      u(3) per-order AB at 1e-3: +0.000022 deg
+      u(3) per-order BA at 1e-3: +0.000025 deg
+
+  [smooth] q = 3
+      u(2) split error: intercept +0.00000 +- 0.00000 (tolerance 0.010); linear: False; slope -0.00000 per 1e-3 -> FAIL
+         per-order AB: intercept 0.0000 +- 0.0000 (tolerance 0.010); components linear: False; slope 0.0000 deg per 1e-3 -> FAIL
+         per-order BA: intercept 0.0000 +- 0.0000 (tolerance 0.010); components linear: False; slope 0.0000 deg per 1e-3 -> FAIL
+      u(2) floor: intercept -0.00000 +- 0.00000 (zero: True); linear: False; slope 0.00000 deg per 1e-3 -> FAIL
+      u(3) split error: intercept +0.00000 +- 0.00000 (tolerance 0.010); linear: False; slope -0.00001 per 1e-3 -> FAIL
+         per-order AB: intercept 0.0000 +- 0.0000 (tolerance 0.010); components linear: False; slope 0.0000 deg per 1e-3 -> FAIL
+         per-order BA: intercept 0.0000 +- 0.0000 (tolerance 0.010); components linear: False; slope 0.0000 deg per 1e-3 -> FAIL
+      u(3) floor: intercept +0.00000 +- 0.00000 (zero: True); linear: False; slope 0.00000 deg per 1e-3 -> FAIL
+      u(2) split error at 1e-3: -0.000003 deg
+      u(2) per-order AB at 1e-3: +0.000009 deg
+      u(2) per-order BA at 1e-3: +0.000007 deg
+      u(3) split error at 1e-3: -0.000007 deg
+      u(3) per-order AB at 1e-3: +0.000008 deg
+      u(3) per-order BA at 1e-3: +0.000008 deg

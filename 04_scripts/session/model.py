@@ -73,6 +73,9 @@ K0 = np.pi / 2
 # node's radial coordinate of sec 0 (cone_split), invariant under U(n) (indeed O(2n)).
 # 'radial' (form A, the default 2026-09-26 -> 09-27): per dimer, kept so its results
 # reproduce (SZ_J_WELL=radial).
+# 'smooth' (DIAGNOSTIC ONLY, 2026-09-29, anomaly A; not a change of premise): F = -(sqrt5 + |psi|^2) psi
+# on the whole node's radius -- analytic at the origin, so its deviations from the linear
+# dynamics are second order in amplitude (shape_zero_tests/ampA_link_predict.py).
 J_WELL = os.environ.get("SZ_J_WELL", "node")
 GATE7_READOUT = os.environ.get("SZ_GATE7_READOUT", "clear")
 # Residual coupling (ADOPTED 2026-09-26: C_r = 0 for the coded coupling C_r mul(g, v);
@@ -231,6 +234,8 @@ class Lattice:
             return u * u
         if self.well == "node":                  # A': the well on the whole node's radius
             return np.linalg.norm(u, axis=1, keepdims=True) * u
+        if self.well == "smooth":                # diagnostic only: |psi|^2 psi
+            return (u * u).sum(axis=1, keepdims=True) * u
         r = self._dimer_r(u)
         out = np.empty_like(u)
         out[:, 0::2] = r * u[:, 0::2]
@@ -243,6 +248,8 @@ class Lattice:
             return (u ** 3).sum() / 3
         if self.well == "node":
             return (np.linalg.norm(u, axis=1) ** 3).sum() / 3
+        if self.well == "smooth":                # quartic, named cubic for the call sites
+            return ((u * u).sum(axis=1) ** 2).sum() / 4
         return (self._dimer_r(u) ** 3).sum() / 3
 
     def force(self, u, v, W=None, Wm=None):

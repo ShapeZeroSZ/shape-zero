@@ -100,7 +100,8 @@ def evaluate():
         res[q] = slopes
         print(f"\n  q = {q} ({'gate 7' if q == 1 else 'q3_gate'}): {'CERTIFIED' if ok else 'NOT CERTIFIED'}")
         print("\n".join(lines))
-    fn = "certify_gates_slopes.json" if M.J_WELL != "node" else "certify_gates_slopes_nodewell.json"
+    fn = {"node": "certify_gates_slopes_nodewell.json", "smooth": "certify_gates_slopes_smooth.json"}.get(
+        M.J_WELL, "certify_gates_slopes.json")
     json.dump(res, open(os.path.join(HERE, fn), "w"), indent=1)
     print(f"\n  slopes (deg per 1e-3 of amplitude) -> {fn}")
 
