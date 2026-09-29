@@ -1,0 +1,23 @@
+================================================================================================
+ANOMALY A -- PREDICTED CERTIFICATION SLOPES UNDER A' (derivation only; deg per 1e-3 of amplitude)
+================================================================================================
+q = 1: w = 1.628874, 2w + kappa = 4.2295, v_g = 0.4729; A_eff/A at t = 0 0.8166, at crossings t = 97.3, 139.6: 0.8113, 0.8059
+       dw at the two segment positions: 1.9183e-04, 1.9055e-04
+   V1 q=1 u(2): split slope -0.01435; per-order AB 0.0273, BA 0.0222; floor +4.9e-05 (commuting); split(0) = 98.256
+   V1 q=1 u(3): split slope +0.02792; per-order AB 0.0253, BA 0.0291; floor +5.2e-05 (commuting); split(0) = 107.155
+   V2 q=1 u(2): split slope -0.01435; per-order AB 0.0273, BA 0.0222; floor +4.9e-05 (commuting); split(0) = 98.256
+   V2 q=1 u(3): split slope +0.02792; per-order AB 0.0253, BA 0.0291; floor +5.2e-05 (commuting); split(0) = 107.155
+q = 3: Qt = 0.0803, w = 1.647776, v_g = 0.4687; A_eff/A at t = 0 0.5914, at crossings t = 55.5, 98.1: 0.4721, 0.4437
+   V1 q=3 u(2): split slope -0.00640; per-order AB 0.0154, BA 0.0126; floor +2.6e-04; split(0) = 96.986
+   V1 q=3 u(3): split slope -0.01457; per-order AB 0.0148, BA 0.0148; floor +2.7e-04; split(0) = 100.323
+   V2 q=3 u(2): split slope -0.00640; per-order AB 0.0154, BA 0.0126; floor +2.6e-04; split(0) = 96.986
+   V2 q=3 u(3): split slope -0.01457; per-order AB 0.0148, BA 0.0148; floor +2.7e-04; split(0) = 100.323
+SMOOTH-FORCE DIAGNOSTIC (|psi|^2 psi; diagnostic only): predicted split-error change from the A -> 0 value
+   q=1 u(2) A = 0.04: dw = 2.641e-04; split change -0.01969, per-order AB 0.03750
+   q=1 u(2) A = 0.02: dw = 6.602e-05; split change -0.00493, per-order AB 0.00937
+   q=1 u(2) A = 0.01: dw = 1.651e-05; split change -0.00123, per-order AB 0.00234
+   q=1 u(2) A = 0.005: dw = 4.126e-06; split change -0.00031, per-order AB 0.00059
+   q=1 u(3) A = 0.04: dw = 2.641e-04; split change +0.03832, per-order AB 0.03484
+   q=1 u(3) A = 0.02: dw = 6.602e-05; split change +0.00958, per-order AB 0.00871
+   q=1 u(3) A = 0.01: dw = 1.651e-05; split change +0.00240, per-order AB 0.00218
+   q=1 u(3) A = 0.005: dw = 4.126e-06; split change +0.00060, per-order AB 0.00054
