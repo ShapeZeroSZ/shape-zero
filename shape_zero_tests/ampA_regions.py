@@ -219,7 +219,7 @@ def jobs():
     for w in WIDTHS:
         J += [(f"w_{w}", 1, 2, "AB", k, WS["T"]) for k in ("lin", "ALL")]
     # longest first
-    J.sort(key=lambda a: (a[0].startswith("w_"), a[0] != "q1"), reverse=False)
+    J.sort(key=lambda a: (not a[0].startswith("w_"), a[0] != "q1"))
     return J
 
 
@@ -229,5 +229,59 @@ def run():
     json.dump(res, open(os.path.join(HERE, "ampA_regions_runs.json"), "w"), indent=1)
 
 
-if __name__ == "__main__":
+if __name__ == "__main__" and sys.argv[1] in ("predict", "run"):
     {"predict": predict, "run": run}[sys.argv[1]]()
+
+
+# ------------------------------------------------------------------ evaluation (written after the predictions commit 000deb4)
+def evaluate():
+    P = json.load(open(os.path.join(HERE, "ampA_regions_predictions.json")))
+    R = json.load(open(os.path.join(HERE, "ampA_regions_runs.json")))
+    Mk = json.load(open(os.path.join(HERE, "ampA_masked_runs.json")))
+    co = {}
+    for r in R:
+        co[(r["tag"], r["n"], r["order"], r["kind"])] = np.array(r["co"])
+    for r in Mk:
+        if r["tag"] == "cert":
+            co[({1: "q1", 3: "q3"}[r["q"]], r["n"], r["order"], r["kind"])] = np.array(r["co"])
+    nrm = np.linalg.norm
+    proj = lambda v, m: float(v @ m / (m @ m))
+    deg = lambda v: float(np.degrees(nrm(v)))
+    L_ = ["EVALUATION against ampA_REGIONS_PREDICTIONS.md (000deb4); magnitudes in deg per 1e-3"]
+    L_.append("\n(1) OUT split -- factor = projection onto the model vector (BEFORE: ray + K4 pre; BETWEEN: ray + K4 mid)")
+    for tag in ("q1", "q3"):
+        for n in (2, 3):
+            for o in ("AB", "BA"):
+                lin = co[(tag, n, o, "lin")]
+                d = {k: co[(tag, n, o, k)] - lin for k in ("BEFORE", "BETWEEN", "AFTER", "IN", "OUT", "ALL")}
+                m = {k: np.array(v) for k, v in P[f"{tag} u({n}) {o}"].items()}
+                mB, mW = m["BEFORE"] + m["K4_pre"], m["BETWEEN"] + m["K4_mid"]
+                add = nrm(d["BEFORE"] + d["BETWEEN"] + d["AFTER"] - d["OUT"]) / nrm(d["OUT"])
+                L_.append(f"  {tag} u({n}) {o}: |BEFORE| {deg(d['BEFORE']):.5f} (model {deg(mB):.5f}, factor {proj(d['BEFORE'], mB):.3f}); "
+                          f"|BETWEEN| {deg(d['BETWEEN']):.5f} (model {deg(mW):.5f}, factor {proj(d['BETWEEN'], mW):+.3f}, "
+                          f"proj on BEFORE-model {proj(d['BETWEEN'], mB):+.3f}); "
+                          f"|AFTER|/|ALL| {nrm(d['AFTER']) / nrm(d['ALL']):.4f}; additivity {add:.4f}; "
+                          f"|IN| {deg(d['IN']):.5f} (ray model {deg(m['IN']):.5f})")
+    L_.append("\n(2) q = 3, transversely uniform packet")
+    for n in (2, 3):
+        for o in ("AB", "BA"):
+            lin = co[("q3u", n, o, "lin")]
+            dI, dA = co[("q3u", n, o, "IN")] - lin, co[("q3u", n, o, "ALL")] - lin
+            m = {k: np.array(v) for k, v in P[f"q3u u({n}) {o}"].items()}
+            mA = m["ALL"] + m["K4_pre"] + m["K4_mid"]
+            L_.append(f"  u({n}) {o}: |IN|/|ALL| {nrm(dI) / nrm(dA):.3f}; |ALL| {deg(dA):.5f}; ALL factor on (ray + K4) {proj(dA, mA):.3f}; "
+                      f"IN projection on (ray + K4) {proj(dI, mA):+.3f}")
+    L_.append("\n(3b) width scan, single segment, u(2) g = 0.12")
+    for w in WIDTHS:
+        dv = co[(f"w_{w}", 2, "AB", "ALL")] - co[(f"w_{w}", 2, "AB", "lin")]
+        mv = np.array(P[f"width {w}"]["ANGLE_per_site"])
+        L_.append(f"  width {w:>4}: measured {deg(dv):.5f}, predicted {deg(mv):.5f}, factor {proj(dv, mv):.3f}, "
+                  f"cos {dv @ mv / (nrm(dv) * nrm(mv)):+.4f}")
+    L_.append("\n  drifts: max " + f"{max(r['drift'] for r in R):.1e}")
+    out = "\n".join(L_)
+    print(out)
+    open(os.path.join(HERE, "ampA_regions_compare_output.txt"), "w").write(out + "\n")
+
+
+if __name__ == "__main__" and sys.argv[1] == "evaluate":
+    evaluate()
