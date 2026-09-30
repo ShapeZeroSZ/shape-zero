@@ -1,0 +1,8 @@
+q1 u(2) AB: cos(AFTER,BEFORE) -0.634; AFTER on model-ALL -0.069; BEFORE on model-ALL +0.672; BETWEEN on model-ALL -0.006; IN on model-ALL -0.009; ALL on model-ALL 0.587; 4-region sum vs ALL 0.0037
+q1 u(2) BA: cos(AFTER,BEFORE) -0.659; AFTER on model-ALL -0.069; BEFORE on model-ALL +0.688; BETWEEN on model-ALL -0.013; IN on model-ALL -0.025; ALL on model-ALL 0.582; 4-region sum vs ALL 0.0071
+q1 u(3) AB: cos(AFTER,BEFORE) -0.636; AFTER on model-ALL -0.075; BEFORE on model-ALL +0.713; BETWEEN on model-ALL -0.031; IN on model-ALL -0.044; ALL on model-ALL 0.562; 4-region sum vs ALL 0.0057
+q1 u(3) BA: cos(AFTER,BEFORE) -0.655; AFTER on model-ALL -0.067; BEFORE on model-ALL +0.669; BETWEEN on model-ALL -0.003; IN on model-ALL -0.006; ALL on model-ALL 0.594; 4-region sum vs ALL 0.0063
+q3 u(2) AB: cos(AFTER,BEFORE) -0.659; AFTER on model-ALL -0.040; BEFORE on model-ALL +0.619; BETWEEN on model-ALL +0.019; IN on model-ALL +0.078; ALL on model-ALL 0.677; 4-region sum vs ALL 0.0003
+q3 u(2) BA: cos(AFTER,BEFORE) -0.736; AFTER on model-ALL -0.058; BEFORE on model-ALL +0.731; BETWEEN on model-ALL -0.043; IN on model-ALL -0.060; ALL on model-ALL 0.569; 4-region sum vs ALL 0.0029
+q3 u(3) AB: cos(AFTER,BEFORE) -0.715; AFTER on model-ALL -0.044; BEFORE on model-ALL +0.644; BETWEEN on model-ALL +0.016; IN on model-ALL +0.163; ALL on model-ALL 0.780; 4-region sum vs ALL 0.0003
+q3 u(3) BA: cos(AFTER,BEFORE) -0.423; AFTER on model-ALL -0.023; BEFORE on model-ALL +0.480; BETWEEN on model-ALL +0.107; IN on model-ALL +0.231; ALL on model-ALL 0.796; 4-region sum vs ALL 0.0014

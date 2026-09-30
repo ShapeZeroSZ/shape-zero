@@ -1,0 +1,25 @@
+EVALUATION against ampA_REGIONS_PREDICTIONS.md (000deb4); magnitudes in deg per 1e-3
+
+(1) OUT split -- factor = projection onto the model vector (BEFORE: ray + K4 pre; BETWEEN: ray + K4 mid)
+  q1 u(2) AB: |BEFORE| 0.01821 (model 0.02739, factor 0.665); |BETWEEN| 0.00069 (model 0.00174, factor +0.395, proj on BEFORE-model -0.008); |AFTER|/|ALL| 0.1795; additivity 0.0021; |IN| 0.00117 (ray model 0.00005)
+  q1 u(2) BA: |BEFORE| 0.01470 (model 0.02213, factor 0.664); |BETWEEN| 0.00050 (model 0.00126, factor +0.396, proj on BEFORE-model -0.014); |AFTER|/|ALL| 0.1846; additivity 0.0033; |IN| 0.00071 (ray model 0.00005)
+  q1 u(3) AB: |BEFORE| 0.01939 (model 0.02919, factor 0.664); |BETWEEN| 0.00100 (model 0.00249, factor +0.398, proj on BEFORE-model -0.029); |AFTER|/|ALL| 0.1968; additivity 0.0032; |IN| 0.00156 (ray model 0.00002)
+  q1 u(3) BA: |BEFORE| 0.02226 (model 0.03352, factor 0.664); |BETWEEN| 0.00069 (model 0.00174, factor +0.397, proj on BEFORE-model -0.004); |AFTER|/|ALL| 0.1762; additivity 0.0033; |IN| 0.00080 (ray model 0.00009)
+  q3 u(2) AB: |BEFORE| 0.01336 (model 0.02080, factor 0.642); |BETWEEN| 0.00221 (model 0.00553, factor +0.399, proj on BEFORE-model -0.008); |AFTER|/|ALL| 0.0901; additivity 0.0002; |IN| 0.00510 (ray model 0.00036)
+  q3 u(2) BA: |BEFORE| 0.01002 (model 0.01576, factor 0.635); |BETWEEN| 0.00071 (model 0.00256, factor +0.273, proj on BEFORE-model -0.040); |AFTER|/|ALL| 0.1229; additivity 0.0003; |IN| 0.00227 (ray model 0.00040)
+  q3 u(3) AB: |BEFORE| 0.01576 (model 0.02410, factor 0.654); |BETWEEN| 0.00419 (model 0.01038, factor +0.403, proj on BEFORE-model -0.060); |AFTER|/|ALL| 0.0627; additivity 0.0002; |IN| 0.00854 (ray model 0.00024)
+  q3 u(3) BA: |BEFORE| 0.01575 (model 0.02410, factor 0.653); |BETWEEN| 0.00371 (model 0.00925, factor +0.397, proj on BEFORE-model +0.134); |AFTER|/|ALL| 0.0588; additivity 0.0005; |IN| 0.00809 (ray model 0.00024)
+
+(2) q = 3, transversely uniform packet
+  u(2) AB: |IN|/|ALL| 0.348; |ALL| 0.01980; ALL factor on (ray + K4) 0.660; IN projection on (ray + K4) +0.067
+  u(2) BA: |IN|/|ALL| 0.290; |ALL| 0.00965; ALL factor on (ray + K4) 0.524; IN projection on (ray + K4) -0.103
+  u(3) AB: |IN|/|ALL| 0.495; |ALL| 0.02392; ALL factor on (ray + K4) 0.760; IN projection on (ray + K4) +0.146
+  u(3) BA: |IN|/|ALL| 0.299; |ALL| 0.03588; ALL factor on (ray + K4) 0.790; IN projection on (ray + K4) +0.223
+
+(3b) width scan, single segment, u(2) g = 0.12
+  width  4.0: measured 0.02362, predicted 0.01556, factor 0.784, cos +0.5163
+  width  8.0: measured 0.01496, predicted 0.02165, factor 0.666, cos +0.9644
+  width 16.0: measured 0.01537, predicted 0.02306, factor 0.666, cos +0.9997
+  width 32.0: measured 0.01546, predicted 0.02318, factor 0.667, cos +1.0000
+
+  drifts: max 1.1e-06
