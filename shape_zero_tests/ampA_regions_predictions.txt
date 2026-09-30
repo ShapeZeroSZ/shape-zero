@@ -1,0 +1,17 @@
+PREDICTIONS (ray bookkeeping + K4; committed before any run) -- dco vectors in *.json; rotation-angle magnitudes below, deg per 1e-3
+  q1  u(2) AB: BEFORE 0.02720  IN 0.00005  BETWEEN 0.00004  AFTER 0.00000  ALL 0.02715  OUT 0.02718  K4_pre 0.00063  K4_mid 0.00174  ANGLE_per_site 0.02711
+  q1  u(2) BA: BEFORE 0.02216  IN 0.00005  BETWEEN 0.00004  AFTER 0.00000  ALL 0.02209  OUT 0.02213  K4_pre 0.00057  K4_mid 0.00126  ANGLE_per_site 0.02206
+  q3  u(2) AB: BEFORE 0.01659  IN 0.00036  BETWEEN 0.00118  AFTER 0.00000  ALL 0.01588  OUT 0.01603  K4_pre 0.00595  K4_mid 0.00570  ANGLE_per_site 0.01529
+  q3  u(2) BA: BEFORE 0.01359  IN 0.00040  BETWEEN 0.00132  AFTER 0.00000  ALL 0.01246  OUT 0.01271  K4_pre 0.00482  K4_mid 0.00156  ANGLE_per_site 0.01218
+  q3u u(2) AB: BEFORE 0.02476  IN 0.00083  BETWEEN 0.00053  AFTER 0.00000  ALL 0.02409  OUT 0.02449  K4_pre 0.00618  K4_mid 0.00813  ANGLE_per_site 0.02341
+  q3u u(2) BA: BEFORE 0.01995  IN 0.00090  BETWEEN 0.00057  AFTER 0.00000  ALL 0.01897  OUT 0.01956  K4_pre 0.00543  K4_mid 0.00274  ANGLE_per_site 0.01843
+  q1  u(3) AB: BEFORE 0.02892  IN 0.00002  BETWEEN 0.00002  AFTER 0.00000  ALL 0.02891  OUT 0.02891  K4_pre 0.00105  K4_mid 0.00250  ANGLE_per_site 0.02886
+  q1  u(3) BA: BEFORE 0.03342  IN 0.00009  BETWEEN 0.00007  AFTER 0.00000  ALL 0.03329  OUT 0.03336  K4_pre 0.00090  K4_mid 0.00174  ANGLE_per_site 0.03322
+  q3  u(3) AB: BEFORE 0.01623  IN 0.00024  BETWEEN 0.00078  AFTER 0.00000  ALL 0.01617  OUT 0.01618  K4_pre 0.01099  K4_mid 0.01087  ANGLE_per_site 0.01535
+  q3  u(3) BA: BEFORE 0.01623  IN 0.00024  BETWEEN 0.00078  AFTER 0.00000  ALL 0.01617  OUT 0.01618  K4_pre 0.01099  K4_mid 0.00952  ANGLE_per_site 0.01535
+  q3u u(3) AB: BEFORE 0.02495  IN 0.00059  BETWEEN 0.00038  AFTER 0.00000  ALL 0.02480  OUT 0.02489  K4_pre 0.01269  K4_mid 0.01589  ANGLE_per_site 0.02410
+  q3u u(3) BA: BEFORE 0.02495  IN 0.00059  BETWEEN 0.00038  AFTER 0.00000  ALL 0.02480  OUT 0.02489  K4_pre 0.01269  K4_mid 0.01374  ANGLE_per_site 0.02410
+  width  4.0: single-segment rotation change 0.01556 deg per 1e-3 (A_eff at the segment centre 5.555e-09 x 1e-3/1e-8)
+  width  8.0: single-segment rotation change 0.02165 deg per 1e-3 (A_eff at the segment centre 7.650e-09 x 1e-3/1e-8)
+  width 16.0: single-segment rotation change 0.02306 deg per 1e-3 (A_eff at the segment centre 8.127e-09 x 1e-3/1e-8)
+  width 32.0: single-segment rotation change 0.02318 deg per 1e-3 (A_eff at the segment centre 8.163e-09 x 1e-3/1e-8)
