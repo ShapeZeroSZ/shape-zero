@@ -224,8 +224,18 @@ def jobs():
 
 
 def run():
-    with Pool(4) as p:
-        res = p.map(job, jobs(), chunksize=1)
+    """incremental: each finished job is appended to ampA_regions_runs.jsonl; finished jobs are skipped."""
+    part = os.path.join(HERE, "ampA_regions_runs.jsonl")
+    done = set()
+    if os.path.exists(part):
+        for line in open(part):
+            r = json.loads(line)
+            done.add((r["tag"], r["n"], r["order"], r["kind"]))
+    todo = [a for a in jobs() if (a[0], a[2], a[3], a[4]) not in done]
+    with Pool(4) as p, open(part, "a") as f:
+        for r in p.imap_unordered(job, todo, chunksize=1):
+            f.write(json.dumps(r) + "\n"); f.flush()
+    res = [json.loads(line) for line in open(part)]
     json.dump(res, open(os.path.join(HERE, "ampA_regions_runs.json"), "w"), indent=1)
 
 
