@@ -1616,6 +1616,112 @@ origin of (A′)'s \|ψ\|ψ. An isotropic analytic force f(\|ψ\|²)ψ contains 
 \|ψ\|²ψ, and so on — so the φ-well's quadratic character is compatible with isotropy only through
 non-analyticity: a three-way choice between isotropy, smoothness and the quadratic term.
 
+## 6y. Anomaly A accounted for: two mechanisms and the 2/p law (2026-09-29 to 2026-10-01)
+
+**Status: accounted for empirically, with no free parameter; mechanism open.** Recorded result:
+MODEL_SPEC §1a, "ACCOUNTED FOR 2026-10-01", and §9; PREMISE_LEDGER C54, with notes on P9 and C52.
+
+Five tests, each with predictions committed before its runs. All scripts and outputs are in
+`shape_zero_tests/`.
+
+| step | predictions | results | question |
+|---|---|---|---|
+| candidate mechanisms | 8b61310 (`ampA_MECHANISMS.md`) | fccf291 | which first-order mechanisms exist |
+| masked first-order runs | e890e2a (`ampA_MASKED_PREDICTIONS.md`) | fb51f1b | inside / outside / everywhere |
+| outside regions, transverse test, width scan | 000deb4 (`ampA_REGIONS_PREDICTIONS.md`) | ae17fc2 | where the factor lives; what the in-segment term is |
+| stationary wave, smooth-well power test | 524653f (`ampA_POWER_PREDICTIONS.md`) | 20030b1 | is the factor 2/p |
+| Whitham derivation, p = 6 | e928ab1 (`ampA_WHITHAM_PREDICTIONS.md`) | fe28a36 | the law from conserved quantities |
+
+**Exact statements (derived).**
+- At first order, (A′) acts as a scalar potential V = \|u₀\| common to every internal component.
+- A first-order kick applied after the whole packet has passed the last segment leaves ρ unchanged (E3).
+- u(3)'s axes 0 and 1 form the two-level problem.
+- With equal strengths, an AB/BA asymmetry needs a rotation about the commutator axis.
+- The exact plane-wave transfer matrix agrees with WKB to 10⁻⁶.
+
+**Two mechanisms (8b61310, fccf291).**
+- The per-direction angle law, plus **K4**: the shared radius acting on eigen-channels displaced by
+  their group delays before the next segment.
+- Together they give the direction of all 8 first-order Bloch-vector changes: cosine 0.965–0.991,
+  against 0.40–0.99 for the angle law alone.
+- They give the q = 3 u(3) AB/BA ratio: 1.49 predicted, 1.54 measured.
+- Sizes are 0.57–0.83 of the model's.
+
+**Masked runs (e890e2a, fb51f1b).**
+- Checks: additivity ≤ 0.4%; ALL reproduces the recorded slopes to ≤ 0.2%.
+- The OUT factor is 0.58–0.65 in all 8 cases.
+- IN is 4–10% of ALL at q = 1 and 29–47% at q = 3.
+- With the segments separated (60, 110), the q = 1 factor is 0.50–0.59: the instantaneous-segment
+  approximation is **not** the cause.
+
+**Regions, transverse test and width scan (000deb4, ae17fc2).**
+- The four regions add up to ALL within 0.7%.
+- BEFORE carries 0.62–0.73 of the model (one case 0.48).
+- AFTER is 6–20% of ALL, anti-aligned with BEFORE (cosine −0.42 to −0.74): **the exit-edge
+  contribution**.
+- BETWEEN is about 0.40 of the K4 model.
+- A transversely uniform q = 3 packet gives IN 29–50% of ALL, so **the in-segment term is not
+  transverse**. That slab is exactly the 1-D problem with x-width 3, so the term is a narrow-packet
+  effect.
+- Width scan, single segment: factor 0.784 / **0.666 / 0.666 / 0.667** at widths 4 / 8 / 16 / 32,
+  with cosine 0.52 / 0.964 / 0.9997 / 1.0000.
+- My eikonal re-derivation predicted factor 1; **refuted**.
+
+**Stationary wave and well power (524653f, 20030b1).**
+- A flat-top wave read in its steady plateau gives factor **0.9999 (A′) and 1.0000 (smooth)**: the
+  stationary transfer matrix is exact.
+- The candidate "energy per action instead of frequency shift" predicts 2/p (yours). For the smooth
+  well (p = 4), single segment, widths 8–32, the factor is **0.498–0.500**, with A² ratio 3.99–4.00.
+
+**Whitham derivation and p = 6 (e928ab1, fe28a36).**
+- From 𝓛 = ½(Ω² + κΩ − Q)a² − a^p/p: 𝒜 = Da²/2, on-shell 𝓛 = (½ − 1/p)a^p, and
+  ℰ/𝒜 = ω_lin + (2/p)δΩ.
+- A localised packet's conserved totals give E/I = ω_lin + (2/p)·⟨F^p⟩/⟨F²⟩/D. Numerical check on
+  lattice packets: 0.6666, 0.5001 and 0.3333 for p = 3, 4 and 6.
+- A stationary wave conserves fluxes, and their ratio is exactly Ω.
+- With a \|ψ\|⁴ψ diagnostic well (p = 6; defined in the test script only, not a change of premise):
+  - packet factor **0.330 / 0.333** (widths 16 / 32), fourth-order ratio 4.165 (expected 4.165);
+  - stationary factor **1.0000**.
+- **The 2/p law holds at three powers**, with no free parameter.
+
+**Open.**
+- A dynamical mechanism linking E/I to the segment rotation. The action-weighted mean frequency of
+  the packet's field is the full shift (self-phase check: 0.01928 against 0.0192), not E/I.
+- A derivation of the narrow-packet in-segment term.
+- The exit-edge contribution is not derived either: ray theory misses it.
+
+**Corrections.**
+1. **The fccf291 reading** that K4 flips the q = 3 u(3) split sign is **corrected**. The positive split
+   comes mainly from the in-segment narrow-width term: IN +0.0069 against OUT +0.0008.
+2. **The wording that E3 required zero in the AFTER region** (`ampA_REGIONS_PREDICTIONS.md`, 000deb4)
+   is **corrected**. E3 covers potential acting after the whole packet has passed the last segment. It
+   does not cover the region downstream of the segment while the packet's tail is still inside it.
+   Ray theory predicted zero there, and that prediction failed.
+3. **The request's expectation that E/I reduces to the local frequency for a stationary wave was
+   wrong.** For a nonlinear wave, ℰ/𝒜 ≠ Ω because 𝓛 ≠ 0 on-shell. The stationary factor 1 comes from
+   the flux ratio.
+
+**Disclosures.**
+- The recorded (A′) slopes were known before every derivation.
+- Model outputs were seen before each commit.
+- From 8b61310 onward, tolerances were set after seeing the model numbers.
+- Two bugs were fixed before 8b61310, after its first outputs:
+  - a non-unitary Born term at A = 10⁻³, now run at 10⁻⁸ and scaled;
+  - arccos precision in `model.angle`, now 2 arcsin(\|â − b̂\|/2).
+- Readout times are the recorded protocol values.
+- The separated-segment geometry and the width scan are ours.
+- The energy-per-action (2/p) and E/I candidates are yours.
+- The first regions launch was stopped at the background time limit with nothing saved. It was rerun
+  unchanged, with incremental saving.
+- The logged "mean \|u\| in window" in the power runs reads only the first complex component. No result
+  uses it.
+- The regions direction check (`ampA_regions_posthoc.py`) is post hoc.
+
+**On P9 (a fact, not a change of premise):** the gate residue's size factor depends on the well's
+power as 2/p. So the P9 choice is measurable in a realisation: 2/3 for (A′), 1/2 for a smooth force
+such as a pendulum's, whose leading nonlinear term is quartic. The factor does not depend on the
+term's sign.
+
 ## 7. Recurring failure modes
 
 Each has produced at least two errors in this programme.

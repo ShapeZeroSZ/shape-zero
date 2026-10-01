@@ -250,6 +250,48 @@ nothing about the on-site potential. **The choice rests on two things:**
   produce the q = 3 u(3) AB/BA asymmetry (0.0136 / 0.0136 predicted, 0.0153 / 0.0236 measured). **An
   unidentified first-order mechanism remains open** (§9). Disclosures: the (A′) values were known
   before the derivation; the pass tolerance was set after seeing the predictions.
+- **[ACCOUNTED FOR 2026-10-01 — anomaly A: accounted for empirically, with no free parameter; mechanism
+  open** (PROVENANCE §6y; PREMISE_LEDGER C54; every test with predictions committed first).]
+  **Two first-order mechanisms:**
+  - **the per-direction angle law** above;
+  - **K4, the shared radius acting on eigen-channels displaced by their group delays** before a later
+    segment.
+
+  Together they give the direction of every first-order Bloch-vector change (cosine 0.965–0.991, all 8
+  cases). They overstate its size by a factor that is **not** a modelling artefact: it is the same for
+  a single segment and with the segments separated.
+
+  **The 2/p law.** The size factor (measured/eikonal) depends only on the well's power p (potential
+  ∝ \|u\|^p):
+
+  | p | well | packet factor | stationary wave |
+  |---|---|---|---|
+  | 3 | (A′) | **2/3** (0.666–0.667) | **1** (0.9999) |
+  | 4 | smooth diagnostic | **1/2** (0.498–0.500) | **1** (1.0000) |
+  | 6 | \|ψ\|⁴ψ diagnostic | **1/3** (0.330–0.333) | **1** (1.0000) |
+
+  The packet values are measured in the single-segment geometry at widths 8–32, each at its own order
+  in amplitude (A, A², A⁴).
+
+  **Identified with Whitham invariants.**
+  - The averaged Lagrangian 𝓛 = ½(Ω² + κΩ − Q)a² − a^p/p gives action density 𝒜 = Da²/2 and
+    on-shell 𝓛 = (½ − 1/p)a^p.
+  - So energy per action is ℰ/𝒜 = ω_lin + (2/p)δΩ, where δΩ = a^{p−2}/D is the frequency shift the
+    eikonal uses.
+  - **The conserved totals E/I govern a localised packet** (factor 2/p, with the same envelope
+    weighting ⟨F^p⟩/⟨F²⟩).
+  - **The conserved fluxes govern a stationary wave**: energy flux/action flux = Ω exactly, factor 1.
+
+  **Also measured:**
+  - **A narrow-packet in-segment term** that ray theory does not capture: 29–50% of the total at
+    x-width 3, whether or not the packet has transverse structure; 4–10% at width 8. It carries most of
+    the positive q = 3 u(3) split.
+  - **A small exit-edge contribution** from the region after the last segment, which ray theory also
+    misses: 6–20% of the total, opposite to the main term.
+
+  **Open:**
+  - a dynamical mechanism linking E/I to the segment rotation;
+  - a derivation of the narrow-packet in-segment term.
 
 **Implemented** in `model.py`: `J_WELL = "node"` (default); **(A) stays available** as
 `SZ_J_WELL=radial` (and the elementwise form as `SZ_J_WELL=elementwise`). Everything below and in §4d
@@ -3251,7 +3293,7 @@ established — see §7b.*
 | ~~§6b's gate-7 u(3) entry~~ **RESOLVED 2026-09-25**: it is the platform benchmark `phi_gauge_u3_working.py` (reproduced exactly), mislabelled as `model.py`'s gate 7; label corrected in §6b. The original entry: | 65.1166 / 64.9712 is not reproduced by the current `model.py` at κ = 0.5 (117.92 / 118.29); pre-existing, found in the κ\* re-run — which configuration produced it is unrecorded |
 | ~~the operating point against persistence~~ **RESOLVED 2026-09-26** by the change of node form (§1a): under the radial form the window is [κ\*, ∞) and κ\* is no longer excluded. The original entry: | the strongest persistence the model admits (no decay, no change of branch) confines κ to [4.9, 7.5] at q = 3, c = 1 and excludes the operating point κ\*, where the u∘u nonlinearity converts a-waves into the opposite chirality (§3, "FINDING", "CORRECTION"); whether to adopt that form, and so move the operating point, is undecided |
 | **the D8 two-generator flow is not realised in the lattice** | the D8 flow ψ̇ = ψa + bψ needs two octonionic generators on one node; in the lattice 𝕁 is not an octonionic multiplication (neither L_x nor R_y nor L_x + R_y, best-fit residual 0.82–1.00), the residual term C_r·mul(g, v) supplies one generator, and κ and C_r have never been on together (gate 11 runs at κ = 0). θ_ab therefore has no lattice counterpart (INPUT_LEDGER §3.2; `shape_zero_tests/d8_theta.py`) [**REFINED 2026-09-26:** "𝕁 is not an octonionic multiplication" holds **in the model's present identification** of node components with octonion units (an unrecorded choice in the tower code). 𝕁 shares R_e's orientation class (Pfaffian +1, against −1 for L_e; `shape_zero_tests/d8_lattice_scoping.py`), so an orientation-preserving relabelling could make 𝕁 = R_a, and κ𝕁 + C_r L_g would then have the D8 form R_a + L_b — but §2 names **L_a**, which gives L_(κa + C_r g), one generator. **Exact J-compatibility forbids a second generator:** [R_a, L_b] = 0 only for b ∥ a. κ and C_r have now been run together (§4b.1, FINDING 2026-09-26). **New tension:** §4b.1 says the residual "becomes the existing D8 structure" at B = 0, but L_g alone is the one-generator law that D8's plurality argument excludes as the D8 dynamics (it is D2 motion; `z1_d8_plurality.py`).] |
-| **the remaining amplitude-proportional effect under (A′)** | with the self-precession gone, deviations from the linear gauge prediction still grow ∝ A (≈ A·g): split slopes −0.0044 / +0.0169 (q = 1) and −0.0095 / +0.0076 (q = 3) per 10⁻³, only 1.5–6× below form (A)'s, u(3) changing sign; q = 3 u(3) per-order 0.024; q3_gate deviations 0.011–0.020° at 10⁻³. Not derived; a candidate is the common frequency shift changing each link's rotation angle (~ gλ δω). Open (§1a, "ADOPTED 2026-09-27") [**2026-09-29 — half explained** (§1a, "TRACED 2026-09-29"; PROVENANCE §6x): the residue comes entirely from (A′)'s non-analytic force (the smooth diagnostic removes every slope, residue ∝ A²); the angle-law candidate gets the magnitude order and 3 of 4 split signs but overpredicts at q = 1 (measured ≈ 0.57× per-order, 0.30× u(2) split), gets the q = 3 u(3) sign wrong and misses the q = 3 u(3) AB/BA asymmetry. **The remaining first-order mechanism is unidentified — open**] |
+| **the remaining amplitude-proportional effect under (A′)** | with the self-precession gone, deviations from the linear gauge prediction still grow ∝ A (≈ A·g): split slopes −0.0044 / +0.0169 (q = 1) and −0.0095 / +0.0076 (q = 3) per 10⁻³, only 1.5–6× below form (A)'s, u(3) changing sign; q = 3 u(3) per-order 0.024; q3_gate deviations 0.011–0.020° at 10⁻³. Not derived; a candidate is the common frequency shift changing each link's rotation angle (~ gλ δω). Open (§1a, "ADOPTED 2026-09-27") [**2026-09-29 — half explained** (§1a, "TRACED 2026-09-29"; PROVENANCE §6x): the residue comes entirely from (A′)'s non-analytic force (the smooth diagnostic removes every slope, residue ∝ A²); the angle-law candidate gets the magnitude order and 3 of 4 split signs but overpredicts at q = 1 (measured ≈ 0.57× per-order, 0.30× u(2) split), gets the q = 3 u(3) sign wrong and misses the q = 3 u(3) AB/BA asymmetry. **The remaining first-order mechanism is unidentified — open**] [**2026-10-01 — accounted for empirically, with no free parameter; mechanism open** (§1a, "ACCOUNTED FOR 2026-10-01"; PROVENANCE §6y). Two first-order mechanisms, the angle law and K4 (the shared radius on channels displaced by group delay), give every direction. The size follows the **2/p law** identified with Whitham invariants: packet factor 2/3 (A′, p = 3), 1/2 (smooth, p = 4), 1/3 (p = 6), set by the conserved totals E/I; stationary waves give 1, set by the conserved fluxes. Also measured: a narrow-packet in-segment term that ray theory does not capture, and a small exit-edge contribution. **Open:** a dynamical mechanism linking E/I to the segment rotation; a derivation of the narrow-packet in-segment term] |
 | **gate 7's floor under the radial form** | [2026-09-27: form (A)'s — superseded by (A′), §1a]  the first-order self-precession correction captures the per-order errors but over-predicts the order-dependent floor ~1.8×; gate 7 fails its floor criterion. Next: the slice model (§4d, "Gate 7 under the radial well"), predictions first [2026-09-26: the routine gate now reports the floor without a pass/fail; the small-amplitude limit is certified (§4d, "Amplitude scaling"); the measured slopes there are the target for the slice derivation] [2026-09-26: the slice-resolved model matches the q = 1 floors (≤ 0.2%) and is adopted as gate 7's floor prediction at q = 1 (|Δ| < 0.01°); per-order ~10% high, q = 3 off 10–30%, split slopes wrong — open (§4d, "Slice-resolved")] |
 | **four-wave coupling strengths** | the four-wave channels are counted by linear resonance only; their effective couplings are not derived (§3, "FINDING", caveats) |
 | **the link sector in the continuum reading** | whether the traceless part of the matrix links W — a component-dependent drift that no frame can remove — carries physics beyond the fixed-frequency Peierls form arctan(ωW) (§1c; derived as algebra, not simulated) [**ANSWERED 2026-09-28** (§1c, "The link sector"): **yes, but nothing independent.** Beyond the Peierls shift the link renormalises the hopping, c → c√(1 + tan²θ); the traceless part gives component-dependent drift and, for generators with unequal \|eigenvalues\|, component-dependent bandwidth (λ₈: tan θ₃/tan θ₁ = −2); at q ≥ 2 non-commuting uniform links give direction locking and ±1 windings at the four band touchings. All are verified consequences of rows 1–2 plus the link algebra; the product rule ω_aω_b = Q(k) is Vieta's formula and double-counts the band shape — none raises the count (UNIVERSAL_RELATIONS rows 14, 15). Open within it: the q ≥ 2 locking and windings are derived, not simulated (links on axis 0 only)] |
