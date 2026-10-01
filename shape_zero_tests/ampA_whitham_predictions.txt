@@ -1,0 +1,9 @@
+PREDICTIONS (committed before any run)
+  p = 6 packet width 16.0 A = 0.05: eikonal 0.0001005 deg; Whitham E/I (x 1/3) 0.0000335; x 1/2 0.0000503; x 2/3 0.0000670
+  p = 6 packet width 16.0 A = 0.035: eikonal 0.0000241 deg; Whitham E/I (x 1/3) 0.0000080; x 1/2 0.0000121; x 2/3 0.0000161
+  p = 6 packet width 32.0 A = 0.05: eikonal 0.0001024 deg; Whitham E/I (x 1/3) 0.0000341; x 1/2 0.0000512; x 2/3 0.0000682
+  p = 6 packet width 32.0 A = 0.035: eikonal 0.0000246 deg; Whitham E/I (x 1/3) 0.0000082; x 1/2 0.0000123; x 2/3 0.0000164
+  p = 6 stationary A = 0.05: V = 6.250e-06, flux-ratio (factor 1) 0.0001775 deg; totals (x 1/3) 0.0000592
+  Whitham identity on a lattice packet, p = 3: (E/I - w_lin)/<dOmega> = 0.6666 (derived 2/p = 0.6667)
+  Whitham identity on a lattice packet, p = 4: (E/I - w_lin)/<dOmega> = 0.5001 (derived 2/p = 0.5000)
+  Whitham identity on a lattice packet, p = 6: (E/I - w_lin)/<dOmega> = 0.3333 (derived 2/p = 0.3333)
