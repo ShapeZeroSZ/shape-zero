@@ -1,0 +1,9 @@
+PREDICTIONS (committed before any run)
+  stationary node   A = 1e-03: V = 1e-03, rotation change 0.028406 deg (exact transfer matrix; WKB 0.028406)
+  stationary smooth A = 1e-02: V = 1e-04, rotation change 0.002841 deg (exact transfer matrix; WKB 0.002841)
+  smooth width  8.0 A = 1e-02: eikonal rotation change 0.001760 deg; candidate (x 1/2) 0.000880; universal 2/3 0.001174
+  smooth width  8.0 A = 5e-03: eikonal rotation change 0.000440 deg; candidate (x 1/2) 0.000220; universal 2/3 0.000293
+  smooth width 16.0 A = 1e-02: eikonal rotation change 0.001988 deg; candidate (x 1/2) 0.000994; universal 2/3 0.001326
+  smooth width 16.0 A = 5e-03: eikonal rotation change 0.000497 deg; candidate (x 1/2) 0.000249; universal 2/3 0.000331
+  smooth width 32.0 A = 1e-02: eikonal rotation change 0.002007 deg; candidate (x 1/2) 0.001003; universal 2/3 0.001338
+  smooth width 32.0 A = 5e-03: eikonal rotation change 0.000502 deg; candidate (x 1/2) 0.000251; universal 2/3 0.000334
