@@ -1,0 +1,16 @@
+EVALUATION against ampA_POWER_PREDICTIONS.md (524653f)
+
+(1) stationary wave, window readout
+  node  : rotation change 0.028402 deg (halves 0.028402 / 0.028403); predicted 0.028406; factor 0.9999; mean |u| in window 1.7042e-04; drift 6.4e-07
+  smooth: rotation change 0.002840 deg (halves 0.002840 / 0.002841); predicted 0.002841; factor 1.0000; mean |u| in window 1.7021e-03; drift 6.4e-07
+
+(2) smooth well (p = 4), single segment
+  width  8.0 A = 1e-02: measured 0.001023 deg, eikonal 0.001760; factor 0.4992; cos +0.8586
+  width  8.0 A = 5e-03: measured 0.000256 deg, eikonal 0.000440; factor 0.4987; cos +0.8564
+    A^2 check: ratio 3.9931
+  width 16.0 A = 1e-02: measured 0.000992 deg, eikonal 0.001988; factor 0.4978; cos +0.9983
+  width 16.0 A = 5e-03: measured 0.000248 deg, eikonal 0.000497; factor 0.4976; cos +0.9982
+    A^2 check: ratio 4.0015
+  width 32.0 A = 1e-02: measured 0.001003 deg, eikonal 0.002007; factor 0.4999; cos +0.9999
+  width 32.0 A = 5e-03: measured 0.000251 deg, eikonal 0.000502; factor 0.4998; cos +0.9999
+    A^2 check: ratio 4.0005

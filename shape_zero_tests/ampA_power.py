@@ -137,3 +137,42 @@ def run():
 
 if __name__ == "__main__" and sys.argv[1] in ("predict", "run"):
     {"predict": predict, "run": run}[sys.argv[1]]()
+
+
+# ------------------------------------------------------------------ evaluation (written after the runs; criteria fixed in 524653f)
+def evaluate():
+    P = json.load(open(os.path.join(HERE, "ampA_power_predictions.json")))
+    R = json.load(open(os.path.join(HERE, "ampA_power_runs.json")))
+    RR = json.load(open(os.path.join(HERE, "ampA_regions_runs.json")))
+    nrm = np.linalg.norm
+    deg = lambda v: float(np.degrees(nrm(v)))
+    L_ = ["EVALUATION against ampA_POWER_PREDICTIONS.md (524653f)"]
+    st = {r["well"]: r for r in R if r["kind"] == "stat"}
+    L_.append("\n(1) stationary wave, window readout")
+    for well in ("node", "smooth"):
+        pr = P[f"stationary {well}"]["deg_exact"]
+        out = []
+        for wk in ("win", "sub1", "sub2"):
+            d = np.array(st[well]["co"][wk]) - np.array(st["lin"]["co"][wk])
+            out.append(deg(d))
+        L_.append(f"  {well:<6}: rotation change {out[0]:.6f} deg (halves {out[1]:.6f} / {out[2]:.6f}); predicted {pr:.6f}; "
+                  f"factor {out[0] / pr:.4f}; mean |u| in window {st[well]['amp_win']:.4e}; drift {st[well]['drift']:.1e}")
+    L_.append("\n(2) smooth well (p = 4), single segment")
+    lin = {float(r["tag"].split("_")[1]): np.array(r["co"]) for r in RR if r["tag"].startswith("w_") and r["kind"] == "lin"}
+    sc = {(r["w"], r["amp"]): np.array(r["co"]) for r in R if r["kind"] == "scan"}
+    for w in PW_WIDTHS:
+        dd = {}
+        for amp in PW_AMPS:
+            d = sc[(w, amp)] - lin[w]
+            m = np.array(P[f"smooth w{w} A{amp}"]["dco"])
+            dd[amp] = d
+            L_.append(f"  width {w:>4} A = {amp:.0e}: measured {deg(d):.6f} deg, eikonal {deg(m):.6f}; factor {d @ m / (m @ m):.4f}; "
+                      f"cos {d @ m / (nrm(d) * nrm(m)):+.4f}")
+        L_.append(f"    A^2 check: ratio {nrm(dd[1e-2]) / nrm(dd[5e-3]):.4f}")
+    out = "\n".join(L_)
+    print(out)
+    open(os.path.join(HERE, "ampA_power_compare_output.txt"), "w").write(out + "\n")
+
+
+if __name__ == "__main__" and sys.argv[1] == "evaluate":
+    evaluate()
