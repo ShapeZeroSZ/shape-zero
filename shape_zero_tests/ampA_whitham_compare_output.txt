@@ -1,0 +1,12 @@
+EVALUATION against ampA_WHITHAM_PREDICTIONS.md (e928ab1)
+
+(2) p = 6 packet, single segment
+  width 16.0 A = 0.05: measured 0.0000334 deg, eikonal 0.0001005; factor 0.3303; cos +0.9930
+  width 16.0 A = 0.035: measured 0.0000080 deg, eikonal 0.0000241; factor 0.3303; cos +0.9930
+    fourth-order check: ratio 4.1652 (expected 4.1649)
+  width 32.0 A = 0.05: measured 0.0000341 deg, eikonal 0.0001024; factor 0.3331; cos +0.9997
+  width 32.0 A = 0.035: measured 0.0000082 deg, eikonal 0.0000246; factor 0.3331; cos +0.9997
+    fourth-order check: ratio 4.1650 (expected 4.1649)
+
+  p = 6 stationary: rotation change 0.0001775 deg (halves 0.0001775 / 0.0001775); flux-ratio prediction 0.0001775; factor 1.0000
+  drifts: max 6.4e-07

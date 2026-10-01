@@ -145,3 +145,37 @@ def run():
 
 if __name__ == "__main__" and sys.argv[1] in ("predict", "run"):
     {"predict": predict, "run": run}[sys.argv[1]]()
+
+
+# ------------------------------------------------------------------ evaluation (written after the runs; criteria fixed in e928ab1)
+def evaluate():
+    P = json.load(open(os.path.join(HERE, "ampA_whitham_predictions.json")))
+    R = json.load(open(os.path.join(HERE, "ampA_whitham_runs.json")))
+    RR = json.load(open(os.path.join(HERE, "ampA_regions_runs.json")))
+    PR = json.load(open(os.path.join(HERE, "ampA_power_runs.json")))
+    nrm = np.linalg.norm
+    deg = lambda v: float(np.degrees(nrm(v)))
+    L_ = ["EVALUATION against ampA_WHITHAM_PREDICTIONS.md (e928ab1)", "\n(2) p = 6 packet, single segment"]
+    lin = {float(r["tag"].split("_")[1]): np.array(r["co"]) for r in RR if r["tag"].startswith("w_") and r["kind"] == "lin"}
+    sc = {(r["w"], r["amp"]): np.array(r["co"]) for r in R if r["kind"] == "scan"}
+    for w in P6_WIDTHS:
+        dd = {}
+        for amp in P6_AMPS:
+            d = sc[(w, amp)] - lin[w]; m = np.array(P[f"p6 w{w} A{amp}"]["dco"]); dd[amp] = d
+            L_.append(f"  width {w:>4} A = {amp}: measured {deg(d):.7f} deg, eikonal {deg(m):.7f}; factor {d @ m / (m @ m):.4f}; "
+                      f"cos {d @ m / (nrm(d) * nrm(m)):+.4f}")
+        L_.append(f"    fourth-order check: ratio {nrm(dd[0.05]) / nrm(dd[0.035]):.4f} (expected {(0.05 / 0.035) ** 4:.4f})")
+    st = [r for r in R if r["kind"] == "stat"][0]
+    sl = [r for r in PR if r["kind"] == "stat" and r["well"] == "lin"][0]
+    pr = P["p6 stationary"]["deg_exact"]
+    vals = [deg(np.array(st["co"][k]) - np.array(sl["co"][k])) for k in ("win", "sub1", "sub2")]
+    L_.append(f"\n  p = 6 stationary: rotation change {vals[0]:.7f} deg (halves {vals[1]:.7f} / {vals[2]:.7f}); "
+              f"flux-ratio prediction {pr:.7f}; factor {vals[0] / pr:.4f}")
+    L_.append(f"  drifts: max {max(r['drift'] for r in R):.1e}")
+    out = "\n".join(L_)
+    print(out)
+    open(os.path.join(HERE, "ampA_whitham_compare_output.txt"), "w").write(out + "\n")
+
+
+if __name__ == "__main__" and sys.argv[1] == "evaluate":
+    evaluate()
