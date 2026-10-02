@@ -84,3 +84,31 @@ def run():
 
 if __name__ == "__main__" and sys.argv[1] in ("predict", "run"):
     {"predict": predict, "run": run}[sys.argv[1]]()
+
+
+# ------------------------------------------------------------------ evaluation (written after the runs; criteria fixed in 202ca3f)
+def evaluate():
+    P = json.load(open(os.path.join(HERE, "anomC_whitham_predictions.json")))
+    R = {(r["w"], r["A"]): r for r in json.load(open(os.path.join(HERE, "anomC_whitham_runs.json")))}
+    g = {A: O.growth(A) for A in AMPS}
+    lines = ["EVALUATION against anomC_WHITHAM_PREDICTIONS.md (202ca3f); L = 4, T = 900",
+             "     w     A   ratio             r_meas           f_meas            fits (|df| <= 2 sigma)"]
+    for w in WIDTHS:
+        p = P[str(w)]
+        b = R[(w, 0.10)]
+        for A in (0.30, 0.40):
+            r_ = R[(w, A)]
+            rat = r_["kappa"] / b["kappa"]
+            re = abs(rat) * math.hypot(r_["err"] / r_["kappa"], b["err"] / b["kappa"])
+            rm = (rat - 1) / (g[A] - rat * g[0.10])
+            drm = re * abs((g[A] - g[0.10]) / (g[A] - rat * g[0.10]) ** 2)
+            fm = (rm - p["rS2"]) / (p["rS1"] - p["rS2"]); dfm = drm / (p["rS1"] - p["rS2"])
+            fits = [k for k, v in p["f"].items() if abs(v - fm) <= 2 * dfm]
+            lines.append(f"   {w:3.1f}  {A:4.2f}   {rat:.5f}+-{re:.5f}   {rm:.4f}+-{drm:.4f}   {fm:+.3f}+-{dfm:.3f}   {', '.join(fits) or 'none'}")
+    out = "\n".join(lines)
+    print(out)
+    open(os.path.join(HERE, "anomC_whitham_compare_output.txt"), "w").write(out + "\n")
+
+
+if __name__ == "__main__" and sys.argv[1] == "evaluate":
+    evaluate()
